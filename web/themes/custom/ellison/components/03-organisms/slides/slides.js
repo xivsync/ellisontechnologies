@@ -10,13 +10,19 @@ Drupal.behaviors.slider = {
       // found a model listing component
       function (element) {
 
-        let glide = new Glide(element, {
-          type: 'carousel',
-          focusAt: 'center',
-          perView: 1,
-        });
+        window.addEventListener('load', function () {
 
-        glide.mount();
+          let glide = new Glide(element, {
+            type: 'carousel',
+            focusAt: 'center',
+            perView: 1,
+          });
+
+          glide.mount();
+
+        })
+
+        
 
       }
 
