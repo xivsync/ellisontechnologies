@@ -1,0 +1,12 @@
+{% embed "@organisms/collection/collection.twig" with {
+  collection_type: 'teasers',
+  collection_label: title,
+  collection_extras: ['display-as-rows','tagged-content'],
+  collection_results: rows | length,
+} %}
+  {% block collection_content %}
+    {% for row in rows %}
+      {{ row.content }}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}

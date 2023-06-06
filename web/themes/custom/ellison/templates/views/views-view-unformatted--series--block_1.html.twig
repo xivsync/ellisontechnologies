@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Theme override to display a view as a collection displayed as rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * {{ view.style_plugin.getField(loop.index0, 'title') }}
+
+At the node level, inside your Twig template you can use:
+
+{{ content.field_link.0['#url'] }} & {{ content.field_link.0['#title'] }}
+
+ */
+#}
+
+{# behavior options: single-button, accordion-button-dropdown #}
+
+{% set uid = random() %}
+
+{% if rows | length > 1 %}
+
+<div id="series-{{ uid }}" class="series-list">
+
+    <div
+      id="dropdown-{{ uid }}"
+      class="dropdown single-button-dropdown {{ rows | length > 1 ? 'multiple-results' : 'single-result'}} state-is-collapsed"
+      data-dropdown-type="single"
+      data-dropdown-state="collapsed"
+      data-dropdown-unique-id="{{ uid }}"
+    >
+
+      <button
+        id="toggle-{{ uid }}"
+        class="dropdown__toggle has-icon"
+        aria-expanded="false"
+        data-dropdown-unique-id="{{ uid }}"
+      >
+        View Series Model
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+        </svg>
+      </button>
+
+      <div
+        class="dropdown__menu"
+        aria-controled-by="toggle-{{ uid }}"
+        data-dropdown-unique-id="{{ uid }}"
+      >
+        
+        {# no child template #}
+        <ul
+          class="dropdown__menu--list"
+          aria-labelledby="toggle-{{ uid }}"
+          data-dropdown-unique-id="{{ uid }}"
+        >
+          {% for row in rows %}
+            {#{ row.content }#}
+            <li {{ row.attributes.addClass('dropdown__menu--item') }}>
+              {{ row.content }}
+            </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endif %}

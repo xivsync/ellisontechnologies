@@ -1,0 +1,83 @@
+
+
+{#
+  # Code for prior to year 2020:
+  // $unDeductibleValue = 3499999;
+  // // 2018 has no middle tier
+  // $middleTierDeductionMin = 2500000;
+  // $bottomTierDeductionMin = 1000000;
+  
+  // // G30
+  // if ($price > $unDeductibleValue) {
+  //   $deduct179 = 0;
+  // }
+  // // 2018 has no middle tier
+  // else if ($price > $middleTierDeductionMin) {
+  //   $deduct179 = round(1000000 - ($price - 2500000), 0);
+  // }
+  // else if ($price < 1000000) {
+  //   $deduct179 = $price;
+  // }
+  // else {
+  //   $deduct179 = 1000000;
+  // }
+
+  # Update for year 2020:
+  $unDeductibleValue = 3629000;
+  //$middleTierDeductionMin = 2590000;
+  //$middleTierDeductionMin = 2700000;
+  $middleTierDeductionMin = 2890000;
+  # START Update Tax calculator https://hub.trinetsolutions.com/go/vt/ETEC-0000241/011
+  //$bottomTierDeductionMin = 1040000;
+  //$bottomTierDeductionMin = 1050000;
+  //$bottomTierDeductionMin = 1080000;
+  $bottomTierDeductionMin = 1160000;
+  
+  // G30
+  if ($price > $unDeductibleValue) {
+    $deduct179 = 0;
+  }
+  // 2018 has no middle tier
+  else if ($price > $middleTierDeductionMin) {
+    //$deduct179 = round(1040000 - ($price - 2590000), 0);
+    //$deduct179 = round(1050000 - ($price - 2590000), 0);
+    //$deduct179 = round(1080000 - ($price - 2590000), 0);
+    //$deduct179 = round(1080000 - ($price - 2700000), 0);
+    $deduct179 = round(1160000 - ($price - 2890000), 0);
+  }
+  //else if ($price < 1040000) {
+  //else if ($price < 1050000) {
+  //else if ($price < 1080000) {
+  else if ($price < 1160000) {
+    $deduct179 = $price;
+  }
+  else {
+    //$deduct179 = 1040000;
+    //$deduct179 = 1050000;
+    //$deduct179 = 1080000;
+    $deduct179 = 1160000;
+  }
+  # END Update Tax calculator https://hub.trinetsolutions.com/go/vt/ETEC-0000241/011
+  
+  $bal = $price - $deduct179; // G31 = G29 - G30
+  $bonus_depreciation = .8 * $bal; // G32 = G31 * 1
+  $depreciation = 0.1429 * ($bal - $bonus_depreciation); // G33 = 0.1429 * (G31-G32)
+  $firstYear = $deduct179 + $bonus_depreciation + $depreciation; // G34 = G30 + G32 + G33
+  //$total = $firstYear * 0.28; // G37 = G34 * 0.35
+  $total = $firstYear * 0.32; // G37 = G34 * 0.35
+  $estimate = $total / (0.02 * $price); // G38 = G37 / (G29 * 0.02)
+
+  $form_state['result']['total_price'] = $price;
+  $form_state['result']['deduct179'] = $deduct179;
+  $form_state['result']['bal'] = $bal;
+  $form_state['result']['bonus_depreciation'] = $bonus_depreciation;
+  $form_state['result']['depreciation'] = $depreciation;
+  $form_state['result']['firstYear'] = $firstYear;
+  $form_state['result']['total'] = $total;
+  $form_state['result']['estimate'] = $estimate;
+}
+
+#}
+
+
+{{data.estimated_machine_price|number_format}}-{{data.section_179_deduction|number_format}}

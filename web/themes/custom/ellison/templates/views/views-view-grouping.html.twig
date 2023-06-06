@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Theme override to display grouping for models view.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - grouping: The grouping instruction.
+ * - grouping_level: A number indicating the hierarchical level of the grouping.
+ * - title: The group heading.
+ * - content: The content to be grouped.
+ * - rows: The rows returned from the view.
+ *
+ * @see template_preprocess_views_view_grouping()
+ *
+ * @todo restrict grouping to models view.
+ *
+ * Models view preprocess removes models where the user region
+ * does not match the models brand region.
+ *
+ * Now check to see if there are models left withing the group
+ * and if the entire group should be displayed.
+ *
+ * This assures groups are not displayed with no models to view.
+ *
+ * Unable to do this in the group preprocess hook.
+ *
+ * Assumptions:
+ *
+ * 1. model content type is tagged with 1 brand term
+ * 2. brands are tagged with 1 or more region terms
+ * 
+ * content.0['#rows'][0]
+ * 
+ */
+#}
+
+{# display if the group has at least 1 model #}
+
+{% set display_group = true %}
+
+{% if  display_group %}
+  <div class="collections level-{{grouping_level}}" data-results="{{ rows | length }}">
+
+    <div class="collections__inner">
+
+      {% if title %}
+        <div class="collections__header">
+          {{ title }}
+        </div>
+      {% endif %}
+
+      <div class="collections__body">
+        {{ content }}
+      </div>
+
+    </div>
+
+  </div>
+{% endif %}
