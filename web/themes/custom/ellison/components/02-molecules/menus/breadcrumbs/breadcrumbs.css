@@ -1,0 +1,43 @@
+
+.pathfinding {
+  @apply container mx-auto;
+}
+
+.breadcrumb {
+  @apply flex flex-col container;
+  overflow: hidden;
+
+  &__link {
+    @apply uppercase text-light-blue font-bold;
+  }
+
+  &__link::hover {
+    @apply text-dark-blue;
+  }
+
+  &__items {
+    @apply flex flex-row gap-2 lg:gap-4;
+  }
+
+  &__item {
+    @apply font-bold uppercase text-xs lg:text-lg whitespace-nowrap;
+  }
+
+  &__item::marker {
+    content: none;
+  }
+
+  &__item::after {
+    @apply text-light-blue ml-2 lg:ml-4 inline-block text-xs lg:text-lg font-bold;
+    content: ">";
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+  }
+
+  /* maintain vertical alignment */
+  &__item:last-child::after {
+    @apply text-white;
+  }
+
+}

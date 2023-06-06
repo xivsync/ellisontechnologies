@@ -1,0 +1,39 @@
+.card.card-event {
+
+  .card__event {
+    @apply w-40 h-40 bg-cyan text-white rounded-full flex flex-col items-center justify-center;
+
+    .date_m {
+      @apply uppercase font-bold flex flex-col;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    .date_d {
+      @apply uppercase font-bold flex flex-col;
+      font-size: 5rem;
+      line-height: 5rem;
+    }
+
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card__inner--content {
+    width: 50%;
+  }
+
+  .field {
+    @apply flex flex-row justify-start;
+
+    &__label {
+      @apply w-1/4 font-bold;
+    }
+  }
+
+}

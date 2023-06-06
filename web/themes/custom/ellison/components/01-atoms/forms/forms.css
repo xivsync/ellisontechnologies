@@ -1,0 +1,59 @@
+form.webform-submission-form {
+  @apply flex flex-col gap-4 h-full;
+}
+
+.form-item {
+  margin:0;
+}
+
+.form-item__label {
+  display: block;
+  font-weight: 600;
+}
+
+.form-item__textfield {
+  @apply focus:ring-4 focus:ring-cyan focus:outline-none;
+  border: 1px solid clr(accent);
+  padding: 0.6em;
+  max-width: 100%;
+
+  &::placeholder {
+    @apply text-gray-500;
+  }
+
+}
+
+.form-item__description {
+  margin-top: 0.3em;
+}
+
+.form-fieldset {
+  border: none;
+  margin-bottom: 2em;
+  padding: 0;
+
+  .form-item {
+    margin-left: 1em;
+    max-width: 31em;
+  }
+
+}
+
+/* webform component - making it full height */
+div.webform {
+  @apply h-full;
+
+  > div {
+    height: 100%;
+  }
+
+  .webform-ajax-form-wrapper {
+    @apply h-full;
+  }
+
+  /* handles pushing submit button to bottom of component */
+  .form-actions.webform-actions {
+    margin-top: auto;
+  }
+
+}

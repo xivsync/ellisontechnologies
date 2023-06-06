@@ -1,0 +1,20 @@
+/*
+ * General Layout
+*/
+
+$sidebar-width: 33%;
+$gutter: $space;
+$main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
+
+/*
+ * Layout Using Flexbox (IE11+).
+ * Remove this and uncomment Grid code below to use CSS Grid.
+*/
+
+.main {
+  @apply flex flex-col w-full;
+}
+
+.main-content {
+  @apply flex flex-col w-full;
+}

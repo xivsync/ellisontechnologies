@@ -1,0 +1,33 @@
+{% set collection_base_class = collection_base_class|default('collection') %}
+
+{% if not collection_modifiers %}
+  {% set collection_modifiers = [] %}
+{% endif %}
+
+{% if page_layout_modifier %}
+  {% set collection_modifiers = collection_modifiers|merge([page_layout_modifier]) %}
+{% endif %}
+
+{% if collection_type %}
+  {% set collection_modifiers = collection_modifiers|merge([collection_type]) %}
+{% endif %}
+
+{% if collection_label %}
+  <div class="collection__wrapper results {{ collection_results<1 ? 'no-results' : 'has-results' }}" data-results={{ collection_results }}>
+    <div class="collection__header">
+      {{ collection_label }}
+    </div>
+{% endif %}
+
+  <div {{ bem(collection_base_class, collection_modifiers, collection_blockname, collection_extras) }}>
+    {% block collection_content %}{% endblock %}
+  </div>
+
+{% if collection_label %}
+  </div>
+{% endif %}
+
+
+{% if collection_results<1 %}
+  <div class="skrim skrim-series">{{collection__noresults}}</div>
+{% endif %}

@@ -1,0 +1,91 @@
+.dropdown {
+  @apply flex flex-col relative;
+
+  &__toggle {
+    @apply flex flex-row justify-between border border-b-0 border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-cyan focus:z-10 focus:outline-none py-2 px-4 no-underline;
+    
+    &.has-icon {
+      @apply inline-flex flex-row gap-2;
+
+      svg {
+        @apply w-6 h-6;
+      }
+    
+    }
+  }
+
+  &__menu {
+    @apply flex flex-col absolute top-[2.8rem] w-full z-10 bg-white;
+  }
+
+  &__menu--list {
+    @apply flex flex-col border border-gray-300 m-0 p-0 !important;
+  }
+
+  &__menu--item {
+    @apply m-0 p-0;
+
+    a {
+      @apply block hover:bg-gray-200 border-gray-300 border-b px-4 py-2;
+    }
+
+  }
+
+  &__menu--item:last-child a{
+    @apply border-b-0;
+  }
+
+  &__menu--item::marker {
+    content: none;
+  }
+
+  &__menu--item.is-active {
+    a {
+      @apply cursor-not-allowed bg-gray-300;
+    }
+
+  }
+
+}
+
+/* handles adding bottom border to button */
+.specifications-list .field-specifications-type .field__item:last-child .dropdown__toggle,
+.listing.view--series .dropdown__toggle {
+  @apply  border-b;
+}
+
+/* handles dropdown as accordion */
+.dropdown.accordion-button-dropdown {
+
+  .dropdown__menu {
+    position: unset;
+    z-index: auto;
+  }
+
+}
+
+/* handles specifications list items */
+.specifications {
+
+  .dropdown__menu--item {
+    @apply flex flex-row justify-between items-start py-2 px-4 border-t border-gray-300;
+
+    p {
+      @apply m-0 p-0 basis-1/2;
+    }
+  }
+
+  .dropdown__menu--item:first-child {
+    @apply border-t-0;
+  }
+
+}
+
+/* handles collapse state */
+.dropdown.state-is-collapsed {
+
+  .dropdown__menu {
+    @apply hidden;
+  }
+
+}

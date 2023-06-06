@@ -1,0 +1,33 @@
+{#
+/**
+ * Group Component
+ *
+ * Available variables:
+ *
+  background_class: content.field_background_color | render | striptags | trim,
+  align_class: content.field_align_text | render | striptags | trim,
+  body: content.field_content,
+ *
+ */
+#}
+
+{% set attributes = create_attribute() %}
+
+{%
+  set classes = [
+    'text',
+    'prose',
+    'max-w-none',
+    background_class,
+    align_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <div class="text_inner">
+    <div class="text__body">
+      {{ body }}
+    </div>
+  </div>
+</div>

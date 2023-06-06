@@ -1,0 +1,149 @@
+.component {
+
+  .text {
+    @apply flex flex-col;
+  }
+
+  .text__align {
+
+    &--middle,
+    &--center-in-middle {
+      @apply flex flex-col items-center justify-center text-center h-full;
+
+      .card__cta {
+        @apply flex flex-col items-center justify-center text-center h-full;
+      }
+
+    }
+
+    &--left {
+      @apply text-left;
+
+      .card__cta {
+        @apply text-left;
+      }
+
+    }
+
+    &--right {
+      @apply text-right;
+
+      .card__cta {
+        @apply text-right;
+      }
+
+    }
+
+    &--center {
+      @apply text-center;
+
+      .card__cta {
+        @apply text-center;
+      }
+
+    }
+
+  }
+  
+}
+
+/* handles text bg color and full width bg color */
+.text__bg-color{
+
+  &--dark-blue {
+    @apply bg-dark-blue;
+
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off{
+      @apply p-8;
+    }
+    
+    &.full-width-on,
+    &.text {
+      @apply py-8;
+    }
+
+    .prose {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+        @apply text-white;
+      }
+    }
+
+  }
+
+  &--light-blue {
+    @apply bg-light-blue;
+
+    &.full-width-on,
+    &.text {
+      @apply py-8;
+    }
+
+    .prose {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+        @apply text-white;
+      }
+    }
+
+  }
+
+  &--blue {
+    @apply bg-blue;
+    
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off{
+      @apply p-8;
+    }
+    
+    &.full-width-on,
+    &.text {
+      @apply py-8;
+    }
+
+    .prose {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+        @apply text-white;
+      }
+
+    }
+  }
+
+  &--cyan {
+    @apply bg-cyan;
+
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off{
+      @apply p-8;
+    }
+
+    
+    &.full-width-on,
+    &.text {
+      @apply py-8;
+    }
+
+    .prose {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+        @apply text-white;
+      }
+
+    }
+  }
+
+  &--light-gray {
+    @apply bg-gray-200;
+
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off{
+      @apply p-8;
+    }
+
+
+    &.full-width-on,
+    &.text {
+      @apply py-8;
+    }
+
+  }
+  
+}

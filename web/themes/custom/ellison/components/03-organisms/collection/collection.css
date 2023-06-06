@@ -1,0 +1,81 @@
+.collection.display-as-rows {
+  @apply flex flex-col gap-8;
+
+  .collection__item--teaser {
+    
+    .card__inner {
+      @apply flex flex-col lg:flex-row gap-4 lg:gap-8 items-start;
+
+      .card__image {
+        @apply basis-1/3 shrink;
+
+        img.image {
+          margin:0;
+        }
+
+      }
+
+      .card__content {
+        @apply basis-2/3 grow;
+
+        h2.heading a {
+          @apply text-xl font-semibold text-light-blue no-underline;
+        }
+      }
+
+    }
+
+  }
+
+  .collection__item--teaser.collection__item--location {
+    @apply bg-gray-200 p-4;
+
+    .card__inner {
+      @apply flex flex-col lg:flex-row gap-4 lg:gap-8 items-center;
+
+      .card__image {
+        @apply order-last;
+      }
+
+    }
+    
+    .field {
+      @apply flex flex-row gap-4;
+    }
+
+  }
+
+}
+
+.collection.collection--videos.display-as-cols {
+  @apply flex flex-row gap-4 flex-wrap;
+
+  .views-fields {
+    @apply flex flex-col gap-2 basis-[32%];
+
+    .views-field-name {
+      @apply font-bold text-lg;
+    }
+  }
+
+}
+
+.collection.collection--teasers.display-as-rows.tagged-content {
+
+  .card.card-event .card__inner--content {
+    @apply w-full;
+  }
+
+  .card.card-event .field {
+    @apply flex flex-row;
+  }
+
+  .field__label {
+    @apply hidden;
+  }
+
+  .card__cta.card__cta-link {
+    @apply hidden;
+  }
+
+}

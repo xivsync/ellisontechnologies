@@ -1,0 +1,163 @@
+.listing.contextual-region.models {
+  @apply flex flex-col gap-16;
+}
+
+.model-listing {
+
+  /* handles brand */
+  .taxonomy__term--brands {
+    @apply flex flex-row gap-8;
+
+    .field-logo {
+      @apply basis-1/4;
+
+      img {
+        @apply m-0 p-0 !important;
+      }
+    }
+
+    .text-long {
+      @apply basis-3/4 font-bold;
+    }
+
+  }
+
+  /* handles series */
+  .taxonomy-series {
+    @apply flex flex-row gap-8;
+
+    .taxonomy-series__image {
+      @apply basis-1/3;
+      
+      img {
+        @apply m-0;
+      }
+    }
+
+    .taxonomy-series__content {
+      @apply basis-2/3;
+    }
+
+  }
+
+  .collections {
+    @apply mb-16 relative;
+  }
+
+  .collections__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .collections__header > .contextual-region {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    h2 {
+      display:none;
+    }
+
+  }
+
+  .collections__header > .contextual-region > div {
+    @apply basis-1/5;
+
+    img {
+      @apply w-[150px];
+    }
+
+  }
+
+  .collections__header > .contextual-region .text-long.prose.max-w-none {
+    @apply basis-4/5;
+  }
+
+  .collection__wrapper {
+    @apply flex flex-col gap-8 basis-1/2;
+
+    .collection {
+      @apply inline-flex justify-end;
+      margin-top: auto;
+
+      .views-field a {
+        @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-cyan focus:outline-none rounded-full py-2 px-4 no-underline;
+      }
+      
+    }
+
+  }
+
+  .heading--collection h2 {
+    @apply text-xl font-bold;
+  }
+
+  .collections__body {
+    @apply flex flex-row gap-8;
+  }
+
+}
+
+.taxonomy {
+
+  .taxonomy-series {
+    @apply flex flex-row gap-8;
+    
+    &__image {
+      @apply basis-1/2;
+
+      img {
+        @apply my-0;
+      }
+    }
+
+    &.has-image {
+
+      &__content {
+        @apply basis-1/2 flex flex-col justify-center;
+
+        h2 {
+          @apply text-4xl;
+        }
+
+        .text-long {
+          @apply text-xl;
+        }
+
+      }
+
+    }
+
+    &.no-image {
+
+      &__content {
+        @apply flex flex-col justify-center;
+
+        h2 {
+          @apply text-4xl;
+        }
+
+        .text-long {
+          @apply text-xl;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.skrim {
+  @apply absolute top-0 left-0 w-full h-full bg-black opacity-40 z-[999];
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  outline: 1rem black solid;
+}

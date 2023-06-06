@@ -1,0 +1,138 @@
+.footer {
+  @apply px-3 flex flex-col pt-16 pb-8 justify-center;
+  background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
+
+  &__inner {
+    @apply container flex flex-col gap-8 mx-auto;
+  }
+
+  &__navigating {
+    @apply flex flex-row text-white gap-8;
+  }
+
+  &__branding {
+    @apply flex flex-row gap-8;
+    align-items: center;
+
+    .footer__social ul {
+      @apply border-white border-l pl-8;
+    }
+  }
+
+  &__logo {
+    @apply basis-auto flex flex-col shrink;
+
+    img {
+      @apply w-40 lg:w-28 p-0;
+    }
+
+  }
+
+  &__social {
+    @apply basis-auto flex flex-col;
+
+    ul {
+      @apply flex flex-row gap-4;
+      align-items: center;
+
+      a svg {
+        @apply text-white w-6 h-6;
+      }
+
+      a:hover svg {
+        @apply text-light-blue;
+      }
+
+    }
+  }
+
+  &__local {
+    @apply basis-2/12 flex flex-col;
+
+    a {
+      @apply flex flex-row gap-4 text-white;
+
+      svg {
+        @apply text-white w-6 h-6;
+      }
+    }
+  }
+
+  &__concenting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footer__concenting__inner {
+      @apply container flex flex-col lg:flex-row lg:justify-between items-center py-8 px-3 gap-8 lg:gap-0;
+    }
+
+    .footer__tos {
+
+      ul {
+        @apply flex flex-row text-white gap-2;
+      }
+
+      li {
+        @apply border-white border-l pl-2 text-center;
+      }
+
+      li:first-child {
+        @apply  border-none;
+      }
+
+      li a:hover {
+        @apply text-light-blue;
+      }
+
+    }
+
+    .footer__madeby {
+      @apply text-center;
+      
+      a {
+        @apply text-white;
+      }
+
+    }
+
+  }
+
+  &__contacting {
+    @apply flex flex-col lg:flex-row gap-8 lg:gap-0;
+  }
+
+  &__information {
+
+    .footer__inner {
+      @apply flex flex-col sm:flex-row gap-4 font-extrabold text-lg text-light-blue uppercase justify-between lg:justify-start;
+    }
+
+    .footer__cta {
+      @apply flex flex-row gap-4;
+
+      .cta-icon {
+
+        svg {
+          @apply text-white w-6 h-6;
+        }
+
+      }
+
+      .cta-text a {
+        @apply text-white;
+      }
+
+      .cta-text a:hover {
+        @apply text-light-blue;
+      }
+
+    }
+
+  }
+
+  li::marker {
+    content: none;
+  }
+
+}

@@ -1,0 +1,26 @@
+.quote {
+  @apply flex flex-col m-0 p-0;
+
+  &__inner {
+    @apply flex flex-col gap-8;
+  }
+
+  &__body {
+    @apply flex flex-row gap-[14px] border-none p-0 m-0;
+
+    svg {
+      @apply flex flex-none w-[26px];
+    }
+
+    div.text-long {
+      @apply flex flex-grow text-lg;
+    }
+  }
+
+  &__citation cite div {
+    @apply text-lg ml-[40px];
+
+
+  }
+
+}

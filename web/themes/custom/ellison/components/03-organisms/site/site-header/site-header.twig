@@ -1,0 +1,65 @@
+{% set base_class = 'header' %}
+
+<header
+  {{ bem(base_class) }}
+>
+  <div {{ bem('inner', [], base_class) }}>
+    
+    {% block header__branding %}
+      {% include "@organisms/site/site-header/_site-header-branding.twig" %}
+    {% endblock %}
+    {% block header__menu %}
+    {% endblock %}
+    <div {{ bem('mobi', [], base_class) }}>
+      <button
+        id="main-menu--toggle"
+        data-toggle-target="header__navigating"
+        type="button"
+        class="header__mobi--toggle inline-flex text-sm text-white items-center"
+        aria-controls="header__navigating"
+        aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+      </button>
+      <button
+        id="searching--toggle"
+        data-toggle-target="header__searching"
+        type="button"
+        class="header__mobi--toggle inline-flex text-sm text-white items-center"
+        aria-controls="header__searching"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open search</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+{% if jumbo_image_path %}
+  <div class="jumbotron">
+
+    {% include "@atoms/images/image/responsive-image.twig" with {
+      output_image_tag: true,
+      image_url: null,
+      image_src: jumbo_image_path,
+      image_alt: jumbo_image_alt,
+      image_width: jumbo_image_width,
+      image_height: jumbo_image_height,
+      image_blockname: "jumbotron",
+      image_base_class: 'image',
+      image_modifiers: ['full-width'],
+    } %}
+
+    <div class="jumbotron__heading">
+      {% include "@atoms/text/headings/_heading.twig" with {
+        "heading__level": '1',
+        "heading": jumbo_image_title,
+        base_class: 'heading',
+      } %}
+    </div> 
+
+  </div>
+{% endif %}
+
+{% if drupal_view_result('slides', 'block_1') is not empty %}
+  {{ drupal_view('slides', 'block_1') }}
+{% endif %}

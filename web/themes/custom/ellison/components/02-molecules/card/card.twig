@@ -1,0 +1,152 @@
+{#
+ # Available variables:
+ # - card__base_class - base classname of the wrapper.
+ # - card__modifiers - array of modifiers to add to the base classname of the wrapper.
+ # - card__blockname - blockname prepended to the base classname of the wrapper(s) and each component.
+ # - card__extra_classes -- extra classes
+ #
+ # - card__image__src - the actual image file location.
+ # - card__image__alt - (optional) the alt text for screen readers and when the image cannot load.
+ # - card__image__output_image_tag - whether to print the picture element or not.
+ #
+ # - card__content__base_class - base classname of the copy wrapper - defaults to 'heading'.
+ # - card__content__modifiers - array of modifiers to add to the base classname of the copy wrapper.
+ # - card__content__blockname - blockname prepended to the base classname of the copy wrapper.
+ #
+ # - card__heading - the content of the title component.
+ # - card__heading__link - (optional) the url the title should link to. Defaults to card__link__url.
+ # - card__heading__base_class - base classname of the title component. Defaults to "title".
+ # - card__heading__blockname - blockname to add to the base classname of the title - defaults to card__base_class.
+ # - card__heading__modifiers - array of modifiers to add to the base classname of the title.
+ # - card__heading__link_base_class - base class to add to the title link - defaults to 'title-link'.
+ #
+ # - card__subheading - the content of the subtitle component.
+ # - card__subheading__link - (optional) the url the subtitle should link to.
+ # - card__subheading__base_class - base classname of the subtitle component. Defaults to "subtitle".
+ # - card__subheading__modifiers - array of modifiers to add to the base classname of the subtitle.
+ #
+ # - card__body - the content of the body component.
+ # - card__body__base_class - base classname of the body component. Defaults to "body".
+ # - card__body__modifiers - array of modifiers to add to the base classname of the body.
+ #
+ # - card__link__text - the content of the link component.
+ # - card__link__url - the url the link should link to.
+ # - card__link__base_class - base classname of the link component. Defaults to "link".
+ # - card__link__blockname - override link blockname. Defaults to card__base_class.
+ # - card__link__attributes - array of attribute,value pairs for the link attribute.
+ # - card__link__modifiers - array of modifiers to add to the base classname of the link.
+ #
+ # - card__button__content - the content of the button component.
+ # - card__button__url - the url the button should link to.
+ # - card__button__base_class - base classname of the button component. Defaults to "button".
+ # - card__button__attributes - array of attribute,value pairs for the button attribute.
+ # - card__button__modifiers - array of modifiers to add to the base classname of the button.
+ #}
+
+{# 
+
+  class="[card__blockname]__[card__base_class]--[card__modifiers] [card__extra_classes]"
+  @todo: if no image do not print divs
+
+#}
+
+
+{%
+  set card__extra_classes = card__extra_classes|merge([
+    background_color | clean_class,
+    (background_color) ? 'has-background-color' : '',
+    card__style | clean_class,
+    'text__align--' ~ cta_style | clean_class,
+  ])
+%}
+
+<div {{ bem(card__base_class, card__modifiers, card__blockname, card__extra_classes) }}>
+  
+  <div class="card__inner">
+
+    {# Image #}
+    <div class="card__image">{% block card__img %}{% endblock %}</div>
+
+    {# Content #}
+    <div class="card__content prose max-w-none">
+
+      <div class="card__inner--content">
+        {# Header #}
+        {% if card__heading %}
+          <div class="card__header">
+
+            {{ title_prefix }}
+            {% include "@atoms/text/headings/_heading.twig" with {
+              base_class: card__heading__base_class|default('heading'),
+              modifiers: card__heading__modifiers,
+              blockname: card__base_class,
+              heading__level: 2,
+              heading: card__heading,
+              heading_url: card__heading__link|default(card__link__url),
+              heading_link_base_class: card__heading__link_base_class|default('heading-link'),
+              heading_link_blockname: card__base_class,
+            } %}
+            {{ title_suffix }}
+
+            {% if card__subheading %}
+              <div class="card__content--header-sub">
+                {% include "@atoms/text/headings/_heading.twig" with {
+                  heading_base_class: card__subheading__base_class|default('subheading'),
+                  heading_modifiers: card__subheading__modifiers,
+                  heading_blockname: card__base_class,
+                  heading_level: 3,
+                  heading: card__subheading,
+                  heading_url: card__subheading__link,
+                } %}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
+        {# Body #}
+        {% if card__body | render %}
+          <div class="card__body">
+            {{ card__body }}
+          </div>
+        {% endif %}
+
+      </div>
+
+      {% if card__footer | render %}
+        <div class="card__footer">
+          {{ card__footer }}
+        </div>
+      {% endif %}
+
+      {% if webform_url | render %}
+        <div class="card__cta card__cta-webform">
+          <div class="cta-button__webform">
+            <a aria-role="button" href="{{ webform_url }}" class="webform-dialog webform-dialog-normal button has-icon">
+              {{ webform_text }}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if card__link__url %}
+        <div class="card__cta card__cta-link">
+          {% include "@atoms/links/link/link.twig" with {
+            link_base_class: card__link__base_class|default('link'),
+            link_blockname: card__base_class,
+            link_extra_classes: 'button',
+            link_attributes: card__link__attributes,
+            link_content: card__link__content,
+            link_url: card__link__url,
+          } %}
+        </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>

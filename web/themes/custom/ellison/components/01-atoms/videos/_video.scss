@@ -1,0 +1,34 @@
+/* Responsive Video using CSS only */
+.video {
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  video {
+    height: auto;
+    width: 100%;
+  }
+
+
+
+}
+
+.video__wrap {
+
+  h2.video__name {
+    margin: 1rem 0 0 0 !important;
+  }
+
+  .field-video,
+  .contextual-region,
+  .field-media-oembed-video {
+    height: 100%;
+  }
+
+}
+
+/* removes name when used with a card */
+.card h2.video__name {
+  display: none;
+}

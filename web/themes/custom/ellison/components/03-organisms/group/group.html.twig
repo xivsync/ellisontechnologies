@@ -1,0 +1,80 @@
+{#
+/**
+ * Group Component
+ *
+ * Available variables:
+ *
+  header: content.field_header,
+  body: content.field_content,
+  footer: content.field_footer,
+  group: content.field_group,
+  background_color: content.field_background_color,
+  background_diagonal: content.field_diagonal_background,
+  background_full_width: content.field_full_width_background,
+  data: content,
+ *
+ */
+#}
+
+{% set group_id = id | render ? 'group__' ~ id | clean_class : 'group_' ~ random() | clean_class %}
+
+{% set group_label = id | render | striptags | trim ? id : 'na' %}
+
+{% set base_class = 'group' %}
+
+{% set attributes = create_attribute() %}
+
+{%
+  set classes = [
+    base_class,
+    background_color | clean_class,
+    background_diagonal | clean_class,
+    background_full_width | clean_class,
+    background_tilt | clean_class,
+  ]
+%}
+
+{% set inner_attributes = create_attribute() %}
+
+{%
+  set inner_classes = [
+    base_class ~ '__inner',
+    background_diagonal | clean_class,
+    display_style | clean_class, 
+    background_full_width == 'full-width-on' ? 'container' : '',
+    background_diagonal == 'diagonal-forward-slash-on' ? 'container' : '',
+    background_tilt == 'tilt-back-slash-on' ? 'container' : '',
+    (
+      display_style == 'display-as-row' and
+      background_diagonal != 'diagonal-forward-slash-on' and
+      background_full_width != 'full-width-on' and
+      background_tilt != 'tilt-back-slash-on'
+    ) ? 'container' : '',
+  ]
+%}
+
+<div{{ attributes.addClass(classes).setAttribute('id', group_id).setAttribute('data-id-label', group_label ) }}>
+  {{ title_suffix }}
+  <div{{ inner_attributes.addClass(inner_classes) }}>
+    {% if header | render %}
+      <div class="group__header">
+        {{ header }}
+      </div>
+    {% endif %}
+    {% if body | render %}
+      <div class="group__body">
+        {{ body }}
+      </div>
+    {% endif %}
+    {% if group | render %}
+      <div class="group__group">
+        {{ group }}
+      </div>
+    {% endif %}
+    {% if footer | render %}
+      <div class="group__footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+  </div>
+</div>

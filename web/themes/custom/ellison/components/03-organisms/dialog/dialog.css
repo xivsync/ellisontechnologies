@@ -1,0 +1,23 @@
+.ui-widget.ui-dialog {
+  @apply shadow-lg p-0;
+  font-family: unset;
+  font-size: unset;
+  border: none;
+  border-radius: 0;
+
+  .ui-dialog-titlebar {
+    @apply border-b border-gray-200;
+    background: none;
+    border: none;
+    border-radius: none;
+  }
+
+  .ui-button {
+    @apply border-none;
+  }
+
+}
+
+.ui-widget-overlay {
+  @apply bg-black opacity-80;
+}

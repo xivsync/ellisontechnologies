@@ -1,0 +1,115 @@
+.header {
+  @apply p-3 flex flex-col items-center;
+  background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
+
+  &__inner {
+    @apply container flex flex-row flex-wrap justify-between gap-4;
+  }
+
+  &__branding {
+    @apply basis-auto lg:basis-2/12 flex flex-col justify-center;
+
+    img {
+      @apply w-28 p-0;
+    }
+
+  }
+
+  &__navigating {
+    @apply basis-auto hidden lg:flex flex-col grow items-start justify-end hidden w-[100vw] lg:w-max order-1 lg:order-none;
+
+    &.expanded {
+      @apply flex;
+    }
+
+  }
+
+  &__searching {
+    @apply hidden lg:flex lg:flex-col lg:basis-2/12 w-full lg:w-max justify-center order-1 lg:order-none;
+
+    &.expanded {
+      @apply flex;
+    }
+
+    .form-item {
+      height:2.3rem;
+    }
+
+    form#search-block-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    input#edit-keys {
+      @apply w-[85vw] md:w-[93vw] lg:w-32 h-9 border-none focus:ring-0;
+      border-radius: 25px 0px 0px 25px;
+    }
+
+    div#edit-actions {
+      @apply h-9;
+    }
+
+    input#edit-submit {
+      @apply h-9 w-9;
+      border-radius: 0px 25px 25px 0px;
+      border: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='m21 21-5.197-5.197m0 0A7.503 7.503 0 0 0 18 10.499c0-4.114-3.386-7.5-7.5-7.5a7.503 7.503 0 0 0-7.501 7.5C2.999 14.614 6.385 18 10.5 18a7.503 7.503 0 0 0 5.303-2.197z' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      background-color: blue;
+    }
+
+    input#edit-submit:hover{
+      background-color: lightgray;
+    }
+    
+  }
+
+  &__mobi {
+    @apply flex lg:hidden flex-row items-center gap-4;
+
+    #main-menu--toggle {
+      @apply border-none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 12' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px' transform='translate(-3 -6)'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    #searching--toggle {
+      @apply border-none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='m21 21-5.197-5.197m0 0A7.503 7.503 0 0 0 18 10.499c0-4.114-3.386-7.5-7.5-7.5a7.503 7.503 0 0 0-7.501 7.5C2.999 14.614 6.385 18 10.5 18a7.503 7.503 0 0 0 5.303-2.197z' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    #searching--toggle[aria-expanded=true],
+    #main-menu--toggle[aria-expanded=true] {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='M6 18 18 6M6 6l12 12' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px' transform='translate(-5.25 -5.25)'/%3E%3C/svg%3E");
+      background-size: 16px;
+    }
+
+  }
+
+}
+
+.jumbotron {
+  @apply relative;
+  
+  &__heading {
+    @apply absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center;
+  }
+
+  h1.heading {
+    @apply text-white text-[2.5rem] font-bold text-center uppercase;
+  }
+
+}

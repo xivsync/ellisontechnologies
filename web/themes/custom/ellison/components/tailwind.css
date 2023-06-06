@@ -1,0 +1,150 @@
+@import "tailwindcss/base";
+/*@import "./custom-base-styles.css";*/
+
+@import "tailwindcss/components";
+
+@import './01-atoms/buttons/buttons.css';
+@import './01-atoms/buttons/button-group.css';
+@import './01-atoms/forms/forms.css';
+@import './01-atoms/text/headings/page-title.css';
+
+@import './02-molecules/card/card.css';
+@import './02-molecules/cta/cta.css';
+@import './02-molecules/dropdown/dropdown.css';
+@import './02-molecules/event/event.css';
+@import './02-molecules/menus/breadcrumbs/breadcrumbs.css';
+@import './02-molecules/model-listing/model-listing.css';
+@import './02-molecules/quote/quote.css';
+@import './02-molecules/text/text.css';
+@import './02-molecules/webform/webform.css';
+
+@import './03-organisms/collection/collection.css';
+@import './03-organisms/components/components.css';
+@import './03-organisms/dialog/dialog.css';
+@import './03-organisms/group/group.css';
+@import './03-organisms/site/site-footer/site-footer.css';
+@import './03-organisms/site/site-header/site-header.css';
+@import './03-organisms/slides/slides.css';
+
+
+html {
+  font-size: 18px;
+}
+
+@import "tailwindcss/utilities";
+/*@import "./custom-utilities.css";*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
+
+.tabs__nav.tabs__nav--local-tasks {
+  @apply container mx-auto;
+}
+
+.full-width-on {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.diagonal-forward-slash-on {
+  @apply py-16;
+  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+}
+
+@media (min-width: 1024px) {
+  .diagonal-forward-slash-on {
+    @apply py-16;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+}
+
+.tilt-back-slash-on {
+  padding-top: 8rem !important;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 1024px) {
+  .tilt-back-slash-on {
+    @apply pt-16;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* @todo: add backward slash `\` */
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow:hidden; /* todo: fix for full-width */
+}
+
+.layout-content {
+  @apply flex flex-col gap-8 my-8 p-4 lg:p-0;
+}
+
+.views-element-container {
+  @apply container mx-auto;
+}
+
+.page {
+  @apply container flex flex-col mx-auto;
+
+  &__header {
+    @apply flex flex-row gap-8;
+    
+    &--image {
+      @apply basis-1/2;
+    }
+
+    &--content {
+      @apply flex flex-col basis-1/2 justify-center;
+    }
+
+  }
+
+  &__content {
+    @apply flex flex-col;
+
+    &--model {
+      @apply gap-8;
+    }
+
+  }
+
+}
+
+.prose {
+
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 0 !important;
+  }
+
+  ul {
+    @apply list-disc list-outside;
+  }
+
+  li::marker {
+    @apply text-black;
+  }
+
+  ol {
+    @apply list-decimal list-outside;
+  }
+}
+
+.text-long :last-child {
+  margin-bottom: 0;
+}
+
+.views-exposed-form {
+  @apply flex flex-row gap-4 items-end pb-4;
+
+  .form-item__select {
+    @apply h-[54px];
+  }
+
+}

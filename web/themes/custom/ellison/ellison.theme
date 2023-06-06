@@ -1,0 +1,181 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ * 
+ * https://moretechnical.wordpress.com/2020/06/23/solution-to-pass-custom-variables-to-twig-file-in-drupal-8-using-hooks/
+ * 
+ */
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function ellison_form_alter(&$form, &$form_state, $form_id)
+{
+  if ($form_id == 'search_block_form') {
+    /* adds placeholder text to search box */
+    $form['keys']['#attributes']['placeholder'][] = t('Search');
+    $form['actions']['submit']['#value'] = '';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ */
+function ellison_preprocess_page_title(&$variables)
+{
+  
+  $show_title = 'yes';
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node instanceof \Drupal\node\NodeInterface) {
+
+    $jumbo_mid = '';
+    if ($node->hasField('field_jumbo_image')) {
+      $jumbo_mid = $node->field_jumbo_image->target_id;
+    }
+
+    // if jumbo image exists, do not show title
+    $variables['show_title'] =  $jumbo_mid != '' ? 'no' : 'yes';
+
+  }
+
+}
+
+function ellison_preprocess_region(&$variables)
+{
+
+  if ($variables['region'] === 'footer') {
+
+    // Add region and region ID
+    $session = \Drupal::request()->getSession(); 
+    $session_region = $session->get('region');
+    $session_region_id = $session->get('region_id');
+    $variables['session_region'] = $session_region ? $session_region : 'Select Location';
+
+
+    // default region is southern california
+    $variables['#attached']['drupalSettings']['ellison']['session_region'] = $session_region ? $session_region : 'California - Southern';
+    $variables['#attached']['drupalSettings']['ellison']['session_region_id'] = $session_region_id ? $session_region_id : '18';
+
+    // @todo see if this needs to be done to all regions
+    $variables['#cache']['contexts'][] = 'session';
+
+  }
+
+  if ($variables['region'] === 'header') {
+
+    // Get the node object.
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    if ($node instanceof \Drupal\node\NodeInterface) {
+
+      // Add jumbo image path and attributes
+      if ($node->hasField('field_jumbo_image')) {
+
+        $wide = null;
+        $alt = null;
+        $width = null;
+        $height = null;
+
+        // Get media id 
+        $jumbo_mid = $node->field_jumbo_image->target_id;
+        if ($jumbo_mid) {
+          
+          // Get image path
+          $media_entity = Media::load($jumbo_mid);
+          $file_id = $media_entity->getSource()->getSourceFieldValue($media_entity);
+          $file = File::load($file_id);
+
+          // Get responsive image paths
+          $wide = ImageStyle::load('wide_2600x2600')->buildUrl($file->getFileUri());
+
+          // Get media image properties
+          $mediaImage = $media_entity->get('field_media_image');
+          $alt = $mediaImage->alt;
+          $width = $mediaImage->width;
+          $height = $mediaImage->height;
+          $title = $mediaImage->title;
+
+        }
+
+        $variables['jumbo_image_path'] = $wide ? $wide : null;
+        $variables['jumbo_image_alt'] = $alt ? $alt : null;
+        $variables['jumbo_image_width'] = $width ? $width : null;
+        $variables['jumbo_image_height'] = $height ? $height : null;
+        $variables['jumbo_image_title'] = $node->getTitle();
+
+      }
+
+    }
+
+  }
+
+}
+
+function ellison_preprocess_views_view_unformatted(&$variables)
+{
+
+  $view = $variables['view'];
+  $view_id = $view->id();
+  $view_display = $view->current_display;
+
+  /* handles is-active for series dropdown menu */
+  if ($view_id == 'series' && $view->current_display == 'block_1') {
+
+    $rows = $variables['rows'];
+    foreach($view->result as $id => $row){
+
+      $nid = $row->_entity->id();
+      $alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
+
+      $current_path = \Drupal::service('path.current')->getPath();
+      $current_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+      
+      if ($alias == $current_alias ) {
+        $variables['rows'][$id]['attributes']->addClass('is-active');
+      }
+
+    }
+
+  }
+
+  /* handles removing rows when blocked */
+  if ($view_id == 'models' && $view->current_display == 'block_1') {
+
+    $session = \Drupal::request()->getSession(); 
+    $user_region_tid = $session->get('region_id');
+
+    $rows = $variables['rows'];
+    foreach($view->result as $id => $row){
+
+      $nid = $row->_entity->id();
+      $brand_tid =  $row->_entity->get('field_brand')->target_id;
+      $brand_regions = \Drupal\taxonomy\Entity\Term::load($brand_tid)->get('field_region')->getString();
+      $brand_region_tids = explode(', ',$brand_regions);
+
+      if (!in_array($user_region_tid, $brand_region_tids, true)) {
+        // user region tid does not match one of this model's brand regions
+        unset($variables['rows'][$id]);
+      }
+    }
+
+    // do not cache this
+    $variables['#cache']['max-age'] = 0;
+
+  }
+
+}
