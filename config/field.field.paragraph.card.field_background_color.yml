@@ -1,0 +1,21 @@
+uuid: d20e234a-fa83-4526-8b52-3e3d2b6aad1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: card
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

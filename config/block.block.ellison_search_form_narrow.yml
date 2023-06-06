@@ -1,4 +1,4 @@
-uuid: b2279b56-c1ac-44b0-8974-8953192522b4
+uuid: 0af4e50d-f3a0-42a9-9638-df239906efbe
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: ellison_search_form_narrow
 theme: ellison
 region: header
-weight: -4
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

@@ -1,0 +1,10 @@
+uuid: 219077e0-870b-4a58-8ba2-f7e34f0ee2fa
+langcode: en
+status: true
+dependencies: {  }
+id: specifications
+label: 'Specification Types'
+icon_uuid: null
+icon_default: null
+description: 'Add specification types and items to the Specifications component.'
+behavior_plugins: {  }

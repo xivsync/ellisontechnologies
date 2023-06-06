@@ -1,0 +1,23 @@
+uuid: 22f7b28f-4aae-4508-8e49-6af335b5d55e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_style
+    - paragraphs.paragraphs_type.group
+id: paragraph.group.field_display_style
+field_name: field_display_style
+entity_type: paragraph
+bundle: group
+label: 'Display in rows'
+description: 'Components will display in columns by default. Switch to rows to stack components horizontally.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: row
+  off_label: col
+field_type: boolean

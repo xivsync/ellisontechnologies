@@ -1,4 +1,4 @@
-uuid: 109472c9-c6bf-4f19-873e-8f70b6c2ab4b
+uuid: c1101664-a302-4ba9-ae2c-a118d85ba005
 langcode: en
 status: true
 dependencies: {  }
@@ -7,8 +7,8 @@ _core:
 id: default
 label: default
 date_format: 'D, M j Y'
-time_format: 'g:ia'
-time_hour_format: ga
+time_format: 'g:ia T'
+time_hour_format: 'ga T'
 allday_label: 'All day'
 separator: ' - '
 join: ', '

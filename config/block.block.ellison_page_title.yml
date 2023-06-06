@@ -1,4 +1,4 @@
-uuid: 8a94b3e5-df0f-4981-8dbe-cd0441fa8dc7
+uuid: 344f954e-2b35-44d7-89bc-68526cb0bc12
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: ellison_page_title
 theme: ellison
-region: header
-weight: -5
+region: content
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

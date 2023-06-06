@@ -1,0 +1,23 @@
+uuid: 328e282b-d272-499e-952a-e0ed8e50e9f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_button
+    - paragraphs.paragraphs_type.cta_button
+  module:
+    - link
+id: paragraph.cta_button.field_cta_button
+field_name: field_cta_button
+entity_type: paragraph
+bundle: cta_button
+label: 'CTA Button'
+description: 'Add a call to action button when NOT using a Webform CTA Button.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

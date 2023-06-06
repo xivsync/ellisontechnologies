@@ -1,0 +1,10 @@
+uuid: 204fa165-8232-4446-99d0-267a9861fe71
+langcode: en
+status: true
+dependencies: {  }
+id: instagram
+label: Instagram
+icon_uuid: null
+icon_default: null
+description: 'Displays instagram feed.'
+behavior_plugins: {  }

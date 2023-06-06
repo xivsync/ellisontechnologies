@@ -1,4 +1,4 @@
-uuid: 45e2df5c-4c6a-478d-a2f8-f639cc3d8fc6
+uuid: 431518e0-6217-4449-9ff7-4f8088e8f5ca
 langcode: en
 status: true
 dependencies:
@@ -13,12 +13,10 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - undo
+      - '|'
       - bold
       - italic
-      - strikethrough
-      - superscript
-      - subscript
-      - removeFormat
       - '|'
       - link
       - '|'
@@ -26,15 +24,22 @@ settings:
       - numberedList
       - '|'
       - blockQuote
-      - drupalInsertImage
       - insertTable
       - horizontalLine
       - '|'
+      - alignment
       - heading
-      - codeBlock
+      - style
+      - removeFormat
       - '|'
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -42,13 +47,49 @@ settings:
         - heading4
         - heading5
         - heading6
-    ckeditor5_imageResize:
-      allow_resize: true
     ckeditor5_list:
       reversed: true
       startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Color Cyan H2'
+          element: '<h2 class="text-cyan">'
+        -
+          label: 'Color Cyan Paragraph'
+          element: '<p class="text-cyan">'
+        -
+          label: 'Color Light Blue H2'
+          element: '<h2 class="text-light-blue">'
+        -
+          label: 'Color Light Blue Paragraph'
+          element: '<p class="text-light-blue">'
+        -
+          label: 'Color White H2'
+          element: '<h2 class="text-white">'
+        -
+          label: 'Color White Paragraph'
+          element: '<p class="text-white">'
+        -
+          label: 'Size XL H2'
+          element: '<h2 class="text-4xl">'
+        -
+          label: 'Size XXL H2'
+          element: '<h2 class="text-8xl">'
+        -
+          label: 'Size XL H3'
+          element: '<h3 class="text-4xl">'
+        -
+          label: 'Size XXL H3'
+          element: '<h3 class="text-8xl">'
+        -
+          label: 'Size XL Paragraph'
+          element: '<p class="text-4xl">'
+        -
+          label: 'Size XXL Paragraph'
+          element: '<p class="text-8xl">'
 image_upload:
   status: true
   scheme: public

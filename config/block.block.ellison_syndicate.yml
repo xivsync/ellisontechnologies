@@ -1,6 +1,6 @@
-uuid: 9b35ed19-cd84-403a-800b-e0e865d05776
+uuid: 21d74d63-adb5-4098-8448-c98b1bf4d3b5
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - node
@@ -10,8 +10,8 @@ _core:
   default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
 id: ellison_syndicate
 theme: ellison
-region: header
-weight: 0
+region: footer
+weight: -3
 provider: null
 plugin: node_syndicate_block
 settings:

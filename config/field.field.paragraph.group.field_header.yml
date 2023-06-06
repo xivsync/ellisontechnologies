@@ -1,0 +1,21 @@
+uuid: c1d17a26-9669-4a8b-9879-88a65f74d27e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.group
+  module:
+    - text
+id: paragraph.group.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: group
+label: Header
+description: 'Add header content that spans container.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

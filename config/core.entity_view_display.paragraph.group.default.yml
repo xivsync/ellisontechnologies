@@ -1,0 +1,119 @@
+uuid: 5b7cadb1-e6e5-4eb7-8941-af7d8428ff00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.group.field_background_color
+    - field.field.paragraph.group.field_content
+    - field.field.paragraph.group.field_diagonal_background
+    - field.field.paragraph.group.field_display_style
+    - field.field.paragraph.group.field_enable_back_slash_tilt
+    - field.field.paragraph.group.field_footer
+    - field.field.paragraph.group.field_full_width_background
+    - field.field.paragraph.group.field_group
+    - field.field.paragraph.group.field_header
+    - field.field.paragraph.group.field_remove_margins
+    - field.field.paragraph.group.field_unique_id
+    - paragraphs.paragraphs_type.group
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.group.default
+targetEntityType: paragraph
+bundle: group
+mode: default
+content:
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_diagonal_background:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_display_style:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_enable_back_slash_tilt:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_footer:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_full_width_background:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_group:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_header:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_remove_margins:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_unique_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

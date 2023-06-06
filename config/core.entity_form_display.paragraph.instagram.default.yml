@@ -1,0 +1,25 @@
+uuid: d99cc661-afbb-4ce8-ae72-2bad874d70b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram.field_content
+    - paragraphs.paragraphs_type.instagram
+  module:
+    - text
+id: paragraph.instagram.default
+targetEntityType: paragraph
+bundle: instagram
+mode: default
+content:
+  field_content:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,6 +1,6 @@
-uuid: 7f0d2b9e-3d47-4b3c-8da6-914aeaab0bb1
+uuid: 1543cf08-06f2-49ec-98d4-f1f56cd72b70
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: ellison_site_branding
 theme: ellison
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:

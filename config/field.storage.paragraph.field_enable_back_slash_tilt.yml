@@ -1,0 +1,18 @@
+uuid: a4b7faa8-2c4e-458a-9036-da434c416b5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_enable_back_slash_tilt
+field_name: field_enable_back_slash_tilt
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

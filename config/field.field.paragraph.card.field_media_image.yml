@@ -1,0 +1,31 @@
+uuid: a51577bb-886d-45a5-984f-58e5eccc8731
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_image
+    - media.type.image
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.card
+id: paragraph.card.field_media_image
+field_name: field_media_image
+entity_type: paragraph
+bundle: card
+label: Media
+description: 'Add remote video or image. Images need to be a minimum of 640px wide. There is no maximum size however the largest image displayed on the site is 2560px.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

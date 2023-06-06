@@ -1,0 +1,36 @@
+uuid: 1f5f666e-7596-459f-9e75-897a44886c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.specifications_list.field_specifications_type
+    - paragraphs.paragraphs_type.specifications_list
+  module:
+    - paragraphs
+id: paragraph.specifications_list.default
+targetEntityType: paragraph
+bundle: specifications_list
+mode: default
+content:
+  field_specifications_type:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Specification
+      title_plural: Specifications
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: specifications
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,6 +1,6 @@
-uuid: 06cd9b4d-5c4c-4d43-8fb9-9ca53a53c62a
+uuid: 627ad07d-812f-481e-93d0-7fced867cfe6
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - ellison
@@ -8,8 +8,8 @@ _core:
   default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
 id: ellison_secondary_local_tasks
 theme: ellison
-region: header
-weight: -2
+region: content
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

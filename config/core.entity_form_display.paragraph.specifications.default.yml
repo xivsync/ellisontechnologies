@@ -1,0 +1,42 @@
+uuid: 765bbbfa-f105-4df5-8355-31c440787695
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.specifications.field_label
+    - field.field.paragraph.specifications.field_specification
+    - paragraphs.paragraphs_type.specifications
+  module:
+    - key_value_field
+id: paragraph.specifications.default
+targetEntityType: paragraph
+bundle: specifications
+mode: default
+content:
+  field_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_specification:
+    type: key_value_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+      key_label: Label
+      value_label: Value
+      description_label: Description
+      description_rows: 5
+      key_size: 60
+      key_placeholder: ''
+      description_enabled: false
+      description_placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,4 +1,4 @@
-uuid: 28bcd41f-4294-4c1d-9d70-167b4ee4fbc5
+uuid: 0facba40-fef8-4141-a1aa-f5707efad153
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
 id: ellison_messages
 theme: ellison
-region: header
+region: content
 weight: -5
 provider: null
 plugin: system_messages_block

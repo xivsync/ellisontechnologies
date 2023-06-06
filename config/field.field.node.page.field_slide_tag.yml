@@ -1,0 +1,29 @@
+uuid: d31e0fa4-6076-408e-891c-cc1d457bbc10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_tag
+    - node.type.page
+    - taxonomy.vocabulary.tags
+id: node.page.field_slide_tag
+field_name: field_slide_tag
+entity_type: node
+bundle: page
+label: 'Slide Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,10 @@
+uuid: 86c92a32-d1d3-49c4-a1b4-68a250704ab3
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.model_page_header
+label: 'Model Page Header'
+targetEntityType: taxonomy_term
+cache: true

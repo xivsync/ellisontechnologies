@@ -1,0 +1,39 @@
+uuid: ccdbdc1d-6195-4283-8ef6-86543487bf0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_align_text
+    - field.field.paragraph.text.field_background_color
+    - field.field.paragraph.text.field_content
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+    - text
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_align_text:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

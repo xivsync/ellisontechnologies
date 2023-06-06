@@ -1,0 +1,60 @@
+uuid: 66019149-4223-4c8f-90e8-58a4e0fdd074
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.model.field_brand
+    - field.field.node.model.field_components
+    - field.field.node.model.field_default_series_model
+    - field.field.node.model.field_media_image
+    - field.field.node.model.field_product
+    - field.field.node.model.field_region
+    - field.field.node.model.field_series
+    - field.field.node.model.field_technologies
+    - image.style.card_640x640
+    - node.type.model
+  module:
+    - entity_reference_revisions
+    - media
+    - user
+id: node.model.default
+targetEntityType: node
+bundle: model
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_640x640
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_series:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: model_page_header
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_brand: true
+  field_default_series_model: true
+  field_product: true
+  field_region: true
+  field_technologies: true
+  links: true

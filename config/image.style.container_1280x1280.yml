@@ -1,0 +1,15 @@
+uuid: 750e59dc-b129-4525-8401-2b4f48840c3e
+langcode: en
+status: true
+dependencies: {  }
+name: container_1280x1280
+label: 'Container 1280x1280'
+effects:
+  d961243f-4f66-40c9-b02c-3a658f56f78d:
+    uuid: d961243f-4f66-40c9-b02c-3a658f56f78d
+    id: image_scale
+    weight: 1
+    data:
+      width: 1281
+      height: 1281
+      upscale: false

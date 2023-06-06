@@ -1,6 +1,6 @@
-uuid: 7f95d722-688b-4943-86dc-8125ce444c25
+uuid: 8f0a1e53-1c69-4004-a01d-7c5df2d32cc4
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - ellison
@@ -8,8 +8,8 @@ _core:
   default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
 id: ellison_primary_admin_actions
 theme: ellison
-region: header
-weight: -5
+region: content
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:

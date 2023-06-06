@@ -1,0 +1,23 @@
+uuid: b8d026ca-83e0-4150-80e1-7b27cc970b8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_navigation_style
+    - paragraphs.paragraphs_type.button_group
+  module:
+    - options
+id: paragraph.button_group.field_navigation_style
+field_name: field_navigation_style
+entity_type: paragraph
+bundle: button_group
+label: 'Navigation Style'
+description: 'By default, on page navigation links appear as buttons.'
+required: false
+translatable: false
+default_value:
+  -
+    value: nav-style__buttons
+default_value_callback: ''
+settings: {  }
+field_type: list_string

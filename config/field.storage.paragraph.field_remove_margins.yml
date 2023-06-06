@@ -1,0 +1,30 @@
+uuid: c9445bd6-804e-4fa3-b7dd-4297db14572f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_remove_margins
+field_name: field_remove_margins
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: remove-mb
+      label: 'Bottom Margin'
+    -
+      value: remove-mt
+      label: 'Top Margin'
+    -
+      value: remove-my
+      label: 'Bottom and Top Margin'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

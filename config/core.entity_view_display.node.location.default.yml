@@ -1,0 +1,65 @@
+uuid: f1ef0382-4c9d-43f0-9c43-8bf7c3049690
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location.field_address
+    - field.field.node.location.field_fax
+    - field.field.node.location.field_map
+    - field.field.node.location.field_phone
+    - field.field.node.location.field_region
+    - node.type.location
+  module:
+    - address
+    - address_static_map
+    - user
+id: node.location.default
+targetEntityType: node
+bundle: location
+mode: default
+content:
+  field_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fax:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_map:
+    type: address_static_map
+    label: hidden
+    settings:
+      zoom_level: auto
+      map_size: 400x400
+      additional: ''
+      map_style: roadmap
+      scale: 1
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  links: true

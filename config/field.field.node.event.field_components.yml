@@ -1,0 +1,82 @@
+uuid: 1103f7c4-a9f3-43ae-846a-077980800553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.event
+    - paragraphs.paragraphs_type.banner_image
+    - paragraphs.paragraphs_type.button_group
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.group
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.model_listing
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: node.event.field_components
+field_name: field_components
+entity_type: node
+bundle: event
+label: Components
+description: 'Add components to build event detail page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      banner_image: banner_image
+      button_group: button_group
+      card: card
+      cta_button: cta_button
+      group: group
+      image: image
+      model_listing: model_listing
+      quote: quote
+      text: text
+      webform: webform
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image:
+        weight: 13
+        enabled: true
+      button_group:
+        weight: 14
+        enabled: true
+      card:
+        weight: 15
+        enabled: true
+      cta_button:
+        weight: 16
+        enabled: true
+      group:
+        weight: 17
+        enabled: true
+      image:
+        weight: 18
+        enabled: true
+      model_listing:
+        weight: 19
+        enabled: true
+      quote:
+        weight: 20
+        enabled: true
+      specifications:
+        weight: 21
+        enabled: false
+      specifications_list:
+        weight: 22
+        enabled: false
+      text:
+        weight: 23
+        enabled: true
+      webform:
+        weight: 24
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: 8d51b1ec-3f07-4887-a028-e3a3d9fd4001
+langcode: en
+status: true
+dependencies: {  }
+id: specifications_list
+label: 'Specifications List'
+icon_uuid: null
+icon_default: null
+description: 'Add Specifications.'
+behavior_plugins: {  }

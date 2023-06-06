@@ -1,0 +1,21 @@
+uuid: 32cab511-4d0c-4db2-af6f-b5d9f9157a98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_align_text
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_align_text
+field_name: field_align_text
+entity_type: paragraph
+bundle: card
+label: 'Align CTA'
+description: 'Select where you want the CTA to be placed.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

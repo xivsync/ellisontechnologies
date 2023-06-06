@@ -1,0 +1,24 @@
+uuid: 0e856354-3162-4ae7-b202-767167ce81e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.model_page_header
+    - field.field.taxonomy_term.series.field_media_image
+    - taxonomy.vocabulary.series
+  module:
+    - text
+id: taxonomy_term.series.model_page_header
+targetEntityType: taxonomy_term
+bundle: series
+mode: model_page_header
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_media_image: true

@@ -1,0 +1,34 @@
+uuid: 8854cd52-aed2-4934-b7e1-6a679348641b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote.field_citation
+    - field.field.paragraph.quote.field_content
+    - paragraphs.paragraphs_type.quote
+  module:
+    - text
+id: paragraph.quote.default
+targetEntityType: paragraph
+bundle: quote
+mode: default
+content:
+  field_citation:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

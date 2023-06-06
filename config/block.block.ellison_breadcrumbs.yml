@@ -1,4 +1,4 @@
-uuid: b3c3610e-7c73-47ec-8853-8fd310d844a5
+uuid: e370b29e-5d7f-4de4-a945-626a2c1ea4c9
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: ellison_breadcrumbs
 theme: ellison
-region: header
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

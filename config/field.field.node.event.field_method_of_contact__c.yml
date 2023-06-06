@@ -1,0 +1,19 @@
+uuid: db10ac12-7b2d-4818-8fbd-44e655b98a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_method_of_contact__c
+    - node.type.event
+id: node.event.field_method_of_contact__c
+field_name: field_method_of_contact__c
+entity_type: node
+bundle: event
+label: 'Method Of Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

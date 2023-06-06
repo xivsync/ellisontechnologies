@@ -1,0 +1,29 @@
+uuid: a2dff26e-d02e-4eee-9681-d95736474735
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_tag
+    - media.type.remote_video
+    - taxonomy.vocabulary.tags
+id: media.remote_video.field_tag
+field_name: field_tag
+entity_type: media
+bundle: remote_video
+label: Tag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: tags
+field_type: entity_reference

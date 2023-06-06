@@ -1,4 +1,4 @@
-uuid: 8ae30547-6d41-4dbf-9b91-0fd833351362
+uuid: 89a79004-b449-4f79-a91b-97b881a41eb4
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: ellison_content
 theme: ellison
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: system_main_block
 settings:

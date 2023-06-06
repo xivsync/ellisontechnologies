@@ -1,0 +1,21 @@
+uuid: b77e6f5f-7c40-4d9b-b880-1f0edf9f08fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+id: paragraph.text.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: text
+label: 'Background Color'
+description: 'Add a background color to text.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

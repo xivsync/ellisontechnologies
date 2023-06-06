@@ -1,0 +1,21 @@
+uuid: 5b5956cc-a403-4ade-a787-9ff51e8e1a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_specification
+    - paragraphs.paragraphs_type.specifications
+  module:
+    - key_value_field
+id: paragraph.specifications.field_specification
+field_name: field_specification
+entity_type: paragraph
+bundle: specifications
+label: Specification
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: key_value

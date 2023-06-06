@@ -1,0 +1,25 @@
+uuid: dec62af4-2d26-46bf-a0c9-f431aae9cde4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform
+    - paragraphs.paragraphs_type.cta_button
+  module:
+    - webform
+id: paragraph.cta_button.field_webform
+field_name: field_webform
+entity_type: paragraph
+bundle: cta_button
+label: 'Webform CTA'
+description: 'Select a webform to load in a modal when clicking the webform CTA button.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

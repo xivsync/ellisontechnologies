@@ -1,0 +1,21 @@
+uuid: c210f495-3c8a-47d8-845d-350e3cd0c554
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_align_text
+    - paragraphs.paragraphs_type.cta_button
+  module:
+    - options
+id: paragraph.cta_button.field_align_text
+field_name: field_align_text
+entity_type: paragraph
+bundle: cta_button
+label: 'Align CTA'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

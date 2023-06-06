@@ -1,0 +1,15 @@
+uuid: 2aa19d7b-2dbe-4789-93c1-ead5a012eed2
+langcode: en
+status: true
+dependencies: {  }
+id: month_day
+label: 'Micro Month'
+date_format: 'M d'
+time_format: ''
+time_hour_format: ''
+allday_label: ''
+separator: ''
+join: ''
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

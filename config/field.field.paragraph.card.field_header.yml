@@ -1,0 +1,21 @@
+uuid: 6da6a52f-15c3-4ab6-802e-0cfeccdd30b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.card
+  module:
+    - text
+id: paragraph.card.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: card
+label: Header
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

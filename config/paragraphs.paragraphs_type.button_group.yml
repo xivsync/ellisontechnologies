@@ -1,0 +1,10 @@
+uuid: 32d530da-cd95-4ab2-966a-fe9e8046de9c
+langcode: en
+status: true
+dependencies: {  }
+id: button_group
+label: 'On Page Navigation'
+icon_uuid: null
+icon_default: null
+description: 'Create on page navigation to all Group components with an ID.'
+behavior_plugins: {  }

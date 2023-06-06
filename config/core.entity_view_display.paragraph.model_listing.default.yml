@@ -1,0 +1,22 @@
+uuid: ea5b461a-2a75-44b0-a9dd-9fb54dc431c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.model_listing.field_block
+    - paragraphs.paragraphs_type.model_listing
+  module:
+    - block_field
+id: paragraph.model_listing.default
+targetEntityType: paragraph
+bundle: model_listing
+mode: default
+content:
+  field_block:
+    type: block_field
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

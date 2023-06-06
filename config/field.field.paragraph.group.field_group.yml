@@ -1,0 +1,87 @@
+uuid: 96fb5b19-71ad-4e5d-a9c1-1253a6914ab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group
+    - paragraphs.paragraphs_type.banner_image
+    - paragraphs.paragraphs_type.button_group
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.group
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.model_listing
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.specifications_list
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: paragraph.group.field_group
+field_name: field_group
+entity_type: paragraph
+bundle: group
+label: Components
+description: 'Group 1 or more components into a section of a page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      banner_image: banner_image
+      image: image
+      card: card
+      text: text
+      quote: quote
+      cta_button: cta_button
+      button_group: button_group
+      webform: webform
+      model_listing: model_listing
+      specifications_list: specifications_list
+      video: video
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image:
+        weight: 3
+        enabled: true
+      button_group:
+        weight: 14
+        enabled: true
+      card:
+        weight: 8
+        enabled: true
+      cta_button:
+        weight: 10
+        enabled: true
+      group:
+        weight: 4
+        enabled: false
+      image:
+        weight: 6
+        enabled: true
+      model_listing:
+        weight: 18
+        enabled: true
+      quote:
+        weight: 9
+        enabled: true
+      specifications:
+        weight: 20
+        enabled: false
+      specifications_list:
+        weight: 22
+        enabled: true
+      text:
+        weight: 8
+        enabled: true
+      video:
+        weight: 25
+        enabled: true
+      webform:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

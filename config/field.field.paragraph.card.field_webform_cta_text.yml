@@ -1,0 +1,19 @@
+uuid: 32469383-dc15-4b32-b0cc-104dddbf3237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_cta_text
+    - paragraphs.paragraphs_type.card
+id: paragraph.card.field_webform_cta_text
+field_name: field_webform_cta_text
+entity_type: paragraph
+bundle: card
+label: 'Webform CTA Label'
+description: 'Enter text to label the Webform CTA'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

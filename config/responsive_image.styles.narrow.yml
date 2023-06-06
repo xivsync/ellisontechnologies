@@ -1,0 +1,43 @@
+uuid: 8eb79e19-da57-4bd3-8304-4e0b5a147276
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.container_1280x1280
+    - image.style.container_1600x1600
+    - image.style.container_640x640
+    - image.style.wide_2600x2600
+  theme:
+    - ellison
+_core:
+  default_config_hash: E9Pvy75e7AcNQi7TBRvoG0DU2FI8mjFcLARqfB-rlIU
+id: narrow
+label: Container
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_2600x2600
+    breakpoint_id: ellison.2xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: container_1600x1600
+    breakpoint_id: ellison.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: container_1280x1280
+    breakpoint_id: ellison.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: container_1280x1280
+    breakpoint_id: ellison.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: container_640x640
+    breakpoint_id: ellison.sm
+    multiplier: 1x
+breakpoint_group: ellison
+fallback_image_style: container_1600x1600

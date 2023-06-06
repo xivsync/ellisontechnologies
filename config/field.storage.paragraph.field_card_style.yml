@@ -1,0 +1,30 @@
+uuid: 2005f1c0-f57e-4b83-8602-c072b262aeff
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_card_style
+field_name: field_card_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: style-top
+      label: 'Vertical Card'
+    -
+      value: style-horz-left
+      label: 'Horizontal Card with left image'
+    -
+      value: style-horz-right
+      label: 'Horizontal Card with right image'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

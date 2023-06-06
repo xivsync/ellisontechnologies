@@ -1,0 +1,31 @@
+uuid: 5d0046b0-1818-4651-92e6-ed74f327527d
+langcode: en
+status: true
+dependencies: {  }
+id: ellison_industry
+label: Industry
+category: General
+likert: false
+options: |-
+  Aerospace: Aerospace
+  'Aerospace - Commercial': 'Aerospace - Commercial'
+  'Aerospace - Defense': 'Aerospace - Defense'
+  Agriculture: Agriculture
+  Automotive: Automotive
+  Construction: Construction
+  'Cutting Tools': 'Cutting Tools'
+  'Die & Mold': 'Die & Mold'
+  Education: Education
+  Electronics: Electronics
+  Engines/Transportation: Engines/Transportation
+  'Fab & Sheet Metal': 'Fab & Sheet Metal'
+  'Firearms & Ammunition': 'Firearms & Ammunition'
+  Food/Packaging: Food/Packaging
+  'Industrial & Commercial Machinery': 'Industrial & Commercial Machinery'
+  Medical: Medical
+  Mining: Mining
+  'Oil & Gas': 'Oil & Gas'
+  'Power Transmission': 'Power Transmission'
+  Recreation: Recreation
+  Semiconductor: Semiconductor
+  Valve: Valve

@@ -1,0 +1,23 @@
+uuid: 64ad0fc1-7b32-4af8-8e08-1b0115604738
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_diagonal_background
+    - paragraphs.paragraphs_type.group
+id: paragraph.group.field_diagonal_background
+field_name: field_diagonal_background
+entity_type: paragraph
+bundle: group
+label: 'Enable background forward diagonal'
+description: 'Switch on to skew background as a forward diagonal.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: diagonal-forward-slash-on
+  off_label: diagonal-off
+field_type: boolean

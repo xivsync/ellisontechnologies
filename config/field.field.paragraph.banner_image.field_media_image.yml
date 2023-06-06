@@ -1,0 +1,29 @@
+uuid: 9da8f6d4-65cc-4c21-a1df-13cf408e4909
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_image
+    - media.type.image
+    - paragraphs.paragraphs_type.banner_image
+id: paragraph.banner_image.field_media_image
+field_name: field_media_image
+entity_type: paragraph
+bundle: banner_image
+label: 'Media Image'
+description: 'Images need to be a minimum of 640px wide. There is no maximum size however the largest image displayed on the site is 2560px.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

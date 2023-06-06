@@ -1,0 +1,53 @@
+uuid: 5876ca7e-0535-415a-814a-6f507b72c946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_code_snippet
+    - field.field.node.event.field_components
+    - field.field.node.event.field_dates_and_times
+    - field.field.node.event.field_leadsource
+    - field.field.node.event.field_location
+    - field.field.node.event.field_method_of_contact__c
+    - field.field.node.event.field_region
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_webform
+    - field.field.node.event.field_webform_campaign_id__c
+    - node.type.event
+  module:
+    - entity_reference_revisions
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_code_snippet: true
+  field_dates_and_times: true
+  field_leadsource: true
+  field_location: true
+  field_method_of_contact__c: true
+  field_region: true
+  field_webform: true
+  field_webform_campaign_id__c: true
+  links: true

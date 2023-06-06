@@ -1,0 +1,12 @@
+uuid: 32607a9d-1b3d-42fb-bd41-6c74a11d9064
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:8323dea6-a102-4dd8-ad81-36cddcbf6445'
+id: cta_button
+label: 'CTA Button'
+icon_uuid: 8323dea6-a102-4dd8-ad81-36cddcbf6445
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjA0MjMgMjEuNjcxOEwxMy42ODM1IDE2LjYwMDdNMTMuNjgzNSAxNi42MDA3TDExLjE3NDEgMTguODI2TDExLjc0MjUgOS4zNTYyM0wxNi45Njk3IDE3LjI3MzFMMTMuNjgzNSAxNi42MDA3Wk0xMiAyLjI1VjQuNU0xNy44MzM2IDQuNjY2MzdMMTYuMjQyNiA2LjI1NzM2TTIwLjI1IDEwLjVIMThNNy43NTczNiAxNC43NDI2TDYuMTY2MzcgMTYuMzMzNk02IDEwLjVIMy43NU03Ljc1NzM2IDYuMjU3MzZMNi4xNjYzNyA0LjY2NjM3IiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=='
+description: 'Create call to action.'
+behavior_plugins: {  }

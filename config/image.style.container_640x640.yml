@@ -1,0 +1,15 @@
+uuid: 0a575d05-5879-4b1d-b0e4-5c407de512ec
+langcode: en
+status: true
+dependencies: {  }
+name: container_640x640
+label: 'Container 640x640'
+effects:
+  8c7e4b2b-712a-47ca-b020-d1fdcc185d9b:
+    uuid: 8c7e4b2b-712a-47ca-b020-d1fdcc185d9b
+    id: image_scale
+    weight: 1
+    data:
+      width: 641
+      height: 641
+      upscale: false

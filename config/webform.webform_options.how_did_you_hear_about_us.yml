@@ -1,0 +1,17 @@
+uuid: c10bba4d-c0c0-4b23-8ecb-5648db4a66c6
+langcode: en
+status: true
+dependencies: {  }
+id: how_did_you_hear_about_us
+label: 'How Did You Hear About Us'
+category: General
+likert: false
+options: |-
+  Website: Website
+  'Email Invitation': Email_Invitation
+  'Direct Mail': Direct_Mail
+  'Ellison Sales Engineer': Ellison_Sales_Engineer
+  'Vendor Partner': Vendor_Partner
+  'Telemarketing Call': Telemarketing_Call
+  'Magazine Advertisement': Magazine_Advertisement
+  'Social Media': Social_Media

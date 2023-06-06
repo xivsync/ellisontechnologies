@@ -1,0 +1,21 @@
+uuid: 6b41a17e-67a7-49e2-8fc9-a75a38eb138a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.group
+  module:
+    - text
+id: paragraph.group.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: group
+label: Body
+description: 'Add body content that spans container.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

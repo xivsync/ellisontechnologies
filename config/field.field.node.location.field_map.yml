@@ -1,0 +1,52 @@
+uuid: 9fc86d9e-1d70-4988-8245-779403295c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map
+    - node.type.location
+  module:
+    - address
+id: node.location.field_map
+field_name: field_map
+entity_type: node
+bundle: location
+label: Map
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: null
+    country_code: US
+    administrative_area: ''
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: ''
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+  fields: {  }
+field_type: address

@@ -1,0 +1,21 @@
+uuid: 71781fcd-86f2-4b26-9258-3ad01c916cff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.instagram
+  module:
+    - text
+id: paragraph.instagram.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: instagram
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

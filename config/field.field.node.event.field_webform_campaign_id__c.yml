@@ -1,0 +1,19 @@
+uuid: 8650ef46-49f8-4247-8bbf-2482c270d5c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webform_campaign_id__c
+    - node.type.event
+id: node.event.field_webform_campaign_id__c
+field_name: field_webform_campaign_id__c
+entity_type: node
+bundle: event
+label: 'Sales Force Campaign ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

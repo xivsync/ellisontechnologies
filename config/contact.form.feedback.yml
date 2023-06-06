@@ -1,4 +1,4 @@
-uuid: f010bb7b-0a0b-43e0-97e0-fdae315b62cf
+uuid: 87c4da35-0fa0-442a-8a8e-3670158f9eb4
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - admin@example.com
+  - no-reply@ellisontechnologies.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

@@ -1,0 +1,15 @@
+uuid: b5ffa5ed-cc06-4937-ac3f-0d83a817a6a2
+langcode: en
+status: true
+dependencies: {  }
+name: card_640x640
+label: 'Card 640x640'
+effects:
+  114e248e-689a-4333-a2e6-cd5f5d4acf5b:
+    uuid: 114e248e-689a-4333-a2e6-cd5f5d4acf5b
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: 640
+      upscale: false

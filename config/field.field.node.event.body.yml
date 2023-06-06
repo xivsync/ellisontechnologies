@@ -1,0 +1,23 @@
+uuid: 302a3ef3-4bca-433a-a1e7-e248f1d90e0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.event
+  module:
+    - text
+id: node.event.body
+field_name: body
+entity_type: node
+bundle: event
+label: Body
+description: 'Add content for Events Calendar page listing. Not displayed on the Event detail page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

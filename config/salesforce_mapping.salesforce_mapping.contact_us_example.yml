@@ -1,0 +1,77 @@
+langcode: en
+id: contact_us_example
+label: 'Contact Us Example'
+weight: 0
+type: salesforce_mapping
+key: ''
+always_upsert: false
+async: false
+push_standalone: false
+pull_standalone: false
+pull_trigger_date: LastModifiedDate
+pull_frequency: 0
+push_frequency: 0
+push_limit: 0
+push_retries: 3
+pull_where_clause: ''
+sync_triggers:
+  push_create: true
+  push_update: false
+  push_delete: false
+  pull_create: false
+  pull_update: false
+  pull_delete: false
+salesforce_object_type: Lead
+drupal_entity_type: webform_submission
+drupal_bundle: contact
+field_mappings:
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: email
+    direction: drupal_sf
+    salesforce_field: Email
+    id: 0
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: name
+    direction: drupal_sf
+    salesforce_field: LastName
+    id: 1
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: message
+    direction: drupal_sf
+    salesforce_field: Description
+    id: 2
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: company
+    direction: drupal_sf
+    salesforce_field: Company
+    id: 3
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: first_name
+    direction: drupal_sf
+    salesforce_field: FirstName
+    id: 4
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: phone
+    direction: drupal_sf
+    salesforce_field: Phone
+    id: 5
+    description: ''
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - salesforce_push
+    - salesforce_webform
+uuid: b7a10f22-d1a9-402b-aea8-b002af3ae925

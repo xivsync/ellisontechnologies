@@ -1,0 +1,67 @@
+uuid: 4f4ae2f2-dccd-4115-9bf2-16ac6ef0bbbc
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.event.body
+    - field.field.node.event.field_code_snippet
+    - field.field.node.event.field_components
+    - field.field.node.event.field_dates_and_times
+    - field.field.node.event.field_leadsource
+    - field.field.node.event.field_location
+    - field.field.node.event.field_method_of_contact__c
+    - field.field.node.event.field_region
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_webform
+    - field.field.node.event.field_webform_campaign_id__c
+    - node.type.event
+  module:
+    - smart_date
+    - user
+id: node.event.card
+targetEntityType: node
+bundle: event
+mode: card
+content:
+  field_dates_and_times:
+    type: smartdate_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        - start
+        - end
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_location:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_code_snippet: true
+  field_components: true
+  field_leadsource: true
+  field_method_of_contact__c: true
+  field_region: true
+  field_tags: true
+  field_webform: true
+  field_webform_campaign_id__c: true
+  links: true

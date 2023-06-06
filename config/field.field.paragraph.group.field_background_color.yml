@@ -1,0 +1,21 @@
+uuid: b81421aa-6b11-4482-8817-78426f39eb94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.group
+  module:
+    - options
+id: paragraph.group.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: group
+label: 'Background Color'
+description: 'Add background color: light gray, light blue, blue, or dark blue. Default is none.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

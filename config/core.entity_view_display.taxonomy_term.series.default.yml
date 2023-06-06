@@ -1,0 +1,35 @@
+uuid: e54e0527-cd11-4d0a-b13c-8ded5a5d75a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.series.field_media_image
+    - image.style.card_640x640
+    - taxonomy.vocabulary.series
+  module:
+    - media
+    - text
+id: taxonomy_term.series.default
+targetEntityType: taxonomy_term
+bundle: series
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_640x640
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

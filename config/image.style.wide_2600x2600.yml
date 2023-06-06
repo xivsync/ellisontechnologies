@@ -1,0 +1,15 @@
+uuid: 8cc3716f-3006-4292-bbbd-895e57eca8ca
+langcode: en
+status: true
+dependencies: {  }
+name: wide_2600x2600
+label: 'Wide 2600x2600'
+effects:
+  3006f211-3eb5-40ee-befd-39b8bdad23e3:
+    uuid: 3006f211-3eb5-40ee-befd-39b8bdad23e3
+    id: image_scale
+    weight: 1
+    data:
+      width: 2601
+      height: 2601
+      upscale: false

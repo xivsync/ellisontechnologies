@@ -1,0 +1,24 @@
+uuid: c411c2b0-b7d3-446f-bcf5-2a50c14ffea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.specifications_list.field_specifications_type
+    - paragraphs.paragraphs_type.specifications_list
+  module:
+    - entity_reference_revisions
+id: paragraph.specifications_list.default
+targetEntityType: paragraph
+bundle: specifications_list
+mode: default
+content:
+  field_specifications_type:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

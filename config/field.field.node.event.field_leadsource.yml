@@ -1,0 +1,21 @@
+uuid: bdd49d77-7f8c-4864-a68a-9fff479b3dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leadsource
+    - node.type.event
+id: node.event.field_leadsource
+field_name: field_leadsource
+entity_type: node
+bundle: event
+label: 'Lead Source'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Event Registration'
+default_value_callback: ''
+settings: {  }
+field_type: string

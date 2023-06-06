@@ -1,0 +1,42 @@
+uuid: 65d1f583-285f-4e81-b6f0-110f1a8d2679
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_align_text
+field_name: field_align_text
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text__align--left
+      label: 'Align Left'
+    -
+      value: text__align--center
+      label: Center
+    -
+      value: text__align--right
+      label: 'Align Right'
+    -
+      value: text__align--middle
+      label: 'Center in Middle'
+    -
+      value: text__align--bottom-left
+      label: 'Align Left at Bottom'
+    -
+      value: text__align--bottom-center
+      label: 'Center at Bottom'
+    -
+      value: text__align--bottom-right
+      label: 'Align Right at Bottom'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

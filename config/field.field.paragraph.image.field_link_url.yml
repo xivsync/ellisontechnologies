@@ -1,0 +1,19 @@
+uuid: 5b5adcdb-464c-40ef-b05f-78b60e61556f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_url
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.field_link_url
+field_name: field_link_url
+entity_type: paragraph
+bundle: image
+label: 'Link URL'
+description: 'Optional. If added then image is clickable.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

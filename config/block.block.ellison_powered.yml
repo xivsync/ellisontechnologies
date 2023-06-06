@@ -1,4 +1,4 @@
-uuid: e9644f2c-0ce8-4654-90ae-0a114e8474c2
+uuid: b5746b20-bf81-455f-b059-cecf59858148
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
 id: ellison_powered
 theme: ellison
-region: header
-weight: 0
+region: footer
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:

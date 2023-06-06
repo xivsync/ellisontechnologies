@@ -1,4 +1,4 @@
-uuid: 2ee72e3e-9ff4-4013-99bb-241430b2d31a
+uuid: 51794463-2336-44a5-8554-ad0f691b5ea5
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ _core:
 id: ellison_main_menu
 theme: ellison
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
+  depth: 3
   expand_all_items: true
 visibility: {  }

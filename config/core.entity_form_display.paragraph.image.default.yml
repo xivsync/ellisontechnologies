@@ -1,0 +1,33 @@
+uuid: 78b6c8db-a326-4940-b116-d36a80924edc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image.field_link_url
+    - field.field.paragraph.image.field_media_image
+    - paragraphs.paragraphs_type.image
+  module:
+    - media_library
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content:
+  field_link_url:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

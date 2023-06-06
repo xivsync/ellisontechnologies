@@ -1,0 +1,21 @@
+uuid: dc2dea48-4d6d-4265-9b13-c398fbfaf676
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_webform_cta_text
+field_name: field_webform_cta_text
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

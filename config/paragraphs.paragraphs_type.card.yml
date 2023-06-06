@@ -1,0 +1,12 @@
+uuid: f8a44bb2-8b51-468b-82f1-c238c3a0adc2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:82a846b5-a232-4d60-b2ca-4ae799eb86c6'
+id: card
+label: Card
+icon_uuid: 82a846b5-a232-4d60-b2ca-4ae799eb86c6
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjUgOC4yNVY2QzE2LjUgNC43NTczNiAxNS40OTI2IDMuNzUgMTQuMjUgMy43NUg2QzQuNzU3MzYgMy43NSAzLjc1IDQuNzU3MzYgMy43NSA2VjE0LjI1QzMuNzUgMTUuNDkyNiA0Ljc1NzM2IDE2LjUgNiAxNi41SDguMjVNMTYuNSA4LjI1SDE4QzE5LjI0MjYgOC4yNSAyMC4yNSA5LjI1NzM2IDIwLjI1IDEwLjVWMThDMjAuMjUgMTkuMjQyNiAxOS4yNDI2IDIwLjI1IDE4IDIwLjI1SDEwLjVDOS4yNTczNiAyMC4yNSA4LjI1IDE5LjI0MjYgOC4yNSAxOFYxNi41TTE2LjUgOC4yNUgxMC41QzkuMjU3MzYgOC4yNSA4LjI1IDkuMjU3MzYgOC4yNSAxMC41VjE2LjUiIHN0cm9rZT0iIzBGMTcyQSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K'
+description: 'Cards have an image and content. The content can include: header,  body, footer, and CTA button.'
+behavior_plugins: {  }

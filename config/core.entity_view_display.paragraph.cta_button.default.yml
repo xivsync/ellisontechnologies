@@ -1,0 +1,81 @@
+uuid: a2b7d27f-69a9-4dc7-b80c-04c88962718b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_button.field_align_text
+    - field.field.paragraph.cta_button.field_background_color
+    - field.field.paragraph.cta_button.field_content
+    - field.field.paragraph.cta_button.field_cta_button
+    - field.field.paragraph.cta_button.field_media_image
+    - field.field.paragraph.cta_button.field_webform
+    - field.field.paragraph.cta_button.field_webform_cta_text
+    - paragraphs.paragraphs_type.cta_button
+  module:
+    - link
+    - options
+    - text
+    - webform
+id: paragraph.cta_button.default
+targetEntityType: paragraph
+bundle: cta_button
+mode: default
+content:
+  field_align_text:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_button:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_webform:
+    type: webform_entity_reference_url
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_webform_cta_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

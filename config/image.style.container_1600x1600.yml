@@ -1,0 +1,15 @@
+uuid: 1096260c-118c-41c5-b00f-c0673f0d54d8
+langcode: en
+status: true
+dependencies: {  }
+name: container_1600x1600
+label: 'Container 1600x1600'
+effects:
+  c548bb8d-b3c2-4e89-98ed-bb5c33eb1f33:
+    uuid: c548bb8d-b3c2-4e89-98ed-bb5c33eb1f33
+    id: image_scale
+    weight: 1
+    data:
+      width: 1601
+      height: 1601
+      upscale: false

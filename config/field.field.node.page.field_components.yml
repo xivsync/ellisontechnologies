@@ -1,0 +1,87 @@
+uuid: c9361134-e12a-41d5-9aa3-804263f882db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.page
+    - paragraphs.paragraphs_type.banner_image
+    - paragraphs.paragraphs_type.button_group
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.group
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.model_listing
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: node.page.field_components
+field_name: field_components
+entity_type: node
+bundle: page
+label: Components
+description: 'Build your page by adding components'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image: image
+      banner_image: banner_image
+      group: group
+      card: card
+      quote: quote
+      cta_button: cta_button
+      text: text
+      button_group: button_group
+      model_listing: model_listing
+      webform: webform
+      video: video
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image:
+        weight: 4
+        enabled: true
+      button_group:
+        weight: 14
+        enabled: true
+      card:
+        weight: 8
+        enabled: true
+      cta_button:
+        weight: 10
+        enabled: true
+      group:
+        weight: 5
+        enabled: true
+      image:
+        weight: 2
+        enabled: true
+      model_listing:
+        weight: 15
+        enabled: true
+      quote:
+        weight: 9
+        enabled: true
+      specifications:
+        weight: 21
+        enabled: false
+      specifications_list:
+        weight: 22
+        enabled: false
+      text:
+        weight: 10
+        enabled: true
+      video:
+        weight: 25
+        enabled: true
+      webform:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

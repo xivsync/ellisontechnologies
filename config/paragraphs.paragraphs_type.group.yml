@@ -1,0 +1,12 @@
+uuid: 6079d706-fdd5-4c86-b6dd-5f5576b439d5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:1feb566c-8f4e-471d-9ae1-9c74905bfbad'
+id: group
+label: Group
+icon_uuid: 1feb566c-8f4e-471d-9ae1-9c74905bfbad
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgNC41VjE5LjVNMTUgNC41VjE5LjVNNC4xMjUgMTkuNUgxOS44NzVDMjAuNDk2MyAxOS41IDIxIDE4Ljk5NjMgMjEgMTguMzc1VjUuNjI1QzIxIDUuMDAzNjggMjAuNDk2MyA0LjUgMTkuODc1IDQuNUg0LjEyNUMzLjUwMzY4IDQuNSAzIDUuMDAzNjggMyA1LjYyNVYxOC4zNzVDMyAxOC45OTYzIDMuNTAzNjggMTkuNSA0LjEyNSAxOS41WiIgc3Ryb2tlPSIjMEYxNzJBIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo='
+description: 'Group components in rows or columns. Also able to add a header or footer component.'
+behavior_plugins: {  }

@@ -1,0 +1,39 @@
+uuid: 4aa3245d-70e0-43d1-838c-3a41ce7c9ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_align_text
+    - field.field.paragraph.text.field_background_color
+    - field.field.paragraph.text.field_content
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_align_text:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_background_color:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

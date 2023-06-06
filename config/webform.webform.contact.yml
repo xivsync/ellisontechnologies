@@ -1,4 +1,4 @@
-uuid: 933c3192-e05e-4db1-860b-db3b1043994f
+uuid: ff0bfbc6-d18e-4678-9de2-7b7b5ca92353
 langcode: en
 status: open
 dependencies:
@@ -7,27 +7,40 @@ dependencies:
       - webform
 _core:
   default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
+weight: 0
 open: null
 close: null
-weight: 0
 uid: null
 template: false
 archive: false
 id: contact
 title: Contact
-description: 'Basic email contact webform.'
+description: '<p>Basic email contact webform.</p>'
 category: ''
-elements: |
+elements: |-
   name:
-    '#title': 'Your Name'
     '#type': textfield
+    '#title': 'Last Name'
     '#required': true
     '#default_value': '[current-user:display-name]'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  company:
+    '#type': textfield
+    '#title': Company
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#title': 'Your Email'
     '#type': email
     '#required': true
     '#default_value': '[current-user:mail]'
+  phone:
+    '#type': tel
+    '#title': Phone
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   subject:
     '#title': Subject
     '#type': textfield
@@ -38,6 +51,25 @@ elements: |
     '#type': textarea
     '#required': true
     '#test': 'Please ignore this email.'
+  processed_text:
+    '#type': processed_text
+    '#text': |-
+      <script>
+      (window.__ctm_loaded || []).push(function() {
+        __ctm.form.capture('app.calltrackingmetrics.com', // the capture host
+                           'FRT472ABB2C5B9B141ADAB06C7A709212DB808E116D131D6AC30D9F1FD53942EF31', // this FormReactor
+                           document.getElementById('webform-submission-contact-add-form'),  // ID of the web form you want to attach your FormReactor
+                           "8664851591", // the tracking number used for associating visitor data and caller ID consumers will see
+                           {
+                             country_code: "1", // the expected country code e.g. +1, +44, +55, +61, etc... the plus is ignored
+                             name: "name", // set to the ID of the lead name field, or pass in a list of IDs if there are multiple name fields
+                             phone: "phone", // ID of the lead phone number field
+                             email: "email", // optional, ID of the lead email field
+                             fields: ['custom1', 'custom2'] // list of additional field IDs in the form you want to capture
+                           });
+      });
+      </script>
+    '#format': source
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -45,20 +77,20 @@ elements: |
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
-  ajax_progress_type: ''
-  ajax_effect: ''
-  ajax_speed: null
+  ajax_progress_type: throbber
+  ajax_effect: fade
+  ajax_speed: 1000
   page: true
   page_submit_path: ''
-  page_confirm_path: ''
-  page_theme_name: ''
+  page_confirm_path: /about/news
+  page_theme_name: ellison
   form_title: source_entity_webform
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
@@ -68,31 +100,36 @@ settings:
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
   form_method: ''
   form_action: ''
-  form_attributes: {  }
   share: false
   share_node: false
   share_theme_name: ''
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -101,11 +138,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -116,19 +148,21 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -144,12 +178,12 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
+  confirmation_url: /about/news
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_message: '<h2>Thank you.</h2><p>Your message has been sent.</p>'
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
@@ -226,9 +260,9 @@ access:
 handlers:
   email_confirmation:
     id: email
+    handler_id: email_confirmation
     label: 'Email confirmation'
     notes: ''
-    handler_id: email_confirmation
     status: true
     conditions: {  }
     weight: 1
@@ -237,13 +271,17 @@ handlers:
         - completed
       to_mail: '[current-user:mail]'
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
@@ -257,15 +295,11 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
   email_notification:
     id: email
+    handler_id: email_notification
     label: 'Email notification'
     notes: ''
-    handler_id: email_notification
     status: true
     conditions: {  }
     weight: 2
@@ -274,13 +308,17 @@ handlers:
         - completed
       to_mail: _default
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
@@ -294,8 +332,4 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
 variants: {  }

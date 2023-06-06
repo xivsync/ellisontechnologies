@@ -1,0 +1,30 @@
+uuid: 6e250c75-7581-4930-bd86-86539fffb7af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.model_listing
+  module:
+    - block_field
+id: paragraph.model_listing.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: model_listing
+label: Block
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'views_block:models-block_1': 'views_block:models-block_1'
+      'views_block:locations_cards-block_1': 'views_block:locations_cards-block_1'
+      'views_block:locations-block_1': 'views_block:locations-block_1'
+      'views_block:slides-block_1': 'views_block:slides-block_1'
+      'views_block:tagged_content-block_1': 'views_block:tagged_content-block_1'
+      'views_block:videos-block_1': 'views_block:videos-block_1'
+field_type: block_field

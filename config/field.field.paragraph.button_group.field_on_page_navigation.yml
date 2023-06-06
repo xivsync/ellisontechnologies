@@ -1,0 +1,23 @@
+uuid: bc1c92e7-235a-486b-9ec2-45aa823e6f6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_on_page_navigation
+    - paragraphs.paragraphs_type.button_group
+id: paragraph.button_group.field_on_page_navigation
+field_name: field_on_page_navigation
+entity_type: paragraph
+bundle: button_group
+label: 'On Page Navigation'
+description: 'On page navigation is enabled by default. <strong>For an on page navigation link to appear, a Group ID in the Group Component is required.</strong>'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enabled
+  off_label: Disabled
+field_type: boolean

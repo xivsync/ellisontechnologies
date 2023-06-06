@@ -1,0 +1,18 @@
+uuid: fe826367-8bee-4184-ad88-8b32cb30fefc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.model
+id: node.model.title
+field_name: title
+entity_type: node
+bundle: model
+label: 'Model Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

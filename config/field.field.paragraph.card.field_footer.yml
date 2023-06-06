@@ -1,0 +1,21 @@
+uuid: 476dfc2f-74d6-478f-af8c-b230b34fa956
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer
+    - paragraphs.paragraphs_type.card
+  module:
+    - text
+id: paragraph.card.field_footer
+field_name: field_footer
+entity_type: paragraph
+bundle: card
+label: Footer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

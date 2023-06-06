@@ -1,4 +1,4 @@
-uuid: 55c84cec-9770-4692-b1a6-b995cd7cc9ad
+uuid: 7fefc320-6148-4d0c-98dd-9c11d3cadea4
 langcode: en
 status: true
 dependencies:
@@ -21,14 +21,18 @@ settings:
       - bulletedList
       - numberedList
       - '|'
-      - blockQuote
-      - drupalInsertImage
-      - '|'
+      - alignment
       - heading
-      - code
+      - style
       - '|'
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -36,8 +40,6 @@ settings:
         - heading4
         - heading5
         - heading6
-    ckeditor5_imageResize:
-      allow_resize: true
     ckeditor5_list:
       reversed: false
       startIndex: true
@@ -56,6 +58,44 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Blue H2'
+          element: '<h2 class="text-blue">'
+        -
+          label: 'Blue Paragraph'
+          element: '<p class="text-blue">'
+        -
+          label: 'Cyan H2'
+          element: '<h2 class="text-cyan">'
+        -
+          label: 'Cyan Paragraph'
+          element: '<p class="text-cyan">'
+        -
+          label: 'Dark Blue H2'
+          element: '<h2 class="text-dark-blue">'
+        -
+          label: 'Dark Blue Paragraph'
+          element: '<p class="text-dark-blue">'
+        -
+          label: 'Light Blue H2'
+          element: '<h2 class="text-light-blue">'
+        -
+          label: 'Light Blue Paragraph'
+          element: '<p class="text-light-blue">'
+        -
+          label: 'White H2'
+          element: '<h2 class="text-white">'
+        -
+          label: 'White Paragraph'
+          element: '<p class="text-white">'
+        -
+          label: 'Size Larger H2'
+          element: '<h2 class="text-4xl">'
+        -
+          label: 'Size Larger Paragraph'
+          element: '<p class="text-xl">'
 image_upload:
   status: true
   scheme: public
