@@ -23,6 +23,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  ellison_webform: 0
   emulsify_twig: 0
   entity_reference_revisions: 0
   field: 0
