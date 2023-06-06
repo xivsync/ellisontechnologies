@@ -1,0 +1,1 @@
+Drupal.behaviors.siteFooter={attach:function(o){once("location",".footer__local",o).forEach((function(o){"default"===drupalSettings.ellison.session_region&&o.getElementsByTagName("a")[0].click()}))}};

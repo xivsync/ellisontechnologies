@@ -1,0 +1,1 @@
+Drupal.behaviors.responsiveEmbeddedVideos={attach:function(e){once("enableResponsiveEmbeddedVideo",'iframe[src*="vimeo.com"]',e).forEach((function(e){var t=e.getAttribute("width"),i=e.getAttribute("height"),o="".concat(t," / ").concat(i);e.parentNode.style.aspectRatio=o,e.setAttribute("height","100%"),e.setAttribute("width","100%")}))}};

@@ -1,0 +1,1 @@
+Drupal.behaviors.slider={attach:function(e){once("glide",".glide",e).forEach((function(e){new Glide(e,{type:"carousel",focusAt:"center",perView:1}).mount()}))}};
