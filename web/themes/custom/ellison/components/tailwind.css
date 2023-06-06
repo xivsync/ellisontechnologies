@@ -24,6 +24,8 @@
 @import './03-organisms/group/group.css';
 @import './03-organisms/site/site-footer/site-footer.css';
 @import './03-organisms/site/site-header/site-header.css';
+@import './03-organisms/slides/glide.core.css';
+@import './03-organisms/slides/glide.theme.css';
 @import './03-organisms/slides/slides.css';
 
 

@@ -46,14 +46,9 @@ location:
     dist/js/03-organisms/site/site-footer/site-footer.js: {}
 slides:
   js:
-    node_modules/@glidejs/glide/dist/glide.js: {}
+    dist/js/03-organisms/slides/glide.js: {}
     dist/js/03-organisms/slides/slides.js: {}
     dist/js/01-atoms/videos/video.js: {}
-  css:
-    theme:
-      node_modules/@glidejs/glide/dist/css/glide.core.css: {}
-      node_modules/@glidejs/glide/dist/css/glide.theme.css: {}
-      dist/js/03-organisms/slides/slides.css: {}
   dependencies:
     - core/drupal
     - core/once
