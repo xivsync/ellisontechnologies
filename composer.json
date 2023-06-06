@@ -45,7 +45,8 @@
         "drupal/twig_tweak": "^3.2",
         "drupal/typed_data": "^1.0@beta",
         "drupal/webform": "^6.2@beta",
-        "drupal/components": "^3.0@beta"
+        "drupal/components": "^3.0@beta",
+        "drupal/block_field": "^1.0@RC"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
