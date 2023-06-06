@@ -1,0 +1,22 @@
+uuid: 2877cc1a-5f46-4a46-a988-8e3e9aab6b97
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ellison
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: ellison_primary_local_tasks
+theme: ellison
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

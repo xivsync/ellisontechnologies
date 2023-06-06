@@ -1,0 +1,23 @@
+uuid: f6d4b80d-7e1b-4b59-bab0-6d598e191fae
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - ellison
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: ellison_search_form_wide
+theme: ellison
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
