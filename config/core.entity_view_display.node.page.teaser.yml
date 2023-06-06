@@ -22,6 +22,7 @@ content:
     weight: 101
     region: content
 hidden:
+  body: true
   field_components: true
   field_jumbo_image: true
   field_product: true

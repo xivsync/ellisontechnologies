@@ -45,5 +45,6 @@ content:
     weight: 2
     region: content
 hidden:
+  body: true
   field_product: true
   links: true
