@@ -3,6 +3,10 @@ global:
   css:
     theme:
       dist/css/style.css: {}
+  js:
+    https://367150.tctm.xyz/t.js: {}
+    https://367150.tctm.co/formreactor.js: {}
+
 
 # IE 11 support for SVG disabled.
 # Components/01-atoms/images/icons/_icon.twig attach library deprecated.
