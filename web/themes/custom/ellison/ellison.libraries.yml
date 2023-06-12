@@ -46,7 +46,7 @@ location:
     dist/js/03-organisms/site/site-footer/site-footer.js: {}
 slides:
   js:
-    dist/js/03-organisms/slides/glide.js: {}
+    https://cdn.jsdelivr.net/npm/@glidejs/glide: {}
     dist/js/03-organisms/slides/slides.js: {}
     dist/js/01-atoms/videos/video.js: {}
   dependencies:
