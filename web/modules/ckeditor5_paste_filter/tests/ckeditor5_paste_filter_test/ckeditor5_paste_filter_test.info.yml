@@ -1,0 +1,12 @@
+name: CKEditor 5 Paste Filter test
+type: module
+description: Test module for CKEditor 5 Paste Filter.
+package: Testing
+# version: VERSION
+dependencies:
+  - ckeditor5_paste_filter:ckeditor5_paste_filter
+
+# Information added by Drupal.org packaging script on 2023-05-04
+version: '1.0.0-alpha1'
+project: 'ckeditor5_paste_filter'
+datestamp: 1683232467
