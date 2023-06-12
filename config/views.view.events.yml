@@ -481,8 +481,9 @@ display:
       menu:
         type: normal
         title: Events
+        weight: -50
         menu_name: main
-        parent: 'menu_link_content:b878b15a-1899-4170-b943-7f805f11073b'
+        parent: 'menu_link_content:16bd95ad-d112-4bef-8bbb-513e580f7bb7'
     cache_metadata:
       max-age: -1
       contexts:

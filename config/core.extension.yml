@@ -15,6 +15,7 @@ module:
   block_field: 0
   breakpoint: 0
   ckeditor5: 0
+  ckeditor5_paste_filter: 0
   comment: 0
   components: 0
   config: 0
@@ -30,6 +31,7 @@ module:
   ellison_webform: 0
   emulsify_twig: 0
   entity_reference_revisions: 0
+  entity_usage: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -55,8 +57,10 @@ module:
   options: 0
   page_cache: 0
   paragraphs_edit: 0
+  paragraphs_library: 0
   path: 0
   path_alias: 0
+  quick_node_clone: 0
   responsive_image: 0
   salesforce: 0
   salesforce_address: 0

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.source
     - filter.format.webform_default
   module:
     - comment
@@ -28,5 +29,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format source'
   - 'use text format webform_default'
   - 'view media'

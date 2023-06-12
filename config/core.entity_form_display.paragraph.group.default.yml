@@ -33,7 +33,7 @@ third_party_settings:
       label: Configurations
       region: content
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: fieldset
       format_settings:
         classes: ''
@@ -50,7 +50,7 @@ third_party_settings:
       label: Content
       region: content
       parent_name: ''
-      weight: 1
+      weight: 0
       format_type: fieldset
       format_settings:
         classes: ''
@@ -118,8 +118,8 @@ content:
     weight: 4
     region: content
     settings:
-      title: 'Group of components'
-      title_plural: 'Group of components'
+      title: Component
+      title_plural: Components
       edit_mode: closed
       closed_mode: summary
       autocollapse: none
