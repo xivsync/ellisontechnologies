@@ -15,10 +15,75 @@ dependencies:
     - field.field.paragraph.card.field_webform_cta_text
     - paragraphs.paragraphs_type.card
   module:
+    - field_group
     - link
     - media_library
     - text
     - webform
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - field_media_image
+        - field_header
+        - field_content
+        - field_footer
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_options:
+      children:
+        - field_background_color
+        - field_card_style
+        - field_align_text
+      label: Options
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_cta_for_webform:
+      children:
+        - field_webform_cta_text
+        - field_webform
+      label: 'CTA for Webform'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: 'Cannot be used with CTA Button.'
+        required_fields: true
+    group_cta_button:
+      children:
+        - field_cta_button
+      label: 'CTA Button'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: 'Cannot be used with Webform CTA.'
+        required_fields: true
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
@@ -26,7 +91,7 @@ mode: default
 content:
   field_align_text:
     type: options_select
-    weight: 7
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -52,7 +117,7 @@ content:
     third_party_settings: {  }
   field_cta_button:
     type: link_default
-    weight: 6
+    weight: 2
     region: content
     settings:
       placeholder_url: ''
@@ -83,7 +148,7 @@ content:
     third_party_settings: {  }
   field_webform:
     type: webform_entity_reference_select
-    weight: 8
+    weight: 7
     region: content
     settings:
       default_data: true
@@ -91,7 +156,7 @@ content:
     third_party_settings: {  }
   field_webform_cta_text:
     type: string_textfield
-    weight: 9
+    weight: 6
     region: content
     settings:
       size: 60

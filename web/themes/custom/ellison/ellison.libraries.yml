@@ -3,6 +3,10 @@ global:
   css:
     theme:
       dist/css/style.css: {}
+  js:
+    https://367150.tctm.xyz/t.js: {}
+    https://367150.tctm.co/formreactor.js: {}
+
 
 # IE 11 support for SVG disabled.
 # Components/01-atoms/images/icons/_icon.twig attach library deprecated.
@@ -46,7 +50,7 @@ location:
     dist/js/03-organisms/site/site-footer/site-footer.js: {}
 slides:
   js:
-    dist/js/03-organisms/slides/glide.js: {}
+    https://cdn.jsdelivr.net/npm/@glidejs/glide: {}
     dist/js/03-organisms/slides/slides.js: {}
     dist/js/01-atoms/videos/video.js: {}
   dependencies:

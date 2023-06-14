@@ -32,6 +32,8 @@ settings:
       - style
       - removeFormat
       - '|'
+      - drupalInsertImage
+      - '|'
       - sourceEditing
   plugins:
     ckeditor5_alignment:
@@ -47,49 +49,124 @@ settings:
         - heading4
         - heading5
         - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
     ckeditor5_list:
       reversed: true
       startIndex: true
+    ckeditor5_paste_filter_pasteFilter:
+      enabled: false
+      filters:
+        -
+          enabled: true
+          weight: -10
+          search: '<o:p><\/o:p>'
+          replace: ''
+        -
+          enabled: true
+          weight: -9
+          search: '(<[^>]*) (style="[^"]*")'
+          replace: $1
+        -
+          enabled: true
+          weight: -8
+          search: '(<[^>]*) (face="[^"]*")'
+          replace: $1
+        -
+          enabled: true
+          weight: -7
+          search: '(<[^>]*) (class="[^"]*")'
+          replace: $1
+        -
+          enabled: true
+          weight: -6
+          search: '(<[^>]*) (valign="[^"]*")'
+          replace: $1
+        -
+          enabled: true
+          weight: -5
+          search: '<font[^>]*>'
+          replace: ''
+        -
+          enabled: true
+          weight: -4
+          search: '<\/font>'
+          replace: ''
+        -
+          enabled: true
+          weight: -3
+          search: '<span[^>]*>'
+          replace: ''
+        -
+          enabled: true
+          weight: -2
+          search: '<\/span>'
+          replace: ''
+        -
+          enabled: true
+          weight: -1
+          search: '<p>&nbsp;<\/p>'
+          replace: ''
+        -
+          enabled: true
+          weight: 0
+          search: '<p><\/p>'
+          replace: ''
+        -
+          enabled: true
+          weight: 1
+          search: '<b><\/b>'
+          replace: ''
+        -
+          enabled: true
+          weight: 2
+          search: '<i><\/i>'
+          replace: ''
+        -
+          enabled: true
+          weight: 3
+          search: '<a name="OLE_LINK[^"]*">(.*?)<\/a>'
+          replace: $1
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     ckeditor5_style:
       styles:
         -
-          label: 'Color Cyan H2'
+          label: 'Blue H2'
+          element: '<h2 class="text-blue">'
+        -
+          label: 'Blue Paragraph'
+          element: '<p class="text-blue">'
+        -
+          label: 'Cyan H2'
           element: '<h2 class="text-cyan">'
         -
-          label: 'Color Cyan Paragraph'
+          label: 'Cyan Paragraph'
           element: '<p class="text-cyan">'
         -
-          label: 'Color Light Blue H2'
+          label: 'Dark Blue H2'
+          element: '<h2 class="text-dark-blue">'
+        -
+          label: 'Dark Blue Paragraph'
+          element: '<p class="text-dark-blue">'
+        -
+          label: 'Light Blue H2'
           element: '<h2 class="text-light-blue">'
         -
-          label: 'Color Light Blue Paragraph'
+          label: 'Light Blue Paragraph'
           element: '<p class="text-light-blue">'
         -
-          label: 'Color White H2'
+          label: 'White H2'
           element: '<h2 class="text-white">'
         -
-          label: 'Color White Paragraph'
+          label: 'White Paragraph'
           element: '<p class="text-white">'
         -
-          label: 'Size XL H2'
+          label: 'Size Larger H2'
           element: '<h2 class="text-4xl">'
         -
-          label: 'Size XXL H2'
-          element: '<h2 class="text-8xl">'
-        -
-          label: 'Size XL H3'
-          element: '<h3 class="text-4xl">'
-        -
-          label: 'Size XXL H3'
-          element: '<h3 class="text-8xl">'
-        -
-          label: 'Size XL Paragraph'
-          element: '<p class="text-4xl">'
-        -
-          label: 'Size XXL Paragraph'
-          element: '<p class="text-8xl">'
+          label: 'Size Larger Paragraph'
+          element: '<p class="text-xl">'
 image_upload:
   status: true
   scheme: public

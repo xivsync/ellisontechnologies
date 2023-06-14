@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.button_group
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.group
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.model_listing
@@ -32,56 +33,63 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      image: image
       banner_image: banner_image
-      group: group
-      card: card
-      quote: quote
-      cta_button: cta_button
-      text: text
-      button_group: button_group
       model_listing: model_listing
-      webform: webform
+      card: card
+      cta_button: cta_button
+      from_library: from_library
+      image: image
+      group: group
+      button_group: button_group
+      quote: quote
+      text: text
       video: video
+      webform: webform
     negate: 0
     target_bundles_drag_drop:
       banner_image:
-        weight: 4
+        weight: -31
         enabled: true
       button_group:
-        weight: 14
+        weight: -24
         enabled: true
       card:
-        weight: 8
+        weight: -29
         enabled: true
       cta_button:
-        weight: 10
+        weight: -28
+        enabled: true
+      from_library:
+        weight: -27
         enabled: true
       group:
-        weight: 5
+        weight: -25
         enabled: true
       image:
-        weight: 2
+        weight: -26
         enabled: true
+      instagram:
+        weight: -17
+        enabled: false
       model_listing:
-        weight: 15
+        weight: -30
         enabled: true
       quote:
-        weight: 9
+        weight: -23
         enabled: true
       specifications:
-        weight: 21
+        weight: -19
         enabled: false
       specifications_list:
-        weight: 22
+        weight: -18
         enabled: false
       text:
-        weight: 10
+        weight: -22
         enabled: true
       video:
-        weight: 25
+        weight: -21
         enabled: true
       webform:
-        weight: 16
+        weight: -20
         enabled: true
 field_type: entity_reference_revisions
