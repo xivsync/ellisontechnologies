@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e9053d0df71a1e17ac3cae3eee3c73f",
+    "content-hash": "6ba9169d9462f32b54495ef829bd3a74",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1658,6 +1658,57 @@
             "homepage": "https://www.drupal.org/project/block_field",
             "support": {
                 "source": "https://git.drupalcode.org/project/block_field"
+            }
+        },
+        {
+            "name": "drupal/ckeditor_link_styles",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor_link_styles.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_link_styles-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "eca74d528e1cca27bca06a9157d1b3993d84a6a2"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "php": ">=8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1680015141",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Snyder",
+                    "homepage": "https://www.drupal.org/user/1988434",
+                    "email": "chris@chrissnyder.org",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides the ability to select styles (css classes) for links within CKEditor5.",
+            "homepage": "https://www.drupal.org/project/ckeditor_link_styles",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://cgit.drupalcode.org/ckeditor_link_styles",
+                "issues": "https://www.drupal.org/project/issues/ckeditor_link_styles"
             }
         },
         {

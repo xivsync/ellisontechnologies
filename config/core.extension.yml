@@ -16,6 +16,7 @@ module:
   breakpoint: 0
   ckeditor5: 0
   ckeditor5_paste_filter: 0
+  ckeditor_link_styles: 0
   comment: 0
   components: 0
   config: 0
