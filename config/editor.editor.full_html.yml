@@ -167,6 +167,11 @@ settings:
         -
           label: 'Size Larger Paragraph'
           element: '<p class="text-xl">'
+    ckeditor_link_styles_linkStyles:
+      styles:
+        -
+          label: 'Button Default'
+          element: '<a class="button">'
 image_upload:
   status: true
   scheme: public
