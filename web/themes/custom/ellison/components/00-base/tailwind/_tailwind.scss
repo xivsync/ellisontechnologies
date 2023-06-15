@@ -5693,6 +5693,11 @@ html {
   background-color: rgb(0 115 230 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-medium-blue {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(1 85 158 / var(--tw-bg-opacity)) !important;
+}
+
 .p-1 {
   padding: 0.25rem !important;
 }
@@ -5774,6 +5779,11 @@ html {
 .text-light-blue {
   --tw-text-opacity: 1 !important;
   color: rgb(0 115 230 / var(--tw-text-opacity)) !important;
+}
+
+.text-medium-blue {
+  --tw-text-opacity: 1 !important;
+  color: rgb(1 85 158 / var(--tw-text-opacity)) !important;
 }
 
 .text-white {
