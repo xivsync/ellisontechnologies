@@ -3903,6 +3903,27 @@ div.webform {
       }
     }
   }
+  &--medium-blue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(1 85 158 / var(--tw-bg-opacity));
+  }
+  &--medium-blue {
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off {
+      padding: 2rem;
+    }
+    &.full-width-on,
+    &.text {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .prose {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+    }
+  }
   &--light-blue {
     --tw-bg-opacity: 1;
     background-color: rgb(0 115 230 / var(--tw-bg-opacity));

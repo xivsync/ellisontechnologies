@@ -71,6 +71,27 @@
 
   }
 
+  &--medium-blue {
+    @apply bg-medium-blue;
+
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off{
+      @apply p-8;
+    }
+    
+    &.full-width-on,
+    &.text {
+      @apply py-8;
+    }
+
+    .prose {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+        @apply text-white;
+      }
+    }
+
+  }
+
   &--light-blue {
     @apply bg-light-blue;
 
