@@ -49,7 +49,11 @@
         "drupal/block_field": "^1.0@RC",
         "firebase/php-jwt": "^6.5",
         "drupal/ckeditor_link_styles": "^1.0",
-        "drupal/csv_importer": "^1.16"
+        "drupal/csv_importer": "^1.16",
+        "wikimedia/composer-merge-plugin": "^2.1",
+        "drupal/dropzonejs": "^2.8",
+        "enyo/dropzone": "^5.7",
+        "drupal/media_bulk_upload": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -87,7 +91,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/dropzonejs/composer.libraries.json"
+            ]
+        }
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
@@ -107,7 +116,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "wikimedia/composer-merge-plugin": true
         }
     }
 }

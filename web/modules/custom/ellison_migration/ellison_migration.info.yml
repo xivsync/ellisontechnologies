@@ -1,0 +1,5 @@
+name: Ellison Migration
+type: module
+description: 'Migration module for Ellison theme.'
+package: Custom
+core_version_requirement: ^9.4 || ^10
