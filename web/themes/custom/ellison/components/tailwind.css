@@ -150,3 +150,9 @@ html {
   }
 
 }
+
+/* handles contextual links */
+.image image__item .contextual {
+  top: 50%;
+  right: 50%
+}
