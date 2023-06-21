@@ -1,0 +1,16 @@
+uuid: 68d6a3d2-868b-406f-9629-b2e87fa16c40
+langcode: en
+status: true
+dependencies: {  }
+id: images
+label: Images
+media_types:
+  image: image
+  audio: 0
+  document: 0
+  remote_video: 0
+  video: 0
+form_mode: default
+upload_location: ''
+show_alt: null
+show_title: null

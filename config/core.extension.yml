@@ -22,6 +22,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  csv_importer: 0
   datetime: 0
   dblog: 0
   devel: 0
@@ -29,6 +30,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  ellison_migration: 0
   ellison_webform: 0
   emulsify_twig: 0
   entity_reference_revisions: 0
@@ -50,6 +52,7 @@ module:
   key_value_field: 0
   link: 0
   media: 0
+  media_bulk_upload: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
