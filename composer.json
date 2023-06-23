@@ -97,9 +97,7 @@
         },
         "enable-patching": true,
         "merge-plugin": {
-            "include": [
-                "web/modules/contrib/dropzonejs/composer.libraries.json"
-            ]
+            "include": ["web/modules/contrib/dropzonejs/composer.libraries.json"]
         },
         "patches": {
             "drupal/taxonomy_manager": {
