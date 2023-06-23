@@ -97,6 +97,11 @@
             "include": [
                 "web/modules/contrib/dropzonejs/composer.libraries.json"
             ]
+        },
+        "patches": {
+            "drupal/taxonomy_manager": {
+                "Issue 3331822 - Taxonomy tree is not showing": "https://git.drupalcode.org/project/taxonomy_manager/-/merge_requests/16/diffs.patch"
+            }
         }
     },
     "autoload": {
