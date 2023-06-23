@@ -55,6 +55,7 @@
         "enyo/dropzone": "^5.7",
         "drupal/media_bulk_upload": "^3.0",
         "drupal/taxonomy_manager": "^2.0",
+        "drupal/tamper": "^1.0@alpha",
         "drupal/feeds": "^3.0@beta",
         "drupal/feeds_tamper": "^2.0@beta"
     },
