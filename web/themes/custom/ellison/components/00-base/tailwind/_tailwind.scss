@@ -3646,7 +3646,10 @@ div.webform {
     flex-direction: row;
   }
   .collections__body {
-    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .collections__body {
+    row-gap: 2rem;
   }
 }
 

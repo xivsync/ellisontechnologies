@@ -95,7 +95,8 @@
   }
 
   .collections__body {
-    @apply flex flex-row gap-8;
+    @apply flex flex-row flex-wrap;
+    row-gap: 2rem;
   }
 
 }
