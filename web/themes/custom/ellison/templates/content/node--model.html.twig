@@ -91,7 +91,7 @@
   {{ title_prefix }}
   {% if not page %}
     {% include "@atoms/text/headings/_heading.twig" with {
-      "heading_level": 2,
+      "headling__level": 2,
       "heading": label,
       "heading_url": url,
       "heading_link_attributes": {
@@ -155,6 +155,15 @@
             </div>
 
           </div>
+
+          {% include "@atoms/text/headings/_heading.twig" with {
+            "heading__level": '1',
+            "heading": label,
+            "heading_url": url,
+            "heading_link_attributes": {
+              'rel': 'bookmark'
+            },
+          } %}
 
           <div class="component">
             {{ drupal_view('series', 'block_1') }}
