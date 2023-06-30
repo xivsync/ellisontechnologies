@@ -1,5 +1,4 @@
 .cta-button {
-  @apply flex flex-col gap-2 items-start;
 
   .cta-button__inner {
     @apply flex flex-col gap-2 items-start;

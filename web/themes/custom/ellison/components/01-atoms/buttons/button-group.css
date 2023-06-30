@@ -1,12 +1,8 @@
-.button-group {
+.component.button-group {
+  @apply flex flex-row gap-8 items-center;
 
-  .field-on-page-navigation {
-    @apply inline-flex flex flex-row flex-wrap gap-4;
-
-    a {
-      @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-cyan focus:outline-none rounded-full py-2 px-4 no-underline capitalize;
-    }
-
+  /* handles odd button bug on models page inside button group */
+  .cta-button.text__align--right {
+    display: inline;
   }
-
 }

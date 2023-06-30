@@ -108,50 +108,56 @@
       </div>
       <div class="page__header--content">
         <div class="components">
+          
           <div class="component">
             {{ content.field_series }}
           </div>
+
+          <div class="component button-group">
+
+            <div class="component">
+
+              {% include "@molecules/cta/cta.twig" with {
+                classes: cta_button_classes,
+                align_class: 'text__align--right',
+                body: '',
+                webform_url: '/form/contact',
+                webform_text: 'Contact Us',
+                cta_button: '',
+              } %}
+
+            </div>
+
+            <div class="component">
+
+              {% include "@atoms/links/link/link.twig" with {
+                link_content: 'Accessories',
+                link_url: '#group__parts',
+                link_base_class: 'link',
+                link_modifiers: ['parts'],
+                link_blockname: 'model',
+                link_extra_classes: 'button',
+              } %}
+
+            </div>
+
+            <div class="component">
+
+              {% include "@atoms/links/link/link.twig" with {
+                link_content: 'Turnkey',
+                link_url: '#group__solutions',
+                link_base_class: 'link',
+                link_modifiers: ['solutions'],
+                link_blockname: 'model',
+                link_extra_classes: 'button',
+              } %}
+
+            </div>
+
+          </div>
+
           <div class="component">
             {{ drupal_view('series', 'block_1') }}
-          </div>
-
-          <div class="component">
-
-            {% include "@molecules/cta/cta.twig" with {
-              classes: cta_button_classes,
-              align_class: 'text__align--right',
-              body: '',
-              webform_url: '/form/contact',
-              webform_text: 'Contact Us',
-              cta_button: '',
-            } %}
-
-          </div>
-
-          <div class="component">
-
-            {% include "@atoms/links/link/link.twig" with {
-              link_content: 'Accessories',
-              link_url: '#group__parts',
-              link_base_class: 'link',
-              link_modifiers: ['parts'],
-              link_blockname: 'model',
-              link_extra_classes: 'button',
-            } %}
-
-          </div>
-
-          <div class="component">
-
-            {% include "@atoms/links/link/link.twig" with {
-              link_content: 'Turnkey',
-              link_url: '#group__solutions',
-              link_base_class: 'link',
-              link_modifiers: ['solutions'],
-              link_blockname: 'model',
-              link_extra_classes: 'button',
-            } %}
-
           </div>
 
         </div>
