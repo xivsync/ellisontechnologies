@@ -15,8 +15,6 @@ module:
   block_field: 0
   breakpoint: 0
   ckeditor5: 0
-  ckeditor5_paste_filter: 0
-  ckeditor_link_styles: 0
   comment: 0
   components: 0
   config: 0
@@ -26,15 +24,18 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  dropzonejs: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
-  ellison_migration: 0
   ellison_webform: 0
   emulsify_twig: 0
   entity_reference_revisions: 0
   entity_usage: 0
+  feeds: 0
+  feeds_log: 0
+  feeds_tamper: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -53,6 +54,7 @@ module:
   link: 0
   media: 0
   media_bulk_upload: 0
+  media_bulk_upload_dropzonejs: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
@@ -82,7 +84,9 @@ module:
   shortcut: 0
   smart_date: 0
   system: 0
+  tamper: 0
   taxonomy: 0
+  taxonomy_manager: 0
   text: 0
   token: 0
   toolbar: 0

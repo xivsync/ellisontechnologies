@@ -5,6 +5,6 @@ dependencies:
   module:
     - taxonomy
 id: taxonomy_term.model_page_header
-label: 'Model Page Header'
+label: 'Series with image and description'
 targetEntityType: taxonomy_term
 cache: true

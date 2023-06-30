@@ -162,6 +162,12 @@ settings:
           label: 'White Paragraph'
           element: '<p class="text-white">'
         -
+          label: 'Medium Blue H2'
+          element: '<h2 class="text-medium-blue">'
+        -
+          label: 'medium Blue Paragraph'
+          element: '<p class="text-medium-blue">'
+        -
           label: 'Size Larger H2'
           element: '<h2 class="text-4xl">'
         -
@@ -170,7 +176,7 @@ settings:
     ckeditor_link_styles_linkStyles:
       styles:
         -
-          label: 'Button Default'
+          label: 'Default Button'
           element: '<a class="button">'
 image_upload:
   status: true

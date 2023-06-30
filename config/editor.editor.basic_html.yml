@@ -164,6 +164,12 @@ settings:
           label: 'White Paragraph'
           element: '<p class="text-white">'
         -
+          label: 'Medium Blue H2'
+          element: '<h2 class="text-medium-blue">'
+        -
+          label: 'medium Blue Paragraph'
+          element: '<p class="text-medium-blue">'
+        -
           label: 'Size Larger H2'
           element: '<h2 class="text-4xl">'
         -

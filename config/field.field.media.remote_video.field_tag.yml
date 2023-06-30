@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.media.field_tag
     - media.type.remote_video
+    - taxonomy.vocabulary.products
+    - taxonomy.vocabulary.regions
     - taxonomy.vocabulary.tags
 id: media.remote_video.field_tag
 field_name: field_tag
@@ -20,6 +22,8 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
+      products: products
+      regions: regions
       tags: tags
     sort:
       field: name

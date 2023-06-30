@@ -1,0 +1,30 @@
+uuid: cd097b38-0a0c-4fa0-9257-bc0592d6fdaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.spec.feeds_item
+    - field.field.node.spec.field_model
+    - field.field.node.spec.field_spec_name
+    - field.field.node.spec.field_spec_value
+    - field.field.node.spec.field_specification_type
+    - node.type.spec
+  module:
+    - user
+id: node.spec.teaser
+targetEntityType: node
+bundle: spec
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_model: true
+  field_spec_name: true
+  field_spec_value: true
+  field_specification_type: true

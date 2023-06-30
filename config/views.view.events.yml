@@ -398,7 +398,20 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<p>There are no events scheduled; please check back later.</p>'
+            format: full_html
+          tokenize: false
       sorts:
         field_dates_and_times_value:
           id: field_dates_and_times_value
@@ -481,7 +494,7 @@ display:
       menu:
         type: normal
         title: Events
-        weight: -50
+        weight: -61
         menu_name: main
         parent: 'menu_link_content:16bd95ad-d112-4bef-8bbb-513e580f7bb7'
     cache_metadata:

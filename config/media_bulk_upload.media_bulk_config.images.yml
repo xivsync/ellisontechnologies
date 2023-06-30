@@ -1,4 +1,4 @@
-uuid: 68d6a3d2-868b-406f-9629-b2e87fa16c40
+uuid: 865d452d-33b2-454a-be76-cba992e62537
 langcode: en
 status: true
 dependencies: {  }
@@ -11,6 +11,6 @@ media_types:
   remote_video: 0
   video: 0
 form_mode: default
-upload_location: ''
+upload_location: 'public://image-upload-directory'
 show_alt: null
 show_title: null

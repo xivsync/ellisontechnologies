@@ -1,0 +1,142 @@
+uuid: ff9cb645-3d56-40c1-b53d-433d2fcada02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.spec.field_model
+    - field.field.node.spec.field_spec_name
+    - field.field.node.spec.field_spec_value
+    - field.field.node.spec.field_specification_type
+    - node.type.spec
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      5a0c212f-85af-4b80-be73-f145f08b7932:
+        text: '[name]__[spectype]_[specname]--[specvalue]'
+        uuid: 5a0c212f-85af-4b80-be73-f145f08b7932
+        plugin: rewrite
+        source: title
+        weight: -9
+        label: Rewrite
+label: Specs
+id: specs
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: spec
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  spectype:
+    value: spectype
+    label: spectype
+    machine_name: spectype
+    type: csv
+  specname:
+    value: specname
+    label: specname
+    machine_name: specname
+    type: csv
+  specvalue:
+    value: specvalue
+    label: specvalue
+    machine_name: specvalue
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: blank
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: blank
+mappings:
+  -
+    target: field_model
+    map:
+      target_id: name
+    settings:
+      language: null
+      reference_by: title
+      autocreate: false
+      autocreate_bundle: model
+      feeds_item: false
+  -
+    target: field_specification_type
+    map:
+      target_id: spectype
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: spec_type
+      feeds_item: false
+  -
+    target: field_spec_name
+    map:
+      value: specname
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_spec_value
+    map:
+      value: specvalue
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique:
+      value: 1

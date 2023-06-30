@@ -40,6 +40,6 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<h2 class="text-blue text-cyan text-dark-blue text-light-blue text-white text-4xl"> <p class="text-blue text-cyan text-dark-blue text-light-blue text-white text-xl">'
+      allowed_html: '<h2 class="text-blue text-cyan text-dark-blue text-light-blue text-white text-medium-blue text-4xl"> <p class="text-blue text-cyan text-dark-blue text-light-blue text-white text-medium-blue text-xl">'
       filter_html_help: true
       filter_html_nofollow: false

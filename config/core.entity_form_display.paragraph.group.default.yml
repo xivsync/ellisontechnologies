@@ -119,7 +119,7 @@ content:
     region: content
     settings:
       title: Component
-      title_plural: Components
+      title_plural: Group
       edit_mode: closed
       closed_mode: summary
       autocollapse: none

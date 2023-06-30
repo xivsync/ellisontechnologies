@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.series.feeds_item
     - field.field.taxonomy_term.series.field_media_image
+    - field.field.taxonomy_term.series.field_teaser
     - image.style.card_640x640
     - taxonomy.vocabulary.series
   module:
@@ -16,14 +18,14 @@ mode: default
 content:
   description:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_media_image:
     type: media_thumbnail
-    label: hidden
+    label: above
     settings:
       image_link: ''
       image_style: card_640x640
@@ -32,4 +34,12 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+  field_teaser:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  feeds_item: true

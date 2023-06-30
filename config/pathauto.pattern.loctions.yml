@@ -9,10 +9,10 @@ label: Loctions
 type: 'canonical_entities:node'
 pattern: 'about-us/locations/[node:title]'
 selection_criteria:
-  0f761b45-59eb-4517-8909-93aeae8ea686:
+  3fbb4f58-b004-4e4e-a46d-595bb54b06f6:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 0f761b45-59eb-4517-8909-93aeae8ea686
+    uuid: 3fbb4f58-b004-4e4e-a46d-595bb54b06f6
     context_mapping:
       node: node
     bundles:

@@ -18,6 +18,9 @@ settings:
       value: text__bg-color--blue
       label: Blue
     -
+      value: text__bg-color--medium-blue
+      label: 'Medium Blue'
+    -
       value: text__bg-color--dark-blue
       label: 'Dark Blue'
     -

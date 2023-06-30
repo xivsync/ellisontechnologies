@@ -1,0 +1,57 @@
+uuid: 26efaea8-171f-4429-b760-aad97ec2a67c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.spec.feeds_item
+    - field.field.node.spec.field_model
+    - field.field.node.spec.field_spec_name
+    - field.field.node.spec.field_spec_value
+    - field.field.node.spec.field_specification_type
+    - node.type.spec
+  module:
+    - user
+id: node.spec.default
+targetEntityType: node
+bundle: spec
+mode: default
+content:
+  field_model:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_spec_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_spec_value:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_specification_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true

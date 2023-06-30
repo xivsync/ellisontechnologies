@@ -18,19 +18,23 @@ title: Contact
 description: '<p>Basic email contact webform.</p>'
 category: ''
 elements: |-
+  company:
+    '#type': textfield
+    '#title': Company
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   name:
     '#type': textfield
     '#title': 'Last Name'
     '#required': true
     '#default_value': '[current-user:display-name]'
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  first_name:
+  title_position:
     '#type': textfield
-    '#title': 'First Name'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  company:
-    '#type': textfield
-    '#title': Company
+    '#title': Title/Position
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#title': 'Your Email'
@@ -41,16 +45,115 @@ elements: |-
     '#type': tel
     '#title': Phone
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  subject:
-    '#title': Subject
+  street:
     '#type': textfield
-    '#required': true
-    '#test': 'Testing contact webform from [site:name]'
-  message:
-    '#title': Message
+    '#title': Address
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  state:
+    '#type': textfield
+    '#title': State
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  city:
+    '#type': city
+    '#title': City
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  postalcode:
+    '#type': textfield
+    '#title': 'Zip Code'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  leads_interest__c:
+    '#type': textfield
+    '#title': 'Machine Interest'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  how_did_you_hear__c:
+    '#type': select
+    '#title': 'How did you hear about us?'
+    '#options':
+      Builder_Website: 'Builder Website'
+      Direct_Mail: 'Direct Mail'
+      Email_Communication: 'Email Communication'
+      Google_Search: 'Google Search'
+      Social_Media: 'Social Media'
+      Titans_of_CNC: 'Titans of CNC'
+      Telemarketing_Call: 'Telemarketing Call'
+      ThomasNet: ThomasNet
+      Trade_Publication/Ad: 'Trade Publication/Ad'
+      Trade_Show: 'Trade Show'
+      Word_of_Mouth: 'Word of Mouth'
+      Vendor_Partner: 'Vendor Partner'
+  webform_best_time__c:
+    '#type': textfield
+    '#title': 'Best time to reach you'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  industry:
+    '#type': select
+    '#title': Industry
+    '#options':
+      Aerospace: Aerospace
+      Aerospace_Commerical: 'Aerospace - Commercial'
+      Aerospace_Defense: 'Aerospace - Defense'
+      Agriculture: Agriculture
+      Automotive: Automotive
+      Construction: Construction
+      Cutting_Tools: 'Cutting Tools'
+      'Die_&_Mold': 'Die & Mold'
+      Education: Education
+      Electronics: Electronics
+      Engines/Transportation: Engines/Transportation
+      'Fab_&_Sheet_Metal': 'Fab & Sheet Metal'
+      'Firearms_&_Ammunition': 'Firearms & Ammunition'
+      Food/Packaging: Food/Packaging
+      'Industrial_&_Commercial_Machinery': 'Industrial & Commercial Machinery'
+      Medical: Medical
+      Mining: Mining
+      'Oil_&_Gas': 'Oil & Gas'
+      Power_Transmission: 'Power Transmission'
+      Recreation: Recreation
+      Semiconductor: Semiconductor
+      Valve: Valve
+  description:
     '#type': textarea
-    '#required': true
-    '#test': 'Please ignore this email.'
+    '#title': 'Please let us know how we can help you today'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  opt_in:
+    '#type': select
+    '#title': Opt-In
+    '#options':
+      opt-in: 'I would like to receive occasional emails.'
+  region__c:
+    '#type': hidden
+    '#title': region__c
+  region:
+    '#type': hidden
+    '#title': region
+  webformsid__c:
+    '#type': hidden
+    '#title': webformsid__c
+  leadsource_not_used:
+    '#type': hidden
+    '#title': leadsource_not_used
+    '#default_value': Website
+  webform_email_sign_up__c:
+    '#type': hidden
+    '#title': webform_email_sign_up__c
+  builder_interest__c:
+    '#type': hidden
+    '#title': builder_interest__c
+  webform_name__c:
+    '#type': hidden
+    '#title': webform_name__c
+    '#default_value': 'Contact Us Form'
+  ownerid:
+    '#type': hidden
+    '#title': ownerid
+  webform_campaign_id__c:
+    '#type': hidden
+    '#title': webform_campaign_id__c
+    '#default_value': 70160000000Bure
+  form_name:
+    '#type': hidden
+    '#title': form_name
+    '#default_value': contact-us
   processed_text:
     '#type': processed_text
     '#text': |-

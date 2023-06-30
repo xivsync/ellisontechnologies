@@ -1,0 +1,19 @@
+uuid: 801ded12-0281-4e53-9afa-0edd6129a638
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spec_value
+    - node.type.spec
+id: node.spec.field_spec_value
+field_name: field_spec_value
+entity_type: node
+bundle: spec
+label: 'Spec Value'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

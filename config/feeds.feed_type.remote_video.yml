@@ -1,0 +1,119 @@
+uuid: 9b130206-5e46-4889-a73b-2d70ac6fac0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_tag
+    - media.type.remote_video
+  module:
+    - feeds_log
+    - feeds_tamper
+    - media
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      575fdc50-fc27-4f16-a1e2-6e38252e5f99:
+        separator: ','
+        limit: null
+        uuid: 575fdc50-fc27-4f16-a1e2-6e38252e5f99
+        plugin: explode
+        source: field_tag
+        weight: 0
+        label: Explode
+label: 'Remote Video'
+id: remote_video
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:media'
+processor_configuration:
+  values:
+    bundle: remote_video
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  field_media_oembed_video:
+    value: field_media_oembed_video
+    label: field_media_oembed_video
+    machine_name: field_media_oembed_video
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  tags:
+    value: tags
+    label: tags
+    machine_name: tags
+    type: csv
+  field_tag:
+    value: field_tag
+    label: field_tag
+    machine_name: field_tag
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+mappings:
+  -
+    target: field_media_oembed_video
+    map:
+      value: field_media_oembed_video
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_tag
+    map:
+      target_id: field_tag
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 1
+      autocreate_bundle: tags

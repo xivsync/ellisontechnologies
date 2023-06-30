@@ -9,11 +9,13 @@ dependencies:
     - paragraphs.paragraphs_type.button_group
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.group
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.model_listing
     - paragraphs.paragraphs_type.quote
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.webform
   module:
     - entity_reference_revisions
@@ -41,6 +43,8 @@ settings:
       quote: quote
       text: text
       webform: webform
+      from_library: from_library
+      video: video
     negate: 0
     target_bundles_drag_drop:
       banner_image:
@@ -55,12 +59,18 @@ settings:
       cta_button:
         weight: 12
         enabled: true
+      from_library:
+        weight: 20
+        enabled: true
       group:
         weight: 13
         enabled: true
       image:
         weight: 14
         enabled: true
+      instagram:
+        weight: 23
+        enabled: false
       model_listing:
         weight: 15
         enabled: true
@@ -75,6 +85,9 @@ settings:
         enabled: false
       text:
         weight: 17
+        enabled: true
+      video:
+        weight: 29
         enabled: true
       webform:
         weight: 18

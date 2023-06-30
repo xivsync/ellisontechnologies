@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.model.feeds_item
     - field.field.node.model.field_brand
     - field.field.node.model.field_components
     - field.field.node.model.field_default_series_model
@@ -26,6 +27,7 @@ content:
     weight: 100
     region: content
 hidden:
+  feeds_item: true
   field_brand: true
   field_components: true
   field_default_series_model: true

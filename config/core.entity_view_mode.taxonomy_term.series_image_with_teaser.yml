@@ -1,0 +1,10 @@
+uuid: 95e2fe55-4b48-4576-8d80-5426c81c2023
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.series_image_with_teaser
+label: 'Series image with teaser'
+targetEntityType: taxonomy_term
+cache: true

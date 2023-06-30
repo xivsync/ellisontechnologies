@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.model.feeds_item
     - field.field.node.model.field_brand
     - field.field.node.model.field_components
     - field.field.node.model.field_default_series_model
@@ -52,6 +53,7 @@ content:
     weight: 1
     region: content
 hidden:
+  feeds_item: true
   field_brand: true
   field_default_series_model: true
   field_product: true

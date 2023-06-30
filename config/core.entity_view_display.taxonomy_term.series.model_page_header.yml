@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.model_page_header
+    - field.field.taxonomy_term.series.feeds_item
     - field.field.taxonomy_term.series.field_media_image
+    - field.field.taxonomy_term.series.field_teaser
     - taxonomy.vocabulary.series
   module:
     - text
@@ -18,7 +20,17 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  field_media_image: true
+  feeds_item: true
+  field_teaser: true

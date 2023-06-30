@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.brands.feeds_item
     - field.field.taxonomy_term.brands.field_logo
     - field.field.taxonomy_term.brands.field_region
     - taxonomy.vocabulary.brands
@@ -37,4 +38,5 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-hidden: {  }
+hidden:
+  feeds_item: true

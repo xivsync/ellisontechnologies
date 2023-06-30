@@ -1,0 +1,131 @@
+uuid: ab68fb05-7ea2-4a4e-8530-38f9fb4cf1d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.brands.field_logo
+    - field.field.taxonomy_term.brands.field_region
+    - taxonomy.vocabulary.brands
+  module:
+    - feeds_log
+    - feeds_tamper
+    - taxonomy
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      e120f4d8-7362-4805-aab2-001742742f04:
+        separator: ','
+        limit: null
+        uuid: e120f4d8-7362-4805-aab2-001742742f04
+        plugin: explode
+        source: field_region
+        weight: 0
+        label: Explode
+      0bac67d9-18e0-4bb2-bdbf-575daf32d348:
+        default_value: '127'
+        only_if_empty: true
+        uuid: 0bac67d9-18e0-4bb2-bdbf-575daf32d348
+        plugin: default_value
+        source: field_logo
+        weight: 0
+        label: 'Set value or default value'
+label: Brands
+id: brands
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: brands
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  field_region:
+    value: field_region
+    label: field_region
+    machine_name: field_region
+    type: csv
+  field_logo:
+    value: field_logo
+    label: field_logo
+    machine_name: field_logo
+    type: csv
+  description:
+    value: description
+    label: description
+    machine_name: description
+    type: csv
+mappings:
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: field_region
+    map:
+      target_id: field_region
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+      autocreate_bundle: regions
+  -
+    target: field_logo
+    map:
+      target_id: field_logo
+    settings:
+      language: ''
+      reference_by: mid
+      autocreate: 0
+      autocreate_bundle: image
+  -
+    target: description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text

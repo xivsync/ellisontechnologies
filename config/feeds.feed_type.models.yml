@@ -1,0 +1,209 @@
+uuid: c5875f2a-ae47-4749-8e3f-6b361d500896
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.model.title
+    - field.field.node.model.field_brand
+    - field.field.node.model.field_default_series_model
+    - field.field.node.model.field_media_image
+    - field.field.node.model.field_product
+    - field.field.node.model.field_region
+    - field.field.node.model.field_series
+    - node.type.model
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      9e67fd49-7e54-487b-8a29-615219326855:
+        separator: ','
+        limit: null
+        uuid: 9e67fd49-7e54-487b-8a29-615219326855
+        plugin: explode
+        source: field_region
+        weight: -9
+        label: Explode
+      8ece46cd-b0b4-435a-bf18-4be847f97962:
+        find: ', '
+        replace: ','
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 8ece46cd-b0b4-435a-bf18-4be847f97962
+        plugin: find_replace
+        source: field_region
+        weight: -10
+        label: 'Find replace'
+      fd5bdea6-401f-4879-ac67-35eb2d810383:
+        true_value: 'On'
+        false_value: 'Off'
+        match_case: false
+        no_match_value: false
+        uuid: fd5bdea6-401f-4879-ac67-35eb2d810383
+        plugin: convert_boolean
+        source: default
+        weight: 0
+        label: 'Convert to Boolean'
+label: Models
+id: models
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: model
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  field_media_image:
+    value: field_media_image
+    label: field_media_image
+    machine_name: field_media_image
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  field_series:
+    value: field_series
+    label: field_series
+    machine_name: field_series
+    type: csv
+  field_brand:
+    value: field_brand
+    label: field_brand
+    machine_name: field_brand
+    type: csv
+  field_product:
+    value: field_product
+    label: field_product
+    machine_name: field_product
+    type: csv
+  field_default_series_model:
+    value: field_default_series_model
+    label: field_default_series_model
+    machine_name: field_default_series_model
+    type: csv
+  uuid:
+    value: uuid
+    label: uuid
+    machine_name: uuid
+    type: csv
+  mid:
+    value: mid
+    label: mid
+    machine_name: mid
+    type: csv
+  default:
+    value: default
+    label: default
+    machine_name: default
+    type: csv
+  field_region:
+    value: field_region
+    label: field_region
+    machine_name: field_region
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: field_series
+    map:
+      target_id: field_series
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: series
+      feeds_item: false
+  -
+    target: field_brand
+    map:
+      target_id: field_brand
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: brands
+      feeds_item: false
+  -
+    target: field_product
+    map:
+      target_id: field_product
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: products
+      feeds_item: false
+  -
+    target: field_default_series_model
+    map:
+      value: default
+    settings:
+      language: null
+  -
+    target: field_media_image
+    map:
+      target_id: mid
+    settings:
+      language: ''
+      reference_by: mid
+      feeds_item: guid
+      autocreate: 0
+      autocreate_bundle: image
+  -
+    target: field_region
+    map:
+      target_id: field_region
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: regions
+      feeds_item: false

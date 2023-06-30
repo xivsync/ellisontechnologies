@@ -24,6 +24,7 @@ settings:
       'views_block:models-block_1': 'views_block:models-block_1'
       'views_block:locations_cards-block_1': 'views_block:locations_cards-block_1'
       'views_block:locations-block_1': 'views_block:locations-block_1'
+      'views_block:model_paragraphs-block_1': 'views_block:model_paragraphs-block_1'
       'views_block:slides-block_1': 'views_block:slides-block_1'
       'views_block:tagged_content-block_1': 'views_block:tagged_content-block_1'
       'views_block:videos-block_1': 'views_block:videos-block_1'

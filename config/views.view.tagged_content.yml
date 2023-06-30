@@ -8,7 +8,7 @@ dependencies:
     - node.type.event
     - taxonomy.vocabulary.tags
   content:
-    - 'taxonomy_term:tags:8667be91-d2aa-41fd-9d48-2515d04e1e19'
+    - 'taxonomy_term:tags:33fd391a-bdb5-4404-9f0a-4f3d62999977'
   module:
     - node
     - taxonomy
@@ -182,7 +182,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            31: 31
+            1: 1
           group: 1
           exposed: false
           expose:

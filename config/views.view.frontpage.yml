@@ -309,12 +309,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: about/news
+      path: news
       menu:
         type: normal
         title: News
         description: ''
-        weight: -48
+        weight: -62
         expanded: false
         menu_name: main
         parent: 'menu_link_content:16bd95ad-d112-4bef-8bbb-513e580f7bb7'

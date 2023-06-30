@@ -1,0 +1,8 @@
+uuid: 87fa09c1-4cb9-483a-94a7-4198e926c769
+langcode: en
+status: true
+dependencies: {  }
+name: 'Spec Type'
+vid: spec_type
+description: ''
+weight: 0

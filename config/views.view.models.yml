@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.model_page_header
+    - core.entity_view_mode.taxonomy_term.series_image_with_teaser
     - field.storage.node.field_brand
     - field.storage.node.field_default_series_model
     - field.storage.node.field_product
@@ -331,7 +333,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: default
+          view_mode: model_page_header
         rendered_entity_1:
           id: rendered_entity_1
           table: taxonomy_term_data
@@ -382,7 +384,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: default
+          view_mode: series_image_with_teaser
         field_default_series_model:
           id: field_default_series_model
           table: node__field_default_series_model
@@ -728,8 +730,10 @@ display:
         - user.permissions
       tags:
         - 'config:core.entity_view_display.taxonomy_term.brands.default'
+        - 'config:core.entity_view_display.taxonomy_term.brands.model_page_header'
         - 'config:core.entity_view_display.taxonomy_term.series.default'
         - 'config:core.entity_view_display.taxonomy_term.series.model_page_header'
+        - 'config:core.entity_view_display.taxonomy_term.series.series_image_with_teaser'
         - 'config:field.storage.node.field_brand'
         - 'config:field.storage.node.field_default_series_model'
         - 'config:field.storage.node.field_product'
@@ -743,7 +747,7 @@ display:
     display_options:
       display_description: 'By product, grouped by brand then series, filtered by users region.'
       display_extenders: {  }
-      block_description: 'List Series on Products Page'
+      block_description: 'Block Component: list series on products page'
     cache_metadata:
       max-age: -1
       contexts:
@@ -754,8 +758,10 @@ display:
         - user.permissions
       tags:
         - 'config:core.entity_view_display.taxonomy_term.brands.default'
+        - 'config:core.entity_view_display.taxonomy_term.brands.model_page_header'
         - 'config:core.entity_view_display.taxonomy_term.series.default'
         - 'config:core.entity_view_display.taxonomy_term.series.model_page_header'
+        - 'config:core.entity_view_display.taxonomy_term.series.series_image_with_teaser'
         - 'config:field.storage.node.field_brand'
         - 'config:field.storage.node.field_default_series_model'
         - 'config:field.storage.node.field_product'

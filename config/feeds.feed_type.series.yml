@@ -1,0 +1,125 @@
+uuid: da3822f0-8b38-4d1c-a9dc-f551e2d09714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.series.field_media_image
+    - field.field.taxonomy_term.series.field_teaser
+    - taxonomy.vocabulary.series
+  module:
+    - feeds_log
+    - taxonomy
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: Series
+id: series
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: series
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  field_media_image:
+    value: field_media_image
+    label: field_media_image
+    machine_name: field_media_image
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  field_weight:
+    value: field_weight
+    label: field_weight
+    machine_name: field_weight
+    type: csv
+  description:
+    value: description
+    label: description
+    machine_name: description
+    type: csv
+  field_teaser:
+    value: field_teaser
+    label: field_teaser
+    machine_name: field_teaser
+    type: csv
+  mid:
+    value: mid
+    label: mid
+    machine_name: mid
+    type: csv
+mappings:
+  -
+    target: field_media_image
+    map:
+      target_id: mid
+    settings:
+      language: ''
+      reference_by: mid
+      feeds_item: guid
+      autocreate: 0
+      autocreate_bundle: image
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: weight
+    map:
+      value: field_weight
+    settings: {  }
+    unique: {  }
+  -
+    target: description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_teaser
+    map:
+      value: field_teaser
+    settings:
+      language: null
