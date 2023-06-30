@@ -7,8 +7,8 @@ dependencies:
 id: model_paragraphs
 label: 'Model Paragraphs'
 module: views
-description: ''
-tag: ''
+description: 'Display components for models from paragraphs library'
+tag: Model
 base_table: paragraphs_library_item_field_data
 base_field: id
 display:
@@ -206,13 +206,15 @@ display:
           2: OR
       style:
         type: default
-      row:
-        type: fields
         options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: 'entity:paragraphs_library_item'
+        options:
+          relationship: none
+          view_mode: default
       query:
         type: views_query
         options:
