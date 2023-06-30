@@ -16,7 +16,6 @@
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
 
-
 # Ignore custom modules managed by Composer.
 #
 # When a development team creates one or more custom modules that
@@ -95,3 +94,6 @@
 
 # Ignore .env files as they are personal
 #/.env
+
+**/.DS_Store
+.DS_Store
