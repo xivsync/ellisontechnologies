@@ -68,7 +68,7 @@
     {% endif %}
     {% if group | render %}
       <div class="group__group">
-        {{ group }}
+        {% block group_content %}{{ group }}{% endblock %}
       </div>
     {% endif %}
     {% if footer | render %}

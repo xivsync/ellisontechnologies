@@ -1,9 +1,9 @@
-uuid: d812e881-6170-456a-bc4a-796bbc58f1c9
+uuid: 2077bef3-ceb1-4ad0-a351-b8babdaddce4
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card
     - field.field.node.model.feeds_item
     - field.field.node.model.field_brand
     - field.field.node.model.field_components
@@ -13,26 +13,41 @@ dependencies:
     - field.field.node.model.field_region
     - field.field.node.model.field_series
     - field.field.node.model.field_technologies
+    - image.style.card_640x640
     - node.type.model
   module:
+    - media
     - user
-id: node.model.teaser
+id: node.model.card
 targetEntityType: node
 bundle: model
-mode: teaser
+mode: card
 content:
-  links:
-    settings: {  }
+  field_media_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_640x640
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    weight: 100
+    weight: 1
+    region: content
+  field_series:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   feeds_item: true
   field_brand: true
   field_components: true
   field_default_series_model: true
-  field_media_image: true
   field_product: true
   field_region: true
-  field_series: true
   field_technologies: true
+  links: true

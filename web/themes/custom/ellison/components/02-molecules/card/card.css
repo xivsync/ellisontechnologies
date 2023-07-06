@@ -3,6 +3,10 @@
   .card {
     @apply flex flex-col gap-8 h-full;
 
+    &.unset-height {
+      height: unset;
+    }
+
     &__inner {
       @apply flex flex-col gap-4 md:gap-8 h-full;
     }

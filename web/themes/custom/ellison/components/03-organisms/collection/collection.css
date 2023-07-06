@@ -79,3 +79,12 @@
   }
 
 }
+
+.collection.collection--cards.display-as-cols {
+  @apply flex flex-row gap-4 flex-wrap;
+
+  .collection__item.collection__item--card {
+    @apply flex flex-col gap-2 basis-[32%];
+  }
+
+}

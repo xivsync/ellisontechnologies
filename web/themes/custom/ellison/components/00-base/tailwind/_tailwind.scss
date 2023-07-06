@@ -2533,6 +2533,9 @@ div.webform {
     gap: 2rem;
   }
   .card {
+    &.unset-height {
+      height: unset;
+    }
     &__inner {
       display: flex;
     }
@@ -4351,6 +4354,25 @@ div.webform {
   }
   .card__cta.card__cta-link {
     display: none;
+  }
+}
+
+.collection.collection--cards.display-as-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  .collection__item.collection__item--card {
+    display: flex;
+  }
+  .collection__item.collection__item--card {
+    flex-basis: 32%;
+  }
+  .collection__item.collection__item--card {
+    flex-direction: column;
+  }
+  .collection__item.collection__item--card {
+    gap: 0.5rem;
   }
 }
 

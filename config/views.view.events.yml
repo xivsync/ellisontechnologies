@@ -13,10 +13,10 @@ dependencies:
     - smart_date
     - user
 id: events
-label: Events
+label: 'Events Page'
 module: views
-description: ''
-tag: ''
+description: 'Page that lists upcoming events'
+tag: Events
 base_table: node_field_data
 base_field: nid
 display:

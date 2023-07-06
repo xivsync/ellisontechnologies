@@ -21,11 +21,41 @@ settings:
   selection: blocks
   selection_settings:
     plugin_ids:
+      page_title_block: page_title_block
+      local_actions_block: local_actions_block
+      local_tasks_block: local_tasks_block
+      devel_switch_user: devel_switch_user
+      search_form_block: search_form_block
+      user_login_block: user_login_block
+      help_block: help_block
       'views_block:models-block_1': 'views_block:models-block_1'
+      'views_block:series_models-block_2': 'views_block:series_models-block_2'
+      'views_block:series-block_1': 'views_block:series-block_1'
       'views_block:locations_cards-block_1': 'views_block:locations_cards-block_1'
       'views_block:locations-block_1': 'views_block:locations-block_1'
       'views_block:model_paragraphs-block_1': 'views_block:model_paragraphs-block_1'
+      'views_block:promoted-block_1': 'views_block:promoted-block_1'
+      'views_block:comments_recent-block_1': 'views_block:comments_recent-block_1'
+      'views_block:content_recent-block_1': 'views_block:content_recent-block_1'
       'views_block:slides-block_1': 'views_block:slides-block_1'
       'views_block:tagged_content-block_1': 'views_block:tagged_content-block_1'
       'views_block:videos-block_1': 'views_block:videos-block_1'
+      'views_block:who_s_online-who_s_online_block': 'views_block:who_s_online-who_s_online_block'
+      'system_menu_block:admin': 'system_menu_block:admin'
+      'system_menu_block:devel': 'system_menu_block:devel'
+      'system_menu_block:footer': 'system_menu_block:footer'
+      'system_menu_block:main': 'system_menu_block:main'
+      shortcuts: shortcuts
+      'system_menu_block:tools': 'system_menu_block:tools'
+      'system_menu_block:account': 'system_menu_block:account'
+      system_breadcrumb_block: system_breadcrumb_block
+      system_main_block: system_main_block
+      system_messages_block: system_messages_block
+      system_powered_by_block: system_powered_by_block
+      system_branding_block: system_branding_block
+      node_syndicate_block: node_syndicate_block
+      'views_block:who_s_new-block_1': 'views_block:who_s_new-block_1'
+      webform_block: webform_block
+      webform_submission_limit_block: webform_submission_limit_block
+      webform_access_group_entity: webform_access_group_entity
 field_type: block_field

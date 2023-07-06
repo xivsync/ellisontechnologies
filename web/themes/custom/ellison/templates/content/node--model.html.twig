@@ -79,12 +79,14 @@
   'class': bem('content', ['model'], base_class, ''),
 }) %}
 
-  {%
-    set cta_button_classes = [
-      'cta-button',
-      'text__align--right',
-    ]
-  %}
+{%
+  set cta_button_classes = [
+    'cta-button',
+    'text__align--right',
+  ]
+%}
+
+{% set series_model_list = drupal_view_result('list_cards_of_models_for_a_series', 'block_1') | length %}
 
 <article {{ bem(base_class) }}>
 
@@ -131,6 +133,7 @@
             <div class="component">
 
               {% include "@atoms/links/link/link.twig" with {
+                classes: '',
                 link_content: 'Accessories',
                 link_url: '#group__parts',
                 link_base_class: 'link',
@@ -144,6 +147,7 @@
             <div class="component">
 
               {% include "@atoms/links/link/link.twig" with {
+                classes: '',
                 link_content: 'Turnkey',
                 link_url: '#group__solutions',
                 link_base_class: 'link',
@@ -172,10 +176,20 @@
         </div>
       </div>
     </div>
-    {{ content | without('field_media_image', 'field_series') }}
+
+    {% if series_model_list > 1 %}
+        <div class="components">
+          {{ drupal_view('list_cards_of_models_for_a_series', 'block_1') }}
+        </div>
+    {% endif %}
+
+
+    {{ content | without('field_media_image', 'field_series', 'field_view_node') }}
+
     <div class="components">
       {{ drupal_view('model_paragraphs', 'block_1') }}
     </div>
+
   </div>
 
 </article>
