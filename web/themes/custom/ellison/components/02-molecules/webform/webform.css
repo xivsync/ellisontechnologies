@@ -126,3 +126,7 @@
   }
 
 }
+
+form.webform-submission-build-a-quote-form {
+  @apply flex flex-row flex-wrap justify-start;
+}

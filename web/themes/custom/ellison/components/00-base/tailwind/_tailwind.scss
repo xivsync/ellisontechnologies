@@ -4231,6 +4231,13 @@ div.webform {
   }
 }
 
+form.webform-submission-build-a-quote-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .collection.display-as-rows {
   display: flex;
   flex-direction: column;
