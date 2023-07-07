@@ -25,6 +25,8 @@ At the node level, inside your Twig template you can use:
 
 {# behavior options: single-button, accordion-button-dropdown #}
 
+{{ attach_library('ellison/dropdown') }}
+
 {% set uid = random() %}
 
 {% if rows | length > 1 %}

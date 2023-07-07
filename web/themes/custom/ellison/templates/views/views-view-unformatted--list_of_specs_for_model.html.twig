@@ -1,0 +1,50 @@
+{{ attach_library('ellison/dropdown') }}
+
+
+{% set uid = random() %}
+
+<div class="spec_type">
+
+  <div
+    id="dropdown-{{ uid }}"
+    class="dropdown accordion-button-dropdown {{ rows | length > 1 ? 'multiple-results' : 'single-result'}} state-is-collapsed"
+    data-dropdown-type="accordion"
+    data-dropdown-state="collapsed"
+    data-dropdown-unique-id="{{ uid }}"
+  >
+
+    <button
+      id="toggle-{{ uid }}"
+      class="dropdown__toggle has-icon"
+      aria-expanded="false"
+      data-dropdown-unique-id="{{ uid }}"
+    >
+      {{ title }}
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+      </svg>
+    </button>
+
+    <div
+      class="dropdown__menu"
+      aria-controled-by="toggle-{{uid}}"
+      data-dropdown-unique-id="{{ uid }}"
+    >
+
+      <ul
+        class="dropdown__menu--list"
+        aria-labelledby="toggle-{{ uid }}"
+        data-dropdown-unique-id="{{ uid }}"
+      >
+        {% for row in rows %}
+          <li class="dropdown__menu--item">
+            {{ row.content }}
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>

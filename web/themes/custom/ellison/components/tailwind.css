@@ -15,6 +15,7 @@
 @import './02-molecules/menus/breadcrumbs/breadcrumbs.css';
 @import './02-molecules/model-listing/model-listing.css';
 @import './02-molecules/quote/quote.css';
+@import './02-molecules/spec/spec.css';
 @import './02-molecules/text/text.css';
 @import './02-molecules/webform/webform.css';
 
@@ -27,7 +28,6 @@
 @import './03-organisms/slides/glide.core.css';
 @import './03-organisms/slides/glide.theme.css';
 @import './03-organisms/slides/slides.css';
-
 
 html {
   font-size: 18px;

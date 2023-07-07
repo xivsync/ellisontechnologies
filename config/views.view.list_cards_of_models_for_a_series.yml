@@ -17,9 +17,9 @@ dependencies:
     - taxonomy
     - user
 id: list_cards_of_models_for_a_series
-label: 'List cards of models for a series'
+label: 'Carousel of models for a series'
 module: views
-description: 'Used on model to create slider of other models in series'
+description: 'Used on model to create carousel of other models in series'
 tag: Model
 base_table: node_field_data
 base_field: nid
@@ -1100,7 +1100,7 @@ display:
         filter_groups: false
       display_description: 'List all models in series'
       display_extenders: {  }
-      block_description: 'List of models for a series on a model page'
+      block_description: 'Carousel of models for a series'
     cache_metadata:
       max-age: -1
       contexts:

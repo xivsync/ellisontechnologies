@@ -71,7 +71,7 @@
  */
 #}
 
-{{ attach_library('ellison/model') }}
+{#{ attach_library('ellison/model') }#}
 
 {% set base_class = 'page' %}
 
@@ -88,14 +88,16 @@
 
 {% set series_model_list = drupal_view_result('list_cards_of_models_for_a_series', 'block_1') | length %}
 
+{% set specs_model_list = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
+
 <article {{ bem(base_class) }}>
 
   {{ title_prefix }}
   {% if not page %}
     {% include "@atoms/text/headings/_heading.twig" with {
       "headling__level": 2,
-      "heading": label,
-      "heading_url": url,
+      "heading": 'Model: ' ~ label | render | striptags | trim,
+      "heading_url": null,
       "heading_link_attributes": {
         'rel': 'bookmark'
       },
@@ -162,22 +164,26 @@
 
           {% include "@atoms/text/headings/_heading.twig" with {
             "heading__level": '1',
-            "heading": label,
-            "heading_url": url,
-            "heading_link_attributes": {
-              'rel': 'bookmark'
-            },
+            "heading": 'Model: ' ~ label | render | striptags | trim,
           } %}
 
           <div class="component">
             {{ drupal_view('series', 'block_1') }}
           </div>
 
+          <div class="component">
+            <div class="specs">
+              {% if specs_model_list > 1 %}
+                {{ drupal_view('list_of_specs_for_model', 'block_1') }}
+              {% endif %}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
 
-    {% if series_model_list > 1 %}
+    {% if series_model_list > 2 %}
         <div class="components">
           {{ drupal_view('list_cards_of_models_for_a_series', 'block_1') }}
         </div>

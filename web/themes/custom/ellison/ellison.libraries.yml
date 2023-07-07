@@ -20,6 +20,12 @@ sprite:
 block:
   js:
     dist/js/02-molecules/block/block.js: {}
+dropdown:
+  js:
+    dist/js/02-molecules/dropdown/dropdown.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
 main-menu:
   js:
     dist/js/02-molecules/menus/main-menu/main-menu.js: {}

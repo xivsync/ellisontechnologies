@@ -1,0 +1,13 @@
+.spec_type:last-child .state-is-collapsed button {
+  @apply border-b border-gray-200;
+}
+
+.spec__item {
+  @apply flex flex-row justify-between px-4 py-2 border-b border-gray-200 hover:bg-gray-200;
+
+  &--name {
+    @apply font-bold;
+  }
+
+}
+

@@ -16,9 +16,9 @@ dependencies:
     - taxonomy
     - user
 id: series
-label: 'List models for a series'
+label: 'List of models for a series'
 module: views
-description: 'Used on model to create list of models for dropdown menu'
+description: 'Dropdown of models for a series used on model page'
 tag: Model
 base_table: node_field_data
 base_field: nid
@@ -1295,7 +1295,7 @@ display:
         filter_groups: false
       display_description: 'List all models in series'
       display_extenders: {  }
-      block_description: 'List of models for a series on a model page'
+      block_description: 'Dropdown of models for a series used on model page'
     cache_metadata:
       max-age: -1
       contexts:
