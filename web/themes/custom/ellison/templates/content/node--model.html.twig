@@ -82,7 +82,7 @@
 
 {% set specs_model_list_count = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
 
-{% set has_build_a_quote = content.field_enable_build_a_quote == 'True' ? true : false %}
+{% set has_build_a_quote = content.field_enable_build_a_quote | render | striptags | trim == 'True' ? true : false %}
 
 {% set has_carousel_content = content.field_carousel_content | render ? true : false %}
 
@@ -185,8 +185,20 @@
         </div>
     {% endif %}
 
-    {# Model Component Content #}
-    {{ content | without('field_media_image', 'field_series', 'field_view_node') }}
+    {# Show only Model Component Content #}
+    {{ content | without(
+      'field_media_image',
+      'field_series',
+      'field_view_node',
+      'field_brand',
+      'field_enable_build_a_quote',
+      'field_carousel_content',
+      'field_default_series_model',
+      'field_product',
+      'field_region',
+      'field_series',
+      'field_technologies'
+    ) }}
 
     <div class="components">
 
