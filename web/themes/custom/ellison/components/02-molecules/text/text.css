@@ -64,7 +64,7 @@
     }
 
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         @apply text-white;
       }
     }
@@ -85,7 +85,7 @@
     }
 
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         @apply text-white;
       }
     }
@@ -101,7 +101,7 @@
     }
 
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         @apply text-white;
       }
     }
@@ -122,7 +122,7 @@
     }
 
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         @apply text-white;
       }
 
@@ -144,7 +144,7 @@
     }
 
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         @apply text-white;
       }
 

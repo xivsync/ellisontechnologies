@@ -161,3 +161,32 @@ html {
 .field.label.field-type-string.field-bundle-paragraphs-library-item {
   display: none;
 }
+
+/* handles contextual links
+.contextual-region.media {
+
+  .contextual {
+    top: -36px;
+
+    button.trigger {
+      background-image: url(/sites/default/files/paragraphs_type_icon/banner_image-default-icon.svg);
+    }
+
+  }
+  
+}
+
+.group {
+
+  > .contextual {
+
+    button.trigger {
+      background-image: url(/sites/default/files/paragraphs_type_icon/group-default-icon.svg);
+    }
+
+  }
+
+}
+ */
+
+

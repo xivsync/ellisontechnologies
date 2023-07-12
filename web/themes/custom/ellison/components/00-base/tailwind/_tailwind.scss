@@ -3875,7 +3875,7 @@ div.webform {
       padding-bottom: 2rem;
     }
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
@@ -3896,7 +3896,7 @@ div.webform {
       padding-bottom: 2rem;
     }
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
@@ -3913,7 +3913,7 @@ div.webform {
       padding-bottom: 2rem;
     }
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
@@ -3934,7 +3934,7 @@ div.webform {
       padding-bottom: 2rem;
     }
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
@@ -3955,7 +3955,7 @@ div.webform {
       padding-bottom: 2rem;
     }
     .prose {
-      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div {
+      h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
@@ -6120,6 +6120,33 @@ html {
   display: none;
 }
 
+/* handles contextual links
+.contextual-region.media {
+
+  .contextual {
+    top: -36px;
+
+    button.trigger {
+      background-image: url(/sites/default/files/paragraphs_type_icon/banner_image-default-icon.svg);
+    }
+
+  }
+  
+}
+
+.group {
+
+  > .contextual {
+
+    button.trigger {
+      background-image: url(/sites/default/files/paragraphs_type_icon/group-default-icon.svg);
+    }
+
+  }
+
+}
+ */
+
 .hover\:no-underline:hover {
   text-decoration-line: none !important;
 }
@@ -6146,3 +6173,5 @@ html {
     background-color: rgb(55 65 81 / var(--tw-bg-opacity)) !important;
   }
 }
+
+

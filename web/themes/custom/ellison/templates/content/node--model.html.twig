@@ -78,17 +78,13 @@
 {% set content__attributes = content_attributes|merge({
   'class': bem('content', ['model'], base_class, ''),
 }) %}
+{% set series_model_list_count = drupal_view_result('list_cards_of_models_for_a_series', 'block_1') | length %}
 
-{%
-  set cta_button_classes = [
-    'cta-button',
-    'text__align--right',
-  ]
-%}
+{% set specs_model_list_count = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
 
-{% set series_model_list = drupal_view_result('list_cards_of_models_for_a_series', 'block_1') | length %}
+{% set has_build_a_quote = content.field_enable_build_a_quote == 'True' ? true : false %}
 
-{% set specs_model_list = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
+{% set has_carousel_content = content.field_carousel_content | render ? true : false %}
 
 <article {{ bem(base_class) }}>
 
@@ -122,7 +118,7 @@
             <div class="component">
 
               {% include "@molecules/cta/cta.twig" with {
-                classes: cta_button_classes,
+                classes: ['cta-button','text__align--right',],
                 align_class: 'text__align--right',
                 body: '',
                 webform_url: '/form/contact',
@@ -173,7 +169,7 @@
 
           <div class="component">
             <div class="specs">
-              {% if specs_model_list > 1 %}
+              {% if specs_model_list_count > 1 %}
                 {{ drupal_view('list_of_specs_for_model', 'block_1') }}
               {% endif %}
             </div>
@@ -183,17 +179,32 @@
       </div>
     </div>
 
-    {% if series_model_list > 2 %}
+    {% if series_model_list_count > 2 %}
         <div class="components">
           {{ drupal_view('list_cards_of_models_for_a_series', 'block_1') }}
         </div>
     {% endif %}
 
-
+    {# Model Component Content #}
     {{ content | without('field_media_image', 'field_series', 'field_view_node') }}
 
     <div class="components">
-      {{ drupal_view('model_paragraphs', 'block_1') }}
+
+      {# Build a Quote Paragraph Library Entity = 618 #}
+      {% if has_build_a_quote %}
+        {{ drupal_entity('paragraph', 618) }}
+      {% endif %}
+
+      {# Accessory Paragraph Library Entity = 414 #}
+      <div class="component">
+        {{ drupal_entity('paragraph', 415) }}
+      </div>
+
+      {# Turnkey Paragraph Library Entity = 418 #}
+      <div class="component">
+        {{ drupal_entity('paragraph', 418) }}
+      </div>
+
     </div>
 
   </div>
