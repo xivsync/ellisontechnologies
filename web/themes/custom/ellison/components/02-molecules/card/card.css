@@ -73,4 +73,31 @@
     }
 
   }
+
+}
+
+.components {
+
+  #group__model-series {
+
+    .card.has-background-color .card__inner {
+      @apply p-0;
+    }
+
+    .card__content {
+      @apply p-4;
+
+      .card__body p {
+        @apply my-0 flex flex-row justify-between;
+
+        strong {
+          @apply text-cyan;
+        }
+      }
+
+    }
+
+
+  }
+
 }

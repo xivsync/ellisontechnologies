@@ -2661,6 +2661,35 @@ div.webform {
       margin-top: 2rem;
     }
   }
+  #group__model-series {
+    .card.has-background-color .card__inner {
+      padding: 0px;
+    }
+    .card__content {
+      padding: 1rem;
+    }
+    .card__content {
+      .card__body p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .card__body p {
+        display: flex;
+      }
+      .card__body p {
+        flex-direction: row;
+      }
+      .card__body p {
+        justify-content: space-between;
+      }
+      .card__body p {
+        strong {
+          --tw-text-opacity: 1;
+          color: rgb(70 182 227 / var(--tw-text-opacity));
+        }
+      }
+    }
+  }
 }
 
 .cta-button {
