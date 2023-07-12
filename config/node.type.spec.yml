@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Spec
 type: spec
-description: ''
+description: 'Spec is a type (taxonomy term) with a name and value pair related to a specific model. NOTE: title is for admin use only and is not displayed to users.'
 help: ''
 new_revision: true
 preview_mode: 1

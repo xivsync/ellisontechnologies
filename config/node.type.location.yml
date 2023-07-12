@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Location
 type: location
-description: ''
+description: 'Locations of offices.'
 help: ''
 new_revision: true
 preview_mode: 1

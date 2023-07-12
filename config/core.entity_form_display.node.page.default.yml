@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.body
     - field.field.node.page.field_components
     - field.field.node.page.field_jumbo_image
     - field.field.node.page.field_product
@@ -20,7 +21,7 @@ third_party_settings:
         - field_jumbo_image
         - field_slide_tag
         - field_product
-      label: Options
+      label: Configuration
       region: content
       parent_name: ''
       weight: 1
@@ -30,6 +31,21 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         description: 'Options to change the display of the page.'
+        required_fields: true
+    group_content:
+      children:
+        - title
+        - field_components
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
         required_fields: true
 _core:
   default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
@@ -46,7 +62,7 @@ content:
     third_party_settings: {  }
   field_components:
     type: paragraphs
-    weight: 2
+    weight: 1
     region: content
     settings:
       title: Component

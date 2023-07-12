@@ -1,0 +1,26 @@
+uuid: 790e745e-757c-4d13-94c5-7437c1a01f81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carousel_content
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.model
+  module:
+    - text
+id: node.model.field_carousel_content
+field_name: field_carousel_content
+entity_type: node
+bundle: model
+label: 'Carousel Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+    - basic_html
+field_type: text_long

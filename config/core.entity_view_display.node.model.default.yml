@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.model.feeds_item
     - field.field.node.model.field_brand
+    - field.field.node.model.field_carousel_content
     - field.field.node.model.field_components
     - field.field.node.model.field_default_series_model
+    - field.field.node.model.field_enable_build_a_quote
     - field.field.node.model.field_media_image
     - field.field.node.model.field_product
     - field.field.node.model.field_region
@@ -55,7 +57,9 @@ content:
 hidden:
   feeds_item: true
   field_brand: true
+  field_carousel_content: true
   field_default_series_model: true
+  field_enable_build_a_quote: true
   field_product: true
   field_region: true
   field_technologies: true
