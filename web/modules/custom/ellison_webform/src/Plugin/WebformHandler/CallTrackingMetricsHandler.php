@@ -57,7 +57,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
       'visitor_sid' => 'unique-ctm-visitor-id',
       'callback_number' => '+13332224444',
       'receiving_number' => '+8667372556',
-      'edit-firstname' => $values['firstname'],
+      'edit-firstname' => $values['firstname'] . 'foo',
       'edit-lastname' => $values['lastname'],
       'edit-company' => $values['company'],
       'edit-title' => $values['title'],
@@ -82,7 +82,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     if (curl_errno($ch)) {
       \Drupal::logger('ellison_webform')->error('The error message from CTM is: ' . curl_error($ch));
     } else {
-      \Drupal::logger('ellison_webform')->info('The response message from CTM is: ' . $response);
+      \Drupal::logger('ellison_webform')->info('The data_url_encoded_query message from CTM is: ' . print_r($data_url_encoded_query) . ' and response ' . print_r($response)));
     }
     curl_close($ch);
 
