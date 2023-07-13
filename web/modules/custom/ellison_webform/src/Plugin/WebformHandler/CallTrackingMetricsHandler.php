@@ -32,7 +32,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  
 class CallTrackingMetricsHandler extends WebformHandlerBase {
  
-  public function confirmForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
+  public function postSave(WebformSubmissionInterface $webform_submission, $update = TRUE) {
 
     // In here, we perform our logic to manipulate and use the webform submission data however we want.
     // To access data from the webform submission, we call $webform_submission->getData(), we should be able to grab a part of the array that should be returned using a key.
@@ -41,15 +41,17 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     
     $values = $webform_submission->getData();
 
+    \Drupal::logger('ellison_webform')->info('The data from form CTM is: ' . var_dump($values));
+
     $url = 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29?key=6y0SQYZx6CgmOi9WOvjFX8FkMd7GEF3bWOi79GgXz8WZU_Qg';
     
-    $headers = array(
+    $headers = [
       'Content-Type: application/x-www-form-urlencoded',
       'Cache-Control: no-cache',
       'Accept: */*',
-    );
+    ];
 
-    $data = [
+    $data_raw = [
       'caller_name' => 'Web Handler',
       'country_code' => '1',
       'phone_number' => '(800) 555-5555',
@@ -57,7 +59,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
       'visitor_sid' => 'unique-ctm-visitor-id',
       'callback_number' => '+13332224444',
       'receiving_number' => '+8667372556',
-      'edit-firstname' => $values['firstname'] . 'foo',
+      'edit-firstname' => $values['firstname'],
       'edit-lastname' => $values['lastname'],
       'edit-company' => $values['company'],
       'edit-title' => $values['title'],
@@ -67,45 +69,27 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
       'edit-postalcode' => $values['postalcode']
     ];
 
+    \Drupal::logger('ellison_webform')->info('The data from form CTM is: ' . var_dump($data_raw));
+
     $ch = curl_init($url);
 
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    $data_url_encoded_query = http_build_query($data);
-    //$data_json = json_encode($data);
-    
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_url_encoded_query);
+    $data_url_encoded_query = http_build_query($data_raw);
+    //curl_setopt($ch, CURLOPT_POSTFIELDS, $data_url_encoded_query);
 
     $response = curl_exec($ch);
+
     if (curl_errno($ch)) {
       \Drupal::logger('ellison_webform')->error('The error message from CTM is: ' . curl_error($ch));
     } else {
-      \Drupal::logger('ellison_webform')->info('The data_url_encoded_query message from CTM is: ' . print_r($data_url_encoded_query) . ' and response ' . print_r($response));
+      \Drupal::logger('ellison_webform')->info('The data_url_encoded_query message from CTM is: ' . json_decode($response));
     }
     curl_close($ch);
 
-    
-
-    /*
-    if (!empty($values['region'])) {
-      // get term id
-      $region_id = $values['region'];
-      // get term name
-      $region = \Drupal\taxonomy\Entity\Term::load($region_id)->get('name')->value;
-      // get sssion
-      $session = \Drupal::request()->getSession();
-      // add region value to session
-      $session->set('region', $region);
-      $session->set('region_id', $region_id);
-      // get region value from session and send to logger
-      $session_region = $session->get('region');
-      \Drupal::logger('ellison_webform')->info('The region "' . $session_region . ' (#' . $region_id . ')" added to session successfully.');
-    
-    }
-    */
-  
   }
 
 }
