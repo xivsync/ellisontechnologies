@@ -82,7 +82,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     if (curl_errno($ch)) {
       \Drupal::logger('ellison_webform')->error('The error message from CTM is: ' . curl_error($ch));
     } else {
-      \Drupal::logger('ellison_webform')->info('The response message from CTM is: ' . $response.text);
+      \Drupal::logger('ellison_webform')->info('The response message from CTM is: ' . $response);
     }
     curl_close($ch);
 
