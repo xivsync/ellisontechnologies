@@ -57,6 +57,14 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
       'visitor_sid' => 'unique-ctm-visitor-id',
       'callback_number' => '+13332224444',
       'receiving_number' => '+8667372556',
+      'edit-firstname' => $values['firstname'],
+      'edit-lastname' => $values['lastname'],
+      'edit-company' => $values['company'],
+      'edit-title' => $values['title'],
+      'edit-street' => $values['street'],
+      //'edit-city' => $values['city'],
+      'edit-state' => $values['state'],
+      'edit-postalcode' => $values['postalcode']
     ];
 
     $ch = curl_init($url);
@@ -66,19 +74,19 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 
     $data_url_encoded_query = http_build_query($data);
-    $data_json = json_encode($data);
-
-    echo '<pre>' . var_dump($data_url_encoded_query) . '</pre>';
+    //$data_json = json_encode($data);
     
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_url_encoded_query);
 
     $response = curl_exec($ch);
     if (curl_errno($ch)) {
-      \Drupal::logger('ellison_webform')->info('The response from CTM is: ' . curl_error($ch));
-    } 
+      \Drupal::logger('ellison_webform')->error('The error message from CTM is: ' . curl_error($ch));
+    } else {
+      \Drupal::logger('ellison_webform')->info('The response message from CTM is: ' . $response.text);
+    }
     curl_close($ch);
 
-    \Drupal::logger('ellison_webform')->info('The response from CTM is: ' . $response);
+    
 
     /*
     if (!empty($values['region'])) {
