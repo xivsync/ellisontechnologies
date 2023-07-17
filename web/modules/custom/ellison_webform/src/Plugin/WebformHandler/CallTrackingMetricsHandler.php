@@ -32,62 +32,94 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  
 class CallTrackingMetricsHandler extends WebformHandlerBase {
  
-  public function postSave(WebformSubmissionInterface $webform_submission, $update = TRUE) {
+  public function confirmForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
-    // In here, we perform our logic to manipulate and use the webform submission data however we want.
-    // To access data from the webform submission, we call $webform_submission->getData(), we should be able to grab a part of the array that should be returned using a key.
-    // The key will be the machine name of the field on the webform. 
-    // So for example, if you have a field on the webform with a machine name of group, you code to get the value would be $webform_submission->getData()['group']
-    
+    $curl = curl_init();
+
     $values = $webform_submission->getData();
 
-    \Drupal::logger('ellison_webform')->info('The data from form CTM is: ' . var_dump($values));
+    $caller_name = urlencode($values['firstname'] . ' ' . $values['lastname']);
+    $firstname = urlencode($values['firstname']);
+    $lastname = urlencode($values['lastname']);
+    $phone = urlencode($values['phone']);
+    $email = urlencode($values['email']);
+    $title = urlencode($values['title']);
+    $company = urlencode($values['company']);
+    $street = urlencode($values['street']);
+    //$city = urlencode($values['city']);
+    $city = urlencode('Stillwater');
+    $state = urlencode($values['state']);
+    $postalcode = urlencode($values['postalcode']);
+    $leads_interest__c = urlencode($values['leads_interest__c']);
+    $how_did_you_hear__c = urlencode($values['how_did_you_hear__c']);
+    $webform_best_time__c = urlencode($values['webform_best_time__c']);
+    $industry = urlencode($values['industry']);
+    $select_location = urlencode($values['select_location']);
+    $description = urlencode($values['description']);
+    $opt_in = urlencode($values['opt_in']);
+    $region__c = urlencode($values['region__c']);
+    $leadsource_not_used = urlencode($values['leadsource_not_used']);
+    $webform_email_sign_up__c = urlencode($values['webform_email_sign_up__c']);
+    $builder_interest__c = urlencode($values['builder_interest__c']);
+    $webform_name__c = urlencode($values['webform_name__c']);
+    $webform_campaign_id__c = urlencode($values['webform_campaign_id__c']);
+    $opt_in = urlencode($values['opt_in']);
 
-    $url = 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29?key=6y0SQYZx6CgmOi9WOvjFX8FkMd7GEF3bWOi79GgXz8WZU_Qg';
+    $post_fields = "
+      caller_name={$caller_name}
+      &country_code=1
+      &phone_number={$phone}
+      &email={$email}
+      &visitor_sid=unique-ctm-visitor-id
+      &callback_number=%2B13332224444
+      &receiving_number=%2B18009940146
+      &custom_edit-submitted-firstname={$firstname}
+      &custom_edit-submitted-lastname={$lastname}
+      &custom_edit-submitted-email={$email}
+      &custom_edit-submitted-title={$title}
+      &custom_edit-submitted-company={$company}
+      &custom_edit-submitted-street={$street}
+      &custom_edit-submitted-city={$city}
+      &custom_edit-submitted-state={$state}
+      &custom_edit-submitted-postalcode={$postalcode}
+      &custom_edit-submitted-leads-interest-c={$leads_interest__c}
+      &custom_edit-submitted-how-did-you-hear-c={$how_did_you_hear__c}
+      &custom_edit-submitted-webform-best-time-c={$webform_best_time__c}
+      &custom_edit-submitted-industry={$industry}
+      &custom_select_location={$select_location}
+      &custom_edit-submitted-description={$description}
+      &custom_edit-submitted-opt_in={$opt_in}
+      &custom_edit-submitted-region__c={$region__c}
+      &custom_edit-submitted-webform_email_sign_up__c={$webform_email_sign_up__c}
+      &custom_edit-submitted-builder-interest-c={$builder_interest__c}
+      &custom_edit-submitted-webform-name-c={$webform_name__c}
+      &custom_edit-submitted-submitted-webform_campaign_id__c={$webform_campaign_id__c}
+      &custom_edit-submitted-submitted-opt_in={$opt_in}
+    ";
+
+    // remove line breaks from between fields
+    $post_fields = preg_replace("/\r|\n/", "", $post_fields);
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29?key=6y0SQYZx6CgmOi9WOvjFX8FkMd7GEF3bWOi79GgXz8WZU_Qg',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS => $post_fields,
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/x-www-form-urlencoded'
+      ),
+    ));
     
-    $headers = [
-      'Content-Type: application/x-www-form-urlencoded',
-      'Cache-Control: no-cache',
-      'Accept: */*',
-    ];
+    $response = curl_exec($curl);
+    
+    curl_close($curl);
 
-    $data_raw = [
-      'caller_name' => 'Web Handler',
-      'country_code' => '1',
-      'phone_number' => '(800) 555-5555',
-      'email' => 'customer@example.com',
-      'visitor_sid' => 'unique-ctm-visitor-id',
-      'callback_number' => '+13332224444',
-      'receiving_number' => '+8667372556',
-      'edit-firstname' => $values['firstname'],
-      'edit-lastname' => $values['lastname'],
-      'edit-company' => $values['company'],
-      'edit-title' => $values['title'],
-      'edit-street' => $values['street'],
-      'edit-state' => $values['state'],
-      'edit-postalcode' => $values['postalcode']
-    ];
-
-    \Drupal::logger('ellison_webform')->info('The data from webform submission: ' . print_r(serialize($data_raw)));
-
-    $ch = curl_init($url);
-
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $data_url_encoded_query = http_build_query($data_raw);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_url_encoded_query);
-
-    $response = curl_exec($ch);
-
-    if (curl_errno($ch)) {
-      \Drupal::logger('ellison_webform')->error('The error message from CTM is: ' . curl_error($ch));
-    } else {
-      \Drupal::logger('ellison_webform')->info('The response message from CTM is: ' . print_r(serialize($response)));
-    }
-    curl_close($ch);
+    \Drupal::logger('ellison_webform')->info('The response from webform submission: ' . print_r(serialize($response), TRUE));
 
   }
 
