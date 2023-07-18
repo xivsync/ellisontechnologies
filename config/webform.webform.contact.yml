@@ -2,6 +2,8 @@ uuid: ff0bfbc6-d18e-4678-9de2-7b7b5ca92353
 langcode: en
 status: open
 dependencies:
+  module:
+    - ellison_webform
   enforced:
     module:
       - webform
@@ -16,25 +18,26 @@ archive: false
 id: contact
 title: Contact
 description: '<p>Basic email contact webform.</p>'
-category: ''
+categories: {  }
 elements: |-
   company:
     '#type': textfield
     '#title': Company
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  first_name:
+  firstname:
     '#type': textfield
     '#title': 'First Name'
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  name:
+  lastname:
     '#type': textfield
     '#title': 'Last Name'
     '#required': true
-    '#default_value': '[current-user:display-name]'
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  title_position:
+  title:
     '#type': textfield
     '#title': Title/Position
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#title': 'Your Email'
@@ -44,30 +47,37 @@ elements: |-
   phone:
     '#type': tel
     '#title': Phone
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   street:
     '#type': textfield
     '#title': Address
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   state:
     '#type': textfield
     '#title': State
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   city:
     '#type': city
     '#title': City
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code'
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   leads_interest__c:
     '#type': textfield
     '#title': 'Machine Interest'
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   how_did_you_hear__c:
     '#type': select
     '#title': 'How did you hear about us?'
+    '#required': true
     '#options':
       Builder_Website: 'Builder Website'
       Direct_Mail: 'Direct Mail'
@@ -111,9 +121,17 @@ elements: |-
       Recreation: Recreation
       Semiconductor: Semiconductor
       Valve: Valve
+  select_location:
+    '#type': select
+    '#title': 'Select Location'
+    '#options':
+      north: 'North TX /  North LA'
+      south: 'South TX / South LA'
+      none: 'Not sure'
   description:
     '#type': textarea
     '#title': 'Please let us know how we can help you today'
+    '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   opt_in:
     '#type': select
@@ -154,25 +172,6 @@ elements: |-
     '#type': hidden
     '#title': form_name
     '#default_value': contact-us
-  processed_text:
-    '#type': processed_text
-    '#text': |-
-      <script>
-      (window.__ctm_loaded || []).push(function() {
-        __ctm.form.capture('app.calltrackingmetrics.com', // the capture host
-                           'FRT472ABB2C5B9B141ADAB06C7A709212DB808E116D131D6AC30D9F1FD53942EF31', // this FormReactor
-                           document.getElementById('webform-submission-contact-add-form'),  // ID of the web form you want to attach your FormReactor
-                           "8664851591", // the tracking number used for associating visitor data and caller ID consumers will see
-                           {
-                             country_code: "1", // the expected country code e.g. +1, +44, +55, +61, etc... the plus is ignored
-                             name: "name", // set to the ID of the lead name field, or pass in a list of IDs if there are multiple name fields
-                             phone: "phone", // ID of the lead phone number field
-                             email: "email", // optional, ID of the lead email field
-                             fields: ['custom1', 'custom2'] // list of additional field IDs in the form you want to capture
-                           });
-      });
-      </script>
-    '#format': source
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -361,78 +360,13 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
-    id: email
-    handler_id: email_confirmation
-    label: 'Email confirmation'
+  push_form_data_to_call_tracking_metrics:
+    id: call_tracking_metrics_handler
+    handler_id: push_form_data_to_call_tracking_metrics
+    label: 'Push form data to Call Tracking Metrics'
     notes: ''
     status: true
     conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[current-user:mail]'
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-  email_notification:
-    id: email
-    handler_id: email_notification
-    label: 'Email notification'
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
+    weight: 0
+    settings: {  }
 variants: {  }
