@@ -34,36 +34,49 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
  
   public function confirmForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
+    // check webform id
+    $form_id = $form['form_id']['#value'];
+    if (!str_starts_with($form_id, 'webform_submission_contact')) {
+      return;
+    }
+
     $curl = curl_init();
 
+    
     $values = $webform_submission->getData();
+    $url = 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29?key=6y0SQYZx6CgmOi9WOvjFX8FkMd7GEF3bWOi79GgXz8WZU_Qg';
+   
+    $firstname = array_key_exists('firstname', $values) ? urlencode($values['firstname']) : '';
+    $lastname = array_key_exists('lastname', $values) ? urlencode($values['lastname']) : '';
+    if ($firstname!=='' && $lastname!=='') {
+      $caller_name = urlencode($values['firstname'] . ' ' . $values['lastname']);
+    } else {
+      $caller_name = '';
+    }
+    $phone = array_key_exists('phone', $values) ? urlencode($values['phone']) : '';
+    $email = array_key_exists('email', $values) ? urlencode($values['email']) : '';
+    $title = array_key_exists('title', $values) ? urlencode($values['title']) : '';
+    $company = array_key_exists('company', $values) ? urlencode($values['company']) : '';
+    $street = array_key_exists('street', $values) ? urlencode($values['street']) : '';
 
-    $caller_name = urlencode($values['firstname'] . ' ' . $values['lastname']);
-    $firstname = urlencode($values['firstname']);
-    $lastname = urlencode($values['lastname']);
-    $phone = urlencode($values['phone']);
-    $email = urlencode($values['email']);
-    $title = urlencode($values['title']);
-    $company = urlencode($values['company']);
-    $street = urlencode($values['street']);
-    //$city = urlencode($values['city']);
-    $city = urlencode('Stillwater');
-    $state = urlencode($values['state']);
-    $postalcode = urlencode($values['postalcode']);
-    $leads_interest__c = urlencode($values['leads_interest__c']);
-    $how_did_you_hear__c = urlencode($values['how_did_you_hear__c']);
-    $webform_best_time__c = urlencode($values['webform_best_time__c']);
-    $industry = urlencode($values['industry']);
-    $select_location = urlencode($values['select_location']);
-    $description = urlencode($values['description']);
-    $opt_in = urlencode($values['opt_in']);
-    $region__c = urlencode($values['region__c']);
-    $leadsource_not_used = urlencode($values['leadsource_not_used']);
-    $webform_email_sign_up__c = urlencode($values['webform_email_sign_up__c']);
-    $builder_interest__c = urlencode($values['builder_interest__c']);
-    $webform_name__c = urlencode($values['webform_name__c']);
-    $webform_campaign_id__c = urlencode($values['webform_campaign_id__c']);
-    $opt_in = urlencode($values['opt_in']);
+    $city = array_key_exists('city', $values) ? urlencode($values['city']) : '';
+    
+    $state = array_key_exists('state', $values) ? urlencode($values['state']) : '';
+    $postalcode = array_key_exists('postalcode', $values) ? urlencode($values['postalcode']) : '';
+    $leads_interest__c = array_key_exists('leads_interest__c', $values) ? urlencode($values['leads_interest__c']) : '';
+    $how_did_you_hear__c = array_key_exists('how_did_you_hear__c', $values) ? urlencode($values['how_did_you_hear__c']) : '';
+    $webform_best_time__c = array_key_exists('webform_best_time__c', $values) ? urlencode($values['webform_best_time__c']) : '';
+    $industry = array_key_exists('industry', $values) ? urlencode($values['industry']) : '';
+    $select_location = array_key_exists('select_location', $values) ? urlencode($values['select_location']) : '';
+    $description = array_key_exists('description', $values) ? urlencode($values['description']) : '';
+    $opt_in = array_key_exists('opt_in', $values) ? urlencode($values['opt_in']) : '';
+    $region__c = array_key_exists('region__c', $values) ? urlencode($values['region__c']) : '';
+    $leadsource_not_used = array_key_exists('leadsource_not_used', $values) ? urlencode($values['leadsource_not_used']) : '';
+    $webform_email_sign_up__c = array_key_exists('webform_email_sign_up__c', $values) ? urlencode($values['webform_email_sign_up__c']) : '';
+    $builder_interest__c = array_key_exists('builder_interest__c', $values) ? urlencode($values['builder_interest__c']) : '';
+    $webform_name__c = array_key_exists('webform_name__c', $values) ? urlencode($values['webform_name__c']) : '';
+    $webform_campaign_id__c = array_key_exists('webform_campaign_id__c', $values) ? urlencode($values['webform_campaign_id__c']) : '';
+    $opt_in = array_key_exists('opt_in', $values) ? urlencode($values['opt_in']) : '';
 
     $post_fields = "
       caller_name={$caller_name}
@@ -101,7 +114,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     $post_fields = preg_replace("/\r|\n/", "", $post_fields);
 
     curl_setopt_array($curl, array(
-      CURLOPT_URL => 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29?key=6y0SQYZx6CgmOi9WOvjFX8FkMd7GEF3bWOi79GgXz8WZU_Qg',
+      CURLOPT_URL => $url,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
@@ -119,7 +132,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     
     curl_close($curl);
 
-    \Drupal::logger('ellison_webform')->info('The response from webform submission: ' . print_r(serialize($response), TRUE));
+    \Drupal::logger('ellison_webform')->info('The response from ' . $form_id . ' webform submission: ' . print_r(serialize($response), TRUE));
 
   }
 
