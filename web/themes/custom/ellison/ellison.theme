@@ -64,9 +64,9 @@ function ellison_preprocess_region(&$variables)
     $variables['session_region'] = $session_region ? $session_region : 'Select Location';
 
 
-    // default region is southern california
-    $variables['#attached']['drupalSettings']['ellison']['session_region'] = $session_region ? $session_region : 'California - Southern';
-    $variables['#attached']['drupalSettings']['ellison']['session_region_id'] = $session_region_id ? $session_region_id : '18';
+    // default region is southern california in drupalSettings
+    $variables['#attached']['drupalSettings']['ellison']['session_region'] = $session_region ? $session_region : 'default';
+    $variables['#attached']['drupalSettings']['ellison']['session_region_id'] = $session_region_id ? $session_region_id : '0';
 
     // @todo see if this needs to be done to all regions
     $variables['#cache']['contexts'][] = 'session';
