@@ -38,13 +38,6 @@ model:
   dependencies:
     - core/drupal
     - core/once
-model-listing:
-  js:
-    dist/js/02-molecules/model-listing/model-listing.js: {}
-  dependencies:
-    - core/drupal
-    - core/once
-    - core/drupalSettings
 onpage-navigation:
   js:
     dist/js/03-organisms/group/group.js: {}

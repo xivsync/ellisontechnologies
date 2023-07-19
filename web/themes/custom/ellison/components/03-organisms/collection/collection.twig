@@ -1,3 +1,5 @@
+{# @todo: deprecate no results #}
+
 {% set collection_base_class = collection_base_class|default('collection') %}
 
 {% if not collection_modifiers %}
@@ -25,9 +27,4 @@
 
 {% if collection_label %}
   </div>
-{% endif %}
-
-
-{% if collection_results<1 %}
-  <div class="skrim skrim-series">{{collection__noresults}}</div>
 {% endif %}

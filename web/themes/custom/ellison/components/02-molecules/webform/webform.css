@@ -43,6 +43,10 @@
 
       }
 
+      /*
+       * handles the background images for the radio buttons
+       * the order of the nth-child() selectors is important
+       */
       .form-item:nth-child(1) label {
         background-image: url('/themes/custom/ellison/images/regions/california-northern.jpeg');
       }
