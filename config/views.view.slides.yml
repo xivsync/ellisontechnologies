@@ -190,7 +190,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access media overview'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }

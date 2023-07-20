@@ -19,12 +19,28 @@ dependencies:
   module:
     - entity_reference_revisions
     - media
+    - text
     - user
 id: node.model.default
 targetEntityType: node
 bundle: model
 mode: default
 content:
+  field_brand:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_carousel_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_components:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -33,6 +49,26 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_default_series_model:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_enable_build_a_quote:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_media_image:
     type: media_thumbnail
@@ -45,6 +81,22 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_product:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_series:
     type: entity_reference_entity_view
     label: hidden
@@ -54,13 +106,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_technologies:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
 hidden:
   feeds_item: true
-  field_brand: true
-  field_carousel_content: true
-  field_default_series_model: true
-  field_enable_build_a_quote: true
-  field_product: true
-  field_region: true
-  field_technologies: true
   links: true
