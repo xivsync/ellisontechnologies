@@ -17,15 +17,10 @@ Drupal.behaviors.dropdown = {
           const componentEl = document.getElementById(`dropdown-${uuid}`);
           const state = componentEl.dataset.dropdownState;
 
-          console.log('state',state);
-
           // toggle based on state
           toggleButtonEl.setAttribute('aria-expanded', state==='expanded' ? false : true);
 
-          console.log('componentEl:before',componentEl.dataset);
-
           componentEl.dataset.dropdownState = (state==='expanded' ? 'collapsed' : 'expanded');
-          console.log('componentEl:after',componentEl.dataset);
           componentEl.classList.remove(state==='expanded' ? 'state-is-expanded' : 'state-is-collapsed');
           componentEl.classList.add(state==='expanded' ? 'state-is-collapsed' : 'state-is-expanded');
           

@@ -9,19 +9,50 @@ Drupal.behaviors.mainMenu = {
 
       function (element) {
 
+        function collapse(item,link,expandedClass) {
+          item.classList.remove(expandedClass);
+          link.setAttribute('aria-expanded', false);
+        }
+
+        function expand(item,link,expandedClass) {
+          item.classList.add(expandedClass);
+          link.setAttribute('aria-expanded', true);
+        }
+
+        collapseItems = function(items,expandedClass) {
+          for (item of items) {
+            const link = item.getElementsByClassName('main-menu__link--sub-1')[0];
+            collapse(item,link,expandedClass);
+          }
+        }
+
         function toggleSubmenu(e) {
 
           const link = e.target;
           const item = e.target.parentElement;
           const isExpanded = link.getAttribute('aria-expanded');
-          const expandedClass = link.classList.contains('main-menu__link--sub-1') ? 'expanded-2' : 'expanded-1';
+          const isSubmenu = link.classList.contains('main-menu__link--sub-1') ? true : false;
+          const expandedClass = isSubmenu ? 'expanded-2' : 'expanded-1';
     
-          if (isExpanded === 'true') {
-            item.classList.remove(expandedClass);
-            link.setAttribute('aria-expanded', false);
+          if (isSubmenu) {
+
+            console.log('isSubmenu');
+            if (isExpanded === 'true') {
+              collapse(item,link,expandedClass);
+            } else {
+              expand(item,link,expandedClass);
+            }
+
           } else {
-            item.classList.add(expandedClass);
-            link.setAttribute('aria-expanded', true);
+
+            if (isExpanded === 'true') {
+              collapse(item,link,expandedClass);
+            } else {
+              const topLevelItems = document.getElementsByClassName('expanded-1');
+              collapseItems(topLevelItems,'expanded-1');
+              expand(item,link,expandedClass);
+            }
+
           }
     
           e.preventDefault();
