@@ -2975,6 +2975,9 @@ div.webform {
     padding-right: 1rem;
   }
   &__toggle {
+    text-transform: uppercase;
+  }
+  &__toggle {
     text-decoration-line: none;
   }
   &__toggle:hover {
@@ -2982,7 +2985,7 @@ div.webform {
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   }
   &__toggle:focus {
-    z-index: 10;
+    z-index: 50;
   }
   &__toggle:focus {
     outline: 2px solid transparent;
@@ -3020,7 +3023,7 @@ div.webform {
     position: absolute;
   }
   &__menu {
-    top: 2.8rem;
+    top: 2.5rem;
   }
   &__menu {
     z-index: 10;
@@ -3100,6 +3103,16 @@ div.webform {
     a {
       --tw-bg-opacity: 1;
       background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+    }
+    a {
+      font-weight: 700;
+    }
+    a {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>');
+      background-repeat: no-repeat;
+      background-position: 0.75rem;
+      background-size: 1.25rem;
+      padding-left: 2.25rem;
     }
   }
 }
@@ -3695,23 +3708,19 @@ div.webform {
   }
 }
 
-.skrim {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 999;
-  height: 100%;
-  width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  opacity: 0.4;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
-  outline: 1rem black solid;
+/* handles series on model page */
+
+.component {
+  .taxonomy-series__content h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .taxonomy-series__content h2 {
+    font-weight: 800;
+  }
+  .taxonomy-series__content h2 {
+    text-transform: uppercase;
+  }
 }
 
 .quote {
@@ -3789,8 +3798,8 @@ div.webform {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -4088,6 +4097,10 @@ div.webform {
         opacity: 1;
       }
     }
+    /*
+       * handles the background images for the radio buttons
+       * the order of the nth-child() selectors is important
+       */
     .form-item:nth-child(1) label {
       background-image: url('/themes/custom/ellison/images/regions/california-northern.jpeg');
     }
@@ -6147,6 +6160,25 @@ html {
 
 .field.label.field-type-string.field-bundle-paragraphs-library-item {
   display: none;
+}
+
+.scrim {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  opacity: 0.4;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  outline: 1rem black solid;
 }
 
 /* handles contextual links

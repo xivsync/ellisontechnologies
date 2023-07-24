@@ -2,7 +2,7 @@
   @apply flex flex-col relative;
 
   &__toggle {
-    @apply flex flex-row justify-between border border-b-0 border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-cyan focus:z-10 focus:outline-none py-2 px-4 no-underline;
+    @apply flex flex-row justify-between uppercase border border-b-0 border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-cyan focus:z-50 focus:outline-none py-2 px-4 no-underline;
     
     &.has-icon {
       @apply inline-flex flex-row gap-2;
@@ -15,7 +15,7 @@
   }
 
   &__menu {
-    @apply flex flex-col absolute top-[2.8rem] w-full z-10 bg-white;
+    @apply flex flex-col absolute top-[2.5rem] w-full z-10 bg-white;
   }
 
   &__menu--list {
@@ -41,7 +41,12 @@
 
   &__menu--item.is-active {
     a {
-      @apply cursor-not-allowed bg-gray-300;
+      @apply cursor-not-allowed bg-gray-300 font-bold;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>');
+      background-repeat: no-repeat;
+      background-position: 0.75rem;
+      background-size: 1.25rem;
+      padding-left: 2.25rem;
     }
 
   }

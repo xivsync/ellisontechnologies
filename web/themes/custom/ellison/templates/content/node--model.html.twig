@@ -78,15 +78,24 @@
 {% set content__attributes = content_attributes|merge({
   'class': bem('content', ['model'], base_class, ''),
 }) %}
+
 {% set series_model_list_count = drupal_view_result('list_cards_of_models_for_a_series', 'block_1') | length %}
 
 {% set specs_model_list_count = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
 
 {% set has_build_a_quote = content.field_enable_build_a_quote | render | striptags | trim == 'True' ? true : false %}
 
-{% set has_carousel_content = content.field_carousel_content | render ? true : false %}
+{% set has_parts_content = drupal_entity('paragraph', 415) | render ? true : false %}
 
-<article {{ bem(base_class) }}>
+{% set has_solution_content = drupal_entity('paragraph', 418)  | render ? true : false %}
+
+{% set classes = [
+    has_build_a_quote ? 'has-build-a-quote',
+    has_carousel_content ? 'has-carousel-content',
+  ]
+%}
+
+<article {{ bem(base_class,classes) }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -158,11 +167,6 @@
 
           </div>
 
-          {% include "@atoms/text/headings/_heading.twig" with {
-            "heading__level": '1',
-            "heading": 'Model: ' ~ label | render | striptags | trim,
-          } %}
-
           <div class="component">
             {{ drupal_view('series', 'block_1') }}
           </div>
@@ -208,14 +212,18 @@
       {% endif %}
 
       {# Accessory Paragraph Library Entity = 414 #}
-      <div class="component">
-        {{ drupal_entity('paragraph', 415) }}
-      </div>
+      {% if has_parts_content %}
+        <div class="component remove-mb forward-diagonal-on full-width-on">
+          {{ drupal_entity('paragraph', 415) }}
+        </div>
+      {% endif %}
 
       {# Turnkey Paragraph Library Entity = 418 #}
-      <div class="component">
-        {{ drupal_entity('paragraph', 418) }}
-      </div>
+      {% if has_solution_content %}
+        <div class="component remove-mb forward-diagonal-on full-width-on">
+          {{ drupal_entity('paragraph', 418) }}
+        </div>
+      {% endif %}
 
     </div>
 

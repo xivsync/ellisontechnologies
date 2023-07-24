@@ -150,6 +150,18 @@ function ellison_preprocess_views_view_unformatted(&$variables)
 
   }
 
+  // Add Node Title aka Model Name to dropdown
+  if ($view_id == 'series' && $view->current_display == 'block_1') {
+    // Node title a.k.a. model name used in dropdown
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if(!empty($node) && in_array($node->bundle(), ['model'])) {
+        $variables['node_title']  = $node->label();
+      }
+      else {
+        $variables['node_title']  = 'Select a model from series';
+      }
+  }
+
   $handle_region_restrictions = false;
 
   /* handles removing rows when blocked */

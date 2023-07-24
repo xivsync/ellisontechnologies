@@ -32,7 +32,6 @@ At the node level, inside your Twig template you can use:
 {% if rows | length > 1 %}
 
 <div id="series-{{ uid }}" class="series-list">
-
     <div
       id="dropdown-{{ uid }}"
       class="dropdown single-button-dropdown {{ rows | length > 1 ? 'multiple-results' : 'single-result'}} state-is-collapsed"
@@ -47,7 +46,7 @@ At the node level, inside your Twig template you can use:
         aria-expanded="false"
         data-dropdown-unique-id="{{ uid }}"
       >
-        View Series Model
+        {{ node_title }}
         <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
         </svg>

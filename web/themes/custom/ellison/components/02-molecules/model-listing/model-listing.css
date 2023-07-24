@@ -151,3 +151,12 @@
   }
 
 }
+
+/* handles series on model page */
+.component {
+
+  .taxonomy-series__content h2 {
+    @apply uppercase text-4xl font-extrabold
+  }
+
+}
