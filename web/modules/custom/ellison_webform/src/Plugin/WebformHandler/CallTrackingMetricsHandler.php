@@ -185,7 +185,6 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
           &custom_edit-submitted-builder-interest-c={$builder_interest__c}
           &custom_edit-submitted-webform-name-c={$webform_name__c}
           &custom_edit-submitted-submitted-webform_campaign_id__c={$webform_campaign_id__c}
-          &custom_edit-submitted-submitted-opt_in={$opt_in}
         ";
         break;
       default:
