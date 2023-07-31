@@ -2572,8 +2572,6 @@ div.webform {
     &__image {
       .field-media-oembed-video {
         aspect-ratio: 16 / 9;
-      }
-      .field-media-oembed-video {
         width: 100%;
         height: 100%;
       }
@@ -2703,7 +2701,7 @@ div.webform {
     align-items: flex-start;
   }
   .cta-button__inner {
-    gap: 0.5rem;
+    gap: 2rem;
   }
   .cta-button__button a {
     border-radius: 9999px !important;
@@ -4646,6 +4644,20 @@ form.webform-submission-build-a-quote-form {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* handles margines with group header and footer */
+
+.group {
+  &.diagonal-forward-slash-on,
+  &.tilt-back-slash-on {
+    .group__header {
+      padding-top: 2rem;
+    }
+    .group__footer {
+      padding-bottom: 2rem;
+    }
+  }
 }
 
 .diagonal-forward-slash-on {
