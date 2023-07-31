@@ -4619,6 +4619,26 @@ form.webform-submission-build-a-quote-form {
   }
 }
 
+/* handles displaying grouped components as rows */
+
+@media (min-width: 1024px) {
+  .group__inner.display-as-rows .group__items {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* handles diagonal full width background group */
+
+.full-width-on {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 /* handles centering the container when displaying as full-width-on */
 
 .full-width-on .container {
@@ -4628,12 +4648,33 @@ form.webform-submission-build-a-quote-form {
   padding-right: 1rem;
 }
 
-/* handles displaying grouped components as rows */
+.diagonal-forward-slash-on {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+          clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+}
 
 @media (min-width: 1024px) {
-  .group__inner.display-as-rows .group__items {
-    flex-direction: column;
-    gap: 2rem;
+  .diagonal-forward-slash-on {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+}
+
+.tilt-back-slash-on {
+  padding-top: 8rem !important;
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 1024px) {
+  .tilt-back-slash-on {
+    padding-top: 4rem;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   }
 }
 
@@ -5912,45 +5953,6 @@ html {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.full-width-on {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.diagonal-forward-slash-on {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
-          clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
-}
-
-@media (min-width: 1024px) {
-  .diagonal-forward-slash-on {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  }
-}
-
-.tilt-back-slash-on {
-  padding-top: 8rem !important;
-  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
-}
-
-@media (min-width: 1024px) {
-  .tilt-back-slash-on {
-    padding-top: 4rem;
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-  }
 }
 
 /* @todo: add backward slash `\` */

@@ -64,7 +64,8 @@ tabs:
     - core/once
 video:
   js:
-    dist/js/01-atoms/videos/video.js: {}
+    components/01-atoms/videos/video.js: {}
+    # dist/js/01-atoms/videos/video.js: {}
   dependencies:
     - core/drupal
     - core/once

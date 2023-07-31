@@ -42,39 +42,6 @@ html {
   @apply container mx-auto;
 }
 
-.full-width-on {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.diagonal-forward-slash-on {
-  @apply py-16;
-  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
-}
-
-@media (min-width: 1024px) {
-  .diagonal-forward-slash-on {
-    @apply py-16;
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  }
-}
-
-.tilt-back-slash-on {
-  padding-top: 8rem !important;
-  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
-}
-
-@media (min-width: 1024px) {
-  .tilt-back-slash-on {
-    @apply pt-16;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-  }
-}
-
 /* @todo: add backward slash `\` */
 
 .layout-container {
