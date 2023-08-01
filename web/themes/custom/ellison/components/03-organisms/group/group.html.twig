@@ -22,12 +22,14 @@
 
 {% set base_class = 'group' %}
 
+{% set bg_color = background_color | lower | replace({'text__bg-color--': 'bg-color--'}) %}
+
 {% set attributes = create_attribute() %}
 
 {%
   set classes = [
     base_class,
-    background_color | clean_class,
+    bg_color | clean_class,
     background_diagonal | clean_class,
     background_full_width | clean_class,
     background_tilt | clean_class,
@@ -36,20 +38,13 @@
 
 {% set inner_attributes = create_attribute() %}
 
+{% set add_container_class = (background_full_width == 'full-width-on') ? ' container' : 'no-container' %}
+
 {%
   set inner_classes = [
     base_class ~ '__inner',
-    background_diagonal | clean_class,
-    display_style | clean_class, 
-    background_full_width == 'full-width-on' ? 'container' : '',
-    background_diagonal == 'diagonal-forward-slash-on' ? 'container' : '',
-    background_tilt == 'tilt-back-slash-on' ? 'container' : '',
-    (
-      display_style == 'display-as-row' and
-      background_diagonal != 'diagonal-forward-slash-on' and
-      background_full_width != 'full-width-on' and
-      background_tilt != 'tilt-back-slash-on'
-    ) ? 'container' : '',
+    display_style | clean_class,
+    background_color | clean_class,
   ]
 %}
 
@@ -57,22 +52,22 @@
   {{ title_suffix }}
   <div{{ inner_attributes.addClass(inner_classes) }}>
     {% if header | render %}
-      <div class="group__header">
+      <div class="group__header{{ add_container_class }}">
         {{ header }}
       </div>
     {% endif %}
     {% if body | render %}
-      <div class="group__body">
+      <div class="group__body{{ add_container_class }}">
         {{ body }}
       </div>
     {% endif %}
     {% if group | render %}
-      <div class="group__group">
+      <div class="group__group{{ add_container_class }}">
         {% block group_content %}{{ group }}{% endblock %}
       </div>
     {% endif %}
     {% if footer | render %}
-      <div class="group__footer">
+      <div class="group__footer{{ add_container_class }}">
         {{ footer }}
       </div>
     {% endif %}

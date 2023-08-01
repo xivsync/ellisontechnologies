@@ -52,8 +52,6 @@
         {% set item_class = [
             'component',
           item.content['#paragraph'].field_remove_margins.value | render ? item.content['#paragraph'].field_remove_margins.value | clean_class : '',
-          item.content['#paragraph'].field_diagonal_background.value == '1' ? 'forward-diagonal-on' : 'forward-diagonal-off',
-          item.content['#paragraph'].field_full_width_background.value == '1' ? 'full-width-on' : 'full-width-off',
           ]
         %}
         <div{{ item.attributes.addClass(item_class) }}>{{ item.content }}</div>
@@ -61,13 +59,6 @@
     </div>
   {% else %}
     {% for item in items %}
-      {% set item_class = [
-          'component',
-          item.content['#paragraph'].field_remove_margins.value | render ? item.content['#paragraph'].field_remove_margins.value | clean_class : '',
-          item.content['#paragraph'].field_diagonal_background.value == '1' ? 'forward-diagonal-on' : 'forward-diagonal-off',
-          item.content['#paragraph'].field_full_width_background.value == '1' ? 'full-width-on' : 'full-width-off',
-        ]
-      %}
       <div{{ attributes.addClass(base_class) }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
@@ -81,8 +72,6 @@
       {% set item_class = [
           'component',
           item.content['#paragraph'].field_remove_margins.value | render ? item.content['#paragraph'].field_remove_margins.value | clean_class : '',
-          item.content['#paragraph'].field_diagonal_background.value == '1' ? 'forward-diagonal-on' : 'forward-diagonal-off',
-          item.content['#paragraph'].field_full_width_background.value == '1' ? 'full-width-on' : 'full-width-off',
         ]
       %}
       <div{{ item.attributes.addClass(item_class) }}>{{ item.content }}</div>

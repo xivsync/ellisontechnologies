@@ -55,12 +55,12 @@
 
     /* handles padding for contain wide background colors */
     &.diagonal-off.full-width-off.tilt-back-slash-off{
-      @apply p-8;
+      @apply p-0;
     }
     
     &.full-width-on,
     &.text {
-      @apply py-8;
+      @apply py-0;
     }
 
     .prose {
@@ -76,12 +76,12 @@
 
     /* handles padding for contain wide background colors */
     &.diagonal-off.full-width-off.tilt-back-slash-off{
-      @apply p-8;
+      @apply p-0;
     }
     
     &.full-width-on,
     &.text {
-      @apply py-8;
+      @apply py-0;
     }
 
     .prose {
@@ -95,9 +95,14 @@
   &--light-blue {
     @apply bg-light-blue;
 
+    /* handles padding for contain wide background colors */
+    &.diagonal-off.full-width-off.tilt-back-slash-off{
+      @apply p-0;
+    }
+
     &.full-width-on,
     &.text {
-      @apply py-8;
+      @apply py-0;
     }
 
     .prose {
@@ -113,12 +118,12 @@
     
     /* handles padding for contain wide background colors */
     &.diagonal-off.full-width-off.tilt-back-slash-off{
-      @apply p-8;
+      @apply p-0;
     }
     
     &.full-width-on,
     &.text {
-      @apply py-8;
+      @apply py-0;
     }
 
     .prose {
@@ -134,13 +139,13 @@
 
     /* handles padding for contain wide background colors */
     &.diagonal-off.full-width-off.tilt-back-slash-off{
-      @apply p-8;
+      @apply p-0;
     }
 
     
     &.full-width-on,
     &.text {
-      @apply py-8;
+      @apply py-0;
     }
 
     .prose {

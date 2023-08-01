@@ -1,28 +1,20 @@
 .components {
   @apply flex flex-col gap-8;
 
-  .component.remove-mt.forward-diagonal-on {
-    @apply mt-[-8rem] md:mt-[-8rem];
-  }
+  .component {
 
-  .component.remove-mb.forward-diagonal-on {
-    @apply mb-[-8rem] md:mb-[-8rem];
-  }
+    &.remove-mt .group {
+      @apply mt-[-6rem];
+    }
 
-  .component.remove-my.forward-diagonal-on {
-    @apply my-[-8rem] md:my-[-8rem];
-  }
+    &.remove-mb .group {
+      @apply mb-[-6rem];
+    }
 
-  .component.remove-mt.forward-diagonal-off {
-    @apply mt-[-2rem] md:mt-[-2rem];
-  }
-
-  .component.remove-mb.forward-diagonal-off {
-    @apply mb-[-2rem] md:mb-[-2rem];
-  }
-
-  .component.remove-my.forward-diagonal-off {
-    @apply my-[-2rem] md:my-[-2rem];
+    &.remove-my .group {
+      @apply my-[-6rem];
+    }
+  
   }
 
 }
