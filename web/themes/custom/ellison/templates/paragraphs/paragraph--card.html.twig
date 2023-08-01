@@ -73,7 +73,10 @@
 
 {{ attach_library('ellison/video') }}
 
+{% set has_image = content.field_media_image | render ? true : false %}
+
 {% embed "@molecules/card/card.twig" with {
+  has_image: has_image,
   background_color: content.field_background_color | render | striptags | trim,
   card__style: content.field_card_style  | render | striptags | trim,
   cta_style: content.field_align_text | render | striptags | trim,

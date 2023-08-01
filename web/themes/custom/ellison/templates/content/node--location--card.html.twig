@@ -71,7 +71,10 @@
  */
 #}
 
+{% set has_image = content.field_map | render ? true : false %}
+
 {% embed "@molecules/card/card.twig" with {
+  has_image: has_image,
   card__extra_classes: ['extra-class'],
   card__heading: node.title[0].value,
   card__body: content|without('field_map'),

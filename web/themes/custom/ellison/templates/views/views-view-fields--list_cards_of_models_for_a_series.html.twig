@@ -32,7 +32,10 @@
 
 {% set has_image_class = fields.field_media_image.content | render ? 'has-image' : 'no-image' %}
 
+{% set has_image = fields.field_media_image.content | render ? true : false %}
+
 {% embed "@molecules/card/card.twig" with {
+  has_image: has_image,
   background_color: 'text__bg-color--dark-blue',
   card__style: 'style-top',
   card__heading: fields.title.content | render | striptags | trim,

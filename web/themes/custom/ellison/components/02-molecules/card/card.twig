@@ -65,7 +65,9 @@
   <div class="card__inner">
 
     {# Image #}
-    <div class="card__image">{% block card__img %}{% endblock %}</div>
+    {% if has_image %}
+      <div class="card__image">{% block card__img %}{% endblock %}</div>
+    {% endif %}
 
     {# Content #}
     <div class="card__content prose max-w-none">

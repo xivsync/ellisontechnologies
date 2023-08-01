@@ -5,7 +5,7 @@
   }
 
   &__items {
-    @apply flex flex-col lg:flex-row gap-4;
+    @apply flex flex-col lg:flex-row gap-8;
 
     &--count-1 .group__item {
       @apply basis-full;
@@ -70,26 +70,30 @@
   &.diagonal-forward-slash-on,
   &.tilt-back-slash-on {
     
-    .group__header {
-      @apply pt-8;
+    .group__inner {
+      
+      > div:first-child {
+        @apply pt-16;
+      }
+
+      > div:last-child {
+        @apply pb-16;
+      }
     }
 
-    .group__footer {
-      @apply pb-8;
-    }
 
   }
 
 }
 
 .diagonal-forward-slash-on {
-  @apply py-16;
+  @apply py-8;
   clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
 }
 
 @media (min-width: 1024px) {
   .diagonal-forward-slash-on {
-    @apply py-16;
+    @apply py-8;
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   }
 }
@@ -101,7 +105,7 @@
 
 @media (min-width: 1024px) {
   .tilt-back-slash-on {
-    @apply pt-16;
+    @apply pt-8;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   }
 }

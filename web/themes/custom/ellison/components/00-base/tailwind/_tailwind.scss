@@ -4651,26 +4651,28 @@ form.webform-submission-build-a-quote-form {
 .group {
   &.diagonal-forward-slash-on,
   &.tilt-back-slash-on {
-    .group__header {
-      padding-top: 2rem;
-    }
-    .group__footer {
-      padding-bottom: 2rem;
+    .group__inner {
+      > div:first-child {
+        padding-top: 4rem;
+      }
+      > div:last-child {
+        padding-bottom: 4rem;
+      }
     }
   }
 }
 
 .diagonal-forward-slash-on {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   -webkit-clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
           clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
 }
 
 @media (min-width: 1024px) {
   .diagonal-forward-slash-on {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
             clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   }
@@ -4684,7 +4686,7 @@ form.webform-submission-build-a-quote-form {
 
 @media (min-width: 1024px) {
   .tilt-back-slash-on {
-    padding-top: 4rem;
+    padding-top: 2rem;
     -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   }
