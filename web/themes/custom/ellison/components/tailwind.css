@@ -6,6 +6,7 @@
 @import './01-atoms/buttons/buttons.css';
 @import './01-atoms/buttons/button-group.css';
 @import './01-atoms/forms/forms.css';
+@import './01-atoms/images/images.css';
 @import './01-atoms/text/headings/page-title.css';
 
 @import './02-molecules/card/card.css';

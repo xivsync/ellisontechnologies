@@ -2504,6 +2504,16 @@ div.webform {
   }
 }
 
+/* handles when an image is not wide enough to fill the container */
+
+.image__item picture {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .page-title {
   h1.heading {
     text-align: center;
@@ -3820,6 +3830,9 @@ div.webform {
   .text {
     flex-direction: column;
   }
+  .has-bg-color {
+    padding: 2rem;
+  }
   .text__align {
     &--middle,
     &--center-in-middle {
@@ -3893,9 +3906,11 @@ div.webform {
   }
 }
 
-/* handles text bg color and full width bg color */
+/* handles text bg color and full width bg color
+ * @todo: refactor to simplify
+*/
 
-.text__bg-color{
+.text__bg-color {
   &--dark-blue {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
@@ -3905,8 +3920,7 @@ div.webform {
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
     }
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       padding-top: 0px;
       padding-bottom: 0px;
     }
@@ -3926,8 +3940,7 @@ div.webform {
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
     }
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       padding-top: 0px;
       padding-bottom: 0px;
     }
@@ -3947,8 +3960,7 @@ div.webform {
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
     }
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       padding-top: 0px;
       padding-bottom: 0px;
     }
@@ -3968,8 +3980,7 @@ div.webform {
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
     }
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       padding-top: 0px;
       padding-bottom: 0px;
     }
@@ -3989,8 +4000,7 @@ div.webform {
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
     }
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       padding-top: 0px;
       padding-bottom: 0px;
     }
@@ -4010,8 +4020,7 @@ div.webform {
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 2rem;
     }
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       padding-top: 2rem;
       padding-bottom: 2rem;
     }

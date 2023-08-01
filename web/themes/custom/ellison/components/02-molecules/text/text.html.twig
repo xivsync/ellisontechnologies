@@ -19,6 +19,7 @@
     'prose',
     'max-w-none',
     background_class,
+    background_class | render | striptags | trim ? 'has-bg-color' : 'no-bg-color',
     align_class,
   ]
 %}

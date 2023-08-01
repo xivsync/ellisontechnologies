@@ -1,0 +1,4 @@
+/* handles when an image is not wide enough to fill the container */
+.image__item picture {
+  @apply flex flex-row flex-nowrap justify-center items-center;
+}

@@ -4,6 +4,10 @@
     @apply flex flex-col;
   }
 
+  .has-bg-color {
+    @apply p-8;
+  }
+
   .text__align {
 
     &--middle,
@@ -47,8 +51,10 @@
   
 }
 
-/* handles text bg color and full width bg color */
-.text__bg-color{
+/* handles text bg color and full width bg color
+ * @todo: refactor to simplify
+*/
+.text__bg-color {
 
   &--dark-blue {
     @apply bg-dark-blue;
@@ -58,8 +64,7 @@
       @apply p-0;
     }
     
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       @apply py-0;
     }
 
@@ -79,8 +84,7 @@
       @apply p-0;
     }
     
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       @apply py-0;
     }
 
@@ -100,8 +104,7 @@
       @apply p-0;
     }
 
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       @apply py-0;
     }
 
@@ -121,8 +124,7 @@
       @apply p-0;
     }
     
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       @apply py-0;
     }
 
@@ -143,8 +145,7 @@
     }
 
     
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       @apply py-0;
     }
 
@@ -165,8 +166,7 @@
     }
 
 
-    &.full-width-on,
-    &.text {
+    &.full-width-on {
       @apply py-8;
     }
 

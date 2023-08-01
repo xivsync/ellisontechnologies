@@ -23,7 +23,7 @@ Drupal.behaviors.responsiveEmbeddedVideos = {
       }
     );
 
-    once('enableResponsiveEmbeddedYouTube', 'iframe[src*="youtu.be"]', context).forEach(
+    once('enableResponsiveEmbeddedYouTube', 'iframe[src*="youtu"]', context).forEach(
       function (element) {
         makeResponsive(element);
       }
