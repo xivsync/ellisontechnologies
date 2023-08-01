@@ -5155,8 +5155,15 @@ form.webform-submission-build-a-quote-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #01172b var(--tw-gradient-from-position);
+  --tw-gradient-from-position:  ;
+  --tw-gradient-to: rgb(1 23 43 / 0)  var(--tw-gradient-from-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #013664 var(--tw-gradient-to-position);
+  --tw-gradient-to-position:  ;
   padding: 0.75rem;
-  background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
+  /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
   &__inner {
     width: 100%;
   }
@@ -5634,14 +5641,24 @@ form.webform-submission-build-a-quote-form {
 }
 
 .front-page {
-  .header {
-    background: transparent;
-    z-index: 999;
+  @media (min-width: 1024px) {
+    .header {
+      z-index: 50;
+    }
+  }
+  @media (min-width: 1024px) {
+    .header {
+      background-image: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    #glide {
+      margin-top: -74px;
+    }
   }
   #glide {
     -webkit-clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
             clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
-    margin-top: -74px;
   }
 }
 

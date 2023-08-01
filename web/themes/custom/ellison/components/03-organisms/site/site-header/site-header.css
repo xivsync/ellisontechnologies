@@ -1,6 +1,6 @@
 .header {
-  @apply p-3 flex flex-col items-center;
-  background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
+  @apply p-3 flex flex-col items-center bg-gradient-to-b from-[#01172b] to-[#013664];
+  /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
 
   &__inner {
     @apply container flex flex-row flex-wrap justify-between gap-4;
