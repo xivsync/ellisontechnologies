@@ -2564,8 +2564,12 @@ div.webform {
       }
     }
     /* handles padding when there is background color */
-    &.has-background-color .card__inner {
-      padding: 1rem;
+    &.has-background-color .card__content {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    &.has-background-color .card__content {
+      padding-bottom: 2rem;
     }
     &__image img {
       margin: 0px !important;

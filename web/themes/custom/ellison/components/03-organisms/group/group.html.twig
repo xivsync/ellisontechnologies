@@ -7,10 +7,15 @@
   header: content.field_header,
   body: content.field_content,
   footer: content.field_footer,
+  id: content.field_unique_id| render | striptags | trim,
   group: content.field_group,
-  background_color: content.field_background_color,
-  background_diagonal: content.field_diagonal_background,
-  background_full_width: content.field_full_width_background,
+  background_color: content.field_background_color | render | striptags | trim,
+  background_diagonal: content.field_diagonal_background | render | striptags | trim,
+  background_full_width: content.field_full_width_background | render | striptags | trim,
+  display_style: display_style_value == 'row' ? 'display-as-rows' : 'display-as-columns',
+  background_tilt: content.field_enable_back_slash_tilt | render | striptags | trim,
+  vertical_align_items: content.field_vertical_align_items | render | striptags | trim,
+  full_width_content: content.field_enable_full_width_content | render | striptags | trim,
   data: content,
  *
  */
@@ -59,16 +64,24 @@
   ]
 %}
 
+{% set wrapping_attributes = create_attribute() %}
+
+{%
+  set wrapping_classes = [
+    add_container_class,
+  ]
+%}
+
 <div{{ attributes.addClass(classes).setAttribute('id', group_id).setAttribute('data-id-label', group_label ) }}>
   {{ title_suffix }}
   <div{{ inner_attributes.addClass(inner_classes) }}>
     {% if header | render %}
-      <div class="group__header{{ add_container_class }}">
+      <div{{ wrapping_attributes.addClass(wrapping_classes) }}>
         {{ header }}
       </div>
     {% endif %}
     {% if body | render %}
-      <div class="group__body{{ add_container_class }}">
+      <div{{ wrapping_attributes.addClass(wrapping_classes) }}>
         {{ body }}
       </div>
     {% endif %}
@@ -78,7 +91,7 @@
       </div>
     {% endif %}
     {% if footer | render %}
-      <div class="group__footer{{ add_container_class }}">
+      <div{{ wrapping_attributes.addClass(wrapping_classes) }}>
         {{ footer }}
       </div>
     {% endif %}

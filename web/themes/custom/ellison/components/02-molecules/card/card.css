@@ -12,8 +12,8 @@
     }
 
     /* handles padding when there is background color */
-    &.has-background-color .card__inner {
-      @apply p-4;
+    &.has-background-color .card__content {
+      @apply pb-8 px-8;
     }
 
     &__image img {
