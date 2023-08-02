@@ -1,7 +1,7 @@
 .card.card-event {
 
   .card__event {
-    @apply w-40 h-40 bg-cyan text-white rounded-full flex flex-col items-center justify-center;
+    @apply w-40 h-40 bg-light-blue text-white rounded-full flex flex-col items-center justify-center;
 
     .date_m {
       @apply uppercase font-bold flex flex-col;

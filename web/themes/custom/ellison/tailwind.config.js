@@ -24,11 +24,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        'light-blue': '#0073e6',
-        'blue': '#0065bd',
-        'medium-blue': '#01559e',
+        'light-blue': '#46B6E3', // also found #14bef0, #46b6e3, #0073e6, #3DB9E3
+        'blue': '#0d60b4', // button, footer newsletter, group background
+        'medium-blue': '#0d60b4', // deprecated in favor of blue
         'dark-blue': '#1e2943',
-        'cyan': '#46B6E3',
+        'darkest-blue': '#011729',
+        'cyan': '#46B6E3', // deprecated in favor of light-blue
       },
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],

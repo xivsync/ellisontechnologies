@@ -173,12 +173,12 @@
 
 .bg-color--cyan {
   &.diagonal-forward-slash-on::before {
-    @apply bg-cyan;
+    @apply bg-light-blue;
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
 
   &.diagonal-forward-slash-on::after {
-    @apply bg-cyan;
+    @apply bg-light-blue;
     background: linear-gradient(to left top, transparent 50%, #46B6E3 52%);
   }
 }

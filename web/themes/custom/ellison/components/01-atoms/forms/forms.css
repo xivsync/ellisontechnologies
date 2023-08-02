@@ -12,7 +12,7 @@ form.webform-submission-form {
 }
 
 .form-item__textfield {
-  @apply focus:ring-4 focus:ring-cyan focus:outline-none;
+  @apply focus:ring-4 focus:ring-light-blue focus:outline-none;
   border: 1px solid clr(accent);
   padding: 0.6em;
   max-width: 100%;
