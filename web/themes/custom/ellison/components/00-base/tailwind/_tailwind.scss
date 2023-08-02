@@ -6207,10 +6207,37 @@ body.path-search #block-ellison-content {
   form.search-form {
     #edit-basic {
       display: flex;
-      flex-direction: row;
+    }
+    #edit-basic {
+      flex-direction: column;
+    }
+    #edit-basic {
       gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+      #edit-basic {
+        flex-direction: row;
+      }
+    }
+    #edit-basic {
+      label {
+        margin-bottom: 2rem;
+      }
       label {
         margin-right: 2rem;
+      }
+      @media (min-width: 1024px) {
+        label {
+          margin-bottom: 0px;
+        }
+      }
+      input {
+        width: 100%;
+      }
+      @media (min-width: 1024px) {
+        input {
+          width: auto;
+        }
       }
       input {
         border-radius: 25px;
@@ -6244,7 +6271,7 @@ body.path-search #block-ellison-content {
       &__title {
         font-weight: 700;
       }
-      &___snippet {
+      &__snippet {
         --tw-text-opacity: 1;
         color: rgb(156 163 175 / var(--tw-text-opacity));
       }
