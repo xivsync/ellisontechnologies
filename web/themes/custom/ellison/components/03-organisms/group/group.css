@@ -126,36 +126,37 @@
 .bg-color--light-blue {
   &.diagonal-forward-slash-on::before {
     @apply bg-light-blue;
-    background: linear-gradient(to right bottom, transparent 50%, #0073e6 52%);
+    background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
 
   &.diagonal-forward-slash-on::after {
     @apply bg-light-blue;
-    background: linear-gradient(to left top, transparent 50%, #0073e6 52%);
+    background: linear-gradient(to left top, transparent 50%, #46B6E3 52%);
   }
 }
 
 .bg-color--blue {
   &.diagonal-forward-slash-on::before{
     @apply bg-blue;
-    background: linear-gradient(to right bottom, transparent 50%, #0065bd 52%);
+    background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
 
   &.diagonal-forward-slash-on::after {
     @apply bg-blue;
-    background: linear-gradient(to left top, transparent 50%, #0065bd 52%);
+    background: linear-gradient(to left top, transparent 50%, #0d60b4 52%);
   }
 }
 
+/* deprecated now blue */
 .bg-color--medium-blue {
   &.diagonal-forward-slash-on::before {
     @apply bg-medium-blue;
-    background: linear-gradient(to right bottom, transparent 50%, #01559e 52%);
+    background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
 
   &.diagonal-forward-slash-on::after {
     @apply bg-medium-blue;
-    background: linear-gradient(to left top, transparent 50%, #01559e 52%);
+    background: linear-gradient(to left top, transparent 50%, #0d60b4 52%);
   }
 }
 
@@ -171,6 +172,7 @@
   }
 }
 
+/* deprecated now light blue */
 .bg-color--cyan {
   &.diagonal-forward-slash-on::before {
     @apply bg-light-blue;
