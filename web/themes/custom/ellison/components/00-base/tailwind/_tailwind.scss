@@ -6124,6 +6124,138 @@ html {
   }
 }
 
+.layout-content {
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(13 96 180 / var(--tw-text-opacity));
+  }
+  a {
+    text-decoration-line: none;
+  }
+  a:hover {
+    text-decoration-line: underline;
+  }
+}
+
+/* handles search results page without template changes */
+
+body.path-search #block-ellison-content {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  body.path-search #block-ellison-content {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  body.path-search #block-ellison-content {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.path-search #block-ellison-content {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body.path-search #block-ellison-content {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  body.path-search #block-ellison-content {
+    max-width: 1536px;
+  }
+}
+
+body.path-search #block-ellison-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.full-width-on body.path-search #block-ellison-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+body.path-search #block-ellison-content {
+  form.search-form {
+    margin-bottom: 2rem;
+  }
+  form.search-form {
+    display: flex;
+  }
+  form.search-form {
+    flex-direction: row;
+  }
+  form.search-form {
+    align-items: center;
+  }
+  form.search-form {
+    justify-content: space-between;
+  }
+  form.search-form {
+    #edit-basic {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      label {
+        margin-right: 2rem;
+      }
+      input {
+        border-radius: 25px;
+      }
+    }
+  }
+  a#edit-help-link {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+  .search-results {
+    display: flex;
+  }
+  .search-results {
+    flex-direction: column;
+  }
+  .search-results {
+    gap: 2rem;
+  }
+  .search-results {
+    .search-result {
+      &__title {
+        gap: 1rem;
+      }
+      &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      &__title {
+        font-weight: 700;
+      }
+      &___snippet {
+        --tw-text-opacity: 1;
+        color: rgb(156 163 175 / var(--tw-text-opacity));
+      }
+      &__info {
+        --tw-text-opacity: 1;
+        color: rgb(229 231 235 / var(--tw-text-opacity));
+      }
+    }
+  }
+}
+
 .views-element-container {
   width: 100%;
 }

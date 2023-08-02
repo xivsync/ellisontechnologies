@@ -34,6 +34,7 @@ html {
   font-size: 18px;
 }
 
+
 @import "tailwindcss/utilities";
 /*@import "./custom-utilities.css";*/
 
@@ -54,7 +55,69 @@ html {
 
 .layout-content {
   @apply flex flex-col gap-8 my-8 p-4 lg:p-0;
+
+  a {
+    @apply text-blue no-underline hover:underline;
+  }
+  
 }
+
+/* handles search results page without template changes */
+body.path-search #block-ellison-content {
+  @apply container flex flex-col gap-8 mx-auto;
+
+  form.search-form {
+    @apply flex flex-row items-center justify-between mb-8;
+  
+    #edit-basic {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+  
+      label {
+        @apply mr-8;
+      }
+  
+      input {
+        border-radius: 25px;
+      }
+  
+    }
+  
+  }
+
+  a#edit-help-link {
+    display: none;
+  }
+
+  h2 {
+    @apply hidden;
+  }
+
+  .search-results {
+    @apply flex flex-col gap-8;
+
+    .search-result {
+
+      &__title {
+        @apply text-2xl font-bold gap-4;
+      }
+
+      &___snippet {
+        @apply text-gray-400;
+      }
+
+      &__info {
+        @apply text-gray-200;
+      }
+
+    }
+
+  }
+
+}
+
+
 
 .views-element-container {
   @apply container mx-auto;
