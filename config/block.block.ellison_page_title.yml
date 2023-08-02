@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - system
   theme:
     - ellison
 _core:
@@ -32,3 +33,7 @@ visibility:
       page: page
       spec: spec
       webform: webform
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/technologies"

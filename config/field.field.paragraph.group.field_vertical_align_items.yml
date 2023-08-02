@@ -1,0 +1,21 @@
+uuid: 41d10d79-f7ee-409f-9442-369b38f97bf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_align_items
+    - paragraphs.paragraphs_type.group
+  module:
+    - options
+id: paragraph.group.field_vertical_align_items
+field_name: field_vertical_align_items
+entity_type: paragraph
+bundle: group
+label: 'Vertical Align Items'
+description: 'Not for use with "Display As Rows". Default is to top align items.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

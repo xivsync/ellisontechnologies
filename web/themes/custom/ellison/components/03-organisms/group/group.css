@@ -24,6 +24,22 @@
     }
 
   }
+
+  &__group {
+
+    &.align-items--center .group__items {
+      @apply lg:items-center;
+    }
+
+    &.align-items--bottom .group__items {
+      @apply lg:items-end;
+    }
+
+    &.align-items--top .group__items {
+      @apply lg:items-start;
+    }
+
+  }
   
   &__item {
     @apply flex flex-col relative;

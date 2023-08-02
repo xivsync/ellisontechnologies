@@ -1,20 +1,25 @@
 .components {
   @apply flex flex-col gap-8;
 
-  .component {
+  .component.remove-mt .group.diagonal-forward-slash-on {
+    margin-top: calc( (63px  + 2rem) * -1);
+  }
+  .component.remove-mb .group.diagonal-forward-slash-on {
+    margin-bottom: calc( (63px  + 2rem) * -1);
+  }
+  .component.remove-my .group.diagonal-forward-slash-on {
+    margin-top: calc( (63px  + 2rem) * -1);
+    margin-bottom: calc( (63px  + 2rem) * -1);
+  }
 
-    &.remove-mt .group {
-      @apply mt-[-6rem];
-    }
-
-    &.remove-mb .group {
-      @apply mb-[-6rem];
-    }
-
-    &.remove-my .group {
-      @apply my-[-6rem];
-    }
-  
+  .component.remove-mt .group.tilt-back-slash-on {
+    @apply mt-[-2rem];
+  }
+  .component.remove-mb .group.tilt-back-slash-on {
+    @apply mb-[-2rem];
+  }
+  .component.remove-my .group.tilt-back-slash-on {
+    @apply my-[-2rem];
   }
 
 }

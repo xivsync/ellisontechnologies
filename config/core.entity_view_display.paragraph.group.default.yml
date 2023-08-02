@@ -8,12 +8,14 @@ dependencies:
     - field.field.paragraph.group.field_diagonal_background
     - field.field.paragraph.group.field_display_style
     - field.field.paragraph.group.field_enable_back_slash_tilt
+    - field.field.paragraph.group.field_enable_full_width_content
     - field.field.paragraph.group.field_footer
     - field.field.paragraph.group.field_full_width_background
     - field.field.paragraph.group.field_group
     - field.field.paragraph.group.field_header
     - field.field.paragraph.group.field_remove_margins
     - field.field.paragraph.group.field_unique_id
+    - field.field.paragraph.group.field_vertical_align_items
     - paragraphs.paragraphs_type.group
   module:
     - entity_reference_revisions
@@ -60,13 +62,23 @@ content:
     region: content
   field_enable_back_slash_tilt:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_enable_full_width_content:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_footer:
     type: text_default
@@ -103,7 +115,7 @@ content:
     region: content
   field_remove_margins:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 5
@@ -115,5 +127,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_vertical_align_items:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
     region: content
 hidden: {  }

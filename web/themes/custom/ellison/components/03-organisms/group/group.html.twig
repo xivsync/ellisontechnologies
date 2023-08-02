@@ -38,13 +38,24 @@
 
 {% set inner_attributes = create_attribute() %}
 
-{% set add_container_class = (background_full_width == 'full-width-on') ? ' container' : 'no-container' %}
+{# if full width background then add container class and handle full width content override #}
+{% set add_container_class = (background_full_width == 'full-width-on' and full_width_content != 'no-container') ? 'container' : 'no-container' %}
 
 {%
   set inner_classes = [
     base_class ~ '__inner',
     display_style | clean_class,
     background_color | clean_class,
+  ]
+%}
+
+{% set group_attributes = create_attribute() %}
+
+{%
+  set group_classes = [
+    base_class ~ '__group',
+    vertical_align_items | clean_class,
+    add_container_class,
   ]
 %}
 
@@ -62,7 +73,7 @@
       </div>
     {% endif %}
     {% if group | render %}
-      <div class="group__group{{ add_container_class }}">
+      <div{{ group_attributes.addClass(group_classes) }}>
         {% block group_content %}{{ group }}{% endblock %}
       </div>
     {% endif %}

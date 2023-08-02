@@ -58,5 +58,7 @@
   background_full_width: content.field_full_width_background | render | striptags | trim,
   display_style: display_style_value == 'row' ? 'display-as-rows' : 'display-as-columns',
   background_tilt: content.field_enable_back_slash_tilt | render | striptags | trim,
+  vertical_align_items: content.field_vertical_align_items | render | striptags | trim,
+  full_width_content: content.field_enable_full_width_content | render | striptags | trim,
   data: content,
 } %}

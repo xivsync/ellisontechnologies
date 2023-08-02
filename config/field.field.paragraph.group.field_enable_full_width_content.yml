@@ -1,0 +1,21 @@
+uuid: 5f168b9b-19b4-4372-893b-34689793e9fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_full_width_content
+    - paragraphs.paragraphs_type.group
+id: paragraph.group.field_enable_full_width_content
+field_name: field_enable_full_width_content
+entity_type: paragraph
+bundle: group
+label: 'Enable full width content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: no-container
+  off_label: container
+field_type: boolean

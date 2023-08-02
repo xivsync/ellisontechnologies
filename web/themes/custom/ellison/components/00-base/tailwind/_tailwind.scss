@@ -2616,6 +2616,11 @@ div.webform {
     }
     @media (min-width: 768px) {
       &.style-horz-left .card__inner {
+        align-items: center;
+      }
+    }
+    @media (min-width: 768px) {
+      &.style-horz-left .card__inner {
         gap: 0.5rem;
       }
     }
@@ -2639,6 +2644,11 @@ div.webform {
     @media (min-width: 768px) {
       &.style-horz-right .card__inner {
         flex-direction: row;
+      }
+    }
+    @media (min-width: 768px) {
+      &.style-horz-right .card__inner {
+        align-items: center;
       }
     }
     @media (min-width: 768px) {
@@ -2765,9 +2775,6 @@ div.webform {
     align-items: flex-end;
   }
   &.text__align--right {
-    gap: 0.5rem;
-  }
-  &.text__align--right {
     .cta-button__inner {
       display: flex;
     }
@@ -2776,9 +2783,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: flex-end;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
   &.text__align--left {
@@ -2791,9 +2795,6 @@ div.webform {
     align-items: flex-start;
   }
   &.text__align--left {
-    gap: 0.5rem;
-  }
-  &.text__align--left {
     .cta-button__inner {
       display: flex;
     }
@@ -2802,9 +2803,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: flex-start;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
   &.text__align--center {
@@ -2816,9 +2814,6 @@ div.webform {
   &.text__align--center {
     align-items: center;
   }
-  &.text__align--center {
-    gap: 0.5rem;
-  }
   &.text__align--center{
     .cta-button__inner {
       display: flex;
@@ -2828,9 +2823,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: center;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
   &.text__align--middle {
@@ -2846,9 +2838,6 @@ div.webform {
     justify-content: center;
   }
   &.text__align--middle {
-    gap: 0.5rem;
-  }
-  &.text__align--middle {
     .cta-button__inner {
       display: flex;
     }
@@ -2857,9 +2846,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: center;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
   &.text__align--bottom-center {
@@ -2875,9 +2861,6 @@ div.webform {
     justify-content: flex-end;
   }
   &.text__align--bottom-center {
-    gap: 0.5rem;
-  }
-  &.text__align--bottom-center {
     .cta-button__inner {
       display: flex;
     }
@@ -2886,9 +2869,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: center;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
   &.text__align--bottom-left {
@@ -2904,9 +2884,6 @@ div.webform {
     justify-content: flex-end;
   }
   &.text__align--bottom-left {
-    gap: 0.5rem;
-  }
-  &.text__align--bottom-left {
     .cta-button__inner {
       display: flex;
     }
@@ -2915,9 +2892,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: flex-start;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
   &.text__align--bottom-right {
@@ -2933,9 +2907,6 @@ div.webform {
     justify-content: flex-end;
   }
   &.text__align--bottom-right {
-    gap: 0.5rem;
-  }
-  &.text__align--bottom-right {
     .cta-button__inner {
       display: flex;
     }
@@ -2944,9 +2915,6 @@ div.webform {
     }
     .cta-button__inner {
       align-items: flex-end;
-    }
-    .cta-button__inner {
-      gap: 0.5rem;
     }
   }
 }
@@ -4470,17 +4438,25 @@ form.webform-submission-build-a-quote-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  .component {
-    &.remove-mt .group {
-      margin-top: -6rem;
-    }
-    &.remove-mb .group {
-      margin-bottom: -6rem;
-    }
-    &.remove-my .group {
-      margin-top: -6rem;
-      margin-bottom: -6rem;
-    }
+  .component.remove-mt .group.diagonal-forward-slash-on {
+    margin-top: calc( (63px  + 2rem) * -1);
+  }
+  .component.remove-mb .group.diagonal-forward-slash-on {
+    margin-bottom: calc( (63px  + 2rem) * -1);
+  }
+  .component.remove-my .group.diagonal-forward-slash-on {
+    margin-top: calc( (63px  + 2rem) * -1);
+    margin-bottom: calc( (63px  + 2rem) * -1);
+  }
+  .component.remove-mt .group.tilt-back-slash-on {
+    margin-top: -2rem;
+  }
+  .component.remove-mb .group.tilt-back-slash-on {
+    margin-bottom: -2rem;
+  }
+  .component.remove-my .group.tilt-back-slash-on {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
   }
 }
 
@@ -4552,6 +4528,23 @@ form.webform-submission-build-a-quote-form {
     }
     &--count-4 .group__item {
       flex-basis: 25%;
+    }
+  }
+  &__group {
+    @media (min-width: 1024px) {
+      &.align-items--center .group__items {
+        align-items: center;
+      }
+    }
+    @media (min-width: 1024px) {
+      &.align-items--bottom .group__items {
+        align-items: flex-end;
+      }
+    }
+    @media (min-width: 1024px) {
+      &.align-items--top .group__items {
+        align-items: flex-start;
+      }
     }
   }
   &__item {
