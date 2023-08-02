@@ -105,11 +105,12 @@
   @apply relative;
   
   &__heading {
-    @apply absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center;
+    @apply absolute top-[50%] left-[50%] w-full h-full flex flex-col justify-center;
+    transform: translate(-50%, -50%);
   }
 
   h1.heading {
-    @apply text-white text-[2.5rem] font-bold text-center uppercase;
+    @apply text-white text-[2.5rem] font-bold uppercase drop-shadow-md shadow-black;
   }
 
 }

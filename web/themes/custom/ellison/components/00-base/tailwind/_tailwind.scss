@@ -5444,10 +5444,10 @@ form.webform-submission-build-a-quote-form {
     position: absolute;
   }
   &__heading {
-    top: 0px;
+    top: 50%;
   }
   &__heading {
-    left: 0px;
+    left: 50%;
   }
   &__heading {
     display: flex;
@@ -5462,13 +5462,10 @@ form.webform-submission-build-a-quote-form {
     flex-direction: column;
   }
   &__heading {
-    align-items: center;
-  }
-  &__heading {
     justify-content: center;
   }
-  h1.heading {
-    text-align: center;
+  &__heading {
+    transform: translate(-50%, -50%);
   }
   h1.heading {
     font-size: 2.5rem;
@@ -5482,6 +5479,14 @@ form.webform-submission-build-a-quote-form {
   h1.heading {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  h1.heading {
+    --tw-shadow-color: #000;
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  h1.heading {
+    --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }
 
