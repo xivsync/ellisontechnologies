@@ -8,6 +8,10 @@
 
   &__navigating {
     @apply flex flex-row text-white gap-8;
+
+    .block {
+      @apply basis-1/5;
+    }
   }
 
   &__branding {

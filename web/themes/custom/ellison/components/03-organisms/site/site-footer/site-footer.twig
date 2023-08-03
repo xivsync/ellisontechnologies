@@ -6,9 +6,8 @@
   <div {{ bem('inner', [], footer__base_class) }}>
 
     <div {{ bem('navigating', [], footer__base_class) }}>
-      {% block footer__menu %}
-        {% include "@molecules/menus/inline/inline-menu.twig" %}
-      {% endblock %}
+      {# The content for this footer region managed by blocks #}
+      {% block footer__menu %}{% endblock %}
     </div>
 
     <div {{ bem('branding', [], footer__base_class) }}>
@@ -24,7 +23,8 @@
         </ul>
       </div>
       <div {{ bem('local', [], footer__base_class) }}>
-          {% block footer__local %}{% endblock %}
+        {# See block in region--footer.html.twig which adds the session region variable based on users selected region/location #}
+        {% block footer__local %}{% endblock %}
       </div>
     </div>
 
