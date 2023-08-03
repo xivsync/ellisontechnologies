@@ -13,13 +13,13 @@
   }
 
   .component.remove-mt .group.tilt-back-slash-on {
-    @apply mt-[-2rem];
+    @apply mt-[-4rem] lg:mb-[-2rem];
   }
   .component.remove-mb .group.tilt-back-slash-on {
-    @apply mb-[-2rem];
+    @apply mb-[-4rem] lg:mb-[-2rem];
   }
   .component.remove-my .group.tilt-back-slash-on {
-    @apply my-[-2rem];
+    @apply my-[-4rem] lg:mb-[-2rem];
   }
 
 }

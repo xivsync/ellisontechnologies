@@ -11,12 +11,8 @@
   }
 
   &__branding {
-    @apply flex flex-row gap-8;
+    @apply flex flex-col lg:flex-row gap-8;
     align-items: center;
-
-    .footer__social ul {
-      @apply border-white border-l pl-8;
-    }
   }
 
   &__logo {
@@ -32,8 +28,7 @@
     @apply basis-auto flex flex-col;
 
     ul {
-      @apply flex flex-row gap-4;
-      align-items: center;
+      @apply flex flex-row gap-4 lg:border-white lg:border-l lg:pl-8 justify-center lg:justify-start items-center ;
 
       a svg {
         @apply text-white w-6 h-6;
@@ -70,15 +65,15 @@
     .footer__tos {
 
       ul {
-        @apply flex flex-row text-white gap-2;
+        @apply flex flex-col lg:flex-row text-white gap-2;
       }
 
       li {
-        @apply border-white border-l pl-2 text-center;
+        @apply lg:border-white lg:border-l lg:pl-2 text-center;
       }
 
       li:first-child {
-        @apply  border-none;
+        @apply  lg:border-none;
       }
 
       li a:hover {
@@ -99,24 +94,18 @@
   }
 
   &__contacting {
-    @apply flex flex-col lg:flex-row gap-8 lg:gap-0;
-  }
+    @apply flex flex-col lg:flex-row gap-4 font-extrabold text-lg text-light-blue uppercase justify-between lg:justify-start items-center lg:items-start;
 
-  &__information {
-
-    .footer__inner {
-      @apply flex flex-col sm:flex-row gap-4 font-extrabold text-lg text-light-blue uppercase justify-between lg:justify-start;
+    .footer__label {
+      @apply text-center;
     }
-
     .footer__cta {
-      @apply flex flex-row gap-4;
+      @apply flex flex-row gap-4 justify-center lg:justify-start items-center;
 
       .cta-icon {
-
         svg {
           @apply text-white w-6 h-6;
         }
-
       }
 
       .cta-text a {

@@ -5,7 +5,7 @@
   }
 
   .cta-button__button a {
-    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2 px-4 no-underline !important;
+    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2 px-4 no-underline uppercase;
   }
 
 
