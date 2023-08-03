@@ -4901,16 +4901,16 @@ form.webform-submission-build-a-quote-form {
       h2 {
         text-transform: uppercase;
       }
-      ul {
+      ul.menu {
         display: flex;
       }
-      ul {
+      ul.menu {
         flex-direction: column;
       }
-      ul {
+      ul.menu {
         gap: 0.25rem;
       }
-      ul {
+      ul.menu {
         a:hover {
           text-decoration-line: underline;
         }
