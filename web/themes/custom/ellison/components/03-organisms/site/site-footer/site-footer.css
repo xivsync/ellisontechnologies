@@ -7,7 +7,7 @@
   }
 
   &__navigating {
-    @apply flex flex-row text-white;
+    @apply flex flex-col lg:flex-row text-white;
 
     nav,
     div {
