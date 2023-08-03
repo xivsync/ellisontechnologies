@@ -4873,11 +4873,49 @@ form.webform-submission-build-a-quote-form {
     flex-direction: row;
   }
   &__navigating {
-    gap: 2rem;
-  }
-  &__navigating {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  &__navigating {
+    nav,
+    div {
+      display: flex !important;
+    }
+    nav,
+    div {
+      flex-basis: 20% !important;
+    }
+    nav,
+    div {
+      flex-direction: column !important;
+    }
+    nav,
+    div {
+      gap: 0.5rem !important;
+    }
+    nav,
+    div {
+      h2 {
+        font-weight: 700;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+      ul {
+        display: flex;
+      }
+      ul {
+        flex-direction: column;
+      }
+      ul {
+        gap: 0.25rem;
+      }
+      ul {
+        a:hover {
+          text-decoration-line: underline;
+        }
+      }
+    }
   }
   &__branding {
     display: flex;

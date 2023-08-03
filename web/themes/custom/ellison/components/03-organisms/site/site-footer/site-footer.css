@@ -7,10 +7,23 @@
   }
 
   &__navigating {
-    @apply flex flex-row text-white gap-8;
+    @apply flex flex-row text-white;
 
-    .block {
-      @apply basis-1/5;
+    nav,
+    div {
+      @apply basis-1/5 flex flex-col gap-2 !important;
+
+      h2 {
+        @apply font-bold uppercase;
+      }
+
+      ul {
+        @apply flex flex-col gap-1;
+
+        a {
+          @apply hover:underline;
+        }
+      }
     }
   }
 
