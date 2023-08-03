@@ -34,6 +34,7 @@
 
   </div>
 </header>
+
 {% if jumbo_image_path %}
   <div class="jumbotron">
 
@@ -60,6 +61,6 @@
   </div>
 {% endif %}
 
-{% if drupal_view_result('slides', 'block_1') is not empty %}
+{% if drupal_view_result('slides', 'block_1') is not empty and is_front %}
   {{ drupal_view('slides', 'block_1') }}
 {% endif %}
