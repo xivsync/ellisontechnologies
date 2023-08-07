@@ -117,6 +117,8 @@ function ellison_preprocess_region(&$variables)
 
       }
 
+      $variables['enable_slide'] = $node->id()==='3' ? true : false;
+
     }
 
   }
