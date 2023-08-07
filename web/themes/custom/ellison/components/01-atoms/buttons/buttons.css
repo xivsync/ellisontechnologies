@@ -1,3 +1,19 @@
+/* handles transparent button bug in Clario admin theme */
+.path-admin {
+
+  button.form-submit,
+  button.dropbutton__toggle,
+  input.form-submit,
+  .paragraphs-actions > .button.form-submit {
+    @apply bg-gray-200 text-black;
+  }
+
+  button.button--primary {
+    @apply text-white bg-blue;
+  }
+
+}
+
 .main-content {
 
   .button {

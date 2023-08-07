@@ -37,4 +37,9 @@
     display:none;
   }
 
+  /* adds padding to video slides to expose controls */
+  .field-media-oembed-video {
+    padding:6rem
+  }
+
 }

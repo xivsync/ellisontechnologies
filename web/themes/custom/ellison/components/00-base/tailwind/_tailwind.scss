@@ -2359,6 +2359,33 @@ video {
   --tw-prose-invert-links: #f43f5e;
 }
 
+/* handles transparent button bug in Clario admin theme */
+
+.path-admin {
+  button.form-submit,
+  button.dropbutton__toggle,
+  input.form-submit,
+  .paragraphs-actions > .button.form-submit {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  }
+  button.form-submit,
+  button.dropbutton__toggle,
+  input.form-submit,
+  .paragraphs-actions > .button.form-submit {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+  button.button--primary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(13 96 180 / var(--tw-bg-opacity));
+  }
+  button.button--primary {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
 .main-content {
   .button {
     border-radius: 9999px;
@@ -5858,6 +5885,10 @@ form.webform-submission-build-a-quote-form {
   }
   .video__name {
     display:none;
+  }
+  /* adds padding to video slides to expose controls */
+  .field-media-oembed-video {
+    padding:6rem
   }
 }
 
