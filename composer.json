@@ -57,7 +57,8 @@
         "drupal/taxonomy_manager": "^2.0",
         "drupal/tamper": "^1.0@alpha",
         "drupal/feeds": "^3.0@beta",
-        "drupal/feeds_tamper": "^2.0@beta"
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/xmlsitemap": "^1.5"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -116,7 +117,7 @@
         "preferred-install": "dist",
         "sort-packages": false,
         "platform": {
-            "php": "8.2.0"
+            "php": "8.1.0"
         },
         "allow-plugins": {
             "composer/installers": true,
