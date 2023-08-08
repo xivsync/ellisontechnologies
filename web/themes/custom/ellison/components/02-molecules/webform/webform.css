@@ -143,6 +143,28 @@ form.webform-submission-form {
 
 }
 
-form.webform-submission-build-a-quote-form {
+form.webform-submission-build-a-quote-form,
+form.webform-submission-newsletter-form-add-form {
   @apply flex flex-row flex-wrap justify-start;
+}
+
+#group__newsletter {
+
+  .group__inner {
+    @apply py-16 gap-0;
+  }
+
+  h2 {
+    @apply flex flex-row items-center justify-center gap-8;
+
+    a {
+      @apply text-blue bg-white border-none text-base hover:bg-light-blue hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-2 px-4 no-underline uppercase !important;
+    }
+  
+  }
+
+  form.webform-submission-newsletter-form-add-form {
+    @apply flex flex-row flex-wrap justify-start pt-16 hidden;
+  }
+
 }

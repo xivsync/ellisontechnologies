@@ -28,7 +28,7 @@ $databases['default']['default'] = array(
   'prefix' => "",
 );
 
-$settings['hash_salt'] = 'ezLrguMDdWddQEFVbudZohBLRScCCDQqHHbJHndoBpRaoGCVickmpmMVdLnozKif';
+$settings['hash_salt'] = 'XCzVdiuFDIrXEpvMscGMQnFMAZtYQtMXycnCkYAmHXcQZwJZHpScVOcPpTsYUZcP';
 
 // This will prevent Drupal from setting read-only permissions on sites/default.
 $settings['skip_permissions_hardening'] = TRUE;

@@ -2,6 +2,17 @@
 
 {% set footer__base_class = 'footer' %}
 
+{% set has_newsletter = drupal_entity('paragraph', 1043) | render ? true : false %}
+
+{# Newsletter Paragraph Library Entity = 1043 #}
+{% if has_newsletter %}
+  <div class="components">
+    <div class="component remove-mb">
+      {{ drupal_entity('paragraph', 1043) }}
+    </div>
+  </div>
+{% endif %}
+
 <footer {{ bem(footer__base_class) }}>
   <div {{ bem('inner', [], footer__base_class) }}>
 
