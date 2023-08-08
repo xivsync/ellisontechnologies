@@ -1,0 +1,34 @@
+langcode: en
+id: newsletter_sign_up
+label: 'Newsletter Sign Up'
+weight: 0
+type: salesforce_mapping
+key: null
+always_upsert: null
+async: false
+push_standalone: false
+pull_standalone: false
+pull_trigger_date: LastModifiedDate
+pull_frequency: 0
+push_frequency: 0
+push_limit: 0
+push_retries: 3
+pull_where_clause: ''
+sync_triggers:
+  push_create: true
+  push_update: false
+  push_delete: false
+  pull_create: false
+  pull_update: false
+  pull_delete: false
+salesforce_object_type: Lead
+drupal_entity_type: webform_submission
+drupal_bundle: newsletter_form
+field_mappings: {  }
+status: true
+dependencies:
+  config:
+    - webform.webform.newsletter_form
+  module:
+    - salesforce_push
+uuid: 221cf71f-a26c-4b2b-9784-7be90b35f2cb

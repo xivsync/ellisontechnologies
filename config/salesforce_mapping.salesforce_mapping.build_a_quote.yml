@@ -1,6 +1,6 @@
 langcode: en
-id: contact_us_example
-label: 'Contact Us Example'
+id: build_a_quote
+label: 'Build A Quote'
 weight: 0
 type: salesforce_mapping
 key: ''
@@ -23,55 +23,55 @@ sync_triggers:
   pull_delete: false
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
-drupal_bundle: contact
+drupal_bundle: build_a_quote
 field_mappings:
   -
     drupal_field_type: WebformElements
-    drupal_field_value: email
+    drupal_field_value: firstname
     direction: drupal_sf
-    salesforce_field: Email
+    salesforce_field: FirstName
     id: 0
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: name
+    drupal_field_value: lastname
     direction: drupal_sf
     salesforce_field: LastName
     id: 1
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: message
+    drupal_field_value: company
     direction: drupal_sf
-    salesforce_field: Description
+    salesforce_field: Company
     id: 2
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: company
+    drupal_field_value: email
     direction: drupal_sf
-    salesforce_field: Company
+    salesforce_field: Email
     id: 3
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: first_name
-    direction: drupal_sf
-    salesforce_field: FirstName
-    id: 4
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: phone
     direction: drupal_sf
     salesforce_field: Phone
+    id: 4
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: postalcode
+    direction: drupal_sf
+    salesforce_field: PostalCode
     id: 5
     description: ''
 status: true
 dependencies:
   config:
-    - webform.webform.contact
+    - webform.webform.build_a_quote
   module:
     - salesforce_push
     - salesforce_webform
-uuid: b7a10f22-d1a9-402b-aea8-b002af3ae925
+uuid: 6dfc9e1e-1a93-45f8-8e7c-47df7e8ae531

@@ -15,7 +15,7 @@ _core:
 id: slides
 label: Slides
 module: views
-description: 'Find and manage media.'
+description: 'Slides for front page.'
 tag: ''
 base_table: media_field_data
 base_field: mid

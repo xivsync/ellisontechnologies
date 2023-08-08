@@ -16,8 +16,8 @@ uid: null
 template: false
 archive: false
 id: contact
-title: Contact
-description: '<p>Basic email contact webform.</p>'
+title: 'Machine Sales Inquiries aka Contact Us'
+description: '<p>Basic email contact webform for Machine Sales Inquiries (aka Contact US). <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
 categories: {  }
 elements: |-
   company:
@@ -186,7 +186,7 @@ settings:
   ajax_speed: 1000
   page: true
   page_submit_path: ''
-  page_confirm_path: /about/news
+  page_confirm_path: ''
   page_theme_name: ellison
   form_title: source_entity_webform
   form_submit_once: false
@@ -280,8 +280,8 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
-  confirmation_url: /about/news
+  confirmation_type: url_message
+  confirmation_url: /thank-you
   confirmation_title: ''
   confirmation_message: '<h2>Thank you.</h2><p>Your message has been sent.</p>'
   confirmation_attributes: {  }

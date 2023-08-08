@@ -1,55 +1,167 @@
-uuid: 954faa58-58f1-49dc-91ef-d78023ce2255
+uuid: bad56659-905d-4f8e-a882-d108559778f0
 langcode: en
 status: open
 dependencies:
   module:
     - ellison_webform
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
 weight: 0
 open: null
 close: null
 uid: 1
 template: false
 archive: false
-id: select_your_location
-title: 'Select Your Location'
-description: "<p>Webform for user to select region. This selection is added to the user's session which is used to filter content in views and nodes.</p>"
+id: service_and_maintenance
+title: 'Request Service'
+description: '<p>Basic email contact webform for Machine Sales Inquiries</p>'
 categories: {  }
 elements: |-
-  region:
-    '#type': webform_entity_radios
-    '#title': Region
+  service_type:
+    '#type': select
+    '#title': 'Service Type'
+    '#options':
+      Machine: Machine
+      Robotics: Robotics
+  service_machine_status:
+    '#type': select
+    '#title': 'Current Status'
+    '#options':
+      operational: Running
+      down: Down
+  select_location:
+    '#type': select
+    '#title': 'Select Location'
+    '#options':
+      north: 'North TX /  North LA'
+      south: 'South TX / South LA'
+      none: 'Not sure'
+  firstname:
+    '#type': textfield
+    '#title': 'First Name'
     '#required': true
-    '#required_error': 'A location selection is required.'
-    '#target_type': taxonomy_term
-    '#selection_handler': 'default:taxonomy_term'
-    '#selection_settings':
-      target_bundles:
-        regions: regions
-      sort:
-        field: name
-        direction: ASC
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  lastname:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  email:
+    '#title': 'Your Email'
+    '#type': email
+    '#required': true
+    '#default_value': '[current-user:mail]'
+  phone:
+    '#type': tel
+    '#title': Phone
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  company:
+    '#type': textfield
+    '#title': Company
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  title:
+    '#type': textfield
+    '#title': Title/Position
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  street:
+    '#type': textfield
+    '#title': Address
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  city:
+    '#type': textfield
+    '#title': City
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  state:
+    '#type': textfield
+    '#title': State
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  postalcode:
+    '#type': textfield
+    '#title': 'Zip Code'
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  service_customer_po:
+    '#type': textfield
+    '#title': 'Customer PO'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  service_builder:
+    '#type': textfield
+    '#title': Builder
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  service_machine_model:
+    '#type': textfield
+    '#title': Model
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    '#required': true
+  service_serial_number:
+    '#type': textfield
+    '#title': 'Serial Number'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  service_control_type:
+    '#type': textfield
+    '#title': 'Control Type'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  service_request:
+    '#type': textarea
+    '#title': 'Describe the issue with the machine'
+    '#required': true
+  opt_in:
+    '#type': checkboxes
+    '#title': Opt-in
+    '#multiple': 2
+    '#options':
+      opt-in: 'Yes. -- I would like to receive occasional emails.'
+      opt-out: 'No. -- I do not want to receive occasional emails.'
+    '#options_display': two_columns
+  region_name:
+    '#type': hidden
+    '#title': region
+  region__c:
+    '#type': hidden
+    '#title': region__c
+  webform_name__c:
+    '#type': hidden
+    '#title': webform_name__c
+    '#default_value': 'Service and Maintenance'
+  webform_campaign_id__c:
+    '#type': hidden
+    '#title': webform_campaign_id__c
+    '#default_value': 70160000000Bure
+  leadsource:
+    '#type': hidden
+    '#title': leadsource
+    '#default_value': Website
+  webform_email_sign_up__c:
+    '#type': hidden
+    '#title': webformsid__c
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Select Location'
+    '#submit__label': 'Send message'
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
-  ajax_progress_type: ''
-  ajax_effect: ''
-  ajax_speed: null
+  ajax_progress_type: throbber
+  ajax_effect: fade
+  ajax_speed: 1000
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_theme_name: ''
+  page_theme_name: ellison
   form_title: source_entity_webform
-  form_submit_once: true
+  form_submit_once: false
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: false
+  form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false
@@ -136,10 +248,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: message
-  confirmation_url: '[current-page:url]'
-  confirmation_title: 'Location is set successfully.'
-  confirmation_message: '<p>Thank you for your selection. You can safely close this dialog.</p>'
+  confirmation_type: url_message
+  confirmation_url: /thank-you
+  confirmation_title: ''
+  confirmation_message: '<h2>Thank you.</h2><p>Your message has been sent.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -159,8 +271,8 @@ settings:
   entity_limit_total_interval: null
   entity_limit_user: null
   entity_limit_user_interval: null
-  purge: completed
-  purge_days: 7
+  purge: none
+  purge_days: null
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
@@ -216,10 +328,10 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  set_region_for_session:
-    id: region_handler
-    handler_id: set_region_for_session
-    label: 'Set Region for Session'
+  push_form_data_to_call_tracking_metrics:
+    id: call_tracking_metrics_handler
+    handler_id: push_form_data_to_call_tracking_metrics
+    label: 'Push form data to Call Tracking Metrics'
     notes: ''
     status: true
     conditions: {  }

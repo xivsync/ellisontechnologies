@@ -1,0 +1,25 @@
+uuid: d4064b2c-5261-45db-a1ea-ff1147edf09d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.turning-centers
+  module:
+    - system
+  theme:
+    - ellison
+id: ellison_turningcenters
+theme: ellison
+region: footer
+weight: -7
+provider: null
+plugin: 'system_menu_block:turning-centers'
+settings:
+  id: 'system_menu_block:turning-centers'
+  label: 'Turning Centers'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

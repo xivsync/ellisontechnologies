@@ -1,15 +1,16 @@
-uuid: 9b130206-5e46-4889-a73b-2d70ac6fac0b
+uuid: f1c546f6-db3c-4121-b528-d3729a3c3086
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.remote_video.field_media_oembed_video
-    - field.field.media.remote_video.field_tag
-    - media.type.remote_video
+    - core.base_field_override.node.model.title
+    - field.field.node.model.field_carousel_content
+    - field.field.node.model.field_enable_build_a_quote
+    - node.type.model
   module:
     - feeds_log
     - feeds_tamper
-    - media
+    - node
 third_party_settings:
   feeds_log:
     status: true
@@ -29,16 +30,18 @@ third_party_settings:
     source: true
   feeds_tamper:
     tampers:
-      575fdc50-fc27-4f16-a1e2-6e38252e5f99:
-        separator: ','
-        limit: null
-        uuid: 575fdc50-fc27-4f16-a1e2-6e38252e5f99
-        plugin: explode
-        source: field_tag
+      5dd42eb6-4318-41aa-be65-c2755d3167a7:
+        true_value: 'True'
+        false_value: 'False'
+        match_case: false
+        no_match_value: false
+        uuid: 5dd42eb6-4318-41aa-be65-c2755d3167a7
+        plugin: convert_boolean
+        source: field_build_a_quote
         weight: 0
-        label: Explode
-label: 'Remote Video'
-id: remote_video
+        label: 'Convert to Boolean'
+label: 'Model v2'
+id: model_v2
 description: ''
 help: ''
 import_period: -1
@@ -51,10 +54,10 @@ parser_configuration:
   delimiter: ','
   no_headers: false
   line_limit: 100
-processor: 'entity:media'
+processor: 'entity:node'
 processor_configuration:
   values:
-    bundle: remote_video
+    type: model
   langcode: en
   insert_new: 1
   update_existing: 1
@@ -66,54 +69,40 @@ processor_configuration:
   owner_feed_author: false
   owner_id: 0
 custom_sources:
-  field_media_oembed_video:
-    value: field_media_oembed_video
-    label: field_media_oembed_video
-    machine_name: field_media_oembed_video
-    type: csv
   title:
     value: title
     label: title
     machine_name: title
     type: csv
-  tags:
-    value: tags
-    label: tags
-    machine_name: tags
+  field_build_a_quote:
+    value: field_build_a_quote
+    label: field_build_a_quote
+    machine_name: field_build_a_quote
     type: csv
-  field_tag:
-    value: field_tag
-    label: field_tag
-    machine_name: field_tag
-    type: csv
-  name:
-    value: name
-    label: name
-    machine_name: name
+  field_carousel:
+    value: field_carousel
+    label: field_carousel
+    machine_name: field_carousel
     type: csv
 mappings:
   -
-    target: field_media_oembed_video
+    target: title
     map:
-      value: field_media_oembed_video
+      value: title
     settings:
       language: null
     unique:
       value: 1
   -
-    target: name
+    target: field_enable_build_a_quote
     map:
-      value: name
+      value: field_build_a_quote
     settings:
       language: null
-    unique: {  }
   -
-    target: field_tag
+    target: field_carousel_content
     map:
-      target_id: field_tag
+      value: field_carousel
     settings:
-      language: ''
-      reference_by: name
-      feeds_item: guid
-      autocreate: 1
-      autocreate_bundle: tags
+      language: null
+      format: plain_text

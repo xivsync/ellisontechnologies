@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_components
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - node.type.article
@@ -35,10 +36,13 @@ content:
     settings:
       responsive_image_style: narrow
       image_link: content
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   comment: true
+  field_components: true
   field_tags: true
   links: true

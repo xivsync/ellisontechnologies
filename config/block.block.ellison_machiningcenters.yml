@@ -1,0 +1,25 @@
+uuid: 7ff995ac-b302-4ba6-854a-ee0f1f92ac48
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.machining-centers
+  module:
+    - system
+  theme:
+    - ellison
+id: ellison_machiningcenters
+theme: ellison
+region: footer
+weight: -8
+provider: null
+plugin: 'system_menu_block:machining-centers'
+settings:
+  id: 'system_menu_block:machining-centers'
+  label: 'Machining Centers'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

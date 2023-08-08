@@ -1,0 +1,161 @@
+langcode: en
+id: contact_us
+label: 'Machine Sales Inquiries a.k.a. Contact Us'
+weight: 0
+type: salesforce_mapping
+key: ''
+always_upsert: false
+async: false
+push_standalone: false
+pull_standalone: false
+pull_trigger_date: LastModifiedDate
+pull_frequency: 0
+push_frequency: 0
+push_limit: 0
+push_retries: 3
+pull_where_clause: ''
+sync_triggers:
+  push_create: true
+  push_update: false
+  push_delete: false
+  pull_create: false
+  pull_update: false
+  pull_delete: false
+salesforce_object_type: Lead
+drupal_entity_type: webform_submission
+drupal_bundle: contact
+field_mappings:
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: company
+    direction: drupal_sf
+    salesforce_field: Company
+    id: 0
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: firstname
+    direction: drupal_sf
+    salesforce_field: FirstName
+    id: 1
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: lastname
+    direction: drupal_sf
+    salesforce_field: LastName
+    id: 2
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: email
+    direction: drupal_sf
+    salesforce_field: Email
+    id: 3
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: phone
+    direction: drupal_sf
+    salesforce_field: Phone
+    id: 4
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: city
+    direction: drupal_sf
+    salesforce_field: City
+    id: 5
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: state
+    direction: drupal_sf
+    salesforce_field: State
+    id: 6
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: postalcode
+    direction: drupal_sf
+    salesforce_field: PostalCode
+    id: 7
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: how_did_you_hear__c
+    direction: drupal_sf
+    salesforce_field: How_did_you_hear__c
+    id: 8
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leads_interest__c
+    direction: drupal_sf
+    salesforce_field: Leads_Interest__c
+    id: 9
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_best_time__c
+    direction: drupal_sf
+    salesforce_field: Webform_Best_Time__c
+    id: 10
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: industry
+    direction: drupal_sf
+    salesforce_field: Industry
+    id: 11
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: region__c
+    direction: drupal_sf
+    salesforce_field: Region__c
+    id: 12
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: title
+    direction: drupal_sf
+    salesforce_field: Title
+    id: 13
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: street
+    direction: drupal_sf
+    salesforce_field: Street
+    id: 14
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_campaign_id__c
+    direction: drupal_sf
+    salesforce_field: utm_campaign__c
+    id: 15
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: description
+    direction: drupal_sf
+    salesforce_field: Description
+    id: 16
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_name__c
+    direction: drupal_sf
+    salesforce_field: Webform_Name__c
+    id: 17
+    description: ''
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - salesforce_push
+    - salesforce_webform
+uuid: fb3e028f-c469-4ecd-92e0-05b8a5c97a81

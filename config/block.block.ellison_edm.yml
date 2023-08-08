@@ -1,0 +1,25 @@
+uuid: e3652c71-9c05-40cb-b17d-7b3a50e7d570
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.edm
+  module:
+    - system
+  theme:
+    - ellison
+id: ellison_edm
+theme: ellison
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:edm'
+settings:
+  id: 'system_menu_block:edm'
+  label: EDM
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

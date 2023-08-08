@@ -1,0 +1,8 @@
+uuid: e3c75330-8453-496f-b504-dc906405fcd9
+langcode: en
+status: true
+dependencies: {  }
+id: machining-centers
+label: 'Machining Centers'
+description: ''
+locked: false

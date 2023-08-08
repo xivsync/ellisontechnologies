@@ -30,6 +30,7 @@ third_party_settings:
         - field_display_style
         - field_background_color
         - field_full_width_background
+        - field_enable_full_width_content
         - field_diagonal_background
         - field_enable_back_slash_tilt
         - field_remove_margins
@@ -82,7 +83,7 @@ content:
     third_party_settings: {  }
   field_diagonal_background:
     type: boolean_checkbox
-    weight: 16
+    weight: 17
     region: content
     settings:
       display_label: true
@@ -96,14 +97,14 @@ content:
     third_party_settings: {  }
   field_enable_back_slash_tilt:
     type: boolean_checkbox
-    weight: 17
+    weight: 18
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_enable_full_width_content:
     type: boolean_checkbox
-    weight: 19
+    weight: 16
     region: content
     settings:
       display_label: true
@@ -152,7 +153,7 @@ content:
     third_party_settings: {  }
   field_remove_margins:
     type: options_select
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }

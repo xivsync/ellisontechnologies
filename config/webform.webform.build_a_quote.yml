@@ -1,7 +1,9 @@
 uuid: a3648d0a-b692-4e33-aaa7-84f5f0728ebe
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - ellison_webform
 weight: 0
 open: null
 close: null
@@ -10,13 +12,13 @@ template: false
 archive: false
 id: build_a_quote
 title: 'Build A Quote'
-description: ''
+description: '<p>Collect contact information and sends email with link to the build a quote page. <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
 categories: {  }
 elements: |-
-  first_name:
+  firstname:
     '#type': textfield
     '#title': 'First Name'
-  last_name:
+  lastname:
     '#type': textfield
     '#title': 'Last Name'
   company:
@@ -28,7 +30,7 @@ elements: |-
   phone:
     '#type': tel
     '#title': Phone
-  postal_code:
+  postalcode:
     '#type': textfield
     '#title': 'Zip Code'
   actions:
@@ -142,10 +144,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url
+  confirmation_type: url_message
   confirmation_url: /thank-you
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: 'Thank you!'
+  confirmation_message: '<p>Your message has been sent.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -221,5 +223,14 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  push_form_data_to_call_tracking_metrics:
+    id: call_tracking_metrics_handler
+    handler_id: push_form_data_to_call_tracking_metrics
+    label: 'Push form data to Call Tracking Metrics'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
 variants: {  }

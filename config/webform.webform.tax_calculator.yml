@@ -10,8 +10,8 @@ template: false
 archive: false
 id: tax_calculator
 title: 'Tax Calculator'
-description: ''
-category: ''
+description: '<p>Tax calculator form. Note: has dependency on webform.js</p>'
+categories: {  }
 elements: |-
   estimated_machine_price:
     '#type': number

@@ -1,55 +1,130 @@
-uuid: 954faa58-58f1-49dc-91ef-d78023ce2255
+uuid: b595b6cb-075b-4e78-915c-9cf9903b85ef
 langcode: en
 status: open
 dependencies:
   module:
     - ellison_webform
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
 weight: 0
 open: null
 close: null
 uid: 1
 template: false
 archive: false
-id: select_your_location
-title: 'Select Your Location'
-description: "<p>Webform for user to select region. This selection is added to the user's session which is used to filter content in views and nodes.</p>"
+id: contact_mini
+title: 'Simple Contact Form'
+description: '<p>Simple email contact webform. . <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
 categories: {  }
 elements: |-
-  region:
-    '#type': webform_entity_radios
-    '#title': Region
+  company:
+    '#type': textfield
+    '#title': Company
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  firstname:
+    '#type': textfield
+    '#title': 'First Name'
     '#required': true
-    '#required_error': 'A location selection is required.'
-    '#target_type': taxonomy_term
-    '#selection_handler': 'default:taxonomy_term'
-    '#selection_settings':
-      target_bundles:
-        regions: regions
-      sort:
-        field: name
-        direction: ASC
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  lastname:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  title:
+    '#type': textfield
+    '#title': Title/Position
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  email:
+    '#title': 'Your Email'
+    '#type': email
+    '#required': true
+    '#default_value': '[current-user:mail]'
+  phone:
+    '#type': tel
+    '#title': Phone
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  state:
+    '#type': textfield
+    '#title': State
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  city:
+    '#type': city
+    '#title': City
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  postalcode:
+    '#type': textfield
+    '#title': 'Zip Code'
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  description:
+    '#type': textarea
+    '#title': 'Please let us know how we can help you today'
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  region__c:
+    '#type': hidden
+    '#title': region__c
+  region:
+    '#type': hidden
+    '#title': region
+  webformsid__c:
+    '#type': hidden
+    '#title': webformsid__c
+  leadsource_not_used:
+    '#type': hidden
+    '#title': leadsource_not_used
+    '#default_value': Website
+  webform_email_sign_up__c:
+    '#type': hidden
+    '#title': webform_email_sign_up__c
+  builder_interest__c:
+    '#type': hidden
+    '#title': builder_interest__c
+  webform_name__c:
+    '#type': hidden
+    '#title': webform_name__c
+    '#default_value': 'Contact Us Form'
+  ownerid:
+    '#type': hidden
+    '#title': ownerid
+  webform_campaign_id__c:
+    '#type': hidden
+    '#title': webform_campaign_id__c
+    '#default_value': 70160000000Bure
+  form_name:
+    '#type': hidden
+    '#title': form_name
+    '#default_value': contact-us
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Select Location'
+    '#submit__label': 'Send message'
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
-  ajax_progress_type: ''
-  ajax_effect: ''
-  ajax_speed: null
+  ajax_progress_type: throbber
+  ajax_effect: fade
+  ajax_speed: 1000
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_theme_name: ''
+  page_theme_name: ellison
   form_title: source_entity_webform
-  form_submit_once: true
+  form_submit_once: false
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: false
+  form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false
@@ -136,10 +211,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: message
-  confirmation_url: '[current-page:url]'
-  confirmation_title: 'Location is set successfully.'
-  confirmation_message: '<p>Thank you for your selection. You can safely close this dialog.</p>'
+  confirmation_type: url_message
+  confirmation_url: /thank-you
+  confirmation_title: 'Thank you!'
+  confirmation_message: '<p>Your message has been sent.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -159,8 +234,8 @@ settings:
   entity_limit_total_interval: null
   entity_limit_user: null
   entity_limit_user_interval: null
-  purge: completed
-  purge_days: 7
+  purge: none
+  purge_days: null
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
@@ -216,10 +291,10 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  set_region_for_session:
-    id: region_handler
-    handler_id: set_region_for_session
-    label: 'Set Region for Session'
+  push_form_data_to_call_tracking_metrics:
+    id: call_tracking_metrics_handler
+    handler_id: push_form_data_to_call_tracking_metrics
+    label: 'Push form data to Call Tracking Metrics'
     notes: ''
     status: true
     conditions: {  }

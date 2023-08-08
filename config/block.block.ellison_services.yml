@@ -1,0 +1,25 @@
+uuid: 8f5930a3-d77e-48ca-8c68-56be1a5cd6c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.services
+  module:
+    - system
+  theme:
+    - ellison
+id: ellison_services
+theme: ellison
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:services'
+settings:
+  id: 'system_menu_block:services'
+  label: Services
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

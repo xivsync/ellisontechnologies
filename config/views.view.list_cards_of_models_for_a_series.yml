@@ -507,9 +507,10 @@ display:
           output_url_as_text: false
           absolute: false
       pager:
-        type: none
+        type: some
         options:
           offset: 0
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
@@ -712,7 +713,20 @@ display:
           required: false
       css_class: listing
       group_by: false
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<div class="prose"><h2 class="text-4xl text-cyan">Explore the {{ field_series }}</h2></div>'
+            format: full_html
+          tokenize: true
       footer: {  }
       display_extenders: {  }
     cache_metadata:
