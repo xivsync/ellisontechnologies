@@ -144,7 +144,7 @@ form.webform-submission-form {
 }
 
 form.webform-submission-build-a-quote-form,
-form.webform-submission-newsletter-form-add-form {
+form.webform-submission-newsletter-form-form {
   @apply flex flex-row flex-wrap justify-start;
 }
 
@@ -163,7 +163,7 @@ form.webform-submission-newsletter-form-add-form {
   
   }
 
-  form.webform-submission-newsletter-form-add-form {
+  form.webform-submission-newsletter-form-form {
     @apply flex flex-row flex-wrap justify-start pt-16 hidden;
   }
 

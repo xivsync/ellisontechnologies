@@ -5,7 +5,40 @@ Drupal.behaviors.handleWebform = {
     // any given element one time at most, regardless of how many times
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
-    once('handleBigPipeForms', '.webform', context).forEach(
+
+    once('handleNewsLetterForm', '#group__newsletter h2 a', context).forEach(
+
+      // found webform component
+      function (element) {
+
+        function formWork(element) {
+          console.log("newsletter",element);
+
+          const buttonEl = element;
+
+          buttonEl.addEventListener('click', (e) => {
+            const newsletterToggleEl = document.querySelector('#group__newsletter .webform-submission-newsletter-form-form');
+            newsletterToggleEl.style.display = 'flex';
+            buttonEl.style.display = 'none';
+            e.preventDefault();
+          });
+
+        }
+
+        // check if webform is added by bigpipe
+        const checkReadyState = setInterval(() => {
+          if (document.readyState === "complete") {
+            clearInterval(checkReadyState);
+            formWork(element);
+          }
+        }, 100);
+
+      }
+
+    );
+
+
+    once('handleTaxCalculationForm', '.webform-submission-tax-calculator-form', context).forEach(
 
 
       // found webform component
@@ -81,7 +114,7 @@ Drupal.behaviors.handleWebform = {
         function formWork(element) {
 
           // get webform element
-          let webform = element.querySelector(".webform-submission-form");
+          let webform = element;
           let webformClasses = webform.classList;
           const formNames = [...webformClasses];
 
