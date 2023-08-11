@@ -6,20 +6,11 @@ dependencies:
     - field.field.paragraph.button_group.field_navigation_style
     - field.field.paragraph.button_group.field_on_page_navigation
     - paragraphs.paragraphs_type.button_group
-  module:
-    - options
 id: paragraph.button_group.default
 targetEntityType: paragraph
 bundle: button_group
 mode: default
 content:
-  field_navigation_style:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_on_page_navigation:
     type: boolean
     label: hidden
@@ -28,6 +19,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_navigation_style: true

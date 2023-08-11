@@ -1,10 +1,12 @@
 uuid: 66e83180-2511-4fc0-a02f-861bf2854e84
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:5d99f13b-00ef-47d4-acb1-e59ee80ee835'
 id: video
 label: Video
-icon_uuid: null
-icon_default: null
+icon_uuid: 5d99f13b-00ef-47d4-acb1-e59ee80ee835
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYgMjAuMjVIMThNMTAuNSAxNy4yNVYyMC4yNU0xMy41IDE3LjI1VjIwLjI1TTMuMzc1IDE3LjI1SDIwLjYyNUMyMS4yNDYzIDE3LjI1IDIxLjc1IDE2Ljc0NjMgMjEuNzUgMTYuMTI1VjQuODc1QzIxLjc1IDQuMjUzNjggMjEuMjQ2MyAzLjc1IDIwLjYyNSAzLjc1SDMuMzc1QzIuNzUzNjggMy43NSAyLjI1IDQuMjUzNjggMi4yNSA0Ljg3NVYxNi4xMjVDMi4yNSAxNi43NDYzIDIuNzUzNjggMTcuMjUgMy4zNzUgMTcuMjVaIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=='
 description: 'Add video component.'
 behavior_plugins: {  }

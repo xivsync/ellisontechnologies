@@ -1,10 +1,12 @@
 uuid: 8d51b1ec-3f07-4887-a028-e3a3d9fd4001
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:bc0f5ddb-e0cb-466c-b638-ec6cc017bf76'
 id: specifications_list
 label: 'Specifications List'
-icon_uuid: null
-icon_default: null
+icon_uuid: bc0f5ddb-e0cb-466c-b638-ec6cc017bf76
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSAxMi43NUwxMC41IDE4Ljc1TDE5LjUgNS4yNSIgc3Ryb2tlPSIjMEYxNzJBIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo='
 description: 'Add Specifications.'
 behavior_plugins: {  }

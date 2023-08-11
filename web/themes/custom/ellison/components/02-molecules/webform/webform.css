@@ -165,6 +165,11 @@ form.webform-submission-newsletter-form-form {
 
   form.webform-submission-newsletter-form-form {
     @apply flex flex-row flex-wrap justify-start pt-16 hidden;
+
+    #edit-actions-submit{
+      @apply text-blue bg-white border-none text-base hover:bg-light-blue hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-2 px-4 no-underline uppercase !important;
+    }
+
   }
 
 }

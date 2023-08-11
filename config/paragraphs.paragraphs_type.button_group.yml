@@ -1,10 +1,17 @@
 uuid: 32d530da-cd95-4ab2-966a-fe9e8046de9c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:c8a5e326-744d-4932-a8df-cada037a9f92'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: button_group
 label: 'On Page Navigation'
-icon_uuid: null
-icon_default: null
+icon_uuid: c8a5e326-744d-4932-a8df-cada037a9f92
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjU5MzMgMy4zMjI0MUMxOC42OTM5IDMuNDUwMTQgMTkuNSA0LjM5OSAxOS41IDUuNTA2OTlWMjFMMTIgMTcuMjVMNC41IDIxVjUuNTA2OTlDNC41IDQuMzk5IDUuMzA2MDggMy40NTAxNCA2LjQwNjY4IDMuMzIyNDFDOC4yNDE1NiAzLjEwOTQ3IDEwLjEwOCAzIDEyIDNDMTMuODkyIDMgMTUuNzU4NCAzLjEwOTQ3IDE3LjU5MzMgMy4zMjI0MVoiIHN0cm9rZT0iIzBGMTcyQSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K'
 description: 'Create on page navigation to all Group components with an ID.'
 behavior_plugins: {  }

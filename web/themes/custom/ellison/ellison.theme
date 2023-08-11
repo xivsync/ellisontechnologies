@@ -32,6 +32,11 @@ function ellison_form_alter(&$form, &$form_state, $form_id)
  * Implements hook_preprocess_HOOK().
  *
  */
+function ellison_preprocess_item_list__search_results(&$variables) {
+  // Allow the Attribute Class to deal with adding a css class to this element.
+  $variables['attributes']['class'][] = 'new-search-results';
+}
+
 function ellison_preprocess_page_title(&$variables)
 {
   

@@ -1,12 +1,14 @@
 uuid: 96fbc16e-e69d-4b8f-a68f-25d24a6547aa
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:0dbc72d1-149e-4292-b7ab-da75c6a75671'
 _core:
   default_config_hash: OJUwL6xTTiHbXZy10swc5Fckkr7qhSm4b0nK3326LO8
 id: from_library
-label: 'From library'
-icon_uuid: null
-icon_default: null
-description: null
+label: 'Library of re-usable Components'
+icon_uuid: 0dbc72d1-149e-4292-b7ab-da75c6a75671
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDYuMDQxNjhDMTAuNDA3NyA0LjYxNjU2IDguMzA1MDYgMy43NSA2IDMuNzVDNC45NDgwOSAzLjc1IDMuOTM4MzQgMy45MzA0NiAzIDQuMjYyMTJWMTguNTEyMUMzLjkzODM0IDE4LjE4MDUgNC45NDgwOSAxOCA2IDE4QzguMzA1MDYgMTggMTAuNDA3NyAxOC44NjY2IDEyIDIwLjI5MTdNMTIgNi4wNDE2OEMxMy41OTIzIDQuNjE2NTYgMTUuNjk0OSAzLjc1IDE4IDMuNzVDMTkuMDUxOSAzLjc1IDIwLjA2MTcgMy45MzA0NiAyMSA0LjI2MjEyVjE4LjUxMjFDMjAuMDYxNyAxOC4xODA1IDE5LjA1MTkgMTggMTggMThDMTUuNjk0OSAxOCAxMy41OTIzIDE4Ljg2NjYgMTIgMjAuMjkxN00xMiA2LjA0MTY4VjIwLjI5MTciIHN0cm9rZT0iIzBGMTcyQSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K'
+description: 'Create a component, promote to Library, and be able to re-use it on other pages.'
 behavior_plugins: {  }
