@@ -89,6 +89,8 @@
 
 {% set has_solution_content = drupal_entity('paragraph', 418)  | render ? true : false %}
 
+{% set has_buttons_content = drupal_entity('paragraph', 1045) | render ? true : false %}
+
 {% set classes = [
     has_build_a_quote ? 'has-build-a-quote',
     has_carousel_content ? 'has-carousel-content',
@@ -122,9 +124,9 @@
             {{ content.field_series }}
           </div>
 
-          <div class="component button-group">
-
-            <div class="component">
+          <div class="component">
+            
+            <div class="component__inner">
 
               {% include "@molecules/cta/cta.twig" with {
                 classes: ['cta-button','text__align--right',],
@@ -135,33 +137,9 @@
                 cta_button: '',
               } %}
 
-            </div>
-
-            <div class="component">
-
-              {% include "@atoms/links/link/link.twig" with {
-                classes: '',
-                link_content: 'Accessories',
-                link_url: '#group__parts',
-                link_base_class: 'link',
-                link_modifiers: ['parts'],
-                link_blockname: 'model',
-                link_extra_classes: 'button',
-              } %}
-
-            </div>
-
-            <div class="component">
-
-              {% include "@atoms/links/link/link.twig" with {
-                classes: '',
-                link_content: 'Turnkey',
-                link_url: '#group__solutions',
-                link_base_class: 'link',
-                link_modifiers: ['solutions'],
-                link_blockname: 'model',
-                link_extra_classes: 'button',
-              } %}
+              {% if has_buttons_content %}
+                {{ drupal_entity('paragraph', 1045) }}
+              {% endif %}
 
             </div>
 
@@ -213,14 +191,14 @@
 
       {# Accessory Paragraph Library Entity = 414 #}
       {% if has_parts_content %}
-        <div class="component remove-mb forward-diagonal-on full-width-on">
+        <div class="component remove-mb">
           {{ drupal_entity('paragraph', 415) }}
         </div>
       {% endif %}
 
       {# Turnkey Paragraph Library Entity = 418 #}
       {% if has_solution_content %}
-        <div class="component remove-mb forward-diagonal-on full-width-on">
+        <div class="component remove-mb">
           {{ drupal_entity('paragraph', 418) }}
         </div>
       {% endif %}
