@@ -5661,70 +5661,67 @@ form.webform-submission-newsletter-form-form {
     &.expanded {
       display: flex;
     }
-    .form-item {
-      height:2.3rem;
-    }
     form#search-block-form {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-    }
-    input#edit-keys {
-      height: 2.25rem;
-    }
-    input#edit-keys {
-      width: 85vw;
-    }
-    input#edit-keys {
-      border-style: none;
-    }
-    input#edit-keys:focus {
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-    }
-    @media (min-width: 768px) {
-      input#edit-keys {
-        width: 93vw;
+      label {
+        display: none;
       }
-    }
-    @media (min-width: 1024px) {
-      input#edit-keys {
-        width: 8rem;
+      .form-search {
+        height: 2.25rem;
       }
-    }
-    input#edit-keys {
-      border-radius: 25px 0px 0px 25px;
-    }
-    div#edit-actions {
-      height: 2.25rem;
-    }
-    input#edit-submit {
-      height: 2.25rem;
-    }
-    input#edit-submit {
-      width: 2.25rem;
-    }
-    input#edit-submit {
-      --tw-bg-opacity: 1;
-      background-color: rgb(13 96 180 / var(--tw-bg-opacity));
-    }
-    input#edit-submit {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity));
-    }
-    input#edit-submit:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(70 182 227 / var(--tw-bg-opacity));
-    }
-    input#edit-submit {
-      border-radius: 0px 25px 25px 0px;
-      border: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='m21 21-5.197-5.197m0 0A7.503 7.503 0 0 0 18 10.499c0-4.114-3.386-7.5-7.5-7.5a7.503 7.503 0 0 0-7.501 7.5C2.999 14.614 6.385 18 10.5 18a7.503 7.503 0 0 0 5.303-2.197z' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 20px;
+      .form-search {
+        width: 85vw;
+      }
+      .form-search {
+        border-style: none;
+      }
+      .form-search:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+      }
+      @media (min-width: 768px) {
+        .form-search {
+          width: 93vw;
+        }
+      }
+      @media (min-width: 1024px) {
+        .form-search {
+          width: 8rem;
+        }
+      }
+      .form-search {
+        border-radius: 25px 0px 0px 25px;
+      }
+      .form-submit {
+        height: 2.25rem;
+      }
+      .form-submit {
+        width: 2.25rem;
+      }
+      .form-submit {
+        --tw-bg-opacity: 1;
+        background-color: rgb(13 96 180 / var(--tw-bg-opacity));
+      }
+      .form-submit {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .form-submit:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+      }
+      .form-submit {
+        border-radius: 0px 25px 25px 0px;
+        border: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='m21 21-5.197-5.197m0 0A7.503 7.503 0 0 0 18 10.499c0-4.114-3.386-7.5-7.5-7.5a7.503 7.503 0 0 0-7.501 7.5C2.999 14.614 6.385 18 10.5 18a7.503 7.503 0 0 0 5.303-2.197z' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+      }
     }
   }
   &__mobi {

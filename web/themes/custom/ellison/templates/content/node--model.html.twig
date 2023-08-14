@@ -83,13 +83,17 @@
 
 {% set specs_model_list_count = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
 
+{% set has_buttons_content = drupal_entity('paragraph', 1047) | render ? true : false %}
+
 {% set has_build_a_quote = content.field_enable_build_a_quote | render | striptags | trim == 'True' ? true : false %}
+
+{% set has_components = content.field_components | render ? true : false %}
 
 {% set has_parts_content = drupal_entity('paragraph', 415) | render ? true : false %}
 
 {% set has_solution_content = drupal_entity('paragraph', 418)  | render ? true : false %}
 
-{% set has_buttons_content = drupal_entity('paragraph', 1047) | render ? true : false %}
+
 
 {% set classes = [
     has_build_a_quote ? 'has-build-a-quote',
@@ -182,28 +186,30 @@
       'field_technologies'
     ) }}
 
-    <div class="components">
+    {% if (has_build_a_quote or has_parts_content or has_solution_content) and has_components == false %}
+      <div class="components">
 
-      {# Build a Quote Paragraph Library Entity = 618 #}
-      {% if has_build_a_quote %}
-        {{ drupal_entity('paragraph', 618) }}
-      {% endif %}
+        {# Build a Quote Paragraph Library Entity = 618 #}
+        {% if has_build_a_quote %}
+          {{ drupal_entity('paragraph', 618) }}
+        {% endif %}
 
-      {# Accessory Paragraph Library Entity = 414 #}
-      {% if has_parts_content %}
-        <div class="component remove-mb">
-          {{ drupal_entity('paragraph', 415) }}
-        </div>
-      {% endif %}
+        {# Accessory Paragraph Library Entity = 414 #}
+        {% if has_parts_content and has_components == false %}
+          <div class="component remove-mb">
+            {{ drupal_entity('paragraph', 415) }}
+          </div>
+        {% endif %}
 
-      {# Turnkey Paragraph Library Entity = 418 #}
-      {% if has_solution_content %}
-        <div class="component remove-mb">
-          {{ drupal_entity('paragraph', 418) }}
-        </div>
-      {% endif %}
+        {# Turnkey Paragraph Library Entity = 418 #}
+        {% if has_solution_content and has_components == false %}
+          <div class="component remove-mb">
+            {{ drupal_entity('paragraph', 418) }}
+          </div>
+        {% endif %}
 
-    </div>
+      </div>
+    {% endif %}
 
   </div>
 

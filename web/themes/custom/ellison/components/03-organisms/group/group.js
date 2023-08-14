@@ -20,7 +20,8 @@ Drupal.behaviors.onPageNavigation = {
             const label = groupEl.dataset.idLabel;
             const anchor = groupEl.id;
 
-            if (label !== 'na') {
+            // Exclude the N/A and Newsletter groups from the on-page navigation.
+            if (label !== 'na' && label !== 'newsletter') {
 
               let aEl = document.createElement('a');
               const aText = document.createTextNode(label);
@@ -28,7 +29,7 @@ Drupal.behaviors.onPageNavigation = {
               aEl.title = label;
               aEl.href = '#' + anchor;
 
-              element.innerHTML += `<a href="#${anchor}">${label}</a>`;
+              element.innerHTML += `<a class="button" href="#${anchor}">${label}</a>`;
 
             }
           
