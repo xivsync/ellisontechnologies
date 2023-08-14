@@ -67,9 +67,10 @@
   {% endblock %}
 
   {% block page_content %}
-    <div class="main-content__inner">
+    <div class="main-content__inner main-content__inner-search">
       {{ page.content }}
     </div>
+  {% endblock %}
 
   {% block page_footer %}
     {% if page.footer %}
