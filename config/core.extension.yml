@@ -81,6 +81,9 @@ module:
   salesforce_soap: 0
   salesforce_webform: 0
   search: 0
+  search_api: 0
+  search_api_db: 0
+  search_api_db_defaults: 0
   shortcut: 0
   smart_date: 0
   system: 0
