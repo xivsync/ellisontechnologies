@@ -64,27 +64,23 @@ html {
 
 /* handles search results page without template changes */
 
-.main-content__inner-search {
-  @apply container mx-auto;
+.view--search-content {
+  @apply container mx-auto flex flex-col gap-8;
 
-  form.search-form {
-    @apply flex flex-row items-center justify-between mb-8;
+  .views-exposed-form {
+    @apply flex flex-row items-center m-0 p-0;
 
-    #edit-basic {
-      @apply flex flex-col lg:flex-row gap-8;
+    label.form-item__label {
+      @apply hidden;
+    }
 
-      label {
-        @apply mb-8 lg:mb-0 mr-8;
-      }
-
-      input {
-        @apply w-full lg:w-auto;
-        border-radius: 25px;
-      }
-
+    input.form-text {
+      @apply w-full lg:w-auto;
+      border-radius: 25px;
     }
 
   }
+
 
   #block-ellison-content {
 
@@ -96,22 +92,21 @@ html {
 
   }
 
-  .new-search-results {
+  .collection {
     @apply flex flex-col gap-8;
 
-    li {
-
-      h3 {
-        @apply text-2xl font-bold gap-4;
-      }
-
-      p {
-        @apply text-gray-400;
-      }
-
+    .views-field-title {
+      @apply text-2xl font-bold;
     }
 
+    .views-field-search-api-excerpt {
+      @apply text-gray-400;
+    }
+
+
+
   }
+
 }
 
 
