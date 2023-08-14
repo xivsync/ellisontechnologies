@@ -89,7 +89,7 @@
 
 {% set has_solution_content = drupal_entity('paragraph', 418)  | render ? true : false %}
 
-{% set has_buttons_content = drupal_entity('paragraph', 1045) | render ? true : false %}
+{% set has_buttons_content = drupal_entity('paragraph', 1047) | render ? true : false %}
 
 {% set classes = [
     has_build_a_quote ? 'has-build-a-quote',
@@ -138,7 +138,7 @@
               } %}
 
               {% if has_buttons_content %}
-                {{ drupal_entity('paragraph', 1045) }}
+                {{ drupal_entity('paragraph', 1047) }}
               {% endif %}
 
             </div>
