@@ -1,0 +1,100 @@
+.components {
+
+  .card {
+    @apply flex flex-col gap-8 h-full;
+
+    &.unset-height {
+      height: unset;
+    }
+
+    &__inner {
+      @apply flex flex-col gap-4 md:gap-8 h-full;
+    }
+
+    /* handles padding when there is background color */
+    &.has-background-color .card__content {
+      @apply pb-8 px-8;
+    }
+
+    &__image img {
+      @apply m-0 p-0 w-auto max-w-full !important;
+    }
+
+    &__image {
+
+      .field-media-oembed-video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    &__content {
+      @apply flex flex-col h-full justify-between;
+
+      .card__inner--content {
+        @apply flex flex-col;
+      }
+
+    }
+
+    &.style-horz-left .card__inner {
+      @apply flex md:flex-row md:gap-2 md:items-center;
+
+      .card__image {
+        @apply basis-1/3 shrink;
+      }
+
+      .card__content {
+        @apply basis-2/3 grow;
+      }
+
+    }
+
+    &.style-horz-right .card__inner {
+      @apply flex md:flex-row md:gap-2  md:items-center;
+
+      .card__image {
+        @apply basis-1/3 shrink md:order-last;
+      }
+
+      .card__content {
+        @apply basis-2/3 grow;
+      }
+
+    }
+
+    &__cta {
+      @apply mt-8;
+    }
+
+  }
+
+}
+
+.components {
+
+  #group__model-series {
+
+    .card.has-background-color .card__inner {
+      @apply p-0;
+    }
+
+    .card__content {
+      @apply p-4;
+
+      .card__body p {
+        @apply my-0 flex flex-row justify-between;
+
+        strong {
+          @apply text-cyan;
+        }
+      }
+
+    }
+
+
+  }
+
+}

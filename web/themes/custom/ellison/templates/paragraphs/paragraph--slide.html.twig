@@ -75,27 +75,24 @@
 
 {% set has_image = content.field_media_image | render ? true : false %}
 
-{% embed "@molecules/card/card.twig" with {
+{% embed "@molecules/slide/slide.twig" with {
   has_image: has_image,
   background_color: content.field_background_color | render | striptags | trim,
-  card__style: content.field_card_style  | render | striptags | trim,
+  slide__style: content.field_card_style  | render | striptags | trim,
   cta_style: content.field_align_text | render | striptags | trim,
-  card__heading: content.field_header,
-  card__body: content.field_content,
-  card__base_class: 'card',
-  card__blockname: '',
-  card__modifiers: [],
-  card__header: '',
-  card__body_content: '',
-  card__footer: '',
-  card__link__content: content.field_cta_button.0['#title'] | render | striptags | trim,
-  card__link__url: content.field_cta_button.0['#url']  | render | striptags | trim,
-  webform_url: content.field_webform  | render | striptags | trim,
-  webform_text: content.field_webform_cta_text  | render | striptags | trim,
-  data: content,
-  card__extra_classes: [],
+  slide__heading: content.field_header,
+  slide__body: content.field_content,
+  slide__base_class: 'slide',
+  slide__blockname: '',
+  slide__modifiers: [],
+  slide__header: '',
+  slide__body_content: '',
+  slide__footer: '',
+  slide__link__content: content.field_cta_button.0['#title'] | render | striptags | trim,
+  slide__link__url: content.field_cta_button.0['#url']  | render | striptags | trim,
+  slide__extra_classes: [],
 } %}
-  {% block card__img %}
+  {% block slide__img %}
     {{ content.field_media_image }}
   {% endblock %}
 {% endembed %}

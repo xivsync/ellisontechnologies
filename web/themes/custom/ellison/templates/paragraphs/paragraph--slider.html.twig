@@ -37,7 +37,7 @@
  */
 #}
 
-{{ attach_library('ellison/onpage-navigation') }}
+{{ attach_library('ellison/slider') }}
 
 {%
   set classes = [
@@ -45,21 +45,23 @@
   ]
 %}
 
-{% set display_style_value = content.field_display_style | render | striptags | trim %}
+{% set display_style_value = content.field_display_style | render | striptags | trim | replace({' ': '','next': '','prev': ''}) %}
 
+{# @todo: figure out why added spaces, next, prev, and line breaks are added to some props #}
 {% include "@organisms/group/group.html.twig" with {
   header: content.field_header,
   body: content.field_content,
   footer: content.field_footer,
   id: content.field_unique_id | render | striptags | trim,
   group: content.field_group,
-  background_color: content.field_background_color | render | striptags | trim,
-  background_diagonal: content.field_diagonal_background | render | striptags | trim,
-  background_full_width: content.field_full_width_background | render | striptags | trim,
+  background_color: content.field_background_color | render | striptags | trim | replace({' ': '','next': '', 'prev': '', '\n': '', '\r': '', '\t': ''}),
+  background_diagonal: content.field_diagonal_background | render | striptags | trim | replace({' ': '','next': '', 'prev': '', '\n': '', '\r': '', '\t': ''}),
+  background_full_width: content.field_full_width_background | render | striptags | trim | replace({' ': '','next': '', 'prev': '', '\n': '', '\r': '', '\t': ''}),
   display_style: display_style_value == 'row' ? 'display-as-rows' : 'display-as-columns',
-  background_tilt: content.field_enable_back_slash_tilt | render | striptags | trim,
-  vertical_align_items: content.field_vertical_align_items | render | striptags | trim,
-  full_width_content: content.field_enable_full_width_content | render | striptags | trim,
-  remove_margins: content.field_remove_margins | render | striptags | trim,
+  background_tilt: content.field_enable_back_slash_tilt | render | striptags | trim | replace({' ': '','next': '', 'prev': '', '\n': '', '\r': '', '\t': ''}),
+  vertical_align_items: '',
+  full_width_content: 'container',
+  remove_margins: content.field_remove_margins | render | striptags | trim | replace({' ': '','next': '', 'prev': '', '\n': '', '\r': '', '\t': ''}),
+  visible_items: content.field_visible_items | render | striptags | trim | replace({' ': '','next': '', 'prev': '', '\n': '', '\r': '', '\t': ''}),
   data: content,
 } %}

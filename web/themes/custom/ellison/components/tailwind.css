@@ -120,7 +120,7 @@ html {
   @apply container flex flex-col mx-auto;
 
   &__header {
-    @apply flex flex-row gap-8;
+    @apply flex flex-col lg:flex-row gap-8;
     
     &--image {
       @apply basis-1/2;
@@ -225,3 +225,20 @@ html {
  */
 
 
+ .group {
+
+  .glide {
+
+    .glide__arrow {
+      @apply border-none text-white hover:text-gray-200 shadow-none;
+
+      svg.icon {
+        width: 48px;
+        height: 48px;
+      }
+
+    }
+
+  }
+
+ }

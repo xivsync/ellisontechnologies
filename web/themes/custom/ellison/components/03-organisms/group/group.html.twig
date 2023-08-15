@@ -40,13 +40,14 @@
     background_full_width | clean_class,
     background_tilt | clean_class,
     remove_margins | clean_class,
+    visible_items ? 'slider-on' : 'slider-off',
   ]
 %}
 
 {% set inner_attributes = create_attribute() %}
 
 {# if full width background then add container class and handle full width content override #}
-{% set add_container_class = (background_full_width == 'full-width-on' and full_width_content != 'no-container') ? 'container' : 'no-container' %}
+{% set add_container_class = ( background_full_width == 'full-width-on' and full_width_content != 'no-container') ? 'container' : 'no-container' %}
 
 {%
   set inner_classes = [
@@ -63,6 +64,7 @@
     base_class ~ '__group',
     vertical_align_items | clean_class,
     add_container_class,
+    'foobar-container'
   ]
 %}
 
@@ -74,7 +76,7 @@
   ]
 %}
 
-<div{{ attributes.addClass(classes).setAttribute('id', group_id).setAttribute('data-id-label', group_label ) }}>
+<div{{ attributes.addClass(classes).setAttribute('id', group_id).setAttribute('data-id-label',group_label).setAttribute('data-visible-items',visible_items ? visible_items : '1') }}>
   {{ title_suffix }}
   <div{{ inner_attributes.addClass(inner_classes) }}>
     {% if header | render %}

@@ -6,40 +6,38 @@
   #glide {
     @apply lg:mt-[-74px];
     clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
-  }
-
-}
-
-#glide {
-  width: 100vw !important;
-  background-color: #013664;
-
-  .glide__track {
     width: 100vw !important;
-  }
-
-  .glide__arrow {
-    @apply border-none text-white hover:text-gray-200;
-
-    svg.icon {
-      width: 48px;
-      height: 48px;
+    background-color: #013664;
+  
+    .glide__track {
+      width: 100vw !important;
     }
-
-  }
-
-  img.image {
-    max-width: unset;
-    width: 100%;
-  }
-
-  .video__name {
-    display:none;
-  }
-
-  /* adds padding to video slides to expose controls */
-  .field-media-oembed-video {
-    padding:6rem
+  
+    .glide__arrow {
+      @apply border-none text-white hover:text-gray-200;
+  
+      svg.icon {
+        width: 48px;
+        height: 48px;
+      }
+  
+    }
+  
+    img.image {
+      max-width: unset;
+      width: 100%;
+    }
+  
+    .video__name {
+      display:none;
+    }
+  
+    /* adds padding to video slides to expose controls */
+    .field-media-oembed-video {
+      padding:6rem
+    }
+  
   }
 
 }
+

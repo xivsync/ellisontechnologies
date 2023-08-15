@@ -1,1 +1,1 @@
-Drupal.behaviors.slider={attach:function(e){once("glide",".glide",e).forEach((function(e){window.addEventListener("load",(function(){new Glide(e,{type:"carousel",focusAt:"center",perView:1}).mount()}))}))}};
+Drupal.behaviors.homePageSlides={attach:function(e){once("glide",".glide",e).forEach((function(e){window.addEventListener("load",(function(){new Glide(e,{type:"carousel",focusAt:"center",perView:1}).mount()}))}))}};

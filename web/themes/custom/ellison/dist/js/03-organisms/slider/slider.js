@@ -1,0 +1,1 @@
+Drupal.behaviors.glidejs={attach:function(e){once("implementGlideJs",".glide",e).forEach((function(e){window.addEventListener("load",(function(){console.log("glidejs",e),new Glide(e,{type:"carousel",focusAt:"center",perView:1}).mount()}))}))}};
