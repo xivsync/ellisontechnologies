@@ -4672,38 +4672,38 @@ form.webform-submission-newsletter-form-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  .component.remove-mt .group.diagonal-forward-slash-on {
+  .component .group.diagonal-forward-slash-on.remove-mt {
     margin-top: calc( (63px  + 2rem) * -1);
   }
-  .component.remove-mb .group.diagonal-forward-slash-on {
+  .component .group.diagonal-forward-slash-on.remove-mb {
     margin-bottom: calc( (63px  + 2rem) * -1);
   }
-  .component.remove-my .group.diagonal-forward-slash-on {
+  .component .group.diagonal-forward-slash-on.remove-my {
     margin-top: calc( (63px  + 2rem) * -1);
     margin-bottom: calc( (63px  + 2rem) * -1);
   }
-  .component.remove-mt .group.tilt-back-slash-on {
+  .component .group.tilt-back-slash-on.remove-mt {
     margin-top: -4rem;
   }
   @media (min-width: 1024px) {
-    .component.remove-mt .group.tilt-back-slash-on {
+    .component .group.tilt-back-slash-on.remove-mt {
       margin-bottom: -2rem;
     }
   }
-  .component.remove-mb .group.tilt-back-slash-on {
+  .component .group.tilt-back-slash-on.remove-mb {
     margin-bottom: -4rem;
   }
   @media (min-width: 1024px) {
-    .component.remove-mb .group.tilt-back-slash-on {
+    .component .group.tilt-back-slash-on.remove-mb {
       margin-bottom: -2rem;
     }
   }
-  .component.remove-my .group.tilt-back-slash-on {
+  .component .group.tilt-back-slash-on.remove-my {
     margin-top: -4rem;
     margin-bottom: -4rem;
   }
   @media (min-width: 1024px) {
-    .component.remove-my .group.tilt-back-slash-on {
+    .component .group.tilt-back-slash-on.remove-my {
       margin-bottom: -2rem;
     }
   }

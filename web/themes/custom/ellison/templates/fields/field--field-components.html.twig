@@ -49,11 +49,7 @@
   {% if multiple %}
     <div{{ attributes.addClass(base_class) }}>
       {% for item in items %}
-        {% set item_class = [
-            'component',
-          item.content['#paragraph'].field_remove_margins.value | render ? item.content['#paragraph'].field_remove_margins.value | clean_class : '',
-          ]
-        %}
+        {% set item_class = ['component'] %}
         <div{{ item.attributes.addClass(item_class) }}>{{ item.content }}</div>
       {% endfor %}
     </div>
