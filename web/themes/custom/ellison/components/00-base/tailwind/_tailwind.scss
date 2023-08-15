@@ -3833,6 +3833,20 @@ div.webform {
 }
 
 .component {
+  .slide {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .slide {
+    &__content {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    &__content {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
   .text {
     display: flex;
   }
@@ -6789,6 +6803,12 @@ html {
         width: 48px;
         height: 48px;
       }
+    }
+    .glide__arrow--left{
+      left: -3rem
+    }
+    .glide__arrow--right{
+      right: -3rem
     }
   }
 }

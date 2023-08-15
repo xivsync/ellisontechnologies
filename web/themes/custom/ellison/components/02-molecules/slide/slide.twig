@@ -49,7 +49,6 @@
     (background_color) ? 'has-background-color' : '',
     slide__style | clean_class,
     'text__align--' ~ cta_style | clean_class,
-    'container'
   ])
 %}
 
@@ -59,7 +58,7 @@
 
     {# Image #}
     {% if has_image %}
-      <div class="slide__image">{% block slide__img %}{% endblock %}</div>
+      <div class="slide__image not-prose">{% block slide__img %}{% endblock %}</div>
     {% endif %}
 
     {# Content #}
