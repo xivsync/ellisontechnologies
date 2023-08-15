@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.slider.field_background_color
     - field.field.paragraph.slider.field_diagonal_background
-    - field.field.paragraph.slider.field_display_style
     - field.field.paragraph.slider.field_enable_back_slash_tilt
     - field.field.paragraph.slider.field_full_width_background
     - field.field.paragraph.slider.field_group
@@ -29,13 +28,6 @@ content:
   field_diagonal_background:
     type: boolean_checkbox
     weight: 17
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  field_display_style:
-    type: boolean_checkbox
-    weight: 13
     region: content
     settings:
       display_label: true

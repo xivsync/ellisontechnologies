@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.slider.field_background_color
     - field.field.paragraph.slider.field_diagonal_background
-    - field.field.paragraph.slider.field_display_style
     - field.field.paragraph.slider.field_enable_back_slash_tilt
     - field.field.paragraph.slider.field_full_width_background
     - field.field.paragraph.slider.field_group
@@ -37,16 +36,6 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_display_style:
-    type: boolean
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 0
     region: content
   field_enable_back_slash_tilt:
     type: boolean
