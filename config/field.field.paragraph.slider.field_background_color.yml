@@ -1,0 +1,21 @@
+uuid: 34b8bf20-d892-457d-9734-52f837344053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.slider
+  module:
+    - options
+id: paragraph.slider.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: slider
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

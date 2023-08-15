@@ -1,0 +1,79 @@
+uuid: 439656c1-2e64-48c2-9104-4b1fda028560
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group
+    - paragraphs.paragraphs_type.slide
+    - paragraphs.paragraphs_type.slider
+  module:
+    - entity_reference_revisions
+id: paragraph.slider.field_group
+field_name: field_group
+entity_type: paragraph
+bundle: slider
+label: 'Slide desk'
+description: 'Add slides to your deck.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slide: slide
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image:
+        weight: 3
+        enabled: false
+      button_group:
+        weight: 14
+        enabled: false
+      card:
+        weight: 8
+        enabled: false
+      cta_button:
+        weight: 10
+        enabled: false
+      from_library:
+        weight: 20
+        enabled: false
+      group:
+        weight: 4
+        enabled: false
+      image:
+        weight: 6
+        enabled: false
+      instagram:
+        weight: 23
+        enabled: false
+      model_listing:
+        weight: 18
+        enabled: false
+      quote:
+        weight: 9
+        enabled: false
+      slide:
+        weight: 28
+        enabled: true
+      slider:
+        weight: 29
+        enabled: false
+      specifications:
+        weight: 20
+        enabled: false
+      specifications_list:
+        weight: 22
+        enabled: false
+      text:
+        weight: 8
+        enabled: false
+      video:
+        weight: 25
+        enabled: false
+      webform:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

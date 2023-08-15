@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.model_listing
     - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.slider
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.webform
@@ -44,6 +45,7 @@ settings:
       text: text
       webform: webform
       from_library: from_library
+      slider: slider
       video: video
     negate: 0
     target_bundles_drag_drop:
@@ -76,6 +78,12 @@ settings:
         enabled: true
       quote:
         weight: 16
+        enabled: true
+      slide:
+        weight: 28
+        enabled: false
+      slider:
+        weight: 29
         enabled: true
       specifications:
         weight: 19

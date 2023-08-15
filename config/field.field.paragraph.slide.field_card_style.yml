@@ -1,0 +1,23 @@
+uuid: a8f4023c-dacb-41ed-8161-26ea50d873a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_style
+    - paragraphs.paragraphs_type.slide
+  module:
+    - options
+id: paragraph.slide.field_card_style
+field_name: field_card_style
+entity_type: paragraph
+bundle: slide
+label: 'Card Style'
+description: 'By default cards display vertically with image on top. Display as a horizontal card with image on left (default) or image on right.'
+required: false
+translatable: false
+default_value:
+  -
+    value: style-top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

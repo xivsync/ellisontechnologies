@@ -1,0 +1,23 @@
+uuid: fedbaf87-ded5-4b29-a1ce-91a40a10f7f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_back_slash_tilt
+    - paragraphs.paragraphs_type.slider
+id: paragraph.slider.field_enable_back_slash_tilt
+field_name: field_enable_back_slash_tilt
+entity_type: paragraph
+bundle: slider
+label: 'Enable back slash tilt'
+description: 'Switch on to tilt the top as a backward diagonal. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: tilt-back-slash-on
+  off_label: tilt-back-slash-off
+field_type: boolean

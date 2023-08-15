@@ -1,0 +1,22 @@
+uuid: 037d6fcd-2a3b-4eb9-87d8-29e1fd2f5481
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer
+    - paragraphs.paragraphs_type.slide
+  module:
+    - text
+id: paragraph.slide.field_footer
+field_name: field_footer
+entity_type: paragraph
+bundle: slide
+label: Footer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

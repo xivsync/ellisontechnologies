@@ -1,0 +1,22 @@
+uuid: ea043bfb-6302-4ef6-ad43-bcdd616888e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.slide
+  module:
+    - text
+id: paragraph.slide.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: slide
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

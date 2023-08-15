@@ -1,0 +1,23 @@
+uuid: 295db89a-85c1-49c9-a096-2ce3b89ce4e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width_background
+    - paragraphs.paragraphs_type.slider
+id: paragraph.slider.field_full_width_background
+field_name: field_full_width_background
+entity_type: paragraph
+bundle: slider
+label: 'Enable full width background'
+description: 'Stretch the background to fill the view port full width.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: full-width-on
+  off_label: full-width-off
+field_type: boolean

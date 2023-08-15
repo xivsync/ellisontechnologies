@@ -1,0 +1,21 @@
+uuid: b31f29c6-4029-4bef-8eb2-7be1a6ef2660
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_remove_margins
+    - paragraphs.paragraphs_type.slider
+  module:
+    - options
+id: paragraph.slider.field_remove_margins
+field_name: field_remove_margins
+entity_type: paragraph
+bundle: slider
+label: 'Remove The Space Between Components'
+description: 'Remove the top or bottom spacing between components. If used, the component above (top spacing removed) or below (bottom spacing removed) causes the white space to be removed between components.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

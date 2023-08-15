@@ -1,0 +1,15 @@
+uuid: df56b930-3269-46c2-ad7e-c0c5e985a3d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: slide
+label: Slide
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

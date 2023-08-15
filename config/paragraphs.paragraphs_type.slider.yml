@@ -1,0 +1,15 @@
+uuid: c893e008-35bc-4263-bc2a-34e5a753f390
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: slider
+label: Slider
+icon_uuid: null
+icon_default: null
+description: 'Add a slider or carousel.'
+behavior_plugins: {  }

@@ -1,0 +1,98 @@
+uuid: 34f0cefe-b243-44bd-829c-631ee50ba320
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_background_color
+    - field.field.paragraph.slider.field_diagonal_background
+    - field.field.paragraph.slider.field_display_style
+    - field.field.paragraph.slider.field_enable_back_slash_tilt
+    - field.field.paragraph.slider.field_full_width_background
+    - field.field.paragraph.slider.field_group
+    - field.field.paragraph.slider.field_remove_margins
+    - field.field.paragraph.slider.field_unique_id
+    - field.field.paragraph.slider.field_visible_items
+    - paragraphs.paragraphs_type.slider
+  module:
+    - paragraphs
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_background_color:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_diagonal_background:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_display_style:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_enable_back_slash_tilt:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_full_width_background:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_group:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: Component
+      title_plural: Group
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_remove_margins:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_unique_id:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_visible_items:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,88 @@
+uuid: d60b41d4-695b-4a0d-9218-4a9724d76688
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide.field_align_text
+    - field.field.paragraph.slide.field_background_color
+    - field.field.paragraph.slide.field_card_style
+    - field.field.paragraph.slide.field_content
+    - field.field.paragraph.slide.field_cta_button
+    - field.field.paragraph.slide.field_footer
+    - field.field.paragraph.slide.field_header
+    - field.field.paragraph.slide.field_media_image
+    - paragraphs.paragraphs_type.slide
+  module:
+    - link
+    - options
+    - text
+id: paragraph.slide.default
+targetEntityType: paragraph
+bundle: slide
+mode: default
+content:
+  field_align_text:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_card_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_button:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_footer:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_header:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

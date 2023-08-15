@@ -1,0 +1,19 @@
+uuid: 16567c5a-eb56-4e22-a7a4-9119d80eab91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unique_id
+    - paragraphs.paragraphs_type.slider
+id: paragraph.slider.field_unique_id
+field_name: field_unique_id
+entity_type: paragraph
+bundle: slider
+label: 'Unique ID'
+description: 'Add a unique ID to this group to create an anchor for on page navigation.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

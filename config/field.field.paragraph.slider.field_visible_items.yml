@@ -1,0 +1,23 @@
+uuid: ac530377-0b9e-4958-b98d-5e044c31e187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_visible_items
+    - paragraphs.paragraphs_type.slider
+  module:
+    - options
+id: paragraph.slider.field_visible_items
+field_name: field_visible_items
+entity_type: paragraph
+bundle: slider
+label: 'Visible items'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
