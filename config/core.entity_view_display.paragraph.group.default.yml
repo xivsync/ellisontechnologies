@@ -72,7 +72,7 @@ content:
     region: content
   field_enable_full_width_content:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -114,7 +114,7 @@ content:
     weight: 6
     region: content
   field_remove_margins:
-    type: list_default
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -135,4 +135,5 @@ content:
     third_party_settings: {  }
     weight: 11
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

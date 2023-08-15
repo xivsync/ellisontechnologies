@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
     - field.field.node.page.field_components
     - field.field.node.page.field_jumbo_image
     - field.field.node.page.field_product
@@ -19,10 +18,8 @@ targetEntityType: node
 bundle: page
 mode: teaser
 content:
-  search_api_excerpt:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
+  links:
+    weight: 101
     region: content
 hidden:
   body: true
@@ -30,4 +27,3 @@ hidden:
   field_jumbo_image: true
   field_product: true
   field_slide_tag: true
-  links: true

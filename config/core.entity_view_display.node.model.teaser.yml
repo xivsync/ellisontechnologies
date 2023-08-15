@@ -23,10 +23,10 @@ targetEntityType: node
 bundle: model
 mode: teaser
 content:
-  search_api_excerpt:
+  links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
 hidden:
   feeds_item: true
@@ -40,4 +40,3 @@ hidden:
   field_region: true
   field_series: true
   field_technologies: true
-  links: true
