@@ -225,13 +225,12 @@ html {
 }
  */
 
-
  .group {
 
   .glide {
 
     .glide__arrow {
-      @apply border-none text-white hover:text-gray-200 shadow-none;
+      @apply border-none text-blue hover:text-gray-500 shadow-none;
 
       svg.icon {
         width: 48px;
@@ -246,7 +245,7 @@ html {
 
     .glide__arrow--right{
       right: -3rem
-    } 
+    }
 
   }
 
