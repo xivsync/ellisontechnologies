@@ -3861,13 +3861,13 @@ div.webform {
         flex-shrink: 1;
       }
       .slide__image {
-        flex-basis: 33.333333%;
+        flex-basis: 40%;
       }
       .slide__content {
         flex-grow: 1;
       }
       .slide__content {
-        flex-basis: 66.666667%;
+        flex-basis: 60%;
       }
     }
     &.style-horz-right .slide__inner {
@@ -3893,7 +3893,7 @@ div.webform {
         flex-shrink: 1;
       }
       .slide__image {
-        flex-basis: 33.333333%;
+        flex-basis: 40%;
       }
       @media (min-width: 768px) {
         .slide__image {
@@ -3904,7 +3904,7 @@ div.webform {
         flex-grow: 1;
       }
       .slide__content {
-        flex-basis: 66.666667%;
+        flex-basis: 60%;
       }
     }
     &__content {
@@ -5086,6 +5086,39 @@ form.webform-submission-newsletter-form-form {
   }
   &.diagonal-forward-slash-on::after {
     background: linear-gradient(to left top, transparent 50%, #E5E7EB 52%);
+  }
+}
+
+.group {
+  .glide {
+    .glide__arrow {
+      border-style: none;
+    }
+    .glide__arrow {
+      --tw-text-opacity: 1;
+      color: rgb(13 96 180 / var(--tw-text-opacity));
+    }
+    .glide__arrow {
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+    .glide__arrow:hover {
+      --tw-text-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-text-opacity));
+    }
+    .glide__arrow {
+      svg.icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .glide__arrow--left{
+      left: -3rem
+    }
+    .glide__arrow--right{
+      right: -3rem
+    }
   }
 }
 
@@ -6848,39 +6881,6 @@ html {
 
 }
  */
-
-.group {
-  .glide {
-    .glide__arrow {
-      border-style: none;
-    }
-    .glide__arrow {
-      --tw-text-opacity: 1;
-      color: rgb(13 96 180 / var(--tw-text-opacity));
-    }
-    .glide__arrow {
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-colored: 0 0 #0000;
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    }
-    .glide__arrow:hover {
-      --tw-text-opacity: 1;
-      color: rgb(107 114 128 / var(--tw-text-opacity));
-    }
-    .glide__arrow {
-      svg.icon {
-        width: 48px;
-        height: 48px;
-      }
-    }
-    .glide__arrow--left{
-      left: -3rem
-    }
-    .glide__arrow--right{
-      right: -3rem
-    }
-  }
-}
 
 .hover\:no-underline:hover {
   text-decoration-line: none !important;
