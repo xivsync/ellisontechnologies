@@ -12,7 +12,8 @@ Drupal.behaviors.onPageNavigation = {
         const enabled = element.innerHTML === 'Enabled' ? true : false;
         if (enabled) {
 
-          element.innerHTML = '';
+          // add contact us button first
+          element.innerHTML = `<a href="/form/contact" class="webform-dialog webform-dialog-normal button">Contact Us</a>`;
 
           const groupEls = document.getElementsByClassName('group');
           for (groupEl of groupEls) {

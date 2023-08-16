@@ -2419,6 +2419,9 @@ video {
     --tw-bg-opacity: 1;
     background-color: rgb(70 182 227 / var(--tw-bg-opacity));
   }
+  .button:hover {
+    text-decoration-line: none;
+  }
   .button:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -2464,14 +2467,20 @@ video {
   }
 }
 
-.component.button-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-  /* handles odd button bug on models page inside button group */
-  .cta-button.text__align--right {
-    display: inline;
+.component {
+  .button-group {
+    .field-on-page-navigation {
+      display: flex;
+    }
+    .field-on-page-navigation {
+      flex-direction: row;
+    }
+    .field-on-page-navigation {
+      align-items: center;
+    }
+    .field-on-page-navigation {
+      gap: 2rem;
+    }
   }
 }
 
@@ -6881,6 +6890,14 @@ html {
 
 }
  */
+
+/* handles  button group */
+
+.field-on-page-navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
 .hover\:no-underline:hover {
   text-decoration-line: none !important;

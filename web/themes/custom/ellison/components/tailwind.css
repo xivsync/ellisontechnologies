@@ -224,3 +224,8 @@ html {
 
 }
  */
+
+/* handles  button group */
+.field-on-page-navigation { 
+  @apply flex flex-row gap-4;
+}

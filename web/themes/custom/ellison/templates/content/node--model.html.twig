@@ -130,22 +130,9 @@
 
           <div class="component">
             
-            <div class="component__inner">
-
-              {% include "@molecules/cta/cta.twig" with {
-                classes: ['cta-button','text__align--right',],
-                align_class: 'text__align--right',
-                body: '',
-                webform_url: '/form/contact',
-                webform_text: 'Contact Us',
-                cta_button: '',
-              } %}
-
-              {% if has_buttons_content %}
-                {{ drupal_entity('paragraph', 1047) }}
-              {% endif %}
-
-            </div>
+            {% if has_buttons_content %}
+              {{ drupal_entity('paragraph', 1047) }}
+            {% endif %}
 
           </div>
 
