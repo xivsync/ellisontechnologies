@@ -8,11 +8,11 @@
       @apply flex md:flex-row md:gap-2 md:items-center;
 
       .slide__image {
-        @apply basis-2/5 shrink;
+        @apply basis-1/2 shrink;
       }
 
       .slide__content {
-        @apply basis-3/5 grow;
+        @apply basis-1/2 grow;
       }
 
     }
@@ -21,11 +21,11 @@
       @apply flex md:flex-row md:gap-2  md:items-center;
 
       .slide__image {
-        @apply basis-2/5 shrink md:order-last;
+        @apply basis-1/2 shrink md:order-last;
       }
 
       .slide__content {
-        @apply basis-3/5 grow;
+        @apply basis-1/2 grow;
       }
 
     }

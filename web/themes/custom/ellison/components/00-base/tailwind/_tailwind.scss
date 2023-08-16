@@ -2676,13 +2676,13 @@ div.webform {
         flex-shrink: 1;
       }
       .card__image {
-        flex-basis: 33.333333%;
+        flex-basis: 50%;
       }
       .card__content {
         flex-grow: 1;
       }
       .card__content {
-        flex-basis: 66.666667%;
+        flex-basis: 50%;
       }
     }
     &.style-horz-right .card__inner {
@@ -2708,7 +2708,7 @@ div.webform {
         flex-shrink: 1;
       }
       .card__image {
-        flex-basis: 33.333333%;
+        flex-basis: 50%;
       }
       @media (min-width: 768px) {
         .card__image {
@@ -2719,7 +2719,7 @@ div.webform {
         flex-grow: 1;
       }
       .card__content {
-        flex-basis: 66.666667%;
+        flex-basis: 50%;
       }
     }
     &__cta {
@@ -3870,13 +3870,13 @@ div.webform {
         flex-shrink: 1;
       }
       .slide__image {
-        flex-basis: 40%;
+        flex-basis: 50%;
       }
       .slide__content {
         flex-grow: 1;
       }
       .slide__content {
-        flex-basis: 60%;
+        flex-basis: 50%;
       }
     }
     &.style-horz-right .slide__inner {
@@ -3902,7 +3902,7 @@ div.webform {
         flex-shrink: 1;
       }
       .slide__image {
-        flex-basis: 40%;
+        flex-basis: 50%;
       }
       @media (min-width: 768px) {
         .slide__image {
@@ -3913,7 +3913,7 @@ div.webform {
         flex-grow: 1;
       }
       .slide__content {
-        flex-basis: 60%;
+        flex-basis: 50%;
       }
     }
     &__content {
@@ -4990,12 +4990,24 @@ form.webform-submission-newsletter-form-form {
   width:100%;
 }
 
+/*
+ *
+ * handles diagonal slash and tilt background colors
+ * ::before has a background gradient that is a diagonal line
+ * 50% and 52% "aliases" the diagonal line
+ * Light-blue and cyan are the same color
+ * Medium-blue and blue are same color
+ *
+ */
+
 .bg-color--light-blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     --tw-bg-opacity: 1;
     background-color: rgb(70 182 227 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before{
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
   &.diagonal-forward-slash-on::after {
@@ -5008,11 +5020,13 @@ form.webform-submission-newsletter-form-form {
 }
 
 .bg-color--blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     --tw-bg-opacity: 1;
     background-color: rgb(13 96 180 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::before{
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before{
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
   &.diagonal-forward-slash-on::after {
@@ -5027,11 +5041,13 @@ form.webform-submission-newsletter-form-form {
 /* deprecated now blue */
 
 .bg-color--medium-blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     --tw-bg-opacity: 1;
     background-color: rgb(13 96 180 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
   &.diagonal-forward-slash-on::after {
@@ -5044,11 +5060,13 @@ form.webform-submission-newsletter-form-form {
 }
 
 .bg-color--dark-blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     background: linear-gradient(to right bottom, transparent 50%, #1e2943 52%);
   }
   &.diagonal-forward-slash-on::after {
@@ -5063,11 +5081,13 @@ form.webform-submission-newsletter-form-form {
 /* deprecated now light blue */
 
 .bg-color--cyan {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     --tw-bg-opacity: 1;
     background-color: rgb(70 182 227 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
   &.diagonal-forward-slash-on::after {

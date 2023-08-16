@@ -123,8 +123,18 @@
   width:100%;
 }
 
+/*
+ *
+ * handles diagonal slash and tilt background colors
+ * ::before has a background gradient that is a diagonal line
+ * 50% and 52% "aliases" the diagonal line
+ * Light-blue and cyan are the same color
+ * Medium-blue and blue are same color
+ *
+ */
 .bg-color--light-blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before{
     @apply bg-light-blue;
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
@@ -136,7 +146,8 @@
 }
 
 .bg-color--blue {
-  &.diagonal-forward-slash-on::before{
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before{
     @apply bg-blue;
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
@@ -149,7 +160,8 @@
 
 /* deprecated now blue */
 .bg-color--medium-blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     @apply bg-medium-blue;
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
@@ -161,7 +173,8 @@
 }
 
 .bg-color--dark-blue {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     @apply bg-dark-blue;
     background: linear-gradient(to right bottom, transparent 50%, #1e2943 52%);
   }
@@ -174,7 +187,8 @@
 
 /* deprecated now light blue */
 .bg-color--cyan {
-  &.diagonal-forward-slash-on::before {
+  &.diagonal-forward-slash-on::before,
+  &.tilt-back-slash-on::before {
     @apply bg-light-blue;
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
