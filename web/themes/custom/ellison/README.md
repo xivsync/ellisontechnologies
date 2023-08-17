@@ -1,14 +1,22 @@
-# Ellison
+# Ellison Technologies
 
-This is a theme built with Storybook, Tailwind, Components, and Twig.
+This is a theme built with Storybook, Tailwind, Components, and Twig hosted by Pantheon.
+
+## Approach to ellisontechnologies
+
+@todo
 
 ## Pantheon
 
 Ellison Technologies uses Pantheon, it should be noted that Code move from Dev to Live. But Databases and Files move down from Live to Dev. It is recommended to keep Dev and Test up to date with Live to make updating configurations easier.
 
-## Create D10 sites
+## Environments - Dev, Test, Live
 
-This process requires Composer version 2.2 and uses Pantheon's current PHP version.
+@todo
+
+## Get ellisiontechnolgies repo from Pantheon
+
+This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
 
 https://getcomposer.org/doc/01-basic-usage.md
 
@@ -18,13 +26,21 @@ Clone the site locally with Git.
 
 https://docs.pantheon.io/guides/git/git-config#clone-your-site-codebase
 
+Example:
+
 `git clone ssh://codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7@codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7.drush.in:2222/~/repository.git -b master ellisontechnologies`
 
 You will get ONLY the files used to customize Drupal 10. You will need to now install D10 in order to develop locally.
 
 https://docs.pantheon.io/drupal-from-dist#add-files-and-folders
 
-Enter the root directory of your repo. Then run ALL following Composer command line commands.
+### --- @TODO: Test to see if below is needed.
+
+Enter the root directory of your repo.
+
+`cd ellisontechnologies`
+
+Then run ALL following Composer command line commands.
 
 Copy the upstream-configuration folder to your site:
 
@@ -33,6 +49,8 @@ Copy the upstream-configuration folder to your site:
 Copy the pantheon.upstream.yml file to your site:
 
 `cp  /drupal-composer-managed-path/pantheon-upstream.yml .
+
+Make the config directory
 
 `mkdir -p config .`
 
@@ -44,11 +62,13 @@ Update settings.php
 
 https://docs.pantheon.io/drupal-from-dist#update-settingsphp
 
-Initialize, push and test
+Initialize, push and test.
 
 https://docs.pantheon.io/drupal-from-dist#initialize-push-and-test
 
 Watch the build in the Dev dashboard -- if it turns "red" it means there was a build issue. Check the logs to identify the problem.
+
+### --- @endtodo
 
 ## Develop locally using DDEV
 
@@ -110,7 +130,7 @@ Tailwind CSS works by scanning the themes Templates and Component folders findin
 
 `/ellison/components/tailwind/_tailwind.scss`
 
-## Workflow
+## Development Workflow
 
 To build the `_tailwind.scss file`, in the theme root folder run this **Tailwind CLI** command to generate the css file.
 
@@ -130,7 +150,7 @@ Build the production theme
 
 `npm run build --production`
 
-@todo add watch
+@todo add `npm run delevelop`
 
 ### Documentation
 
@@ -141,8 +161,38 @@ Build the production theme
 [storybook.js.org](https://storybook.js.org/)
 
 [tailwindcss.com](https://tailwindcss.com/)
-### Usage
+
+### Paragraph Library resusable components
+
+If paragraph components are `promoted to library`, then they can be reused elsewhere including directly in Twig templates.
+
+To change a library paragraph is to make a change to all instances.
+
+If needed, a Library paragraph can be `unlinked`. Then changes are isolated to that instance of the paragraph.
+
+Paragraphs in the library are used in the twig templates and titled **Code Component:**.
+
+The libarary has many re-used components, so follow this naming convention:
+
+* Basic Page Component: a paragraph reused on basic pages.
+* Code Component: a paragraph that is used in Twig templates.
+* Model Component: a paragraph that is used on model pages. All model compents have an ID taken from the legacy site.
+
+The workflow for promoting a library item and then re-using it is as follows:
+
+* Find a model (or basic page)
+* Create the first instance of the componet to be re-used
+* Save the page
+* Now on that component you can `promote to library`
+* Save the page
+* Goto Conent > Paragraphs and you should see your component listed with a garbage title
+* Edit component and add a title following the above guidelines
+* Save component
+* Now you can go to the next model (or basic page) and add a re-usable library component by searching for the title (see above title)
+* Save page
 
 ## Author
+
+Tim Bednar is the initial developer for ellisontechnologies site, theme, and custom modules.
 
 Emulsify&reg; is a product of [Four Kitchens &mdash; We make BIG websites](https://fourkitchens.com).
