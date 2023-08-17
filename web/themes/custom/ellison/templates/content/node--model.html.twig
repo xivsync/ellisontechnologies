@@ -173,7 +173,7 @@
       'field_technologies'
     ) }}
 
-    {% if (has_build_a_quote or has_parts_content or has_solution_content) and has_components == false %}
+    {% if (has_build_a_quote or has_parts_content or has_solution_content) %}
       <div class="components">
 
         {# Build a Quote Paragraph Library Entity = 618 #}
@@ -183,14 +183,14 @@
 
         {# Accessory Paragraph Library Entity = 414 #}
         {% if has_parts_content and has_components == false %}
-          <div class="component remove-mb">
+          <div class="component">
             {{ drupal_entity('paragraph', 415) }}
           </div>
         {% endif %}
 
         {# Turnkey Paragraph Library Entity = 418 #}
         {% if has_solution_content and has_components == false %}
-          <div class="component remove-mb">
+          <div class="component">
             {{ drupal_entity('paragraph', 418) }}
           </div>
         {% endif %}
