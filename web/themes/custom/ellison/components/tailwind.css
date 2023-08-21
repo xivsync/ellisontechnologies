@@ -32,7 +32,7 @@
 @import './03-organisms/slides/slides.css';
 
 html {
-  font-size: 18px;
+  font-size: 16px; /* 1rem = 16px */
 }
 
 
@@ -145,6 +145,11 @@ html {
 
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;
+    font-weight: 800;
+  }
+
+  strong {
+    font-weight: 800;
   }
 
   ul {
@@ -158,6 +163,39 @@ html {
   ol {
     @apply list-decimal list-outside;
   }
+  
+  /* handles link text styles in CKEditor
+   *
+   * a.button|Button Default
+   * a.button-light-blue|Button Light Blue
+   * a.button-white|Button White
+   * a.link-light-blue|Link Light Blue
+   * a.link-white| Link White
+   * 
+   */
+
+  a.link {
+
+    &-light-blue,
+    &-light-blue strong {
+      @apply text-light-blue hover:text-light-blue no-underline hover:underline;
+    }
+
+    &-light-blue::after {
+      content: " »";
+    }
+
+    &-white,
+    &-white strong {
+      @apply text-white hover:text-white no-underline hover:underline;
+    }
+
+    &-white::after {
+      content: " »";
+    }
+
+  }
+
 }
 
 .text-long :last-child {

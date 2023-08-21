@@ -113,13 +113,15 @@
           </div>
         {% endif %}
 
+        {% if card__footer | render %}
+          <div class="card__footer">
+            {{ card__footer }}
+          </div>
+        {% endif %}
+
       </div>
 
-      {% if card__footer | render %}
-        <div class="card__footer">
-          {{ card__footer }}
-        </div>
-      {% endif %}
+
 
       {% if webform_url | render %}
         <div class="card__cta card__cta-webform">

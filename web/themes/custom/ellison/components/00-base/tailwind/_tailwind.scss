@@ -2652,6 +2652,12 @@ div.webform {
       .card__inner--content {
         flex-direction: column;
       }
+      .card__inner--content {
+        gap: 2rem;
+      }
+      .card__header h2 {
+        margin-bottom: 0px;
+      }
     }
     &.style-horz-left .card__inner {
       display: flex;
@@ -4529,6 +4535,10 @@ form.webform-submission-newsletter-form-form {
     padding-top: 4rem;
   }
   form.webform-submission-newsletter-form-form {
+    .form-item__textfield {
+      --tw-text-opacity: 1;
+      color: rgb(55 65 81 / var(--tw-text-opacity));
+    }
     #edit-actions-submit {
       border-radius: 9999px !important;
     }
@@ -6186,7 +6196,8 @@ form.webform-submission-newsletter-form-form {
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
+  /* 1rem = 16px */
 }
 
 .sr-only {
@@ -6818,6 +6829,10 @@ html {
 .prose {
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;
+    font-weight: 800;
+  }
+  strong {
+    font-weight: 800;
   }
   ul {
     list-style-position: outside;
@@ -6834,6 +6849,59 @@ html {
   }
   ol {
     list-style-type: decimal;
+  }
+  /* handles link text styles in CKEditor
+   *
+   * a.button|Button Default
+   * a.button-light-blue|Button Light Blue
+   * a.button-white|Button White
+   * a.link-light-blue|Link Light Blue
+   * a.link-white| Link White
+   * 
+   */
+  a.link {
+    &-light-blue,
+    &-light-blue strong {
+      --tw-text-opacity: 1;
+      color: rgb(70 182 227 / var(--tw-text-opacity));
+    }
+    &-light-blue,
+    &-light-blue strong {
+      text-decoration-line: none;
+    }
+    &-light-blue:hover,
+    &-light-blue strong:hover {
+      --tw-text-opacity: 1;
+      color: rgb(70 182 227 / var(--tw-text-opacity));
+    }
+    &-light-blue:hover,
+    &-light-blue strong:hover {
+      text-decoration-line: underline;
+    }
+    &-light-blue::after {
+      content: " »";
+    }
+    &-white,
+    &-white strong {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+    &-white,
+    &-white strong {
+      text-decoration-line: none;
+    }
+    &-white:hover,
+    &-white strong:hover {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+    &-white:hover,
+    &-white strong:hover {
+      text-decoration-line: underline;
+    }
+    &-white::after {
+      content: " »";
+    }
   }
 }
 

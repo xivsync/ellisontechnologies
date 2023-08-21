@@ -34,9 +34,13 @@
       @apply flex flex-col h-full justify-between;
 
       .card__inner--content {
-        @apply flex flex-col;
+        @apply flex flex-col gap-8;
       }
 
+      .card__header h2 {
+        @apply mb-0;
+      }
+      
     }
 
     &.style-horz-left .card__inner {

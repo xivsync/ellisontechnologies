@@ -14,6 +14,14 @@ Ellison Technologies uses Pantheon, it should be noted that Code move from Dev t
 
 @todo
 
+## Visual Code Studio
+
+- Twig and Twig Language 2
+- Prettify
+- ES Lint
+- Drupal Syntax Highlighting
+- Tailwind CSS IntelliSense
+
 ## Get ellisiontechnolgies repo from Pantheon
 
 This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
@@ -105,6 +113,11 @@ Backup the Live site using Pantheon's dashboard and then download and you can re
 It is based on Emulsify which is an open-source tool for creating design systems with reusable components and clear guidelines for teams.
 
 Emulsify provides a Storybook component library using Tailwind and a Webpack development environment.
+
+- Base font-size is 16px or 1rem
+- Spacing typically is 2rem
+- Spacing between components uses `flex gap-8` then add `mb-8` when needed
+- Custom colors blue, light-blue, and dark-blue defined in tailwind.js
 
 ## Getting started
 
