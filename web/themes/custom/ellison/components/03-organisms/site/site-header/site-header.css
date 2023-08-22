@@ -46,6 +46,10 @@
         border-radius: 25px 0px 0px 25px;
       }
 
+      div#edit-actions {
+        height: 2.3rem;
+      }
+
       .form-submit {
         @apply h-9 w-9 bg-blue hover:bg-light-blue text-white;
         border-radius: 0px 25px 25px 0px;
