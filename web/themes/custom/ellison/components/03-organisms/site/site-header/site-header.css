@@ -1,16 +1,16 @@
 .header {
-  @apply p-3 flex flex-col items-center bg-gradient-to-b from-[#01172b] to-[#013664];
+  @apply p-6 flex flex-col items-center bg-gradient-to-b from-[#01172b] to-[#013664];
   /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
 
   &__inner {
-    @apply container flex flex-row flex-wrap justify-between gap-4;
+    @apply container flex flex-row flex-wrap justify-between gap-4 items-end;
   }
 
   &__branding {
     @apply basis-auto lg:basis-2/12 flex flex-col justify-center;
 
     img {
-      @apply w-28 p-0;
+      @apply w-36 p-0;
     }
 
   }

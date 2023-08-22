@@ -5652,7 +5652,7 @@ form.webform-submission-newsletter-form-form {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #013664 var(--tw-gradient-to-position);
   --tw-gradient-to-position:  ;
-  padding: 0.75rem;
+  padding: 1.5rem;
   /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
   &__inner {
     width: 100%;
@@ -5692,6 +5692,9 @@ form.webform-submission-newsletter-form-form {
     flex-wrap: wrap;
   }
   &__inner {
+    align-items: flex-end;
+  }
+  &__inner {
     justify-content: space-between;
   }
   &__inner {
@@ -5722,7 +5725,7 @@ form.webform-submission-newsletter-form-form {
   }
   &__branding {
     img {
-      width: 7rem;
+      width: 9rem;
     }
     img {
       padding: 0px;

@@ -12,7 +12,7 @@
 
     /* border-l-2 border-light-blue border-solid */
     .main-menu--sub {
-      @apply flex flex-col lg:absolute lg:top-12 lg:left-0 w-full lg:w-max lg:z-10 lg:bg-dark-blue p-4 gap-4 w-full lg:w-max;
+      @apply flex flex-col lg:absolute lg:top-[3.7rem] lg:left-0 w-full lg:w-max lg:z-10 lg:bg-dark-blue p-4 gap-4 w-full lg:w-max;
     }
 
     .main-menu--sub-1,
