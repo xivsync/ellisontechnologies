@@ -137,12 +137,15 @@
  */
 .bg-color--light-blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before{
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before{
     @apply bg-light-blue;
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
 
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     @apply bg-light-blue;
     background: linear-gradient(to left top, transparent 50%, #46B6E3 52%);
   }
@@ -150,12 +153,15 @@
 
 .bg-color--blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before{
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     @apply bg-blue;
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
 
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     @apply bg-blue;
     background: linear-gradient(to left top, transparent 50%, #0d60b4 52%);
   }
@@ -164,12 +170,15 @@
 /* deprecated now blue */
 .bg-color--medium-blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     @apply bg-medium-blue;
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
 
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     @apply bg-medium-blue;
     background: linear-gradient(to left top, transparent 50%, #0d60b4 52%);
   }
@@ -177,12 +186,15 @@
 
 .bg-color--dark-blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     @apply bg-dark-blue;
     background: linear-gradient(to right bottom, transparent 50%, #1e2943 52%);
   }
 
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     @apply bg-dark-blue;
     background: linear-gradient(to left top, transparent 50%, #1e2943 52%);
   }
@@ -204,12 +216,15 @@
 
 .bg-color--light-gray {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     @apply bg-gray-200;
     background: linear-gradient(to right bottom, transparent 50%, #E5E7EB 52%);
   }
 
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     @apply bg-gray-200;
     background: linear-gradient(to left top, transparent 50%, #E5E7EB 52%);
   }

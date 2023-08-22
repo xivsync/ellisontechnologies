@@ -5089,38 +5089,50 @@ form.webform-submission-newsletter-form-form {
 
 .bg-color--light-blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     --tw-bg-opacity: 1;
     background-color: rgb(70 182 227 / var(--tw-bg-opacity));
   }
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before{
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before{
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 52%);
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     --tw-bg-opacity: 1;
     background-color: rgb(70 182 227 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to left top, transparent 50%, #46B6E3 52%);
   }
 }
 
 .bg-color--blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     --tw-bg-opacity: 1;
     background-color: rgb(13 96 180 / var(--tw-bg-opacity));
   }
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before{
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     --tw-bg-opacity: 1;
     background-color: rgb(13 96 180 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to left top, transparent 50%, #0d60b4 52%);
   }
 }
@@ -5129,38 +5141,50 @@ form.webform-submission-newsletter-form-form {
 
 .bg-color--medium-blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     --tw-bg-opacity: 1;
     background-color: rgb(13 96 180 / var(--tw-bg-opacity));
   }
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right bottom, transparent 50%, #0d60b4 52%);
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     --tw-bg-opacity: 1;
     background-color: rgb(13 96 180 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to left top, transparent 50%, #0d60b4 52%);
   }
 }
 
 .bg-color--dark-blue {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
   }
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right bottom, transparent 50%, #1e2943 52%);
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to left top, transparent 50%, #1e2943 52%);
   }
 }
@@ -5188,19 +5212,25 @@ form.webform-submission-newsletter-form-form {
 
 .bg-color--light-gray {
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     --tw-bg-opacity: 1;
     background-color: rgb(229 231 235 / var(--tw-bg-opacity));
   }
   &.diagonal-forward-slash-on::before,
-  &.tilt-back-slash-on::before {
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right bottom, transparent 50%, #E5E7EB 52%);
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     --tw-bg-opacity: 1;
     background-color: rgb(229 231 235 / var(--tw-bg-opacity));
   }
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to left top, transparent 50%, #E5E7EB 52%);
   }
 }
