@@ -17,7 +17,7 @@
 .main-content {
 
   .button {
-    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2 px-4 no-underline hover:no-underline uppercase;
+    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
 
     &.has-icon {
       @apply inline-flex flex-row gap-2;

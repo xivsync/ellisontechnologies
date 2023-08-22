@@ -7,7 +7,7 @@
   }
 
   &__navigating {
-    @apply flex flex-col lg:flex-row text-white;
+    @apply flex flex-col lg:flex-row text-white gap-8 lg:gap-0;
 
     nav,
     div {
@@ -36,7 +36,7 @@
     @apply basis-auto flex flex-col shrink;
 
     img {
-      @apply w-40 lg:w-28 p-0;
+      @apply w-36 p-0;
     }
 
   }

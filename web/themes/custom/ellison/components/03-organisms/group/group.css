@@ -1,7 +1,7 @@
 .group {
 
   &__inner {
-    @apply flex flex-col gap-8;
+    @apply flex flex-col gap-8
   }
 
   &__items {
@@ -87,7 +87,9 @@
   &.tilt-back-slash-on {
     
     .group__inner {
+      @apply py-24;
       
+      /*
       > div:first-child {
         @apply pt-8;
       }
@@ -95,8 +97,9 @@
       > div:last-child {
         @apply pb-8;
       }
-    }
+      */
 
+    }
 
   }
 
@@ -109,7 +112,7 @@
   border:none;
   padding:0;
   margin:0;
-  height:60px;
+  height:90px;
   width:100%;
 }
 
@@ -119,7 +122,7 @@
   border:none;
   padding:0;
   margin:0;
-  height:60px;
+  height:90px;
   width:100%;
 }
 

@@ -2,14 +2,14 @@
   @apply flex flex-col gap-8;
 
   .component .group.diagonal-forward-slash-on.remove-mt {
-    margin-top: calc( (63px  + 2rem) * -1);
+    margin-top: calc( (93px  + 2rem) * -1);
   }
   .component .group.diagonal-forward-slash-on.remove-mb {
-    margin-bottom: calc( (63px  + 2rem) * -1);
+    margin-bottom: calc( (93px  + 2rem) * -1);
   }
   .component .group.diagonal-forward-slash-on.remove-my {
-    margin-top: calc( (63px  + 2rem) * -1);
-    margin-bottom: calc( (63px  + 2rem) * -1);
+    margin-top: calc( (93px  + 2rem) * -1);
+    margin-bottom: calc( (93px  + 2rem) * -1);
   }
 
   .component .group.tilt-back-slash-on.remove-mt {

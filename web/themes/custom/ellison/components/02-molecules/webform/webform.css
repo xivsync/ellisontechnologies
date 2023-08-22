@@ -138,7 +138,7 @@ form.webform-submission-form {
 .ui-dialog {
 
   .webform-button--submit{
-    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2 px-4 no-underline !important;
+    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
   }
 
 }
@@ -155,10 +155,10 @@ form.webform-submission-newsletter-form-form {
   }
 
   h2 {
-    @apply flex flex-row items-center justify-center gap-8;
+    @apply flex flex-col lg:flex-row items-center justify-center gap-8;
 
     a {
-      @apply text-blue bg-white border-none text-base hover:bg-light-blue hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-2 px-4 no-underline uppercase !important;
+      @apply text-blue bg-white border-none text-base hover:bg-light-blue hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 no-underline uppercase;
     }
   
   }
@@ -171,7 +171,7 @@ form.webform-submission-newsletter-form-form {
     }
 
     #edit-actions-submit{
-      @apply text-blue bg-white border-none text-base hover:bg-light-blue hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-2 px-4 no-underline uppercase !important;
+      @apply text-blue bg-white border-none text-base hover:bg-light-blue hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 no-underline uppercase;
     }
 
   }

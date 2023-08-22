@@ -4,7 +4,7 @@
     @apply lg:z-50 lg:bg-none;
   }
   #glide {
-    @apply lg:mt-[-74px];
+    @apply lg:mt-[-102px];
     clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
     width: 100vw !important;
     background-color: #013664;
