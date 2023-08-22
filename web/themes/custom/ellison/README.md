@@ -22,6 +22,22 @@ Ellison Technologies uses Pantheon, it should be noted that Code move from Dev t
 - Drupal Syntax Highlighting
 - Tailwind CSS IntelliSense
 
+## Development workflow (assumes 1 developer working at a time)
+
+Please note that the `master` branch always goes from Dev to Test to Live. Database changes always go from Live to Test and Dev. You can not push database changes from a lower environment to Live.
+
+- `git fetch origin` then `git pull` the `master` branch (at this time ellisontechnolgies does not use Multidev environments)
+- update Test and Dev with Live databases
+- download the most recent backup of the Live environment and `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
+- `ddev cex` will export all the Live configs which should overwrite all your local configs
+- commit changes to `master`
+- when ready `git push`
+- DO NOT USE SMTP to make changes to the code
+- Test on Dev environment
+- When ready merge to Test
+- Now have the client UAT on Test
+- When ready merge to Production
+
 ## Get ellisiontechnolgies repo from Pantheon
 
 This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
@@ -98,11 +114,11 @@ Right now configs are manually sync'd using the Configuration > Development > Co
 
 ## To import database
 
-Backup the Live site using Pantheon's dashboard and then move the `.gz` file to the root folder and run `import-db`. This is more reliable than running `ddev pantheon pull`.
+Backup the Live site using Pantheon's dashboard and then move the `.gz` or `.sql` file to the root folder and run `import-db`. This is more reliable than running `ddev pantheon pull`.
 
 https://ddev.readthedocs.io/en/latest/users/usage/database-management/
 
-`ddev import-db --src=ellisontechnologies_dev_2023-07-10T16-24-44_UTC_database.sql.gz`
+`ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
 
 ## To get files
 
