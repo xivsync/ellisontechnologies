@@ -22,6 +22,9 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+    fontFamily: {
+      'work-sans': ['Work Sans', 'sans-serif'],
+    },
     extend: {
       colors: {
         'light-blue': '#46B6E3', // also found #14bef0, #46b6e3, #0073e6, #3DB9E3
@@ -30,9 +33,6 @@ module.exports = {
         'dark-blue': '#1e2943',
         'darkest-blue': '#011729',
         'cyan': '#46B6E3', // deprecated in favor of light-blue
-      },
-      fontFamily: {
-        sans: ['Work Sans', 'sans-serif'],
       },
     },
   },
@@ -79,6 +79,7 @@ module.exports = {
     'text-align-left',
     'flex-row',
     'flex-col',
+    'font-work-sans',
     {
       pattern: /prose/,
     },

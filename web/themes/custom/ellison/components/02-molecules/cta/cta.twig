@@ -1,5 +1,3 @@
-{% set has_icon = false %}
-
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
@@ -17,7 +15,7 @@
     
     {% if webform_url %}
       <div class="cta-button__webform">
-        <a aria-role="button" href="{{ webform_url }}" class="webform-dialog webform-dialog-normal button {% if has_icon %}has-icon{% endif %}">
+        <a aria-role="button" href="{{ webform_url }}" class="webform-dialog webform-dialog-normal button">
           {{ webform_text }}
         </a>
       </div>
