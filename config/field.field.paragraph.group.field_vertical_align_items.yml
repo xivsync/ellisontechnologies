@@ -11,8 +11,8 @@ id: paragraph.group.field_vertical_align_items
 field_name: field_vertical_align_items
 entity_type: paragraph
 bundle: group
-label: 'Vertical Align Items'
-description: 'Not for use with "Display As Rows". Default is to top align items.'
+label: 'Vertically align components in this Group.'
+description: 'Not for use with "Display As Rows". Default is to top align items. This is useful when a group has an Image and Text component of different heights.'
 required: false
 translatable: false
 default_value: {  }

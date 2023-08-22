@@ -9,7 +9,7 @@ id: paragraph.group.field_diagonal_background
 field_name: field_diagonal_background
 entity_type: paragraph
 bundle: group
-label: 'Enable background forward diagonal'
+label: 'Enable forward diagonal background'
 description: 'Switch on to skew background as a forward diagonal.'
 required: false
 translatable: false

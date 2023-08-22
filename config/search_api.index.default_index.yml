@@ -117,7 +117,9 @@ datasource_settings:
   'entity:node':
     bundles:
       default: true
-      selected: {  }
+      selected:
+        - spec
+        - webform
     languages:
       default: true
       selected: {  }

@@ -12,7 +12,7 @@ id: paragraph.slider.field_group
 field_name: field_group
 entity_type: paragraph
 bundle: slider
-label: 'Slide desk'
+label: 'Slide Deck'
 description: 'Add slides to your deck.'
 required: true
 translatable: false

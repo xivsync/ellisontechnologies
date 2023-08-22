@@ -1,0 +1,21 @@
+uuid: bb400f51-8ff1-4549-931e-cd3764b3af86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_forward_slash_tilt
+    - paragraphs.paragraphs_type.group
+id: paragraph.group.field_enable_forward_slash_tilt
+field_name: field_enable_forward_slash_tilt
+entity_type: paragraph
+bundle: group
+label: 'Enable top backward diagonal background tilt'
+description: 'Switch on to tilt the top as a backward diagonal.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: tilt-forward-slash-on
+  off_label: tilt-forward-slash-off
+field_type: boolean
