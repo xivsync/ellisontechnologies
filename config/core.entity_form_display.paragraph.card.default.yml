@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.card.field_card_style
     - field.field.paragraph.card.field_content
     - field.field.paragraph.card.field_cta_button
+    - field.field.paragraph.card.field_cta_button_style
     - field.field.paragraph.card.field_footer
     - field.field.paragraph.card.field_header
     - field.field.paragraph.card.field_media_image
@@ -28,6 +29,7 @@ third_party_settings:
         - field_header
         - field_content
         - field_footer
+        - group_cta_button
       label: Content
       region: content
       parent_name: ''
@@ -43,7 +45,6 @@ third_party_settings:
       children:
         - field_background_color
         - field_card_style
-        - field_align_text
       label: Options
       region: content
       parent_name: ''
@@ -55,28 +56,17 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
-    group_cta_for_webform:
-      children:
-        - field_webform_cta_text
-        - field_webform
-      label: 'CTA for Webform'
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: 'Cannot be used with CTA Button.'
-        required_fields: true
     group_cta_button:
       children:
+        - field_align_text
+        - field_cta_button_style
         - field_cta_button
+        - field_webform_cta_text
+        - field_webform
       label: 'CTA Button'
       region: content
-      parent_name: ''
-      weight: 1
+      parent_name: group_content
+      weight: 6
       format_type: fieldset
       format_settings:
         classes: ''
@@ -117,11 +107,17 @@ content:
     third_party_settings: {  }
   field_cta_button:
     type: link_default
-    weight: 2
+    weight: 5
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_cta_button_style:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_footer:
     type: text_textarea

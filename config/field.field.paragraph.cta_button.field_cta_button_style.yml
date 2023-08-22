@@ -1,20 +1,20 @@
-uuid: c210f495-3c8a-47d8-845d-350e3cd0c554
+uuid: 1dfd48c4-4758-4421-8416-7d3bed42ac12
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_align_text
+    - field.storage.paragraph.field_cta_button_style
     - paragraphs.paragraphs_type.cta_button
   module:
     - options
-id: paragraph.cta_button.field_align_text
-field_name: field_align_text
+id: paragraph.cta_button.field_cta_button_style
+field_name: field_cta_button_style
 entity_type: paragraph
 bundle: cta_button
-label: 'CTA Button Alignment'
+label: 'CTA Button Style'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
