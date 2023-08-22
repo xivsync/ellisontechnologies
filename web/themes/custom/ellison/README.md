@@ -26,6 +26,9 @@ Ellison Technologies uses Pantheon, it should be noted that Code move from Dev t
 
 Please note that the `master` branch always goes from Dev to Test to Live. Database changes always go from Live to Test and Dev. You can not push database changes from a lower environment to Live.
 
+- open root folder
+- `colima start --dns 1.1.1.1` (use colima rather than Docker Desktop)
+- ddev start
 - `git fetch origin` then `git pull` the `master` branch (at this time ellisontechnolgies does not use Multidev environments)
 - update Test and Dev with Live databases
 - download the most recent backup of the Live environment and `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
