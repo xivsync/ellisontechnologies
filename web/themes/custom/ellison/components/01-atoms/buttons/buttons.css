@@ -16,9 +16,9 @@
 
 .main-content {
 
-  /* @todo make this a proper tailwind class and use it as @apply where button style is needed i.e. form submit */
+  /* find #BUTTON to find all button selectors taht need styling */
   .button {
-    @apply text-white bg-blue border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
+    @apply text-white bg-blue border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
 
     /* currently not used */
     &.has-icon {

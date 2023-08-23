@@ -56,9 +56,10 @@
     background_color | clean_class,
     (background_color) ? 'has-background-color' : '',
     card__style | clean_class,
-    'text__align--' ~ cta_style | clean_class,
   ])
 %}
+
+{% set cta_link_style_class = cta_button_style ? cta_button_style : 'button' %}
 
 <div {{ bem(card__base_class, card__modifiers, card__blockname, card__extra_classes) }}>
   
@@ -113,20 +114,22 @@
           </div>
         {% endif %}
 
-        {% if card__footer | render %}
-          <div class="card__footer">
-            {{ card__footer }}
-          </div>
-        {% endif %}
-
       </div>
 
+      <pre>button style: {{ cta_button_style }}</pre>
 
+      {% if card__footer | render %}
+        <div class="card__cta card__footer  cta-button {{ 'text__align--' ~ cta_align | clean_class }}">
+          <div class="cta-button__inner">
+            {{ card__footer }}
+          </div>
+        </div>
+      {% endif %}
 
       {% if webform_url | render %}
-        <div class="card__cta card__cta-webform">
-          <div class="cta-button__webform">
-            <a aria-role="button" href="{{ webform_url }}" class="webform-dialog webform-dialog-normal button">
+        <div class="card__cta card__cta-webform cta-button {{ 'text__align--' ~ cta_align | clean_class }}">
+          <div class="cta-button__inner">
+            <a aria-role="button" href="{{ webform_url }}" class="webform-dialog webform-dialog-normal {{ cta_link_style_class }}">
               {{ webform_text }}
             </a>
           </div>
@@ -134,15 +137,17 @@
       {% endif %}
 
       {% if card__link__url %}
-        <div class="card__cta card__cta-link">
-          {% include "@atoms/links/link/link.twig" with {
-            link_base_class: card__link__base_class|default('link'),
-            link_blockname: card__base_class,
-            link_extra_classes: 'button',
-            link_attributes: card__link__attributes,
-            link_content: card__link__content,
-            link_url: card__link__url,
-          } %}
+        <div class="card__cta card__cta-link  cta-button {{ 'text__align--' ~ cta_align | clean_class }}">
+          <div class="cta-button__inner">
+            {% include "@atoms/links/link/link.twig" with {
+              link_base_class: card__link__base_class|default('link'),
+              link_blockname: card__base_class,
+              link_extra_classes: cta_link_style_class,
+              link_attributes: card__link__attributes,
+              link_content: card__link__content,
+              link_url: card__link__url,
+            } %}
+          </div>
         </div>
       {% endif %}
 

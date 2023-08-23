@@ -2387,7 +2387,7 @@ video {
 }
 
 .main-content {
-  /* @todo make this a proper tailwind class and use it as @apply where button style is needed i.e. form submit */
+  /* find #BUTTON to find all button selectors taht need styling */
   .button {
     border-radius: 9999px;
   }
@@ -2420,11 +2420,10 @@ video {
     text-decoration-line: none;
   }
   .button:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+    text-decoration-line: none;
   }
   .button:hover {
-    text-decoration-line: none;
+    opacity: 0.8;
   }
   .button:focus {
     outline: 2px solid transparent;
@@ -2819,11 +2818,10 @@ div.webform {
     text-decoration-line: none;
   }
   .cta-button__button a:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+    text-decoration-line: none;
   }
   .cta-button__button a:hover {
-    text-decoration-line: none;
+    opacity: 0.8;
   }
   .cta-button__button a:focus {
     outline: 2px solid transparent;
@@ -3630,6 +3628,7 @@ div.webform {
     }
     .collection {
       margin-top: auto;
+      /* #BUTTON */
       .views-field a {
         border-radius: 9999px;
       }
@@ -3662,11 +3661,10 @@ div.webform {
         text-decoration-line: none;
       }
       .views-field a:hover {
-        --tw-bg-opacity: 1;
-        background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+        text-decoration-line: none;
       }
       .views-field a:hover {
-        text-decoration-line: none;
+        opacity: 0.8;
       }
       .views-field a:focus {
         outline: 2px solid transparent;
@@ -4424,6 +4422,7 @@ form.webform-submission-form {
 }
 
 .ui-dialog {
+  /* #BUTTON */
   .webform-button--submit {
     border-radius: 9999px;
   }
@@ -4456,11 +4455,10 @@ form.webform-submission-form {
     text-decoration-line: none;
   }
   .webform-button--submit:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+    text-decoration-line: none;
   }
   .webform-button--submit:hover {
-    text-decoration-line: none;
+    opacity: 0.8;
   }
   .webform-button--submit:focus {
     outline: 2px solid transparent;
@@ -4520,6 +4518,7 @@ form.webform-submission-newsletter-form-form {
     }
   }
   h2 {
+    /* #BUTTON */
     a {
       border-radius: 9999px;
     }
@@ -4553,12 +4552,11 @@ form.webform-submission-newsletter-form-form {
       text-decoration-line: none;
     }
     a:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(70 182 227 / var(--tw-bg-opacity));
-    }
-    a:hover {
       --tw-text-opacity: 1;
       color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+    a:hover {
+      opacity: 0.8;
     }
     a:focus {
       outline: 2px solid transparent;
@@ -4603,6 +4601,7 @@ form.webform-submission-newsletter-form-form {
       --tw-text-opacity: 1;
       color: rgb(55 65 81 / var(--tw-text-opacity));
     }
+    /* #BUTTON */
     #edit-actions-submit {
       border-radius: 9999px;
     }
@@ -4636,12 +4635,11 @@ form.webform-submission-newsletter-form-form {
       text-decoration-line: none;
     }
     #edit-actions-submit:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(70 182 227 / var(--tw-bg-opacity));
-    }
-    #edit-actions-submit:hover {
       --tw-text-opacity: 1;
       color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+    #edit-actions-submit:hover {
+      opacity: 0.8;
     }
     #edit-actions-submit:focus {
       outline: 2px solid transparent;
@@ -6974,7 +6972,9 @@ html {
   ol {
     list-style-type: decimal;
   }
-  /* handles link text styles in CKEditor
+  /* #BUTTON
+   *
+   * handles link text styles in CKEditor
    *
    * a.button|Button Default
    * a.button-light-blue|Button Light Blue
@@ -7073,11 +7073,10 @@ html {
       text-decoration-line: none;
     }
     &-white:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+      text-decoration-line: none;
     }
     &-white:hover {
-      text-decoration-line: none;
+      opacity: 0.8;
     }
     &-white:focus {
       outline: 2px solid transparent;
@@ -7111,12 +7110,11 @@ html {
     }
     &-light-blue:hover,
     &-light-blue strong:hover {
-      --tw-text-opacity: 1;
-      color: rgb(70 182 227 / var(--tw-text-opacity));
+      text-decoration-line: underline;
     }
     &-light-blue:hover,
     &-light-blue strong:hover {
-      text-decoration-line: underline;
+      opacity: 0.8;
     }
     &-light-blue::after {
       content: " »";
@@ -7132,12 +7130,11 @@ html {
     }
     &-white:hover,
     &-white strong:hover {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity));
+      text-decoration-line: underline;
     }
     &-white:hover,
     &-white strong:hover {
-      text-decoration-line: underline;
+      opacity: 0.8;
     }
     &-white::after {
       content: " »";

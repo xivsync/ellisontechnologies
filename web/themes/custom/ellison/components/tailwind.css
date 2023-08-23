@@ -58,7 +58,7 @@ html {
   @apply flex flex-col gap-8 my-8 p-4 lg:p-0;
 
   a {
-    @apply text-blue no-underline hover:underline;
+    @apply text-blue no-underline;
   }
 
 }
@@ -165,7 +165,9 @@ html {
     @apply list-decimal list-outside;
   }
   
-  /* handles link text styles in CKEditor
+  /* #BUTTON
+   *
+   * handles link text styles in CKEditor
    *
    * a.button|Button Default
    * a.button-light-blue|Button Light Blue
@@ -183,7 +185,7 @@ html {
     }
 
     &-white {
-      @apply text-blue bg-white border-none hover:bg-light-blue focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
+      @apply text-blue bg-white border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
 
     }
 
@@ -193,7 +195,7 @@ html {
 
     &-light-blue,
     &-light-blue strong {
-      @apply text-light-blue hover:text-light-blue no-underline hover:underline;
+      @apply text-light-blue hover:opacity-80 no-underline;
     }
 
     &-light-blue::after {
@@ -202,7 +204,7 @@ html {
 
     &-white,
     &-white strong {
-      @apply text-white hover:text-white no-underline hover:underline;
+      @apply text-white hover:opacity-80 no-underline;
     }
 
     &-white::after {
