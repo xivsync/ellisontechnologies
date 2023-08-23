@@ -26,7 +26,7 @@ bundle: card
 mode: default
 content:
   field_align_text:
-    type: list_key
+    type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
