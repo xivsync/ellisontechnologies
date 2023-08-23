@@ -2786,6 +2786,7 @@ div.webform {
   .cta-button__inner {
     gap: 2rem;
   }
+  /* #BUTTON */
   .cta-button__button a {
     border-radius: 9999px;
   }
@@ -6688,9 +6689,6 @@ html {
   a {
     text-decoration-line: none;
   }
-  a:hover {
-    text-decoration-line: underline;
-  }
 }
 
 /* handles search results page without template changes */
@@ -7110,10 +7108,6 @@ html {
     }
     &-light-blue:hover,
     &-light-blue strong:hover {
-      text-decoration-line: underline;
-    }
-    &-light-blue:hover,
-    &-light-blue strong:hover {
       opacity: 0.8;
     }
     &-light-blue::after {
@@ -7127,10 +7121,6 @@ html {
     &-white,
     &-white strong {
       text-decoration-line: none;
-    }
-    &-white:hover,
-    &-white strong:hover {
-      text-decoration-line: underline;
     }
     &-white:hover,
     &-white strong:hover {
