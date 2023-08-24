@@ -158,11 +158,9 @@ form.webform-submission-newsletter-form-form {
   h2 {
     @apply flex flex-col lg:flex-row items-center justify-center gap-8;
 
-    /* #BUTTON */
-    a {
-      @apply text-blue bg-white border-none text-base hover:opacity-80 hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 no-underline uppercase;
+    a.button-white {
+      @apply text-base !important;
     }
-  
   }
 
   form.webform-submission-newsletter-form-form {
@@ -172,9 +170,9 @@ form.webform-submission-newsletter-form-form {
       @apply text-gray-700;
     }
 
-    /* #BUTTON */
+    /* #BUTTON a.button-white */
     #edit-actions-submit{
-      @apply text-blue bg-white border-none text-base hover:opacity-80 hover:text-white focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 no-underline uppercase;
+      @apply text-blue bg-white border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
     }
 
   }
