@@ -5882,6 +5882,11 @@ form.webform-submission-newsletter-form-form {
       width: max-content;
     }
   }
+  @media (min-width: 1024px) {
+    &__navigating {
+      align-items: center;
+    }
+  }
   &__navigating {
     &.expanded {
       display: flex;
@@ -5957,7 +5962,7 @@ form.webform-submission-newsletter-form-form {
       }
       @media (min-width: 1024px) {
         .form-search {
-          width: 8rem;
+          width: 13rem;
         }
       }
       .form-search {

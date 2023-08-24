@@ -16,7 +16,7 @@
   }
 
   &__navigating {
-    @apply basis-auto hidden lg:flex flex-col grow items-start justify-end hidden w-[100vw] lg:w-max order-1 lg:order-none;
+    @apply basis-auto hidden lg:flex flex-col grow items-start justify-end hidden w-[100vw] lg:w-max order-1 lg:order-none lg:items-center;
 
     &.expanded {
       @apply flex;
@@ -42,7 +42,7 @@
       }
 
       .form-search {
-        @apply w-[85vw] md:w-[93vw] lg:w-32 h-9 border-none focus:ring-0;
+        @apply w-[85vw] md:w-[93vw] lg:w-[13rem] h-9 border-none focus:ring-0;
         border-radius: 25px 0px 0px 25px;
       }
 
