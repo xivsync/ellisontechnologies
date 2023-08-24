@@ -28,11 +28,15 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 
 - open root folder
 - `colima start --dns 1.1.1.1` (use colima rather than Docker Desktop)
-- ddev start
+- `ddev start`
+- `ddev drush user:login` will get you a onetime link to login as `admin` locally
 - `git fetch origin` then `git pull` the `master` branch (at this time ellisontechnolgies does not use Multidev environments)
 - update Test and Dev with Live databases
 - download the most recent backup of the Live environment and `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
 - `ddev cex` will export all the Live configs which should overwrite all your local configs
+- make changes
+- in the theme folder run `npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss` to build the `tailwind.scss` file
+- then in the theme folder run `npm run build` to build files including `tailwind.scss`
 - commit changes to `master`
 - when ready `git push`
 - DO NOT USE SMTP to make changes to the code
@@ -40,6 +44,10 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - When ready merge to Test
 - Now have the client UAT on Test
 - When ready merge to Production
+
+@todo review dev twig and file cache clear
+
+
 
 ## Get ellisiontechnolgies repo from Pantheon
 
