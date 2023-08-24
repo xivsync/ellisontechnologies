@@ -63,7 +63,7 @@ module.exports = {
     'text-xl',
     'text-2xl',
     'text-4xl',
-    'text-8xl',
+    'text-5xl',
     'max-w-none',
     'bg-light-blue',
     'bg-medium-blue',

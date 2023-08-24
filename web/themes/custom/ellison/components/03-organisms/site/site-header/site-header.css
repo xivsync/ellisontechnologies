@@ -106,7 +106,7 @@
   }
 
   h1.heading {
-    @apply text-white text-[2.5rem] font-bold uppercase drop-shadow-md shadow-black;
+    @apply text-white text-[3.5rem] font-bold uppercase drop-shadow-md shadow-black;
   }
 
 }
