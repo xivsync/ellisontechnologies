@@ -52,6 +52,8 @@
   ])
 %}
 
+{% set cta_link_style_class = cta_button_style ? cta_button_style : 'button' %}
+
 <div {{ bem(slide__base_class, slide__modifiers, slide__blockname, slide__extra_classes) }}>
   
   <div class="slide__inner">
@@ -114,11 +116,11 @@
       {% endif %}
 
       {% if slide__link__url %}
-        <div class="slide__cta slide__cta-link">
+        <div class="slide__cta slide__cta-link cta-button {{ 'text__align--' ~ cta_align | clean_class }}">
           {% include "@atoms/links/link/link.twig" with {
             link_base_class: slide__link__base_class|default('link'),
             link_blockname: slide__base_class,
-            link_extra_classes: 'button',
+            link_extra_classes: cta_link_style_class,
             link_attributes: slide__link__attributes,
             link_content: slide__link__content,
             link_url: slide__link__url,
