@@ -19,7 +19,7 @@
         @apply basis-2/3 grow;
 
         h2.heading a {
-          @apply text-xl font-semibold text-light-blue no-underline;
+          @apply text-blue hover:opacity-80 no-underline font-extrabold text-2xl;
         }
       }
 

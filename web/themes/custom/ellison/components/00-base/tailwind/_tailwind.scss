@@ -4615,28 +4615,33 @@ form.webform-submission-newsletter-form-form {
       }
       .card__content {
         h2.heading a {
-          font-size: 1.25rem;
-          line-height: 1.75rem;
+          font-size: 1.5rem;
+          line-height: 2rem;
         }
         h2.heading a {
-          font-weight: 600;
+          font-weight: 800;
         }
         h2.heading a {
           --tw-text-opacity: 1;
-          color: rgb(70 182 227 / var(--tw-text-opacity));
+          color: rgb(13 96 180 / var(--tw-text-opacity));
         }
         h2.heading a {
           text-decoration-line: none;
         }
+        h2.heading a:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
+  /* handles spacing for article and event teasers */
   .collection__item--teaser.collection__item--article,
   .collection__item--teaser.collection__item--event {
     .card__inner--content {
       gap: 0.5rem;
     }
   }
+  /* handles spacing for event teasers body */
   .collection__item--teaser.collection__item--event {
     .card__body {
       display: flex;
@@ -7039,6 +7044,30 @@ html {
     }
   }
   a.link {
+    &-default,
+    &-default strong {
+      font-weight: 800;
+    }
+    &-default,
+    &-default strong {
+      --tw-text-opacity: 1;
+      color: rgb(13 96 180 / var(--tw-text-opacity));
+    }
+    &-default,
+    &-default strong {
+      text-decoration-line: none;
+    }
+    &-default:hover,
+    &-default strong:hover {
+      opacity: 0.8;
+    }
+    &-default::after {
+      content: " »";
+    }
+    &-light-blue,
+    &-light-blue strong {
+      font-weight: 800;
+    }
     &-light-blue,
     &-light-blue strong {
       --tw-text-opacity: 1;
@@ -7054,6 +7083,10 @@ html {
     }
     &-light-blue::after {
       content: " »";
+    }
+    &-white,
+    &-white strong {
+      font-weight: 800;
     }
     &-white,
     &-white strong {
