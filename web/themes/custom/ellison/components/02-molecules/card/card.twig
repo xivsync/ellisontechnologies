@@ -61,6 +61,8 @@
 
 {% set cta_link_style_class = cta_button_style ? cta_button_style : 'button' %}
 
+{%set prose_class = prose_setting ? prose_setting : 'prose' %}
+
 <div {{ bem(card__base_class, card__modifiers, card__blockname, card__extra_classes) }}>
   
   <div class="card__inner">
@@ -71,7 +73,7 @@
     {% endif %}
 
     {# Content #}
-    <div class="card__content prose max-w-none">
+    <div {{ bem('card__content', [], '', [prose_class,'max-w-none']) }}">
 
       <div class="card__inner--content">
         {# Header #}

@@ -71,14 +71,18 @@
  */
 #}
 
+{% set has_image = content.field_image | render ? true : false %}
+
 {% embed "@molecules/card/card.twig" with {
+  has_image: has_image,
+  prose_setting: 'not-prose',
   card__extra_classes: ['extra-class'],
   card__heading: node.title[0].value,
   card__body: content.body.0,
   card__link__url: content.url,
   card__base_class: 'item',
   card__blockname: 'collection',
-  card__modifiers: ['teaser'],
+  card__modifiers: ['teaser','article'],
   card__extra_classes: ['display-as-row','item'],
 } %}
   {% block card__img %}

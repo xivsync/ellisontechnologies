@@ -75,6 +75,7 @@
 
 {% embed "@molecules/card/card.twig" with {
   has_image: has_image,
+  prose_setting: 'not-prose',
   card__extra_classes: ['extra-class'],
   card__heading: node.title[0].value,
   card__body: content,
@@ -82,7 +83,7 @@
   card__link__content: 'Learn More',
   card__base_class: 'item',
   card__blockname: 'collection',
-  card__modifiers: ['teaser'],
+  card__modifiers: ['teaser','event'],
   card__extra_classes: ['display-as-row','card','card-event'],
 } %}
   {% block card__img %}

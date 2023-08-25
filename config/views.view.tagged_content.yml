@@ -235,8 +235,18 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_more: false
+      use_more_always: false
+      use_more_text: more
+      link_display: custom_url
+      link_url: /news
       header: {  }
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -252,6 +262,25 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      defaults:
+        use_more: true
+        use_more_always: true
+        use_more_text: true
+        footer: false
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p class="text-align-right mb-0"><strong><a class="link-light-blue" href="/news">View All News</a></strong></p>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
       block_description: 'News Promoted to frontpage'
     cache_metadata:
@@ -367,8 +396,30 @@ display:
         groups:
           1: AND
       defaults:
+        use_more: true
+        use_more_always: true
+        use_more_text: true
+        link_display: false
+        link_url: false
         filters: false
         filter_groups: false
+        footer: false
+      link_display: custom_url
+      link_url: /about/events
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p class="text-align-right mb-0"><strong><a class="link-light-blue" href="/about-us/events">View All Events</a></strong></p>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
       block_description: 'Events Promoted to frontpage'
     cache_metadata:
