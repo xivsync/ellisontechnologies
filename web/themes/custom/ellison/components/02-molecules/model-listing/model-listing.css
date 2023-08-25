@@ -4,6 +4,11 @@
 
 .model-listing {
 
+  /* handles spacing between stacks of blocks */
+  .block__items {
+    @apply flex flex-col gap-8;
+  }
+
   /* handles brand */
   .taxonomy__term--brands {
     @apply flex flex-row gap-8;
