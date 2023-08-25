@@ -6464,8 +6464,21 @@ html {
   padding: 1rem !important;
 }
 
+.px-8 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
 .pb-0 {
   padding-bottom: 0px !important;
+}
+
+.pl-8 {
+  padding-left: 2rem !important;
+}
+
+.pr-8 {
+  padding-right: 2rem !important;
 }
 
 .font-work-sans {
@@ -7213,20 +7226,5 @@ html {
   .dark\:hover\:bg-gray-700:hover {
     --tw-bg-opacity: 1 !important;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity)) !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:px-8 {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-
-  .lg\:pl-8 {
-    padding-left: 2rem !important;
-  }
-
-  .lg\:pr-8 {
-    padding-right: 2rem !important;
   }
 }

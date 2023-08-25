@@ -82,9 +82,9 @@ module.exports = {
     'font-work-sans',
     'mb-0',
     'pb-0',
-    'lg:pl-8',
-    'lg:pr-8',
-    'lg:px-8',
+    'pl-8',
+    'pr-8',
+    'px-8',
     {
       pattern: /prose/,
     },
