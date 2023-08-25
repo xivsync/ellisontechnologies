@@ -2,6 +2,10 @@
 
   .cta-button__inner {
     @apply flex flex-col gap-8 items-start;
+
+    .text-long {
+      @apply w-full;
+    }
   }
   .cta-button__button {
     @apply w-full;

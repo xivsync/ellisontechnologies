@@ -2786,6 +2786,11 @@ div.webform {
   .cta-button__inner {
     gap: 2rem;
   }
+  .cta-button__inner {
+    .text-long {
+      width: 100%;
+    }
+  }
   .cta-button__button {
     width: 100%;
   }
