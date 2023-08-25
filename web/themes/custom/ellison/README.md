@@ -47,8 +47,6 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 
 @todo review dev twig and file cache clear
 
-
-
 ## Get ellisiontechnolgies repo from Pantheon
 
 This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
@@ -201,6 +199,22 @@ Build the production theme
 [storybook.js.org](https://storybook.js.org/)
 
 [tailwindcss.com](https://tailwindcss.com/)
+
+## Content Creation
+
+### Use styles in CKEditor
+
+To avoid using `style="..."` in the Source of a text field, it is recommended to create a style. Styles are simply one or more classes that can be added to block elements using CKEditor.
+
+**For the developer,**
+
+- Add a style to both Basic and Full text editor formats `/admin/config/content/formats`
+- It is best to just add a Tailwind utilitiy like `mb-0`
+- Then make sure the Tailwind selector is added to the list in `tailwind.config.js` so it is added by postcss to your style.css file
+- The same process applies to `Link Styles` which allows you to add buttons or styled links.
+- Note once you add a style remember the class is hardcoded into the content.
+
+**For the content creator,** when creating content you can select 1 or more styles to a paragraph or heading. Creators should pay attention to NOT repeating the same type of style on an element. For instance, do not apply H2 Larger and H2 Largest or Paragraph Blue and Paragraph Light Blue. Apply 1 color and 1 size and one margin to an element.
 
 ### Paragraph Library resusable components
 
