@@ -1,8 +1,6 @@
 {% set base_class = 'header' %}
 
-<header
-  {{ bem(base_class) }}
->
+<header {{ bem(base_class, '', '', ['sticky','top-0']) }}>
   <div {{ bem('inner', [], base_class) }}>
     
     {% block header__branding %}

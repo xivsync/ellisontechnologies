@@ -13,7 +13,7 @@
 
     /* handles padding when there is background color */
     &.has-background-color .card__content {
-      @apply pb-8 px-8;
+      @apply pb-4 px-4;
     }
 
     &__image img {

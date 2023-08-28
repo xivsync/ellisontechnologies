@@ -152,7 +152,7 @@ form.webform-submission-newsletter-form-form {
 #group__newsletter {
 
   .group__inner {
-    @apply py-16 gap-0;
+    @apply py-16 gap-0 xl:px-4;
   }
 
   h2 {
@@ -172,7 +172,7 @@ form.webform-submission-newsletter-form-form {
 
     /* #BUTTON a.button-white */
     #edit-actions-submit{
-      @apply text-blue bg-white border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
+      @apply text-blue bg-white border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase text-base inline;
     }
 
   }

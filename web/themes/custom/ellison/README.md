@@ -24,6 +24,8 @@ Ellison Technologies uses Pantheon, it should be noted that Code move from Dev t
 
 ## Development workflow (assumes 1 developer working at a time)
 
+This assumes you've already completed the steps below.
+
 Please note that the `master` branch always goes from Dev to Test to Live. Database changes always go from Live to Test and Dev. You can not push database changes from a lower environment to Live.
 
 - open root folder
@@ -190,7 +192,94 @@ Build the production theme
 
 @todo add `npm run delevelop`
 
-### Documentation
+## Tailwind and CSS Approach
+
+### Ellison Breakpoints
+
+These are customized from the default Tailwind breakpoints.
+
+```
+'sm': '576px',
+// => @media (min-width: 640px) { ... }
+
+'md': '768px',
+// => @media (min-width: 768px) { ... }
+
+'lg': '992px',
+// => @media (min-width: 1024px) { ... }
+
+'xl': '1200px',
+// => @media (min-width: 1280px) { ... }
+
+'2xl': '1400px',
+// => @media (min-width: 1536px) { ... }
+```
+
+### Layout and Spacing
+
+The layout relies on `container mx-auto` to center and provide width to sections. The header, page, breadcrumbs, footer, newsletter and homepage slides all have an extra `xl:px-4` in order to match the size of the old site.
+
+The recommended way to space a component is to use `@apply flex gap-8` to provide internally spacing between elements. If needed add `@appy mb-8` to separate componponents.
+
+## CSS Standards
+
+CSS is based on Tailwind which is mobile first. The goal is to use BEM and `@apply`. For example,
+
+`<div class="component"> ... </div>`
+
+Using Tailwind you could style like this...
+
+`<div class="flex flex-col"> ... </div>`
+
+The preferred way to style this component is to use BEM and the `@apply`. Tailwind utility classes like `mb-8` are utilized by CKEditors custom styles, but otherwide in Twig use BEM and `@apply`.
+
+```
+.component {
+  @apply flex flex-col;
+}
+```
+
+The BEM Twig function accepts four arguments, only one of which is required.
+
+Simple block name:
+
+`h1 {{ bem('title') }}`
+
+This creates: `h1 class="title"`
+
+Block with modifiers (optional array allowing multiple modifiers):
+
+`h1 {{ bem('title', ['small', 'red']) }}`
+
+This creates: `h1 class="title title--small title--red"`
+
+Element with modifiers and block name (optional):
+
+`h1 {{ bem('title', ['small', 'red'], 'card') }}`
+
+This creates: `h1 class="card__title card__title--small card__title--red"`
+
+Element with block name, but no modifiers (optional):
+
+`h1 {{ bem('title', '', 'card') }}`
+
+This creates: `h1 class="card__title"`
+
+Element with modifiers, block name and extra classes (optional, in case you need non-BEM classes):
+
+`h1 {{ bem('title', ['small', 'red'], 'card', ['js-click', 'something-else']) }}`
+
+This creates: `h1 class="card__title card__title--small card__title--red js-click something-else"`
+
+Element with extra classes only (optional):
+
+`h1 {{ bem('title', '', '', ['js-click']) }}`
+
+This creates: `h1 class="title js-click"`
+
+## JS Standards
+
+## Documentation
 
 [docs.emulsify.info](https://docs.emulsify.info/)
 

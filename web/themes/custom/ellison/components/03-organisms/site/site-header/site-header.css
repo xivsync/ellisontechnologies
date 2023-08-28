@@ -3,7 +3,7 @@
   /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
 
   &__inner {
-    @apply container flex flex-row flex-wrap justify-between gap-4 items-end xl:px-16;
+    @apply container flex flex-row flex-wrap justify-between gap-4 items-end xl:px-4;
   }
 
   &__branding {

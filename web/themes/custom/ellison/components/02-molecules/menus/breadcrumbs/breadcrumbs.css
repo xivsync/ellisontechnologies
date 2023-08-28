@@ -1,6 +1,6 @@
 
 .pathfinding {
-  @apply container mx-auto;
+  @apply container mx-auto xl:px-4;
 }
 
 .breadcrumb {
