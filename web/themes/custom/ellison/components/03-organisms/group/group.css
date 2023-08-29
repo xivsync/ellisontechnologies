@@ -255,3 +255,23 @@
   }
 
  }
+
+ /*handles customizing home page group*/
+ #group__technology.group {
+
+  .group__inner {
+    @apply lg:py-0;
+
+    .group__item .image {
+      @apply lg:relative;
+
+      img.image {
+        @apply lg:h-[640px] lg:w-auto lg:absolute lg:z-50 lg:left-0;
+    
+      }
+
+    }
+
+  }
+
+ }
