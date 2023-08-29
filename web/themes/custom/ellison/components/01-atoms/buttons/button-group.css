@@ -3,7 +3,7 @@
   .button-group {
 
     .field-on-page-navigation {
-      @apply flex flex-row gap-8 items-center;
+      @apply flex flex-row flex-wrap gap-4 items-center;
     }
 
   }

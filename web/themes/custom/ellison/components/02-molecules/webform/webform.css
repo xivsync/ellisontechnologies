@@ -137,6 +137,10 @@ form.webform-submission-form {
 
 .ui-dialog {
 
+  .form-item__textfield {
+    @apply w-full;
+  }
+
   /* #BUTTON */
   .webform-button--submit{
     @apply text-white bg-blue border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;

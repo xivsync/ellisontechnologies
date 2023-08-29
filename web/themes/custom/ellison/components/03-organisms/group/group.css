@@ -53,6 +53,10 @@
       @apply mx-auto lg:mx-0 lg:w-full my-0;
     }
 
+    .video__name {
+      @apply hidden;
+    }
+
   }
 
 }

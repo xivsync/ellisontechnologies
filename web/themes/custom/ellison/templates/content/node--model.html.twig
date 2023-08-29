@@ -83,6 +83,8 @@
 
 {% set specs_model_list_count = drupal_view_result('list_of_specs_for_model', 'block_1') | length %}
 
+{% set models_in_series_count = drupal_view_result('series', 'block_1') | length %}
+
 {% set has_buttons_content = drupal_entity('paragraph', 1047) | render ? true : false %}
 
 {% set has_build_a_quote = content.field_enable_build_a_quote | render | striptags | trim == 'True' ? true : false %}
@@ -127,40 +129,42 @@
           <div class="component">
             {{ content.field_series }}
           </div>
-
-          <div class="component">
             
-            {% if has_buttons_content %}
+          {% if has_buttons_content %}
+            <div class="component  paragraph--1047">
               {{ drupal_entity('paragraph', 1047) }}
-            {% endif %}
-
-          </div>
-
-          <div class="component">
-            {{ drupal_view('series', 'block_1') }}
-          </div>
-
-          <div class="component">
-            <div class="specs">
-              {% if specs_model_list_count > 1 %}
-                {{ drupal_view('list_of_specs_for_model', 'block_1') }}
-              {% endif %}
             </div>
+          {% endif %}
+
+          <div class="component series--block-1">
+            {% if models_in_series_count > 1 %}
+              {{ drupal_view('series', 'block_1') }}
+            {% else %}
+              {{ label }}
+            {% endif %}
           </div>
+
+          {% if specs_model_list_count > 1 %}
+            <div class="component list-of-specs-for-model--block-1">
+              <div class="specs">
+                {{ drupal_view('list_of_specs_for_model', 'block_1') }}
+              </div>
+            </div>
+          {% endif %}
 
         </div>
       </div>
     </div>
 
     {% if series_model_list_count > 2 %}
-        <div class="components">
+        <div class="components list-cards-of-models-for-a-series--block-1">
           {{ drupal_view('list_cards_of_models_for_a_series', 'block_1') }}
         </div>
     {% endif %}
 
     {# Build a Quote Paragraph Library Entity = 618 #}
     {% if has_build_a_quote %}
-      <div class="components">
+      <div class="components paragraph--619">
         {{ drupal_entity('paragraph', 618) }}
       </div>
     {% endif %}

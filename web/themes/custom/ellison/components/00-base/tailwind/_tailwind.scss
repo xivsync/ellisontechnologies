@@ -2508,10 +2508,13 @@ video {
       flex-direction: row;
     }
     .field-on-page-navigation {
+      flex-wrap: wrap;
+    }
+    .field-on-page-navigation {
       align-items: center;
     }
     .field-on-page-navigation {
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 }
@@ -4416,6 +4419,9 @@ form.webform-submission-form {
 }
 
 .ui-dialog {
+  .form-item__textfield {
+    width: 100%;
+  }
   /* #BUTTON */
   .webform-button--submit {
     border-radius: 9999px;
@@ -4864,27 +4870,12 @@ form.webform-submission-newsletter-form-form {
   .component .group.tilt-back-slash-on.remove-mt {
     margin-top: -4rem;
   }
-  @media (min-width: 992px) {
-    .component .group.tilt-back-slash-on.remove-mt {
-      margin-bottom: -2rem;
-    }
-  }
   .component .group.tilt-back-slash-on.remove-mb {
     margin-bottom: -4rem;
-  }
-  @media (min-width: 992px) {
-    .component .group.tilt-back-slash-on.remove-mb {
-      margin-bottom: -2rem;
-    }
   }
   .component .group.tilt-back-slash-on.remove-my {
     margin-top: -4rem;
     margin-bottom: -4rem;
-  }
-  @media (min-width: 992px) {
-    .component .group.tilt-back-slash-on.remove-my {
-      margin-bottom: -2rem;
-    }
   }
 }
 
@@ -5007,6 +4998,9 @@ form.webform-submission-newsletter-form-form {
       .image img {
         width: 100%;
       }
+    }
+    .video__name {
+      display: none;
     }
   }
 }
