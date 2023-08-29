@@ -4515,20 +4515,25 @@ form.webform-submission-newsletter-form-form {
     flex-wrap: wrap;
   }
   form.webform-submission-newsletter-form-form {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   form.webform-submission-newsletter-form-form {
     padding-top: 4rem;
   }
   form.webform-submission-newsletter-form-form {
     .form-item__textfield {
+      width: 100%;
+    }
+    .form-item__textfield {
       --tw-text-opacity: 1;
       color: rgb(55 65 81 / var(--tw-text-opacity));
     }
-    /* #BUTTON a.button-white */
-    #edit-actions-submit {
-      display: inline;
+    @media (min-width: 992px) {
+      .form-item__textfield {
+        width: 30vw;
+      }
     }
+    /* #BUTTON a.button-white */
     #edit-actions-submit {
       border-radius: 9999px;
     }
@@ -4537,7 +4542,7 @@ form.webform-submission-newsletter-form-form {
     }
     #edit-actions-submit {
       --tw-bg-opacity: 1;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      background-color: rgb(70 182 227 / var(--tw-bg-opacity));
     }
     #edit-actions-submit {
       padding-top: 0.75rem;
@@ -4548,10 +4553,6 @@ form.webform-submission-newsletter-form-form {
       padding-right: 0.75rem;
     }
     #edit-actions-submit {
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-    #edit-actions-submit {
       font-weight: 700;
     }
     #edit-actions-submit {
@@ -4559,7 +4560,7 @@ form.webform-submission-newsletter-form-form {
     }
     #edit-actions-submit {
       --tw-text-opacity: 1;
-      color: rgb(13 96 180 / var(--tw-text-opacity));
+      color: rgb(255 255 255 / var(--tw-text-opacity));
     }
     #edit-actions-submit {
       text-decoration-line: none;
@@ -4581,7 +4582,7 @@ form.webform-submission-newsletter-form-form {
     }
     #edit-actions-submit:focus {
       --tw-ring-opacity: 1;
-      --tw-ring-color: rgb(70 182 227 / var(--tw-ring-opacity));
+      --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
     }
     @media (min-width: 768px) {
       #edit-actions-submit {
@@ -7042,11 +7043,10 @@ html {
       text-decoration-line: none;
     }
     &-light-blue:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(13 96 180 / var(--tw-bg-opacity));
+      text-decoration-line: none;
     }
     &-light-blue:hover {
-      text-decoration-line: none;
+      opacity: 0.8;
     }
     &-light-blue:focus {
       outline: 2px solid transparent;

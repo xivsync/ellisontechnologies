@@ -6,7 +6,7 @@ Drupal.behaviors.handleWebform = {
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
 
-    once('handleNewsLetterForm', '#group__newsletter h2 a', context).forEach(
+    once('handleNewsLetterForm', '#group__newsletter a.button-white', context).forEach(
 
       // found webform component
       function (element) {

@@ -164,15 +164,15 @@ form.webform-submission-newsletter-form-form {
   }
 
   form.webform-submission-newsletter-form-form {
-    @apply flex flex-row flex-wrap justify-start pt-16 hidden;
+    @apply flex flex-row flex-wrap pt-16 hidden justify-between;
 
     .form-item__textfield {
-      @apply text-gray-700;
+      @apply text-gray-700 w-full lg:w-[30vw];
     }
 
     /* #BUTTON a.button-white */
     #edit-actions-submit{
-      @apply text-blue bg-white border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase text-base inline;
+      @apply text-white bg-light-blue border-none hover:opacity-80 focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
     }
 
   }
