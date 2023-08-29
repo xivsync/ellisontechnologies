@@ -260,7 +260,7 @@
  #group__technology.group {
 
   .group__inner {
-    @apply lg:py-0;
+    @apply lg:py-12;
 
     .group__item .image {
       @apply lg:relative;
