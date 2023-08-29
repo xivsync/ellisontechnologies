@@ -1,9 +1,9 @@
 .footer {
-  @apply px-3 flex flex-col pt-16 pb-8 justify-center;
+  @apply px-3 flex flex-col pt-16 pb-4 justify-center;
   background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
 
   &__inner {
-    @apply container flex flex-col gap-8 mx-auto xl:px-4;
+    @apply container flex flex-col gap-4 mx-auto xl:px-4;
   }
 
   &__navigating {
@@ -83,7 +83,7 @@
     align-items: center;
 
     .footer__concenting__inner {
-      @apply container flex flex-col lg:flex-row lg:justify-between items-center py-8 px-3 gap-8 lg:gap-0;
+      @apply container flex flex-col lg:flex-row lg:justify-between items-center py-4 px-3 gap-8 lg:gap-0;
     }
 
     .footer__tos {

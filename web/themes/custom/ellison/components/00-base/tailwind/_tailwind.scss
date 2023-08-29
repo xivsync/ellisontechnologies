@@ -4467,8 +4467,8 @@ form.webform-submission-newsletter-form-form {
     gap: 0px;
   }
   .group__inner {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   @media (min-width: 1200px) {
     .group__inner {
@@ -5226,7 +5226,7 @@ form.webform-submission-newsletter-form-form {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
   &__inner {
     width: 100%;
@@ -5267,7 +5267,7 @@ form.webform-submission-newsletter-form-form {
     flex-direction: column;
   }
   &__inner {
-    gap: 2rem;
+    gap: 1rem;
   }
   .full-width-on &__inner {
     margin-left: auto;
@@ -5547,8 +5547,8 @@ form.webform-submission-newsletter-form-form {
       gap: 2rem;
     }
     .footer__concenting__inner {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
     .footer__concenting__inner {
       padding-left: 0.75rem;

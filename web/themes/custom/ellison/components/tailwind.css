@@ -181,7 +181,6 @@ html {
 
     &-light-blue {
       @apply text-white bg-light-blue border-none hover:bg-blue focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
-
     }
 
     &-white {
