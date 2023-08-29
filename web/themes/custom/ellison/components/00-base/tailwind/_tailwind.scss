@@ -7230,6 +7230,16 @@ html {
       line-height: 1.3;
     }
   }
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+  a {
+    text-decoration-line: none;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
   a.link {
     &-default,
     &-default strong {
@@ -7238,7 +7248,7 @@ html {
     &-default,
     &-default strong {
       --tw-text-opacity: 1;
-      color: rgb(13 96 180 / var(--tw-text-opacity));
+      color: rgb(31 41 55 / var(--tw-text-opacity));
     }
     &-default,
     &-default strong {
