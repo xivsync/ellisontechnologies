@@ -48,11 +48,13 @@
   set classes = [
     'js-form-item',
     'form-item',
+    'form-item--' ~ name | clean_class,
   ]
 %}
 {%
   set description_classes = [
     'form-item__description',
+    'form-item__description--' ~ name | clean_class,
     description_display == 'invisible' ? 'visually-hidden',
   ]
 %}

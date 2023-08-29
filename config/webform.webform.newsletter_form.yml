@@ -18,6 +18,12 @@ title: 'Newsletter form'
 description: '<p>Newsletter signup webform. Located in footer. Integrated with <strong>Salesforce Assignment Rule ID.</strong></p>'
 categories: {  }
 elements: |-
+  opt_in:
+    '#type': checkbox
+    '#title': 'I would like to receive occasional emails.'
+    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
+    '#title_display': inline
+    '#required': true
   email:
     '#title': 'Email Address'
     '#type': email
