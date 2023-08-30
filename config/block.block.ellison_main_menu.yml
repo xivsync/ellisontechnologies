@@ -13,7 +13,7 @@ _core:
 id: ellison_main_menu
 theme: ellison
 region: header
-weight: -7
+weight: -8
 provider: null
 plugin: 'system_menu_block:main'
 settings:
