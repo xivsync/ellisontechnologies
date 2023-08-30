@@ -3115,6 +3115,21 @@ div.webform {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
+    .sitewide-alert-block a {
+      display: flex !important;
+    }
+    .sitewide-alert-block a {
+      height: 100% !important;
+    }
+    .sitewide-alert-block a {
+      flex-direction: column !important;
+    }
+    .sitewide-alert-block a {
+      align-items: center !important;
+    }
+    .sitewide-alert-block a {
+      justify-content: center !important;
+    }
     a:hover {
       --tw-bg-opacity: 1;
       background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -6176,6 +6191,33 @@ form.webform-submission-newsletter-form-form {
   h1.heading {
     --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+}
+
+/* alerts default to fixed height to avoid CLS */
+
+.sitewide-alert-block {
+  display: flex;
+  height: 4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 182 227 / var(--tw-bg-opacity));
+}
+
+.sitewide-alert-block .block {
+  display: flex !important;
+  height: 100% !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.sitewide-alert-block .alert {
+  height: 100%;
+  &.sitewide-alert {
+    background-color: transparent;
   }
 }
 

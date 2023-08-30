@@ -1,5 +1,12 @@
 {% set base_class = 'header' %}
 
+{% set has_site_alert = drupal_block('sitewide_alert_block') | render ? true : false %}
+
+{% if has_site_alert %}
+  <div class="sitewide-alert-block">
+    {{ drupal_block('sitewide_alert_block') }}
+  </div>
+{% endif %}
 <header {{ bem(base_class, '', '', ['sticky','top-0']) }}>
   <div {{ bem('inner', [], base_class) }}>
     
