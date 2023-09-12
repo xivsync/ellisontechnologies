@@ -10,11 +10,11 @@ This is a theme built with Storybook, Tailwind, Components, and Twig hosted by P
 
 Ellison Technologies uses Pantheon, it should be noted that Code move from Dev to Live. But Databases and Files move down from Live to Dev. It is recommended to keep Dev and Test up to date with Live to make updating configurations easier.
 
-## Environments - Dev, Test, Live
+## Development
 
 @todo
 
-## Visual Code Studio
+### Visual Code Studio
 
 - Twig and Twig Language 2
 - Prettify
@@ -22,7 +22,7 @@ Ellison Technologies uses Pantheon, it should be noted that Code move from Dev t
 - Drupal Syntax Highlighting
 - Tailwind CSS IntelliSense
 
-## Development workflow (assumes 1 developer working at a time)
+### Daily workflow (assumes 1 developer working at a time)
 
 This assumes you've already completed the steps below.
 
@@ -47,9 +47,11 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - Now have the client UAT on Test
 - When ready merge to Production
 
-@todo review dev twig and file cache clear
+### @todo review dev twig and file cache clear
 
-## Get ellisiontechnolgies repo from Pantheon
+## How to develop locally
+
+### Get ellisiontechnolgies repo from Pantheon
 
 This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
 
@@ -103,9 +105,7 @@ https://docs.pantheon.io/drupal-from-dist#initialize-push-and-test
 
 Watch the build in the Dev dashboard -- if it turns "red" it means there was a build issue. Check the logs to identify the problem.
 
-### --- @endtodo
-
-## Develop locally using DDEV
+#### Develop locally using DDEV
 
 Now you can run `composer install`.
 
@@ -119,11 +119,11 @@ https://ddev.readthedocs.io/en/latest/users/providers/pantheon/
 
 When you `ddev pull pantheon` it should hook up everything. Then `ddev drush cr` and you should be ready to go.
 
-## Configs
+### Configs
 
 Right now configs are manually sync'd using the Configuration > Development > Configuration Sync > Import/Export. It is recommended that you develop using the latest database, and then use `ddev drush cex` to export any config changes you made locally to support your code changes.
 
-## To import database
+### To import database
 
 Backup the Live site using Pantheon's dashboard and then move the `.gz` or `.sql` file to the root folder and run `import-db`. This is more reliable than running `ddev pantheon pull`.
 
@@ -131,11 +131,35 @@ https://ddev.readthedocs.io/en/latest/users/usage/database-management/
 
 `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
 
-## To get files
+### To get files
 
 Backup the Live site using Pantheon's dashboard and then download and you can replace all the folders and files in `/web/sites/default/files/`. This will give you all the production images in your local environment. This is more reliable than running `ddev pull pantheon`.
 
-## Emulsify Drupal
+### Useful DDEV commands
+
+If you need to get a one time password from the dev environment.
+
+`ddev auth ssh` to your local container
+
+From there you can run Terminus Drush commands locally or on the Pantheon Dev environment.
+
+To login to Pantheon..
+
+`terminus auth:login --...machinetoken...`
+
+Then you can use your drush command telling it what site and environment,
+
+`terminus drush ellisontechnologies.dev user:login`
+
+If you are asked for your password, it refers to your Pantheon user and password. Or you can set up tokens.
+
+Expected output is just like if you `ddev drush user:login` locally except with terminus you can run drush commands in the dev environment.
+
+`http://dev-ellisontechnologies.pantheonsite.io/user/reset/1/1693431127/hjwrSk6lRdXqyvezneblbLAcLgBCWyWt3yXPLAqnPGY/login`
+
+You can now vist that link and login to Dev.
+
+## Emulsify Drupal Theme
 
 It is based on Emulsify which is an open-source tool for creating design systems with reusable components and clear guidelines for teams.
 
@@ -146,11 +170,13 @@ Emulsify provides a Storybook component library using Tailwind and a Webpack dev
 - Spacing between components uses `flex gap-8` then add `mb-8` when needed
 - Custom colors blue, light-blue, and dark-blue defined in tailwind.js
 
-## Getting started
+### Getting started with the Ellison Theme
 
-npm install
+`npm install`
 
-### Storybook
+@todo nvm and versions
+
+#### Storybook
 
 Storybook is a frontend tool that aids in the building UI components for Ellison. To build and view Storybook components,
 
@@ -164,19 +190,19 @@ http://localhost:6006/
 
 `npx chromatic --project-token=43d2cc2631ac`
 
-### Tailwind
+#### Tailwind
 
 Tailwind CSS works by scanning the themes Templates and Component folders finding the corresponding styles and then writing them to a static CSS file.
 
 `/ellison/components/tailwind/_tailwind.scss`
 
-## Development Workflow
+### Theme development overview
 
 To build the `_tailwind.scss file`, in the theme root folder run this **Tailwind CLI** command to generate the css file.
 
 Then in the theme root folder run this **NPM script** to generate the theme `/dist/css/style.css`. This is the file added to the global theme library. It includes Tailwind base (CSS reset), all the Tailwind styles found in Components and Templates, and all the Emulsify styles found also in Components and Templates.
 
-### Steps
+## Theme workflow
 
 Build the Tailwind file (@todo: eventually this should build the `style.css` file in the `/dist/` folder)
 
@@ -192,7 +218,7 @@ Build the production theme
 
 @todo add `npm run delevelop`
 
-## Tailwind and CSS Approach
+## CSS
 
 ### Ellison Breakpoints
 
@@ -221,7 +247,7 @@ The layout relies on `container mx-auto` to center and provide width to sections
 
 The recommended way to space a component is to use `@apply flex gap-8` to provide internally spacing between elements. If needed add `@appy mb-8` to separate componponents.
 
-## CSS Standards
+### CSS Standards
 
 CSS is based on Tailwind which is mobile first. The goal is to use BEM and `@apply`. For example,
 
@@ -277,9 +303,13 @@ Element with extra classes only (optional):
 
 This creates: `h1 class="title js-click"`
 
-## JS Standards
+## JS
 
-## Documentation
+- librareis
+- npm run build to get dist files built
+- js in component folders
+
+## Theme documentation
 
 [docs.emulsify.info](https://docs.emulsify.info/)
 
