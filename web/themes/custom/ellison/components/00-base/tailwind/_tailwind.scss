@@ -6448,6 +6448,11 @@ html {
   /* 1rem = 16px */
 }
 
+.foo {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .sr-only {
   position: absolute !important;
   width: 1px !important;

@@ -35,6 +35,10 @@ html {
   font-size: 16px; /* 1rem = 16px */
 }
 
+.foo {
+  @apply text-red-500;
+}
+
 
 @import "tailwindcss/utilities";
 /*@import "./custom-utilities.css";*/

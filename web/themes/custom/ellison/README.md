@@ -10,9 +10,7 @@ This is a theme built with Storybook, Tailwind, Components, and Twig hosted by P
 
 Ellison Technologies uses Pantheon, it should be noted that Code move from Dev to Live. But Databases and Files move down from Live to Dev. It is recommended to keep Dev and Test up to date with Live to make updating configurations easier.
 
-## Development
-
-@todo
+https://docs.pantheon.io/pantheon-workflow
 
 ### Visual Code Studio
 
@@ -22,9 +20,15 @@ Ellison Technologies uses Pantheon, it should be noted that Code move from Dev t
 - Drupal Syntax Highlighting
 - Tailwind CSS IntelliSense
 
-### Daily workflow (assumes 1 developer working at a time)
+### Workflow using SFTP
 
-This assumes you've already completed the steps below.
+If local development is not ideal, then use SFTP to develop directly on Pantheon Dev environment.
+
+https://docs.pantheon.io/guides/sftp
+
+### Workflow for Git
+
+This assumes you've already setup local development using DDEV.
 
 Please note that the `master` branch always goes from Dev to Test to Live. Database changes always go from Live to Test and Dev. You can not push database changes from a lower environment to Live.
 
@@ -47,17 +51,19 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - Now have the client UAT on Test
 - When ready merge to Production
 
-### @todo review dev twig and file cache clear
+@todo review twig and file cache clear
 
-## How to develop locally
+## How to start developing locally using DDEV
 
 ### Get ellisiontechnolgies repo from Pantheon
+
+@todo validate steps
 
 This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
 
 https://getcomposer.org/doc/01-basic-usage.md
 
-Get access to `ellisontechnologies` site from Trinet Solutions
+Get access to `ellisontechnologies` site from Trinet Solutions.
 
 Clone the site locally with Git.
 
@@ -70,40 +76,6 @@ Example:
 You will get ONLY the files used to customize Drupal 10. You will need to now install D10 in order to develop locally.
 
 https://docs.pantheon.io/drupal-from-dist#add-files-and-folders
-
-### --- @TODO: Test to see if below is needed.
-
-Enter the root directory of your repo.
-
-`cd ellisontechnologies`
-
-Then run ALL following Composer command line commands.
-
-Copy the upstream-configuration folder to your site:
-
-`cp -r /drupal-composer-managed-path/upstream-configuration`
-
-Copy the pantheon.upstream.yml file to your site:
-
-`cp  /drupal-composer-managed-path/pantheon-upstream.yml .
-
-Make the config directory
-
-`mkdir -p config .`
-
-Visit the link below to modify settings in composer.json, replacing the Drupal values with the latest version:
-
-https://docs.pantheon.io/drupal-from-dist#update-composer-settings
-
-Update settings.php
-
-https://docs.pantheon.io/drupal-from-dist#update-settingsphp
-
-Initialize, push and test.
-
-https://docs.pantheon.io/drupal-from-dist#initialize-push-and-test
-
-Watch the build in the Dev dashboard -- if it turns "red" it means there was a build issue. Check the logs to identify the problem.
 
 #### Develop locally using DDEV
 
