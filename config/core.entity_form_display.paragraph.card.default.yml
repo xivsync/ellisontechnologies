@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.card.field_card_style
     - field.field.paragraph.card.field_content
     - field.field.paragraph.card.field_cta_button
+    - field.field.paragraph.card.field_cta_button_style
     - field.field.paragraph.card.field_footer
     - field.field.paragraph.card.field_header
     - field.field.paragraph.card.field_media_image
@@ -22,67 +23,59 @@ dependencies:
     - webform
 third_party_settings:
   field_group:
-    group_content:
+    group_details:
+      children:
+        - field_card_style
+        - field_background_color
+        - field_align_text
+        - field_cta_button_style
+      label: 'Card Options (click to open)'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: 'Configure a background color, card style, CTA alignment and CTA style.'
+        required_fields: true
+    group_card_content:
       children:
         - field_media_image
         - field_header
         - field_content
-        - field_footer
-      label: Content
+        - group_card_cta
+      label: 'Card Content'
       region: content
       parent_name: ''
       weight: 0
-      format_type: fieldset
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        description: ''
+        open: true
+        description: 'Add an image or remote video, header, body, and a call to action (CTA).'
         required_fields: true
-    group_options:
+    group_card_cta:
       children:
-        - field_background_color
-        - field_card_style
-        - field_align_text
-      label: Options
-      region: content
-      parent_name: ''
-      weight: 3
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
-    group_cta_for_webform:
-      children:
+        - field_footer
+        - field_cta_button
         - field_webform_cta_text
         - field_webform
-      label: 'CTA for Webform'
+      label: 'Card CTA'
       region: content
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
+      parent_name: group_card_content
+      weight: 7
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        description: 'Cannot be used with CTA Button.'
-        required_fields: true
-    group_cta_button:
-      children:
-        - field_cta_button
-      label: 'CTA Button'
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: 'Cannot be used with Webform CTA.'
+        open: false
+        description: 'Select either footer text, link or webform as your CTA. The card expects only 1 of these to be implemented per card.'
         required_fields: true
 id: paragraph.card.default
 targetEntityType: paragraph
@@ -91,19 +84,19 @@ mode: default
 content:
   field_align_text:
     type: options_select
-    weight: 3
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 0
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_card_style:
     type: options_select
-    weight: 1
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -117,11 +110,17 @@ content:
     third_party_settings: {  }
   field_cta_button:
     type: link_default
-    weight: 2
+    weight: 6
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_cta_button_style:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_footer:
     type: text_textarea
@@ -148,7 +147,7 @@ content:
     third_party_settings: {  }
   field_webform:
     type: webform_entity_reference_select
-    weight: 7
+    weight: 8
     region: content
     settings:
       default_data: true
@@ -156,7 +155,7 @@ content:
     third_party_settings: {  }
   field_webform_cta_text:
     type: string_textfield
-    weight: 6
+    weight: 7
     region: content
     settings:
       size: 60

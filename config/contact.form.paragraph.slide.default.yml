@@ -1,0 +1,64 @@
+uuid: 23ee944c-e99e-434c-8c4a-0c93b6568b76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide.field_align_text
+    - field.field.paragraph.slide.field_background_color
+    - field.field.paragraph.slide.field_card_style
+    - field.field.paragraph.slide.field_content
+    - field.field.paragraph.slide.field_cta_button
+    - field.field.paragraph.slide.field_cta_button_style
+    - field.field.paragraph.slide.field_footer
+    - field.field.paragraph.slide.field_header
+    - field.field.paragraph.slide.field_media_image
+    - paragraphs.paragraphs_type.slide
+  module:
+    - field_group
+    - link
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - field_media_image
+        - field_header
+        - field_content
+        - field_footer
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_options:
+      children:
+        - field_background_color
+        - field_card_style
+        - field_cta_button
+        - field_align_text
+        - field_cta_button_style
+      label: Options
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: paragraph.slide.default
+label: null
+recipients: {  }
+reply: ''
+weight: 0
+message: null
+redirect: null

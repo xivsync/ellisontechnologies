@@ -27,40 +27,57 @@ third_party_settings:
     group_configurations:
       children:
         - field_unique_id
-        - field_vertical_align_items
         - field_display_style
-        - field_background_color
-        - field_full_width_background
-        - field_enable_full_width_content
-        - field_diagonal_background
-        - field_enable_back_slash_tilt
+        - field_vertical_align_items
         - field_remove_margins
-      label: Configurations
+        - group_group_background_options
+      label: 'Group Options'
       region: content
       parent_name: ''
-      weight: 1
-      format_type: fieldset
+      weight: 2
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        open: false
         description: ''
         required_fields: true
     group_content:
       children:
         - field_header
         - field_content
-        - field_group
         - field_footer
-      label: Content
+      label: 'Group Content'
       region: content
       parent_name: ''
       weight: 0
-      format_type: fieldset
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_group_background_options:
+      children:
+        - field_enable_full_width_content
+        - field_full_width_background
+        - field_background_color
+        - field_diagonal_background
+        - field_enable_forward_slash_tilt
+        - field_enable_back_slash_tilt
+      label: 'Group Background Options'
+      region: content
+      parent_name: group_configurations
+      weight: 26
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
         description: ''
         required_fields: true
 id: paragraph.group.default
@@ -70,7 +87,7 @@ mode: default
 content:
   field_background_color:
     type: options_select
-    weight: 14
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -84,42 +101,42 @@ content:
     third_party_settings: {  }
   field_diagonal_background:
     type: boolean_checkbox
-    weight: 17
+    weight: 32
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_display_style:
     type: boolean_checkbox
-    weight: 13
+    weight: 23
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_enable_back_slash_tilt:
     type: boolean_checkbox
-    weight: 18
+    weight: 34
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_enable_forward_slash_tilt:
     type: boolean_checkbox
-    weight: 20
+    weight: 33
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_enable_full_width_content:
     type: boolean_checkbox
-    weight: 16
+    weight: 29
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_footer:
     type: text_textarea
-    weight: 5
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -127,17 +144,17 @@ content:
     third_party_settings: {  }
   field_full_width_background:
     type: boolean_checkbox
-    weight: 15
+    weight: 30
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_group:
     type: paragraphs
-    weight: 4
+    weight: 1
     region: content
     settings:
-      title: Component
+      title: 'Add Components To Group'
       title_plural: Group
       edit_mode: closed
       closed_mode: summary
@@ -161,13 +178,13 @@ content:
     third_party_settings: {  }
   field_remove_margins:
     type: options_select
-    weight: 19
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_unique_id:
     type: string_textfield
-    weight: 11
+    weight: 22
     region: content
     settings:
       size: 60
@@ -175,7 +192,7 @@ content:
     third_party_settings: {  }
   field_vertical_align_items:
     type: options_select
-    weight: 12
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }

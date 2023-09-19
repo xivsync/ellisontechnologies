@@ -11,7 +11,7 @@ id: paragraph.slide.field_footer
 field_name: field_footer
 entity_type: paragraph
 bundle: slide
-label: Footer
+label: 'CTA Footer Text'
 description: ''
 required: false
 translatable: false

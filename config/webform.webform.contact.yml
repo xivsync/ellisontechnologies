@@ -22,43 +22,37 @@ categories: {  }
 elements: |-
   company:
     '#type': textfield
-    '#title': Company
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    '#title': 'Company Name *'
   firstname:
     '#type': textfield
-    '#title': 'First Name'
+    '#title': 'First Name *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   lastname:
     '#type': textfield
-    '#title': 'Last Name'
+    '#title': 'Last Name *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   title:
     '#type': textfield
     '#title': Title/Position
     '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
-    '#title': 'Your Email'
     '#type': email
+    '#title': 'Email Address *'
     '#required': true
     '#default_value': '[current-user:mail]'
   phone:
     '#type': tel
-    '#title': Phone
+    '#title': 'Phone Number *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   street:
     '#type': textfield
-    '#title': Address
+    '#title': 'Address *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   state:
     '#type': textfield
-    '#title': State
+    '#title': 'State *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   city:
     '#type': city
     '#title': City
@@ -66,18 +60,15 @@ elements: |-
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
-    '#title': 'Zip Code'
+    '#title': 'Zip Code *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   leads_interest__c:
     '#type': textfield
-    '#title': 'Machine Interest'
+    '#title': 'Machine Interest *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   how_did_you_hear__c:
     '#type': select
-    '#title': 'How did you hear about us?'
-    '#required': true
+    '#title': 'How did you hear about us? *'
     '#options':
       Builder_Website: 'Builder Website'
       Direct_Mail: 'Direct Mail'
@@ -91,6 +82,7 @@ elements: |-
       Trade_Show: 'Trade Show'
       Word_of_Mouth: 'Word of Mouth'
       Vendor_Partner: 'Vendor Partner'
+    '#required': true
   webform_best_time__c:
     '#type': textfield
     '#title': 'Best time to reach you'
@@ -130,9 +122,8 @@ elements: |-
       none: 'Not sure'
   description:
     '#type': textarea
-    '#title': 'Please let us know how we can help you today'
+    '#title': 'Please let us know how we can help you today *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   opt_in:
     '#type': select
     '#title': Opt-In
@@ -175,7 +166,7 @@ elements: |-
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': SUBMIT
 css: ''
 javascript: ''
 settings:

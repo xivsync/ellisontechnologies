@@ -97,15 +97,51 @@ settings:
           label: 'medium Blue Paragraph'
           element: '<p class="text-medium-blue">'
         -
+          label: 'Gray H2'
+          element: '<h2 class="text-gray-700">'
+        -
+          label: 'Gray Paragraph'
+          element: '<p class="text-gray-700">'
+        -
+          label: 'Size Largest H2'
+          element: '<h2 class="text-5xl">'
+        -
           label: 'Size Larger H2'
           element: '<h2 class="text-4xl">'
         -
+          label: 'Size Largest Paragraph'
+          element: '<p class="text-2xl">'
+        -
           label: 'Size Larger Paragraph'
           element: '<p class="text-xl">'
+        -
+          label: 'H2 Remove Bottom Margin'
+          element: '<h2 class="mb-0 pb-0">'
+        -
+          label: 'H2 Add Left Margin'
+          element: '<h2 class="pl-8">'
+        -
+          label: 'H2 Add Right Margin'
+          element: '<h2 class="pr-8">'
+        -
+          label: 'H2 Add Left and Right Margin'
+          element: '<h2 class="px-8">'
+        -
+          label: 'Remove Bottom Margin Paragraph'
+          element: '<p class="mb-0 pb-0">'
+        -
+          label: 'Add Left Margin Paragraph'
+          element: '<p class="pl-8">'
+        -
+          label: 'Add Right Margin Paragraph'
+          element: '<p class="pr-8">'
+        -
+          label: 'Add Left and Right Margin Paragraph'
+          element: '<p class="px-8">'
     ckeditor_link_styles_linkStyles:
       styles:
         -
-          label: 'Button Default'
+          label: 'Button Blue'
           element: '<a class="button">'
         -
           label: 'Button Light Blue'
@@ -113,6 +149,9 @@ settings:
         -
           label: 'Button White'
           element: '<a class="button-white">'
+        -
+          label: 'Link Default'
+          element: '<a class="link-default">'
         -
           label: 'Link Light Blue'
           element: '<a class="link-light-blue">'

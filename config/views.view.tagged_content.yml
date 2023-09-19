@@ -6,17 +6,13 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - node.type.article
     - node.type.event
-    - taxonomy.vocabulary.tags
-  content:
-    - 'taxonomy_term:tags:33fd391a-bdb5-4404-9f0a-4f3d62999977'
   module:
     - node
-    - taxonomy
     - user
 id: tagged_content
-label: 'Tagged Content'
+label: 'Promoted to Frontpage'
 module: views
-description: ''
+description: 'Blocks for news and events on frontpage'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -27,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Tagged Content'
+      title: 'Promoted To Frontpage'
       fields:
         title:
           id: title
@@ -116,6 +112,19 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
+        field_dates_and_times_rrule_index:
+          id: field_dates_and_times_rrule_index
+          table: node__field_dates_and_times
+          field: field_dates_and_times_rrule_index
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments: {  }
       filters:
         status:
@@ -142,6 +151,196 @@ display:
           operator: in
           value:
             article: article
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: promote
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      style:
+        type: default
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      use_more: false
+      use_more_always: false
+      use_more_text: more
+      link_display: custom_url
+      link_url: /news
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      defaults:
+        use_more: true
+        use_more_always: true
+        use_more_text: true
+        header: false
+        footer: false
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2 class="text-4xl text-blue">NEWS & EVENTS</h2>'
+            format: full_html
+          tokenize: false
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p class="text-align-right mb-0"><strong><a class="link-default" href="/news">View All News</a></strong></p>'
+            format: full_html
+          tokenize: false
+      display_extenders: {  }
+      block_description: 'News Promoted to frontpage'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    id: block_2
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
             event: event
           group: 1
           exposed: false
@@ -172,17 +371,18 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_tags_target_id:
-          id: field_tags_target_id
-          table: node__field_tags
-          field: field_tags_target_id
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            - 1
+          entity_type: node
+          entity_field: promote
+          plugin_id: boolean
+          operator: '='
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -199,7 +399,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -212,52 +411,42 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          vid: tags
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
-      style:
-        type: default
-      row:
-        type: 'entity:node'
-        options:
-          view_mode: teaser
-      query:
-        type: views_query
-        options:
-          query_comment: ''
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_tags: {  }
-      relationships: {  }
-      header: {  }
-      footer: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        use_more: true
+        use_more_always: true
+        use_more_text: true
+        link_display: false
+        link_url: false
+        filters: false
+        filter_groups: false
+        footer: false
+      link_display: custom_url
+      link_url: /about/events
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<p class="text-align-right mb-0"><strong><a class="link-default" href="/about-us/events">View All Events</a></strong></p>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
+      block_description: 'Events Promoted to frontpage'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

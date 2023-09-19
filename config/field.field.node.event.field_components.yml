@@ -9,11 +9,14 @@ dependencies:
     - paragraphs.paragraphs_type.button_group
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.group
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.model_listing
     - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.slider
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.webform
   module:
     - entity_reference_revisions
@@ -21,7 +24,7 @@ id: node.event.field_components
 field_name: field_components
 entity_type: node
 bundle: event
-label: Components
+label: 'Add Components To The Event'
 description: 'Add components to build event detail page.'
 required: false
 translatable: true
@@ -39,8 +42,11 @@ settings:
       image: image
       model_listing: model_listing
       quote: quote
+      from_library: from_library
       text: text
       webform: webform
+      slider: slider
+      video: video
     negate: 0
     target_bundles_drag_drop:
       banner_image:
@@ -55,17 +61,29 @@ settings:
       cta_button:
         weight: 16
         enabled: true
+      from_library:
+        weight: 22
+        enabled: true
       group:
         weight: 17
         enabled: true
       image:
         weight: 18
         enabled: true
+      instagram:
+        weight: 25
+        enabled: false
       model_listing:
         weight: 19
         enabled: true
       quote:
         weight: 20
+        enabled: true
+      slide:
+        weight: 28
+        enabled: false
+      slider:
+        weight: 29
         enabled: true
       specifications:
         weight: 21
@@ -75,6 +93,9 @@ settings:
         enabled: false
       text:
         weight: 23
+        enabled: true
+      video:
+        weight: 33
         enabled: true
       webform:
         weight: 24

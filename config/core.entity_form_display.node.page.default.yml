@@ -18,33 +18,35 @@ third_party_settings:
   field_group:
     group_options:
       children:
-        - field_jumbo_image
-        - field_slide_tag
         - field_product
-      label: Configuration
+        - field_slide_tag
+      label: 'Basic Page Options'
       region: content
       parent_name: ''
       weight: 1
-      format_type: fieldset
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        open: false
         description: 'Options to change the display of the page.'
         required_fields: true
     group_content:
       children:
         - title
+        - field_jumbo_image
         - field_components
-      label: Content
+      label: 'Basic Page Content'
       region: content
       parent_name: ''
-      weight: 2
-      format_type: fieldset
+      weight: 0
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        open: true
         description: ''
         required_fields: true
 _core:
@@ -56,13 +58,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_components:
     type: paragraphs
-    weight: 1
+    weight: 2
     region: content
     settings:
       title: Component
@@ -81,14 +83,14 @@ content:
     third_party_settings: {  }
   field_jumbo_image:
     type: media_library_widget
-    weight: 3
+    weight: 1
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_product:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -98,7 +100,7 @@ content:
     third_party_settings: {  }
   field_slide_tag:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -108,27 +110,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 6
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 7
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -143,7 +145,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS

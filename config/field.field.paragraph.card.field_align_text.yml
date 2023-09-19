@@ -11,8 +11,8 @@ id: paragraph.card.field_align_text
 field_name: field_align_text
 entity_type: paragraph
 bundle: card
-label: 'Align CTA'
-description: 'Select where you want the CTA to be placed.'
+label: 'CTA Alignment'
+description: 'Align CTA link or CTA webform left, center or right.'
 required: false
 translatable: true
 default_value: {  }

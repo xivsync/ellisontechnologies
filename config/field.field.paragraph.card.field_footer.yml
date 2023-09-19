@@ -11,11 +11,12 @@ id: paragraph.card.field_footer
 field_name: field_footer
 entity_type: paragraph
 bundle: card
-label: Footer
+label: 'CTA Footer Text'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats: {  }
 field_type: text_long

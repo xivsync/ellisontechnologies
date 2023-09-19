@@ -32,14 +32,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
   body: true
   field_code_snippet: true
@@ -48,6 +40,8 @@ hidden:
   field_location: true
   field_method_of_contact__c: true
   field_region: true
+  field_tags: true
   field_webform: true
   field_webform_campaign_id__c: true
   links: true
+  search_api_excerpt: true

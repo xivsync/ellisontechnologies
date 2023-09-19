@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.cta_button.field_background_color
     - field.field.paragraph.cta_button.field_content
     - field.field.paragraph.cta_button.field_cta_button
+    - field.field.paragraph.cta_button.field_cta_button_style
     - field.field.paragraph.cta_button.field_media_image
     - field.field.paragraph.cta_button.field_webform
     - field.field.paragraph.cta_button.field_webform_cta_text
@@ -22,7 +23,7 @@ bundle: cta_button
 mode: default
 content:
   field_align_text:
-    type: list_key
+    type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -54,6 +55,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_cta_button_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_media_image:
     type: entity_reference_entity_view
     label: hidden
@@ -78,4 +86,5 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

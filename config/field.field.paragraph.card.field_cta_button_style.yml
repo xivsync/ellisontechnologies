@@ -1,20 +1,20 @@
-uuid: d20e234a-fa83-4526-8b52-3e3d2b6aad1e
+uuid: 034c1764-2b4a-4d39-b27a-0839cf86b709
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_background_color
+    - field.storage.paragraph.field_cta_button_style
     - paragraphs.paragraphs_type.card
   module:
     - options
-id: paragraph.card.field_background_color
-field_name: field_background_color
+id: paragraph.card.field_cta_button_style
+field_name: field_cta_button_style
 entity_type: paragraph
 bundle: card
-label: 'Card Background Color'
+label: 'CTA Button Style'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,18 +1,18 @@
-uuid: 2497e78b-fdbc-4634-a159-b728e5b7afdd
+uuid: fed9b79a-11ae-4f5c-8a22-bb56048ef4cb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_align_text
+    - field.storage.paragraph.field_cta_button_style
     - paragraphs.paragraphs_type.slide
   module:
     - options
-id: paragraph.slide.field_align_text
-field_name: field_align_text
+id: paragraph.slide.field_cta_button_style
+field_name: field_cta_button_style
 entity_type: paragraph
 bundle: slide
-label: 'CTA Button Alignment'
-description: 'Select where you want the CTA to be placed.'
+label: 'CTA Button Style'
+description: ''
 required: false
 translatable: false
 default_value: {  }
