@@ -13,7 +13,6 @@ dependencies:
     - media
     - search
     - shortcut
-    - sitewide_alert
     - system
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
@@ -33,4 +32,3 @@ permissions:
   - 'use text format source'
   - 'use text format webform_default'
   - 'view media'
-  - 'view published sitewide alert entities'

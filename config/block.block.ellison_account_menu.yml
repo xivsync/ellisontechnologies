@@ -13,7 +13,7 @@ _core:
 id: ellison_account_menu
 theme: ellison
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:

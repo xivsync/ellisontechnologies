@@ -11,7 +11,7 @@ id: paragraph.slide.field_align_text
 field_name: field_align_text
 entity_type: paragraph
 bundle: slide
-label: 'CTA Button Alignment'
+label: 'Align CTA'
 description: 'Select where you want the CTA to be placed.'
 required: false
 translatable: false

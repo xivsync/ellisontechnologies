@@ -18,56 +18,33 @@ title: 'Newsletter form'
 description: '<p>Newsletter signup webform. Located in footer. Integrated with <strong>Salesforce Assignment Rule ID.</strong></p>'
 categories: {  }
 elements: |-
-  opt_in:
-    '#type': checkbox
-    '#title': 'I would like to receive occasional emails.'
-    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
-    '#title_display': inline
-    '#required': true
-  email:
-    '#title': 'Email Address'
-    '#type': email
-    '#title_display': invisible
-    '#placeholder': 'Email Address'
-    '#required': true
-    '#default_value': '[current-user:mail]'
   firstname:
     '#type': textfield
     '#title': 'First Name'
-    '#title_display': invisible
-    '#placeholder': 'First Name'
     '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   lastname:
     '#type': textfield
     '#title': 'Last Name'
-    '#title_display': invisible
-    '#placeholder': 'Last Name'
     '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   company:
     '#type': textfield
     '#title': Company
-    '#title_display': invisible
-    '#placeholder': 'Company Name'
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  title:
-    '#type': textfield
-    '#title': Title/Position
-    '#title_display': invisible
-    '#placeholder': Title/Position
+  email:
+    '#title': 'Your Email'
+    '#type': email
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    '#default_value': '[current-user:mail]'
   phone:
     '#type': tel
     '#title': Phone
-    '#title_display': invisible
-    '#placeholder': 'Business Phone'
     '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code'
-    '#title_display': invisible
-    '#placeholder': 'Zip Code'
     '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   region__c:

@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.card.field_card_style
     - field.field.paragraph.card.field_content
     - field.field.paragraph.card.field_cta_button
-    - field.field.paragraph.card.field_cta_button_style
     - field.field.paragraph.card.field_footer
     - field.field.paragraph.card.field_header
     - field.field.paragraph.card.field_media_image
@@ -65,13 +64,6 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  field_cta_button_style:
-    type: list_key
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
   field_footer:
     type: text_default
     label: hidden
@@ -110,5 +102,4 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }

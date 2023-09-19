@@ -8,53 +8,14 @@ dependencies:
     - field.field.paragraph.slide.field_card_style
     - field.field.paragraph.slide.field_content
     - field.field.paragraph.slide.field_cta_button
-    - field.field.paragraph.slide.field_cta_button_style
     - field.field.paragraph.slide.field_footer
     - field.field.paragraph.slide.field_header
     - field.field.paragraph.slide.field_media_image
     - paragraphs.paragraphs_type.slide
   module:
-    - field_group
     - link
     - media_library
     - text
-third_party_settings:
-  field_group:
-    group_content:
-      children:
-        - field_media_image
-        - field_header
-        - field_content
-        - field_footer
-      label: Content
-      region: content
-      parent_name: ''
-      weight: 0
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
-    group_options:
-      children:
-        - field_background_color
-        - field_card_style
-        - field_cta_button
-        - field_align_text
-        - field_cta_button_style
-      label: Options
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide
@@ -62,19 +23,19 @@ mode: default
 content:
   field_align_text:
     type: options_select
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 2
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_card_style:
     type: options_select
-    weight: 3
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -88,17 +49,11 @@ content:
     third_party_settings: {  }
   field_cta_button:
     type: link_default
-    weight: 4
+    weight: 2
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_cta_button_style:
-    type: options_select
-    weight: 6
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_footer:
     type: text_textarea
@@ -118,7 +73,7 @@ content:
     third_party_settings: {  }
   field_media_image:
     type: media_library_widget
-    weight: 2
+    weight: 0
     region: content
     settings:
       media_types: {  }

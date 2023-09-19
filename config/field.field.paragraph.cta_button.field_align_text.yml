@@ -11,7 +11,7 @@ id: paragraph.cta_button.field_align_text
 field_name: field_align_text
 entity_type: paragraph
 bundle: cta_button
-label: 'CTA Button Alignment'
+label: 'Align CTA'
 description: ''
 required: false
 translatable: true
