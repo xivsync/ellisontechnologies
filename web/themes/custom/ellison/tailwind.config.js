@@ -87,9 +87,9 @@ module.exports = {
     'px-8',
     'sticky',
     'top-0',
+    'text-gray-700',
     {
       pattern: /prose/,
-      pattern: /text-gray-/,
     },
     // Support classes added by Styles in CKEditor5 and by component configurations
   ],

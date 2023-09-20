@@ -1,45 +1,81 @@
+/* default style is closed sides */
 .dropdown {
   @apply flex flex-col relative;
 
   &__toggle {
-    @apply flex flex-row justify-between uppercase border border-b-0 border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-light-blue focus:z-50 focus:outline-none py-2 px-4 no-underline;
+    @apply flex flex-row justify-between uppercase focus:ring-4 focus:ring-light-blue focus:z-50 focus:outline-none py-2 px-4 no-underline;
     
     &.has-icon {
       @apply inline-flex flex-row gap-2;
 
+      /* default collapsed rotate-0 then animates to rotate-180 when expanded */
       svg {
-        @apply w-6 h-6;
+        @apply w-6 h-6 rotate-0 transition ease-in-out duration-300;
       }
     
     }
   }
 
+  /* default behavior is to open on top of content below */
   &__menu {
-    @apply flex flex-col absolute top-[2.5rem] w-full z-10 bg-white;
+    @apply flex flex-col absolute top-[2.5rem] w-full z-10;
   }
 
   &__menu--list {
-    @apply flex flex-col border border-gray-300 m-0 p-0 !important;
+    @apply flex flex-col m-0 p-0 !important;
   }
 
   &__menu--item {
     @apply m-0 p-0;
 
     a {
-      @apply block hover:bg-gray-200 border-gray-300 border-b px-4 py-2;
+      @apply block focus:ring-4 focus:ring-light-blue focus:z-50 focus:outline-none px-4 py-2;
     }
 
-  }
-
-  &__menu--item:last-child a{
-    @apply border-b-0;
   }
 
   &__menu--item::marker {
     content: none;
   }
 
-  &__menu--item.is-active {
+}
+
+/* apply open accordion style */
+.dropdown.accordion-button-dropdown {
+
+  .dropdown__toggle {
+    @apply border-t border-gray-400;
+  }
+
+  .dropdown__menu--list {
+    @apply flex flex-col  m-0 p-0 !important;
+  }
+
+}
+
+/* apply default closed select box style */
+.dropdown.single-button-dropdown {
+
+  .dropdown__menu {
+    @apply bg-gray-100 shadow-lg;
+  }
+
+  /* apply border to toggle button */
+  .dropdown__toggle {
+    @apply border-gray-400 border-2 hover:bg-gray-100;
+  }
+
+  /* apply border to dropdown ul */
+  .dropdown__menu--list {
+    @apply flex flex-col border-2 border-t-0 border-gray-400 m-0 p-0 !important;
+  }
+
+  .dropdown__menu--item {
+    @apply hover:bg-gray-200;
+
+  }
+
+  .dropdown__menu--item.is-active {
     a {
       @apply cursor-not-allowed bg-gray-300 font-bold;
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>');
@@ -48,19 +84,12 @@
       background-size: 1.25rem;
       padding-left: 2.25rem;
     }
-
   }
 
 }
 
-/* handles adding bottom border to button */
-.specifications-list .field-specifications-type .field__item:last-child .dropdown__toggle,
-.listing.view--series .dropdown__toggle {
-  @apply  border-b;
-}
-
-/* handles dropdown as accordion */
-.dropdown.accordion-button-dropdown {
+/* changes default dropdown behavior -- accordion moves content below down */
+.dropdown.accordion-button-dropdown.dropdown.state-is-expanded {
 
   .dropdown__menu {
     position: unset;
@@ -86,11 +115,25 @@
 
 }
 
+/* handles expanded state */
+.dropdown.state-is-expanded {
+
+  .dropdown__toggle.has-icon svg {
+    @apply rotate-180;
+  }
+
+}
+
 /* handles collapse state */
 .dropdown.state-is-collapsed {
 
   .dropdown__menu {
     @apply hidden;
+  }
+
+  /* default rotate-0 chevron down */
+  .dropdown__toggle.has-icon svg {
+    @apply rotate-0;
   }
 
 }

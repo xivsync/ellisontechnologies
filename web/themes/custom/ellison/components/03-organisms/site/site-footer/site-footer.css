@@ -1,6 +1,5 @@
 .footer {
-  @apply px-3 flex flex-col pt-16 pb-4 justify-center;
-  background: linear-gradient(to bottom,#01172b 0%,#013664 100%);
+  @apply px-3 flex flex-col pt-16 pb-4 justify-center bg-dark-blue;
 
   &__inner {
     @apply container flex flex-col gap-4 mx-auto xl:px-4;

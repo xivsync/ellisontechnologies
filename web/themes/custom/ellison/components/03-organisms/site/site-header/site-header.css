@@ -1,5 +1,6 @@
 .header {
   @apply p-6 flex flex-col items-center bg-gradient-to-b from-[#01172b] to-[#013664];
+  z-index: 9999;
   /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
 
   &__inner {

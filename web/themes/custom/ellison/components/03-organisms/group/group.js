@@ -30,7 +30,7 @@ Drupal.behaviors.onPageNavigation = {
               aEl.title = label;
               aEl.href = '#' + anchor;
 
-              element.innerHTML += `<a class="button" href="#${anchor}">${label}</a>`;
+              element.innerHTML += `<a class="button-secondary" href="#${anchor}">${label}</a>`;
 
             }
           

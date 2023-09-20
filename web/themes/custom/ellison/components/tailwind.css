@@ -211,6 +211,15 @@ html {
       content: " »";
     }
 
+    &-blue,
+    &-blue strong {
+      @apply text-blue hover:opacity-80 no-underline  font-extrabold;
+    }
+
+    &-blue::after {
+      content: " »";
+    }
+
     &-light-blue,
     &-light-blue strong {
       @apply text-light-blue hover:opacity-80 no-underline font-extrabold;
