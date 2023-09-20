@@ -88,6 +88,8 @@ module.exports = {
     'sticky',
     'top-0',
     'text-gray-700',
+    'text-gray-600',
+    'text-gray-500',
     {
       pattern: /prose/,
     },
