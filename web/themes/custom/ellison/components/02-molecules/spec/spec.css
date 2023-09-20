@@ -1,5 +1,5 @@
-.spec_type:last-child .state-is-collapsed button {
-  @apply border-b border-gray-200;
+.spec_type:last-child {
+  @apply border-b-2 border-gray-400;
 }
 
 .spec__item {

@@ -3199,7 +3199,7 @@ div.webform {
 
 .dropdown.accordion-button-dropdown {
   .dropdown__toggle {
-    border-top-width: 1px;
+    border-top-width: 2px;
   }
   .dropdown__toggle {
     --tw-border-opacity: 1;
@@ -3300,7 +3300,7 @@ div.webform {
   }
 }
 
-/* handles specifications list items */
+/* @todo -- remove? -- handles specifications list items */
 
 .specifications {
   .dropdown__menu--item {
@@ -3316,7 +3316,7 @@ div.webform {
     justify-content: space-between;
   }
   .dropdown__menu--item {
-    border-top-width: 1px;
+    border-top-width: 2px;
   }
   .dropdown__menu--item {
     --tw-border-opacity: 1;
@@ -4001,10 +4001,10 @@ div.webform {
   }
 }
 
-.spec_type:last-child .state-is-collapsed button {
-  border-bottom-width: 1px;
+.spec_type:last-child {
+  border-bottom-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
 .spec__item {
@@ -4327,12 +4327,82 @@ div.webform {
   }
 }
 
+/* handles form modal */
+
+.ui-dialog {
+  z-index: 9999;
+  .form-item__textfield {
+    width: 100%;
+  }
+  /* #BUTTON */
+  .webform-button--submit {
+    border-radius: 9999px;
+  }
+  .webform-button--submit {
+    border-style: none;
+  }
+  .webform-button--submit {
+    --tw-bg-opacity: 1;
+    background-color: rgb(13 96 180 / var(--tw-bg-opacity));
+  }
+  .webform-button--submit {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .webform-button--submit {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .webform-button--submit {
+    font-weight: 700;
+  }
+  .webform-button--submit {
+    text-transform: uppercase;
+  }
+  .webform-button--submit {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  .webform-button--submit {
+    text-decoration-line: none;
+  }
+  .webform-button--submit:hover {
+    text-decoration-line: none;
+  }
+  .webform-button--submit:hover {
+    opacity: 0.8;
+  }
+  .webform-button--submit:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .webform-button--submit:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  .webform-button--submit:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(70 182 227 / var(--tw-ring-opacity));
+  }
+  @media (min-width: 768px) {
+    .webform-button--submit {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
+
+/* handles form modal on mobile */
+
 @media (max-width: 1023px) {
   .ui-widget.ui-dialog {
     width: 90% !important;
     left: 5% !important;
   }
 }
+
+/* default webform form layouts is vertical */
 
 form.webform-submission-form {
   display: flex;
@@ -4342,7 +4412,17 @@ form.webform-submission-form {
   gap: 1rem;
 }
 
-/* see forms.css */
+/* handles form horizontal layout */
+
+form.webform-submission-build-a-quote-form,
+form.webform-submission-newsletter-form-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* handles select your location form */
 
 .webform-submission-select-your-location-form {
   gap: 0px;
@@ -4470,6 +4550,8 @@ form.webform-submission-form {
   }
 }
 
+/* handles tax calculator form */
+
 .webform-submission-tax-calculator-form {
   .form-item {
     display: flex;
@@ -4558,76 +4640,48 @@ form.webform-submission-form {
   }
 }
 
-.ui-dialog {
-  .form-item__textfield {
+/* handles contact us form */
+
+form.webform-submission-contact-add-form {
+  .form-item.form-item--opt-in {
+    display: flex;
+  }
+  .form-item.form-item--opt-in {
     width: 100%;
   }
-  /* #BUTTON */
-  .webform-button--submit {
-    border-radius: 9999px;
+  .form-item.form-item--opt-in {
+    width: 100%;
   }
-  .webform-button--submit {
-    border-style: none;
+  .form-item.form-item--opt-in {
+    flex-direction: row;
   }
-  .webform-button--submit {
-    --tw-bg-opacity: 1;
-    background-color: rgb(13 96 180 / var(--tw-bg-opacity));
+  .form-item.form-item--opt-in {
+    flex-wrap: wrap;
   }
-  .webform-button--submit {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+  .form-item.form-item--opt-in {
+    align-items: center;
   }
-  .webform-button--submit {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+  .form-item.form-item--opt-in {
+    justify-content: flex-start;
   }
-  .webform-button--submit {
-    font-weight: 700;
-  }
-  .webform-button--submit {
-    text-transform: uppercase;
-  }
-  .webform-button--submit {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-  .webform-button--submit {
-    text-decoration-line: none;
-  }
-  .webform-button--submit:hover {
-    text-decoration-line: none;
-  }
-  .webform-button--submit:hover {
-    opacity: 0.8;
-  }
-  .webform-button--submit:focus {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-  .webform-button--submit:focus {
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  }
-  .webform-button--submit:focus {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(70 182 227 / var(--tw-ring-opacity));
-  }
-  @media (min-width: 768px) {
-    .webform-button--submit {
-      padding-left: 3rem;
-      padding-right: 3rem;
+  .form-item.form-item--opt-in {
+    input.form-checkbox.form-item__textfield {
+      margin-right: 1rem !important;
     }
+    input.form-checkbox.form-item__textfield {
+      width: auto !important;
+    }
+    .form-item__description.form-item__description--opt-in {
+      width: 100% !important;
+    }
+  }
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
-form.webform-submission-build-a-quote-form,
-form.webform-submission-newsletter-form-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
+/* handles newsletter form */
 
 #group__newsletter {
   .group__inner {
