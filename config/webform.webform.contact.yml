@@ -22,49 +22,71 @@ categories: {  }
 elements: |-
   company:
     '#type': textfield
-    '#title': 'Company Name *'
+    '#title': 'Company Name'
+    '#title_display': invisible
+    '#placeholder': Company
   firstname:
     '#type': textfield
     '#title': 'First Name *'
+    '#title_display': invisible
+    '#placeholder': 'First Name *'
     '#required': true
   lastname:
     '#type': textfield
     '#title': 'Last Name *'
+    '#title_display': invisible
+    '#placeholder': 'Last Name *'
     '#required': true
   title:
     '#type': textfield
-    '#title': Title/Position
+    '#title': 'Title/Position *'
+    '#title_display': invisible
+    '#placeholder': 'Title/Position *'
     '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#type': email
     '#title': 'Email Address *'
+    '#title_display': invisible
+    '#placeholder': 'Email Address *'
     '#required': true
     '#default_value': '[current-user:mail]'
   phone:
     '#type': tel
     '#title': 'Phone Number *'
+    '#title_display': invisible
+    '#placeholder': 'Phone Number *'
     '#required': true
   street:
     '#type': textfield
     '#title': 'Address *'
+    '#title_display': invisible
+    '#placeholder': 'Address *'
     '#required': true
   state:
     '#type': textfield
     '#title': 'State *'
+    '#title_display': invisible
+    '#placeholder': 'State *'
     '#required': true
   city:
     '#type': city
-    '#title': City
+    '#title': 'City *'
+    '#title_display': invisible
+    '#placeholder': 'City *'
     '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code *'
+    '#title_display': invisible
+    '#placeholder': 'Zip Code *'
     '#required': true
   leads_interest__c:
     '#type': textfield
     '#title': 'Machine Interest *'
+    '#title_display': invisible
+    '#placeholder': 'Machine Interest *'
     '#required': true
   how_did_you_hear__c:
     '#type': select
@@ -86,6 +108,8 @@ elements: |-
   webform_best_time__c:
     '#type': textfield
     '#title': 'Best time to reach you'
+    '#title_display': invisible
+    '#placeholder': 'Best time to reach you'
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   industry:
     '#type': select
@@ -113,22 +137,18 @@ elements: |-
       Recreation: Recreation
       Semiconductor: Semiconductor
       Valve: Valve
-  select_location:
-    '#type': select
-    '#title': 'Select Location'
-    '#options':
-      north: 'North TX /  North LA'
-      south: 'South TX / South LA'
-      none: 'Not sure'
   description:
     '#type': textarea
     '#title': 'Please let us know how we can help you today *'
+    '#title_display': invisible
+    '#placeholder': 'Please let us know how we can help you today *'
     '#required': true
   opt_in:
-    '#type': select
-    '#title': Opt-In
-    '#options':
-      opt-in: 'I would like to receive occasional emails.'
+    '#type': checkbox
+    '#title': 'I would like to receive occasional emails.'
+    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
+    '#title_display': inline
+    '#required': true
   region__c:
     '#type': hidden
     '#title': region__c

@@ -16,7 +16,16 @@ elements: |-
   estimated_machine_price:
     '#type': number
     '#title': 'Estimated Machine Price'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    '#description': '<p>PLEASE PLUG-IN THE ESTIMATED MACHINE PRICE HERE</p>'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Calculate
+  updated_yearly:
+    '#type': number
+    '#title': 'The simple spreadsheet below will demonstrate your potential Tax Savings:'
+    '#disabled': true
+    '#default_value': '2023'
   section_179_deduction:
     '#type': number
     '#title': 'Section 179 Deduction'
@@ -48,7 +57,7 @@ elements: |-
   assumed_customer_tax_bracket:
     '#type': number
     '#title': 'Assumed Customer Tax Bracket'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    '#disabled': true
   tax_savings:
     '#type': number
     '#title': 'Tax Savings'
@@ -60,10 +69,6 @@ elements: |-
     '#disabled': true
     '#description': '<p>Covered by these Tax Savings</p>'
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  actions:
-    '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit_hide': true
 css: ''
 javascript: ''
 settings:
