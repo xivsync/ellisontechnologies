@@ -4504,7 +4504,7 @@ form.webform-submission-newsletter-form-form {
 
 /* handles select your location form */
 
-.webform-submission-select-your-location-form {
+form.webform-submission-select-your-location-form {
   gap: 0px;
   fieldset {
     margin: 0px;
@@ -4632,7 +4632,8 @@ form.webform-submission-newsletter-form-form {
 
 /* handles tax calculator form */
 
-.webform-submission-tax-calculator-form {
+form.webform-submission-tax-calculator-form {
+  gap: 0px;
   .form-item {
     display: flex;
   }
@@ -4645,60 +4646,48 @@ form.webform-submission-newsletter-form-form {
   .form-item {
     justify-content: space-between;
   }
+  .form-item {
+    line-height: .75;
+  }
+  /* border-t-0 border-l-0 border-r-0 border-b-2 border-gray-300 border-dotted */
   .form-item__label {
-    width: 66.666667%;
+    margin-bottom: 0px;
   }
   .form-item__label {
-    border-top-width: 0px;
+    display: flex;
   }
   .form-item__label {
-    border-left-width: 0px;
+    width: 83.333333%;
   }
   .form-item__label {
-    border-right-width: 0px;
+    align-items: flex-end;
   }
   .form-item__label {
-    border-bottom-width: 2px;
-  }
-  .form-item__label {
-    border-style: dotted;
-  }
-  .form-item__label {
-    --tw-border-opacity: 1;
-    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    padding: 0px;
   }
   .form-item__textfield {
     margin: 0px;
   }
   .form-item__textfield {
-    width: 33.333333%;
+    width: 16.666667%;
   }
   .form-item__textfield {
     text-align: right;
   }
   .form-item__textfield {
+    /* border-t-0 border-l-0 border-r-0 border-b-2 border-gray-300 border-dotted */
     &:disabled {
-      border-top-width: 0px;
+      margin: 0px;
     }
     &:disabled {
-      border-left-width: 0px;
-    }
-    &:disabled {
-      border-right-width: 0px;
-    }
-    &:disabled {
-      border-bottom-width: 2px;
-    }
-    &:disabled {
-      border-style: dotted;
-    }
-    &:disabled {
-      --tw-border-opacity: 1;
-      border-color: rgb(209 213 219 / var(--tw-border-opacity));
+      border-style: none;
     }
     &:disabled {
       --tw-bg-opacity: 1;
       background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+    &:disabled {
+      padding: 0px;
     }
     &.form-submit {
       width: auto;
@@ -4707,16 +4696,31 @@ form.webform-submission-newsletter-form-form {
       text-align: center;
     }
   }
-  form-item__description {
+  .form-item__description {
+    margin: 0px;
+  }
+  .form-item__description {
+    padding: 0px;
+  }
+  .webform-element-description {
     width: 100%;
   }
-  form-item__description {
+  .webform-element-description {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
-  form-item__description {
+  .webform-element-description {
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
+  #edit-actions {
+    margin-bottom: 2rem;
+  }
+  #edit-actions {
+    display: flex;
+  }
+  #edit-actions {
+    justify-content: flex-end;
   }
 }
 

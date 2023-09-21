@@ -125,6 +125,7 @@ Drupal.behaviors.handleWebform = {
             let webformElements = webform.elements;
             let empInput = webformElements['edit-estimated-machine-price'];
             let bracketInput = webformElements['edit-assumed-customer-tax-bracket'];
+            let calculateButton = webformElements['edit-actions-submit'];
 
             // set default values
             empInput.value = 1950000;
@@ -133,15 +134,24 @@ Drupal.behaviors.handleWebform = {
             // initialize calculations
             updateCalculations(webformElements);
 
-            // update calculations on change of price (emp)
-            empInput.addEventListener('change', (e) => {
+            calculateButton.addEventListener('click', (e) => {
               updateCalculations(webformElements);
+              e.preventDefault();
             });
 
-            // update calculations on change of tax bracket
-            bracketInput.addEventListener('change', (e) => {
-              updateCalculations(webformElements);
-            });
+            /*
+              // update calculations on change of price (emp)
+              empInput.addEventListener('change', (e) => {
+                updateCalculations(webformElements);
+              });
+
+              // update calculations on change of tax bracket
+              bracketInput.addEventListener('change', (e) => {
+                updateCalculations(webformElements);
+              });
+            */
+
+            
             
           }
 
