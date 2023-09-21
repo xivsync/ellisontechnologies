@@ -11,10 +11,10 @@
 
   /* handles brand */
   .taxonomy__term--brands {
-    @apply flex flex-row gap-8;
+    @apply flex flex-col lg:flex-row lg:gap-8;
 
     .field-logo {
-      @apply basis-1/4;
+      @apply basis-full lg:basis-1/4;
 
       img {
         @apply m-0 p-0 !important;
@@ -22,31 +22,35 @@
     }
 
     .text-long {
-      @apply basis-3/4 font-bold;
+      @apply basis-full lg:basis-3/4 font-bold text-gray-600;
     }
 
   }
 
   /* handles series */
   .taxonomy-series {
-    @apply flex flex-row gap-8;
+    @apply flex flex-col lg:flex-row;
 
     .taxonomy-series__image {
-      @apply basis-1/3;
+      @apply basis-full lg:basis-1/3;
       
       img {
-        @apply m-0;
+        @apply m-0 px-4;
       }
     }
 
     .taxonomy-series__content {
-      @apply basis-2/3;
+      @apply basis-full lg:basis-2/3;
+
+      h2 {
+        @apply text-2xl font-extrabold mb-4 pb-4 border-b border-gray-600 !important;
+      }
     }
 
   }
 
   .collections {
-    @apply mb-16 relative;
+    @apply pb-16 mb-16 border-b border-gray-400 relative;
   }
 
   .collections__inner {
@@ -84,8 +88,7 @@
     @apply flex flex-col gap-8 basis-1/2;
 
     .collection {
-      @apply inline-flex justify-end;
-      margin-top: auto;
+      @apply inline-flex mt-auto ml-[33.33333333%];
 
       /* #BUTTON */
       .views-field a {
@@ -103,7 +106,7 @@
 
   .collections__body {
     @apply flex flex-row flex-wrap;
-    row-gap: 2rem;
+    row-gap: 4rem;
   }
 
 }
@@ -155,15 +158,6 @@
 
     }
 
-  }
-
-}
-
-/* handles series on model page */
-.component {
-
-  .taxonomy-series__content h2 {
-    @apply uppercase text-4xl font-extrabold
   }
 
 }
