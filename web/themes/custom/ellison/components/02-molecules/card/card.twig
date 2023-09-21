@@ -14,6 +14,7 @@
  # - card__content__blockname - blockname prepended to the base classname of the copy wrapper.
  #
  # - card__heading - the content of the title component.
+ # - card__heading_label - (optional) title label.
  # - card__heading__link - (optional) the url the title should link to. Defaults to card__link__url.
  # - card__heading__base_class - base classname of the title component. Defaults to "title".
  # - card__heading__blockname - blockname to add to the base classname of the title - defaults to card__base_class.
@@ -87,6 +88,7 @@
               blockname: card__base_class,
               heading__level: 2,
               heading: card__heading,
+              heading_label: card__heading_label,
               heading_url: card__heading__link|default(card__link__url),
               heading_link_base_class: card__heading__link_base_class|default('heading-link'),
               heading_link_blockname: card__base_class,

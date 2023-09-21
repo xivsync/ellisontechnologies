@@ -8,6 +8,7 @@
  * - base__blockname - blockname prepended to the base classname
  *
  * - heading - the content of the heading (typically text)
+ * - heading_label: (optional) the label for the heading
  *
  * - url - (optional) the url the heading should poing to
  * - link_attributes - key/value attributes to pass to link
@@ -20,6 +21,9 @@
 {% set base_class = base_class|default('heading') %}
 
 <h{{ heading__level }} {{ bem(base_class, base__modifiers, base__blockname) }}>
+  {% if heading_label %}
+    <span class="{{ base_class }}__label">{{ heading_label }}</span>
+  {% endif %}
   {% if url %}
     {% include "@atoms/links/link/link.twig" with {
       "link_content": heading,

@@ -1,5 +1,9 @@
 .card.card-event {
 
+  .card__inner {
+    @apply items-center !important;
+  }
+
   .card__event {
     @apply w-40 h-40 bg-light-blue text-white rounded-full flex flex-col items-center justify-center;
 
@@ -17,6 +21,10 @@
 
   }
 
+  .card__image {
+    flex-basis: unset !important;
+  }
+
   .card__content {
     display: flex;
     flex-direction: row;
@@ -25,15 +33,36 @@
   }
 
   .card__inner--content {
-    width: 50%;
+    width: 100%;
+  }
+
+  .card__body {
+    @apply gap-0 text-2xl font-bold !important;
+  }
+
+  .heading {
+    @apply flex flex-row gap-4 !important;
+
+    a {
+      @apply text-dark-blue !important;
+    }
+  }
+
+  .heading__label {
+    @apply w-[8rem] text-2xl font-bold text-right text-gray-600;
   }
 
   .field {
-    @apply flex flex-row justify-start;
+    @apply flex flex-row justify-start gap-4;
 
     &__label {
-      @apply w-1/4 font-bold;
+      @apply w-[8rem] text-2xl font-bold text-right text-gray-600;
     }
+
+    &__item {
+      @apply text-2xl font-bold text-dark-blue;
+    }
+
   }
 
 }
