@@ -33,6 +33,10 @@
     &__content {
       @apply py-4 mx-4;
     }
+
+    &__cta {
+      @apply mt-8;
+    }
   }
 
 }
