@@ -43,7 +43,7 @@
       @apply basis-full lg:basis-2/3;
 
       h2 {
-        @apply text-2xl font-extrabold mb-4 pb-4 border-b border-gray-600 !important;
+        @apply text-2xl font-extrabold mb-4 pb-4 border-b-2 border-gray-600 !important;
       }
     }
 
