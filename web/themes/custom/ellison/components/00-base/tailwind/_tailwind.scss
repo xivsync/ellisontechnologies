@@ -2664,6 +2664,10 @@ div.webform {
     text-transform: uppercase;
   }
   h1.heading {
+    --tw-text-opacity: 1;
+    color: rgb(30 41 67 / var(--tw-text-opacity));
+  }
+  h1.heading {
     font-size: 2.5rem;
   }
 }
