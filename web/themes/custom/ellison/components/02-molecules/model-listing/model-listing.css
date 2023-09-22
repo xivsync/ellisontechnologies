@@ -50,7 +50,11 @@
   }
 
   .collections {
-    @apply pb-16 mb-16 border-b border-gray-400 relative;
+    @apply pb-16 mb-16 border-b-2 border-gray-400 relative;
+  }
+
+  .collactions::last-child {
+    @apply border-none;
   }
 
   .collections__inner {

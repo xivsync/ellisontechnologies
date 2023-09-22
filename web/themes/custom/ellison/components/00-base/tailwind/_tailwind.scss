@@ -3871,7 +3871,7 @@ div.webform {
     margin-bottom: 4rem;
   }
   .collections {
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
   }
   .collections {
     --tw-border-opacity: 1;
@@ -3879,6 +3879,9 @@ div.webform {
   }
   .collections {
     padding-bottom: 4rem;
+  }
+  .collactions::last-child {
+    border-style: none;
   }
   .collections__inner {
     display: flex;
