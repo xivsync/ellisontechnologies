@@ -8,15 +8,18 @@
 }
 
 .form-item__textfield {
-  @apply focus:ring-4 focus:ring-light-blue focus:outline-none;
+  @apply focus:ring-4 focus:ring-light-blue focus:outline-none w-full;
   border: 1px solid clr(accent);
   padding: 0.6em;
-  max-width: 100%;
 
   &::placeholder {
     @apply text-gray-500;
   }
 
+}
+
+.form-item__textfield.form-submit {
+  @apply w-auto;
 }
 
 .form-item__description {

@@ -2589,6 +2589,10 @@ video {
   font-weight: 600;
 }
 
+.form-item__textfield {
+  width: 100%;
+}
+
 .form-item__textfield:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2602,7 +2606,6 @@ video {
 .form-item__textfield {
   border: 1px solid clr(accent);
   padding: 0.6em;
-  max-width: 100%;
   &:-ms-input-placeholder {
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2611,6 +2614,10 @@ video {
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
   }
+}
+
+.form-item__textfield.form-submit {
+  width: auto;
 }
 
 .form-item__description {
