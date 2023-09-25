@@ -5602,7 +5602,7 @@ form.webform-submission-contact-add-form {
   }
 }
 
-.group {
+.group.slider-on {
   .glide {
     .glide__arrow {
       border-style: none;
@@ -5655,6 +5655,35 @@ form.webform-submission-contact-add-form {
     }
     .glide .glide__arrow--right{
       right: 0rem !important;
+    }
+  }
+}
+
+/* handles front page slider */
+
+.front-page {
+  @media (min-width: 992px) {
+    .header {
+      z-index: 50;
+    }
+  }
+  @media (min-width: 992px) {
+    .header {
+      background-image: none;
+    }
+  }
+  @media (min-width: 992px) {
+    div#group__frontpage-hero-slider {
+      margin-top: -102px;
+    }
+  }
+  div#group__frontpage-hero-slider {
+    -webkit-clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
+    width: 100vw !important;
+    /* handles moving bullets up on front page slider */
+    .glide__bullets {
+      bottom: 4rem
     }
   }
 }
@@ -6757,67 +6786,6 @@ form.webform-submission-contact-add-form {
 .glide--dragging {
   cursor: grabbing;
   cursor: -webkit-grabbing;
-}
-
-.front-page {
-  @media (min-width: 992px) {
-    .header {
-      z-index: 50;
-    }
-  }
-  @media (min-width: 992px) {
-    .header {
-      background-image: none;
-    }
-  }
-  @media (min-width: 992px) {
-    #glide {
-      margin-top: -102px;
-    }
-  }
-  @media (min-width: 1200px) {
-    #glide {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-  #glide {
-    -webkit-clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
-            clip-path: polygon(0 0%, 100% 0, 100% 96%, 0 100%);
-    width: 100vw !important;
-    background-color: #013664;
-    .glide__track {
-      width: 100vw !important;
-    }
-    .glide__arrow {
-      border-style: none;
-    }
-    .glide__arrow {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity));
-    }
-    .glide__arrow:hover {
-      --tw-text-opacity: 1;
-      color: rgb(229 231 235 / var(--tw-text-opacity));
-    }
-    .glide__arrow {
-      svg.icon {
-        width: 48px;
-        height: 48px;
-      }
-    }
-    img.image {
-      max-width: unset;
-      width: 100%;
-    }
-    .video__name {
-      display:none;
-    }
-    /* adds padding to video slides to expose controls */
-    .field-media-oembed-video {
-      padding:6rem
-    }
-  }
 }
 
 html {

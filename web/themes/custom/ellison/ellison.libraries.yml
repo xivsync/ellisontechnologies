@@ -48,16 +48,6 @@ onpage-navigation:
 location:
   js:
     dist/js/03-organisms/site/site-footer/site-footer.js: {}
-# homepage slides -- glide css added to tailwind.css
-slides:
-  js:
-    https://cdn.jsdelivr.net/npm/@glidejs/glide: {}
-    dist/js/03-organisms/slides/slides.js: {}
-    components/01-atoms/videos/video.js: {}
-    # dist/js/01-atoms/videos/video.js: {}
-  dependencies:
-    - core/drupal
-    - core/once
 # slider component -- glide css added to tailwind.css
 slider:
   js:

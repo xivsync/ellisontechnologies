@@ -282,7 +282,26 @@
 
  }
 
+ /* handles front page slider */
+ .front-page {
 
+  .header {
+    @apply lg:z-50 lg:bg-none;
+  }
+
+  div#group__frontpage-hero-slider {
+    @apply lg:mt-[-102px];
+    clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
+    width: 100vw !important;
+
+    /* handles moving bullets up on front page slider */
+    .glide__bullets {
+      bottom: 4rem
+    }
+    
+  }
+
+}
 
  /*handles customizing home page group*/
  #group__technology.group {
