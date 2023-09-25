@@ -258,7 +258,27 @@
 
   }
 
+  /* handles full width content for sliders */
+  .group__group.no-container {
+
+    picture img.image {
+      @apply w-full m-0 p-0;
+      max-width: unset;
+    }
+
+    .glide .glide__arrow--left{
+      left: 0rem !important;
+    }
+
+    .glide .glide__arrow--right{
+      right: 0rem !important;
+    }
+
+  }
+
  }
+
+
 
  /*handles customizing home page group*/
  #group__technology.group {

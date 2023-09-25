@@ -1,0 +1,21 @@
+uuid: 22b4e4cd-df54-4223-ad60-d60049d51ce0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_full_width_content
+    - paragraphs.paragraphs_type.slider
+id: paragraph.slider.field_enable_full_width_content
+field_name: field_enable_full_width_content
+entity_type: paragraph
+bundle: slider
+label: 'Enable full width content'
+description: 'Make content full-width to fill the width of browsers over 1500px wide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: no-container
+  off_label: container
+field_type: boolean

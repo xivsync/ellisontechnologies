@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.slider.field_diagonal_background
     - field.field.paragraph.slider.field_display_style
     - field.field.paragraph.slider.field_enable_back_slash_tilt
+    - field.field.paragraph.slider.field_enable_full_width_content
     - field.field.paragraph.slider.field_full_width_background
     - field.field.paragraph.slider.field_group
     - field.field.paragraph.slider.field_remove_margins
@@ -57,6 +58,16 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_enable_full_width_content:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_full_width_background:
     type: boolean

@@ -5633,6 +5633,27 @@ form.webform-submission-contact-add-form {
       right: -3rem
     }
   }
+  /* handles full width content for sliders */
+  .group__group.no-container {
+    picture img.image {
+      margin: 0px;
+    }
+    picture img.image {
+      width: 100%;
+    }
+    picture img.image {
+      padding: 0px;
+    }
+    picture img.image {
+      max-width: unset;
+    }
+    .glide .glide__arrow--left{
+      left: 0rem !important;
+    }
+    .glide .glide__arrow--right{
+      right: 0rem !important;
+    }
+  }
 }
 
 /*handles customizing home page group*/

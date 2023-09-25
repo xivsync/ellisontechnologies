@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.slider.field_diagonal_background
     - field.field.paragraph.slider.field_display_style
     - field.field.paragraph.slider.field_enable_back_slash_tilt
+    - field.field.paragraph.slider.field_enable_full_width_content
     - field.field.paragraph.slider.field_full_width_background
     - field.field.paragraph.slider.field_group
     - field.field.paragraph.slider.field_remove_margins
@@ -43,6 +44,13 @@ content:
   field_enable_back_slash_tilt:
     type: boolean_checkbox
     weight: 18
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_enable_full_width_content:
+    type: boolean_checkbox
+    weight: 29
     region: content
     settings:
       display_label: true

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_group
+    - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.slide
     - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: paragraph.slider.field_group
@@ -22,6 +24,8 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      image: image
+      video: video
       slide: slide
     negate: 0
     target_bundles_drag_drop:
@@ -45,7 +49,7 @@ settings:
         enabled: false
       image:
         weight: 6
-        enabled: false
+        enabled: true
       instagram:
         weight: 23
         enabled: false
@@ -58,6 +62,9 @@ settings:
       slide:
         weight: 28
         enabled: true
+      slide_image:
+        weight: 31
+        enabled: false
       slider:
         weight: 29
         enabled: false
@@ -72,7 +79,7 @@ settings:
         enabled: false
       video:
         weight: 25
-        enabled: false
+        enabled: true
       webform:
         weight: 16
         enabled: false
