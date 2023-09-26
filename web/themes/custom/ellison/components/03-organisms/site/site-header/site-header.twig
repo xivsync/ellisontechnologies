@@ -2,8 +2,8 @@
 
 {% set has_site_alert = drupal_block('sitewide_alert_block') | render ? true : false %}
 
-{# 1545 = prod and 1482 = local #}
-{% set front_page_slider_nid = 1482 %}
+{# 1545 = prod slider paragraph id #}
+{% set front_page_slider_nid = 1545 %}
 {% set has_front_page_slider = drupal_entity('paragraph', front_page_slider_nid)  | render ? true : false %}
 
 {% if has_site_alert %}
