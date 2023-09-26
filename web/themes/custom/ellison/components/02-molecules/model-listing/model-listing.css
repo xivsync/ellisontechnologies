@@ -77,11 +77,6 @@
 
   .collections__header > .contextual-region > div {
     @apply basis-1/5;
-
-    img {
-      @apply w-[150px];
-    }
-
   }
 
   .collections__header > .contextual-region .text-long.prose.max-w-none {
