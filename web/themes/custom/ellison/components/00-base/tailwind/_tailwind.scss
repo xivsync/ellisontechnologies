@@ -3887,7 +3887,7 @@ div.webform {
   .collections {
     padding-bottom: 4rem;
   }
-  .collactions:last-child {
+  .collections:last-child {
     border-style: none;
   }
   .collections__inner {
@@ -6901,10 +6901,6 @@ html {
 
 .grid {
   display: grid !important;
-}
-
-.contents {
-  display: contents !important;
 }
 
 .hidden {

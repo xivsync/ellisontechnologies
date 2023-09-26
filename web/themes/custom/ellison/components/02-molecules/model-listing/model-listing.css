@@ -53,7 +53,7 @@
     @apply pb-16 mb-16 border-b-2 border-gray-400 relative;
   }
 
-  .collactions:last-child {
+  .collections:last-child {
     @apply border-none;
   }
 
