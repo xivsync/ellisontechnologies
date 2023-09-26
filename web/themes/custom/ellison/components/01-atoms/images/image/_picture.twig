@@ -17,5 +17,7 @@
   {# The controlling image, with the fallback image in srcset. #}
   {% include "@atoms/images/image/_image.twig" with {
     image_blockname: picture_image_blockname|default(picture_blockname),
+    image_width: sources[0].width,
+    image_height: sources[0].height,
   } %}
 </picture>
