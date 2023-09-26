@@ -4562,12 +4562,28 @@ form.webform-submission-form {
 
 /* handles form horizontal layout */
 
-form.webform-submission-build-a-quote-form,
-form.webform-submission-newsletter-form-form {
+form.webform-submission-build-a-quote-form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 0px;
+  row-gap: 1rem;
+  .js-form-item.form-item {
+    flex-basis: 33.333333%;
+  }
+  .form-item__textfield {
+    width: 100%;
+  }
+  .form-item__textfield {
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+  }
+  @media (min-width: 992px) {
+    .form-item__textfield {
+      width: 96%;
+    }
+  }
 }
 
 /* handles select your location form */

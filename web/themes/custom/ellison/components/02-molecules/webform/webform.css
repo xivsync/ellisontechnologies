@@ -27,9 +27,16 @@ form.webform-submission-form {
 }
 
 /* handles form horizontal layout */
-form.webform-submission-build-a-quote-form,
-form.webform-submission-newsletter-form-form {
-  @apply flex flex-row flex-wrap justify-start;
+form.webform-submission-build-a-quote-form {
+  @apply flex flex-row flex-wrap justify-between gap-0;
+  row-gap: 1rem;
+  
+  .js-form-item.form-item {
+    @apply basis-1/3;
+  }
+  .form-item__textfield {
+    @apply text-gray-700 w-full lg:w-[96%];
+  }
 }
 
 /* handles select your location form */
