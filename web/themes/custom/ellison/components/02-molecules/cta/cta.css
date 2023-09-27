@@ -7,6 +7,11 @@
       @apply w-full;
     }
   }
+
+  .cta-button__body {
+    @apply w-full;
+  }
+
   .cta-button__button {
     @apply w-full;
   }
