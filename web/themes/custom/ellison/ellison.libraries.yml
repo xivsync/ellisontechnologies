@@ -19,7 +19,8 @@ sprite:
 # Components
 block:
   js:
-    dist/js/02-molecules/block/block.js: {}
+    # dist/js/02-molecules/block/block.js: {}
+    components/02-molecules/block/block.js: {}
 dropdown:
   js:
     dist/js/02-molecules/dropdown/dropdown.js: {}

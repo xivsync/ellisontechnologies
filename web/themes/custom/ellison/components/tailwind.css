@@ -9,6 +9,7 @@
 @import './01-atoms/images/images.css';
 @import './01-atoms/text/headings/page-title.css';
 
+@import './02-molecules/block/block.css';
 @import './02-molecules/card/card.css';
 @import './02-molecules/cta/cta.css';
 @import './02-molecules/dropdown/dropdown.css';

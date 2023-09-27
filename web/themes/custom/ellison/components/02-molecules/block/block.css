@@ -1,0 +1,17 @@
+/* handles location teasers block on locations page */
+#block-views-block-locations-block-1 {
+
+  .form-item--region-id {
+    @apply flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8;
+  }
+
+}
+
+/* handles location teasers block on contact us page */
+#block-views-block-locations-block-1--2 {
+
+  .form-item--region-id {
+    @apply flex flex-col items-start gap-4 ;
+  }
+
+}

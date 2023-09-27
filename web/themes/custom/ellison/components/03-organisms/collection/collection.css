@@ -47,19 +47,50 @@
   }
 
   .collection__item--teaser.collection__item--location {
-    @apply bg-gray-200 p-4;
+    @apply bg-gray-200 py-4 px-8;
 
     .card__inner {
       @apply flex flex-col lg:flex-row gap-4 lg:gap-8 items-center;
 
+      .card__inner--content {
+        @apply gap-4;
+      }
+
       .card__image {
         @apply order-last;
+
+        img {
+          @apply border border-gray-600;
+        }
+        
+      }
+
+      p.address {
+        @apply m-0 p-0 text-lg font-bold flex flex-row gap-1;
+      }
+
+      .field {
+        @apply flex flex-row gap-4;
+      }
+
+      .field__label {
+        @apply font-bold
       }
 
     }
     
-    .field {
-      @apply flex flex-row gap-4;
+
+
+  }
+
+}
+
+/* handles address on contact us page */
+#block-views-block-locations-block-1--2 {
+  .collection__item--teaser.collection__item--location {
+  
+    .card__inner p.address {
+      @apply m-0 p-0 text-lg font-bold block;
     }
 
   }
