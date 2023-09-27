@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.location
-    - system.menu.main
     - taxonomy.vocabulary.regions
   module:
     - better_exposed_filters
@@ -171,7 +170,7 @@ display:
           exposed: true
           expose:
             operator_id: field_region_target_id_op
-            label: 'Chose a region'
+            label: 'Your preferred location is... Select a different location for nearby offices.'
             description: ''
             use_operator: false
             operator: field_region_target_id_op
@@ -222,20 +221,7 @@ display:
           query_tags: {  }
       relationships: {  }
       use_ajax: true
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<h2 id="locations-current">Your selected location is...</h2>'
-            format: full_html
-          tokenize: false
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -256,30 +242,6 @@ display:
     display_options:
       exposed_block: false
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: about/locations
-      menu:
-        type: normal
-        title: Locations
-        weight: -60
-        menu_name: main
-        parent: 'menu_link_content:16bd95ad-d112-4bef-8bbb-513e580f7bb7'
     cache_metadata:
       max-age: -1
       contexts:

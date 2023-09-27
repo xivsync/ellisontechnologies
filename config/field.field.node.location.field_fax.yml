@@ -9,7 +9,7 @@ id: node.location.field_fax
 field_name: field_fax
 entity_type: node
 bundle: location
-label: Fax
+label: 'Fax:'
 description: ''
 required: false
 translatable: false

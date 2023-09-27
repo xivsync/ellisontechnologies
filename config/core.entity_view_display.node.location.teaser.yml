@@ -39,7 +39,7 @@ content:
     label: hidden
     settings:
       zoom_level: auto
-      map_size: 400x400
+      map_size: 320x240
       additional: ''
       map_style: roadmap
       scale: 1
@@ -57,3 +57,4 @@ content:
 hidden:
   field_region: true
   links: true
+  search_api_excerpt: true

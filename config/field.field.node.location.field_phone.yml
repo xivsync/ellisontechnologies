@@ -9,7 +9,7 @@ id: node.location.field_phone
 field_name: field_phone
 entity_type: node
 bundle: location
-label: Phone
+label: 'Phone:'
 description: ''
 required: false
 translatable: false
