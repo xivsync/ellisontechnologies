@@ -145,7 +145,6 @@ form.webform-submission-tax-calculator-form {
     line-height: .75;
   }
 
-  /* border-t-0 border-l-0 border-r-0 border-b-2 border-gray-300 border-dotted */
   .form-item__label {
     @apply flex items-end mb-0 p-0 w-10/12;
   }
@@ -164,15 +163,73 @@ form.webform-submission-tax-calculator-form {
   }
 
   .form-item__description {
-    @apply p-0 m-0;
-  }
+    @apply p-0 m-0 w-10/12;
 
-  .webform-element-description {
-    @apply w-full text-gray-500 text-sm;
+    .webform-element-description {
+      @apply w-full text-gray-500 text-sm pb-2;
+    }
+
   }
 
   #edit-actions {
     @apply flex justify-end mb-8;
+  }
+
+  /*handles tax calculator top row borders */
+  .form-item--updated-yearly {
+    @apply border border-gray-600;
+
+    .form-item__label {
+      @apply p-4 border-r border-gray-600;
+    }
+
+    .form-item__textfield {
+      @apply p-4;
+    }
+
+  }
+
+  /* handles tax calculator row */
+  .form-item--section-179-deduction,
+  .form-item--balance-depreciate-over-seven-years,
+  .form-item--emp,
+  .form-item--_0-bonus-depreciation,
+  .form-item--standard-depreciation,
+  .form-item--total-first-year-tax-deduction,
+  .form-item--assumed-customer-tax-bracket,
+  .form-item--tax-savings,
+  .form-item--total-tax-deduction,
+  .form-item--approximate-number-of-payments{
+    @apply border-l border-r border-gray-600;
+
+    .form-item__label {
+      @apply px-4 py-2 border-r border-gray-600;
+    }
+
+    .form-item__description {
+      @apply px-4 border-r border-gray-600;
+    }
+
+    .form-item__textfield {
+      @apply px-4 py-2;
+    }
+
+  }
+
+  .form-item--section-179-deduction,
+  .form-item--assumed-customer-tax-bracket {
+
+    .form-item__textfield {
+      border-bottom:1px solid gray;
+    }
+
+  }
+
+
+  /* handles tax calculator bottom row borders */
+  .form-item--_0-bonus-depreciation,
+  .form-item--approximate-number-of-payments {
+    @apply border-b border-gray-600;
   }
 
 }

@@ -63,6 +63,12 @@ Drupal.behaviors.handleWebform = {
 
         }
 
+        let USDollar = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 0,
+        });
+
         function updateCalculations(webformElements) {
 
           // get values from webform elements
@@ -75,34 +81,38 @@ Drupal.behaviors.handleWebform = {
           let bracketInput = webformElements['edit-assumed-customer-tax-bracket'];
           let savingsInput = webformElements['edit-tax-savings'];
           let paymentsInput = webformElements['edit-approximate-number-of-payments'];
+          let empOutput = webformElements['edit-emp'];
 
           // get estimated machine price (emp)
           let emp = empInput.value;
 
+          // copy emp to output
+          empOutput.value = USDollar.format(emp);
+
           // calculate deduction
           let deduction = calculateDeduction(emp);
-          deductionInput.value = Math.round(deduction);
+          deductionInput.value = USDollar.format(deduction); // Math.round(deduction)
 
           // calculate balance
           let balance = emp - deduction;
-          balanceInput.value = Math.round(balance);
+          balanceInput.value = USDollar.format(balance);
 
           // calculate bonus depreciation
           let bonusDepreciation = balance * 0.8;
-          bonusInput.value = Math.round(bonusDepreciation);
+          bonusInput.value = USDollar.format(bonusDepreciation);
 
           // calculate standard depreciation
           let standardDepreciation = (balance - bonusDepreciation) * 0.1429;
-          standardInput.value = Math.round(standardDepreciation);
+          standardInput.value = USDollar.format(standardDepreciation);
 
           // calculate first year tax deduction
           let first = Math.round(deduction + bonusDepreciation + standardDepreciation);
-          firstInput.value = first;
+          firstInput.value = USDollar.format(first);
 
           // calculate tax savings based on assumed tax bracket
           bracket = bracketInput.value/100;
           let savings = first * bracket;
-          savingsInput.value = Math.round(savings);
+          savingsInput.value = USDollar.format(savings);
 
           // calculate payments
           let payments = savings/(emp * 0.02);

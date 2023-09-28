@@ -4804,7 +4804,6 @@ form.webform-submission-tax-calculator-form {
   .form-item {
     line-height: .75;
   }
-  /* border-t-0 border-l-0 border-r-0 border-b-2 border-gray-300 border-dotted */
   .form-item__label {
     margin-bottom: 0px;
   }
@@ -4855,18 +4854,26 @@ form.webform-submission-tax-calculator-form {
     margin: 0px;
   }
   .form-item__description {
+    width: 83.333333%;
+  }
+  .form-item__description {
     padding: 0px;
   }
-  .webform-element-description {
-    width: 100%;
-  }
-  .webform-element-description {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  .webform-element-description {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity));
+  .form-item__description {
+    .webform-element-description {
+      width: 100%;
+    }
+    .webform-element-description {
+      padding-bottom: 0.5rem;
+    }
+    .webform-element-description {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    .webform-element-description {
+      --tw-text-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-text-opacity));
+    }
   }
   #edit-actions {
     margin-bottom: 2rem;
@@ -4876,6 +4883,128 @@ form.webform-submission-tax-calculator-form {
   }
   #edit-actions {
     justify-content: flex-end;
+  }
+  /*handles tax calculator top row borders */
+  .form-item--updated-yearly {
+    border-width: 1px;
+  }
+  .form-item--updated-yearly {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
+  .form-item--updated-yearly {
+    .form-item__label {
+      border-right-width: 1px;
+    }
+    .form-item__label {
+      --tw-border-opacity: 1;
+      border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    }
+    .form-item__label {
+      padding: 1rem;
+    }
+    .form-item__textfield {
+      padding: 1rem;
+    }
+  }
+  /* handles tax calculator row */
+  .form-item--section-179-deduction,
+  .form-item--balance-depreciate-over-seven-years,
+  .form-item--emp,
+  .form-item--_0-bonus-depreciation,
+  .form-item--standard-depreciation,
+  .form-item--total-first-year-tax-deduction,
+  .form-item--assumed-customer-tax-bracket,
+  .form-item--tax-savings,
+  .form-item--total-tax-deduction,
+  .form-item--approximate-number-of-payments {
+    border-left-width: 1px;
+  }
+  .form-item--section-179-deduction,
+  .form-item--balance-depreciate-over-seven-years,
+  .form-item--emp,
+  .form-item--_0-bonus-depreciation,
+  .form-item--standard-depreciation,
+  .form-item--total-first-year-tax-deduction,
+  .form-item--assumed-customer-tax-bracket,
+  .form-item--tax-savings,
+  .form-item--total-tax-deduction,
+  .form-item--approximate-number-of-payments {
+    border-right-width: 1px;
+  }
+  .form-item--section-179-deduction,
+  .form-item--balance-depreciate-over-seven-years,
+  .form-item--emp,
+  .form-item--_0-bonus-depreciation,
+  .form-item--standard-depreciation,
+  .form-item--total-first-year-tax-deduction,
+  .form-item--assumed-customer-tax-bracket,
+  .form-item--tax-savings,
+  .form-item--total-tax-deduction,
+  .form-item--approximate-number-of-payments {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
+  .form-item--section-179-deduction,
+  .form-item--balance-depreciate-over-seven-years,
+  .form-item--emp,
+  .form-item--_0-bonus-depreciation,
+  .form-item--standard-depreciation,
+  .form-item--total-first-year-tax-deduction,
+  .form-item--assumed-customer-tax-bracket,
+  .form-item--tax-savings,
+  .form-item--total-tax-deduction,
+  .form-item--approximate-number-of-payments{
+    .form-item__label {
+      border-right-width: 1px;
+    }
+    .form-item__label {
+      --tw-border-opacity: 1;
+      border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    }
+    .form-item__label {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .form-item__label {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .form-item__description {
+      border-right-width: 1px;
+    }
+    .form-item__description {
+      --tw-border-opacity: 1;
+      border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    }
+    .form-item__description {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .form-item__textfield {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .form-item__textfield {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .form-item--section-179-deduction,
+  .form-item--assumed-customer-tax-bracket {
+    .form-item__textfield {
+      border-bottom:1px solid gray;
+    }
+  }
+  /* handles tax calculator bottom row borders */
+  .form-item--_0-bonus-depreciation,
+  .form-item--approximate-number-of-payments {
+    border-bottom-width: 1px;
+  }
+  .form-item--_0-bonus-depreciation,
+  .form-item--approximate-number-of-payments {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
   }
 }
 
