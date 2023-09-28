@@ -60,7 +60,8 @@
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/xmlsitemap": "^1.5",
         "drupal/search_api": "^1.29",
-        "drupal/sitewide_alert": "^2.1"
+        "drupal/sitewide_alert": "^2.1",
+        "drupal/animated_gif": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
