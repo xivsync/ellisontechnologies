@@ -104,7 +104,7 @@ This creates: `h1 class="card__title card__title--small card__title--red"`
   </div>
 
   {% if has_sidebar %}
-    <div {{ bem('sidebar', [], base_class, '') }}
+    <div {{ bem('sidebar', [], base_class, 'prose') }}
       {{ drupal_region('sidebar') }}
     </div>
   {% endif %}
