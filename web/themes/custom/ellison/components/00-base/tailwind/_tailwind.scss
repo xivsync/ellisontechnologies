@@ -2728,6 +2728,22 @@ div.webform {
   }
 }
 
+/* handles news sidebar styles */
+
+#block-ellison-views-block-content-recent-block-1 {
+  a {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  a {
+    font-weight: 700;
+  }
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+  }
+}
+
 .components {
   .card {
     display: flex;
@@ -7596,7 +7612,10 @@ html {
   }
   &.has-sidebar {
     .page__content {
-      flex-basis: 75%;
+      flex-basis: 66.666667%;
+    }
+    .page__sidebar {
+      flex-basis: 33.333333%;
     }
     .page__sidebar {
       border-left-width: 1px;

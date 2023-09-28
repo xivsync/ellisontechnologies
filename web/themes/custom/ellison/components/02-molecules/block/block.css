@@ -15,3 +15,12 @@
   }
 
 }
+
+/* handles news sidebar styles */
+#block-ellison-views-block-content-recent-block-1 {
+
+  a {
+    @apply text-gray-600 font-bold text-lg;
+  }
+  
+}
