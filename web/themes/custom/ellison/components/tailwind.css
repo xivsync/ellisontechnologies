@@ -166,6 +166,7 @@ html {
   }
 
   strong {
+    color: unset;
     font-weight: 800;
   }
 
