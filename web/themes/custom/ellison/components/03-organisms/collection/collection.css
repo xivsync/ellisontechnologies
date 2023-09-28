@@ -1,3 +1,4 @@
+/* handles collection of horizontal teasers */
 .collection.display-as-rows {
   @apply flex flex-col gap-8;
 
@@ -46,6 +47,7 @@
 
   }
 
+  /* handles location teasers */
   .collection__item--teaser.collection__item--location {
     @apply bg-gray-200 py-4 px-8;
 
@@ -85,7 +87,7 @@
 
 }
 
-/* handles address on contact us page */
+/* handles adjusting the location address on contact us page */
 #block-views-block-locations-block-1--2 {
   .collection__item--teaser.collection__item--location {
   
@@ -93,6 +95,19 @@
       @apply m-0 p-0 text-lg font-bold block;
     }
 
+  }
+
+}
+
+/* handles horizontal article teasers on news page */
+.collection.collection--teasers.collection.display-as-rows {
+
+  .collection__item--article {
+    @apply p-4;
+  }
+
+  .collection__item--article:nth-child(odd) {
+    @apply bg-gray-200;
   }
 
 }
@@ -118,6 +133,7 @@
 
 }
 
+/* handles video cards in columns on video page */
 .collection.collection--videos.display-as-cols {
   @apply flex flex-row gap-4 flex-wrap;
 
@@ -131,6 +147,7 @@
 
 }
 
+/* handles collection of cards in columns */
 .collection.collection--cards.display-as-cols {
   @apply flex flex-row gap-4 flex-wrap;
 

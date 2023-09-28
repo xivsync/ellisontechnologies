@@ -5083,6 +5083,8 @@ form.webform-submission-contact-add-form {
   }
 }
 
+/* handles collection of horizontal teasers */
+
 .collection.display-as-rows {
   display: flex;
   flex-direction: column;
@@ -5168,6 +5170,7 @@ form.webform-submission-contact-add-form {
       gap: 0.5rem;
     }
   }
+  /* handles location teasers */
   .collection__item--teaser.collection__item--location {
     --tw-bg-opacity: 1;
     background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -5257,7 +5260,7 @@ form.webform-submission-contact-add-form {
   }
 }
 
-/* handles address on contact us page */
+/* handles adjusting the location address on contact us page */
 
 #block-views-block-locations-block-1--2 {
   .collection__item--teaser.collection__item--location {
@@ -5295,6 +5298,18 @@ form.webform-submission-contact-add-form {
   }
 }
 
+/* handles horizontal article teasers on news page */
+
+.collection.collection--teasers.collection.display-as-rows {
+  .collection__item--article {
+    padding: 1rem;
+  }
+  .collection__item--article:nth-child(odd) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  }
+}
+
 /* @todo remove? */
 
 .collection.collection--teasers.display-as-rows.tagged-content {
@@ -5314,6 +5329,8 @@ form.webform-submission-contact-add-form {
     display: none;
   }
 }
+
+/* handles video cards in columns on video page */
 
 .collection.collection--videos.display-as-cols {
   display: flex;
@@ -5342,6 +5359,8 @@ form.webform-submission-contact-add-form {
     }
   }
 }
+
+/* handles collection of cards in columns */
 
 .collection.collection--cards.display-as-cols {
   display: flex;
@@ -7569,6 +7588,27 @@ html {
 }
 
 .page {
+  &.has-sidebar {
+    flex-direction: row;
+  }
+  &.has-sidebar {
+    gap: 2rem;
+  }
+  &.has-sidebar {
+    .page__content {
+      flex-basis: 75%;
+    }
+    .page__sidebar {
+      border-left-width: 1px;
+    }
+    .page__sidebar {
+      --tw-border-opacity: 1;
+      border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    }
+    .page__sidebar {
+      padding-left: 2rem;
+    }
+  }
   &__header {
     display: flex;
   }

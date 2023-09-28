@@ -68,16 +68,23 @@
  * @todo Remove the id attribute (or make it a class), because if that gets
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
+
+`h1 {{ bem('title', ['small', 'red'], 'card', ['extra','extra2']) }}`
+
+This creates: `h1 class="card__title card__title--small card__title--red"`
+
  */
 #}
 
 {% set base_class = 'page' %}
 
 {% set content__attributes = content_attributes|merge({
-  'class': bem('content', [], base_class, 'model'),
+  'class': bem('content', [], base_class, 'basic'),
 }) %}
 
-<article {{ bem(base_class) }}>
+{% set has_sidebar = drupal_region('sidebar')  | render ? true : false %}
+
+<article {{ bem(base_class, [], '', [has_sidebar ? 'has-sidebar' : 'no-sidebar']) }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -95,5 +102,12 @@
   <div {{ add_attributes(content__attributes) }}>
     {{ content | without('field_jumbo_image','field_product','field_slide_tag') }}
   </div>
+
+  {% if has_sidebar %}
+    <div {{ bem('sidebar', [], base_class, '') }}
+      {{ drupal_region('sidebar') }}
+    </div>
+  {% endif %}
+  
 
 </article>

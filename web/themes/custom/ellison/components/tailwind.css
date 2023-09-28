@@ -121,6 +121,18 @@ html {
 .page {
   @apply container flex flex-col mx-auto xl:px-4;
 
+  &.has-sidebar {
+    @apply flex-row gap-8;
+
+    .page__content {
+      @apply basis-3/4;
+    }
+
+    .page__sidebar {
+      @apply border-l border-gray-600 pl-8;
+    }
+  }
+
   &__header {
     @apply flex flex-col lg:flex-row gap-8;
     
