@@ -66,3 +66,7 @@
   }
 
 }
+
+.front-page .heading__label {
+  display: none;
+}
