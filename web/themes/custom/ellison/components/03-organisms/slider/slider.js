@@ -20,8 +20,10 @@ Drupal.behaviors.glidejs = {
             type: 'carousel',
             focusAt: 'center',
             perView: visibleItems,
-            autoplay: true,
+            autoplay: 2000,
             hoverpause: true,
+            animationTimingFunc: 'ease-in-out',
+            animationDuration: 800,
             breakpoints: {
               1024: {
                 perView: 2
