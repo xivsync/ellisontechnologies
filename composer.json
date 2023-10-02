@@ -62,7 +62,8 @@
         "drupal/search_api": "^1.29",
         "drupal/sitewide_alert": "^2.1",
         "drupal/animated_gif": "^2.0",
-        "drupal/metatag_import_export_csv": "^1.2"
+        "drupal/metatag_import_export_csv": "^1.2",
+        "drupal/link_field_autocomplete_filter": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
