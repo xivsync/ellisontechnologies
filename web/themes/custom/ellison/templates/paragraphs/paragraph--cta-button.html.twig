@@ -47,8 +47,8 @@
 
 {% include "@molecules/cta/cta.twig" with {
   classes: classes,
+  background_class: content.field_background_color | render | striptags | trim,
   align_class: content.field_align_text | render | striptags | trim,
-  background_color: content.field_background_color | render | striptags | trim,
   body: content.field_content,
   webform_url: content.field_webform  | render | striptags | trim,
   webform_text: content.field_webform_cta_text | render | striptags | trim,
