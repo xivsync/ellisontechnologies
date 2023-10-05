@@ -5,7 +5,7 @@ Drupal.behaviors.blocks = {
     // any given element one time at most, regardless of how many times
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
-    once('handleExposedForm', '.views-exposed-form', context).forEach(
+    once('handleExposedForm', '.view--locations .views-exposed-form', context).forEach(
       
       function (element) {
 
