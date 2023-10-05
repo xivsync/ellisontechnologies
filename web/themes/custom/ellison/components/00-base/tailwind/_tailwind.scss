@@ -7607,6 +7607,85 @@ html {
       border-radius: 25px;
     }
   }
+}
+
+/* handles exposed form on videos page */
+
+.view--videos {
+  .views-exposed-form {
+    width: 100%;
+  }
+  @media (min-width: 576px) {
+    .views-exposed-form {
+      max-width: 576px;
+    }
+  }
+  @media (min-width: 768px) {
+    .views-exposed-form {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 992px) {
+    .views-exposed-form {
+      max-width: 992px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .views-exposed-form {
+      max-width: 1200px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .views-exposed-form {
+      max-width: 1400px;
+    }
+  }
+  .views-exposed-form {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  .views-exposed-form {
+    display: flex;
+  }
+  .views-exposed-form {
+    flex-direction: row;
+  }
+  .views-exposed-form {
+    align-items: center;
+  }
+  .views-exposed-form {
+    justify-content: center;
+  }
+  .views-exposed-form {
+    gap: 2rem;
+  }
+  .views-exposed-form {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  }
+  .views-exposed-form {
+    padding: 2rem;
+  }
+  .full-width-on .views-exposed-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .views-exposed-form {
+    .form-item--category {
+      display: flex;
+    }
+    .form-item--category {
+      flex-direction: row;
+    }
+    .form-item--category {
+      align-items: center;
+    }
+    .form-item--category {
+      gap: 2rem;
+    }
+  }
   #block-ellison-content {
     h2,
     a#edit-help-link,

@@ -86,6 +86,27 @@ html {
 
   }
 
+}
+
+/* handles exposed form on videos page */
+.view--videos {
+
+  .views-exposed-form {
+    @apply container flex flex-row items-center justify-center my-16 bg-gray-200 p-8 gap-8;
+
+    .form-item--category {
+      @apply flex flex-row gap-8 items-center {
+
+      label.form-item__label {
+        @apply text-lg font-bold;
+      }
+
+    }
+  
+  }
+
+}
+
 
   #block-ellison-content {
 
