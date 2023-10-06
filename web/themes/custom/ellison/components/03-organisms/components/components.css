@@ -22,4 +22,16 @@
     @apply my-[-4rem];
   }
 
+  .component .group.add-pt {
+    @apply pt-8;
+  }
+
+  .component .group.add-pb {
+    @apply pb-8;
+  }
+
+  .component .group.add-px {
+    @apply px-8;
+  }
+
 }
