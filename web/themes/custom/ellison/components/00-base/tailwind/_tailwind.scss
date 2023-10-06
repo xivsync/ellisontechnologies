@@ -2828,29 +2828,7 @@ div.webform {
         gap: 2rem;
       }
       .card__header h2 {
-        margin-bottom: 0px;
-      }
-       {
-        /*handles removing top and bottom margins via CKEditor Styles */
-        p.card__header h2 {
-          margin-bottom: 0;
-        }
-        /* #BUTTON
-   *
-   * handles link text styles in CKEditor
-   *
-   * a.button|Button Default
-   * a.button-light-blue|Button Light Blue
-   * a.button-white|Button White
-   * a.link-light-blue|Link Light Blue
-   * a.link-white| Link White
-   * 
-   */
-      }
-       {
-        p.card__header h2 {
-          margin-bottom: 0;
-        }
+        margin-bottom: 0;
       }
     }
     &.style-horz-left .card__inner {
@@ -4844,28 +4822,6 @@ form.webform-submission-tax-calculator-form {
   }
   .form-item__label {
     padding: 0px;
-  }
-   {
-    /*handles removing top and bottom margins via CKEditor Styles */
-    p.form-item__label {
-      margin-bottom: 0;
-    }
-    /* #BUTTON
-   *
-   * handles link text styles in CKEditor
-   *
-   * a.button|Button Default
-   * a.button-light-blue|Button Light Blue
-   * a.button-white|Button White
-   * a.link-light-blue|Link Light Blue
-   * a.link-white| Link White
-   * 
-   */
-  }
-   {
-    p.form-item__label {
-      margin-bottom: 0;
-    }
   }
   .form-item__textfield {
     margin: 0px;
@@ -7931,13 +7887,6 @@ html {
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;
     font-weight: 800;
-  }
-  /*handles removing top and bottom margins via CKEditor Styles */
-  p.mt-0 {
-    margin-top: 0 !important;
-  }
-  p.mb-0 {
-    margin-bottom: 0 !important;
   }
   strong {
     color: unset;

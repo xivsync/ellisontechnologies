@@ -38,7 +38,7 @@
       }
 
       .card__header h2 {
-        @apply mb-0;
+        margin-bottom: 0;
       }
       
     }

@@ -8,3 +8,17 @@
 @import '03-organisms/**/*.scss';
 @import '04-templates/**/*.scss';
 @import '00-base/01-colors/colors-used.scss';
+
+/* @todo handling errors when writing selectors that modify tailwind utilitites */
+.prose {
+
+  /*handles removing top and bottom margins via CKEditor Styles */
+  p.mt-0 {
+    margin-top: 0 !important;
+  }
+  
+  p.mb-0 {
+    margin-bottom: 0 !important;
+  }
+
+}
