@@ -186,6 +186,15 @@ html {
     font-weight: 800;
   }
 
+  /*handles removing top and bottom margins via CKEditor Styles */
+  p.mt-0 {
+    margin-top: 0 !important;
+  }
+  
+  p.mb-0 {
+    margin-bottom: 0 !important;
+  }
+
   strong {
     color: unset;
     font-weight: 800;
