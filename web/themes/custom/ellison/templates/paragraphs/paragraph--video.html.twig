@@ -41,7 +41,8 @@
 
 {% embed "@atoms/videos/video.twig" with {
   video__type: 'embed',
-  video_content: content,
+  video_content: content | without('field_show_video_title'),
   video_name: name,
+  video_title_display: content.field_show_video_title | render | striptags | trim ?  content.field_show_video_title | render | striptags | trim : 'video-name-off',
 } %}
 {% endembed %}

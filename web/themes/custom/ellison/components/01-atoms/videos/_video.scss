@@ -28,7 +28,15 @@
 
 }
 
-/* removes name when used with a card */
-.card h2.video__name {
+/* @todo migrate this from CSS to twig */
+/* handles all video name h2s -- by default video names/titles are not displayed */
+.component h2.video__name,
+.component .card h2.video__name,
+video.video-name-off h2.video__name {
   display: none;
+}
+
+/* handles video component where the name/title can be displayed via boolean */
+.video.video-name-on h2.video__name {
+  display:block;
 }

@@ -53,10 +53,6 @@
       @apply mx-auto lg:mx-0 lg:w-full my-0;
     }
 
-    .video__name {
-      @apply hidden;
-    }
-
   }
 
 }
@@ -264,10 +260,6 @@
     picture img.image {
       @apply w-full m-0 p-0;
       max-width: unset;
-    }
-
-    h2.video__name {
-      @apply hidden;
     }
 
     .glide .glide__arrow--left{

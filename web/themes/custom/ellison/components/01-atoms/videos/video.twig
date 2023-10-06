@@ -12,6 +12,7 @@
  * Available blocks:
  * - video_content - used to replace the content of the video with something other than the typical iframe
  *   for example: to insert an html5 video component
+ * - video_title_display - boolean default value is video-name-off
  */
 #}
 {% set video__base_class = video__base_class|default('video') %}
@@ -20,7 +21,7 @@
 {% set video__attributes = video__attributes|default([]) %}
 
 {% set video__attributes = video__attributes|merge({
-  'class': bem(video__base_class, video__modifiers, video__blockname),
+  'class': bem(video__base_class, video__modifiers, video__blockname, [video_title_display]),
 }) %}
 
 <div {{ add_attributes(video__attributes) }}>
