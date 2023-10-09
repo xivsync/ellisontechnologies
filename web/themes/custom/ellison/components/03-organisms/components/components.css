@@ -30,8 +30,8 @@
     @apply pb-8;
   }
 
-  .component .group.add-px {
-    @apply px-8;
+  .component .group.add-py {
+    @apply py-8;
   }
 
 }
