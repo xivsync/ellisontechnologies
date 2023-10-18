@@ -29,6 +29,12 @@ settings:
     -
       value: text__bg-color--light-gray
       label: 'Light Gray'
+    -
+      value: text__border--blue
+      label: 'Border Blue'
+    -
+      value: text__border--red
+      label: 'Border Red'
   allowed_values_function: ''
 module: options
 locked: false

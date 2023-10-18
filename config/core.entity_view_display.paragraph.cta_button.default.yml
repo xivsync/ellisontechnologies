@@ -23,7 +23,7 @@ bundle: cta_button
 mode: default
 content:
   field_align_text:
-    type: list_default
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }

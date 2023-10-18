@@ -188,3 +188,15 @@
   }
   
 }
+
+.text__border {
+  
+  &--blue {
+    @apply border border-dark-blue border-solid p-8 rounded-2xl;
+  }
+
+  &--red {
+    @apply border border-[#b43743] border-solid p-8 rounded-2xl;
+  }
+
+}

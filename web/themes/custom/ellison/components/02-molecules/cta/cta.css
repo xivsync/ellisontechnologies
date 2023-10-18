@@ -1,7 +1,7 @@
 .cta-button {
 
   .cta-button__inner {
-    @apply flex flex-col gap-8 items-start;
+    @apply flex flex-col gap-8 items-start w-full;
 
     .text-long {
       @apply w-full;

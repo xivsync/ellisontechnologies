@@ -2940,6 +2940,9 @@ div.webform {
     display: flex;
   }
   .cta-button__inner {
+    width: 100%;
+  }
+  .cta-button__inner {
     flex-direction: column;
   }
   .cta-button__inner {
@@ -4547,6 +4550,41 @@ div.webform {
       padding-top: 2rem;
       padding-bottom: 2rem;
     }
+  }
+}
+
+.text__border {
+  &--blue {
+    border-radius: 1rem;
+  }
+  &--blue {
+    border-width: 1px;
+  }
+  &--blue {
+    border-style: solid;
+  }
+  &--blue {
+    --tw-border-opacity: 1;
+    border-color: rgb(30 41 67 / var(--tw-border-opacity));
+  }
+  &--blue {
+    padding: 2rem;
+  }
+  &--red {
+    border-radius: 1rem;
+  }
+  &--red {
+    border-width: 1px;
+  }
+  &--red {
+    border-style: solid;
+  }
+  &--red {
+    --tw-border-opacity: 1;
+    border-color: rgb(180 55 67 / var(--tw-border-opacity));
+  }
+  &--red {
+    padding: 2rem;
   }
 }
 

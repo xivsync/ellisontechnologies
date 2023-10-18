@@ -9,7 +9,7 @@
 @import '04-templates/**/*.scss';
 @import '00-base/01-colors/colors-used.scss';
 
-/* @todo handling errors when writing selectors that modify tailwind utilitites */
+/* handles errors when selectors that modify existing tailwind utilitites */
 .prose {
 
   /*handles removing top and bottom margins via CKEditor Styles */
@@ -19,6 +19,11 @@
   
   p.mb-0 {
     margin-bottom: 0 !important;
+  }
+
+  hr {
+    border-color: rgb(75 85 99) !important;
+    border-top-width: 2px !important;
   }
 
 }

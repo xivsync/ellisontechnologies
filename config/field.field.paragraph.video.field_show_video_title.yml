@@ -1,0 +1,21 @@
+uuid: 50fdcf35-3d46-44f7-8c1d-c508fa0e9012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_video_title
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.field_show_video_title
+field_name: field_show_video_title
+entity_type: paragraph
+bundle: video
+label: 'Show video name'
+description: 'Check box to show video name. By default the video name (if available) is not displayed. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: video-name-on
+  off_label: video-name-off
+field_type: boolean
