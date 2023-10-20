@@ -60,13 +60,21 @@
 
 {% if multiple %}
   
-  <div{{ attributes.addClass(items_classes) }}>
     {% for item in items %}
-      <div{{ item.attributes.addClass(item_classes) }}>
-        {{ item.content }}
-      </div>
+      
+      {% if loop.first %}
+        <div{{ attributes.addClass(items_classes) }}>
+      {% endif %}
+
+        <div{{ item.attributes.addClass(item_classes) }}>
+          {{ item.content }}
+        </div>
+
+      {% if loop.last %}
+        </div>
+      {% endif %}
+
     {% endfor %}
-  </div>
 
 {% else %}
   
