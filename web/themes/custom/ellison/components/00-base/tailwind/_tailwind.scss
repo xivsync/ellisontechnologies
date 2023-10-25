@@ -6671,8 +6671,6 @@ form.webform-submission-contact-add-form {
   --tw-gradient-to: #013664 var(--tw-gradient-to-position);
   --tw-gradient-to-position:  ;
   padding: 1.5rem;
-  z-index: 9999;
-  /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
   &__inner {
     width: 100%;
   }
@@ -6965,6 +6963,7 @@ form.webform-submission-contact-add-form {
 
 .jumbotron {
   position: relative;
+  z-index: -50;
   &__heading {
     position: absolute;
   }

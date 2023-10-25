@@ -1,7 +1,5 @@
 .header {
   @apply p-6 flex flex-col items-center bg-gradient-to-b from-[#01172b] to-[#013664];
-  z-index: 9999;
-  /* background: linear-gradient(to bottom,#01172b 0%,#013664 100%); */
 
   &__inner {
     @apply container flex flex-row flex-wrap justify-between gap-4 items-end xl:px-4;
@@ -99,7 +97,7 @@
 }
 
 .jumbotron {
-  @apply relative;
+  @apply relative -z-50;
   
   &__heading {
     @apply absolute top-[50%] left-[50%] w-full h-full flex flex-col justify-center;
