@@ -5332,6 +5332,108 @@ form.webform-submission-contact-add-form {
   }
 }
 
+/* handles order parts form */
+
+form.webform-submission-parts-and-accessories-form {
+  fieldset#edit-part-machine-status--wrapper {
+    margin-bottom: 0px;
+  }
+  fieldset#edit-part-machine-status--wrapper {
+    legend#edit-part-machine-status--wrapper-legend {
+      font-weight: 700;
+    }
+    .js-form-item.form-item {
+      margin: 0px;
+    }
+    .js-form-item.form-item {
+      display: flex;
+    }
+    .js-form-item.form-item {
+      flex-direction: row;
+    }
+    .form-radio {
+      margin-right: 1rem;
+    }
+    .form-radio {
+      width: 1rem;
+    }
+  }
+  .tabledrag-toggle-weight-wrapper {
+    display: none;
+  }
+  table {
+    border-style: none;
+  }
+  table {
+    thead {
+      display: none;
+    }
+    tbody {
+      border-width: 1px;
+    }
+    tbody {
+      --tw-border-opacity: 1;
+      border-color: rgb(229 231 235 / var(--tw-border-opacity));
+    }
+    td.webform-multiple-table--handle {
+      display: none;
+    }
+  }
+  .webform-multiple-add.js-webform-multiple-add {
+    margin-top: 1rem;
+  }
+  .webform-multiple-add.js-webform-multiple-add {
+    display: flex;
+  }
+  .webform-multiple-add.js-webform-multiple-add {
+    flex-direction: row;
+  }
+  .webform-multiple-add.js-webform-multiple-add {
+    align-items: center;
+  }
+  .webform-multiple-add.js-webform-multiple-add {
+    justify-content: space-between;
+  }
+  .webform-multiple-add.js-webform-multiple-add {
+    button {
+      order: 9999;
+    }
+    .form-item {
+      order: -9999;
+    }
+    .form-item {
+      display: flex;
+    }
+    .form-item {
+      flex-direction: row;
+    }
+    .form-item {
+      gap: 1rem;
+    }
+  }
+}
+
+/* handles opt-in form element */
+
+.form-item.form-item--opt-in {
+  display: flex;
+  width: 100%;
+  flex-basis: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  input.form-item__textfield {
+    margin-right: 1rem !important;
+  }
+  input.form-item__textfield {
+    width: auto !important;
+  }
+  .form-item__description {
+    width: 100% !important;
+  }
+}
+
 /* handles collection of horizontal teasers */
 
 .collection.display-as-rows {

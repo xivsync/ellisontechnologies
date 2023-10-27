@@ -312,3 +312,72 @@ form.webform-submission-contact-add-form {
   }
 
 }
+
+/* handles order parts form */
+form.webform-submission-parts-and-accessories-form {
+
+  fieldset#edit-part-machine-status--wrapper {
+    @apply mb-0;
+
+    legend#edit-part-machine-status--wrapper-legend {
+      font-weight: 700;
+    }
+
+    .js-form-item.form-item {
+      @apply flex flex-row m-0;
+    }
+
+    .form-radio {
+      @apply w-4 mr-4;
+    }
+
+  }
+
+  .tabledrag-toggle-weight-wrapper {
+    @apply hidden;
+  }
+
+  table {
+    @apply border-none;
+
+    thead {
+      @apply hidden;
+    }
+
+    tbody {
+      @apply border border-gray-200;
+    }
+
+    td.webform-multiple-table--handle {
+      @apply hidden;
+    }
+
+  }
+
+  .webform-multiple-add.js-webform-multiple-add {
+    @apply flex flex-row justify-between items-center mt-4;
+
+    button {
+      @apply order-last;
+    }
+
+    .form-item {
+      @apply flex flex-row gap-4 order-first;
+    }
+  }
+
+}
+
+/* handles opt-in form element */
+.form-item.form-item--opt-in {
+  @apply w-full flex flex-row flex-wrap items-center justify-start basis-full;
+
+  input.form-item__textfield {
+    @apply w-auto mr-4 !important;
+  }
+
+  .form-item__description {
+    @apply w-full !important;
+  }
+
+}
