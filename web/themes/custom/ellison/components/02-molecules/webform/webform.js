@@ -12,7 +12,6 @@ Drupal.behaviors.handleWebform = {
       function (element) {
 
         function formWork(element) {
-          console.log("newsletter",element);
 
           const buttonEl = element;
 
@@ -38,11 +37,29 @@ Drupal.behaviors.handleWebform = {
     );
 
 
-    once('handleTaxCalculationForm', '.webform-submission-tax-calculator-form', context).forEach(
-
+    once('handleTaxCalculationForm', '#group__tax-calculator-section-179', context).forEach(
 
       // found webform component
       function (element) {
+
+        /*
+         * element often does not have the tax form so we need to wait for BigPipe to add it
+         * run when tax calculator form element is presetn
+        */
+
+        const observer = new MutationObserver((mutations, obs) => {
+          const taxForm = document.querySelector('.webform-submission-tax-calculator-form');
+          if (taxForm) {
+            formWork(taxForm);
+            obs.disconnect();
+            return;
+          }
+        });
+
+        observer.observe(document, {
+          childList: true,
+          subtree: true
+        });
 
         // calculate deduction based on price
         function calculateDeduction(price) {
@@ -121,10 +138,10 @@ Drupal.behaviors.handleWebform = {
         }
 
         // function to handle webforms
-        function formWork(element) {
+        function formWork(formEl) {
 
           // get webform element
-          let webform = element;
+          let webform = formEl;
           let webformClasses = webform.classList;
           const formNames = [...webformClasses];
 
@@ -148,32 +165,10 @@ Drupal.behaviors.handleWebform = {
               updateCalculations(webformElements);
               e.preventDefault();
             });
-
-            /*
-              // update calculations on change of price (emp)
-              empInput.addEventListener('change', (e) => {
-                updateCalculations(webformElements);
-              });
-
-              // update calculations on change of tax bracket
-              bracketInput.addEventListener('change', (e) => {
-                updateCalculations(webformElements);
-              });
-            */
-
-            
             
           }
 
         }
-
-        // check if webform is added by bigpipe
-        const checkReadyState = setInterval(() => {
-          if (document.readyState === "complete") {
-            clearInterval(checkReadyState);
-            formWork(element);
-          }
-        }, 100);
 
       },
 

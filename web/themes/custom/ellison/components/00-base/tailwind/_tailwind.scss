@@ -7749,7 +7749,7 @@ html {
     display: flex;
   }
   .views-exposed-form {
-    flex-direction: row;
+    flex-direction: column;
   }
   .views-exposed-form {
     align-items: center;
@@ -7773,48 +7773,63 @@ html {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .views-exposed-form {
-    .form-item--category {
-      display: flex;
-    }
-    .form-item--category {
+  @media (min-width: 992px) {
+    .views-exposed-form {
       flex-direction: row;
     }
-    .form-item--category {
+  }
+  .views-exposed-form {
+    .form-item--category,
+    .form-item--field-tag-target-id-1 {
+      display: flex;
+    }
+    .form-item--category,
+    .form-item--field-tag-target-id-1 {
+      flex-direction: row;
+    }
+    .form-item--category,
+    .form-item--field-tag-target-id-1 {
       align-items: center;
     }
-    .form-item--category {
+    .form-item--category,
+    .form-item--field-tag-target-id-1 {
       gap: 2rem;
     }
-  }
-  #block-ellison-content {
-    h2,
-    a#edit-help-link,
-    details#edit-advanced {
-      display: none;
+    .form-item--category,
+    .form-item--field-tag-target-id-1 {
+      label.form-item__label {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      label.form-item__label {
+        font-weight: 700;
+      }
     }
   }
-  .collection {
-    display: flex;
+}
+
+#block-ellison-content {
+  h2,
+  a#edit-help-link,
+  details#edit-advanced {
+    display: none;
   }
-  .collection {
-    flex-direction: column;
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .views-field-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
-  .collection {
-    gap: 2rem;
+  .views-field-title {
+    font-weight: 700;
   }
-  .collection {
-    .views-field-title {
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
-    .views-field-title {
-      font-weight: 700;
-    }
-    .views-field-search-api-excerpt {
-      --tw-text-opacity: 1;
-      color: rgb(156 163 175 / var(--tw-text-opacity));
-    }
+  .views-field-search-api-excerpt {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
 

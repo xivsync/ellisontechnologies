@@ -92,10 +92,11 @@ html {
 .view--videos {
 
   .views-exposed-form {
-    @apply container flex flex-row items-center justify-center my-16 bg-gray-200 p-8 gap-8;
+    @apply container flex flex-col lg:flex-row items-center justify-center my-16 bg-gray-200 p-8 gap-8;
 
-    .form-item--category {
-      @apply flex flex-row gap-8 items-center {
+    .form-item--category,
+    .form-item--field-tag-target-id-1 {
+      @apply flex flex-row gap-8 items-center;
 
       label.form-item__label {
         @apply text-lg font-bold;
@@ -108,29 +109,25 @@ html {
 }
 
 
-  #block-ellison-content {
+#block-ellison-content {
 
-    h2,
-    a#edit-help-link,
-    details#edit-advanced {
-      @apply hidden;
-    }
-
+  h2,
+  a#edit-help-link,
+  details#edit-advanced {
+    @apply hidden;
   }
 
-  .collection {
-    @apply flex flex-col gap-8;
+}
 
-    .views-field-title {
-      @apply text-2xl font-bold;
-    }
+.collection {
+  @apply flex flex-col gap-8;
 
-    .views-field-search-api-excerpt {
-      @apply text-gray-400;
-    }
+  .views-field-title {
+    @apply text-2xl font-bold;
+  }
 
-
-
+  .views-field-search-api-excerpt {
+    @apply text-gray-400;
   }
 
 }
