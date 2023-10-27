@@ -109,21 +109,3 @@
   }
 
 }
-
-/* alerts default to fixed height to avoid CLS */
-.sitewide-alert-block {
-  @apply bg-light-blue h-16 flex flex-col justify-center items-center;
-}
-
-.sitewide-alert-block .block {
-  @apply flex flex-col h-full justify-center items-center !important;
-}
-
-.sitewide-alert-block .alert {
-  @apply h-full;
-
-  &.sitewide-alert {
-    @apply bg-transparent;
-  }
-
-}

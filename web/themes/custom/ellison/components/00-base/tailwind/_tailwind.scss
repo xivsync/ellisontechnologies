@@ -3250,21 +3250,6 @@ div.webform {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
-    .sitewide-alert-block a {
-      display: flex !important;
-    }
-    .sitewide-alert-block a {
-      height: 100% !important;
-    }
-    .sitewide-alert-block a {
-      flex-direction: column !important;
-    }
-    .sitewide-alert-block a {
-      align-items: center !important;
-    }
-    .sitewide-alert-block a {
-      justify-content: center !important;
-    }
     a:focus {
       z-index: 50;
     }
@@ -5631,21 +5616,6 @@ form.webform-submission-parts-and-accessories-form {
     .card__inner p.address {
       font-weight: 700;
     }
-    .sitewide-alert-block .card__inner p.address {
-      display: flex !important;
-    }
-    .sitewide-alert-block .card__inner p.address {
-      height: 100% !important;
-    }
-    .sitewide-alert-block .card__inner p.address {
-      flex-direction: column !important;
-    }
-    .sitewide-alert-block .card__inner p.address {
-      align-items: center !important;
-    }
-    .sitewide-alert-block .card__inner p.address {
-      justify-content: center !important;
-    }
   }
 }
 
@@ -7117,32 +7087,7 @@ form.webform-submission-parts-and-accessories-form {
   }
 }
 
-/* alerts default to fixed height to avoid CLS */
-
-.sitewide-alert-block {
-  display: flex;
-  height: 4rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(70 182 227 / var(--tw-bg-opacity));
-}
-
-.sitewide-alert-block .block {
-  display: flex !important;
-  height: 100% !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.sitewide-alert-block .alert {
-  height: 100%;
-  &.sitewide-alert {
-    background-color: transparent;
-  }
-}
+/*@import './03-organisms/site/sitewide-alerts.css';*/
 
 .glide {
   position: relative;

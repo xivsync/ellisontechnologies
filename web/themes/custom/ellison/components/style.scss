@@ -27,3 +27,49 @@
   }
 
 }
+
+/* handles Tailwind errors */
+.sitewide-alert-block .block {
+  height: 4rem;
+}
+
+.sitewide-alert-block .block > div {
+  height: 4rem;
+}
+
+.sitewide-alert-block .sitewide-alert.alert.alert-primary {
+  background-color: rgba(70,182,227,1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sitewide-alert-block .sitewide-alert.alert.alert-modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sitewide-alert-block .sitewide-alert.alert.alert-modal .text-long.prose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.sitewide-alert-block .sitewide-alert.alert.alert-modal .close {
+  float: unset;
+  color: #FFFFFF;
+}
