@@ -1,0 +1,99 @@
+#main-navigation {
+
+  ul {
+    @apply list-none text-lg font-bold w-max;
+
+    li {
+      @apply relative;
+      
+      a {
+        @apply text-white no-underline inline-block whitespace-nowrap;
+        height: 2.3rem;
+
+        span::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 85%;
+          height: 4px;
+          bottom: 0;
+          left: 0;
+          background-color: #fff;
+          transform: scaleX(0);
+          transition: transform .3s ease;
+          margin-left: 1rem;
+        }
+
+        span:hover::before {
+          transform: scaleX(1);
+        }
+
+      }
+
+      a.is-active {
+
+        span::before {
+          transform: scaleX(1);
+        }
+
+      }
+
+      &::marker {
+        content: '';
+      }
+
+    }
+
+    li.menu__item > a {
+
+        span::before {
+          width: 100%;
+          margin-left: 0;
+        }
+
+      }
+
+  }
+
+  ul.menu {
+    @apply flex flex-col lg:flex-row gap-8;
+
+    li:hover .sub-menu {
+      @apply block;
+    }
+
+  }
+
+  ul.sub-menu {
+    @apply hidden absolute pt-[1.5rem];
+
+    li.sub-menu__item a {
+      @apply px-4 bg-dark-blue w-full;
+    }
+
+    li.has-expandable-menu:hover > a::after {
+      content: "";
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0.3rem;
+      margin-left: .5rem;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 17' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='m11.25 4.5 7.5 7.5-7.5 7.5m-6-15 7.5 7.5-7.5 7.5' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px' transform='translate(-4.5 -3.75)'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 14px;
+    }
+
+    li.has-expandable-menu:hover .expandable-menu {
+      @apply block;
+    }
+
+  }
+
+  ul.expandable-menu {
+    @apply hidden absolute left-[100%] -ml-4 p-4 pl-4 top-[-1rem] bg-dark-blue;
+  }
+
+
+}

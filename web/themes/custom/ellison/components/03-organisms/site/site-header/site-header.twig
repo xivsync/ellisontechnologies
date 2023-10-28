@@ -1,24 +1,28 @@
 {% set base_class = 'header' %}
 
+{# add sitewide banner or sitewide popup modal #}
 {% set has_site_alert = drupal_block('sitewide_alert_block') | render ? true : false %}
-
-{# 1545 = prod slider paragraph id #}
-{% set front_page_slider_nid = 1545 %}
-{% set has_front_page_slider = drupal_entity('paragraph', front_page_slider_nid)  | render ? true : false %}
-
 {% if has_site_alert %}
   <div class="sitewide-alert-block">
     {{ drupal_block('sitewide_alert_block') }}
   </div>
 {% endif %}
+
 <header {{ bem(base_class, '', '', ['sticky','top-0']) }}>
   <div {{ bem('inner', [], base_class) }}>
     
     {% block header__branding %}
       {% include "@organisms/site/site-header/_site-header-branding.twig" %}
     {% endblock %}
-    {% block header__menu %}
-    {% endblock %}
+
+    <nav class="header__navigating">
+      {% include "@molecules/menus/main-navigation/main-navigation.twig" %}
+    </nav>
+
+    <div class="header__searching">
+      {{ drupal_block('search_form_block') }}
+    </div>
+
     <div {{ bem('mobi', [], base_class) }}>
       <button
         id="main-menu--toggle"
@@ -26,7 +30,7 @@
         type="button"
         class="header__mobi--toggle inline-flex text-sm text-white items-center"
         aria-controls="header__navigating"
-        aria-expanded="false">
+        aria-expandable="false">
           <span class="sr-only">Open main menu</span>
       </button>
       <button
@@ -35,7 +39,7 @@
         type="button"
         class="header__mobi--toggle inline-flex text-sm text-white items-center"
         aria-controls="header__searching"
-        aria-expanded="false"
+        aria-expandable="false"
       >
         <span class="sr-only">Open search</span>
       </button>
@@ -70,7 +74,11 @@
   </div>
 {% endif %}
 
-{# sets enable_slide if node === '3' with preprocess region #}
+{# get slider from paragraph library #}
+{% set front_page_slider_nid = 1545 %}
+{% set has_front_page_slider = drupal_entity('paragraph', front_page_slider_nid)  | render ? true : false %}
+
+{# display frontpage slider if node === '3' (aka frontpage) #}
 {% if has_front_page_slider and enable_slide %}
   <div class="component">
     {{ drupal_entity('paragraph', front_page_slider_nid) }}

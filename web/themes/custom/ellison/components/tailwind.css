@@ -15,6 +15,7 @@
 @import './02-molecules/dropdown/dropdown.css';
 @import './02-molecules/event/event.css';
 @import './02-molecules/menus/breadcrumbs/breadcrumbs.css';
+@import './02-molecules/menus/main-navigation/main-navigation.css';
 @import './02-molecules/model-listing/model-listing.css';
 @import './02-molecules/quote/quote.css';
 @import './02-molecules/spec/spec.css';

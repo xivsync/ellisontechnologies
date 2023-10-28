@@ -1,0 +1,53 @@
+{{ attach_library('ellison/main-navigation') }}
+
+{# Get main menu items #}
+{% set items = simplify_menu('main') %}
+
+<div id="main-navigation" class="header__navigating--wrapper">
+
+  <ul class="menu">
+
+  {# Iterate menu tree #}
+  {% for menu_item in items.menu_tree %}
+
+    {# Check if this is the active item. #}
+    {% set active = (menu_item.active) ? 'is-active' : '' %}
+
+    {# Check if this item is in the active trail. #}
+    {% set active = active ~ ((menu_item.active_trail) ? ' is-active-trail' : '') %}
+
+    <li class="menu__item {{ active }} {{ menu_item.submenu ? 'has-submenu' : ''}}">
+      <a href="{{ menu_item.url }}" class="{{ active }}"><span>{{ menu_item.text }}</span></a>
+      {% if menu_item.submenu %}
+        <ul class="sub-menu">
+          {% for submenu_item in menu_item.submenu %}
+            {% set subactive = (submenu_item.active) ? 'is-active' : '' %} 
+            {% set subactive = subactive ~ (submenu_item.active_trail) ? ' is-active-trail' : '' %}
+            {# expandable menu naming convention url = /machining-center then menu = 'machining-center' #}
+            {% set get_menu = submenu_item.url | replace({'/': ''}) %}
+            {# display expandable menu if exists #}
+            {% set expandable_items = simplify_menu(get_menu) %}
+            <li class="sub-menu__item {{ subactive }} {{ expandable_items.menu_tree ? 'has-expandable-menu'}}">
+              <a href="{{ submenu_item.url }}" class="{{ subactive }}"><span>{{ submenu_item.text }}</span></a>
+              {% if expandable_items.menu_tree %}
+                <ul class="expandable-menu">
+                  {% for expandable_item in expandable_items.menu_tree %}
+                    {% set expandableactive = (expandable_item.active) ? 'is-active' : '' %} 
+                    <li class="expandable-menu__item {{ expandableactive }}">
+                      <a href="{{ expandable_item.url }}"><span>{{ expandable_item.text }}</span></a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+
+      {% endif %}
+    </li>
+
+  {% endfor %}
+
+  </ul>
+
+</div>
