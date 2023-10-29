@@ -67,7 +67,9 @@
         "drupal/google_analytics": "^4.0",
         "drupal/moderation_dashboard": "^2.1",
         "drupal/linkit": "^6.1",
-        "drupal/editor_advanced_link": "^2.2"
+        "drupal/editor_advanced_link": "^2.2",
+        "drupal/simplify_menu": "^3.1",
+        "drupal/smtp": "^1.2"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

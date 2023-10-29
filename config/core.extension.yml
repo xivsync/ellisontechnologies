@@ -31,6 +31,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  editor_advanced_link: 0
   ellison_webform: 0
   emulsify_twig: 0
   entity_reference_revisions: 0
@@ -54,12 +55,16 @@ module:
   key: 0
   key_value_field: 0
   link: 0
+  link_field_autocomplete_filter: 0
+  linkit: 0
   media: 0
   media_bulk_upload: 0
   media_bulk_upload_dropzonejs: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_import_export_csv: 0
   mysql: 0
   node: 0
   options: 0
@@ -87,9 +92,11 @@ module:
   search_api_db: 0
   search_api_db_defaults: 0
   shortcut: 0
+  simplify_menu: 0
   sitewide_alert: 0
   sitewide_alert_block: 0
   smart_date: 0
+  smtp: 0
   system: 0
   tamper: 0
   taxonomy: 0
