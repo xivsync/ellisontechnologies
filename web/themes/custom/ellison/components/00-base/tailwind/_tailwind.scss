@@ -6632,9 +6632,9 @@ form.webform-submission-parts-and-accessories-form {
       }
       ul.menu {
         li.menu__item::before {
-          content: "\00b7";
+          content: "·";
           color:white;
-          margin-left: -0.5rem
+          margin-left: -0.5rem;
         }
         a:hover {
           text-decoration-line: underline;
@@ -7666,11 +7666,6 @@ footer.footer-fixed {
 html {
   font-size: 16px;
   /* 1rem = 16px */
-}
-
-.foo {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .sr-only {
