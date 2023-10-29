@@ -20,12 +20,13 @@ Drupal.behaviors.mainNavigation = {
 
         if (menu) {
 
-          const exandableItems = element.querySelectorAll('li.has-expandable-menu span');
-          exandableItems.forEach((exandableItem) => {
+          const exandableToggles = element.querySelectorAll('li.has-expandable-menu a');
+          exandableToggles.forEach((exandableToggle) => {
 
-            exandableItem.addEventListener('click', (event) => {
+            console.log('exandableToggle',exandableToggle);
+            exandableToggle.addEventListener('click', (event) => {
               // remove all expanded classes
-              removeClasses(exandableItems,'expanded');
+              removeClasses(exandableToggles,'expanded');
 
               // add expanded class to clicked
 

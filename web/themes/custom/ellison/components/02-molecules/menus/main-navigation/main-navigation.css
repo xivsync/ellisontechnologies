@@ -107,5 +107,39 @@
 
 /* handling the mobi click */
 .header__navigating.expanded {
-  display: block;
+  @apply block;
+
+  #main-navigation ul li {
+    @apply static;
+  }
+
+  #main-navigation ul.sub-menu {
+    @apply block static border-none;
+  }
+
+  #main-navigation ul li.menu__item>a span::before {
+    content: unset;
+  }
+
+  #main-navigation li.has-expandable-menu ul.expandable-menu {
+    @apply block static bg-transparent ml-0;
+  }
+
+  #main-navigation ul.sub-menu li.sub-menu__item a {
+    @apply bg-transparent;
+  }
+
+  #main-navigation ul.sub-menu li.sub-menu__item > a {
+    @apply border-l-2 border-light-blue;
+  }
+
+  #main-navigation ul.expandable-menu li.expandable-menu__item > a {
+    @apply border-l-2 border-light-blue;
+  }
+
+  #main-navigation ul li.sub-menu__item>a span::before,
+  #main-navigation ul li.expandable-menu__item>a span::before {
+    content: unset;
+  }
+
 }

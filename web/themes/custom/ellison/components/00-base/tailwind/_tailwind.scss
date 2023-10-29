@@ -4003,6 +4003,77 @@ div.webform {
   display: block;
 }
 
+.sitewide-alert-block .header__navigating.expanded {
+  height: 4rem;
+}
+
+.sitewide-alert-block .header__navigating.expanded > div {
+  height: 4rem;
+}
+
+.header__navigating.expanded {
+  #main-navigation ul li {
+    position: static;
+  }
+  #main-navigation ul.sub-menu {
+    position: static;
+  }
+  #main-navigation ul.sub-menu {
+    display: block;
+  }
+  #main-navigation ul.sub-menu {
+    border-style: none;
+  }
+  .sitewide-alert-block #main-navigation ul.sub-menu {
+    height: 4rem;
+  }
+  .sitewide-alert-block #main-navigation ul.sub-menu > div {
+    height: 4rem;
+  }
+  #main-navigation ul li.menu__item>a span::before {
+    content: unset;
+  }
+  #main-navigation li.has-expandable-menu ul.expandable-menu {
+    position: static;
+  }
+  #main-navigation li.has-expandable-menu ul.expandable-menu {
+    margin-left: 0px;
+  }
+  #main-navigation li.has-expandable-menu ul.expandable-menu {
+    display: block;
+  }
+  #main-navigation li.has-expandable-menu ul.expandable-menu {
+    background-color: transparent;
+  }
+  .sitewide-alert-block #main-navigation li.has-expandable-menu ul.expandable-menu {
+    height: 4rem;
+  }
+  .sitewide-alert-block #main-navigation li.has-expandable-menu ul.expandable-menu > div {
+    height: 4rem;
+  }
+  #main-navigation ul.sub-menu li.sub-menu__item a {
+    background-color: transparent;
+  }
+  #main-navigation ul.sub-menu li.sub-menu__item > a {
+    border-left-width: 2px;
+  }
+  #main-navigation ul.sub-menu li.sub-menu__item > a {
+    --tw-border-opacity: 1;
+    border-color: rgb(70 182 227 / var(--tw-border-opacity));
+  }
+  #main-navigation ul.expandable-menu li.expandable-menu__item > a {
+    border-left-width: 2px;
+  }
+  #main-navigation ul.expandable-menu li.expandable-menu__item > a {
+    --tw-border-opacity: 1;
+    border-color: rgb(70 182 227 / var(--tw-border-opacity));
+  }
+  #main-navigation ul li.sub-menu__item>a span::before,
+  #main-navigation ul li.expandable-menu__item>a span::before {
+    content: unset;
+  }
+}
+
 .listing.contextual-region.models {
   display: flex;
   flex-direction: column;
