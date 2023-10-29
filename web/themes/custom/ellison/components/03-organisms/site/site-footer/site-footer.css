@@ -129,7 +129,7 @@
 
       &--email,
       &--quote {
-        @apply hidden lg:block;
+        @apply hidden lg:flex lg:flex-row;
       }
 
       .cta-icon {

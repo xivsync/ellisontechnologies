@@ -40,8 +40,12 @@
         border-radius: 25px 0px 0px 25px;
       }
 
-      div#edit-actions {
-        height: 2.3rem;
+      div.form-actions {
+        height: 36px;
+      }
+
+      .form-item.form-item--keys {
+        @apply h-[36px];
       }
 
       .form-submit {
@@ -91,8 +95,26 @@
 
 }
 
+body.path-frontpage {
+}
+
+body.toolbar-fixed .header {
+  @apply top-[102px];
+}
+body.toolbar-fixed.toolbar-trap-open .header {
+  @apply top-[142px];
+}
+
 .sitewide-alert-block {
   @apply lg:fixed lg:top-0 lg:w-full lg:z-50;
+}
+
+body.toolbar-fixed .sitewide-alert-block {
+  @apply lg:top-[38px];
+}
+
+body.toolbar-fixed.toolbar-tray-open .sitewide-alert-block {
+  @apply lg:top-[78px];
 }
 
 .sitewide-alert-block .block {

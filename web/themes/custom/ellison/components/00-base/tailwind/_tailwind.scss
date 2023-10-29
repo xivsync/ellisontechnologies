@@ -6994,7 +6994,13 @@ form.webform-submission-parts-and-accessories-form {
       @media (min-width: 992px) {
         &--email,
       &--quote {
-          display: block;
+          display: flex;
+        }
+      }
+      @media (min-width: 992px) {
+        &--email,
+      &--quote {
+          flex-direction: row;
         }
       }
       .cta-icon {
@@ -7287,8 +7293,11 @@ footer.footer-fixed {
       .form-search {
         border-radius: 25px 0px 0px 25px;
       }
-      div#edit-actions {
-        height: 2.3rem;
+      div.form-actions {
+        height: 36px;
+      }
+      .form-item.form-item--keys {
+        height: 36px;
       }
       .form-submit {
         height: 2.25rem;
@@ -7366,12 +7375,31 @@ footer.footer-fixed {
   }
 }
 
+body.path-frontpage {
+}
+
+body.toolbar-fixed .header {
+  top: 102px;
+}
+
+body.toolbar-fixed.toolbar-trap-open .header {
+  top: 142px;
+}
+
 @media (min-width: 992px) {
   .sitewide-alert-block {
     position: fixed;
     top: 0px;
     z-index: 50;
     width: 100%;
+  }
+
+  body.toolbar-fixed .sitewide-alert-block {
+    top: 38px;
+  }
+
+  body.toolbar-fixed.toolbar-tray-open .sitewide-alert-block {
+    top: 78px;
   }
 }
 
@@ -8009,10 +8037,6 @@ html {
 
 /* handles fixed header position */
 
-body.toolbar-fixed .header {
-  top: 102px;
-}
-
 .tabs__nav.tabs__nav--local-tasks {
   width: 100%;
 }
@@ -8072,6 +8096,10 @@ body.toolbar-fixed .header {
   .layout-container {
     margin-top: 160px;
   }
+}
+
+.layout-container.front-page {
+  lg:mt-[64px]
 }
 
 .layout-content {

@@ -44,10 +44,6 @@ html {
 
 /* handles fixed header position */
 
-body.toolbar-fixed .header {
-  @apply top-[102px];
-}
-
 .tabs__nav.tabs__nav--local-tasks {
   @apply container mx-auto;
 }
@@ -56,6 +52,10 @@ body.toolbar-fixed .header {
 
 .layout-container {
   @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];
+}
+
+.layout-container.front-page {
+  lg:mt-[64px]
 }
 
 .layout-content {
