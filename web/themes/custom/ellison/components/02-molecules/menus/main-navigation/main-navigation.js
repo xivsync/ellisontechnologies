@@ -1,45 +1,51 @@
-Drupal.behaviors.mainMenu = {
+Drupal.behaviors.mainNavigation = {
   attach: function (context, settings) {
     // Use context to filter the DOM to only the elements of interest,
     // and use once() to guarantee that our callback function processes
     // any given element one time at most, regardless of how many times
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
-    once('handleMainMenu', 'div#main-menu', context).forEach(
+    once('handleMainNavigation', '#main-navigation', context).forEach(
 
       function (element) {
 
-        const toggleExpand = context.getElementById('toggle-expand');
-        const menu = context.getElementById('main-nav');
-        if (menu) {
-          const expandMenu = menu.getElementsByClassName('expand-sub');
-    
-          // Mobile Menu Show/Hide.
-          toggleExpand.addEventListener('click', (e) => {
-            toggleExpand.classList.toggle('toggle-expand--open');
-            menu.classList.toggle('main-nav--open');
-            e.preventDefault();
+        function removeClasses(items,className){
+          items.forEach((item) => {
+            item.classList.remove(className);
           });
-    
-          // Expose mobile sub menu on click.
-          for (let i = 0; i < expandMenu.length; i += 1) {
-            expandMenu[i].addEventListener('click', (e) => {
-              const menuItem = e.currentTarget;
-              const subMenu = menuItem.nextElementSibling;
-    
-              menuItem.classList.toggle('expand-sub--open');
-              subMenu.classList.toggle('main-menu--sub-open');
-            });
-          }
+
         }
-        
+
+        const menu = element.querySelector('ul.menu');
+
+        if (menu) {
+
+          const exandableItems = element.querySelectorAll('li.has-expandable-menu span');
+          exandableItems.forEach((exandableItem) => {
+
+            exandableItem.addEventListener('click', (event) => {
+              // remove all expanded classes
+              removeClasses(exandableItems,'expanded');
+
+              // add expanded class to clicked
+
+              event.target.classList.add("expanded");
+              event.preventDefault();
+
+            });
+
+
+          });
+
+        }
+
       }
+
       
     );
 
     // Enable mobile
-    once('handleMobi', '.header__mobi-foo', context).forEach(
-      
+    once('handleMobi', '.header__mobi', context).forEach(
       
       function (element) {
 

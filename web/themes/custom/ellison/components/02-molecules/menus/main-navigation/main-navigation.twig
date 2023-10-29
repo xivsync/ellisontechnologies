@@ -12,29 +12,24 @@
 
     {# Check if this is the active item. #}
     {% set active = (menu_item.active) ? 'is-active' : '' %}
-
-    {# Check if this item is in the active trail. #}
-    {% set active = active ~ ((menu_item.active_trail) ? ' is-active-trail' : '') %}
-
-    <li class="menu__item {{ active }} {{ menu_item.submenu ? 'has-submenu' : ''}}">
-      <a href="{{ menu_item.url }}" class="{{ active }}"><span>{{ menu_item.text }}</span></a>
+    <li class="menu__item item {{ active }} {{ menu_item.submenu ? 'has-submenu' : ''}}">
+      <a href="{{ menu_item.url }}" class="item-link {{ active }}"><span>{{ menu_item.text }}</span></a>
       {% if menu_item.submenu %}
         <ul class="sub-menu">
           {% for submenu_item in menu_item.submenu %}
             {% set subactive = (submenu_item.active) ? 'is-active' : '' %} 
-            {% set subactive = subactive ~ (submenu_item.active_trail) ? ' is-active-trail' : '' %}
             {# expandable menu naming convention url = /machining-center then menu = 'machining-center' #}
             {% set get_menu = submenu_item.url | replace({'/': ''}) %}
             {# display expandable menu if exists #}
             {% set expandable_items = simplify_menu(get_menu) %}
-            <li class="sub-menu__item {{ subactive }} {{ expandable_items.menu_tree ? 'has-expandable-menu'}}">
-              <a href="{{ submenu_item.url }}" class="{{ subactive }}"><span>{{ submenu_item.text }}</span></a>
+            <li class="sub-menu__item item {{ subactive }} {{ expandable_items.menu_tree ? 'has-expandable-menu'}}">
+              <a href="{{ submenu_item.url }}" class="item-link {{ subactive }}"><span>{{ submenu_item.text }}</span></a>
               {% if expandable_items.menu_tree %}
                 <ul class="expandable-menu">
                   {% for expandable_item in expandable_items.menu_tree %}
                     {% set expandableactive = (expandable_item.active) ? 'is-active' : '' %} 
-                    <li class="expandable-menu__item {{ expandableactive }}">
-                      <a href="{{ expandable_item.url }}"><span>{{ expandable_item.text }}</span></a>
+                    <li class="expandable-menu__item item {{ expandableactive }}">
+                      <a href="{{ expandable_item.url }}" class="item-link {{ expandableactive }}"><span>{{ expandable_item.text }}</span></a>
                     </li>
                   {% endfor %}
                 </ul>
