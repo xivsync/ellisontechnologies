@@ -6782,6 +6782,7 @@ form.webform-submission-parts-and-accessories-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 3rem;
     .footer__concenting__inner {
       width: 100%;
     }
@@ -6955,7 +6956,15 @@ form.webform-submission-parts-and-accessories-form {
   }
   &__contacting {
     .footer__label {
+      display: none;
+    }
+    .footer__label {
       text-align: center;
+    }
+    @media (min-width: 992px) {
+      .footer__label {
+        display: block;
+      }
     }
     .footer__cta {
       display: flex;
@@ -6978,6 +6987,16 @@ form.webform-submission-parts-and-accessories-form {
       }
     }
     .footer__cta {
+      &--email,
+      &--quote {
+        display: none;
+      }
+      @media (min-width: 992px) {
+        &--email,
+      &--quote {
+          display: block;
+        }
+      }
       .cta-icon {
         svg {
           height: 1.5rem;
@@ -7005,6 +7024,33 @@ form.webform-submission-parts-and-accessories-form {
   }
 }
 
+footer.footer-fixed {
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  .footer__inner {
+    display: flex;
+  }
+  .footer__inner {
+    flex-direction: row;
+  }
+  .footer__inner {
+    align-items: center;
+  }
+  .footer__inner {
+    justify-content: space-between;
+  }
+  .footer__inner {
+    .footer__social ul {
+      border-style: none;
+    }
+    .footer__social ul {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
 .header {
   z-index: 50;
   display: flex;
@@ -7018,6 +7064,17 @@ form.webform-submission-parts-and-accessories-form {
   --tw-gradient-to: #013664 var(--tw-gradient-to-position);
   --tw-gradient-to-position:  ;
   padding: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .header {
+    position: fixed;
+    top: 64px;
+    width: 100%;
+  }
+}
+
+.header {
   &__inner {
     width: 100%;
   }
@@ -7306,6 +7363,15 @@ form.webform-submission-parts-and-accessories-form {
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd%3Bclip-rule:evenodd%3Bstroke-linecap:round%3Bstroke-linejoin:round'%3E%3Cpath d='M6 18 18 6M6 6l12 12' style='fill:none%3Bfill-rule:nonzero%3Bstroke:%23fff%3Bstroke-width:1.5px' transform='translate(-5.25 -5.25)'/%3E%3C/svg%3E");
       background-size: 16px;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .sitewide-alert-block {
+    position: fixed;
+    top: 0px;
+    z-index: 50;
+    width: 100%;
   }
 }
 
@@ -7631,12 +7697,20 @@ html {
   visibility: collapse !important;
 }
 
+.fixed {
+  position: fixed !important;
+}
+
 .relative {
   position: relative !important;
 }
 
 .sticky {
   position: sticky !important;
+}
+
+.bottom-0 {
+  bottom: 0px !important;
 }
 
 .top-0 {
@@ -7938,6 +8012,12 @@ html {
 
 /* @todo: separate all selectors below into appropriate files in components folder */
 
+/* handles fixed header position */
+
+body.toolbar-fixed .header {
+  top: 102px;
+}
+
 .tabs__nav.tabs__nav--local-tasks {
   width: 100%;
 }
@@ -7990,8 +8070,13 @@ html {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  overflow:hidden;
-  /* todo: fix for full-width */
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .layout-container {
+    margin-top: 160px;
+  }
 }
 
 .layout-content {

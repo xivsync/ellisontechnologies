@@ -80,6 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 3rem;
 
     .footer__concenting__inner {
       @apply container flex flex-col lg:flex-row lg:justify-between items-center py-4 px-3 gap-8 lg:gap-0;
@@ -120,10 +121,16 @@
     @apply flex flex-col lg:flex-row gap-4 font-extrabold text-lg text-light-blue uppercase justify-between lg:justify-start items-center lg:items-start;
 
     .footer__label {
-      @apply text-center;
+      @apply text-center hidden lg:block;
     }
+
     .footer__cta {
       @apply flex flex-row gap-4 justify-center lg:justify-start items-center;
+
+      &--email,
+      &--quote {
+        @apply hidden lg:block;
+      }
 
       .cta-icon {
         svg {
@@ -147,4 +154,17 @@
     content: none;
   }
 
+}
+
+footer.footer-fixed {
+  @apply w-full py-0;
+
+  .footer__inner {
+    @apply flex flex-row justify-between items-center;
+
+    .footer__social ul {
+      @apply border-none py-4;
+    }
+
+  }
 }

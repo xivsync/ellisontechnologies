@@ -46,6 +46,12 @@ html {
 
 /* @todo: separate all selectors below into appropriate files in components folder */
 
+/* handles fixed header position */
+
+body.toolbar-fixed .header {
+  @apply top-[102px];
+}
+
 .tabs__nav.tabs__nav--local-tasks {
   @apply container mx-auto;
 }
@@ -53,10 +59,7 @@ html {
 /* @todo: add backward slash `\` */
 
 .layout-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  overflow:hidden; /* todo: fix for full-width */
+  @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];
 }
 
 .layout-content {

@@ -1,5 +1,5 @@
 .header {
-  @apply p-6 flex flex-col items-center z-50 bg-gradient-to-b from-[#01172b] to-[#013664];
+  @apply lg:fixed lg:top-[64px] p-6 flex flex-col items-center z-50 bg-gradient-to-b from-[#01172b] to-[#013664] lg:w-full;
 
   &__inner {
     @apply container flex flex-row flex-wrap justify-between gap-4 items-end xl:px-4;
@@ -89,6 +89,10 @@
 
   }
 
+}
+
+.sitewide-alert-block {
+  @apply lg:fixed lg:top-0 lg:w-full lg:z-50;
 }
 
 .sitewide-alert-block .block {
