@@ -109,7 +109,3 @@
 .header__navigating.expanded {
   display: block;
 }
-
-.expanded {
-  @apply border border-red-500;
-}
