@@ -103,7 +103,7 @@ body.toolbar-fixed .header {
   @apply top-[102px];
 }
 
-body.toolbar-fixed.toolbar-trap-open .header {
+body.toolbar-fixed.toolbar-tray-open .header {
   @apply top-[142px];
 }
 
@@ -125,6 +125,11 @@ body.toolbar-fixed.toolbar-tray-open .sitewide-alert-block {
 
 .sitewide-alert-block {
   @apply h-[64px];
+}
+
+.sitewide-alert-block div.block,
+.sitewide-alert-block div.block > div {
+  @apply h-full;
 }
 
 .sitewide-alert-block .sitewide-alert.alert.alert-primary {
