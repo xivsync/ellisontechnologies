@@ -7057,6 +7057,12 @@ footer.footer-fixed {
   }
 }
 
+@media (min-width: 992px) {
+  body.path-frontpage header {
+    position: static;
+  }
+}
+
 .header {
   z-index: 50;
   display: flex;
@@ -7375,9 +7381,6 @@ footer.footer-fixed {
   }
 }
 
-body.path-frontpage {
-}
-
 body.toolbar-fixed .header {
   top: 102px;
 }
@@ -7387,6 +7390,10 @@ body.toolbar-fixed.toolbar-trap-open .header {
 }
 
 @media (min-width: 992px) {
+  body.path-frontpage .sitewide-alert-block {
+    position: static;
+  }
+
   .sitewide-alert-block {
     position: fixed;
     top: 0px;

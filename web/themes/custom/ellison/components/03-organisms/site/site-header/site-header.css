@@ -1,3 +1,7 @@
+body.path-frontpage header{
+  @apply lg:static;
+}
+
 .header {
   @apply lg:fixed lg:top-[64px] p-6 flex flex-col items-center z-50 bg-gradient-to-b from-[#01172b] to-[#013664] lg:w-full;
 
@@ -95,14 +99,16 @@
 
 }
 
-body.path-frontpage {
-}
-
 body.toolbar-fixed .header {
   @apply top-[102px];
 }
+
 body.toolbar-fixed.toolbar-trap-open .header {
   @apply top-[142px];
+}
+
+body.path-frontpage .sitewide-alert-block{
+  @apply lg:static;
 }
 
 .sitewide-alert-block {
