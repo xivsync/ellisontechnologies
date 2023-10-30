@@ -55,7 +55,7 @@ html {
 }
 
 .layout-container.front-page {
-  lg:mt-[64px]
+  @apply lg:mt-0;
 }
 
 .layout-content {

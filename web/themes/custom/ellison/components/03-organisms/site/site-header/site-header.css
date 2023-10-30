@@ -123,12 +123,8 @@ body.toolbar-fixed.toolbar-tray-open .sitewide-alert-block {
   @apply lg:top-[78px];
 }
 
-.sitewide-alert-block .block {
-  height: 4rem;
-}
-
-.sitewide-alert-block .block > div {
-  height: 4rem;
+.sitewide-alert-block {
+  @apply h-[64px];
 }
 
 .sitewide-alert-block .sitewide-alert.alert.alert-primary {
