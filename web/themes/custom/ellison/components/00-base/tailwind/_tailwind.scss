@@ -3955,7 +3955,7 @@ div.webform {
       padding-left: 1rem;
       padding-right: 1rem;
     }
-    li.has-expandable-menu:hover > a::after {
+    li.has-expandable-menu > a::after {
       content: "";
       display: inline-flex;
       width: 20px;
