@@ -103,6 +103,10 @@ html {
       }
 
     } */
+
+    #edit-actions {
+      @apply self-end;
+    }
   
   }
 
