@@ -3258,6 +3258,9 @@ div.webform {
 .sitewide-alert-block diva > div {
       height: 100%;
     }
+    #block-ellison-modala {
+      display: none;
+    }
     a:focus {
       z-index: 50;
     }
@@ -3922,6 +3925,9 @@ div.webform {
 .sitewide-alert-block divli:hover .sub-menu > div {
       height: 100%;
     }
+    #block-ellison-modalli:hover .sub-menu {
+      display: none;
+    }
   }
   ul.sub-menu {
     position: absolute;
@@ -3975,6 +3981,9 @@ div.webform {
 .sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu > div {
       height: 100%;
     }
+    #block-ellison-modalli.has-expandable-menu:hover .expandable-menu {
+      display: none;
+    }
   }
   ul.expandable-menu {
     position: absolute;
@@ -4014,6 +4023,10 @@ div.webform {
   height: 100%;
 }
 
+#block-ellison-modal.header__navigating.expanded {
+  display: none;
+}
+
 .header__navigating.expanded {
   #main-navigation ul li {
     position: static;
@@ -4034,6 +4047,9 @@ div.webform {
   .sitewide-alert-block div#main-navigation ul.sub-menu,
 .sitewide-alert-block div#main-navigation ul.sub-menu > div {
     height: 100%;
+  }
+  #block-ellison-modal#main-navigation ul.sub-menu {
+    display: none;
   }
   #main-navigation ul li.menu__item>a span::before {
     content: unset;
@@ -4057,6 +4073,9 @@ div.webform {
   .sitewide-alert-block div#main-navigation li.has-expandable-menu ul.expandable-menu,
 .sitewide-alert-block div#main-navigation li.has-expandable-menu ul.expandable-menu > div {
     height: 100%;
+  }
+  #block-ellison-modal#main-navigation li.has-expandable-menu ul.expandable-menu {
+    display: none;
   }
   #main-navigation ul.sub-menu li.sub-menu__item a {
     background-color: transparent;
@@ -5236,13 +5255,13 @@ form.webform-submission-tax-calculator-form {
       color: rgb(107 114 128 / var(--tw-text-opacity));
     }
   }
-  #edit-actions {
+  .form-actions {
     margin-bottom: 2rem;
   }
-  #edit-actions {
+  .form-actions {
     display: flex;
   }
-  #edit-actions {
+  .form-actions {
     justify-content: flex-end;
   }
   /*handles tax calculator top row borders */
@@ -5898,6 +5917,9 @@ form.webform-submission-parts-and-accessories-form {
     .sitewide-alert-block div.card__inner p.address,
 .sitewide-alert-block div.card__inner p.address > div {
       height: 100%;
+    }
+    #block-ellison-modal.card__inner p.address {
+      display: none;
     }
   }
 }
@@ -7437,21 +7459,6 @@ body.toolbar-fixed.toolbar-tray-open .header {
   align-items: center;
 }
 
-.sitewide-alert-block .sitewide-alert.alert.alert-modal {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 999;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-
 .sitewide-alert-block .sitewide-alert.alert.alert-modal .text-long.prose {
   display: flex;
   flex-direction: column;
@@ -7469,14 +7476,6 @@ body.toolbar-fixed.toolbar-tray-open .header {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-}
-
-.sitewide-alert-block .sitewide-alert.alert.alert-modal .close {
-  float: unset;
-  color: #FFFFFF;
-  align-self: start;
-  margin-top: 25vh;
-  font-size: 3rem;
 }
 
 .jumbotron {
@@ -8052,7 +8051,11 @@ html {
 
 /* @todo: separate all selectors below into appropriate files in components folder */
 
-/* handles fixed header position */
+/* handles modal */
+
+#block-ellison-modal.block {
+  display: none !important;
+}
 
 .tabs__nav.tabs__nav--local-tasks {
   width: 100%;
@@ -8328,7 +8331,6 @@ html {
 }
 
 #block-ellison-content {
-  h2,
   a#edit-help-link,
   details#edit-advanced {
     display: none;

@@ -111,7 +111,6 @@ html {
 
 #block-ellison-content {
 
-  h2,
   a#edit-help-link,
   details#edit-advanced {
     @apply hidden;

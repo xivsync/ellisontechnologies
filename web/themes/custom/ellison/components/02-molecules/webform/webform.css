@@ -177,7 +177,7 @@ form.webform-submission-tax-calculator-form {
 
   }
 
-  #edit-actions {
+  .form-actions {
     @apply flex justify-end mb-8;
   }
 
