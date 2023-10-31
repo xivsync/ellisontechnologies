@@ -5,47 +5,6 @@ Drupal.behaviors.mainNavigation = {
     // any given element one time at most, regardless of how many times
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
-    once('handleMainNavigation', '#main-navigation', context).forEach(
-
-      function (element) {
-
-        function removeClasses(items,className){
-          items.forEach((item) => {
-            item.classList.remove(className);
-          });
-
-        }
-
-        const menu = element.querySelector('ul.menu');
-
-        if (menu) {
-
-          const exandableToggles = element.querySelectorAll('li.has-expandable-menu a');
-          exandableToggles.forEach((exandableToggle) => {
-
-            console.log('exandableToggle',exandableToggle);
-            exandableToggle.addEventListener('click', (event) => {
-              // remove all expanded classes
-              removeClasses(exandableToggles,'expanded');
-
-              // add expanded class to clicked
-
-              event.target.classList.add("expanded");
-              event.preventDefault();
-
-            });
-
-
-          });
-
-        }
-
-      }
-
-      
-    );
-
-    // Enable mobile
     once('handleMobi', '.header__mobi', context).forEach(
       
       function (element) {

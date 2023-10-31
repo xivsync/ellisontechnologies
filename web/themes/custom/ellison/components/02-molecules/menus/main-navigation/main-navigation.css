@@ -1,7 +1,7 @@
 #main-navigation {
 
   ul {
-    @apply list-none text-lg font-bold w-max;
+    @apply list-none text-lg w-max;
 
     li {
       @apply relative;
@@ -50,6 +50,15 @@
         margin-left: 0;
       }
 
+    }
+
+    li.menu__item {
+      @apply font-bold;
+    }
+
+    li.sub-menu__item,
+    li.expandable-menu__item {
+      @apply font-normal;
     }
 
     li.sub-menu__item > a,
