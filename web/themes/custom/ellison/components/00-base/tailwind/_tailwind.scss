@@ -8279,32 +8279,15 @@ html {
     }
   }
   .views-exposed-form {
-    .form-item--category,
+    /* .form-item--category,
     .form-item--field-tag-target-id-1 {
-      display: flex;
-    }
-    .form-item--category,
-    .form-item--field-tag-target-id-1 {
-      flex-direction: row;
-    }
-    .form-item--category,
-    .form-item--field-tag-target-id-1 {
-      align-items: center;
-    }
-    .form-item--category,
-    .form-item--field-tag-target-id-1 {
-      gap: 2rem;
-    }
-    .form-item--category,
-    .form-item--field-tag-target-id-1 {
+      @apply flex flex-row gap-8 items-center;
+
       label.form-item__label {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
+        @apply text-lg font-bold;
       }
-      label.form-item__label {
-        font-weight: 700;
-      }
-    }
+
+    } */
   }
 }
 

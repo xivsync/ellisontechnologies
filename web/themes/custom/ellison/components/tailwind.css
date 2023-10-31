@@ -94,7 +94,7 @@ html {
   .views-exposed-form {
     @apply container flex flex-col lg:flex-row items-center justify-center my-16 bg-gray-200 p-8 gap-8;
 
-    .form-item--category,
+    /* .form-item--category,
     .form-item--field-tag-target-id-1 {
       @apply flex flex-row gap-8 items-center;
 
@@ -102,7 +102,7 @@ html {
         @apply text-lg font-bold;
       }
 
-    }
+    } */
   
   }
 

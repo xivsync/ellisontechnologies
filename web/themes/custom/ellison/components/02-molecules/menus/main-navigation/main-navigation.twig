@@ -22,7 +22,7 @@
             {% set get_menu = submenu_item.url | replace({'/': ''}) %}
             {# display expandable menu if exists #}
             {% set expandable_items = simplify_menu(get_menu) %}
-            <li class="sub-menu__item item {{ subactive }} {{ expandable_items.menu_tree ? 'has-expandable-menu'}}">
+            <li class="sub-menu__item item {{ subactive }} {{ expandable_items.menu_tree ? 'has-expandable-menu'}}" data-get-menu="{{ get_menu }}">
               <a href="{{ submenu_item.url }}" class="item-link {{ subactive }}"><span>{{ submenu_item.text }}</span></a>
               {% if expandable_items.menu_tree %}
                 <ul class="expandable-menu">
