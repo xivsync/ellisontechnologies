@@ -1,0 +1,108 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see template_preprocess_field()
+
+  <div class="glide">
+
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide">0</li>
+        <li class="glide__slide">1</li>
+        <li class="glide__slide">2</li>
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+
+  </div>
+
+ */
+#}
+
+{% set count = items | length %}
+
+{% set items_classes = [
+    'glide__slides',
+    'slider__items',
+    'slider__items--count-' ~ count,
+    'prose',
+    'max-w-none',
+  ]
+%}
+
+{% set item_classes = [
+    'glide__slide',
+    'slider__item',
+  ]
+%}
+
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul{{ attributes.addClass(items_classes) }}>
+        {% for item in items %}
+          <div{{ item.attributes.addClass(item_classes) }}>
+            {{ item.content }}
+          </div>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      {% for item in items %}
+        <button class="glide__bullet" data-glide-dir="={{ loop.index0 }}"></button>
+      {% endfor %}
+    </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
