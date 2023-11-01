@@ -11,9 +11,7 @@ Drupal.behaviors.glidejs = {
 
         window.addEventListener('load', function () {
 
-          console.log('slider-on',element);
-
-          const slider = element.querySelector('.glide');
+          const slider = element.querySelector('.group__group .glide');
           const visibleItems = element.dataset.visibleItems;
 
           let glide = new Glide(slider, {

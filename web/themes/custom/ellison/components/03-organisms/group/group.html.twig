@@ -71,6 +71,27 @@
 {% set wrapping_attributes = create_attribute() %}
 
 {%
+  set header_wrapping_classes = [
+    'group__header',
+    add_container_class,
+  ]
+%}
+
+{%
+  set body_wrapping_classes = [
+    'group__body',
+    add_container_class,
+  ]
+%}
+
+{%
+  set footer_wrapping_classes = [
+    'group__footer',
+    add_container_class,
+  ]
+%}
+
+{%
   set wrapping_classes = [
     add_container_class,
   ]
@@ -80,12 +101,12 @@
   {{ title_suffix }}
   <div{{ inner_attributes.addClass(inner_classes) }}>
     {% if header | render %}
-      <div{{ wrapping_attributes.addClass(wrapping_classes) }}>
+      <div{{ wrapping_attributes.addClass(header_wrapping_classes) }}>
         {{ header }}
       </div>
     {% endif %}
     {% if body | render %}
-      <div{{ wrapping_attributes.addClass(wrapping_classes) }}>
+      <div{{ wrapping_attributes.addClass(body_wrapping_classes) }}>
         {{ body }}
       </div>
     {% endif %}
@@ -95,7 +116,7 @@
       </div>
     {% endif %}
     {% if footer | render %}
-      <div{{ wrapping_attributes.addClass(wrapping_classes) }}>
+      <div{{ wrapping_attributes.addClass(footer_wrapping_classes) }}>
         {{ footer }}
       </div>
     {% endif %}
