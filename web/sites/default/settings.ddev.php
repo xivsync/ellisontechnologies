@@ -11,24 +11,14 @@ $host = "db";
 $port = 3306;
 $driver = "mysql";
 
-// If DDEV_PHP_VERSION is not set but IS_DDEV_PROJECT *is*, it means we're running (drush) on the host,
-// so use the host-side bind port on docker IP
-if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
-  $host = "127.0.0.1";
-  $port = 49218;
-}
+$databases['default']['default']['database'] = "db";
+$databases['default']['default']['username'] = "db";
+$databases['default']['default']['password'] = "db";
+$databases['default']['default']['host'] = $host;
+$databases['default']['default']['driver'] = $driver;
+$databases['default']['default']['port'] = $port;
 
-$databases['default']['default'] = array(
-  'database' => "db",
-  'username' => "db",
-  'password' => "db",
-  'host' => $host,
-  'driver' => $driver,
-  'port' => $port,
-  'prefix' => "",
-);
-
-$settings['hash_salt'] = 'tTUaXABqiTjACblrsUaaCzxQAZijnAmPSyVIjyeWIzOFXQUYfBBWVuguczsdrdWp';
+$settings['hash_salt'] = '12317d6a7c8c8d1c83c6354f1c058f65e3c2fb75d47fec6c6d9f9ee51e355b3d';
 
 // This will prevent Drupal from setting read-only permissions on sites/default.
 $settings['skip_permissions_hardening'] = TRUE;
@@ -46,9 +36,13 @@ if (empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = 'sites/default/files/sync';
 }
 
-// Override drupal/symfony_mailer default config to use Mailhog
+// Override drupal/symfony_mailer default config to use Mailpit
 $config['symfony_mailer.mailer_transport.sendmail']['plugin'] = 'smtp';
 $config['symfony_mailer.mailer_transport.sendmail']['configuration']['user']='';
 $config['symfony_mailer.mailer_transport.sendmail']['configuration']['pass']='';
 $config['symfony_mailer.mailer_transport.sendmail']['configuration']['host']='localhost';
 $config['symfony_mailer.mailer_transport.sendmail']['configuration']['port']='1025';
+
+// Enable verbose logging for errors.
+// https://www.drupal.org/forum/support/post-installation/2018-07-18/enable-drupal-8-backend-errorlogdebugging-mode
+$config['system.logging']['error_level'] = 'verbose';
