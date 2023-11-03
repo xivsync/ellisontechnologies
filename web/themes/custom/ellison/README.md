@@ -20,13 +20,13 @@ https://docs.pantheon.io/pantheon-workflow
 - Drupal Syntax Highlighting
 - Tailwind CSS IntelliSense
 
-### Workflow using SFTP
+### Development workflow using SFTP
 
-If local development is not ideal, then use SFTP to develop directly on Pantheon Dev environment.
+If local development is not ideal, then use SFTP to develop directly on Pantheon Dev environment. This option takes the least time to get set up.
 
 https://docs.pantheon.io/guides/sftp
 
-### Workflow for Git
+### Developmet workflow for Git
 
 This assumes you've already setup local development using DDEV.
 
@@ -45,13 +45,12 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - then in the theme folder run `npm run build` to build files including `tailwind.scss`
 - commit changes to `master`
 - when ready `git push`
-- DO NOT USE SMTP to make changes to the code
 - Test on Dev environment
-- When ready merge to Test
+- When ready merge to Test using Pantheon tools 
 - Now have the client UAT on Test
-- When ready merge to Production
+- When ready merge to Production using Pantheon tools
 
-@todo review twig and file cache clear
+@todo review local development settings
 
 ## How to start developing locally using DDEV
 
@@ -93,7 +92,10 @@ When you `ddev pull pantheon` it should hook up everything. Then `ddev drush cr`
 
 ### Configs
 
-Right now configs are manually sync'd using the Configuration > Development > Configuration Sync > Import/Export. It is recommended that you develop using the latest database, and then use `ddev drush cex` to export any config changes you made locally to support your code changes.
+Right now configs are manually sync'd using the Configuration > Development > Configuration Sync > Import/Export. Do this for all required configurations. If you start development from a current database, then Configuration > Development > Configuration Sync will notify you of what changed.
+
+- Make a configuration change, then Configuration > Development > Configuration Sync > Export > Single Item
+- Then in Dev, Test, Live Configuration > Development > Configuration Sync > Import > Single Item
 
 ### To import database
 
@@ -174,17 +176,17 @@ To build the `_tailwind.scss file`, in the theme root folder run this **Tailwind
 
 Then in the theme root folder run this **NPM script** to generate the theme `/dist/css/style.css`. This is the file added to the global theme library. It includes Tailwind base (CSS reset), all the Tailwind styles found in Components and Templates, and all the Emulsify styles found also in Components and Templates.
 
-## Theme workflow
+## Theme development workflow
 
 Build the Tailwind file (@todo: eventually this should build the `style.css` file in the `/dist/` folder)
 
 `npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss`
 
-Build the theme to create the `/dist/css/` and `/dist/js/` files added by `ellison.libraries.yml`
+Build the theme to create the needed `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`
 
 `npm run build`
 
-Build the production theme
+Build the production files
 
 `npm run build --production`
 
@@ -217,7 +219,7 @@ These are customized from the default Tailwind breakpoints.
 
 The layout relies on `container mx-auto` to center and provide width to sections. The header, page, breadcrumbs, footer, newsletter and homepage slides all have an extra `xl:px-4` in order to match the size of the old site.
 
-The recommended way to space a component is to use `@apply flex gap-8` to provide internally spacing between elements. If needed add `@appy mb-8` to separate componponents.
+The recommended way to space a components is to use `@apply flex gap-8` to provide internally spacing between elements. If needed add `@appy mb-8` to separate componponents.
 
 ### CSS Standards
 
@@ -278,8 +280,8 @@ This creates: `h1 class="title js-click"`
 ## JS
 
 - librareis
-- npm run build to get dist files built
-- js in component folders
+- `npm run build`` to get dist files built
+- scripts are automatically found if they are storied in the appropriate component folders
 
 ## Theme documentation
 
@@ -335,6 +337,29 @@ The workflow for promoting a library item and then re-using it is as follows:
 * Save component
 * Now you can go to the next model (or basic page) and add a re-usable library component by searching for the title (see above title)
 * Save page
+
+## SMTP
+
+SendGrid is used with the SMPT module under the account with username `trinetdev3@trinetsolutions.com` the password is stored in Keeper.
+
+https://docs.sendgrid.com/for-developers/sending-email/drupal
+
+## Salesforce
+
+
+### Connected App
+
+@tod
+
+### SalesForce Module
+
+-- Mapping
+
+@todo
+
+## Call Tracking Metrics
+
+@todo
 
 ## Author
 
