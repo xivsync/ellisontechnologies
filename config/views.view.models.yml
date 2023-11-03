@@ -17,9 +17,9 @@ dependencies:
     - taxonomy
     - user
 id: models
-label: Models
+label: 'List series with models on products page'
 module: views
-description: ''
+description: 'List series with models on products page'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -526,13 +526,15 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        field_brand_target_id:
-          id: field_brand_target_id
-          table: node__field_brand
-          field: field_brand_target_id
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_brand
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
           order: ASC
           expose:
@@ -667,6 +669,46 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        status_1:
+          id: status_1
+          table: taxonomy_term_field_data
+          field: status
+          relationship: field_brand
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
         options:
@@ -741,13 +783,13 @@ display:
         - 'config:field.storage.node.field_series'
   block_1:
     id: block_1
-    display_title: 'View Series'
+    display_title: 'List series with models on products page'
     display_plugin: block
     position: 2
     display_options:
       display_description: 'By product, grouped by brand then series, filtered by users region.'
       display_extenders: {  }
-      block_description: 'Block Component: list series on products page'
+      block_description: 'List series with models on products page'
     cache_metadata:
       max-age: -1
       contexts:

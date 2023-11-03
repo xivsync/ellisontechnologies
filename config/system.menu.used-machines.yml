@@ -1,0 +1,8 @@
+uuid: acd6cf60-2965-4d11-b93e-b9b675400a5e
+langcode: en
+status: true
+dependencies: {  }
+id: used-machines
+label: 'Used Machines'
+description: 'Main Navigation Expandable Menu'
+locked: false

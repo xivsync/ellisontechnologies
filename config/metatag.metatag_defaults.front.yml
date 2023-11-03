@@ -1,0 +1,14 @@
+uuid: 7797b744-ae8c-4c84-af9c-b51161dddb6b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: 'Ellison Technologies is a provider of advanced machining solutions to North American metal-cutting manufacturers and their global affiliates. More than just a distributor we are your CNC machine tool partner.'
+  keywords: 'grinding machines, band saws, circular saws, engineering, cnc machine parts, cnc machine accessories, spindle rebuilds, cnc machine financing'
+  robots: 'index, follow'
+  shortlink: '[site:url]'

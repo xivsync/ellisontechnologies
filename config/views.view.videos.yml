@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_media_oembed_video
     - media.type.remote_video
+    - taxonomy.vocabulary.products
     - taxonomy.vocabulary.tags
   module:
     - media
@@ -190,7 +191,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access media overview'
+          perm: 'view media'
       cache:
         type: tag
         options: {  }
@@ -361,10 +362,61 @@ display:
           exposed: true
           expose:
             operator_id: field_tag_target_id_op
-            label: Category
+            label: 'SELECT A PRODUCT'
             description: ''
             use_operator: false
             operator: field_tag_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: product
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Tag (field_tag)'
+            description: null
+            identifier: field_tag_target_id
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: true
+          vid: products
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_tag_target_id_1:
+          id: field_tag_target_id_1
+          table: media__field_tag
+          field: field_tag_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tag_target_id_1_op
+            label: 'SELECT A CATEGORY'
+            description: ''
+            use_operator: false
+            operator: field_tag_target_id_1_op
             operator_limit_selection: false
             operator_list: {  }
             identifier: category
@@ -389,7 +441,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: true
+          reduce_duplicates: false
           vid: tags
           type: select
           hierarchy: false

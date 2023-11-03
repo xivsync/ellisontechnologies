@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_dates_and_times
     - field.field.node.event.field_leadsource
     - field.field.node.event.field_location
+    - field.field.node.event.field_metatags
     - field.field.node.event.field_method_of_contact__c
     - field.field.node.event.field_region
     - field.field.node.event.field_tags
@@ -59,9 +60,11 @@ hidden:
   field_code_snippet: true
   field_components: true
   field_leadsource: true
+  field_metatags: true
   field_method_of_contact__c: true
   field_region: true
   field_tags: true
   field_webform: true
   field_webform_campaign_id__c: true
   links: true
+  search_api_excerpt: true

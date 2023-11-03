@@ -16,7 +16,7 @@ uid: null
 template: false
 archive: false
 id: contact
-title: 'Machine Sales Inquiries aka Contact Us'
+title: 'Contact Us'
 description: '<p>Basic email contact webform for Machine Sales Inquiries (aka Contact US). <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
 categories: {  }
 elements: |-
@@ -291,10 +291,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
   confirmation_url: /thank-you
   confirmation_title: ''
-  confirmation_message: '<h2>Thank you.</h2><p>Your message has been sent.</p>'
+  confirmation_message: '<p>Thank you for contacting Ellison Technologies. One of our team members will contact you regarding your inquiry.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''

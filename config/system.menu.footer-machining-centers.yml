@@ -1,0 +1,8 @@
+uuid: d7a3e14e-b5d6-45a8-9be5-fcd3fc47cdcf
+langcode: en
+status: true
+dependencies: {  }
+id: footer-machining-centers
+label: 'Footer machining centers'
+description: 'Footer menu.'
+locked: false

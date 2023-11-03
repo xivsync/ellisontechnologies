@@ -18,21 +18,33 @@ elements: |-
   firstname:
     '#type': textfield
     '#title': 'First Name'
+    '#title_display': invisible
+    '#placeholder': 'First Name'
   lastname:
     '#type': textfield
     '#title': 'Last Name'
+    '#title_display': invisible
+    '#placeholder': 'Last Name'
   company:
     '#type': textfield
     '#title': Company
+    '#title_display': invisible
+    '#placeholder': Company
   email:
     '#type': email
     '#title': Email
+    '#title_display': invisible
+    '#placeholder': Email
   phone:
     '#type': tel
     '#title': Phone
+    '#title_display': invisible
+    '#placeholder': Phone
   postalcode:
     '#type': textfield
     '#title': 'Zip Code'
+    '#title_display': invisible
+    '#placeholder': 'Zip Code'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

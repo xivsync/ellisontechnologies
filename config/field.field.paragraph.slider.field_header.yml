@@ -1,0 +1,26 @@
+uuid: 27b195ed-c9ba-4bf5-b4d5-5915cf02fa1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - filter.format.basic_html
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.slider
+  module:
+    - text
+id: paragraph.slider.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: slider
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

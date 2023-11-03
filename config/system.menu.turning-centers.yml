@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: turning-centers
 label: 'Turning Centers'
-description: ''
+description: 'Main Navigation Expandable Menu'
 locked: false

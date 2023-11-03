@@ -1,8 +1,0 @@
-uuid: d4d866a1-9de9-4f8e-854b-4f3844a933d0
-langcode: en
-status: true
-dependencies: {  }
-name: Video
-vid: video
-description: ''
-weight: 0

@@ -1,0 +1,21 @@
+uuid: b2c563d5-6279-41f5-a8ca-898a6e102a05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.event
+  module:
+    - metatag
+id: node.event.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: event
+label: Metatags
+description: 'Inherits from Global Metatag settings. Configure here to customize this page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

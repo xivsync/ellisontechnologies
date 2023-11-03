@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_content
+    - filter.format.basic_html
+    - filter.format.full_html
     - paragraphs.paragraphs_type.instagram
   module:
     - text
@@ -17,5 +19,8 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - full_html
+    - basic_html
 field_type: text_long

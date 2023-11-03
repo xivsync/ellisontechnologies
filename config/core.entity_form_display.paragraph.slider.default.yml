@@ -10,12 +10,14 @@ dependencies:
     - field.field.paragraph.slider.field_enable_full_width_content
     - field.field.paragraph.slider.field_full_width_background
     - field.field.paragraph.slider.field_group
+    - field.field.paragraph.slider.field_header
     - field.field.paragraph.slider.field_remove_margins
     - field.field.paragraph.slider.field_unique_id
     - field.field.paragraph.slider.field_visible_items
     - paragraphs.paragraphs_type.slider
   module:
     - paragraphs
+    - text
 id: paragraph.slider.default
 targetEntityType: paragraph
 bundle: slider
@@ -80,6 +82,14 @@ content:
         add_above: add_above
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_header:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_remove_margins:
     type: options_select

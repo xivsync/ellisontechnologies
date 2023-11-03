@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: edm
 label: EDM
-description: ''
+description: 'Main Navigation Expandable Menu'
 locked: false

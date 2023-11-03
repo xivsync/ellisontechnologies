@@ -46,7 +46,6 @@ third_party_settings:
         - field_media_image
         - field_header
         - field_content
-        - group_card_cta
       label: 'Card Content'
       region: content
       parent_name: ''
@@ -63,19 +62,34 @@ third_party_settings:
       children:
         - field_footer
         - field_cta_button
-        - field_webform_cta_text
-        - field_webform
+        - group_webform_cta
       label: 'Card CTA'
       region: content
-      parent_name: group_card_content
-      weight: 7
+      parent_name: ''
+      weight: 1
       format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: false
+        open: true
         description: 'Select either footer text, link or webform as your CTA. The card expects only 1 of these to be implemented per card.'
+        required_fields: true
+    group_webform_cta:
+      children:
+        - field_webform_cta_text
+        - field_webform
+      label: 'Webform CTA'
+      region: content
+      parent_name: group_card_cta
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
         required_fields: true
 id: paragraph.card.default
 targetEntityType: paragraph

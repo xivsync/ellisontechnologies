@@ -1,0 +1,8 @@
+uuid: 14fe118d-6b43-4c7f-a74e-40a146e7b9d8
+langcode: en
+status: true
+dependencies: {  }
+id: mfs-financial-services
+label: 'MFS financial services'
+description: 'Main Navigation Expandable Menu'
+locked: false

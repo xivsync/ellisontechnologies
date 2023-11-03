@@ -13,10 +13,10 @@ dependencies:
     - smart_date
     - user
 id: events
-label: 'Events Page'
+label: 'Event Listing'
 module: views
-description: 'Page that lists upcoming events'
-tag: Events
+description: 'List of upcoming events'
+tag: 'Event Listing'
 base_table: node_field_data
 base_field: nid
 display:
@@ -483,20 +483,13 @@ display:
       tags:
         - 'config:field.storage.node.field_dates_and_times'
         - 'config:field.storage.node.field_location'
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 2
     display_options:
       display_extenders: {  }
-      path: about/events
-      menu:
-        type: normal
-        title: Events
-        weight: -61
-        menu_name: main
-        parent: 'menu_link_content:16bd95ad-d112-4bef-8bbb-513e580f7bb7'
     cache_metadata:
       max-age: -1
       contexts:

@@ -2,12 +2,7 @@ uuid: fe8a23ad-92d7-4a6b-b4b0-c91696cf6397
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.restricted_html
   module:
-    - comment
-    - contact
-    - filter
     - media
     - search
     - sitewide_alert
@@ -19,10 +14,7 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
   - 'search content'
-  - 'use text format restricted_html'
   - 'view media'
   - 'view published sitewide alert entities'

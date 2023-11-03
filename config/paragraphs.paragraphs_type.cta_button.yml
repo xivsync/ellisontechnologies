@@ -4,6 +4,11 @@ status: true
 dependencies:
   content:
     - 'file:file:8323dea6-a102-4dd8-ad81-36cddcbf6445'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: cta_button
 label: 'CTA Button'
 icon_uuid: 8323dea6-a102-4dd8-ad81-36cddcbf6445

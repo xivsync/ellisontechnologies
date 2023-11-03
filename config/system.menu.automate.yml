@@ -1,0 +1,8 @@
+uuid: 0c207be8-4468-4464-bf70-8749e66c18f7
+langcode: en
+status: true
+dependencies: {  }
+id: automate
+label: AutoMate
+description: 'Main Navigation Expandable Menu'
+locked: false

@@ -29,6 +29,9 @@ settings:
     -
       value: link-white
       label: 'Link White'
+    -
+      value: link-blue
+      label: 'Link Blue'
   allowed_values_function: ''
 module: options
 locked: false

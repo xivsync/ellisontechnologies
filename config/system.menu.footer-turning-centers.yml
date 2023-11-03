@@ -1,0 +1,8 @@
+uuid: e47637ad-20d4-4fb9-9d09-275d081b52b6
+langcode: en
+status: true
+dependencies: {  }
+id: footer-turning-centers
+label: 'Footer Turning Centers'
+description: 'Main Navigation Expandable Menu'
+locked: false

@@ -11,7 +11,7 @@ field_name: field_slide_tag
 entity_type: node
 bundle: page
 label: 'Slide Tag'
-description: ''
+description: '[deprecated]'
 required: false
 translatable: false
 default_value: {  }

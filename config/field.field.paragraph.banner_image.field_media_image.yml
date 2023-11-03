@@ -11,7 +11,7 @@ field_name: field_media_image
 entity_type: paragraph
 bundle: banner_image
 label: 'Media Image'
-description: 'Images need to be a minimum of 640px wide. There is no maximum size however the largest image displayed on the site is 2560px.'
+description: 'Full width images have a maximum of 1386px wide. Images need to be a minimum of 640px wide. There is no maximum size however the largest image displayed on the site is 2560px.'
 required: true
 translatable: false
 default_value: {  }

@@ -11,8 +11,8 @@ id: paragraph.group.field_remove_margins
 field_name: field_remove_margins
 entity_type: paragraph
 bundle: group
-label: 'Remove The Space Between Groups'
-description: 'Use to remove the default top or bottom spacing of this Group and other components on the page.'
+label: 'Customize Space Between Groups'
+description: 'Use to remove the default top or bottom spacing -- or add padding to the top or bottom -- of this Group and components above and below.'
 required: false
 translatable: false
 default_value: {  }

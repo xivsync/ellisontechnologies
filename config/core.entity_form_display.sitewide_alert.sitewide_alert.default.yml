@@ -1,0 +1,41 @@
+uuid: 699f9e79-a7e3-410c-bd72-7ac88747156e
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - field_group
+    - sitewide_alert
+    - text
+third_party_settings:
+  field_group:
+    group_help:
+      children:
+        - message
+      label: 'Sitewide Banner and Modal'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: true
+        description: '(1) Enable a banner by creating content using the Primary style. This will add a light blue background banner to the top of the page with height of 64px. (2) Enable a modal by creating content using the Modal style. The content is centered in the middle of the page. For first time visitors, it will be displayed under the location selector modal. There can be a maximum of 1 banner and 1 modal.'
+        required_fields: true
+id: sitewide_alert.sitewide_alert.default
+targetEntityType: sitewide_alert
+bundle: sitewide_alert
+mode: default
+content:
+  message:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

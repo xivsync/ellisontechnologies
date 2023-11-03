@@ -11,7 +11,7 @@ field_name: field_product
 entity_type: node
 bundle: page
 label: Product
-description: 'Select a product when creating a product page i.e. Vertical Machining Centers.'
+description: 'Select a product when creating a technologies page i.e. Vertical Machining Centers.'
 required: false
 translatable: true
 default_value: {  }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.location.field_address
     - field.field.node.location.field_fax
     - field.field.node.location.field_map
+    - field.field.node.location.field_metatags
     - field.field.node.location.field_phone
     - field.field.node.location.field_region
     - node.type.location
@@ -55,5 +56,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_metatags: true
   field_region: true
   links: true
+  search_api_excerpt: true

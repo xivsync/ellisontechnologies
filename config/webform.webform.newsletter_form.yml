@@ -216,10 +216,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
   confirmation_url: /thank-you
   confirmation_title: 'Thank you!'
-  confirmation_message: '<p>Your message has been sent.</p>'
+  confirmation_message: '<p>Thank you, your submission has been received.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''

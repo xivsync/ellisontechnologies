@@ -10,7 +10,7 @@ field_name: field_teaser
 entity_type: taxonomy_term
 bundle: series
 label: Teaser
-description: ''
+description: '<strong>Teaser</strong> on Technologies/Products pages under logo. <strong>Description</strong> used on Models detail page to the right of image.'
 required: false
 translatable: false
 default_value: {  }

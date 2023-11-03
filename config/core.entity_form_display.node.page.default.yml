@@ -6,20 +6,22 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_components
     - field.field.node.page.field_jumbo_image
+    - field.field.node.page.field_metatags
     - field.field.node.page.field_product
     - field.field.node.page.field_slide_tag
     - node.type.page
   module:
     - field_group
     - media_library
+    - metatag
     - paragraphs
     - path
 third_party_settings:
   field_group:
     group_options:
       children:
+        - field_jumbo_image
         - field_product
-        - field_slide_tag
       label: 'Basic Page Options'
       region: content
       parent_name: ''
@@ -29,13 +31,12 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: false
+        open: true
         description: 'Options to change the display of the page.'
         required_fields: true
     group_content:
       children:
         - title
-        - field_jumbo_image
         - field_components
       label: 'Basic Page Content'
       region: content
@@ -47,7 +48,7 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         open: true
-        description: ''
+        description: 'Build <strong>basic and technology</strong> pages. Jumbo image is optional. Technology pages require a product to be configured.'
         required_fields: true
 _core:
   default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
@@ -58,13 +59,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_components:
     type: paragraphs
-    weight: 2
+    weight: 1
     region: content
     settings:
       title: Component
@@ -83,24 +84,22 @@ content:
     third_party_settings: {  }
   field_jumbo_image:
     type: media_library_widget
-    weight: 1
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_product:
-    type: entity_reference_autocomplete
-    weight: 7
+  field_metatags:
+    type: metatag_firehose
+    weight: 3
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      sidebar: false
+      use_details: true
     third_party_settings: {  }
-  field_slide_tag:
+  field_product:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -110,27 +109,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -145,7 +144,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -155,3 +154,4 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_slide_tag: true

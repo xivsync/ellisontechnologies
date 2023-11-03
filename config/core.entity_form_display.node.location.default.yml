@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.location.field_address
     - field.field.node.location.field_fax
     - field.field.node.location.field_map
+    - field.field.node.location.field_metatags
     - field.field.node.location.field_phone
     - field.field.node.location.field_region
     - node.type.location
   module:
     - address
     - field_group
+    - metatag
     - path
 third_party_settings:
   field_group:
@@ -19,15 +21,18 @@ third_party_settings:
       children:
         - field_region
         - field_map
-      label: Config
+        - promote
+        - sticky
+      label: 'Location Options'
       region: content
       parent_name: ''
-      weight: 0
-      format_type: fieldset
+      weight: 1
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        open: true
         description: ''
         required_fields: true
     group_configurations:
@@ -36,15 +41,16 @@ third_party_settings:
         - field_address
         - field_phone
         - field_fax
-      label: Content
+      label: 'Locations Content'
       region: content
       parent_name: ''
-      weight: 1
-      format_type: fieldset
+      weight: 0
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        open: true
         description: ''
         required_fields: true
 id: node.location.default
@@ -74,9 +80,17 @@ content:
     third_party_settings: {  }
   field_map:
     type: address_default
-    weight: 4
+    weight: 7
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 2
+    region: content
+    settings:
+      sidebar: false
+      use_details: true
     third_party_settings: {  }
   field_phone:
     type: string_textfield
@@ -88,7 +102,7 @@ content:
     third_party_settings: {  }
   field_region:
     type: options_select
-    weight: 3
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,7 +114,7 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -114,7 +128,7 @@ content:
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 6
+    weight: 9
     region: content
     settings:
       display_label: true

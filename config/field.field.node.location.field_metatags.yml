@@ -1,0 +1,21 @@
+uuid: 8741a977-15d5-47df-b1d7-7eae2ebc4600
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.location
+  module:
+    - metatag
+id: node.location.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: location
+label: Metatags
+description: 'Inherits from Global Metatag settings. Configure here to customize this page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

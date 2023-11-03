@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_dates_and_times
     - field.field.node.event.field_leadsource
     - field.field.node.event.field_location
+    - field.field.node.event.field_metatags
     - field.field.node.event.field_method_of_contact__c
     - field.field.node.event.field_region
     - field.field.node.event.field_tags
@@ -17,6 +18,7 @@ dependencies:
     - node.type.event
   module:
     - field_group
+    - metatag
     - paragraphs
     - path
     - smart_date
@@ -27,8 +29,9 @@ third_party_settings:
     group_content:
       children:
         - title
+        - body
         - field_components
-      label: Content
+      label: 'Event Content'
       region: content
       parent_name: ''
       weight: 0
@@ -42,11 +45,12 @@ third_party_settings:
         required_fields: true
     group_hidden:
       children:
+        - field_webform
+        - field_region
         - field_leadsource
         - field_method_of_contact__c
         - field_webform_campaign_id__c
-        - field_code_snippet
-      label: 'Event Options'
+      label: 'Event Webforms'
       region: content
       parent_name: ''
       weight: 2
@@ -56,15 +60,12 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         open: false
-        description: 'Hidden fields used by event form.'
+        description: 'Attach <strong>Registration</strong> webform and configure <strong>Registration</strong> webform hidden fields used by event form. Other forms can be attached but may not use the available hidden fields.'
         required_fields: true
     group_event_details:
       children:
-        - body
-        - field_region
-        - field_location
         - field_dates_and_times
-        - field_webform
+        - field_location
       label: 'Event Details'
       region: content
       parent_name: ''
@@ -74,8 +75,8 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: false
-        description: ''
+        open: true
+        description: 'Add date and location details.'
         required_fields: true
 id: node.event.default
 targetEntityType: node
@@ -84,7 +85,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 3
     region: content
     settings:
       rows: 9
@@ -98,17 +99,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_code_snippet:
-    type: text_textarea
-    weight: 8
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   field_components:
     type: paragraphs
-    weight: 3
+    weight: 4
     region: content
     settings:
       title: Component
@@ -146,7 +139,7 @@ content:
     third_party_settings: {  }
   field_leadsource:
     type: string_textfield
-    weight: 5
+    weight: 13
     region: content
     settings:
       size: 60
@@ -154,15 +147,23 @@ content:
     third_party_settings: {  }
   field_location:
     type: string_textfield
-    weight: 6
+    weight: 10
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 3
+    region: content
+    settings:
+      sidebar: false
+      use_details: true
+    third_party_settings: {  }
   field_method_of_contact__c:
     type: string_textfield
-    weight: 6
+    weight: 14
     region: content
     settings:
       size: 60
@@ -170,7 +171,7 @@ content:
     third_party_settings: {  }
   field_region:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -180,7 +181,7 @@ content:
     third_party_settings: {  }
   field_webform:
     type: webform_entity_reference_select
-    weight: 8
+    weight: 11
     region: content
     settings:
       default_data: true
@@ -188,7 +189,7 @@ content:
     third_party_settings: {  }
   field_webform_campaign_id__c:
     type: string_textfield
-    weight: 7
+    weight: 15
     region: content
     settings:
       size: 60
@@ -231,7 +232,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -240,4 +241,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_code_snippet: true
   field_tags: true

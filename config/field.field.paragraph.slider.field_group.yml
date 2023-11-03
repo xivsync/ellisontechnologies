@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_group
+    - paragraphs.paragraphs_type.cta_button
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.quote
     - paragraphs.paragraphs_type.slide
     - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
@@ -25,6 +28,9 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      text: text
+      quote: quote
+      cta_button: cta_button
       video: video
       slide: slide
     negate: 0
@@ -40,7 +46,7 @@ settings:
         enabled: false
       cta_button:
         weight: 10
-        enabled: false
+        enabled: true
       from_library:
         weight: 20
         enabled: false
@@ -58,13 +64,10 @@ settings:
         enabled: false
       quote:
         weight: 9
-        enabled: false
+        enabled: true
       slide:
         weight: 28
         enabled: true
-      slide_image:
-        weight: 31
-        enabled: false
       slider:
         weight: 29
         enabled: false
@@ -76,7 +79,7 @@ settings:
         enabled: false
       text:
         weight: 8
-        enabled: false
+        enabled: true
       video:
         weight: 25
         enabled: true

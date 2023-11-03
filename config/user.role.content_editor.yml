@@ -3,19 +3,53 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - filter.format.source
+    - filter.format.webform_default
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
     - node.type.article
+    - node.type.event
+    - node.type.location
+    - node.type.model
     - node.type.page
+    - node.type.spec
+    - node.type.webform
+    - taxonomy.vocabulary.brands
+    - taxonomy.vocabulary.products
+    - taxonomy.vocabulary.regions
+    - taxonomy.vocabulary.series
+    - taxonomy.vocabulary.spec_type
     - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.technologies
   module:
-    - comment
+    - block_content
     - contextual
+    - dropzonejs
     - file
+    - filter
+    - media
+    - media_bulk_upload
     - node
+    - paragraphs
+    - paragraphs_library
     - path
+    - quick_node_clone
+    - salesforce_mapping
+    - shortcut
+    - sitewide_alert
     - system
     - taxonomy
+    - taxonomy_manager
     - toolbar
-    - tour
+    - webform
+    - webform_node
+    - xmlsitemap
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
 id: content_editor
@@ -24,25 +58,130 @@ weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access any webform configuration'
+  - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access media overview'
+  - 'access own webform configuration'
+  - 'access shortcuts'
+  - 'access taxonomy manager list'
+  - 'access taxonomy overview'
   - 'access toolbar'
-  - 'access tour'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'add sitewide alert entities'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer paragraphs library'
+  - 'administer salesforce mapped objects'
+  - 'administer salesforce mapping'
+  - 'administer shortcuts'
+  - 'administer sitewide alert'
+  - 'administer sitewide alert entities'
   - 'administer url aliases'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'administer xmlsitemap'
+  - 'clone article content'
+  - 'clone event content'
+  - 'clone location content'
+  - 'clone model content'
+  - 'clone page content'
+  - 'clone spec content'
+  - 'clone webform content'
   - 'create article content'
+  - 'create audio media'
+  - 'create document media'
+  - 'create event content'
+  - 'create image media'
+  - 'create location content'
+  - 'create media'
+  - 'create model content'
   - 'create page content'
+  - 'create paragraph library item'
+  - 'create remote_video media'
+  - 'create spec content'
+  - 'create terms in brands'
+  - 'create terms in products'
+  - 'create terms in regions'
+  - 'create terms in series'
+  - 'create terms in spec_type'
   - 'create terms in tags'
+  - 'create terms in technologies'
   - 'create url aliases'
-  - 'delete article revisions'
+  - 'create video media'
+  - 'create webform content'
   - 'delete own article content'
+  - 'delete own event content'
+  - 'delete own location content'
+  - 'delete own model content'
   - 'delete own page content'
-  - 'delete page revisions'
+  - 'delete own spec content'
+  - 'delete own webform content'
+  - 'delete sitewide alert entities'
+  - 'delete webform submissions own node'
+  - 'dropzone upload files'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any event content'
+  - 'edit any image media'
+  - 'edit any location content'
+  - 'edit any model content'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any spec content'
+  - 'edit any video media'
+  - 'edit any webform'
+  - 'edit any webform content'
+  - 'edit any webform submission'
   - 'edit own article content'
-  - 'edit own comments'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own event content'
+  - 'edit own image media'
+  - 'edit own location content'
+  - 'edit own model content'
   - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own spec content'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit own webform content'
+  - 'edit own webform submission'
+  - 'edit paragraph library item'
+  - 'edit sitewide alert entities'
+  - 'edit terms in brands'
+  - 'edit terms in products'
+  - 'edit terms in regions'
+  - 'edit terms in series'
+  - 'edit terms in spec_type'
   - 'edit terms in tags'
-  - 'revert all revisions'
+  - 'edit terms in technologies'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - 'override xmlsitemap link settings'
+  - 'update any media'
+  - 'update media'
+  - 'use images bulk upload form'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'use text format source'
+  - 'use text format webform_default'
   - 'view all revisions'
+  - 'view all sitewide alert revisions'
+  - 'view any webform submission'
   - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view salesforce mapping'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view unpublished sitewide alert entities'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'

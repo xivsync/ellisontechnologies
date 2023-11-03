@@ -248,10 +248,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
   confirmation_url: /thank-you
   confirmation_title: ''
-  confirmation_message: '<h2>Thank you.</h2><p>Your message has been sent.</p>'
+  confirmation_message: '<p>Thank you for your request to schedule service. One of our team members will contact you regarding your service needs.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''

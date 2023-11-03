@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: machining-centers
 label: 'Machining Centers'
-description: ''
+description: 'Main Navigation Expandable Menu'
 locked: false

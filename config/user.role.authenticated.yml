@@ -2,17 +2,10 @@ uuid: 2f1dba1d-ca68-428d-a0eb-ac0d1bc4f5c5
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.basic_html
-    - filter.format.source
-    - filter.format.webform_default
   module:
-    - comment
-    - contact
-    - filter
+    - google_analytics
     - media
     - search
-    - shortcut
     - sitewide_alert
     - system
 _core:
@@ -22,15 +15,8 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access shortcuts'
-  - 'access site-wide contact form'
-  - 'post comments'
+  - 'opt-in or out of google analytics tracking'
   - 'search content'
-  - 'skip comment approval'
-  - 'use text format basic_html'
-  - 'use text format source'
-  - 'use text format webform_default'
   - 'view media'
   - 'view published sitewide alert entities'

@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.slider.field_enable_full_width_content
     - field.field.paragraph.slider.field_full_width_background
     - field.field.paragraph.slider.field_group
+    - field.field.paragraph.slider.field_header
     - field.field.paragraph.slider.field_remove_margins
     - field.field.paragraph.slider.field_unique_id
     - field.field.paragraph.slider.field_visible_items
@@ -17,6 +18,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - options
+    - text
 id: paragraph.slider.default
 targetEntityType: paragraph
 bundle: slider
@@ -87,6 +89,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_header:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_remove_margins:
     type: list_key

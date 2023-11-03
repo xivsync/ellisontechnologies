@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.location.field_address
     - field.field.node.location.field_fax
     - field.field.node.location.field_map
+    - field.field.node.location.field_metatags
     - field.field.node.location.field_phone
     - field.field.node.location.field_region
     - node.type.location
   module:
     - address
     - address_static_map
+    - metatag
     - user
 id: node.location.default
 targetEntityType: node
@@ -45,6 +47,13 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_phone:
     type: string
     label: inline
@@ -63,3 +72,4 @@ content:
     region: content
 hidden:
   links: true
+  search_api_excerpt: true

@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Products
 vid: products
-description: ''
+description: 'List of product technology names.'
 weight: 0

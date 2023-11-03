@@ -1,0 +1,8 @@
+uuid: 6504065e-3084-4e61-9b51-338895dd80b6
+langcode: en
+status: true
+dependencies: {  }
+id: footer-edm
+label: 'Footer EDM'
+description: 'Footer menu.'
+locked: false

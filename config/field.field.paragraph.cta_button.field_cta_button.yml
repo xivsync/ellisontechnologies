@@ -7,6 +7,18 @@ dependencies:
     - paragraphs.paragraphs_type.cta_button
   module:
     - link
+    - link_field_autocomplete_filter
+third_party_settings:
+  link_field_autocomplete_filter:
+    negate: true
+    allowed_content_types:
+      spec: spec
+      webform: webform
+      article: '0'
+      event: '0'
+      location: '0'
+      model: '0'
+      page: '0'
 id: paragraph.cta_button.field_cta_button
 field_name: field_cta_button
 entity_type: paragraph

@@ -7,12 +7,12 @@ dependencies:
 id: loctions
 label: Loctions
 type: 'canonical_entities:node'
-pattern: 'about-us/locations/[node:title]'
+pattern: 'offices/[node:title]'
 selection_criteria:
-  3fbb4f58-b004-4e4e-a46d-595bb54b06f6:
+  5c89adff-eee8-412e-9756-46be3dbf98d7:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 3fbb4f58-b004-4e4e-a46d-595bb54b06f6
+    uuid: 5c89adff-eee8-412e-9756-46be3dbf98d7
     context_mapping:
       node: node
     bundles:

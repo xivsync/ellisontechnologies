@@ -15,15 +15,23 @@ settings:
     items:
       - bold
       - italic
+      - underline
       - '|'
       - link
       - '|'
       - bulletedList
       - numberedList
       - '|'
+      - blockQuote
+      - insertTable
+      - horizontalLine
+      - '|'
+      - drupalInsertImage
+      - '-'
       - alignment
       - heading
       - style
+      - removeFormat
       - '|'
       - sourceEditing
   plugins:
@@ -40,6 +48,8 @@ settings:
         - heading4
         - heading5
         - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
     ckeditor5_list:
       reversed: false
       startIndex: true
@@ -67,12 +77,6 @@ settings:
           label: 'Blue Paragraph'
           element: '<p class="text-blue">'
         -
-          label: 'Cyan H2'
-          element: '<h2 class="text-cyan">'
-        -
-          label: 'Cyan Paragraph'
-          element: '<p class="text-cyan">'
-        -
           label: 'Dark Blue H2'
           element: '<h2 class="text-dark-blue">'
         -
@@ -91,17 +95,11 @@ settings:
           label: 'White Paragraph'
           element: '<p class="text-white">'
         -
-          label: 'Medium Blue H2'
-          element: '<h2 class="text-medium-blue">'
-        -
-          label: 'medium Blue Paragraph'
-          element: '<p class="text-medium-blue">'
-        -
           label: 'Gray H2'
-          element: '<h2 class="text-gray-700">'
+          element: '<h2 class="text-gray-600">'
         -
           label: 'Gray Paragraph'
-          element: '<p class="text-gray-700">'
+          element: '<p class="text-gray-600">'
         -
           label: 'Size Largest H2'
           element: '<h2 class="text-5xl">'
@@ -126,6 +124,9 @@ settings:
         -
           label: 'H2 Add Left and Right Margin'
           element: '<h2 class="px-8">'
+        -
+          label: 'Remove Top Margin Paragraph'
+          element: '<p class="mt-0 pt-0">'
         -
           label: 'Remove Bottom Margin Paragraph'
           element: '<p class="mb-0 pb-0">'
@@ -158,6 +159,16 @@ settings:
         -
           label: 'Link White'
           element: '<a class="link-white">'
+        -
+          label: 'Link Blue'
+          element: '<a class="link-blue">'
+    editor_advanced_link_link:
+      enabled_attributes:
+        - id
+        - target
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
 image_upload:
   status: true
   scheme: public

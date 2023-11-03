@@ -13,13 +13,22 @@ settings:
   allowed_values:
     -
       value: remove-mb
-      label: 'Bottom Margin'
+      label: 'Remove Bottom Margin'
     -
       value: remove-mt
-      label: 'Top Margin'
+      label: 'Remove Top Margin'
     -
       value: remove-my
-      label: 'Bottom and Top Margin'
+      label: 'Remove Bottom and Top Margin'
+    -
+      value: add-pb
+      label: 'Add Bottom Padding'
+    -
+      value: add-pt
+      label: 'Add Top Padding'
+    -
+      value: add-py
+      label: 'Add Bottom and Top Padding'
   allowed_values_function: ''
 module: options
 locked: false

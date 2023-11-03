@@ -3,12 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_brand
+    - field.storage.node.field_components
+    - field.storage.paragraph.field_content
+    - field.storage.paragraph.field_header
+    - field.storage.node.field_series
     - field.storage.node.field_tags
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
   module:
     - node
     - user
+    - paragraphs
     - search_api
 _core:
   default_config_hash: 3aiqici40Ky7H7_FK6JBlEawsJtrD7MGX3dQh3xgqoc
@@ -42,11 +48,57 @@ field_settings:
     dependencies:
       module:
         - node
+  field_brand:
+    label: Brand
+    datasource_id: 'entity:node'
+    property_path: field_brand
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_brand
+  field_brand_1:
+    label: Brand
+    datasource_id: 'entity:node'
+    property_path: field_brand
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_brand
+  field_content:
+    label: 'Components » Paragraph » Body'
+    datasource_id: 'entity:node'
+    property_path: 'field_components:entity:field_content'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_components
+        - field.storage.paragraph.field_content
+      module:
+        - paragraphs
+  field_header:
+    label: 'Components » Paragraph » Header'
+    datasource_id: 'entity:node'
+    property_path: 'field_components:entity:field_header'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_components
+        - field.storage.paragraph.field_header
+      module:
+        - paragraphs
+  field_series:
+    label: Series
+    datasource_id: 'entity:node'
+    property_path: field_series
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_series
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
     property_path: field_tags
-    type: integer
+    type: text
     dependencies:
       config:
         - field.storage.node.field_tags

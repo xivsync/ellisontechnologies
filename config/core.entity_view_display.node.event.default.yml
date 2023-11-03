@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_dates_and_times
     - field.field.node.event.field_leadsource
     - field.field.node.event.field_location
+    - field.field.node.event.field_metatags
     - field.field.node.event.field_method_of_contact__c
     - field.field.node.event.field_region
     - field.field.node.event.field_tags
@@ -17,6 +18,7 @@ dependencies:
     - node.type.event
   module:
     - entity_reference_revisions
+    - metatag
     - user
 id: node.event.default
 targetEntityType: node
@@ -31,6 +33,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   body: true

@@ -11,7 +11,7 @@ id: paragraph.card.field_background_color
 field_name: field_background_color
 entity_type: paragraph
 bundle: card
-label: 'Card Background Color'
+label: 'Card Background Or Border Color'
 description: ''
 required: false
 translatable: true
