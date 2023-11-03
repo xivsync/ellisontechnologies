@@ -54,6 +54,10 @@ html {
   @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];
 }
 
+body.path-admin .layout-container {
+  @apply lg:mt-0 mt-0;
+}
+
 .layout-container.front-page {
   @apply lg:mt-0;
 }
