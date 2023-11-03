@@ -8094,6 +8094,16 @@ html {
   .layout-container {
     margin-top: 160px;
   }
+}
+
+body.path-admin .layout-container {
+  margin-top: 0px;
+}
+
+@media (min-width: 992px) {
+  body.path-admin .layout-container {
+    margin-top: 0px;
+  }
 
   .layout-container.front-page {
     margin-top: 0px;
