@@ -135,13 +135,23 @@
 
 /* handles video cards in columns on video page */
 .collection.collection--videos.display-as-cols {
-  @apply flex flex-row gap-4 flex-wrap;
+  @apply flex flex-col lg:flex-row flex-nowrap lg:flex-wrap gap-8 lg:gap-4;
 
   .views-fields {
-    @apply flex flex-col gap-2 basis-[32%];
+    @apply flex flex-col gap-2 basis-full lg:basis-[32%];
 
-    .views-field-name {
-      @apply font-bold text-lg;
+    .video__inner {
+      @apply flex flex-col gap-2;
+    }
+
+    .image.image__item img.image {
+      @apply w-full m-0;
+      aspect-ratio: 16/9;
+    }
+
+    .views-field-name,
+    a.myButton {
+      @apply font-bold text-lg !important;
     }
   }
 

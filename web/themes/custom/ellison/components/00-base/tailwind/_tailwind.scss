@@ -5942,14 +5942,25 @@ form.webform-submission-parts-and-accessories-form {
 
 .collection.collection--videos.display-as-cols {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .collection.collection--videos.display-as-cols {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.collection.collection--videos.display-as-cols {
   .views-fields {
     display: flex;
   }
   .views-fields {
-    flex-basis: 32%;
+    flex-basis: 100%;
   }
   .views-fields {
     flex-direction: column;
@@ -5957,13 +5968,38 @@ form.webform-submission-parts-and-accessories-form {
   .views-fields {
     gap: 0.5rem;
   }
-  .views-fields {
-    .views-field-name {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
+  @media (min-width: 992px) {
+    .views-fields {
+      flex-basis: 32%;
     }
-    .views-field-name {
-      font-weight: 700;
+  }
+  .views-fields {
+    .video__inner {
+      display: flex;
+    }
+    .video__inner {
+      flex-direction: column;
+    }
+    .video__inner {
+      gap: 0.5rem;
+    }
+    .image.image__item img.image {
+      margin: 0px;
+    }
+    .image.image__item img.image {
+      width: 100%;
+    }
+    .image.image__item img.image {
+      aspect-ratio: 16/9;
+    }
+    .views-field-name,
+    a.myButton {
+      font-size: 1.125rem !important;
+      line-height: 1.75rem !important;
+    }
+    .views-field-name,
+    a.myButton {
+      font-weight: 700 !important;
     }
   }
 }
@@ -8262,7 +8298,7 @@ body.path-admin .layout-container {
     flex-direction: column;
   }
   .views-exposed-form {
-    align-items: center;
+    align-items: flex-start;
   }
   .views-exposed-form {
     justify-content: center;
@@ -8288,18 +8324,16 @@ body.path-admin .layout-container {
       flex-direction: row;
     }
   }
+  @media (min-width: 992px) {
+    .views-exposed-form {
+      align-items: center;
+    }
+  }
   .views-exposed-form {
-    /* .form-item--category,
-    .form-item--field-tag-target-id-1 {
-      @apply flex flex-row gap-8 items-center;
-
-      label.form-item__label {
-        @apply text-lg font-bold;
+    @media (min-width: 992px) {
+      #edit-actions {
+        align-self: flex-end;
       }
-
-    } */
-    #edit-actions {
-      align-self: flex-end;
     }
   }
 }
