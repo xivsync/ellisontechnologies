@@ -71,7 +71,6 @@
         "drupal/smtp": "^1.2",
         "drupal/redirect": "^1.9",
         "drupal/gin": "^3.0@RC",
-        "drupal/sendgrid_integration": "^2.2",
         "drupal/taxonomy_manager": "^2.0"
     },
     "require-dev": {
