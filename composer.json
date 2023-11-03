@@ -72,7 +72,8 @@
         "drupal/redirect": "^1.9",
         "drupal/gin": "^3.0@RC",
         "drupal/taxonomy_manager": "^2.0",
-        "drupal/media_video_micromodal": "^1.1"
+        "drupal/media_video_micromodal": "^1.1",
+        "drupal/mailsystem": "^4.4"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
