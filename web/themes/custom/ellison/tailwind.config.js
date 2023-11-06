@@ -4,7 +4,10 @@ const postcssScss = require('postcss-scss');
 
 module.exports = {
   important: true,
-  content: ['./components/**/*.twig', './templates/**/*.html.twig'],
+  content: [
+    './components/**/*.twig',
+    './templates/**/*.html.twig'
+  ],
   theme: {
     screens: {
       'sm': '576px',

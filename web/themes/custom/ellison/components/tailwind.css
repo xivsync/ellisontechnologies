@@ -54,7 +54,9 @@ html {
   @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];
 }
 
-body.path-admin .layout-container {
+body.path-admin .layout-container,
+body.toolbar-horizontal .layout-container,
+body.toolbar-vertical .layout-container {
   @apply lg:mt-0 mt-0;
 }
 
@@ -173,7 +175,8 @@ body.path-admin .layout-container {
 }
 
 /* handles customizations to prose */
-.prose {
+.prose,
+.prose-lg {
 
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;

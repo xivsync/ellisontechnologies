@@ -74,7 +74,8 @@
         "drupal/taxonomy_manager": "^2.0",
         "drupal/media_video_micromodal": "^1.1",
         "drupal/mailsystem": "^4.4",
-        "drupal/config_suite": "^2.0"
+        "drupal/config_suite": "^2.0",
+        "drupal/bulk_edit_terms": "^1.5"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

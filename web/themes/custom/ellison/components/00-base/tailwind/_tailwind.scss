@@ -4700,7 +4700,8 @@ div.webform {
       padding-top: 0px;
       padding-bottom: 0px;
     }
-    .prose {
+    .prose,
+    .prose-lg {
       h1,h2,h3,h4,h5,h6,p,a,ul,li,blockquote,div,strong {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -8138,12 +8139,16 @@ html {
   }
 }
 
-body.path-admin .layout-container {
+body.path-admin .layout-container,
+body.toolbar-horizontal .layout-container,
+body.toolbar-vertical .layout-container {
   margin-top: 0px;
 }
 
 @media (min-width: 992px) {
-  body.path-admin .layout-container {
+  body.path-admin .layout-container,
+body.toolbar-horizontal .layout-container,
+body.toolbar-vertical .layout-container {
     margin-top: 0px;
   }
 
@@ -8540,7 +8545,8 @@ body.path-admin .layout-container {
 
 /* handles customizations to prose */
 
-.prose {
+.prose,
+.prose-lg {
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;
     font-weight: 800;
