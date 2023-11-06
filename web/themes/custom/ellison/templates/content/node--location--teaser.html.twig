@@ -87,6 +87,6 @@
   card__extra_classes: ['display-as-row'],
 } %}
   {% block card__img %}
-    <a href="https://maps.google.com/maps?q={{ encoded_query }}">{{ content.field_map }}</a>
+    <a href="https://maps.google.com/maps?q={{ encoded_query }}" target="_blank">{{ content.field_map }}</a>
   {% endblock %}
 {% endembed %}
