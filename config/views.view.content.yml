@@ -2,8 +2,12 @@ uuid: f391b5a5-6bed-459f-898c-4e7f6f423e1e
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.brands
+    - taxonomy.vocabulary.series
   module:
     - node
+    - taxonomy
     - user
 _core:
   default_config_hash: vBKWYGGDoAX-tFd1JErB8tZLSxx3lJ0foouVsgpcbB4
@@ -124,6 +128,68 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        term_node_tid:
+          id: term_node_tid
+          table: node_field_data
+          field: term_node_tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: taxonomy_index_tid
+          label: 'All taxonomy terms'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: separator
+          separator: ', '
+          link_to_taxonomy: true
+          limit: false
+          vids:
+            brands: '0'
+            products: '0'
+            regions: '0'
+            series: '0'
+            spec_type: '0'
+            tags: '0'
+            technologies: '0'
         name:
           id: name
           table: users_field_data
@@ -187,6 +253,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         operations:
           id: operations
           table: node
@@ -461,6 +536,102 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_brand_target_id:
+          id: field_brand_target_id
+          table: node__field_brand
+          field: field_brand_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_brand_target_id_op
+            label: Brand
+            description: ''
+            use_operator: false
+            operator: field_brand_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_brand_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: brands
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_series_target_id:
+          id: field_series_target_id
+          table: node__field_series
+          field: field_series_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_series_target_id_op
+            label: Series
+            description: ''
+            use_operator: false
+            operator: field_series_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_series_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: series
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:

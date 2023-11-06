@@ -75,7 +75,8 @@
         "drupal/media_video_micromodal": "^1.1",
         "drupal/mailsystem": "^4.4",
         "drupal/config_suite": "^2.0",
-        "drupal/bulk_edit_terms": "^1.5"
+        "drupal/bulk_edit_terms": "^1.5",
+        "drupal/pate": "^1.2"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
