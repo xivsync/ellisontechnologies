@@ -133,6 +133,11 @@
 
 }
 
+/* handles event date on frontpage */
+.path-frontpage .collection.collection--teasers.display-as-rows.tagged-content .card.card-event .field {
+  display: block;
+}
+
 /* handles video cards in columns on video page */
 .collection.collection--videos.display-as-cols {
   @apply flex flex-col lg:flex-row flex-nowrap lg:flex-wrap gap-8 lg:gap-4;

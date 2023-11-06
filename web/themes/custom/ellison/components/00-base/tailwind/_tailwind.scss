@@ -5945,6 +5945,12 @@ form.webform-submission-parts-and-accessories-form {
   }
 }
 
+/* handles event date on frontpage */
+
+.path-frontpage .collection.collection--teasers.display-as-rows.tagged-content .card.card-event .field {
+  display: block;
+}
+
 /* handles video cards in columns on video page */
 
 .collection.collection--videos.display-as-cols {
