@@ -1,7 +1,11 @@
 .component {
 
+  .glide__slide.slider__item {
+    height: auto;
+  }
+
   .slide {
-    @apply mx-4;
+    @apply mx-4 h-full;
 
 
     &.style-horz-left .slide__inner {

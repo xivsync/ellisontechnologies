@@ -4508,9 +4508,15 @@ div.webform {
 }
 
 .component {
+  .glide__slide.slider__item {
+    height: auto;
+  }
   .slide {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  .slide {
+    height: 100%;
   }
   .slide {
     &.style-horz-left .slide__inner {
