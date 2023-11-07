@@ -8551,11 +8551,13 @@ body.toolbar-vertical .layout-container {
 
 /* handles customizations to prose */
 
-.prose,
-.prose-lg {
+.prose {
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;
     font-weight: 800;
+  }
+  p,ul,ol,li,blockquote {
+    font-size: 18px;
   }
   strong {
     color: unset;
