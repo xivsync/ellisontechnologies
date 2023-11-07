@@ -8148,16 +8148,10 @@ html {
 body.path-admin .layout-container,
 body.toolbar-horizontal .layout-container,
 body.toolbar-vertical .layout-container {
-  margin-top: 0px;
+  margin-top: 160px;
 }
 
 @media (min-width: 992px) {
-  body.path-admin .layout-container,
-body.toolbar-horizontal .layout-container,
-body.toolbar-vertical .layout-container {
-    margin-top: 0px;
-  }
-
   .layout-container.front-page {
     margin-top: 0px;
   }

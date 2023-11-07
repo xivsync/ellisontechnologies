@@ -57,7 +57,7 @@ html {
 body.path-admin .layout-container,
 body.toolbar-horizontal .layout-container,
 body.toolbar-vertical .layout-container {
-  @apply lg:mt-0 mt-0;
+  @apply mt-[160px];
 }
 
 .layout-container.front-page {
