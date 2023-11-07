@@ -78,7 +78,8 @@
         "drupal/bulk_edit_terms": "^1.5",
         "drupal/pate": "^1.2",
         "simshaun/recurr": "^5.0",
-        "drupal/view_unpublished": "^1.1"
+        "drupal/view_unpublished": "^1.1",
+        "drupal/environment_indicator": "^4.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
