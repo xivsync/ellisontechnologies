@@ -8161,15 +8161,12 @@ body.toolbar-fixed.toolbar-tray-open .header {
 }
 
 body.path-admin .layout-container,
-body.toolbar-horizontal .layout-container,
-body.toolbar-vertical .layout-container {
+body.toolbar-horizontal .layout-container {
   margin-top: 160px;
 }
 
-@media (min-width: 992px) {
-  .layout-container.front-page {
-    margin-top: 0px;
-  }
+body.toolbar-horizontal.path-frontpage .layout-container.front-page {
+  margin-top: 0px;
 }
 
 .layout-content {

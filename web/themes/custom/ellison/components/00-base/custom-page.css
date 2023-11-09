@@ -42,13 +42,12 @@
 }
 
 body.path-admin .layout-container,
-body.toolbar-horizontal .layout-container,
-body.toolbar-vertical .layout-container {
+body.toolbar-horizontal .layout-container {
   @apply mt-[160px];
 }
 
-.layout-container.front-page {
-  @apply lg:mt-0;
+body.toolbar-horizontal.path-frontpage .layout-container.front-page {
+  @apply mt-0;
 }
 
 .layout-content {
