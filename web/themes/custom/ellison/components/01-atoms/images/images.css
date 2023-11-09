@@ -2,3 +2,9 @@
 .image__item picture {
   @apply flex flex-row flex-nowrap justify-center items-center;
 }
+
+/* handles contextual links */
+.image image__item .contextual {
+  top: 50%;
+  right: 50%
+}

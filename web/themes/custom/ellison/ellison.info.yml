@@ -9,7 +9,7 @@ dependencies:
 libraries:
   - ellison/global
 ckeditor5-stylesheets:
-  - dist/css/style.css
+  - dist/css/ckeditor.css
 regions:
   header: Header
   content: Content

@@ -160,3 +160,8 @@
   }
 
 }
+
+/* handles field labels on view model paragraphs */
+.field.label.field-type-string.field-bundle-paragraphs-library-item {
+  display: none;
+}

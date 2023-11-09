@@ -1,0 +1,334 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* p */
+
+.ck-editor__editable_inline :where(p):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+/* a */
+
+.ck-editor__editable_inline :where(a):not(:where([class~="not-prose"] *)) {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* strong */
+
+.ck-editor__editable_inline :where(strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 600;
+}
+
+/* ol and ul */
+
+.ck-editor__editable_inline :where(ol):not(:where([class~="not-prose"] *)) {
+  list-style-type: decimal;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.ck-editor__editable_inline :where(ul):not(:where([class~="not-prose"] *)) {
+  list-style-type: disc;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.ck-editor__editable_inline :where(li):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.ck-editor__editable_inline :where(ol > li):not(:where([class~="not-prose"] *)) {
+  padding-left: 0.375em;
+}
+
+.ck-editor__editable_inline :where(ul > li):not(:where([class~="not-prose"] *)) {
+  padding-left: 0.375em;
+}
+
+.ck-editor__editable_inline :where(.ck-editor__editable_inline > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.ck-editor__editable_inline :where(.ck-editor__editable_inline > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+}
+
+.ck-editor__editable_inline :where(.ck-editor__editable_inline > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.ck-editor__editable_inline :where(.ck-editor__editable_inline > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+}
+
+.ck-editor__editable_inline :where(.ck-editor__editable_inline > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.ck-editor__editable_inline :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+/* hr */
+
+.ck-editor__editable_inline :where(hr):not(:where([class~="not-prose"] *)) {
+  border-color: var(--tw-prose-hr);
+  border-top-width: 1px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* blockquote */
+
+.ck-editor__editable_inline :where(blockquote):not(:where([class~="not-prose"] *)) {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--tw-prose-quotes);
+  border-left-width: 0.25rem;
+  border-left-color: var(--tw-prose-quote-borders);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1em;
+}
+
+.ck-editor__editable_inline :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
+  content: open-quote;
+}
+
+.ck-editor__editable_inline :where(blockquote p:last-of-type):not(:where([class~="not-prose"] *))::after {
+  content: close-quote;
+}
+
+/* headings */
+
+.ck-editor__editable_inline :where(h1):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 800;
+  font-size: 2.25em;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+}
+
+.ck-editor__editable_inline :where(h2):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333333;
+}
+
+.ck-editor__editable_inline :where(h3):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+
+/* img */
+
+.ck-editor__editable_inline :where(img):not(:where([class~="not-prose"] *)) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* table */
+
+.ck-editor__editable_inline :where(table):not(:where([class~="not-prose"] *)) {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+}
+
+.ck-editor__editable_inline :where(thead):not(:where([class~="not-prose"] *)) {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-th-borders);
+}
+
+.ck-editor__editable_inline :where(thead th):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  vertical-align: bottom;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+.ck-editor__editable_inline :where(tbody tr):not(:where([class~="not-prose"] *)) {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-td-borders);
+}
+
+.ck-editor__editable_inline :where(tbody tr:last-child):not(:where([class~="not-prose"] *)) {
+  border-bottom-width: 0;
+}
+
+.ck-editor__editable_inline :where(tbody td):not(:where([class~="not-prose"] *)) {
+  vertical-align: baseline;
+}
+
+.ck-editor__editable_inline :where(tfoot):not(:where([class~="not-prose"] *)) {
+  border-top-width: 1px;
+  border-top-color: var(--tw-prose-th-borders);
+}
+
+.ck-editor__editable_inline :where(tfoot td):not(:where([class~="not-prose"] *)) {
+  vertical-align: top;
+}
+
+/* start manually adding .ck-editor__editable_inline overrides to .ck-editor */
+
+.ck-editor__editable_inline h2 {
+  margin-top: 0 !important;
+  font-weight: 800;
+}
+
+.ck-editor__editable_inline h3 {
+  margin-top: 0 !important;
+  font-weight: 800;
+}
+
+.ck-editor__editable_inline p{
+  font-size: 18px;
+}
+
+.ck-editor__editable_inline ul {
+  font-size: 18px;
+}
+
+.ck-editor__editable_inline ol {
+  font-size: 18px;
+}
+
+.ck-editor__editable_inline li {
+  font-size: 18px;
+}
+
+.ck-editor__editable_inline blockquote {
+  font-size: 18px;
+}
+
+.ck-editor__editable_inline strong {
+  color: unset;
+  font-weight: 800;
+}
+
+.ck-editor__editable_inline img {
+  @apply m-0;
+}
+
+.ck-editor__editable_inline ul {
+  @apply list-disc list-outside;
+}
+
+.ck-editor__editable_inline li::marker {
+  @apply text-black;
+}
+
+.ck-editor__editable_inline ol {
+  @apply list-decimal list-outside;
+}
+
+
+/* add buttons and links to .ckeditor */
+
+.ck-editor__editable_inline a.button {
+  @apply text-white bg-blue border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2.5 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase text-base whitespace-nowrap;
+  line-height: 1.3;
+}
+
+.ck-editor__editable_inline a.button-default {
+  @apply text-white bg-blue border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2.5 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase text-base whitespace-nowrap;
+  line-height: 1.3;
+}
+
+.ck-editor__editable_inline .button-secondary {
+  @apply text-blue bg-white border-2 border-blue hover:bg-blue hover:text-white focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-2.5 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase text-base  whitespace-nowrap;
+  line-height: 1.3;
+}
+
+.ck-editor__editable_inline a.button-light-blue {
+  @apply text-white bg-light-blue border-none hover:opacity-80 focus:ring-4 focus:ring-white focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
+  line-height: 1.3;
+}
+
+.ck-editor__editable_inline a.button-white {
+  @apply text-blue bg-white border-none hover:opacity-80 focus:ring-4 focus:ring-light-blue focus:outline-none rounded-full py-3 px-3 md:px-12 font-bold no-underline hover:no-underline uppercase;
+  line-height: 1.3;
+}
+
+.ck-editor__editable_inline a {
+  @apply text-gray-800 hover:opacity-80 no-underline;
+}
+
+/* default link */
+
+.ck-editor__editable_inline a.link-default {
+  @apply text-gray-800 hover:opacity-80 no-underline  font-extrabold;
+}
+
+.ck-editor__editable_inline a.link-default strong {
+  @apply text-gray-800 hover:opacity-80 no-underline  font-extrabold;
+}
+
+.ck-editor__editable_inline a.link-default::after {
+  content: " »";
+}
+
+/* blue link */
+
+.ck-editor__editable_inline a.link-blue {
+  @apply text-blue hover:opacity-80 no-underline  font-extrabold;
+}
+
+.ck-editor__editable_inline a.link-blue::after {
+  content: " »";
+}
+
+.ck-editor__editable_inline a.link-blue strong {
+  @apply text-blue hover:opacity-80 no-underline  font-extrabold;
+}
+
+/* light blue link */
+
+.ck-editor__editable_inline a.link-light-blue {
+  @apply text-light-blue hover:opacity-80 no-underline font-extrabold;
+}
+
+.ck-editor__editable_inline a.link-light-blue::after {
+  content: " »";
+}
+
+.ck-editor__editable_inline a.link-light-blue strong {
+  @apply text-light-blue hover:opacity-80 no-underline font-extrabold;
+}
+
+/* whitelink */
+
+.ck-editor__editable_inline a.link-white{
+  @apply text-white hover:opacity-80 no-underline  font-extrabold;
+}
+
+.ck-editor__editable_inline a.link-white::after {
+  content: " »";
+}
+
+.ck-editor__editable_inline a.link-white strong {
+  @apply text-white hover:opacity-80 no-underline  font-extrabold;
+}

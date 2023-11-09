@@ -1,0 +1,74 @@
+.page {
+  @apply container flex flex-col mx-auto xl:px-4;
+
+  &.has-sidebar {
+    @apply flex-row gap-8;
+
+    .page__content {
+      @apply basis-2/3;
+    }
+
+    .page__sidebar {
+      @apply basis-1/3 border-l border-gray-600 pl-8;
+    }
+  }
+
+  &__header {
+    @apply flex flex-col lg:flex-row gap-8;
+    
+    &--image {
+      @apply basis-1/2;
+    }
+
+    &--content {
+      @apply flex flex-col basis-1/2 justify-center;
+    }
+
+  }
+
+  &__content {
+    @apply flex flex-col;
+
+    &--model {
+      @apply gap-8;
+    }
+
+  }
+
+}
+
+.layout-container {
+  @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];
+}
+
+body.path-admin .layout-container,
+body.toolbar-horizontal .layout-container,
+body.toolbar-vertical .layout-container {
+  @apply mt-[160px];
+}
+
+.layout-container.front-page {
+  @apply lg:mt-0;
+}
+
+.layout-content {
+  @apply flex flex-col gap-8 my-8 p-4 lg:p-0;
+
+  a {
+    @apply text-blue no-underline;
+  }
+
+}
+
+.tabs__nav.tabs__nav--local-tasks {
+  @apply container mx-auto;
+}
+
+#block-ellison-content {
+
+  a#edit-help-link,
+  details#edit-advanced {
+    @apply hidden;
+  }
+
+}

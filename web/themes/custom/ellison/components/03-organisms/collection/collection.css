@@ -171,3 +171,16 @@
   }
 
 }
+
+.collection {
+  @apply flex flex-col gap-8;
+
+  .views-field-title {
+    @apply text-2xl font-bold;
+  }
+
+  .views-field-search-api-excerpt {
+    @apply text-gray-400;
+  }
+
+}

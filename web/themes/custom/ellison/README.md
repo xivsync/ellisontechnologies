@@ -182,7 +182,7 @@ Build the Tailwind file (@todo: eventually this should build the `style.css` fil
 
 `npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss`
 
-Build the theme to create the needed `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`
+Build the theme files needed for `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`
 
 `npm run build`
 
@@ -191,6 +191,10 @@ Build the production files
 `npm run build --production`
 
 @todo add `npm run delevelop`
+
+**To build the CKEditory stylesheet**, it is configured in the `ellison.info` file, and build it when needed.
+
+`npx tailwindcss -i ./components/ckeditor.css -o ./dist/css/ckeditor.css`
 
 ## CSS
 
