@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_metatags
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_image_media
     - node.type.article
   module:
     - entity_reference_revisions
@@ -32,7 +33,7 @@ content:
     region: content
   field_metatags:
     type: metatag_empty_formatter
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
@@ -42,5 +43,6 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  field_teaser_image_media: true
   links: true
   search_api_excerpt: true
