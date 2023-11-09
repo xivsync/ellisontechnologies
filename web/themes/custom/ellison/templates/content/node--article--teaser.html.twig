@@ -71,7 +71,7 @@
  */
 #}
 
-{% set has_image = content.field_image | render ? true : false %}
+{% set has_image = content.field_teaser_image_media | render ? true : false %}
 
 {% embed "@molecules/card/card.twig" with {
   has_image: has_image,
@@ -86,6 +86,6 @@
   card__extra_classes: ['display-as-row','item'],
 } %}
   {% block card__img %}
-    {{ content.field_image }}
+    {{ content.field_teaser_image_media }}
   {% endblock %}
 {% endembed %}
