@@ -50,7 +50,6 @@ elements: |-
     '#title_display': invisible
     '#placeholder': 'Title/Position *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#type': email
     '#title': 'Email Address *'

@@ -1,0 +1,11 @@
+uuid: e8277fed-7a4b-4aed-8270-e88351e1dd78
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_edit_terms
+id: update_term_references_for_the_selected_content_
+label: 'Update term references for the selected content.'
+type: node
+plugin: node_edit_terms_action
+configuration: {  }

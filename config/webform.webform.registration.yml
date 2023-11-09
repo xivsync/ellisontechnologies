@@ -11,12 +11,11 @@ archive: false
 id: registration
 title: Registration
 description: '<p>Add a event registration form to your event.</p>'
-category: ''
+categories: {  }
 elements: |-
   contact_information:
     '#type': webform_contact
     '#title': 'Contact Information'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     '#country__access': false
   how_did_you_hear__c:
     '#type': select

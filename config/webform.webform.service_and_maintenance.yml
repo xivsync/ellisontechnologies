@@ -43,12 +43,10 @@ elements: |-
     '#type': textfield
     '#title': 'First Name'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   lastname:
     '#type': textfield
     '#title': 'Last Name'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#title': 'Your Email'
     '#type': email
@@ -58,55 +56,43 @@ elements: |-
     '#type': tel
     '#title': Phone
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   company:
     '#type': textfield
     '#title': Company
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   title:
     '#type': textfield
     '#title': Title/Position
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   street:
     '#type': textfield
     '#title': Address
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   city:
     '#type': textfield
     '#title': City
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   state:
     '#type': textfield
     '#title': State
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   service_customer_po:
     '#type': textfield
     '#title': 'Customer PO'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   service_builder:
     '#type': textfield
     '#title': Builder
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   service_machine_model:
     '#type': textfield
     '#title': Model
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     '#required': true
   service_serial_number:
     '#type': textfield
     '#title': 'Serial Number'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   service_control_type:
     '#type': textfield
     '#title': 'Control Type'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   service_request:
     '#type': textarea
     '#title': 'Describe the issue with the machine'

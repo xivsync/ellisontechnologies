@@ -32,7 +32,6 @@ elements: |-
     '#title_display': invisible
     '#placeholder': "Last Name'"
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#title': 'Your Email'
     '#type': email
@@ -46,13 +45,11 @@ elements: |-
     '#title_display': invisible
     '#placeholder': Phone
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   company:
     '#type': textfield
     '#title': Company
     '#title_display': invisible
     '#placeholder': Company
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   select_location:
     '#type': select
     '#title': 'Select Location'
@@ -66,28 +63,24 @@ elements: |-
     '#title_display': invisible
     '#placeholder': Manufacturer
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   model__c:
     '#type': textfield
     '#title': Model
     '#title_display': invisible
     '#placeholder': Model
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   model_year__c:
     '#type': textfield
     '#title': 'Model Year'
     '#title_display': invisible
     '#placeholder': 'Model Year'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   notes__c:
     '#type': textarea
     '#title': 'Additional Notes / Comments'
     '#title_display': invisible
     '#placeholder': 'Additional Notes / Comments'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   front_photo:
     '#type': webform_image_file
     '#title': 'Front Photo'

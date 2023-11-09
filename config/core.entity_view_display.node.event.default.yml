@@ -18,7 +18,6 @@ dependencies:
     - node.type.event
   module:
     - entity_reference_revisions
-    - metatag
     - user
 id: node.event.default
 targetEntityType: node
@@ -34,19 +33,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_metatags:
-    type: metatag_empty_formatter
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
 hidden:
   body: true
   field_code_snippet: true
   field_dates_and_times: true
   field_leadsource: true
   field_location: true
+  field_metatags: true
   field_method_of_contact__c: true
   field_region: true
   field_tags: true

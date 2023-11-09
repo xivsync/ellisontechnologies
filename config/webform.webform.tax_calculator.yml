@@ -34,30 +34,25 @@ elements: |-
     '#type': textfield
     '#title': 'Section 179 Deduction'
     '#disabled': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   balance_depreciate_over_seven_years:
     '#type': textfield
     '#title': 'Balance to Depreciate over 7 Years'
     '#disabled': true
     '#description': '<p>EMP - Section 179 Deduction</p>'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   80_bonus_depreciation:
     '#type': textfield
     '#title': '80% Bonus Depreciation'
     '#disabled': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   standard_depreciation:
     '#type': textfield
     '#title': 'Standard Depreciation'
     '#disabled': true
     '#description': '<p>14.29% Year 1 x (EMP - Section 179 - Bonus depreciation).</p>'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   total_first_year_tax_deduction:
     '#type': textfield
     '#title': 'Total First Year Tax Deduction'
     '#disabled': true
     '#description': '<p>179 Deduction + Bonus &amp; Standard Depreciation</p>'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   assumed_customer_tax_bracket:
     '#type': textfield
     '#title': 'Assumed Customer Tax Bracket'
@@ -66,13 +61,11 @@ elements: |-
     '#type': textfield
     '#title': 'Tax Savings'
     '#disabled': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   approximate_number_of_payments:
     '#type': textfield
     '#title': 'Approximate Number of Payments'
     '#disabled': true
     '#description': '<p>Covered by these Tax Savings</p>'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
 css: ''
 javascript: ''
 settings:

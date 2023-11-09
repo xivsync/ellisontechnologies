@@ -43,7 +43,6 @@ elements: |-
     '#title_display': invisible
     '#placeholder': 'Title/Position *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#type': email
     '#title': 'Email Address *'
@@ -75,7 +74,6 @@ elements: |-
     '#title_display': invisible
     '#placeholder': 'City *'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code *'
@@ -110,7 +108,6 @@ elements: |-
     '#title': 'Best time to reach you'
     '#title_display': invisible
     '#placeholder': 'Best time to reach you'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   industry:
     '#type': select
     '#title': Industry

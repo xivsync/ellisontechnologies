@@ -9,7 +9,7 @@ id: paragraph.group.field_full_width_background
 field_name: field_full_width_background
 entity_type: paragraph
 bundle: group
-label: 'Select a background color'
+label: 'Enable full width background'
 description: 'Stretch the background to fill the view port full width.'
 required: false
 translatable: false

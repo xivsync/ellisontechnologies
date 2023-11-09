@@ -32,20 +32,17 @@ elements: |-
     '#title_display': invisible
     '#placeholder': "Last Name'"
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   company:
     '#type': textfield
     '#title': Company
     '#title_display': invisible
     '#placeholder': Company
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   title:
     '#type': textfield
     '#title': Title/Position
     '#title_display': invisible
     '#placeholder': Title/Position
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   email:
     '#title': 'Your Email'
     '#type': email
@@ -59,33 +56,28 @@ elements: |-
     '#title_display': invisible
     '#placeholder': Phone
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   state:
     '#type': textfield
     '#title': State
     '#title_display': invisible
     '#placeholder': State
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   city:
     '#type': city
     '#title': City
     '#title_display': invisible
     '#placeholder': City
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code'
     '#title_display': invisible
     '#placeholder': 'Zip Code'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   description:
     '#type': textarea
     '#title': Notes
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   region__c:
     '#type': hidden
     '#title': region__c

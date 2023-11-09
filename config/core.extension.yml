@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  action: 0
   address: 0
   address_static_map: 0
   admin_toolbar: 0
@@ -14,6 +15,7 @@ module:
   block_content: 0
   block_field: 0
   breakpoint: 0
+  bulk_edit_terms: 0
   ckeditor5: 0
   ckeditor_link_styles: 0
   comment: 0
@@ -58,11 +60,11 @@ module:
   link: 0
   link_field_autocomplete_filter: 0
   linkit: 0
+  mailsystem: 0
   media: 0
   media_bulk_upload: 0
   media_bulk_upload_dropzonejs: 0
   media_library: 0
-  media_video_micromodal: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -73,9 +75,12 @@ module:
   page_cache: 0
   paragraphs_edit: 0
   paragraphs_library: 0
+  pate: 0
   path: 0
   path_alias: 0
+  phpass: 0
   quick_node_clone: 0
+  replicate: 0
   responsive_image: 0
   salesforce: 0
   salesforce_address: 0
@@ -112,10 +117,12 @@ module:
   typed_data: 0
   update: 0
   user: 0
+  view_unpublished: 0
   views_ui: 0
   webform: 0
   webform_access: 0
   webform_node: 0
+  webform_scheduled_email: 0
   webform_ui: 0
   pathauto: 1
   xmlsitemap: 1

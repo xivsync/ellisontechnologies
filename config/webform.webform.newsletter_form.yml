@@ -48,28 +48,24 @@ elements: |-
     '#title': Company
     '#title_display': invisible
     '#placeholder': 'Company Name'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   title:
     '#type': textfield
     '#title': Title/Position
     '#title_display': invisible
     '#placeholder': Title/Position
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   phone:
     '#type': tel
     '#title': Phone
     '#title_display': invisible
     '#placeholder': 'Business Phone'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   postalcode:
     '#type': textfield
     '#title': 'Zip Code'
     '#title_display': invisible
     '#placeholder': 'Zip Code'
     '#required': true
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   region__c:
     '#type': hidden
     '#title': region__c

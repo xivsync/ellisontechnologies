@@ -45,9 +45,6 @@ settings:
       enabled_headings:
         - heading2
         - heading3
-        - heading4
-        - heading5
-        - heading6
     ckeditor5_imageResize:
       allow_resize: true
     ckeditor5_list:

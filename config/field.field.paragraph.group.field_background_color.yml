@@ -11,8 +11,8 @@ id: paragraph.group.field_background_color
 field_name: field_background_color
 entity_type: paragraph
 bundle: group
-label: 'Enable background color'
-description: 'Add background color. <strong>Please note that Cyan is the same as Light Blue and Medium Blue is the same as Blue.</strong> Default is none.'
+label: 'Add a background color'
+description: 'Add a background color. <strong>Please note that Cyan is the same as Light Blue and Medium Blue is the same as Blue.</strong> Default is none.'
 required: false
 translatable: true
 default_value: {  }

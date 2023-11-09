@@ -119,11 +119,18 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_dates_and_times:
-    type: smartdate_inline
+    type: smartdate_timezone
     weight: 7
     region: content
     settings:
       modal: false
+      default_tz: user
+      custom_tz: America/Chicago
+      allowed_timezones:
+        - America/Chicago
+        - America/Denver
+        - America/Los_Angeles
+        - America/New_York
       default_duration: 60
       default_duration_increments: |-
         30
@@ -133,9 +140,10 @@ content:
         custom
       show_extra: false
       hide_date: true
-      allday: true
-      remove_seconds: false
       separator: to
+      add_abbreviations: ''
+      allday: '1'
+      remove_seconds: 0
     third_party_settings: {  }
   field_leadsource:
     type: string_textfield

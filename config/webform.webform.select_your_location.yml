@@ -136,7 +136,7 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: message
+  confirmation_type: inline
   confirmation_url: '[current-page:url]'
   confirmation_title: 'Location is set successfully.'
   confirmation_message: '<p>Thank you for your selection. You can safely close this dialog.</p>'

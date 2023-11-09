@@ -4,3 +4,4 @@ show_on_admin: 0
 alert_styles: "primary|Default\r\nmodal|Popup Modal"
 refresh_interval: 15
 automatic_refresh: 0
+cache_max_age: 15
