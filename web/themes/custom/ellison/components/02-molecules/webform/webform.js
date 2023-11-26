@@ -152,7 +152,7 @@ Drupal.behaviors.handleWebform = {
             let webformElements = webform.elements;
             let empInput = webformElements['edit-estimated-machine-price'];
             let bracketInput = webformElements['edit-assumed-customer-tax-bracket'];
-            let calculateButton = webformElements['edit-actions-submit'];
+            let calculateButton = formEl.querySelector('.webform-button--submit');
 
             // set default values
             empInput.value = 1950000;
