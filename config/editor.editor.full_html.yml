@@ -27,12 +27,13 @@ settings:
       - blockQuote
       - insertTable
       - horizontalLine
-      - '|'
+      - '-'
       - alignment
       - heading
       - style
       - removeFormat
-      - '|'
+      - '-'
+      - drupalMedia
       - drupalInsertImage
       - '|'
       - sourceEditing
@@ -63,12 +64,6 @@ settings:
           label: 'Blue Paragraph'
           element: '<p class="text-blue">'
         -
-          label: 'Cyan H2'
-          element: '<h2 class="text-cyan">'
-        -
-          label: 'Cyan Paragraph'
-          element: '<p class="text-cyan">'
-        -
           label: 'Dark Blue H2'
           element: '<h2 class="text-dark-blue">'
         -
@@ -87,55 +82,49 @@ settings:
           label: 'White Paragraph'
           element: '<p class="text-white">'
         -
-          label: 'Medium Blue H2'
-          element: '<h2 class="text-medium-blue">'
-        -
-          label: 'medium Blue Paragraph'
-          element: '<p class="text-medium-blue">'
-        -
           label: 'Gray H2'
           element: '<h2 class="text-gray-600">'
         -
           label: 'Gray Paragraph'
           element: '<p class="text-gray-600">'
         -
-          label: 'Size Largest H2'
+          label: 'H2 48px'
           element: '<h2 class="text-5xl">'
         -
-          label: 'Size Larger H2'
+          label: 'H2 36px'
           element: '<h2 class="text-4xl">'
         -
-          label: 'Size Largest Paragraph'
+          label: 'Paragraph 24px'
           element: '<p class="text-2xl">'
         -
-          label: 'Size Larger Paragraph'
+          label: 'Paragraph 20px'
           element: '<p class="text-xl">'
         -
-          label: 'H2 Remove Bottom Margin'
+          label: 'H2 Remove MB'
           element: '<h2 class="mb-0 pb-0">'
         -
-          label: 'H2 Add Left Margin'
+          label: 'H2 Add ML'
           element: '<h2 class="pl-8">'
         -
-          label: 'H2 Add Right Margin'
+          label: 'H2 Add MR'
           element: '<h2 class="pr-8">'
         -
-          label: 'H2 Add Left and Right Margin'
+          label: 'H2 Add MX Margin'
           element: '<h2 class="px-8">'
         -
-          label: 'Remove Top Margin Paragraph'
+          label: 'Remove MT Paragraph'
           element: '<p class="mt-0 pt-0">'
         -
-          label: 'Remove Bottom Margin Paragraph'
+          label: 'Remove MB Paragraph'
           element: '<p class="mb-0 pb-0">'
         -
-          label: 'Add Left Margin Paragraph'
+          label: 'Add ML Paragraph'
           element: '<p class="pl-8">'
         -
-          label: 'Add Right Margin Paragraph'
+          label: 'Add MR Paragraph'
           element: '<p class="pr-8">'
         -
-          label: 'Add Left and Right Margin Paragraph'
+          label: 'Add MX Margin Paragraph'
           element: '<p class="px-8">'
     ckeditor_link_styles_linkStyles:
       styles:
@@ -167,6 +156,8 @@ settings:
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: true
   scheme: public

@@ -21,13 +21,13 @@ description: '<p>Basic email contact webform for Machine Sales Inquiries</p>'
 categories: {  }
 elements: |-
   service_type:
-    '#type': select
+    '#type': radios
     '#title': 'Service Type'
     '#options':
       Machine: Machine
       Robotics: Robotics
   service_machine_status:
-    '#type': select
+    '#type': radios
     '#title': 'Current Status'
     '#options':
       operational: Running
@@ -98,13 +98,11 @@ elements: |-
     '#title': 'Describe the issue with the machine'
     '#required': true
   opt_in:
-    '#type': checkboxes
-    '#title': Opt-in
-    '#multiple': 2
-    '#options':
-      opt-in: 'Yes. -- I would like to receive occasional emails.'
-      opt-out: 'No. -- I do not want to receive occasional emails.'
-    '#options_display': two_columns
+    '#type': checkbox
+    '#title': 'I would like to receive occasional emails.'
+    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
+    '#title_display': inline
+    '#required': true
   region_name:
     '#type': hidden
     '#title': region

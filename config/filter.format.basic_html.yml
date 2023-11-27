@@ -2,6 +2,8 @@ uuid: 2da1c4bf-3e53-4279-88fb-66a140c2257b
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
   module:
     - editor
     - linkit
@@ -16,7 +18,7 @@ filters:
     id: filter_html
     provider: filter
     status: false
-    weight: -49
+    weight: -43
     settings:
       allowed_html: '<cite> <dl> <dt> <dd> <a hreflang> <blockquote cite> <ul type> <ol start type> <h2 id class="text-blue text-dark-blue text-light-blue text-white text-gray-600 text-5xl text-4xl mb-0 pb-0 pl-8 pr-8 px-8"> <h3 id> <h4 id> <h5 id> <h6 id> <p class="text-blue text-dark-blue text-light-blue text-white text-gray-600 text-2xl text-xl mt-0 pt-0 mb-0 pb-0 pl-8 pr-8 px-8">'
       filter_html_help: false
@@ -25,37 +27,37 @@ filters:
     id: filter_align
     provider: filter
     status: true
-    weight: -48
+    weight: -49
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
-    weight: -47
+    weight: -48
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -46
+    weight: -42
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: -44
+    weight: -45
     settings: {  }
   filter_image_lazy_load:
     id: filter_image_lazy_load
     provider: filter
     status: true
-    weight: -43
+    weight: -44
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: false
-    weight: -40
+    weight: -39
     settings:
       filter_url_length: 72
   linkit:
@@ -68,27 +70,31 @@ filters:
   media_embed:
     id: media_embed
     provider: media
-    status: false
-    weight: -39
+    status: true
+    weight: -47
     settings:
       default_view_mode: default
-      allowed_view_modes: {  }
-      allowed_media_types: {  }
+      allowed_view_modes:
+        media_library: media_library
+      allowed_media_types:
+        document: document
+        image: image
+        remote_video: remote_video
   filter_autop:
     id: filter_autop
     provider: filter
     status: false
-    weight: -41
+    weight: -40
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -42
+    weight: -41
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: -45
+    weight: -46
     settings: {  }
