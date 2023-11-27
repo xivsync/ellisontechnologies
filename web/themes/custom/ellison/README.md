@@ -42,6 +42,7 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - `ddev cex` will export all the Live configs which should overwrite all your local configs
 - make changes
 - in the theme folder run `npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss` to build the `tailwind.scss` file
+- see theme workflow instructions if you need to build the CKEditor stylesheet
 - then in the theme folder run `npm run build` to build files including `tailwind.scss`
 - commit changes to `master`
 - when ready `git push`

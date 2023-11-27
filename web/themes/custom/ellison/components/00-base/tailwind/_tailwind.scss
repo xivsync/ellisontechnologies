@@ -5699,6 +5699,33 @@ form.webform-submission-parts-and-accessories-form {
   }
 }
 
+/* handles radio buttons */
+
+fieldset.radios--wrapper {
+  margin-bottom: 0px;
+  legend.h2{
+    font-weight: 700;
+  }
+  .js-form-item.form-item {
+    margin: 0px;
+  }
+  .js-form-item.form-item {
+    display: flex;
+  }
+  .js-form-item.form-item {
+    flex-direction: row;
+  }
+  .form-item__label {
+    font-weight: 400;
+  }
+  .form-radio {
+    margin-right: 1rem;
+  }
+  .form-radio {
+    width: 1rem;
+  }
+}
+
 /* handles collection of horizontal teasers */
 
 .collection.display-as-rows {

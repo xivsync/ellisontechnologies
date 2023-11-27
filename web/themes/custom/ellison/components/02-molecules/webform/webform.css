@@ -381,3 +381,25 @@ form.webform-submission-parts-and-accessories-form {
   }
 
 }
+
+/* handles radio buttons */
+fieldset.radios--wrapper {
+  @apply mb-0;
+
+  legend.h2{
+    font-weight: 700;
+  }
+
+  .js-form-item.form-item {
+    @apply flex flex-row m-0;
+  }
+
+  .form-item__label {
+    @apply font-normal;
+  }
+
+  .form-radio {
+    @apply w-4 mr-4;
+  }
+
+}
