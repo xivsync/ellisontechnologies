@@ -403,3 +403,16 @@ fieldset.radios--wrapper {
   }
 
 }
+
+/* handles required labels */
+.required legend::after {
+  content: '*';
+  margin-left: .5rem;
+  color: red;
+}
+
+.form-required.form-item__label::after {
+  content: '*';
+  margin-left: .5rem;
+  color: red;
+}

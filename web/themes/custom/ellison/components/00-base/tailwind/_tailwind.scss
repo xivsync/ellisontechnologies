@@ -5725,6 +5725,18 @@ fieldset.radios--wrapper {
   }
 }
 
+.required legend::after {
+  content: '*';
+  margin-left: .5rem;
+  color: red;
+}
+
+.form-required.form-item__label::after {
+  content: '*';
+  margin-left: .5rem;
+  color: red;
+}
+
 /* handles collection of horizontal teasers */
 
 .collection.display-as-rows {
