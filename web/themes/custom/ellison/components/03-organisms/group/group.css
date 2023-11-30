@@ -284,6 +284,18 @@
     .glide__bullets {
       bottom: 4rem
     }
+
+    .video__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      .field-video {
+        width: 80vh;
+      }
+  
+    }
     
   }
 
