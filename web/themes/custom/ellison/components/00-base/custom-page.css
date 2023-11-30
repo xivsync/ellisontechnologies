@@ -37,17 +37,14 @@
 
 }
 
+/* handles top margin for fixed header */
 .layout-container {
   @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];
-}
 
-body.path-admin .layout-container,
-body.toolbar-horizontal .layout-container {
-  @apply mt-[160px];
-}
+  &.front-page {
+    @apply lg:mt-0;
+  }
 
-body.toolbar-horizontal.path-frontpage .layout-container.front-page {
-  @apply mt-0;
 }
 
 .layout-content {

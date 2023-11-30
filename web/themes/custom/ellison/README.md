@@ -353,22 +353,41 @@ From email address needs to bem`trinetdev3@trinetsolutions.com` in Drupal.
 
 As of Nov 3, 2023, this is the email address that is set up and verified as the from email address in SendGrid. These email addresses need to match for emails to be sent. To change the from email address, first add the address and verify it in SendGrid. Then change the System email address and the SMTP from address in the configuration.
 
+## Webforms
+
+
+
 ## Salesforce
+
 
 
 ### Connected App
 
-@tod
+@tod0
 
 ### SalesForce Module
 
--- Mapping
 
-@todo
+Using the Salesforce Suite contributed module, you can create a mapping to send webform data to Salesforce.
+
+https://www.drupal.org/docs/8/modules/salesforce-suite/introduction-and-terminology
+https://www.drupal.org/docs/contributed-modules/salesforce-suite/salesforce-webform
+
+A list of mappings can be found here Stucture > Salesforce > Salesforce Mappings
+
+https://live-ellisontechnologies.pantheonsite.io/admin/structure/salesforce/mappings
+
+Any data sent to Salesforce is listed here in Salesforce Mapped Objects.
+
+https://live-ellisontechnologies.pantheonsite.io/admin/content/salesforce
 
 ## Call Tracking Metrics
 
-@todo
+To send data to Call Tracking Metcis add the CTM Handler to your web form. This handler will send the following fields:
+
+- @todo add list
+
+If you need to send other field names, this will require a small code change to add the fields to the CTM handler.
 
 ## Author
 

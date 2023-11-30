@@ -246,6 +246,10 @@
       right: -3rem
     }
 
+    .glide__bullets {
+      display: none;
+    }
+
   }
 
   /* handles full width content for sliders */
@@ -276,13 +280,14 @@
   }
 
   div#group__frontpage-hero-slider {
-    @apply lg:mt-[-102px];
+    @apply lg:mt-[64px];
     clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
     width: 100vw !important;
 
     /* handles moving bullets up on front page slider */
     .glide__bullets {
-      bottom: 4rem
+      display: flex;
+      bottom: 4rem;
     }
 
     .video__wrap {
@@ -311,7 +316,7 @@
       @apply lg:relative;
 
       img.image {
-        @apply lg:h-[640px] lg:w-auto lg:absolute lg:z-50 lg:left-0;
+        @apply lg:h-[640px] lg:w-auto lg:absolute lg:z-40 lg:left-0;
     
       }
 

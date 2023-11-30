@@ -46,10 +46,12 @@ onpage-navigation:
   dependencies:
     - core/drupal
     - core/once
-location:
+site-footer:
   js:
     dist/js/03-organisms/site/site-footer/site-footer.js: {}
-# slider component -- glide css added to tailwind.css
+site-header:
+  js:
+    components/03-organisms/site/site-header/site-header.js: {}
 slider:
   js:
     https://cdn.jsdelivr.net/npm/@glidejs/glide: {}

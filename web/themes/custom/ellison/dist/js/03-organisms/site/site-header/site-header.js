@@ -1,0 +1,1 @@
+Drupal.behaviors.top={attach:function(o){once("fixHeader","body.path-frontpage header.header",o).forEach((function(o){var a=window.scrollY,e=o,d=e.offsetHeight;window.addEventListener("scroll",(function(){(a=window.scrollY)>=d?e.classList.add("add-bg"):e.classList.remove("add-bg"),console.log(a)}))}))}};

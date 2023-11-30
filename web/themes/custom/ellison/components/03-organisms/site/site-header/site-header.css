@@ -1,9 +1,32 @@
-body.path-frontpage header{
-  @apply lg:static;
+/* handles sticky header and sitewide alert for admins */
+body.toolbar-horizontal.toolbar-fixed {
+  
+  .sitewide-alert-block {
+    top: 39px;
+  }
+  .header {
+    top: 103px;
+  }
+
+  &.toolbar-tray-open {
+
+    .sitewide-alert-block {
+      top: 79px;
+    }
+    .header {
+      top: 143px;
+    }
+
+  }
 }
 
 .header {
   @apply lg:fixed lg:top-[64px] p-6 flex flex-col items-center z-50 bg-gradient-to-b from-[#01172b] to-[#013664] lg:w-full;
+
+  /* handles adding bg back to front page when scrolling */
+  &.add-bg {
+    @apply bg-gradient-to-b from-[#01172b] to-[#013664];
+  }
 
   &__inner {
     @apply container flex flex-row flex-wrap justify-between gap-4 items-end xl:px-4;
@@ -99,28 +122,8 @@ body.path-frontpage header{
 
 }
 
-body.toolbar-fixed .header {
-  @apply top-[102px];
-}
-
-body.toolbar-fixed.toolbar-tray-open .header {
-  @apply top-[142px];
-}
-
-body.path-frontpage .sitewide-alert-block{
-  @apply lg:static;
-}
-
 .sitewide-alert-block {
   @apply lg:fixed lg:top-0 lg:w-full lg:z-50;
-}
-
-body.toolbar-fixed .sitewide-alert-block {
-  @apply lg:top-[38px];
-}
-
-body.toolbar-fixed.toolbar-tray-open .sitewide-alert-block {
-  @apply lg:top-[78px];
 }
 
 .sitewide-alert-block {
