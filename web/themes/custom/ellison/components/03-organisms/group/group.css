@@ -136,7 +136,6 @@
  *
  */
 .bg-color--light-blue {
-  @apply -z-10;
 
   &.diagonal-forward-slash-on::before,
   &.diagonal-forward-slash-on:hover::before,
@@ -196,7 +195,6 @@
 
 /* deprecated now light blue */
 .bg-color--cyan {
-  @apply -z-10;
   
   &.diagonal-forward-slash-on::before,
   &.diagonal-forward-slash-on:hover::before,
