@@ -140,7 +140,7 @@
   &.diagonal-forward-slash-on::before,
   &.diagonal-forward-slash-on:hover::before,
   &.tilt-back-slash-on::before,
-  &.tilt-back-slash-on:hover::before{
+  &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 50.5%);
   }
 
@@ -199,11 +199,12 @@
   &.diagonal-forward-slash-on::before,
   &.diagonal-forward-slash-on:hover::before,
   &.tilt-back-slash-on::before,
-  &.tilt-back-slash-on:hover::before{
+  &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right bottom, transparent 50%, #46B6E3 50.5%);
   }
 
-  &.diagonal-forward-slash-on::after {
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to left top, transparent 50%, #46B6E3 50.5%);
   }
 }

@@ -12,10 +12,4 @@
     line-height: 1.3;
   }
 
-  /* handles hover when bg is same is hover color */
-  .group.bg-color--cyan,
-  .group.bg-color--light-blue {
-    @apply hover:bg-white hover:text-light-blue
-  }
-
 }

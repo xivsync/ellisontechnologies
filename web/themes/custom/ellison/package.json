@@ -32,7 +32,9 @@
     "storybook-deploy": "storybook-to-ghpages -o .out",
     "test": "jest --coverage",
     "twatch": "jest --no-coverage --watch --verbose",
-    "webpack": "webpack --watch --config ./webpack/webpack.dev.js"
+    "webpack": "webpack --watch --config ./webpack/webpack.dev.js",
+    "tailwind" : "npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss",
+    "ckeditor" : "npx tailwindcss -i ./components/ckeditor.css -o ./dist/css/ckeditor.css"
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0",
