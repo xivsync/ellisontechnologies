@@ -1,1 +1,9 @@
-Drupal.behaviors.responsiveEmbeddedVideos={attach:function(e){function t(e){var t=e.getAttribute("width"),i=e.getAttribute("height"),o="".concat(t," / ").concat(i);e.parentNode.style.aspectRatio=o,e.setAttribute("height","100%"),e.setAttribute("width","100%")}once("enableResponsiveEmbeddedVimeo",'iframe[src*="vimeo.com"]',e).forEach((function(e){t(e)})),once("enableResponsiveEmbeddedYouTube",'iframe[src*="youtu"]',e).forEach((function(e){t(e)}))}};
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*********************************************!*\
+  !*** ./components/01-atoms/videos/video.js ***!
+  \*********************************************/
+Drupal.behaviors.responsiveEmbeddedVideos={attach:function attach(a){function b(a){var b=a.getAttribute("width"),c=a.getAttribute("height"),d="".concat(b," / ").concat(c),e=a.parentNode;e.style.aspectRatio=d,a.setAttribute("height","100%"),a.setAttribute("width","100%")}once("enableResponsiveEmbeddedVimeo","iframe[src*=\"vimeo.com\"]",a).forEach(function(a){b(a)}),once("enableResponsiveEmbeddedYouTube","iframe[src*=\"youtu\"]",a).forEach(function(a){b(a)})}};
+/******/ })()
+;
+//# sourceMappingURL=video.js.map

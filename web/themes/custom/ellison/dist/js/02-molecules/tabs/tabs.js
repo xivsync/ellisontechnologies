@@ -1,1 +1,9 @@
-Drupal.behaviors.tabs={attach:function(t){function e(t,e){t.addEventListener("click",(function(t){t.preventDefault(),function(t){t!==l&&0<=t&&t<=a.length&&(a[+l].classList.remove("is-active"),a[+t].classList.add("is-active"),i[+l].classList.remove("is-active"),i[+t].classList.add("is-active"),l=t)}(e)}))}for(var s=t.querySelectorAll(".tabs"),a=t.querySelectorAll(".tabs__link"),i=t.querySelectorAll(".tabs__tab"),l=0,c=0;c<s.length;c+=1)s[+c].classList.remove("no-js");for(var r=0;r<a.length;r+=1)e(a[+r],r)}};
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************************************!*\
+  !*** ./components/02-molecules/tabs/tabs.js ***!
+  \**********************************************/
+Drupal.behaviors.tabs={attach:function attach(a){function b(a){a!==h&&0<=a&&a<=f.length&&(f[+h].classList.remove("is-active"),f[+a].classList.add("is-active"),g[+h].classList.remove("is-active"),g[+a].classList.add("is-active"),h=a)}function c(a,c){a.addEventListener("click",function(a){a.preventDefault(),b(c)})}for(var d=a.querySelectorAll(".tabs"),f=a.querySelectorAll(".tabs__link"),g=a.querySelectorAll(".tabs__tab"),h=0,j=0;j<d.length;j+=1)d[+j].classList.remove("no-js");for(var k,l=0;l<f.length;l+=1)k=f[+l],c(k,l)}};
+/******/ })()
+;
+//# sourceMappingURL=tabs.js.map

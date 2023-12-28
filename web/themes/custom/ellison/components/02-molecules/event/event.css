@@ -36,7 +36,8 @@
     width: 100%;
   }
 
-  .card__body {
+  .card__body .field-dates-and-times,
+  .card__body .field-location {
     @apply gap-0 text-2xl font-bold !important;
   }
 

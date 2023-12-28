@@ -1,1 +1,9 @@
-Drupal.behaviors.dropdown={attach:function(e){once("enableDropdown",".dropdown",e).forEach((function(e){var d=e.dataset.dropdownUniqueId;document.getElementById("toggle-".concat(d)).addEventListener("click",(function(e){var d=e.target,t=d.dataset.dropdownUniqueId,a=document.getElementById("dropdown-".concat(t)),n=a.dataset.dropdownState;d.setAttribute("aria-expanded","expanded"!==n),a.dataset.dropdownState="expanded"===n?"collapsed":"expanded",a.classList.remove("expanded"===n?"state-is-expanded":"state-is-collapsed"),a.classList.add("expanded"===n?"state-is-collapsed":"state-is-expanded")}))}))}};
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!******************************************************!*\
+  !*** ./components/02-molecules/dropdown/dropdown.js ***!
+  \******************************************************/
+Drupal.behaviors.dropdown={attach:function attach(a){once("enableDropdown",".dropdown",a).forEach(function(a){var b=a.dataset.dropdownUniqueId,c=document.getElementById("toggle-".concat(b));c.addEventListener("click",function(a){var b=a.target,c=b.dataset.dropdownUniqueId,d=document.getElementById("dropdown-".concat(c)),e=d.dataset.dropdownState;b.setAttribute("aria-expanded","expanded"!==e),d.dataset.dropdownState="expanded"===e?"collapsed":"expanded",d.classList.remove("expanded"===e?"state-is-expanded":"state-is-collapsed"),d.classList.add("expanded"===e?"state-is-collapsed":"state-is-expanded")})})}};
+/******/ })()
+;
+//# sourceMappingURL=dropdown.js.map

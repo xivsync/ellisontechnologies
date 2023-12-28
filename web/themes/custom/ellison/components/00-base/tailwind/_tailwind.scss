@@ -3501,14 +3501,17 @@ div.webform {
   .card__inner--content {
     width: 100%;
   }
-  .card__body {
+  .card__body .field-dates-and-times,
+  .card__body .field-location {
     gap: 0px !important;
   }
-  .card__body {
+  .card__body .field-dates-and-times,
+  .card__body .field-location {
     font-size: 1.5rem !important;
     line-height: 2rem !important;
   }
-  .card__body {
+  .card__body .field-dates-and-times,
+  .card__body .field-location {
     font-weight: 700 !important;
   }
   .heading {
