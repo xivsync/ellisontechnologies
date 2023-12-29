@@ -1,0 +1,9 @@
+.banner-image {
+
+  .image__item picture,
+  .image__item img {
+    max-width: unset;
+    width: 100%;
+  }
+
+}

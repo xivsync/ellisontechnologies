@@ -2648,6 +2648,14 @@ div.webform {
   }
 }
 
+.banner-image {
+  .image__item picture,
+  .image__item img {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
 /* handles location teasers block on locations page */
 
 #block-views-block-locations-block-1 {
@@ -3503,7 +3511,7 @@ div.webform {
   }
   .card__body .field-dates-and-times,
   .card__body .field-location {
-    gap: 0px !important;
+    gap: 1rem !important;
   }
   .card__body .field-dates-and-times,
   .card__body .field-location {
