@@ -93,7 +93,14 @@
   {{ title_suffix }}
 
   <div {{ add_attributes(content__attributes) }}>
-    {{ content|without('field_region','field_webform_campaign_id__c','field_leadsource','field_dates_and_times') }}
+    {{ content|without(
+      'field_region',
+      'field_webform_campaign_id__c',
+      'field_leadsource',
+      'field_dates_and_times',
+      'field_webformsid__c',
+      'field_internal_email'
+    ) }}
   </div>
 
 </article>

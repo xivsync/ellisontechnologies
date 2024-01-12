@@ -3365,6 +3365,13 @@ div.webform {
 /* @todo -- remove? -- handles specifications list items */
 
 .specifications {
+  .dropdown.accordion-button-dropdown button.dropdown__toggle {
+    border-top-width: 2px;
+  }
+  .dropdown.accordion-button-dropdown button.dropdown__toggle {
+    --tw-border-opacity: 1;
+    border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  }
   .dropdown__menu--item {
     display: flex;
   }
@@ -3376,13 +3383,6 @@ div.webform {
   }
   .dropdown__menu--item {
     justify-content: space-between;
-  }
-  .dropdown__menu--item {
-    border-top-width: 2px;
-  }
-  .dropdown__menu--item {
-    --tw-border-opacity: 1;
-    border-color: rgb(209 213 219 / var(--tw-border-opacity));
   }
   .dropdown__menu--item {
     padding-top: 0.5rem;
@@ -3403,8 +3403,45 @@ div.webform {
       padding: 0px;
     }
   }
-  .dropdown__menu--item:first-child {
-    border-top-width: 0px;
+}
+
+/*handles adding the last bottom border */
+
+.specifications-list .field-specifications-type .field__item:last-child {
+  .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
+    border-bottom-width: 2px;
+  }
+  .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
+    --tw-border-opacity: 1;
+    border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  }
+}
+
+/*handles light blue background*/
+
+.group.bg-color--light-blue,
+.group.bg-color--cyan {
+  .specifications {
+    .dropdown.accordion-button-dropdown button.dropdown__toggle {
+      border-top-width: 2px;
+    }
+    .dropdown.accordion-button-dropdown button.dropdown__toggle {
+      --tw-border-opacity: 1;
+      border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    }
+    .dropdown.accordion-button-dropdown button.dropdown__toggle:focus {
+      --tw-ring-opacity: 1;
+      --tw-ring-color: rgb(30 41 67 / var(--tw-ring-opacity));
+    }
+  }
+  .specifications-list .field-specifications-type .field__item:last-child {
+    .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
+      border-bottom-width: 2px;
+    }
+    .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
+      --tw-border-opacity: 1;
+      border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    }
   }
 }
 

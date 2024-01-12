@@ -101,16 +101,51 @@
 /* @todo -- remove? -- handles specifications list items */
 .specifications {
 
+  .dropdown.accordion-button-dropdown button.dropdown__toggle {
+    @apply border-t-2 border-gray-400;
+  }
+
   .dropdown__menu--item {
-    @apply flex flex-row justify-between items-start py-2 px-4 border-t-2 border-gray-300;
+    @apply flex flex-row justify-between items-start py-2 px-4;
 
     p {
       @apply m-0 p-0 basis-1/2;
     }
   }
 
-  .dropdown__menu--item:first-child {
-    @apply border-t-0;
+}
+
+/*handles adding the last bottom border */
+.specifications-list .field-specifications-type .field__item:last-child {
+
+  .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
+    @apply border-b-2 border-gray-400;
+  }
+
+}
+
+/*handles light blue background*/
+.group.bg-color--light-blue,
+.group.bg-color--cyan {
+
+  .specifications {
+
+    .dropdown.accordion-button-dropdown button.dropdown__toggle {
+      @apply border-t-2 border-white;
+    }
+
+    .dropdown.accordion-button-dropdown button.dropdown__toggle:focus {
+      @apply ring-dark-blue;
+    }
+  
+  }
+
+  .specifications-list .field-specifications-type .field__item:last-child {
+
+    .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
+      @apply border-b-2 border-white;
+    }
+  
   }
 
 }
