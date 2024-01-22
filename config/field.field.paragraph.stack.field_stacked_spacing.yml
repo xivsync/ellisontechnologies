@@ -1,0 +1,21 @@
+uuid: 522b766f-dd42-4953-9db6-3346432907c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stacked_spacing
+    - paragraphs.paragraphs_type.stack
+  module:
+    - options
+id: paragraph.stack.field_stacked_spacing
+field_name: field_stacked_spacing
+entity_type: paragraph
+bundle: stack
+label: 'Stacked Spacing'
+description: 'Stacked components get default spacing between. Select none to remove spacing.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

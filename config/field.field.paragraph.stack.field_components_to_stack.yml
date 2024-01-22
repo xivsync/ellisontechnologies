@@ -1,0 +1,88 @@
+uuid: 5b6df8b2-da4b-40a2-ac38-c22454c062e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components_to_stack
+    - paragraphs.paragraphs_type.cta_button
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.stack
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: paragraph.stack.field_components_to_stack
+field_name: field_components_to_stack
+entity_type: paragraph
+bundle: stack
+label: 'Components to stack'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cta_button: cta_button
+      image: image
+      text: text
+      webform: webform
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image:
+        weight: 19
+        enabled: false
+      button_group:
+        weight: 20
+        enabled: false
+      card:
+        weight: 21
+        enabled: false
+      cta_button:
+        weight: 22
+        enabled: true
+      from_library:
+        weight: 23
+        enabled: false
+      group:
+        weight: 24
+        enabled: false
+      image:
+        weight: 25
+        enabled: true
+      instagram:
+        weight: 26
+        enabled: false
+      model_listing:
+        weight: 27
+        enabled: false
+      quote:
+        weight: 28
+        enabled: false
+      slide:
+        weight: 29
+        enabled: false
+      slider:
+        weight: 30
+        enabled: false
+      specifications:
+        weight: 31
+        enabled: false
+      specifications_list:
+        weight: 32
+        enabled: false
+      stack:
+        weight: 33
+        enabled: false
+      text:
+        weight: 34
+        enabled: true
+      video:
+        weight: 35
+        enabled: false
+      webform:
+        weight: 36
+        enabled: true
+field_type: entity_reference_revisions

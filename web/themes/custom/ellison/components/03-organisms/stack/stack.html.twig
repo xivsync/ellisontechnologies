@@ -1,0 +1,22 @@
+{#
+/**
+ * Stack Component
+ *
+ */
+#}
+
+{% set attributes = create_attribute() %}
+
+{%
+  set classes = [
+    'stack',
+    spacing ? 'spacing-' ~ spacing | clean_class : 'spacing-default',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <div class="stack__inner">
+    {{ component }}
+  </div>
+</div>

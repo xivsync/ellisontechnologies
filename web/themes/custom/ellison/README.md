@@ -349,9 +349,16 @@ SendGrid is used with the SMPT module under the account with username `trinetdev
 
 https://docs.sendgrid.com/for-developers/sending-email/drupal
 
-From email address needs to bem`trinetdev3@trinetsolutions.com` in Drupal.
+https://login.sendgrid.com/
+
+- username: `trinetdev3@trinetsolutions.com`
+- two factor code sent to phone number
+
+From email address needs to be `trinetdev3@trinetsolutions.com` in Drupal.
 
 As of Nov 3, 2023, this is the email address that is set up and verified as the from email address in SendGrid. These email addresses need to match for emails to be sent. To change the from email address, first add the address and verify it in SendGrid. Then change the System email address and the SMTP from address in the configuration.
+
+
 
 ## Webforms
 

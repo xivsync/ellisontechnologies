@@ -1,0 +1,10 @@
+uuid: b174b62b-7bd4-4429-b931-d8443eb323e1
+langcode: en
+status: true
+dependencies: {  }
+id: stack
+label: Stack
+icon_uuid: null
+icon_default: null
+description: 'Use in a group to stack components.'
+behavior_plugins: {  }

@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.quote
     - paragraphs.paragraphs_type.slider
     - paragraphs.paragraphs_type.specifications_list
+    - paragraphs.paragraphs_type.stack
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.webform
@@ -45,6 +46,7 @@ settings:
       specifications_list: specifications_list
       video: video
       slider: slider
+      stack: stack
     negate: 0
     target_bundles_drag_drop:
       banner_image:
@@ -88,6 +90,9 @@ settings:
         enabled: false
       specifications_list:
         weight: 22
+        enabled: true
+      stack:
+        weight: 33
         enabled: true
       text:
         weight: 8

@@ -1,0 +1,11 @@
+.stack {
+
+  .stacked-components {
+    @apply flex flex-col gap-8;
+  }
+
+  &.spacing-none .stacked-components {
+    @apply gap-0;
+  }
+
+}

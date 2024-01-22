@@ -6199,6 +6199,21 @@ li.status {
   opacity: 0.8;
 }
 
+.stack {
+  .stacked-components {
+    display: flex;
+  }
+  .stacked-components {
+    flex-direction: column;
+  }
+  .stacked-components {
+    gap: 2rem;
+  }
+  &.spacing-none .stacked-components {
+    gap: 0px;
+  }
+}
+
 .group {
   /* handles display items per row */
   &.items-per-row--2 .group__items,

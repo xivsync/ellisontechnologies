@@ -1,0 +1,10 @@
+{%
+  set classes = [
+    paragraph.bundle|clean_class
+  ]
+%}
+
+{% include "@organisms/stack/stack.html.twig" with {
+  component: content | without('field_stacked_spacing'),
+  spacing: content.field_stacked_spacing | render | striptags | trim,
+} %}

@@ -28,6 +28,7 @@
 @import './03-organisms/collection/collection.css';
 @import './03-organisms/components/components.css';
 @import './03-organisms/dialog/dialog.css';
+@import './03-organisms/stack/stack.css';
 @import './03-organisms/group/group.css';
 @import './03-organisms/site/site-footer/site-footer.css';
 @import './03-organisms/site/site-header/site-header.css';
