@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb19f9b4e0b0306984fbb8576e840a35",
+    "content-hash": "e3898d69fbc6a1aa675c4baa56b20b74",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5875,6 +5875,51 @@
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
+            }
+        },
+        {
+            "name": "drupal/webform_all_download",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform_all_download.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform_all_download-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "91b29f34d5cfc355b6dbc77489d79fe31dbc98ba"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/webform": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2",
+                    "datestamp": "1697268700",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ravimane23",
+                    "homepage": "https://www.drupal.org/user/2616789"
+                }
+            ],
+            "description": "Allow to download files attached to a single OR all submission(s).",
+            "homepage": "https://www.drupal.org/project/webform_all_download",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform_all_download"
             }
         },
         {
