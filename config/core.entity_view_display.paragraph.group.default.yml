@@ -14,6 +14,7 @@ dependencies:
     - field.field.paragraph.group.field_full_width_background
     - field.field.paragraph.group.field_group
     - field.field.paragraph.group.field_header
+    - field.field.paragraph.group.field_items_per_row
     - field.field.paragraph.group.field_remove_margins
     - field.field.paragraph.group.field_unique_id
     - field.field.paragraph.group.field_vertical_align_items
@@ -123,6 +124,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_items_per_row:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_remove_margins:
     type: list_key

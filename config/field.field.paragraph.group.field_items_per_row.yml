@@ -1,0 +1,23 @@
+uuid: 68bb6e6c-ee17-4a60-b34a-3c79b05d53bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items_per_row
+    - paragraphs.paragraphs_type.group
+  module:
+    - options
+id: paragraph.group.field_items_per_row
+field_name: field_items_per_row
+entity_type: paragraph
+bundle: group
+label: 'Components to display per row'
+description: 'Select how many components to display per row. By default components will be displayed on a single row.'
+required: false
+translatable: false
+default_value:
+  -
+    value: auto
+default_value_callback: ''
+settings: {  }
+field_type: list_string
