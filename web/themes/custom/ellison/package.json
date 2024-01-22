@@ -33,7 +33,7 @@
     "test": "jest --coverage",
     "twatch": "jest --no-coverage --watch --verbose",
     "webpack": "webpack --watch --config ./webpack/webpack.dev.js",
-    "tailwind" : "npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss",
+    "tailwind" : "npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss && npm run build",
     "ckeditor" : "npx tailwindcss -i ./components/ckeditor.css -o ./dist/css/ckeditor.css"
   },
   "dependencies": {

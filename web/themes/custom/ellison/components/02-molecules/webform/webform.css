@@ -279,7 +279,7 @@ form.webform-submission-contact-add-form {
   }
 
   form.webform-submission-newsletter-form-form {
-    @apply flex flex-row flex-wrap pt-16 hidden justify-between gap-0;
+    @apply flex flex-row flex-wrap pt-16 hidden justify-between gap-0 !important;
     row-gap: 1rem;
 
     .form-item {
@@ -415,4 +415,9 @@ fieldset.radios--wrapper {
   content: '*';
   margin-left: .5rem;
   color: red;
+}
+
+li.status {
+  color: black !important;
+  margin: 0;
 }

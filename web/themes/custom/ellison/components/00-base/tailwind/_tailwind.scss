@@ -5494,25 +5494,25 @@ form.webform-submission-contact-add-form {
     }
   }
   form.webform-submission-newsletter-form-form {
-    display: flex;
+    display: flex !important;
   }
   form.webform-submission-newsletter-form-form {
-    display: none;
+    display: none !important;
   }
   form.webform-submission-newsletter-form-form {
-    flex-direction: row;
+    flex-direction: row !important;
   }
   form.webform-submission-newsletter-form-form {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
   form.webform-submission-newsletter-form-form {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
   form.webform-submission-newsletter-form-form {
-    gap: 0px;
+    gap: 0px !important;
   }
   form.webform-submission-newsletter-form-form {
-    padding-top: 4rem;
+    padding-top: 4rem !important;
   }
   form.webform-submission-newsletter-form-form {
     row-gap: 1rem;
@@ -5774,6 +5774,11 @@ fieldset.radios--wrapper {
   content: '*';
   margin-left: .5rem;
   color: red;
+}
+
+li.status {
+  color: black !important;
+  margin: 0;
 }
 
 /* handles collection of horizontal teasers */
