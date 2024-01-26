@@ -6282,40 +6282,56 @@ div[role=alert] {
 .group {
   /* handles display items per row */
   &.items-per-row--2 .group__items {
-    display: grid;
-  }
-  &.items-per-row--2 .group__items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  &.items-per-row--2 .group__items {
     gap: 1rem;
   }
-  &.items-per-row--3 .group__items {
-    display: grid;
+  @media (min-width: 992px) {
+    &.items-per-row--2 .group__items {
+      display: grid;
+    }
   }
-  &.items-per-row--3 .group__items {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (min-width: 992px) {
+    &.items-per-row--2 .group__items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
   &.items-per-row--3 .group__items {
     gap: 1rem;
   }
-  &.items-per-row--4 .group__items {
-    display: grid;
+  @media (min-width: 992px) {
+    &.items-per-row--3 .group__items {
+      display: grid;
+    }
   }
-  &.items-per-row--4 .group__items {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  @media (min-width: 992px) {
+    &.items-per-row--3 .group__items {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
   &.items-per-row--4 .group__items {
     gap: 1rem;
   }
-  &.items-per-row--5 .group__items {
-    display: grid;
+  @media (min-width: 992px) {
+    &.items-per-row--4 .group__items {
+      display: grid;
+    }
   }
-  &.items-per-row--5 .group__items {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  @media (min-width: 992px) {
+    &.items-per-row--4 .group__items {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
   &.items-per-row--5 .group__items {
     gap: 1rem;
+  }
+  @media (min-width: 992px) {
+    &.items-per-row--5 .group__items {
+      display: grid;
+    }
+  }
+  @media (min-width: 992px) {
+    &.items-per-row--5 .group__items {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
   }
   &__inner {
     display: flex;
@@ -6352,6 +6368,9 @@ div[role=alert] {
     }
     &--count-4 .group__item {
       flex-basis: 25%;
+    }
+    &--count-5 .group__item {
+      flex-basis: 20%;
     }
   }
   &__group {

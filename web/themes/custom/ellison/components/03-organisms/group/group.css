@@ -2,19 +2,19 @@
 
   /* handles display items per row */
   &.items-per-row--2 .group__items {
-    @apply grid grid-cols-2 gap-4;
+    @apply lg:grid lg:grid-cols-2 gap-4;
   }
 
   &.items-per-row--3 .group__items {
-    @apply grid grid-cols-3 gap-4;
+    @apply lg:grid lg:grid-cols-3 gap-4;
   }
 
   &.items-per-row--4 .group__items {
-    @apply grid grid-cols-4 gap-4;
+    @apply lg:grid lg:grid-cols-4 gap-4;
   }
 
   &.items-per-row--5 .group__items {
-    @apply grid grid-cols-5 gap-4;
+    @apply lg:grid lg:grid-cols-5 gap-4;
   }
 
   &__inner {
@@ -38,6 +38,10 @@
 
     &--count-4 .group__item {
       @apply basis-1/4;
+    }
+
+    &--count-5 .group__item {
+      @apply basis-1/5;
     }
 
   }
