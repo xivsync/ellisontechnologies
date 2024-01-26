@@ -279,15 +279,10 @@ form.webform-submission-contact-add-form {
   }
 
   form.webform-submission-newsletter-form-form {
-    @apply flex flex-row flex-wrap pt-16 hidden justify-between gap-0 !important;
-    row-gap: 1rem;
-
-    .form-item {
-      @apply basis-full lg:basis-1/3;
-    }
+    @apply grid grid-cols-1 lg:grid-cols-3 hidden mt-8;
 
     .form-item.form-item--opt-in {
-      @apply w-full flex flex-row flex-wrap items-center justify-start basis-full;
+      @apply w-full flex flex-row flex-wrap items-center justify-start lg:col-span-3;
 
       input#edit-opt-in.form-item__textfield {
         @apply w-auto mr-4 !important;
@@ -300,7 +295,11 @@ form.webform-submission-contact-add-form {
     }
 
     .form-item__textfield {
-      @apply text-gray-700 w-full lg:w-[96%];
+      @apply text-gray-700;
+    }
+
+    .form-actions.webform-actions {
+      @apply col-span-2 place-self-end;
     }
 
     /* #BUTTON a.button-white */
@@ -417,7 +416,27 @@ fieldset.radios--wrapper {
   color: red;
 }
 
+form.webform:has(.status__list) {
+  display: grid !important;
+}
+
+ul.status__list {
+  @apply col-span-3;
+}
+
 li.status {
   color: black !important;
   margin: 0;
+
+  a,
+  a:hover,
+  a:focus {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  .form-item--error-message {
+    @apply mt-4 mb-8;
+  }
+
 }

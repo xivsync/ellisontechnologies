@@ -3,6 +3,11 @@
   @apply container mx-auto xl:px-4;
 }
 
+body.unpublished .breadcrumb__items::before {
+  @apply text-white bg-red-500 rounded-sm px-2 rounded uppercase text-xs lg:text-lg;
+  content: 'unpublished';
+}
+
 .breadcrumb {
   @apply flex flex-col container;
   overflow: hidden;

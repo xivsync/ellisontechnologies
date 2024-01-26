@@ -1,7 +1,7 @@
 .stack {
 
   .stacked-components {
-    @apply flex flex-col gap-8;
+    @apply grid grid-cols-1 gap-8;
   }
 
   &.spacing-none .stacked-components {

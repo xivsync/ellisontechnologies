@@ -17,7 +17,7 @@ Drupal.behaviors.handleWebform = {
 
           buttonEl.addEventListener('click', (e) => {
             const newsletterToggleEl = document.querySelector('#group__newsletter .webform-submission-newsletter-form-form');
-            newsletterToggleEl.style.display = 'flex';
+            newsletterToggleEl.style.setProperty('display', 'grid', 'important');
             buttonEl.style.display = 'none';
             e.preventDefault();
           });
