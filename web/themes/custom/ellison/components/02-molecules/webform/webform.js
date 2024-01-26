@@ -64,17 +64,17 @@ Drupal.behaviors.handleWebform = {
         // calculate deduction based on price
         function calculateDeduction(price) {
 
-          if (price < 1160000) {
-            // less than 1,160,000 return price
+          if (price < 1220000) {
+            // less than 1220000 return price
             return price;
-          } else if (price >= 1160000 && price < 2890000) {
-            // between 1,160,000 and 2,890,000 return 1,160,000
+          } else if (price >= 1160000 && price < 3050000) {
+            // between 1220000 and 3050000 return 1220000
             return 1160000;
-          } else if (price >= 2890000 && price < 4049999) {
-            // between 2,890,000 and 4,049,999 return delta
-            return 1160000 - (price - 2890000);
+          } else if (price >= 3050000 && price < 4269999) {
+            // between 3050000 and 4269999 return delta
+            return 1160000 - (price - 3050000);
           } else {
-            // greater than 4049999 return 0
+            // greater than 4269999 return 0
             return 0;
           }
 
