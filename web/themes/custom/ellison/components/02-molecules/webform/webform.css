@@ -278,8 +278,16 @@ form.webform-submission-contact-add-form {
     }
   }
 
+  form.webform-submission-newsletter-form-form:has(div[aria-label=error]) {
+    @apply grid !important;
+  }
+
   form.webform-submission-newsletter-form-form {
     @apply grid grid-cols-1 lg:grid-cols-3 hidden mt-8;
+
+    div[aria-label=error] {
+      @apply lg:col-span-3;
+    }
 
     .form-item.form-item--opt-in {
       @apply w-full flex flex-row flex-wrap items-center justify-start lg:col-span-3;
@@ -415,6 +423,14 @@ fieldset.radios--wrapper {
   margin-left: .5rem;
   color: red;
 }
+.form-item:has(.form-item--error-message) {
+  @apply flex flex-col gap-1;
+}
+
+.form-item--error-message {
+  @apply text-white bg-red-500 rounded-sm px-2 rounded;
+  width: max-content;
+}
 
 form.webform:has(.status__list) {
   display: grid !important;
@@ -424,19 +440,26 @@ ul.status__list {
   @apply col-span-3;
 }
 
-li.status {
-  color: black !important;
-  margin: 0;
+div[role=alert] {
+  @apply text-white bg-red-500 rounded-sm p-2 rounded;
 
-  a,
-  a:hover,
-  a:focus {
-    color: black !important;
-    text-decoration: underline;
-  }
-
-  .form-item--error-message {
-    @apply mt-4 mb-8;
+  li.status {
+    background-color: transparent;
+    margin: 0;
+    color: white;
+  
+    a,
+    a:hover,
+    a:focus {
+      color: white;
+      text-decoration: underline;
+    }
+  
+    .form-item--error-message {
+      @apply mt-4 mb-8;
+    }
+  
   }
 
 }
+
