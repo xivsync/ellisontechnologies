@@ -1,37 +1,36 @@
 .components {
   @apply flex flex-col gap-8;
+}
 
-  .component .group.diagonal-forward-slash-on.remove-mt {
-    margin-top: calc( (93px  + 2rem) * -1);
-  }
-  .component .group.diagonal-forward-slash-on.remove-mb {
-    margin-bottom: calc( (93px  + 2rem) * -1);
-  }
-  .component .group.diagonal-forward-slash-on.remove-my {
-    margin-top: calc( (93px  + 2rem) * -1);
-    margin-bottom: calc( (93px  + 2rem) * -1);
-  }
+.group.diagonal-forward-slash-on.remove-mt {
+  margin-top: calc( (93px  + 2rem) * -1);
+}
+.group.diagonal-forward-slash-on.remove-mb {
+  margin-bottom: calc( (93px  + 2rem) * -1);
+}
+.group.diagonal-forward-slash-on.remove-my {
+  margin-top: calc( (93px  + 2rem) * -1);
+  margin-bottom: calc( (93px  + 2rem) * -1);
+}
 
-  .component .group.tilt-back-slash-on.remove-mt {
-    @apply mt-[-4rem];
-  }
-  .component .group.tilt-back-slash-on.remove-mb {
-    @apply mb-[-4rem];
-  }
-  .component .group.tilt-back-slash-on.remove-my {
-    @apply my-[-4rem];
-  }
+.group.tilt-back-slash-on.remove-mt {
+  @apply mt-[-4rem];
+}
+.group.tilt-back-slash-on.remove-mb {
+  @apply mb-[-4rem];
+}
+.group.tilt-back-slash-on.remove-my {
+  @apply my-[-4rem];
+}
 
-  .component .group.add-pt {
-    @apply pt-8;
-  }
+.group.add-pt {
+  @apply pt-8;
+}
 
-  .component .group.add-pb {
-    @apply pb-8;
-  }
+.group.add-pb {
+  @apply pb-8;
+}
 
-  .component .group.add-py {
-    @apply py-8;
-  }
-
+.group.add-py {
+  @apply py-8;
 }

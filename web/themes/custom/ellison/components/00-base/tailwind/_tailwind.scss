@@ -6200,36 +6200,45 @@ div[role=alert] {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  .component .group.diagonal-forward-slash-on.remove-mt {
-    margin-top: calc( (93px  + 2rem) * -1);
-  }
-  .component .group.diagonal-forward-slash-on.remove-mb {
-    margin-bottom: calc( (93px  + 2rem) * -1);
-  }
-  .component .group.diagonal-forward-slash-on.remove-my {
-    margin-top: calc( (93px  + 2rem) * -1);
-    margin-bottom: calc( (93px  + 2rem) * -1);
-  }
-  .component .group.tilt-back-slash-on.remove-mt {
-    margin-top: -4rem;
-  }
-  .component .group.tilt-back-slash-on.remove-mb {
-    margin-bottom: -4rem;
-  }
-  .component .group.tilt-back-slash-on.remove-my {
-    margin-top: -4rem;
-    margin-bottom: -4rem;
-  }
-  .component .group.add-pt {
-    padding-top: 2rem;
-  }
-  .component .group.add-pb {
-    padding-bottom: 2rem;
-  }
-  .component .group.add-py {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
+}
+
+.group.diagonal-forward-slash-on.remove-mt {
+  margin-top: calc( (93px  + 2rem) * -1);
+}
+
+.group.diagonal-forward-slash-on.remove-mb {
+  margin-bottom: calc( (93px  + 2rem) * -1);
+}
+
+.group.diagonal-forward-slash-on.remove-my {
+  margin-top: calc( (93px  + 2rem) * -1);
+  margin-bottom: calc( (93px  + 2rem) * -1);
+}
+
+.group.tilt-back-slash-on.remove-mt {
+  margin-top: -4rem;
+}
+
+.group.tilt-back-slash-on.remove-mb {
+  margin-bottom: -4rem;
+}
+
+.group.tilt-back-slash-on.remove-my {
+  margin-top: -4rem;
+  margin-bottom: -4rem;
+}
+
+.group.add-pt {
+  padding-top: 2rem;
+}
+
+.group.add-pb {
+  padding-bottom: 2rem;
+}
+
+.group.add-py {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .ui-widget.ui-dialog {
