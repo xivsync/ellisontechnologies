@@ -17,6 +17,7 @@ module:
   block_field: 0
   breakpoint: 0
   bulk_edit_terms: 0
+  calendar_link: 0
   ckeditor5: 0
   ckeditor_link_styles: 0
   comment: 0
@@ -25,6 +26,7 @@ module:
   contact: 0
   contextual: 0
   csv_importer: 0
+  date_ical: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -53,6 +55,7 @@ module:
   honeypot: 0
   image: 0
   image_field_to_media: 0
+  inline_form_errors: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
@@ -71,6 +74,8 @@ module:
   menu_ui: 0
   metatag: 0
   metatag_import_export_csv: 0
+  mimemail: 0
+  mimemail_example: 0
   mysql: 0
   node: 0
   options: 0

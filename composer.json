@@ -82,7 +82,9 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/image_field_to_media": "^2.0",
         "drupal/mimemail": "^1.0@alpha",
-        "drupal/webform_all_download": "^1.0"
+        "drupal/webform_all_download": "^1.0",
+        "drupal/calendar_link": "^3.0",
+        "drupal/date_ical": "^4.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
