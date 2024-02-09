@@ -258,5 +258,42 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  html_email:
+    id: email
+    handler_id: html_email
+    label: 'HTML Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: tim.bednar@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: '<table bgcolor="#d5d5d5" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center"><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" style="background:#d5d5d5;" align="left" width="35">&nbsp;</td><td class="" style="background:#d5d5d5;font-family:Verdana, Geneva, sans-serif;font-size:11px;line-height:20px;text-align:center;" align="left" height="30" width="500"><p>&nbsp;.</p></td><td class="" style="background:#d5d5d5;" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td class="" height="80"><p><a href="http://www.ellisontechnologies.com/"><img src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs28/37432/220105/EllisonTechnologiesHeader.jpg" alt="Ellison Technologies" height="100" width="570"></a></p></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500"><p><br><span style="color:#002147;font-size:24px;line-height:24px;"><strong>Thank You for your RSVP!</strong></span></p><p>Mark your calendar! To save this event to your calendar click the event date link(s) below for an automatic event download.<br><br><strong>5-Axis Lunch &amp; Learn</strong><br><strong>Event Date &amp; Time:</strong><br>Wednesday, December 06 | 9:00am to 4:00pm <a style="text-decoration:underline;" href="https://www.ellisontechnologies.com/sites/default/files/events/EllisonTechnologies_Event_3085_2023-12-06_1.ics">Add to Calendar</a><br><strong>Location:</strong><br>30W112 Butterfield Rd. Warrenville, IL 60555&nbsp;<br><br><strong>We look forward to seeing you soon!</strong><br>For questions or if your plans change and you are not able to attend, please notify us as soon as possible: <a style="color:#3DB7E4;text-decoration:underline;" href="mailto:rsvp@ellisontechnologies.com"><strong>rsvp@ellisontechnologies.com</strong></a>&nbsp;<br><br>&nbsp;</p></td><td class="" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35" bgcolor="#3DB7E4">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500" bgcolor="#3DB7E4">&nbsp;</td><td class="" width="35" bgcolor="3DB7E4">&nbsp;</td></tr></tbody></table></td></tr><tr><td bgcolor="#002147"><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500">&nbsp;</td><td class="" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35" bgcolor="#002147">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="318" bgcolor="#002147"><table border="0" cellpadding="0" cellspacing="0" width="318"><tbody><tr><td style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="68"><p><a style="border:none;color:#ffffff;" href="http://www.ellisontechnologies.com/parts-service"><img src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs26/37432/220103/OneSource.png" width="60" height="60" alt=""></a></p></td><td style="color:#ffffff;font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="250"><p><span style="color:;font-size:14px;text-transform:uppercase;"><strong>Need parts OR service?</strong></span><br><a style="border:none;color:#fff;" href="http://www.ellisontechnologies.com/parts-service">We are your one source&nbsp;</a><br><a style="border:none;color:#fff;" href="http://www.ellisontechnologies.com/parts-service">for all of your support needs.</a></p></td></tr></tbody></table></td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="right" valign="top" width="182" bgcolor="#002147"><p><span style="color:#ffffff;font-size:12px;text-transform:uppercase;"><strong>Stay Connected</strong></span><br><a href="https://www.facebook.com/EllisonTechnologies?ref=nf" target="_blank"><img alt="Ellison Facebook" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs1x/37432/220095/Facebook.png" height="24" border="0" width="24"></a> <a href="https://twitter.com/EllisonTech" target="_blank"><img alt="Ellison Twitter" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs72/37432/220113/Twitter.png" height="24" border="0" width="24"></a> <a href="https://www.instagram.com/ellisontech/" target="_blank"><img alt="Ellison Instagram" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs74/37432/220111/Instagram.png" height="24" border="0" width="24"></a> <a href="http://www.linkedin.com/company/ellison-technologies" target="_blank"><img alt="Ellison Linked In" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs1z/37432/220097/Linkedin.png" height="24" border="0" width="24"></a>&nbsp;<br><a style="color:#ffffff;font-family:Verdana, Geneva, sans-serif;font-size:10px;text-decoration:none;text-transform:uppercase;" href="http://www.ellisontechnologies.com" target="_blank">www.ellisontechnologies.com</a></p></td><td class="" width="35" bgcolor="#002147">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35" bgcolor="#002147">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500" bgcolor="#002147">&nbsp;</td><td class="" width="35" bgcolor="#002147">&nbsp;</td></tr></tbody></table></td></tr><tr><td align="center"><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" style="color:rgb(0, 0, 0);font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:12px;text-transform:uppercase;" align="center" height="50" valign="middle" bgcolor="#d5d5d5">&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }

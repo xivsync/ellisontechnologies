@@ -1,6 +1,8 @@
 .status__list {
+  @apply container grid;
   @include list-reset;
 
+  margin: 0 auto !important;
   margin-bottom: $space;
 }
 
@@ -9,6 +11,10 @@
   margin-bottom: $space-one-half;
   padding: $space-one-half;
   text-align: center;
+
+  &--status:has(.event__confirmation) {
+    @apply bg-transparent;
+  }
 
   &--warning {
     color: clr(text);

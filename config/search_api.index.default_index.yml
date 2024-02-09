@@ -7,8 +7,13 @@ dependencies:
     - field.storage.node.field_components
     - field.storage.paragraph.field_content
     - field.storage.paragraph.field_header
+    - field.storage.node.field_location
+    - field.storage.node.field_product
+    - field.storage.node.field_region
     - field.storage.node.field_series
     - field.storage.node.field_tags
+    - field.storage.paragraph.field_citation
+    - field.storage.paragraph.field_specification
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
   module:
@@ -56,14 +61,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_brand
-  field_brand_1:
-    label: Brand
-    datasource_id: 'entity:node'
-    property_path: field_brand
-    type: integer
+  field_citation:
+    label: Citation
+    datasource_id: 'entity:paragraph'
+    property_path: field_citation
+    type: string
     dependencies:
       config:
-        - field.storage.node.field_brand
+        - field.storage.paragraph.field_citation
   field_content:
     label: 'Components » Paragraph » Body'
     datasource_id: 'entity:node'
@@ -75,6 +80,14 @@ field_settings:
         - field.storage.paragraph.field_content
       module:
         - paragraphs
+  field_content_1:
+    label: Body
+    datasource_id: 'entity:paragraph'
+    property_path: field_content
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_content
   field_header:
     label: 'Components » Paragraph » Header'
     datasource_id: 'entity:node'
@@ -86,6 +99,38 @@ field_settings:
         - field.storage.paragraph.field_header
       module:
         - paragraphs
+  field_header_1:
+    label: Header
+    datasource_id: 'entity:paragraph'
+    property_path: field_header
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_header
+  field_location:
+    label: 'Location:'
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+  field_product:
+    label: Product
+    datasource_id: 'entity:node'
+    property_path: field_product
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_product
+  field_region:
+    label: Region
+    datasource_id: 'entity:node'
+    property_path: field_region
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_region
   field_series:
     label: Series
     datasource_id: 'entity:node'
@@ -94,6 +139,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_series
+  field_specification:
+    label: Specification
+    datasource_id: 'entity:paragraph'
+    property_path: field_specification
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_specification
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
@@ -175,6 +228,17 @@ datasource_settings:
     languages:
       default: true
       selected: {  }
+  'entity:paragraph':
+    bundles:
+      default: true
+      selected:
+        - card
+        - group
+        - slide
+        - text
+    languages:
+      default: true
+      selected: {  }
 processor_settings:
   add_url:
     weights:
@@ -186,6 +250,7 @@ processor_settings:
     weights:
       preprocess_index: -6
       preprocess_query: -4
+  custom_value: {  }
   entity_status:
     weights:
       preprocess_index: -10
