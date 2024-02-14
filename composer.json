@@ -83,7 +83,8 @@
         "drupal/image_field_to_media": "^2.0",
         "drupal/mimemail": "^1.0@alpha",
         "drupal/webform_all_download": "^1.0",
-        "drupal/addtocal_augment": "^1.1@beta"
+        "drupal/addtocal_augment": "^1.1@beta",
+        "drupal/webform_pardot": "^2.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
