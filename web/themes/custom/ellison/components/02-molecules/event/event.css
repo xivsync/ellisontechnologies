@@ -71,3 +71,7 @@
 .front-page .heading__label {
   display: none;
 }
+
+.field-dates-and-times {
+  @apply mb-8 text-center;
+}
