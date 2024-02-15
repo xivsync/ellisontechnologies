@@ -126,7 +126,12 @@
         "enable-patching": true,
         "merge-plugin": {
             "include": ["web/modules/contrib/dropzonejs/composer.libraries.json"]
-        }
+        },
+        "patches": {
+            "drupal/smtp": {
+              "Error sending email invalid address - 3323386": "https://www.drupal.org/files/issues/2023-03-16/error-sending-email-16.patch"
+            }
+          }
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
@@ -147,7 +152,8 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "php-http/discovery": true
         }
     }
 }
