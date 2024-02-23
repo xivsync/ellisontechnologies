@@ -98,3 +98,6 @@
 **/.DS_Store
 .DS_Store
 web/sites/default/settings.ddev.php
+
+
+web/themes/custom/ellison/node_modules

@@ -10,30 +10,20 @@ This is a theme built with Storybook, Tailwind, Components, and Twig hosted by P
 
 Ellison Technologies uses Pantheon, it should be noted that Code move from Dev to Live. But Databases and Files move down from Live to Dev. It is recommended to keep Dev and Test up to date with Live to make updating configurations easier.
 
-https://docs.pantheon.io/pantheon-workflow
-
-### Visual Code Studio
-
-- Twig and Twig Language 2
-- Prettify
-- ES Lint
-- Drupal Syntax Highlighting
-- Tailwind CSS IntelliSense
-
-### Development workflow using SFTP
+### How to develop using SFTP mode
 
 If local development is not ideal, then use SFTP to develop directly on Pantheon Dev environment. This option takes the least time to get set up.
 
 https://docs.pantheon.io/guides/sftp
 
-### Developmet workflow for Git
+### How to develop locally using GIT Development mode and DDEV
 
-This assumes you've already setup local development using DDEV.
+This assumes you've already setup local development using DDEV (see below).
 
 Please note that the `master` branch always goes from Dev to Test to Live. Database changes always go from Live to Test and Dev. You can not push database changes from a lower environment to Live.
 
 - open root folder
-- `colima start --dns 1.1.1.1` (use colima rather than Docker Desktop)
+- `colima start --dns 1.1.1.1 --cpu 4 --memory 8`
 - `ddev start`
 - `ddev drush user:login` will get you a onetime link to login as `admin` locally
 - `git fetch origin` then `git pull` the `master` branch (at this time ellisontechnolgies does not use Multidev environments)
@@ -41,55 +31,68 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - download the most recent backup of the Live environment and `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
 - `ddev cex` will export all the Live configs which should overwrite all your local configs
 - make changes
-- in the theme folder run `npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss` to build the `tailwind.scss` file
-- see theme workflow instructions if you need to build the CKEditor stylesheet
-- then in the theme folder run `npm run build` to build files including `tailwind.scss`
-- commit changes to `master`
+- in the theme folder run `npm run tailwind`
+- in the theme folder run `npm run ckeditor` (rarely needed)
+- commit changes to `master` which includes the built files
 - when ready `git push`
 - Test on Dev environment
 - When ready merge to Test using Pantheon tools 
 - Now have the client UAT on Test
 - When ready merge to Production using Pantheon tools
 
-@todo review local development settings
+### How to start developing locally using DDEV (Mac)
 
-## How to start developing locally using DDEV
+Get access to `ellisontechnologies` site from Trinet Solutions. And make sure that **Development Mode is set to Git not SFTP**.
 
-### Get ellisiontechnolgies repo from Pantheon
+### Visual Code Studio extensions
 
-@todo validate steps
+- Twig and Twig Language 2
+- Prettify
+- ES Lint
+- Drupal Syntax Highlighting
+- Tailwind CSS IntelliSense
 
-This process requires Composer version 2.2 and uses Pantheon's current PHP 8.1 version.
+### Install the following (Mac)
 
-https://getcomposer.org/doc/01-basic-usage.md
+- Install homebrew
+- Install nvm
+- Install latest node/npm
+- `brew install docker` and you can additional install Docker Desktop
+- `brew install colima`
+- `brew install ddev/ddev/ddev`
+- `brew install --cask git-credential-manager`
 
-Get access to `ellisontechnologies` site from Trinet Solutions.
+https://ddev.readthedocs.io/en/latest/users/providers/pantheon/#pantheon-quickstart
 
-Clone the site locally with Git.
+- Create machine token in Pantheon
+- Add machine token to .ddev/global-config.yaml
+- Using Pantheon Dashboard update Dev database and then create a backup for Dev
+- Add ssh key to ssh keys in Pantheon https://docs.pantheon.io/ssh-keys
+- `cd` into project root folder
+- Using Pantheon Dashboard clone repo i.e. `git clone ssh://codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7@codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7.drush.in:2222/~/repository.git -b master ellisontechnologies`
+- `cd ellisontechnologies`
+- `ddev config`
+- `ddev composer require drush/drush`
+- `colima start --dns 1.1.1.1 --cpu 4 --memory 8`
+- `dev start`
+-  `ddev pull pantheon` this usuall fails so proceed with below to manually import dashboard and files from Dev
+- Using Pantheon Dashboard download backups of files and database from Dev
+- Move database to rootdirectory
+- `ddev import-db --file=ellisontechnologies_dev_2024-02-23T17-54-32_UTC_database.sql.gz`
+- unzip folder and replace all files in `web/sites/default/files`
+- `ddev drush cr`
+- `ddev restart`
+- `ddev launch` to start site in browsery
 
-https://docs.pantheon.io/guides/git/git-config#clone-your-site-codebase
+  Unless you have tons of CPU/Memory, it is recommanded to turn off Docker Desktop.
+  More on colima [here](https://ddev.readthedocs.io/en/latest/users/docker_installation/#macos-installation-colima)
 
-Example:
+@todo implement configs
 
-`git clone ssh://codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7@codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7.drush.in:2222/~/repository.git -b master ellisontechnologies`
-
-You will get ONLY the files used to customize Drupal 10. You will need to now install D10 in order to develop locally.
-
-https://docs.pantheon.io/drupal-from-dist#add-files-and-folders
-
-#### Develop locally using DDEV
-
-Now you can run `composer install`.
-
-It result in getting Core D10 and all the Core modules and what ever else is required by the Composer file.
-
-Your local repo will now look like a complete D10 site. Note that when you push to Pantheon's git repo, you're only pushing the `composer.json` and `composer.lock` plus your custom modules and themes. Every time you push to Pantheon's git, it will run composer.json.
-
-Read the documentation below to set up your local machine. These instructions are specifically for Pantheon and DDEV.
-
-https://ddev.readthedocs.io/en/latest/users/providers/pantheon/
-
-When you `ddev pull pantheon` it should hook up everything. Then `ddev drush cr` and you should be ready to go.
+- `ddev updb -y`
+- `ddev drush cr`
+- `ddev drush cim -y`
+- `ddev drush cr`
 
 ### Configs
 
@@ -147,11 +150,13 @@ Emulsify provides a Storybook component library using Tailwind and a Webpack dev
 
 ### Getting started with the Ellison Theme
 
+`nvm install 20.11.1`
+`nvm use 20.11.1`
 `npm install`
 
-@todo nvm and versions
-
 #### Storybook
+
+@todo
 
 Storybook is a frontend tool that aids in the building UI components for Ellison. To build and view Storybook components,
 
@@ -179,23 +184,21 @@ Then in the theme root folder run this **NPM script** to generate the theme `/di
 
 ## Theme development workflow
 
-Build the Tailwind file (@todo: eventually this should build the `style.css` file in the `/dist/` folder)
+Build the Tailwind file (@todo: eventually this should build the `style.css` file in the `/dist/` folder) and build the theme files needed for `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`
 
-`npx tailwindcss -i ./components/tailwind.css -o ./components/00-base/tailwind/_tailwind.scss`
+Both source and distributed files need to committed.
 
-Build the theme files needed for `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`
+`npm run tailwind`
 
-`npm run build`
+To build the CK editor stysheet
+
+`npm run ckeditor`
 
 Build the production files
 
 `npm run build --production`
 
 @todo add `npm run delevelop`
-
-**To build the CKEditory stylesheet**, it is configured in the `ellison.info` file, and build it when needed.
-
-`npx tailwindcss -i ./components/ckeditor.css -o ./dist/css/ckeditor.css`
 
 ## CSS
 
@@ -284,9 +287,9 @@ This creates: `h1 class="title js-click"`
 
 ## JS
 
-- librareis
-- `npm run build`` to get dist files built
-- scripts are automatically found if they are storied in the appropriate component folders
+- Add scripts via library
+- `npm run tailwind` or `npm run build` to get dist files
+- scripts are automatically found if they are located component folders
 
 ## Theme documentation
 
@@ -297,6 +300,20 @@ This creates: `h1 class="title js-click"`
 [storybook.js.org](https://storybook.js.org/)
 
 [tailwindcss.com](https://tailwindcss.com/)
+
+## Updating `.gitignore`
+
+https://dev.to/jafetmeza/how-to-update-your-gitignore-file-325e
+
+`.gitignore` has been updated
+
+
+It is recommended to rebuild the git cache for ONLY the 
+
+- `git rm -r --cached docroot/themes/custom/onespan/css`
+- `git rm -r --cached docroot/themes/custom/onespan/js`
+- `git rm -r --cached docroot/themes/custom/onespan/dist`
+
 
 ## Content Creation
 
@@ -351,29 +368,18 @@ https://docs.sendgrid.com/for-developers/sending-email/drupal
 
 https://login.sendgrid.com/
 
-- username: `trinetdev3@trinetsolutions.com`
-- two factor code sent to phone number
-
-From email address needs to be `trinetdev3@trinetsolutions.com` in Drupal.
-
-As of Nov 3, 2023, this is the email address that is set up and verified as the from email address in SendGrid. These email addresses need to match for emails to be sent. To change the from email address, first add the address and verify it in SendGrid. Then change the System email address and the SMTP from address in the configuration.
-
-
+@todo document smtp with sendgrid
 
 ## Webforms
 
+## Salesforce Mapping
+
+## Pardot
+
+## Connected App
 
 
-## Salesforce
-
-
-
-### Connected App
-
-@tod0
-
-### SalesForce Module
-
+## SalesForce Module
 
 Using the Salesforce Suite contributed module, you can create a mapping to send webform data to Salesforce.
 
@@ -392,12 +398,10 @@ https://live-ellisontechnologies.pantheonsite.io/admin/content/salesforce
 
 To send data to Call Tracking Metcis add the CTM Handler to your web form. This handler will send the following fields:
 
-- @todo add list
-
 If you need to send other field names, this will require a small code change to add the fields to the CTM handler.
 
 ## Author
 
 Tim Bednar is the initial developer for ellisontechnologies site, theme, and custom modules.
 
-Emulsify&reg; is a product of [Four Kitchens &mdash; We make BIG websites](https://fourkitchens.com).
+Emulsify is a product of [Four Kitchens &mdash; We make BIG websites](https://fourkitchens.com).

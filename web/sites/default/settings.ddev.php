@@ -15,8 +15,8 @@ $databases['default']['default']['database'] = "db";
 $databases['default']['default']['username'] = "db";
 $databases['default']['default']['password'] = "db";
 $databases['default']['default']['host'] = $host;
-$databases['default']['default']['driver'] = $driver;
 $databases['default']['default']['port'] = $port;
+$databases['default']['default']['driver'] = $driver;
 
 $settings['hash_salt'] = '12317d6a7c8c8d1c83c6354f1c058f65e3c2fb75d47fec6c6d9f9ee51e355b3d';
 
