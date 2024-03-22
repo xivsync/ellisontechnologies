@@ -20,7 +20,7 @@
 
 {% set base_class = base_class|default('heading') %}
 
-<h{{ heading__level }} {{ bem(base_class, base__modifiers, base__blockname) }}>
+<h{{ heading__level }} {{ bem(base_class, base__modifiers, base__blockname, block_extras) }}>
   {% if heading_label %}
     <span class="{{ base_class }}__label">{{ heading_label }}</span>
   {% endif %}

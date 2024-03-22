@@ -1,0 +1,38 @@
+
+
+
+{% set base_class = 'page' %}
+
+{% set content__attributes = content_attributes|merge({
+  'class': bem('content', ['search'], base_class, ''),
+}) %}
+
+  {{ form }}
+  
+<article {{ bem(base_class) }}>
+
+  <div class="page-title">
+    {% include "@atoms/text/headings/_heading.twig" with {
+      "heading__level": '1',
+      "heading": search_title,
+      "heading_url": null,
+      "heading_link_attributes": [],
+      "block_extras": 'heading',
+    } %}
+  </div>
+
+  <div {{ add_attributes(content__attributes) }}>
+    {% if no_of_results %}
+      <p>{{ no_of_results }}</p>
+    {% endif %}
+
+    {{ no_results_found }}
+
+    {{ search_help }}
+
+    {{ results }}
+
+    {{ pager }}
+  </div>
+
+</article>
