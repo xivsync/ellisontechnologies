@@ -35,6 +35,8 @@
 @import './03-organisms/slider/glide.core.css';
 @import './03-organisms/slider/glide.theme.css';
 
+@import './05-pages/search/search.css';
+
 @import "tailwindcss/utilities";
 /*@import "./custom-utilities.css";*/
 

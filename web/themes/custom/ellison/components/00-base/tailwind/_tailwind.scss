@@ -6195,10 +6195,6 @@ div[role=alert] {
   .views-field-title {
     font-weight: 700;
   }
-  .views-field-search-api-excerpt {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
-  }
 }
 
 .components {
@@ -7940,6 +7936,53 @@ body.toolbar-horizontal.toolbar-fixed {
   cursor: -webkit-grabbing;
 }
 
+.page__search {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  .page__search--form {
+    display: flex;
+  }
+  .page__search--form {
+    flex-direction: row;
+  }
+  .page__search--form {
+    gap: 2rem;
+  }
+  .page__search--form {
+    form {
+      display: flex;
+    }
+    form {
+      flex-direction: row;
+    }
+    form {
+      gap: 2rem;
+    }
+    @media (min-width: 992px) {
+      input#edit-keys {
+        width: 70vw;
+      }
+    }
+  }
+  .collection__item--result {
+    h2 {
+      margin-bottom: 0px;
+    }
+    h2 {
+      font-weight: 800;
+    }
+    h2 {
+      a {
+        margin-bottom: 0px;
+      }
+      a {
+        font-weight: 800;
+      }
+    }
+  }
+}
+
 .sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -8761,91 +8804,6 @@ body.toolbar-horizontal.toolbar-fixed {
 
 .text-long :last-child {
   margin-bottom: 0;
-}
-
-/* handles search results page without template changes */
-
-.view--search-content {
-  width: 100%;
-}
-
-@media (min-width: 576px) {
-  .view--search-content {
-    max-width: 576px;
-  }
-}
-
-@media (min-width: 768px) {
-  .view--search-content {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 992px) {
-  .view--search-content {
-    max-width: 992px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view--search-content {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .view--search-content {
-    max-width: 1400px;
-  }
-}
-
-.view--search-content {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.full-width-on .view--search-content {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.view--search-content {
-  .views-exposed-form {
-    margin: 0px;
-  }
-  .views-exposed-form {
-    display: flex;
-  }
-  .views-exposed-form {
-    flex-direction: row;
-  }
-  .views-exposed-form {
-    align-items: center;
-  }
-  .views-exposed-form {
-    padding: 0px;
-  }
-  .views-exposed-form {
-    label.form-item__label {
-      display: none;
-    }
-    input.form-text {
-      width: 100%;
-    }
-    @media (min-width: 992px) {
-      input.form-text {
-        width: auto;
-      }
-    }
-    input.form-text {
-      border-radius: 25px;
-    }
-  }
 }
 
 /* handles exposed form on videos page */

@@ -1,38 +1,53 @@
-
-
-
 {% set base_class = 'page' %}
 
 {% set content__attributes = content_attributes|merge({
-  'class': bem('content', ['search'], base_class, ''),
+  'class': bem('content', ['search-results'], base_class, ''),
 }) %}
 
-  {{ form }}
-  
-<article {{ bem(base_class) }}>
+{% set number = no_of_results ? 'Search: ' ~ no_of_results|render|striptags|trim : 'No Search Results'  %}
+
+<article {{ bem('search', ['results'], base_class, 'page') }}>
 
   <div class="page-title">
     {% include "@atoms/text/headings/_heading.twig" with {
       "heading__level": '1',
-      "heading": search_title,
+      "heading": number,
       "heading_url": null,
       "heading_link_attributes": [],
       "block_extras": 'heading',
     } %}
   </div>
 
-  <div {{ add_attributes(content__attributes) }}>
-    {% if no_of_results %}
-      <p>{{ no_of_results }}</p>
-    {% endif %}
-
-    {{ no_results_found }}
-
-    {{ search_help }}
-
-    {{ results }}
-
-    {{ pager }}
+  <div class="page__search--form">
+    {{ form }}
   </div>
+
+  {% if no_results_found %}
+    <div class="page__search--none">{{ no_results_found }}</div>
+  {% endif %}
+
+  <div {{ add_attributes(content__attributes) }}>
+
+    {% embed "@organisms/collection/collection.twig" with {
+      collection_type: 'search-results',
+      collection_label: title,
+      collection_extras: '',
+      collection_results: results | length,
+    } %}
+      {% block collection_content %}
+        {% for result in results %}
+
+{{result}}
+
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+    
+
+
+  </div>
+
+  {{ pager }}
 
 </article>

@@ -179,8 +179,4 @@
     @apply text-2xl font-bold;
   }
 
-  .views-field-search-api-excerpt {
-    @apply text-gray-400;
-  }
-
 }

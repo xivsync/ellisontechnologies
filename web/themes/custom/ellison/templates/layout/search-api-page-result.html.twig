@@ -6,14 +6,18 @@
  * @ingroup themeable
  */
 #}
-{{ title_prefix }}
-<h3{{ title_attributes }}>
-  <a href="{{ url }}">{{ title }}</a> foo
-</h3>
-{{ title_suffix }}
-{% if snippet %}
-  <p{{ content_attributes }}>{{ snippet }}</p>
-{% endif %}
-{% if info %}
-  <p>{{ info }}</p>
-{% endif %}
+
+
+{% embed "@molecules/card/card.twig" with {
+  has_image: false,
+  prose_setting: 'prose',
+  card__heading: title,
+  card__body: snippet ? snippet : info,
+  card__heading__link: url,
+  card__base_class: 'item',
+  card__blockname: 'collection',
+  card__modifiers: ['result'],
+  card__extra_classes: ['display-as-row','item',snippet ? 'snippet' : 'info'],
+} %}
+  {% block card__img %}{% endblock %}
+{% endembed %}

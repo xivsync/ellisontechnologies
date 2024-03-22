@@ -28,30 +28,6 @@ function ellison_preprocess_html(&$variables) {
   }
 }
 
-
-/**
- * Implements hook_form_alter().
- */
-function ellison_form_alter(&$form, &$form_state, $form_id)
-{
-  if ($form_id == 'search_block_form') {
-    /* adds placeholder text to search box */
-    $form['keys']['#attributes']['placeholder'][] = t('Search');
-    $form['actions']['submit']['#value'] = '';
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- *
- */
-function ellison_preprocess_item_list__search_results(&$variables) {
-  
-  // handles problem with local not behaving like dev so manually add a class
-  $variables['attributes']['class'][] = 'new-search-results';
-
-}
-
 function ellison_preprocess_page_title(&$variables)
 {
   

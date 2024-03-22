@@ -1,0 +1,28 @@
+.page__search {
+  @apply flex flex-row gap-8;
+
+
+  .page__search--form {
+    @apply flex flex-row gap-8;
+
+    form {
+      @apply flex flex-row gap-8;
+    }
+
+      input#edit-keys {
+        @apply lg:w-[70vw];
+      }
+  }
+
+  .collection__item--result {
+    h2 {
+      @apply mb-0 font-extrabold;
+
+      a {
+        @apply mb-0 font-extrabold;
+      }
+    }
+  }
+
+
+}

@@ -138,7 +138,7 @@
         </div>
       {% endif %}
 
-      {% if card__link__url %}
+      {% if card__link__url | render %}
         <div class="card__cta card__cta-link  cta-button {{ 'text__align--' ~ cta_align | clean_class }}">
           <div class="cta-button__inner">
             {% include "@atoms/links/link/link.twig" with {

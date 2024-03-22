@@ -1,23 +1,3 @@
-/* handles search results page without template changes */
-.view--search-content {
-  @apply container mx-auto flex flex-col gap-8;
-
-  .views-exposed-form {
-    @apply flex flex-row items-center m-0 p-0;
-
-    label.form-item__label {
-      @apply hidden;
-    }
-
-    input.form-text {
-      @apply w-full lg:w-auto;
-      border-radius: 25px;
-    }
-
-  }
-
-}
-
 /* handles exposed form on videos page */
 .view--videos {
 
