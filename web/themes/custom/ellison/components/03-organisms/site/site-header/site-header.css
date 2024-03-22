@@ -63,7 +63,7 @@ body.toolbar-horizontal.toolbar-fixed {
       }
 
       .form-search {
-        @apply w-[85vw] md:w-[93vw] lg:w-[14rem] h-9 border-none focus:ring-0;
+        @apply w-[85vw] md:w-[93vw] lg:w-[14rem] h-9 border-none focus:ring-0 px-4;
         border-radius: 25px 0px 0px 25px;
       }
 

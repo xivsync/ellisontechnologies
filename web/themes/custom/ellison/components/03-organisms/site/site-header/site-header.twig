@@ -22,7 +22,11 @@
       </nav>
 
       <div class="header__searching">
-        {{ drupal_block('ellison_searchapipagesearchblockform') }}
+        <form action="/search" method="get">
+          <label for="search-keywords">Search</label>
+          <input id="search-keywords" class="form-search" maxlength="128" name="keys" size="20" type="text" value="" />
+          <input class="form-submit" name="search" type="submit" value="" />
+        </form>
       </div>
 
       <div {{ bem('mobi', [], base_class) }}>
