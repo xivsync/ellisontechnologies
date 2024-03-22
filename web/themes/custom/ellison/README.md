@@ -360,15 +360,27 @@ The workflow for promoting a library item and then re-using it is as follows:
 * Now you can go to the next model (or basic page) and add a re-usable library component by searching for the title (see above title)
 * Save page
 
-## SMTP
+## Search
 
-SendGrid is used with the SMPT module under the account with username `trinetdev3@trinetsolutions.com` the password is stored in Keeper.
+Ellison Technologies uses the Search API and Search API Pages to handle search. The core Search module is turned off.
+
+## Email set up
 
 https://docs.sendgrid.com/for-developers/sending-email/drupal
 
 https://login.sendgrid.com/
+Account: trinetdev3@trinetsolutions.com (get password from Trinet)
 
-@todo document smtp with sendgrid
+Ellison IT authenticated it's domain via DNS and uses webcontact@ellisontechnologies.com to send all emails
+
+webcontact@ellisontechnologies.com is the system email.
+
+https://test-ellisontechnologies.pantheonsite.io/admin/config/services/sendgrid
+
+SendGrid API Key Name: EllisonMarch12024
+Drupal Key Name: ellisonmarch12024 (where the SendGrid API Key is saved)
+
+Mail system uses Sendgrid Integration (not SMTP)
 
 ## Webforms
 
