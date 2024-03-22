@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11faad3844e4c20734bc01dbbf2c6701",
+    "content-hash": "405404e5e6ce6040186245739746131d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1707,6 +1707,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/better_exposed_filters",
                 "issues": "https://www.drupal.org/project/issues/better_exposed_filters"
+            }
+        },
+        {
+            "name": "drupal/better_search",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/better_search.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/better_search-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "037019dd884c63fd2a44927fa3eb7a995c290ed9"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1706627306",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "3CWebDev",
+                    "homepage": "https://www.drupal.org/user/61221"
+                },
+                {
+                    "name": "yogeshmpawar",
+                    "homepage": "https://www.drupal.org/user/2922907"
+                }
+            ],
+            "description": "Provides better looking theming for the Drupal search block.",
+            "homepage": "https://www.drupal.org/project/better_search",
+            "support": {
+                "source": "https://git.drupalcode.org/project/better_search"
             }
         },
         {
@@ -5156,6 +5204,51 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/search_api_block",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_block.git",
+                "reference": "1.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_block-1.1.5.zip",
+                "reference": "1.1.5",
+                "shasum": "01ff5df46aa12edb27a4a41c5b2ea6e05e79ce77"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.5",
+                    "datestamp": "1676887207",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "phjou",
+                    "homepage": "https://www.drupal.org/user/3344054"
+                }
+            ],
+            "description": "Provide a search block that can be used when using search API.",
+            "homepage": "https://www.drupal.org/project/search_api_block",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api_block"
             }
         },
         {
