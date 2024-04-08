@@ -1,0 +1,26 @@
+uuid: 3d13aed8-6ff0-4573-ad79-5af20824c2ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_complete_location
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.event
+  module:
+    - text
+id: node.event.field_complete_location
+field_name: field_complete_location
+entity_type: node
+bundle: event
+label: 'Location on users confirmation email'
+description: 'Used as the <strong>complete location on the Users Confirmation Email</strong>.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

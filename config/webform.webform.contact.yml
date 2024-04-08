@@ -145,7 +145,6 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
-    '#required': true
   region__c:
     '#type': hidden
     '#title': region__c
@@ -165,6 +164,7 @@ elements: |-
   builder_interest__c:
     '#type': hidden
     '#title': builder_interest__c
+    '#default_value': 70160000000BureAAC
   webform_name__c:
     '#type': hidden
     '#title': webform_name__c

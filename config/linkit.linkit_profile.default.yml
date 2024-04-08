@@ -17,7 +17,18 @@ matchers:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
       bundles: {  }
       group_by_bundle: false
-      include_unpublished: false
       substitution_type: canonical
+      limit: 100
+      include_unpublished: false
+    weight: 0
+  b323fd04-bcb6-4a8f-a4d3-f541271acc30:
+    id: 'entity:media'
+    uuid: b323fd04-bcb6-4a8f-a4d3-f541271acc30
+    settings:
+      metadata: '[media:field_media_document:entity:name] [media:field_media_document:entity:mime]'
+      bundles:
+        document: document
+      group_by_bundle: false
+      substitution_type: media
       limit: 100
     weight: 0

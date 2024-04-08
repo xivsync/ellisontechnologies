@@ -1,8 +1,8 @@
 _core:
   default_config_hash: rpfRQVoEn2ZWd_lw-iULKPiuina5CqcmzXWlz1OjTwM
 name: 'Ellison Technologies'
-mail: trinetdev3@trinetsolutions.com
-simple_address: false
+mail: webcontact@ellisontechnologies.com
+simple_address: true
 sitestyle: true
 textonly: false
 linkonly: false
@@ -11,4 +11,4 @@ format: basic_html
 preserve_class: false
 advanced:
   incoming: false
-  key: lZB_6p7KIti-VGphOS84s6CrFNdZ3nXlJhWxZshaLlI
+  key: YzkDGKcbI9zazbbal2-Ka0sKS2VpjflFTYLi7BlKstI

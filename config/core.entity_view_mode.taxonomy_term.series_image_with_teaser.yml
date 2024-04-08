@@ -6,5 +6,6 @@ dependencies:
     - taxonomy
 id: taxonomy_term.series_image_with_teaser
 label: 'Series image with teaser'
+description: ''
 targetEntityType: taxonomy_term
 cache: true

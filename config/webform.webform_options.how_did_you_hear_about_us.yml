@@ -8,10 +8,10 @@ category: General
 likert: false
 options: |-
   Website: Website
-  'Email Invitation': Email_Invitation
-  'Direct Mail': Direct_Mail
-  'Ellison Sales Engineer': Ellison_Sales_Engineer
-  'Vendor Partner': Vendor_Partner
-  'Telemarketing Call': Telemarketing_Call
-  'Magazine Advertisement': Magazine_Advertisement
-  'Social Media': Social_Media
+  Email_Invitation: 'Email Invitation'
+  Direct_Mail: 'Direct Mail'
+  Ellison_Sales_Engineer: 'Ellison Sales Engineer'
+  Vendor_Partner: 'Vendor Partner'
+  Telemarketing_Call: 'Telemarketing Call'
+  Magazine_Advertisement: 'Magazine Advertisement'
+  Social_Media: 'Social Media'

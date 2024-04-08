@@ -6,5 +6,6 @@ dependencies:
     - taxonomy
 id: taxonomy_term.model_page_header
 label: 'Series with image and description'
+description: ''
 targetEntityType: taxonomy_term
 cache: true

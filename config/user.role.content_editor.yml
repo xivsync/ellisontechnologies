@@ -33,6 +33,7 @@ dependencies:
     - dropzonejs
     - file
     - filter
+    - help
     - media
     - media_bulk_upload
     - node
@@ -65,6 +66,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access media overview'
   - 'access own webform configuration'
   - 'access shortcuts'

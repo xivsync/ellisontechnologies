@@ -1,9 +1,17 @@
 theme: current
 defaults:
-  sender: SMTPMailSystem
+  sender: sendgrid_integration
   formatter: mime_mail
 modules:
   smtp:
     none:
-      sender: SMTPMailSystem
+      sender: sendgrid_integration
+      formatter: mime_mail
+  webform:
+    none:
+      sender: sendgrid_integration
+      formatter: mime_mail
+  sendgrid_integration:
+    none:
+      sender: sendgrid_integration
       formatter: mime_mail

@@ -6,19 +6,21 @@ dependencies:
     - field.storage.node.field_brand
     - field.storage.node.field_components
     - field.storage.paragraph.field_content
+    - field.storage.paragraph.field_citation
+    - field.storage.paragraph.field_footer
     - field.storage.paragraph.field_header
-    - field.storage.node.field_location
+    - field.storage.paragraph.field_specification
     - field.storage.node.field_product
-    - field.storage.node.field_region
+    - field.storage.taxonomy_term.field_teaser
     - field.storage.node.field_series
     - field.storage.node.field_tags
-    - field.storage.paragraph.field_citation
-    - field.storage.paragraph.field_specification
+    - field.storage.node.body
     - search_api.server.default_server
     - core.entity_view_mode.node.search_index
   module:
     - node
     - user
+    - taxonomy
     - paragraphs
     - search_api
 _core:
@@ -37,6 +39,22 @@ field_settings:
       module:
         - node
         - user
+  body:
+    label: 'Teaser Text'
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  body_1:
+    label: 'Teaser Text'
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
   changed:
     label: Changed
     datasource_id: 'entity:node'
@@ -53,6 +71,47 @@ field_settings:
     dependencies:
       module:
         - node
+  description:
+    label: 'Brand » Taxonomy term » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_brand:entity:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_brand
+      module:
+        - taxonomy
+  description_1:
+    label: 'Product » Taxonomy term » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_product:entity:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_product
+      module:
+        - taxonomy
+  description_2:
+    label: 'Series » Taxonomy term » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_series:entity:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_series
+      module:
+        - taxonomy
+  description_3:
+    label: 'Components » Paragraph » Specification » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_components:entity:field_specification:description'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_components
+        - field.storage.paragraph.field_specification
+      module:
+        - paragraphs
   field_brand:
     label: Brand
     datasource_id: 'entity:node'
@@ -62,13 +121,16 @@ field_settings:
       config:
         - field.storage.node.field_brand
   field_citation:
-    label: Citation
-    datasource_id: 'entity:paragraph'
-    property_path: field_citation
+    label: 'Components » Paragraph » Citation'
+    datasource_id: 'entity:node'
+    property_path: 'field_components:entity:field_citation'
     type: string
     dependencies:
       config:
+        - field.storage.node.field_components
         - field.storage.paragraph.field_citation
+      module:
+        - paragraphs
   field_content:
     label: 'Components » Paragraph » Body'
     datasource_id: 'entity:node'
@@ -80,14 +142,17 @@ field_settings:
         - field.storage.paragraph.field_content
       module:
         - paragraphs
-  field_content_1:
-    label: Body
-    datasource_id: 'entity:paragraph'
-    property_path: field_content
+  field_footer:
+    label: 'Components » Paragraph » Footer Text (option 1)'
+    datasource_id: 'entity:node'
+    property_path: 'field_components:entity:field_footer'
     type: text
     dependencies:
       config:
-        - field.storage.paragraph.field_content
+        - field.storage.node.field_components
+        - field.storage.paragraph.field_footer
+      module:
+        - paragraphs
   field_header:
     label: 'Components » Paragraph » Header'
     datasource_id: 'entity:node'
@@ -99,22 +164,6 @@ field_settings:
         - field.storage.paragraph.field_header
       module:
         - paragraphs
-  field_header_1:
-    label: Header
-    datasource_id: 'entity:paragraph'
-    property_path: field_header
-    type: text
-    dependencies:
-      config:
-        - field.storage.paragraph.field_header
-  field_location:
-    label: 'Location:'
-    datasource_id: 'entity:node'
-    property_path: field_location
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_location
   field_product:
     label: Product
     datasource_id: 'entity:node'
@@ -123,14 +172,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_product
-  field_region:
-    label: Region
-    datasource_id: 'entity:node'
-    property_path: field_region
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_region
   field_series:
     label: Series
     datasource_id: 'entity:node'
@@ -139,14 +180,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_series
-  field_specification:
-    label: Specification
-    datasource_id: 'entity:paragraph'
-    property_path: field_specification
-    type: string
-    dependencies:
-      config:
-        - field.storage.paragraph.field_specification
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
@@ -155,6 +188,69 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
+  field_teaser:
+    label: 'Product » Taxonomy term » Teaser'
+    datasource_id: 'entity:node'
+    property_path: 'field_product:entity:field_teaser'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_product
+        - field.storage.taxonomy_term.field_teaser
+      module:
+        - taxonomy
+  field_teaser_1:
+    label: 'Series » Taxonomy term » Teaser'
+    datasource_id: 'entity:node'
+    property_path: 'field_series:entity:field_teaser'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_series
+        - field.storage.taxonomy_term.field_teaser
+      module:
+        - taxonomy
+  key:
+    label: 'Components » Paragraph » Specification » Key'
+    datasource_id: 'entity:node'
+    property_path: 'field_components:entity:field_specification:key'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_components
+        - field.storage.paragraph.field_specification
+      module:
+        - paragraphs
+  name:
+    label: 'Brand » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_brand:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_brand
+      module:
+        - taxonomy
+  name_1:
+    label: 'Product » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_product:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_product
+      module:
+        - taxonomy
+  name_2:
+    label: 'Series » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_series:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_series
+      module:
+        - taxonomy
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -225,17 +321,6 @@ datasource_settings:
       selected:
         - spec
         - webform
-    languages:
-      default: true
-      selected: {  }
-  'entity:paragraph':
-    bundles:
-      default: true
-      selected:
-        - card
-        - group
-        - slide
-        - text
     languages:
       default: true
       selected: {  }

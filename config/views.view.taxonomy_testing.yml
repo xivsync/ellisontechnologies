@@ -502,7 +502,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_logo'
@@ -522,7 +521,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_logo'

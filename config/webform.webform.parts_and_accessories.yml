@@ -16,7 +16,7 @@ uid: 1
 template: false
 archive: false
 id: parts_and_accessories
-title: 'Parts and Accessories'
+title: 'Order Parts'
 description: '<p>Parts order form for Parts and Accessories.</p>'
 categories: {  }
 elements: |-
@@ -27,6 +27,13 @@ elements: |-
       running: Running
       down: Down
     '#required': true
+  select_location:
+    '#type': select
+    '#title': 'Select Location'
+    '#options':
+      north: 'North TX /  North LA'
+      south: 'South TX / South LA'
+      none: 'Not sure'
   firstname:
     '#type': textfield
     '#title': 'First Name *'
@@ -101,11 +108,10 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
-    '#required': true
   region__c:
     '#type': hidden
     '#title': region__c
-  region:
+  region_name:
     '#type': hidden
     '#title': region
   webformsid__c:
@@ -118,13 +124,14 @@ elements: |-
   webform_email_sign_up__c:
     '#type': hidden
     '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
   builder_interest__c:
     '#type': hidden
     '#title': builder_interest__c
   webform_name__c:
     '#type': hidden
     '#title': webform_name__c
-    '#default_value': 'Parts and Accessories'
+    '#default_value': '[current-page:title]'
   ownerid:
     '#type': hidden
     '#title': ownerid
@@ -135,7 +142,7 @@ elements: |-
   form_name:
     '#type': hidden
     '#title': form_name
-    '#default_value': contact-us
+    '#default_value': '[current-page:title]'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

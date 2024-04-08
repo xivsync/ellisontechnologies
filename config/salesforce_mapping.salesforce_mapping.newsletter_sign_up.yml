@@ -3,8 +3,8 @@ id: newsletter_sign_up
 label: 'Newsletter Sign Up'
 weight: 0
 type: salesforce_mapping
-key: null
-always_upsert: null
+key: ''
+always_upsert: false
 async: false
 push_standalone: false
 pull_standalone: false
@@ -14,6 +14,7 @@ push_frequency: 0
 push_limit: 0
 push_retries: 3
 pull_where_clause: ''
+pull_record_type_filter: {  }
 sync_triggers:
   push_create: true
   push_update: false
@@ -24,11 +25,103 @@ sync_triggers:
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
 drupal_bundle: newsletter_form
-field_mappings: {  }
+field_mappings:
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: email
+    direction: drupal_sf
+    salesforce_field: Email
+    id: 0
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: firstname
+    direction: drupal_sf
+    salesforce_field: FirstName
+    id: 1
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: lastname
+    direction: drupal_sf
+    salesforce_field: LastName
+    id: 2
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: company
+    direction: drupal_sf
+    salesforce_field: Company
+    id: 3
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: title
+    direction: drupal_sf
+    salesforce_field: Title
+    id: 4
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: phone
+    direction: drupal_sf
+    salesforce_field: Phone
+    id: 5
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: postalcode
+    direction: drupal_sf
+    salesforce_field: PostalCode
+    id: 6
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: region__c
+    direction: drupal_sf
+    salesforce_field: Region__c
+    id: 7
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webformsid__c
+    direction: drupal_sf
+    salesforce_field: WebformSID__c
+    id: 8
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_email_sign_up__c
+    direction: drupal_sf
+    salesforce_field: Webform_Email_Sign_Up__c
+    id: 9
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_name__c
+    direction: drupal_sf
+    salesforce_field: Webform_Name__c
+    id: 10
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_campaign_id__c
+    direction: drupal_sf
+    salesforce_field: Webform_Campaign_ID__c
+    id: 11
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leadsource
+    direction: drupal_sf
+    salesforce_field: LeadSource
+    id: 12
+    description: ''
 status: true
 dependencies:
   config:
     - webform.webform.newsletter_form
   module:
     - salesforce_push
+    - salesforce_webform
 uuid: 221cf71f-a26c-4b2b-9784-7be90b35f2cb

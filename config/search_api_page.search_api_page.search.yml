@@ -1,0 +1,33 @@
+uuid: 1f0633d3-1458-47e6-b9b6-6bece299d6de
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_index
+id: search
+label: Search
+path: search
+clean_url: false
+show_all_when_no_keys: false
+index: default_index
+limit: 25
+searched_fields:
+  body: body
+  body_1: body_1
+  description: description
+  description_1: description_1
+  description_2: description_2
+  field_brand: field_brand
+  field_content: field_content
+  field_footer: field_footer
+  field_header: field_header
+  field_series: field_series
+  field_tags: field_tags
+  field_teaser: field_teaser
+  field_teaser_1: field_teaser_1
+  rendered_item: rendered_item
+  title: title
+style: search_results
+view_mode_configuration: {  }
+show_search_form: true
+parse_mode: direct

@@ -29,6 +29,7 @@ third_party_settings:
       children:
         - field_unique_id
         - field_display_style
+        - field_items_per_row
         - field_vertical_align_items
         - field_remove_margins
         - group_group_background_options
@@ -72,7 +73,7 @@ third_party_settings:
       label: 'Group Background Options'
       region: content
       parent_name: group_configurations
-      weight: 26
+      weight: 27
       format_type: details
       format_settings:
         classes: ''
@@ -88,7 +89,7 @@ mode: default
 content:
   field_background_color:
     type: options_select
-    weight: 31
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -102,7 +103,7 @@ content:
     third_party_settings: {  }
   field_diagonal_background:
     type: boolean_checkbox
-    weight: 32
+    weight: 33
     region: content
     settings:
       display_label: true
@@ -116,14 +117,14 @@ content:
     third_party_settings: {  }
   field_enable_back_slash_tilt:
     type: boolean_checkbox
-    weight: 34
+    weight: 35
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_enable_forward_slash_tilt:
     type: boolean_checkbox
-    weight: 33
+    weight: 34
     region: content
     settings:
       display_label: true
@@ -179,13 +180,13 @@ content:
     third_party_settings: {  }
   field_items_per_row:
     type: options_select
-    weight: 35
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   field_remove_margins:
     type: options_select
-    weight: 25
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -199,7 +200,7 @@ content:
     third_party_settings: {  }
   field_vertical_align_items:
     type: options_select
-    weight: 24
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }

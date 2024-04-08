@@ -1,0 +1,140 @@
+uuid: 2aa7b9ee-d013-4f27-ae76-afedb7a6bf22
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.event.body
+    - field.field.node.event.field_code_snippet
+    - field.field.node.event.field_complete_location
+    - field.field.node.event.field_components
+    - field.field.node.event.field_dates_and_times
+    - field.field.node.event.field_internal_email
+    - field.field.node.event.field_leadsource
+    - field.field.node.event.field_location
+    - field.field.node.event.field_metatags
+    - field.field.node.event.field_region
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_webform
+    - field.field.node.event.field_webform_campaign_id__c
+    - field.field.node.event.field_webformsid__c
+    - node.type.event
+  module:
+    - date_augmenter
+    - entity_reference_revisions
+    - smart_date
+    - text
+    - user
+id: node.event.token
+targetEntityType: node
+bundle: event
+mode: token
+content:
+  field_complete_location:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_dates_and_times:
+    type: smartdate_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        start: start
+        end: end
+        duration: '0'
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings:
+      date_augmenter:
+        status:
+          addtocal: '1'
+        weights:
+          order:
+            addtocal:
+              weight: '0'
+        settings:
+          addtocal:
+            label: 'Mark your calendar! '
+            event_title: ''
+            location: ''
+            description: "[node:title]\r\n[node:url]\r\n\r\n[node:field_internal_email:value]"
+            max_desc: ''
+            ellipsis: '1'
+            target: ''
+            past_events: '1'
+            retain_spacing: 0
+        augmenter_settings:
+          fields__field_dates_and_times__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+    weight: 0
+    region: content
+  field_internal_email:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_leadsource:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_webform_campaign_id__c:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_webformsid__c:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  body: true
+  field_code_snippet: true
+  field_location: true
+  field_metatags: true
+  field_tags: true
+  field_webform: true
+  links: true
+  search_api_excerpt: true

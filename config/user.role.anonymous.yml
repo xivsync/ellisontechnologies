@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - media
-    - search
+    - search_api_page
     - sitewide_alert
     - system
 _core:
@@ -15,6 +15,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'search content'
   - 'view media'
   - 'view published sitewide alert entities'
+  - 'view search api pages'

@@ -76,7 +76,7 @@ elements: |-
     '#required': true
   description:
     '#type': textarea
-    '#title': Notes
+    '#title': 'How can we help you?'
     '#required': true
   region__c:
     '#type': hidden
@@ -94,6 +94,7 @@ elements: |-
   webform_email_sign_up__c:
     '#type': hidden
     '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
   builder_interest__c:
     '#type': hidden
     '#title': builder_interest__c

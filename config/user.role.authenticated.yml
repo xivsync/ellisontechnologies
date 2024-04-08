@@ -2,11 +2,14 @@ uuid: 2f1dba1d-ca68-428d-a0eb-ac0d1bc4f5c5
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
     - file
+    - filter
     - google_analytics
     - media
-    - search
+    - search_api_page
     - sitewide_alert
     - system
 _core:
@@ -19,6 +22,7 @@ permissions:
   - 'access content'
   - 'delete own files'
   - 'opt-in or out of google analytics tracking'
-  - 'search content'
+  - 'use text format webform_default'
   - 'view media'
   - 'view published sitewide alert entities'
+  - 'view search api pages'

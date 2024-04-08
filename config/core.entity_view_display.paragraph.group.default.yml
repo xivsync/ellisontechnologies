@@ -74,7 +74,7 @@ content:
     region: content
   field_enable_forward_slash_tilt:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -127,7 +127,7 @@ content:
     region: content
   field_items_per_row:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 14

@@ -1,0 +1,21 @@
+uuid: 2d704d75-a333-45ce-ba4c-5c053865d6db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_email
+    - node.type.event
+id: node.event.field_internal_email
+field_name: field_internal_email
+entity_type: node
+bundle: event
+label: 'Internal Email'
+description: 'The internal email address to send registration information and also is used on the <strong>users confirmation email</strong>.'
+required: true
+translatable: false
+default_value:
+  -
+    value: rsvp@ellisontechnologies.com
+default_value_callback: ''
+settings: {  }
+field_type: string

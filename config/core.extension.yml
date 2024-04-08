@@ -4,6 +4,7 @@ module:
   action: 0
   address: 0
   address_static_map: 0
+  addtocal_augment: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
@@ -17,7 +18,6 @@ module:
   block_field: 0
   breakpoint: 0
   bulk_edit_terms: 0
-  calendar_link: 0
   ckeditor5: 0
   ckeditor_link_styles: 0
   comment: 0
@@ -26,7 +26,7 @@ module:
   contact: 0
   contextual: 0
   csv_importer: 0
-  date_ical: 0
+  date_augmenter: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -93,7 +93,6 @@ module:
   responsive_image: 0
   salesforce: 0
   salesforce_address: 0
-  salesforce_example: 0
   salesforce_jwt: 0
   salesforce_logger: 0
   salesforce_mapping: 0
@@ -103,10 +102,12 @@ module:
   salesforce_push: 0
   salesforce_soap: 0
   salesforce_webform: 0
-  search: 0
   search_api: 0
   search_api_db: 0
   search_api_db_defaults: 0
+  search_api_page: 0
+  sendgrid_integration: 0
+  sendgrid_integration_reports: 0
   shortcut: 0
   simplify_menu: 0
   sitewide_alert: 0
@@ -130,7 +131,9 @@ module:
   views_ui: 0
   webform: 0
   webform_access: 0
+  webform_all_download: 0
   webform_node: 0
+  webform_pardot: 0
   webform_scheduled_email: 0
   webform_ui: 0
   pathauto: 1

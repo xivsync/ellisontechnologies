@@ -32,6 +32,7 @@ elements: |-
     '#options':
       operational: Running
       down: Down
+    '#required': true
   select_location:
     '#type': select
     '#title': 'Select Location'
@@ -59,6 +60,7 @@ elements: |-
   company:
     '#type': textfield
     '#title': Company
+    '#required': true
   title:
     '#type': textfield
     '#title': Title/Position
@@ -102,7 +104,6 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
-    '#required': true
   region_name:
     '#type': hidden
     '#title': region
@@ -112,7 +113,7 @@ elements: |-
   webform_name__c:
     '#type': hidden
     '#title': webform_name__c
-    '#default_value': 'Service and Maintenance'
+    '#default_value': '[current-page:title]'
   webform_campaign_id__c:
     '#type': hidden
     '#title': webform_campaign_id__c
@@ -123,7 +124,8 @@ elements: |-
     '#default_value': Website
   webform_email_sign_up__c:
     '#type': hidden
-    '#title': webformsid__c
+    '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

@@ -50,6 +50,7 @@ elements: |-
     '#title': Company
     '#title_display': invisible
     '#placeholder': Company
+    '#required': true
   select_location:
     '#type': select
     '#title': 'Select Location'
@@ -57,6 +58,7 @@ elements: |-
       north: 'North TX /  North LA'
       south: 'South TX / South LA'
       none: 'Not sure'
+    '#required': true
   manufacturer__c:
     '#type': textfield
     '#title': Manufacturer
@@ -80,7 +82,6 @@ elements: |-
     '#title': 'Additional Notes / Comments'
     '#title_display': invisible
     '#placeholder': 'Additional Notes / Comments'
-    '#required': true
   front_photo:
     '#type': webform_image_file
     '#title': 'Front Photo'
@@ -99,6 +100,7 @@ elements: |-
     '#options':
       not_employee: 'I am not an Ellison Technologies Employee'
       is_employee: 'I am an Ellison Technologies Employee'
+    '#required': true
   region__c:
     '#type': hidden
     '#title': region__c
@@ -118,6 +120,7 @@ elements: |-
   webform_email_sign_up__c:
     '#type': hidden
     '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
   builder_interest__c:
     '#type': hidden
     '#title': builder_interest__c

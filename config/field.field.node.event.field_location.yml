@@ -10,7 +10,7 @@ field_name: field_location
 entity_type: node
 bundle: event
 label: 'Location:'
-description: ''
+description: 'This location appears on event teasers on <a href="/">front page</a> and <a href="/events">event calendar</a>.'
 required: true
 translatable: false
 default_value: {  }

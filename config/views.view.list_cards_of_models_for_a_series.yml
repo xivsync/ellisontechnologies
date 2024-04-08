@@ -595,7 +595,6 @@ display:
             vids:
               products: products
             anyall: ','
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -1085,7 +1084,6 @@ display:
             vids:
               series: series
             anyall: ','
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
