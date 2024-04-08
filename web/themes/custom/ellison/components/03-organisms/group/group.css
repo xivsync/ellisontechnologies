@@ -1,5 +1,9 @@
 .group {
 
+  &__inner {
+    @apply flex flex-col gap-8
+  }
+
   /* handles display items per row */
   &.items-per-row--2 .group__items {
     @apply lg:grid lg:grid-cols-2 gap-4;
@@ -17,10 +21,7 @@
     @apply lg:grid lg:grid-cols-5 gap-4;
   }
 
-  &__inner {
-    @apply flex flex-col gap-8
-  }
-
+  /* handles auto or null */
   &__items {
     @apply flex flex-col lg:flex-row gap-8;
 
@@ -42,6 +43,67 @@
 
     &--count-5 .group__item {
       @apply basis-1/5;
+    }
+
+  }
+
+  /* overwrite flex basis if stack has width */
+  &__items {
+
+    &--count-2 .group__item:has(.width-one-fourth),
+    &--count-3 .group__item:has(.width-one-fourth),
+    &--count-4 .group__item:has(.width-one-fourth),
+    &--count-5 .group__item:has(.width-one-fourth) {
+      @apply basis-1/4;
+    }
+
+    &--count-2 .group__item:has(.width-three-fourths),
+    &--count-3 .group__item:has(.width-three-fourths),
+    &--count-4 .group__item:has(.width-three-fourths),
+    &--count-5 .group__item:has(.width-three-fourths) {
+      @apply basis-3/4;
+    }
+
+    &--count-2 .group__item:has(.width-one-third),
+    &--count-3 .group__item:has(.width-one-third),
+    &--count-4 .group__item:has(.width-one-third),
+    &--count-5 .group__item:has(.width-one-third) {
+      @apply basis-1/3;
+    }
+
+    &--count-2 .group__item:has(.width-two-thirds),
+    &--count-3 .group__item:has(.width-two-thirds),
+    &--count-4 .group__item:has(.width-two-thirds),
+    &--count-5 .group__item:has(.width-two-thirds) {
+      @apply basis-2/3;
+    }
+
+    &--count-2 .group__item:has(.width-one-half),
+    &--count-3 .group__item:has(.width-one-half),
+    &--count-4 .group__item:has(.width-one-half),
+    &--count-5 .group__item:has(.width-one-half) {
+      @apply basis-1/2;
+    }
+
+    &--count-2 .group__item:has(.width-one-fifth),
+    &--count-3 .group__item:has(.width-one-fifth),
+    &--count-4 .group__item:has(.width-one-fifth),
+    &--count-5 .group__item:has(.width-one-fifth) {
+      @apply basis-1/5;
+    }
+
+    &--count-2 .group__item:has(.width-two-fifths),
+    &--count-3 .group__item:has(.width-two-fifths),
+    &--count-4 .group__item:has(.width-two-fifths),
+    &--count-5 .group__item:has(.width-two-fifths) {
+      @apply basis-2/5;
+    }
+
+    &--count-2 .group__item:has(.width-three-fifths),
+    &--count-3 .group__item:has(.width-three-fifths),
+    &--count-4 .group__item:has(.width-three-fifths),
+    &--count-5 .group__item:has(.width-three-fifths) {
+      @apply basis-3/5;
     }
 
   }

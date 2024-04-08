@@ -5,6 +5,7 @@
 %}
 
 {% include "@organisms/stack/stack.html.twig" with {
-  component: content | without('field_stacked_spacing'),
+  component: content | without('field_stacked_spacing','field_width'),
   spacing: content.field_stacked_spacing | render | striptags | trim,
+  width: content.field_width | render | striptags | trim,
 } %}
