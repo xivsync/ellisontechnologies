@@ -6290,6 +6290,15 @@ div[role=alert] {
 }
 
 .group {
+  &__inner {
+    display: flex;
+  }
+  &__inner {
+    flex-direction: column;
+  }
+  &__inner {
+    gap: 2rem;
+  }
   /* handles display items per row */
   &.items-per-row--2 .group__items {
     gap: 1rem;
@@ -6343,15 +6352,7 @@ div[role=alert] {
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
-  &__inner {
-    display: flex;
-  }
-  &__inner {
-    flex-direction: column;
-  }
-  &__inner {
-    gap: 2rem;
-  }
+  /* handles auto or null */
   &__items {
     display: flex;
   }
@@ -6382,6 +6383,34 @@ div[role=alert] {
     &--count-5 .group__item {
       flex-basis: 20%;
     }
+  }
+  /* overwrite flex basis if stack has width */
+  &__items {
+    &--count-2 .group__item:has(.width-one-half) {
+      flex-basis: 50%;
+    }
+    &--count-2 .group__item:has(.width-one-fourth) {
+      flex-basis: 25%;
+    }
+    &--count-2 .group__item:has(.width-three-fourths) {
+      flex-basis: 75%;
+    }
+    &--count-3 .group__item {
+      flex-basis: 33.333333%;
+    }
+    &--count-4 .group__item {
+      flex-basis: 25%;
+    }
+    &--count-5 .group__item {
+      flex-basis: 20%;
+    }
+  }
+  &.group__item:has(.stack) {
+    border-width: 1px;
+  }
+  &.group__item:has(.stack) {
+    --tw-border-opacity: 1;
+    border-color: rgb(239 68 68 / var(--tw-border-opacity));
   }
   &__group {
     @media (min-width: 992px) {
@@ -7954,14 +7983,25 @@ body.toolbar-horizontal.toolbar-fixed {
       display: flex;
     }
     form {
-      flex-direction: row;
+      width: 100%;
+    }
+    form {
+      flex-direction: column;
     }
     form {
       gap: 2rem;
     }
     @media (min-width: 992px) {
+      form {
+        flex-direction: row;
+      }
+    }
+    input#edit-keys {
+      width: 80vw;
+    }
+    @media (min-width: 992px) {
       input#edit-keys {
-        width: 70vw;
+        width: 50vw;
       }
     }
   }
