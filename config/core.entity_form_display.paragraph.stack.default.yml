@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.stack.field_components_to_stack
     - field.field.paragraph.stack.field_stacked_spacing
+    - field.field.paragraph.stack.field_width
     - paragraphs.paragraphs_type.stack
   module:
     - paragraphs
@@ -35,6 +36,12 @@ content:
   field_stacked_spacing:
     type: options_select
     weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_width:
+    type: options_select
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

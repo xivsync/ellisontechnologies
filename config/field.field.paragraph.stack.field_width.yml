@@ -1,0 +1,21 @@
+uuid: a6f9de9d-9550-4a2f-8aab-d389bd663ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_width
+    - paragraphs.paragraphs_type.stack
+  module:
+    - options
+id: paragraph.stack.field_width
+field_name: field_width
+entity_type: paragraph
+bundle: stack
+label: Width
+description: "Adjusts size of column when Number of Columns is set to 'Auto' and the actual number is five or less."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

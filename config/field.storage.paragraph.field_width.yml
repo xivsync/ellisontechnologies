@@ -1,0 +1,42 @@
+uuid: 0d04063d-a6a4-42b3-8d04-e6df913dd2b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_width
+field_name: field_width
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one_half
+      label: 'One Half'
+    -
+      value: one_fourth
+      label: 'One Fourth'
+    -
+      value: one_third
+      label: 'One Third'
+    -
+      value: three_fourths
+      label: 'Three Fourths'
+    -
+      value: one_fifth
+      label: 'One Fifth'
+    -
+      value: two_fifths
+      label: 'Two Fifths'
+    -
+      value: three_fifths
+      label: 'Three Fifths'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

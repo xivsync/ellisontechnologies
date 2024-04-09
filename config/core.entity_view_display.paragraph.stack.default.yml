@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.stack.field_components_to_stack
     - field.field.paragraph.stack.field_stacked_spacing
+    - field.field.paragraph.stack.field_width
     - paragraphs.paragraphs_type.stack
   module:
     - entity_reference_revisions
@@ -29,6 +30,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_width:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true
