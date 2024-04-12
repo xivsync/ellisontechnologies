@@ -64,18 +64,14 @@ Drupal.behaviors.handleWebform = {
         // calculate deduction based on price
         function calculateDeduction(price) {
 
-          if (price < 1220000) {
-            // less than 1220000 return price
-            return price;
-          } else if (price >= 1160000 && price < 3050000) {
-            // between 1220000 and 3050000 return 1220000
-            return 1160000;
-          } else if (price >= 3050000 && price < 4269999) {
-            // between 3050000 and 4269999 return delta
-            return 1160000 - (price - 3050000);
-          } else {
-            // greater than 4269999 return 0
+          if (price > 4269999) {
             return 0;
+          } else if (price > 3050000) {
+            return 1220000 - (price - 3050000);
+          } else if (price < 1220000) {
+            return price;
+          } else {
+            return 1220000; // Handle the case where G29 is exactly 1220000 (optional)
           }
 
         }
@@ -115,7 +111,7 @@ Drupal.behaviors.handleWebform = {
           balanceInput.value = USDollar.format(balance);
 
           // calculate bonus depreciation
-          let bonusDepreciation = balance * 0.8;
+          let bonusDepreciation = balance * 0.6;
           bonusInput.value = USDollar.format(bonusDepreciation);
 
           // calculate standard depreciation
