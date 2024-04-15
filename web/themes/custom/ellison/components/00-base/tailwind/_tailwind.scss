@@ -5251,6 +5251,9 @@ form.webform-submission-tax-calculator-form {
   .form-item__label {
     padding: 0px;
   }
+  input#edit-updated-yearly {
+    font-weight: 700;
+  }
   .form-item__textfield {
     margin: 0px;
   }
@@ -5427,6 +5430,39 @@ form.webform-submission-tax-calculator-form {
     .form-item__textfield {
       border-bottom:1px solid gray;
     }
+  }
+  .form-item--standard-depreciation {
+    display: none;
+  }
+  /* handles assumed tax bracket % */
+  input#edit-assumed-customer-tax-bracket {
+    padding-right: 0px;
+  }
+  input#edit-assumed-customer-tax-bracket {
+    width: 12.666667%;
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    display: flex;
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    align-items: center;
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    border-bottom-width: 1px;
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    padding-right: 1rem;
+  }
+  .form-item--assumed-customer-tax-bracket span.field-suffix {
+    width: 4%;
   }
   /* handles tax calculator bottom row borders */
   .form-item--_0-bonus-depreciation,
