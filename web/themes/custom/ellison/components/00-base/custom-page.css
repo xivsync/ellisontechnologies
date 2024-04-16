@@ -37,6 +37,10 @@
 
 }
 
+.webform-confirmation {
+  @apply container flex flex-col mx-auto xl:px-4;
+}
+
 /* handles top margin for fixed header */
 .layout-container {
   @apply flex flex-col items-stretch overflow-hidden lg:mt-[160px];

@@ -8565,6 +8565,61 @@ body.toolbar-horizontal.toolbar-fixed {
   }
 }
 
+.webform-confirmation {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .webform-confirmation {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .webform-confirmation {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .webform-confirmation {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .webform-confirmation {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .webform-confirmation {
+    max-width: 1400px;
+  }
+}
+
+.webform-confirmation {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width-on .webform-confirmation {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .webform-confirmation {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* handles top margin for fixed header */
 
 .layout-container {
