@@ -4,6 +4,12 @@
 
 .model-listing {
 
+  /* haldes model brand series view */
+  header {
+    @apply text-center font-bold uppercase text-dark-blue pb-8;
+    font-size: 2.5rem;
+  }
+
   /* handles spacing between stacks of blocks */
   .block__items {
     @apply flex flex-col gap-8;
