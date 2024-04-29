@@ -6,6 +6,17 @@ Drupal.behaviors.handleWebform = {
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
 
+    once('handleRegionFormInputs', '.webform-submission-form', context).forEach(
+      function (element) {
+        const inputs = element.elements;
+        if (Object.hasOwn(drupalSettings, "ellison") && Object.hasOwn(inputs,'region__c') ) {
+          const session_region = drupalSettings.ellison.session_region;
+          inputs['region__c'].value = session_region;
+          console.log('region__c',session_region);
+        }
+      }
+    );
+
     once('handleNewsLetterForm', '#group__newsletter a.button-white', context).forEach(
 
       // found webform component
