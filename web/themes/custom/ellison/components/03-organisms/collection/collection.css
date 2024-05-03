@@ -136,6 +136,8 @@
 /* handles event date on frontpage */
 .path-frontpage .collection.collection--teasers.display-as-rows.tagged-content .card.card-event .field {
   display: block;
+  text-align: left;
+  margin: 0px;
 }
 
 /* handles video cards in columns on video page */
