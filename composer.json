@@ -86,7 +86,8 @@
         "drupal/addtocal_augment": "^1.1@beta",
         "drupal/webform_pardot": "^2.0@beta",
         "drupal/sendgrid_integration": "^2.2",
-        "drupal/search_api_page": "^1.0"
+        "drupal/search_api_page": "^1.0",
+        "drupal/views_natural_sort": "^2.0@alpha"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
