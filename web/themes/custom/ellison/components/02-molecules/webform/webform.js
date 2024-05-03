@@ -11,8 +11,9 @@ Drupal.behaviors.handleWebform = {
         const inputs = element.elements;
         if (Object.hasOwn(drupalSettings, "ellison") && Object.hasOwn(inputs,'region__c') ) {
           const session_region = drupalSettings.ellison.session_region;
+          const session_sf_region_id = drupalSettings.ellison.session_sf_region_id;
           inputs['region__c'].value = session_region;
-          console.log('region__c',session_region);
+          console.log(session_region + ' SF Region ID: ',session_sf_region_id);
         }
       }
     );
