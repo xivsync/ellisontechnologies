@@ -3559,6 +3559,11 @@ div.webform {
   .card__body .field-location {
     font-weight: 700 !important;
   }
+  .card__body .field-dates-and-times,
+  .card__body .field-location {
+    --tw-text-opacity: 1 !important;
+    color: rgb(13 96 180 / var(--tw-text-opacity)) !important;
+  }
   .heading {
     display: flex !important;
   }
@@ -3567,12 +3572,6 @@ div.webform {
   }
   .heading {
     gap: 1rem !important;
-  }
-  .heading {
-    a {
-      --tw-text-opacity: 1 !important;
-      color: rgb(30 41 67 / var(--tw-text-opacity)) !important;
-    }
   }
   .heading__label {
     width: 8rem;

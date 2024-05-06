@@ -38,15 +38,11 @@
 
   .card__body .field-dates-and-times,
   .card__body .field-location {
-    @apply gap-4 text-2xl font-bold !important;
+    @apply text-blue gap-4 text-2xl font-bold !important;
   }
 
   .heading {
     @apply flex flex-row gap-4 !important;
-
-    a {
-      @apply text-dark-blue !important;
-    }
   }
 
   .heading__label {
