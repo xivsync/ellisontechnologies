@@ -18,7 +18,35 @@
 
 {{ attach_library('ellison/onpage-navigation') }}
 
+{% set count = items | length %}
+
+{% set items_attribute = create_attribute() %}
+{% set items_classes = [
+    'glide__slides',
+    'slider__items',
+    'slider__items--count-' ~ count,
+    'prose',
+    'max-w-none',
+  ]
+%}
+
+{% set item_attribute = create_attribute() %}
+{% set item_classes = [
+    'glide__slide',
+    'slider__item',
+  ]
+%}
+
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+
+
 {% embed "@organisms/group/group.html.twig" with {
+  title: series_name,
   header: '',
   body: '',
   footer: '',
@@ -30,13 +58,39 @@
   display_style: 'display-as-columns',
   background_tilt: 'tilt-back-slash-off',
   remove_margins: 'remove-mb',
+  visible_items: '3',
   data: '',
 } %}
   {% block group_content %}
-    <div class="group__items group__items--count-{{ rows | length }}">
-      {% for row in rows %}
-        {{ row.content }}
-      {% endfor %}
+    <div class="glide component">
+      <div class="glide__track" data-glide-el="track">
+        <ul{{ items_attribute.addClass(items_classes) }}>
+          {% for row in rows %}
+            <div{{ item_attribute.addClass(item_classes) }}>
+               {{ row.content }}
+            </div>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        {% for row in rows %}
+          <button class="glide__bullet" data-glide-dir="={{ loop.index0 }}"></button>
+        {% endfor %}
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
     </div>
   {% endblock %}
+
+
 {% endembed %}

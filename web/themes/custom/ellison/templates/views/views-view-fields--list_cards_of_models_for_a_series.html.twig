@@ -30,24 +30,30 @@
  */
 #}
 
-{% set has_image_class = fields.field_media_image.content | render ? 'has-image' : 'no-image' %}
+{{ attach_library('ellison/video') }}
 
 {% set has_image = fields.field_media_image.content | render ? true : false %}
+{% set has_image_class = fields.field_media_image.content | render ? 'has-image' : 'no-image' %}
 
-{% embed "@molecules/card/card.twig" with {
+{% embed "@molecules/slide/slide.twig" with {
   has_image: has_image,
   background_color: 'text__bg-color--dark-blue',
-  card__style: 'style-top',
-  card__heading: fields.title.content | render | striptags | trim,
-  card__body: fields.field_carousel_content.content,
-  card__link__url: fields.view_node.content | render | striptags | trim,
-  card__link__content: 'View ' ~ fields.title.content | render | striptags | trim,
-  card__base_class: 'item',
-  card__blockname: 'group',
-  card__modifiers: ['card'],
-  card__extra_classes: ['card','unset-height',has_image_class],
+  slide__style: 'style-top',
+  cta_align: '',
+  cta_button_style: '',
+  slide__heading: fields.title.content | render | striptags | trim,
+  slide__body: fields.field_carousel_content.content,
+  slide__base_class: 'slide',
+  slide__blockname: '',
+  slide__modifiers: [],
+  slide__header: '',
+  slide__body_content: '',
+  slide__footer: '',
+  slide__link__content: 'View ' ~ fields.title.content | render | striptags | trim,
+  slide__link__url: fields.view_node.content | render | striptags | trim,
+  slide__extra_classes: [],
 } %}
-  {% block card__img %}
+  {% block slide__img %}
     {{ fields.field_media_image.content }}
   {% endblock %}
 {% endembed %}

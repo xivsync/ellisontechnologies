@@ -2,6 +2,7 @@
 
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
@@ -192,6 +193,26 @@ function ellison_preprocess_views_view_unformatted(&$variables)
       }
 
     }
+
+  }
+
+  if ($view_id == 'list_cards_of_models_for_a_series' && $view->current_display == 'block_1') {
+
+    $sentance = ['Explore'];
+    $rows = $variables['rows'];
+    foreach($view->result as $id => $row){
+
+      $nid = $row->_entity->id();
+      $node = Node::load($nid);
+      $term = Term::load($node->get('field_series')->target_id);
+      $term_name = $term->getName();
+      if (!in_array($term_name, $sentance)) {
+        array_push($sentance, $term_name);
+      }
+
+    }
+
+    $variables['series_name'] = implode(" ", $sentance);
 
   }
 

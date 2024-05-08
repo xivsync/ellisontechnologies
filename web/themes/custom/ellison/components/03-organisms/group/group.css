@@ -321,11 +321,11 @@
     }
 
     .glide__arrow--left{
-      left: -3rem
+      @apply -left-12
     }
 
     .glide__arrow--right{
-      right: -3rem
+      @apply -right-12
     }
 
     .glide__bullets {
