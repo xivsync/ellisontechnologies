@@ -6729,11 +6729,21 @@ div[role=alert] {
         height: 48px;
       }
     }
-    .glide__arrow--left{
-      left: -3rem
+    .glide__arrow--left {
+      left: -2.5rem;
     }
-    .glide__arrow--right{
-      right: -3rem
+    @media (min-width: 992px) {
+      .glide__arrow--left {
+        left: -3rem;
+      }
+    }
+    .glide__arrow--right {
+      right: -2.5rem;
+    }
+    @media (min-width: 992px) {
+      .glide__arrow--right {
+        right: -3rem;
+      }
     }
     .glide__bullets {
       display: none;

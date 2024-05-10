@@ -198,7 +198,7 @@ function ellison_preprocess_views_view_unformatted(&$variables)
 
   if ($view_id == 'list_cards_of_models_for_a_series' && $view->current_display == 'block_1') {
 
-    $sentance = ['Explore'];
+    $sentance = ['Explore','the'];
     $rows = $variables['rows'];
     foreach($view->result as $id => $row){
 
