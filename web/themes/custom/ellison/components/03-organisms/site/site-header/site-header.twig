@@ -81,12 +81,12 @@
 {% endif %}
 
 {# get slider from paragraph library #}
-{% set front_page_slider_nid = 1545 %}
+{% set front_page_slider_nid = 1563 %}
 {% set has_front_page_slider = drupal_entity('paragraph', front_page_slider_nid)  | render ? true : false %}
 
 {# display frontpage slider if node === '3' (aka frontpage) #}
 {% if has_front_page_slider and enable_slide %}
-  <div class="component">
+  <div class="component" data-entity-paragraph="/paragraphs_edit/paragraphs_library_item/42/paragraphs/{{ front_page_slider_nid }}/edit" data-paragraph="/content/paragraphs/42/edit">
     {{ drupal_entity('paragraph', front_page_slider_nid) }}
   </div>
 {% endif %}
