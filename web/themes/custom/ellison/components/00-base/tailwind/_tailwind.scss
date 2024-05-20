@@ -4895,6 +4895,10 @@ body.unpublished .breadcrumb__items::before {
       padding-top: 2rem;
       padding-bottom: 2rem;
     }
+    .prose li::marker {
+      --tw-text-opacity: 1;
+      color: rgb(31 41 55 / var(--tw-text-opacity));
+    }
   }
 }
 
@@ -8747,7 +8751,7 @@ body.toolbar-horizontal.toolbar-fixed {
   }
   li::marker {
     --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
+    color: rgb(31 41 55 / var(--tw-text-opacity));
   }
   ol {
     list-style-position: outside;

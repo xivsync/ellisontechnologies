@@ -19,7 +19,7 @@
   }
 
   li::marker {
-    @apply text-black;
+    @apply text-gray-800;
   }
 
   ol {

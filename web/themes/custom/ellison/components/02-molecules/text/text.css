@@ -186,6 +186,10 @@
       @apply py-8;
     }
 
+    .prose li::marker {
+      @apply text-gray-800;
+    }
+
   }
   
 }
