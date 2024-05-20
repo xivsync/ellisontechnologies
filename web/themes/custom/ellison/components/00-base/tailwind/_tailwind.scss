@@ -6860,6 +6860,18 @@ div[role=alert] {
   }
 }
 
+/*handles series carousel on model page */
+
+#group__explore-series.group .group__header .prose {
+  width: 100%;
+  h2 {
+    width: 100%;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;

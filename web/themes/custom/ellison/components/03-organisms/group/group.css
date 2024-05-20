@@ -407,3 +407,13 @@
   }
 
  }
+
+/*handles series carousel on model page */
+#group__explore-series.group .group__header .prose {
+  @apply w-full;
+  
+  h2 {
+    @apply text-center w-full;
+  }
+  
+}

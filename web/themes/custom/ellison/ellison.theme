@@ -212,6 +212,8 @@ function ellison_preprocess_views_view_unformatted(&$variables)
 
     }
 
+    array_push($sentance,'Lineup');
+
     $variables['series_name'] = implode(" ", $sentance);
 
   }
