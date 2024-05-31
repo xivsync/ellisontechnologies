@@ -44,3 +44,17 @@
   }
 
 }
+
+/* handle odd model image sizes in model carousel */
+div#group__explore-series {
+
+  picture {
+    @apply bg-white;
+  }
+
+  .image__item img.image {
+    height: 344px;
+    width: auto;
+  }
+
+}

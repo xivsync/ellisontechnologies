@@ -16,7 +16,7 @@ If local development is not ideal, then use SFTP to develop directly on Pantheon
 
 https://docs.pantheon.io/guides/sftp
 
-### How to develop locally using GIT Development mode and DDEV
+### Develop locally using GIT Development mode and DDEV
 
 This assumes you've already setup local development using DDEV (see below).
 
@@ -44,7 +44,7 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 
 Get access to `ellisontechnologies` site from Trinet Solutions. And make sure that **Development Mode is set to Git not SFTP**.
 
-### Visual Code Studio extensions
+### Recommended Visual Code Studio extensions
 
 - Twig and Twig Language 2
 - Prettify
@@ -69,13 +69,13 @@ https://ddev.readthedocs.io/en/latest/users/providers/pantheon/#pantheon-quickst
 - Using Pantheon Dashboard update Dev database and then create a backup for Dev
 - Add ssh key to ssh keys in Pantheon https://docs.pantheon.io/ssh-keys
 - `cd` into project root folder
-- Using Pantheon Dashboard clone repo i.e. `git clone ssh://codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7@codeserver.dev.75e50b27-8f70-47d0-80c7-412596acb0f7.drush.in:2222/~/repository.git -b master ellisontechnologies`
+- Using Pantheon Dashboard clone repo with the command provided by Pantheon
 - `cd ellisontechnologies`
 - `ddev config`
 - `ddev composer require drush/drush`
 - `colima start --dns 1.1.1.1 --cpu 4 --memory 8`
 - `dev start`
--  `ddev pull pantheon` this usuall fails so proceed with below to manually import dashboard and files from Dev
+-  `ddev pull pantheon` **this usually fails** so proceed with below to manually import dashboard and files from Dev
 - Using Pantheon Dashboard download backups of files and database from Dev
 - Move database to rootdirectory
 - `ddev import-db --file=ellisontechnologies_dev_2024-02-23T17-54-32_UTC_database.sql.gz`
@@ -139,7 +139,7 @@ You can now vist that link and login to Dev.
 
 ## Emulsify Drupal Theme
 
-It is based on Emulsify which is an open-source tool for creating design systems with reusable components and clear guidelines for teams.
+**Ellison** is based on Emulsify which is an open-source tool for creating design systems with reusable components and clear guidelines for teams.
 
 Emulsify provides a Storybook component library using Tailwind and a Webpack development environment.
 
@@ -150,9 +150,9 @@ Emulsify provides a Storybook component library using Tailwind and a Webpack dev
 
 ### Getting started with the Ellison Theme
 
-`nvm install 20.11.1`
-`nvm use 20.11.1`
-`npm install`
+- `nvm install 20.11.1`
+- `nvm use 20.11.1`
+- `npm install`
 
 #### Storybook
 
@@ -172,21 +172,17 @@ http://localhost:6006/
 
 #### Tailwind
 
-Tailwind CSS works by scanning the themes Templates and Component folders finding the corresponding styles and then writing them to a static CSS file.
+Tailwind CSS works by scanning themes Templates and Component folders finding the corresponding styles and then writing them to a static CSS file.
 
 `/ellison/components/tailwind/_tailwind.scss`
 
-### Theme development overview
+This is a bit janky. So Tailwind CLI builds the Tailwind SCSS file then the normal Emulsify build commands build everything into the theme `/dist/style.css` file.
 
-To build the `_tailwind.scss file`, in the theme root folder run this **Tailwind CLI** command to generate the css file.
-
-Then in the theme root folder run this **NPM script** to generate the theme `/dist/css/style.css`. This is the file added to the global theme library. It includes Tailwind base (CSS reset), all the Tailwind styles found in Components and Templates, and all the Emulsify styles found also in Components and Templates.
+@todo improve build process
 
 ## Theme development workflow
 
-Build the Tailwind file (@todo: eventually this should build the `style.css` file in the `/dist/` folder) and build the theme files needed for `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`
-
-Both source and distributed files need to committed.
+Build the Tailwind file and build the theme files needed for `/dist/css/` and `/dist/js/` files referenced by `ellison.libraries.yml`. **Both source and distributed files need to committed.**
 
 `npm run tailwind`
 
@@ -201,6 +197,16 @@ Build the production files
 @todo add `npm run delevelop`
 
 ## CSS
+
+### CK Editor Styles
+
+- Add a style to both Basic and Full text editor formats `/admin/config/content/formats`
+- It is best to just add a Tailwind utilitiy like `mb-0`
+- Then make sure the Tailwind selector is added to the list in `tailwind.config.js` so it is added by postcss to your style.css file
+- The same process applies to `Link Styles` which allows you to add buttons or styled links.
+- Note once you add a style remember the class is hardcoded into the content.
+
+`npm run ckeditor` generates the file used by CKeditor.
 
 ### Ellison Breakpoints
 
@@ -222,6 +228,10 @@ These are customized from the default Tailwind breakpoints.
 '2xl': '1400px',
 // => @media (min-width: 1536px) { ... }
 ```
+
+### Responsive images
+
+@todo model images are `1140x842`
 
 ### Layout and Spacing
 
@@ -307,13 +317,11 @@ https://dev.to/jafetmeza/how-to-update-your-gitignore-file-325e
 
 `.gitignore` has been updated
 
-
 It is recommended to rebuild the git cache for ONLY the 
 
 - `git rm -r --cached docroot/themes/custom/onespan/css`
 - `git rm -r --cached docroot/themes/custom/onespan/js`
 - `git rm -r --cached docroot/themes/custom/onespan/dist`
-
 
 ## Content Creation
 
@@ -321,31 +329,22 @@ It is recommended to rebuild the git cache for ONLY the
 
 To avoid using `style="..."` in the Source of a text field, it is recommended to create a style. Styles are simply one or more classes that can be added to block elements using CKEditor.
 
-**For the developer,**
+When creating content **you can select 1 or more styles to a paragraph or heading**.
 
-- Add a style to both Basic and Full text editor formats `/admin/config/content/formats`
-- It is best to just add a Tailwind utilitiy like `mb-0`
-- Then make sure the Tailwind selector is added to the list in `tailwind.config.js` so it is added by postcss to your style.css file
-- The same process applies to `Link Styles` which allows you to add buttons or styled links.
-- Note once you add a style remember the class is hardcoded into the content.
-
-**For the content creator,** when creating content you can select 1 or more styles to a paragraph or heading. Creators should pay attention to NOT repeating the same type of style on an element. For instance, do not apply H2 Larger and H2 Largest or Paragraph Blue and Paragraph Light Blue. Apply 1 color and 1 size and one margin to an element.
+Creators should pay attention to NOT repeating the same type of style on an element. For instance, do not apply H2 Larger and H2 Largest or Paragraph Blue and Paragraph Light Blue. Apply 1 color and 1 size and one margin to an element.
 
 ### Paragraph Library resusable components
 
 If paragraph components are `promoted to library`, then they can be reused elsewhere including directly in Twig templates.
 
-To change a library paragraph is to make a change to all instances.
+- To change a library paragraph is to make a change to all instances.
+- If needed, a Library paragraph can be `unlinked` which then all changes to that component unique.
 
-If needed, a Library paragraph can be `unlinked`. Then changes are isolated to that instance of the paragraph.
+Paragraphs in the library are used in the twig templates and titled **Code Component**. The libarary has many re-used components, so follow this naming convention:
 
-Paragraphs in the library are used in the twig templates and titled **Code Component:**.
-
-The libarary has many re-used components, so follow this naming convention:
-
-* Basic Page Component: a paragraph reused on basic pages.
-* Code Component: a paragraph that is used in Twig templates.
-* Model Component: a paragraph that is used on model pages. All model compents have an ID taken from the legacy site.
+* **Basic Page Component**: a paragraph reused on basic pages
+* **Code Component**: a paragraph that is used in Twig templates by developers
+* **Model Component**: a paragraph that is used on model pages. All model compents have an ID taken from the legacy site
 
 The workflow for promoting a library item and then re-using it is as follows:
 
@@ -355,14 +354,20 @@ The workflow for promoting a library item and then re-using it is as follows:
 * Now on that component you can `promote to library`
 * Save the page
 * Goto Conent > Paragraphs and you should see your component listed with a garbage title
-* Edit component and add a title following the above guidelines
+* **Edit component and add a title following the above guidelines**
 * Save component
 * Now you can go to the next model (or basic page) and add a re-usable library component by searching for the title (see above title)
 * Save page
 
+## Regions
+
+May 20, 2024 regions are only used to populate the `region__c` field found on most webforms.
+
 ## Search
 
-Ellison Technologies uses the Search API and Search API Pages to handle search. The core Search module is turned off.
+Ellison Technologies uses the Search API and Search API Pages to handle search. The core Search module is turned off. The search box in the navigation is a simple form. It does not use a block. The search indexing runs each time the Cron is run. So content is not indexed immediately.
+
+**May 20, 2024** phrases like `"blue house"` look for any match for `blue` and `house`. Phrase indexing is NOT turned on which would only find items that contain the word “blue” immediately followed by the word “house”.  **Why?** Database isze increases by 5x and indexing time by 2x is acceptable for your site.
 
 ## Email set up
 
@@ -375,18 +380,44 @@ Ellison IT authenticated it's domain via DNS and uses webcontact@ellisontechnolo
 
 webcontact@ellisontechnologies.com is the system email.
 
+### Configuration
+
 https://test-ellisontechnologies.pantheonsite.io/admin/config/services/sendgrid
 
-SendGrid API Key Name: EllisonMarch12024
-Drupal Key Name: ellisonmarch12024 (where the SendGrid API Key is saved)
+- SendGrid API Key Name: EllisonMarch12024
+- Drupal Key Name: ellisonmarch12024 (where the SendGrid API Key is saved)
+- Mail system uses Sendgrid Integration (not SMTP) as well as for Formatting HTML
 
-Mail system uses Sendgrid Integration (not SMTP)
+### Troubleshooting
+
+**If emails are not being received**, one potential cause is Ellison blocking. You can audit email sending by logging into Sendgrid > Activity (make sure you click show all activity).
+
+`550 Rejected by header based Anti-Spoofing policy: webcontact@ellisontechnologies.com - https://community.mimecast.com/docs/DOC-1369#550 [aUT_rCR5NlOVu3zyNjaM8g.us516]`
 
 ## Webforms
 
-## Salesforce Mapping
+All forms 
 
-## Pardot
+### Salesforce Mapping
+
+### Pardot
+
+Assigning regions are handled by the **Pardot form handler**. The Drupal Locations webform handler sets both `session` values and `drupalSettings` values. The follow numbers are sent to Salesforce so that Region is properly assigned.
+
+308|(308) Minnesota
+210|(210) Northwest - Oregon
+307|(307) Wisconsin
+320|(320) TriStates - Iowa/NE
+355|(355) Ohio - Cincinnati
+219|(219) Northern California
+218|(218) Southern California
+450|(450) Southeast - Nashville
+304|(304) Illinois
+340|(340) Indiana
+
+@todo how campaigns get assigned
+
+@todo why is processing Pardot slow
 
 ## Connected App
 

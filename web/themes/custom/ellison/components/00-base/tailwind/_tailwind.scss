@@ -4674,6 +4674,22 @@ body.unpublished .breadcrumb__items::before {
       margin-top: 2rem;
     }
   }
+}
+
+/* handle odd model image sizes in model carousel */
+
+div#group__explore-series {
+  picture {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+  .image__item img.image {
+    height: 344px;
+    width: auto;
+  }
+}
+
+.component {
   .text {
     display: flex;
   }
