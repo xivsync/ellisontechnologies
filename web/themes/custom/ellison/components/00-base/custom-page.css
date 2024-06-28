@@ -72,3 +72,11 @@
   }
 
 }
+
+.status--status {
+  @apply bg-transparent !important;
+}
+
+.status__list {
+  @apply flex justify-between;
+}

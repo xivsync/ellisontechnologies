@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c912cb6af252f440cea3d3ac5992a8e",
+    "content-hash": "5ce8e7aea4034a37910a028979a0978d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3607,6 +3607,82 @@
             }
         },
         {
+            "name": "drupal/image_widget_crop",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/image_widget_crop.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/image_widget_crop-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "6fcf4641d730bf1f5afce2a95d58f76094c72d1b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/crop": "^1 || ^2"
+            },
+            "require-dev": {
+                "drupal/bartik": "^1",
+                "drupal/crop": "*",
+                "drupal/ctools": "^3",
+                "drupal/entity_browser": "^2",
+                "drupal/inline_entity_form": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1667435355",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Mallet",
+                    "homepage": "https://github.com/woprrr",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "woprrr",
+                    "homepage": "https://www.drupal.org/user/858604"
+                }
+            ],
+            "description": "Provides an interface for using the features of the Crop API.",
+            "homepage": "https://www.drupal.org/project/image_widget_crop",
+            "keywords": [
+                "Crop",
+                "Drupal",
+                "Drupal Media"
+            ],
+            "support": {
+                "source": "https://www.drupal.org/project/image_widget_crop",
+                "issues": "https://www.drupal.org/project/issues/image_widget_crop",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/jquery_ui",
             "version": "1.6.0",
             "source": {
@@ -6265,6 +6341,74 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/webform_pardot.git",
                 "issues": "https://www.drupal.org/project/issues/webform_pardot"
+            }
+        },
+        {
+            "name": "drupal/workbench",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/workbench.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/workbench-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "bec38d8c333c1b72402f2e66be29838b65235fcd"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1666723245",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "agentrickard",
+                    "homepage": "https://www.drupal.org/user/20975"
+                },
+                {
+                    "name": "bbinkovitz",
+                    "homepage": "https://www.drupal.org/user/161263"
+                },
+                {
+                    "name": "becw",
+                    "homepage": "https://www.drupal.org/user/81067"
+                },
+                {
+                    "name": "caroltron",
+                    "homepage": "https://www.drupal.org/user/171342"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "robeano",
+                    "homepage": "https://www.drupal.org/user/67660"
+                },
+                {
+                    "name": "stevector",
+                    "homepage": "https://www.drupal.org/user/179805"
+                }
+            ],
+            "description": "Provides convenient dashboards and shortcuts for editors.",
+            "homepage": "https://www.drupal.org/project/workbench",
+            "support": {
+                "source": "https://git.drupalcode.org/project/workbench"
             }
         },
         {
