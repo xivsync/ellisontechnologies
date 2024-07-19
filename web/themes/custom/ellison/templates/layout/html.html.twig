@@ -42,6 +42,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1027716373"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-1027716373');
+    </script>
+    <script>
+      window.addEventListener('load',function(){
+          if (window.location.pathname=="/node/6/done" || window.location.pathname=="/node/45/webform/confirmation" ) {
+          gtag('event', 'conversion', {'send_to': 'AW-AW-1027716373/8FK_CITv45YDEJXqhuoD'});
+          }
+      });
+    </script>
+    <script>
+      window.addEventListener('load', function() {
+        if (window.location.pathname == "/thank-you") {
+          gtag('event', 'conversion', {'send_to': 'AW-1027716373/1zXPCIqWsJYDEJXqhuoD'});
+        }
+      })
+
+    </script>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {#
