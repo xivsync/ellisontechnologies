@@ -1,7 +1,7 @@
 langcode: en
 id: build_a_quote
 label: 'Build A Quote'
-weight: 0
+weight: -10
 type: salesforce_mapping
 key: ''
 always_upsert: false
@@ -14,6 +14,7 @@ push_frequency: 0
 push_limit: 0
 push_retries: 3
 pull_where_clause: ''
+pull_record_type_filter: {  }
 sync_triggers:
   push_create: true
   push_update: false

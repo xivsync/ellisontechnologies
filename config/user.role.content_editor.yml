@@ -42,6 +42,8 @@ dependencies:
     - pate
     - path
     - quick_node_clone
+    - redirect
+    - salesforce
     - salesforce_mapping
     - shortcut
     - sitewide_alert
@@ -80,6 +82,8 @@ permissions:
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
+  - 'administer redirects'
+  - 'administer salesforce'
   - 'administer salesforce mapped objects'
   - 'administer salesforce mapping'
   - 'administer shortcuts'
@@ -90,6 +94,7 @@ permissions:
   - 'administer webform element access'
   - 'administer webform submission'
   - 'administer xmlsitemap'
+  - 'authorize salesforce'
   - 'clone article content'
   - 'clone event content'
   - 'clone location content'

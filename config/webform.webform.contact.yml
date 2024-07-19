@@ -4,6 +4,7 @@ status: open
 dependencies:
   module:
     - ellison_webform
+    - webform_pardot
   enforced:
     module:
       - webform
@@ -145,12 +146,10 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
+    '#default_value': true
   region__c:
     '#type': hidden
     '#title': region__c
-  region:
-    '#type': hidden
-    '#title': region
   webformsid__c:
     '#type': hidden
     '#title': webformsid__c
@@ -161,10 +160,10 @@ elements: |-
   webform_email_sign_up__c:
     '#type': hidden
     '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
   builder_interest__c:
     '#type': hidden
     '#title': builder_interest__c
-    '#default_value': 70160000000BureAAC
   webform_name__c:
     '#type': hidden
     '#title': webform_name__c
@@ -180,6 +179,21 @@ elements: |-
     '#type': hidden
     '#title': form_name
     '#default_value': contact-us
+  salesforce_assignment_rule_id:
+    '#type': hidden
+    '#title': salesforce_assignment_rule_id
+    '#default_value': 01Q60000000COGW
+  leadsource:
+    '#type': hidden
+    '#title': leadsource
+    '#default_value': Website
+  leadinterest:
+    '#type': hidden
+    '#title': leadinterest
+  source_page_url:
+    '#type': hidden
+    '#title': source_page_url
+    '#default_value': '[current-page:url:absolute]'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -288,7 +302,7 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
+  confirmation_type: page
   confirmation_url: /thank-you
   confirmation_title: ''
   confirmation_message: '<p>Thank you for contacting Ellison Technologies. One of our team members will contact you regarding your inquiry.</p>'
@@ -377,4 +391,52 @@ handlers:
     conditions: {  }
     weight: 0
     settings: {  }
+  email:
+    id: email
+    handler_id: email
+    label: 'Contact Us Internal Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: cncinfo@ellisontechnologies.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: true
+      exclude_empty_checkbox: 0
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: "NAME of Pardot Handler: D10 - Main Contact Form (Machine Sales Inquiries)\r\n\r\nLink: https://pi.pardot.com/formHandler/read/id/6459\r\n\r\nFunctions: \r\n1. Maps Newsletter opt-in to Salesforce Newsletter campaign\r\n2. Adds region "
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-04-17/5xz4lm'
+      pardot_fields_mapping: ''
 variants: {  }

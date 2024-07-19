@@ -16,9 +16,9 @@ dependencies:
     - taxonomy
     - user
 id: models_series_brand
-label: 'models by series by brand'
+label: 'Model series by product and brand'
 module: views
-description: 'List series with models on products page'
+description: 'List a brand series by product'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -837,7 +837,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "{{ field_brand }} {{ field_series }}\r\n\r\n"
+            value: "{{ field_product }} {{ field_brand }}\r\n\r\n"
             format: basic_html
           tokenize: true
       footer: {  }

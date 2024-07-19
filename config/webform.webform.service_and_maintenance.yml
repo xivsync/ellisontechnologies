@@ -4,6 +4,7 @@ status: open
 dependencies:
   module:
     - ellison_webform
+    - webform_pardot
   enforced:
     module:
       - webform
@@ -104,9 +105,6 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
-  region_name:
-    '#type': hidden
-    '#title': region
   region__c:
     '#type': hidden
     '#title': region__c
@@ -126,6 +124,9 @@ elements: |-
     '#type': hidden
     '#title': webform_email_sign_up__c
     '#default_value': 70160000000BureAAC
+  webformsid__c:
+    '#type': hidden
+    '#title': webformsid__c
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -234,8 +235,8 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
-  confirmation_url: /thank-you
+  confirmation_type: url
+  confirmation_url: /thank-you-service
   confirmation_title: ''
   confirmation_message: '<p>Thank you for your request to schedule service. One of our team members will contact you regarding your service needs.</p>'
   confirmation_attributes: {  }
@@ -323,4 +324,52 @@ handlers:
     conditions: {  }
     weight: 0
     settings: {  }
+  email:
+    id: email
+    handler_id: email
+    label: 'Internal Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: support@ellisontechnologies.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: true
+      exclude_empty_checkbox: 0
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: 'Contact us pardot webform handler'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-04-17/5xz4lm'
+      pardot_fields_mapping: ''
 variants: {  }

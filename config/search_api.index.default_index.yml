@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_brand
+    - field.storage.taxonomy_term.field_teaser
     - field.storage.node.field_components
     - field.storage.paragraph.field_content
     - field.storage.paragraph.field_citation
@@ -11,7 +12,6 @@ dependencies:
     - field.storage.paragraph.field_header
     - field.storage.paragraph.field_specification
     - field.storage.node.field_product
-    - field.storage.taxonomy_term.field_teaser
     - field.storage.node.field_series
     - field.storage.node.field_tags
     - field.storage.node.body
@@ -19,7 +19,6 @@ dependencies:
     - core.entity_view_mode.node.search_index
   module:
     - node
-    - user
     - taxonomy
     - paragraphs
     - search_api
@@ -30,24 +29,7 @@ name: 'Default content index'
 description: 'Default content index created by the Database Search Defaults module'
 read_only: false
 field_settings:
-  author:
-    label: 'Author name'
-    datasource_id: 'entity:node'
-    property_path: 'uid:entity:name'
-    type: string
-    dependencies:
-      module:
-        - node
-        - user
   body:
-    label: 'Teaser Text'
-    datasource_id: 'entity:node'
-    property_path: body
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.body
-  body_1:
     label: 'Teaser Text'
     datasource_id: 'entity:node'
     property_path: body
@@ -76,6 +58,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_brand:entity:description'
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_brand
@@ -86,6 +69,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_product:entity:description'
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_product
@@ -96,6 +80,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_series:entity:description'
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_series
@@ -117,6 +102,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_brand
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_brand
@@ -136,6 +122,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_components:entity:field_content'
     type: text
+    boost: 8.0
     dependencies:
       config:
         - field.storage.node.field_components
@@ -158,6 +145,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_components:entity:field_header'
     type: text
+    boost: 8.0
     dependencies:
       config:
         - field.storage.node.field_components
@@ -168,7 +156,8 @@ field_settings:
     label: Product
     datasource_id: 'entity:node'
     property_path: field_product
-    type: integer
+    type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_product
@@ -177,6 +166,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_series
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_series
@@ -193,6 +183,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_product:entity:field_teaser'
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_product
@@ -204,9 +195,22 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_series:entity:field_teaser'
     type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_series
+        - field.storage.taxonomy_term.field_teaser
+      module:
+        - taxonomy
+  field_teaser_2:
+    label: 'Brand » Taxonomy term » Teaser'
+    datasource_id: 'entity:node'
+    property_path: 'field_brand:entity:field_teaser'
+    type: text
+    boost: 5.0
+    dependencies:
+      config:
+        - field.storage.node.field_brand
         - field.storage.taxonomy_term.field_teaser
       module:
         - taxonomy
@@ -225,7 +229,8 @@ field_settings:
     label: 'Brand » Taxonomy term » Name'
     datasource_id: 'entity:node'
     property_path: 'field_brand:entity:name'
-    type: string
+    type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_brand
@@ -235,7 +240,8 @@ field_settings:
     label: 'Product » Taxonomy term » Name'
     datasource_id: 'entity:node'
     property_path: 'field_product:entity:name'
-    type: string
+    type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_product
@@ -245,7 +251,8 @@ field_settings:
     label: 'Series » Taxonomy term » Name'
     datasource_id: 'entity:node'
     property_path: 'field_series:entity:name'
-    type: string
+    type: text
+    boost: 5.0
     dependencies:
       config:
         - field.storage.node.field_series
@@ -262,6 +269,7 @@ field_settings:
     label: 'Rendered item'
     property_path: rendered_item
     type: text
+    boost: 8.0
     configuration:
       roles:
         - anonymous
@@ -292,7 +300,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: 8.0
+    boost: 13.0
     dependencies:
       module:
         - node

@@ -1,72 +1,90 @@
-uuid: 14e1436f-4596-4fb7-96c5-3c34dbb8e47f
+uuid: 757a06a3-b0d8-4f6c-9e4e-73dcf8bf2164
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - ellison_webform
+    - webform_pardot
 weight: 0
 open: null
 close: null
-uid: 1
+uid: 1713
 template: false
 archive: false
-id: tax_calculator
-title: 'Tax Calculator'
-description: '<p>Tax calculator form. Note: has dependency on webform.js</p>'
+id: training_request
+title: 'Training Request'
+description: ''
 categories: {  }
 elements: |-
-  estimated_machine_price:
-    '#type': number
-    '#title': 'Machine Price'
-    '#description': '<p>PLEASE PLUG-IN THE ESTIMATED MACHINE PRICE HERE</p>'
-  actions:
-    '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': Calculate
-  updated_yearly:
+  company_name:
     '#type': textfield
-    '#title': 'The simple spreadsheet below will demonstrate your potential Tax Savings:'
-    '#disabled': true
-    '#default_value': '2024'
-  emp:
+    '#title': 'Company Name'
+    '#required': true
+  first_name:
     '#type': textfield
-    '#title': 'Estimated Machine Price (EMP)'
-    '#disabled': true
-  section_179_deduction:
+    '#title': 'First Name'
+    '#required': true
+  last_name:
     '#type': textfield
-    '#title': 'Section 179 Deduction'
-    '#disabled': true
-  balance_depreciate_over_seven_years:
+    '#title': 'Last Name'
+    '#required': true
+  title_position:
     '#type': textfield
-    '#title': 'Balance to Depreciate over 7 Years'
-    '#disabled': true
-    '#description': '<p>EMP - Section 179 Deduction</p>'
-  80_bonus_depreciation:
+    '#title': Title/Position
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address'
+    '#required': true
+  business_phone:
+    '#type': tel
+    '#title': 'Business Phone'
+    '#required': true
+  zip_code:
     '#type': textfield
-    '#title': '60% Bonus Depreciation'
-    '#disabled': true
-  standard_depreciation:
+    '#title': 'Zip Code'
+    '#required': true
+  product_type:
+    '#type': radios
+    '#title': Type
+    '#options':
+      Machine: Machine
+      Robotics: Robotics
+    '#required': true
+    '#options__properties': ''
+  best_time_to_reach_you:
     '#type': textfield
-    '#title': 'Standard Depreciation'
-    '#disabled': true
-    '#description': '<p>14.29% Year 1 x (EMP - Section 179 - Bonus depreciation).</p>'
-  total_first_year_tax_deduction:
-    '#type': textfield
-    '#title': 'Total First Year Tax Deduction'
-    '#disabled': true
-    '#description': '<p>179 Deduction + Bonus &amp; Standard Depreciation</p>'
-  assumed_customer_tax_bracket:
-    '#type': textfield
-    '#title': 'Assumed Customer Tax Bracket'
-    '#field_suffix': .0%
-    '#disabled': true
-  tax_savings:
-    '#type': textfield
-    '#title': 'TAX SAVINGS'
-    '#disabled': true
-  approximate_number_of_payments:
-    '#type': textfield
-    '#title': 'Aprox. # of Payments Covered by these Tax Savings'
-    '#description': '<p>Covered by these Tax Savings</p>'
-    '#disabled': true
+    '#title': 'Best time to reach you'
+  comments:
+    '#type': textarea
+    '#title': Comments
+  opt_in:
+    '#type': checkbox
+    '#title': 'I would like to receive occasional emails.'
+    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
+    '#title_display': inline
+  region__c:
+    '#type': hidden
+    '#title': region__c
+  webformsid__c:
+    '#type': hidden
+    '#title': webformsid__c
+  webform_email_sign_up__c:
+    '#type': hidden
+    '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
+  webform_name__c:
+    '#type': hidden
+    '#title': webform_name__c
+    '#default_value': 'Training Request'
+  webform_campaign_id__c:
+    '#type': hidden
+    '#title': webform_campaign_id__c
+    '#default_value': 70160000000Bure
+  leadsource:
+    '#type': hidden
+    '#title': leadsource
+    '#default_value': Website
 css: ''
 javascript: ''
 settings:
@@ -171,10 +189,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: modal
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: '<p>Thank you for your request for training. One of our team members will contact you regarding your training needs.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -250,5 +268,62 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: 'Internal Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: jjernigan@ellisontechnologies.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: support@ellisontechnologies.com
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: true
+      exclude_empty_checkbox: 0
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  push_form_data_to_call_tracking_metrics:
+    id: call_tracking_metrics_handler
+    handler_id: push_form_data_to_call_tracking_metrics
+    label: 'Push form data to Call Tracking Metrics'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: 'new drupal contact us pardot form handler'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-04-17/5xz4lm'
+      pardot_fields_mapping: ''
 variants: {  }

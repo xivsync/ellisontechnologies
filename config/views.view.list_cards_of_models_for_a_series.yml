@@ -10,14 +10,17 @@ dependencies:
     - field.storage.node.field_product
     - field.storage.node.field_region
     - field.storage.node.field_series
+    - image.style.container_640x640
     - node.type.model
     - taxonomy.vocabulary.products
     - taxonomy.vocabulary.series
   module:
+    - media
     - node
     - taxonomy
     - text
     - user
+    - views_natural_sort
 id: list_cards_of_models_for_a_series
 label: 'Carousel of models for a series'
 module: views
@@ -712,20 +715,7 @@ display:
           required: false
       css_class: listing
       group_by: false
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<div class="prose"><h2 class="text-4xl text-cyan">Explore the {{ field_series }}</h2></div>'
-            format: full_html
-          tokenize: true
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -867,9 +857,12 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_view
+          type: media_thumbnail
           settings:
-            view_mode: full
+            image_link: ''
+            image_style: container_640x640
+            image_loading:
+              attribute: lazy
           group_column: target_id
           group_columns: {  }
           group_rows: true

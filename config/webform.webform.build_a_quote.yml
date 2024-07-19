@@ -4,6 +4,7 @@ status: open
 dependencies:
   module:
     - ellison_webform
+    - webform_pardot
 weight: 0
 open: null
 close: null
@@ -288,4 +289,15 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: 'Copied pardot form handler from old site'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.pardot.com/l/37432/2018-04-06/5gh3kp'
+      pardot_fields_mapping: ''
 variants: {  }

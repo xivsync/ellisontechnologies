@@ -21,21 +21,12 @@ dependencies:
     - node.type.event
   module:
     - smart_date
-    - text
     - user
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
-    type: text_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_dates_and_times:
     type: smartdate_default
     label: inline
@@ -68,6 +59,7 @@ content:
     weight: 1
     region: content
 hidden:
+  body: true
   field_code_snippet: true
   field_complete_location: true
   field_components: true

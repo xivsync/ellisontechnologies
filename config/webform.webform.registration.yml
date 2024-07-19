@@ -110,14 +110,9 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
-  region_name:
-    '#type': hidden
-    '#title': Region
-    '#default_value': '[webform_submission:node:field_region]'
   region__c:
     '#type': hidden
-    '#title': 'SF Region'
-    '#default_value': '[webform_submission:node:field_region]'
+    '#title': region__c
   webformsid__c:
     '#type': hidden
     '#title': 'SID Key'
@@ -149,7 +144,7 @@ elements: |-
   dates_and_times:
     '#type': hidden
     '#title': 'Dates and Times'
-    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
+    '#default_value': '2024-07-19'
   referring_page:
     '#type': hidden
     '#title': 'Referring Page'
@@ -268,8 +263,8 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_url: /events/confirmation
-  confirmation_title: 'Thank you for your RSVP!'
-  confirmation_message: '<p class="event__confirmation">You are signed up for <a href="[webform_submission:node:url]">[webform_submission:node:title]</a> on <strong>[webform_submission:node:field_dates_and_times]</strong>.</p>'
+  confirmation_title: 'Thank you'
+  confirmation_message: '<p style="text-align:center;">You are signed up for<strong> [webform_submission:node:title]</strong></p><p style="text-align:center;">[webform_submission:node:field_dates_and_times]</p><p style="text-align:center;">Return to <a href="[webform_submission:node:url]">[webform_submission:node:title]</a></p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -424,11 +419,11 @@ handlers:
     id: pardot_submission
     handler_id: submit_data_to_pardot
     label: 'Submit data to Pardot'
-    notes: 'Event form registration'
+    notes: 'Event form registration copied from old site'
     status: true
     conditions: {  }
     weight: 0
     settings:
       pardot_url: 'https://go.ellisontechnologies.com/l/37432/2023-11-13/5xlhf5'
-      pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region\r\nwebform_campaign_id__c| webform_campaign_id__c\r\nwebform_email_sign_up__c| webform_email_sign_up__c"
+      pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region"
 variants: {  }

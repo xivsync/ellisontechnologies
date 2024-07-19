@@ -21,9 +21,6 @@ settings:
       value: one_third
       label: 'One Third'
     -
-      value: three_fourths
-      label: 'Three Fourths'
-    -
       value: one_fifth
       label: 'One Fifth'
     -
@@ -32,6 +29,9 @@ settings:
     -
       value: three_fifths
       label: 'Three Fifths'
+    -
+      value: three_fourths
+      label: 'Three Fourths'
   allowed_values_function: ''
 module: options
 locked: false

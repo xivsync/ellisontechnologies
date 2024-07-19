@@ -6,12 +6,12 @@ modules:
   smtp:
     none:
       sender: sendgrid_integration
-      formatter: mime_mail
+      formatter: sendgrid_integration
   webform:
     none:
       sender: sendgrid_integration
-      formatter: mime_mail
+      formatter: sendgrid_integration
   sendgrid_integration:
     none:
       sender: sendgrid_integration
-      formatter: mime_mail
+      formatter: sendgrid_integration

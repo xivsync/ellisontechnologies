@@ -1,7 +1,7 @@
 langcode: en
 id: newsletter_sign_up
 label: 'Newsletter Sign Up'
-weight: 0
+weight: -4
 type: salesforce_mapping
 key: ''
 always_upsert: false
@@ -28,37 +28,37 @@ drupal_bundle: newsletter_form
 field_mappings:
   -
     drupal_field_type: WebformElements
+    drupal_field_value: company
+    direction: drupal_sf
+    salesforce_field: Company
+    id: 0
+    description: ''
+  -
+    drupal_field_type: WebformElements
     drupal_field_value: email
     direction: drupal_sf
     salesforce_field: Email
-    id: 0
+    id: 1
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: firstname
     direction: drupal_sf
     salesforce_field: FirstName
-    id: 1
+    id: 2
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: opt_in
+    direction: drupal_sf
+    salesforce_field: Webform_Email_Sign_Up__c
+    id: 3
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: lastname
     direction: drupal_sf
     salesforce_field: LastName
-    id: 2
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: company
-    direction: drupal_sf
-    salesforce_field: Company
-    id: 3
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: title
-    direction: drupal_sf
-    salesforce_field: Title
     id: 4
     description: ''
   -
@@ -70,52 +70,73 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: postalcode
+    drupal_field_value: title
     direction: drupal_sf
-    salesforce_field: PostalCode
+    salesforce_field: Title
     id: 6
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: region__c
+    drupal_field_value: postalcode
     direction: drupal_sf
-    salesforce_field: Region__c
+    salesforce_field: PostalCode
     id: 7
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: webformsid__c
-    direction: drupal_sf
-    salesforce_field: WebformSID__c
-    id: 8
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: webform_email_sign_up__c
-    direction: drupal_sf
-    salesforce_field: Webform_Email_Sign_Up__c
-    id: 9
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: webform_name__c
     direction: drupal_sf
     salesforce_field: Webform_Name__c
-    id: 10
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: webform_campaign_id__c
-    direction: drupal_sf
-    salesforce_field: Webform_Campaign_ID__c
-    id: 11
+    id: 8
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: leadsource
     direction: drupal_sf
     salesforce_field: LeadSource
+    id: 9
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: ownerid
+    direction: drupal_sf
+    salesforce_field: OwnerId
+    id: 10
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: region__c
+    direction: drupal_sf
+    salesforce_field: Region__c
+    id: 11
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: source_page_url
+    direction: drupal_sf
+    salesforce_field: Source_Page_URL__c
     id: 12
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_campaign_id__c
+    direction: drupal_sf
+    salesforce_field: Webform_Campaign_ID__c
+    id: 13
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_email_sign_up__c
+    direction: drupal_sf
+    salesforce_field: Webform_Email_Sign_Up__c
+    id: 14
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webformsid__c
+    direction: drupal_sf
+    salesforce_field: WebformSID__c
+    id: 15
     description: ''
 status: true
 dependencies:
@@ -124,4 +145,4 @@ dependencies:
   module:
     - salesforce_push
     - salesforce_webform
-uuid: 221cf71f-a26c-4b2b-9784-7be90b35f2cb
+uuid: f7af6db2-7e0d-4c9d-89de-963df03908fe

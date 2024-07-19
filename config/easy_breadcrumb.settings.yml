@@ -4,7 +4,7 @@ applies_admin_routes: false
 include_invalid_paths: true
 excluded_paths: ''
 replaced_titles: ''
-custom_paths: ''
+custom_paths: "regex!/products/([^/]*)/([^/]*) :: Products | /technologies :: $1 | /products/$1 :: $2\r\n/node/45/webform/confirmation :: MACHINE SALES INQUIRES | /about-ellison/contact-us/machine-sales-inquires\r\n/node/11/webform/confirmation :: TRADE-IN | /tradein\r\n/form/contact/confirmation :: MACHINE SALES INQUIRES | /about-ellison/contact-us/machine-sales-inquires"
 include_home_segment: true
 alternative_title_field: field_breadcrumb_title
 home_segment_title: Home
@@ -41,5 +41,5 @@ segment_display_limit: 1
 truncator_mode: false
 truncator_length: 100
 truncator_dots: true
-remove_repeated_segments_text_only: false
+remove_repeated_segments_text_only: true
 home_segment_validation_skip: false

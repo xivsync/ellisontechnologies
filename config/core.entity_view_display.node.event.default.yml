@@ -19,9 +19,7 @@ dependencies:
     - field.field.node.event.field_webformsid__c
     - node.type.event
   module:
-    - date_augmenter
     - entity_reference_revisions
-    - smart_date
     - text
     - user
 id: node.event.default
@@ -34,7 +32,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   field_components:
     type: entity_reference_revisions_entity_view
@@ -43,49 +41,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_dates_and_times:
-    type: smartdate_default
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: medium
-      format: default
-      force_chronological: false
-      add_classes: false
-      time_wrapper: true
-      localize: false
-      parts:
-        start: start
-        end: end
-        duration: '0'
-      duration:
-        separator: ' | '
-        unit: ''
-        decimals: 2
-        suffix: h
-    third_party_settings:
-      date_augmenter:
-        status:
-          addtocal: '1'
-        weights:
-          order:
-            addtocal:
-              weight: '0'
-        settings:
-          addtocal:
-            label: 'Mark Your Calendar!'
-            event_title: ''
-            location: ''
-            description: "[node:title]\r\n[node:url]\r\n\r\n[node:field_internal_email:value]"
-            retain_spacing: '1'
-            max_desc: ''
-            ellipsis: '1'
-            target: ''
-            past_events: '1'
-        augmenter_settings:
-          fields__field_dates_and_times__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
     weight: 0
     region: content
   field_internal_email:
@@ -94,7 +49,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_leadsource:
     type: string
@@ -102,7 +57,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_region:
     type: entity_reference_label
@@ -110,7 +65,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_webform_campaign_id__c:
     type: string
@@ -118,7 +73,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_webformsid__c:
     type: string
@@ -126,11 +81,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
 hidden:
   body: true
   field_code_snippet: true
+  field_dates_and_times: true
   field_location: true
   field_metatags: true
   field_tags: true

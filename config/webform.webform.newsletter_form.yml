@@ -2,6 +2,8 @@ uuid: 98f12d2f-88f2-4512-8428-4024e0362c6e
 langcode: en
 status: open
 dependencies:
+  module:
+    - webform_pardot
   enforced:
     module:
       - webform
@@ -23,14 +25,13 @@ elements: |-
     '#title': 'I would like to receive occasional emails.'
     '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
     '#title_display': inline
-    '#required': true
+    '#default_value': true
   email:
     '#title': 'Email Address'
     '#type': email
     '#title_display': invisible
     '#placeholder': 'Email Address'
     '#required': true
-    '#default_value': '[current-user:mail]'
   firstname:
     '#type': textfield
     '#title': 'First Name'
@@ -69,9 +70,6 @@ elements: |-
   region__c:
     '#type': hidden
     '#title': region__c
-  region:
-    '#type': hidden
-    '#title': region
   webformsid__c:
     '#type': hidden
     '#title': webformsid__c
@@ -103,8 +101,12 @@ elements: |-
     '#default_value': contact-us
   salesforce_assignment_rule_id:
     '#type': hidden
-    '#title': 'salesforce assignment rule id'
+    '#title': salesforce_assignment_rule_id
     '#default_value': 01Q60000000COGW
+  source_page_url:
+    '#type': hidden
+    '#title': source_page_url
+    '#default_value': '[current-page:url]'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -112,10 +114,10 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: true
+  ajax: false
   ajax_scroll_top: form
-  ajax_progress_type: fullscreen
-  ajax_effect: fade
+  ajax_progress_type: ''
+  ajax_effect: ''
   ajax_speed: null
   page: true
   page_submit_path: ''
@@ -341,7 +343,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: '[site:mail]'
+      to_mail: rsvp@ellisontechnologies.com
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
@@ -367,4 +369,15 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: 'copied from old site'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2023-11-13/5xlhf5'
+      pardot_fields_mapping: ''
 variants: {  }
