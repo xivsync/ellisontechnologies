@@ -8759,6 +8759,15 @@ body.toolbar-horizontal.toolbar-fixed {
   }
 }
 
+.status--status {
+  background-color: transparent !important;
+}
+
+.status__list {
+  display: flex;
+  justify-content: center;
+}
+
 .prose {
   h1,h2,h3,h4,h5,h6 {
     margin-top: 0 !important;
