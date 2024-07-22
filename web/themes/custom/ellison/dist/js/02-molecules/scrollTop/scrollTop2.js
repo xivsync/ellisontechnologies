@@ -1,0 +1,1 @@
+Drupal.behaviors.scrolltop={attach:function(o){once("scrolltop","body",o).forEach((function(e){o=o||document,console.log("loaded");var t=document.createElement("div");console.log("button loaded"),e.appendChild(t),console.log("button added");var l=document.createElement("button");t.append(l),l.className="topScroll",console.log("button added 2")}))}};
