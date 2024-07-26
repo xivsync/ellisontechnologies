@@ -11,7 +11,7 @@ id: paragraph.text.field_animate
 field_name: field_animate
 entity_type: paragraph
 bundle: text
-label: animate
+label: Animate
 description: ''
 required: false
 translatable: false

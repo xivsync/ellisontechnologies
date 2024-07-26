@@ -89,7 +89,8 @@
         "drupal/search_api_page": "^1.0",
         "drupal/views_natural_sort": "^2.0@alpha",
         "drupal/workbench": "^1.4",
-        "drupal/image_widget_crop": "^2.4"
+        "drupal/image_widget_crop": "^2.4",
+        "drupal/config_direct_save": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
