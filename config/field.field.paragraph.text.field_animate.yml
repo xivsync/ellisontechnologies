@@ -1,0 +1,21 @@
+uuid: e298e0e7-f851-408a-96fc-3d966871f15a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_animate
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+id: paragraph.text.field_animate
+field_name: field_animate
+entity_type: paragraph
+bundle: text
+label: animate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
