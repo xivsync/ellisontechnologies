@@ -52,7 +52,7 @@ site-footer:
 site-header:
   js:
     components/03-organisms/site/site-header/site-header.js: {}
-    components/02-molecules/scrollTop/scrollTop.js: {}
+    components/02-molecules/scroll-top/scroll-top.js: {}
 slider:
   js:
     https://cdn.jsdelivr.net/npm/@glidejs/glide: {}

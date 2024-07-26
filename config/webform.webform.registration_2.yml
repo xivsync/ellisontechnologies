@@ -1,4 +1,4 @@
-uuid: 9510ef74-0b98-4b15-884a-10e9ab6fb771
+uuid: dbde4f46-bbaa-453d-a722-2441c8fd81b4
 langcode: en
 status: open
 dependencies:
@@ -10,8 +10,8 @@ close: null
 uid: 1
 template: false
 archive: false
-id: registration
-title: Registration
+id: registration_2
+title: 'Registration 2'
 description: '<p>Add a registration form to your event.</p>'
 categories: {  }
 elements: |-
@@ -263,8 +263,8 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_url: /events/confirmation
-  confirmation_title: 'Thank you for your RSVP!'
-  confirmation_message: '<p class="event__confirmation">You are signed up for <a href="[webform_submission:node:url]">[webform_submission:node:title]</a> on <strong>[webform_submission:node:field_dates_and_times]</strong>.</p>'
+  confirmation_title: 'Thank you'
+  confirmation_message: '<p style="text-align:center;">You are signed up for<strong> [webform_submission:node:title]</strong></p><p style="text-align:center;">[webform_submission:node:field_dates_and_times]</p><p style="text-align:center;">Return to <a href="[webform_submission:node:url]">[webform_submission:node:title]</a></p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -424,6 +424,6 @@ handlers:
     conditions: {  }
     weight: 0
     settings:
-      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-05-14/5y2fwg'
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-05-28/5y3mc8'
       pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region"
 variants: {  }

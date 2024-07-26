@@ -1,14 +1,14 @@
 (function ($, Drupal) {
-Drupal.behaviors.scrolltop = {
+Drupal.behaviors.scrollTop = {
     attach: function(context, settings) {
-        once('scrolltop', 'body', context).forEach(function(element) {
+        once('scrollTop', 'body', context).forEach(function(element) {
             console.log('loaded');
             $(window).on('load',function() {
                 // if("#topScroll") {
                 //     $("#topScroll").remove();
                 //     console.log('Removed');
                 // }
-                $('body').append('<div id="topScroll" style="position: fixed; z-index: 999; right:5vw; bottom:10vh;"><button class="button" type="submit" style="border: none; border-radius: 25%; background:none; margin-right: 25px; margin-bottom: 25px; cursor: pointer;"><img style="margin-right: 55px; bottom: 55px;"; src="themes/custom/ellison/images/scrollTopIcon.png"></div>');
+                $('body').append('<div id="topScroll"><button class="button" type="submit"><img src="/themes/custom/ellison/images/icons/gototop.png"></div>');
                 // if('#topScroll') {
                 //     console.log("Button Added");
                 // }

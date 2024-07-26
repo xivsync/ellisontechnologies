@@ -10,10 +10,19 @@ Drupal.behaviors.handleWebform = {
       function (element) {
         const inputs = element.elements;
         if (Object.hasOwn(drupalSettings, "ellison") && Object.hasOwn(inputs,'region__c') ) {
-          const session_region = drupalSettings.ellison.session_region;
+          // Handles setting region correctly in Saleforce
           const session_sf_region_id = drupalSettings.ellison.session_sf_region_id;
           inputs['region__c'].value = session_sf_region_id;
-          console.log(session_region + ' SF Region ID: ',session_sf_region_id);
+        }
+        // Handles converting timestamp to Salesforce date for Showdate1
+        if (Object.hasOwn(inputs,'dates_and_times')) {
+          const timestamp = Number(inputs['dates_and_times'].value);
+          const date = new Date(timestamp * 1000); // JavaScript timestamps are in seconds
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is zero-indexed
+          const day = String(date.getDate()).padStart(2, '0');
+          const formattedDate = `${year}-${month}-${day}`;
+          inputs['dates_and_times'].value = formattedDate;
         }
       }
     );
