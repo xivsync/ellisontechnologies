@@ -144,7 +144,7 @@ elements: |-
   dates_and_times:
     '#type': hidden
     '#title': 'Dates and Times'
-    '#default_value': '2024-07-19'
+    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
   referring_page:
     '#type': hidden
     '#title': 'Referring Page'
@@ -263,8 +263,8 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_url: /events/confirmation
-  confirmation_title: 'Thank you'
-  confirmation_message: '<p style="text-align:center;">You are signed up for<strong> [webform_submission:node:title]</strong></p><p style="text-align:center;">[webform_submission:node:field_dates_and_times]</p><p style="text-align:center;">Return to <a href="[webform_submission:node:url]">[webform_submission:node:title]</a></p>'
+  confirmation_title: 'Thank you for your RSVP!'
+  confirmation_message: '<p class="event__confirmation">You are signed up for <a href="[webform_submission:node:url]">[webform_submission:node:title]</a> on <strong>[webform_submission:node:field_dates_and_times]</strong>.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
