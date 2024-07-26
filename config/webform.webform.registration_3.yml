@@ -1,4 +1,4 @@
-uuid: 9510ef74-0b98-4b15-884a-10e9ab6fb771
+uuid: cd412618-e3db-48f8-976f-7b17d99ce8e3
 langcode: en
 status: open
 dependencies:
@@ -10,8 +10,8 @@ close: null
 uid: 1
 template: false
 archive: false
-id: registration
-title: Registration
+id: registration_3
+title: 'Registration 3'
 description: '<p>Add a registration form to your event.</p>'
 categories: {  }
 elements: |-
@@ -424,6 +424,6 @@ handlers:
     conditions: {  }
     weight: 0
     settings:
-      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-05-14/5y2fwg'
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-07-22/5y82km'
       pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region"
 variants: {  }
