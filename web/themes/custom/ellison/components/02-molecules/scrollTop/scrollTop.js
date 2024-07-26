@@ -8,7 +8,7 @@ Drupal.behaviors.scrolltop = {
                 //     $("#topScroll").remove();
                 //     console.log('Removed');
                 // }
-                $('body').append('<div id="topScroll" style="position: fixed; z-index: 999; right:5vw; bottom:10vh;"><button class="button" type="submit" style="border: none; border-radius: 25%; background:none; margin-right: 25px; margin-bottom: 25px; cursor: pointer;"><img style="margin-right: 55px; bottom: 55px;"; src="themes/custom/ellison/images/scrollTopIcon.png"></div>');
+                $('body').append('<div id="topScroll" style="position: fixed; z-index: 999; right:5vw; bottom:10vh;"><button class="button" type="submit" style="border: none; border-radius: 25%; background:none; margin-right: 25px; margin-bottom: 25px; cursor: pointer;"><img style="margin-right: 55px; bottom: 55px;"; src="themes/custom/ellison/images/icon/gototop.png"></div>');
                 // if('#topScroll') {
                 //     console.log("Button Added");
                 // }
