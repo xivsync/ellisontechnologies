@@ -4562,6 +4562,41 @@ body.unpublished .breadcrumb__items::before {
   }
 }
 
+#topScroll {
+  position: fixed;
+  right: 5vw;
+  bottom: 10vh;
+  z-index: 50;
+  button.button {
+    cursor: pointer;
+  }
+  button.button {
+    border-style: none;
+  }
+  button.button {
+    border-right-color: 25%;
+  }
+  button.button {
+    background-image: none;
+  }
+  img {
+    height: 27px;
+  }
+  img {
+    width: 27px;
+  }
+  @media (min-width: 992px) {
+    img {
+      height: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .spec_type:last-child {
   border-bottom-width: 2px;
   --tw-border-opacity: 1;

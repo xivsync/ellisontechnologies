@@ -1,0 +1,11 @@
+#topScroll {
+  @apply fixed z-50 right-[5vw] bottom-[10vh];
+
+  button.button {
+    @apply bg-none border-none cursor-pointer border-r-[25%];
+  }
+
+  img {
+    @apply w-[27px] lg:w-full h-[27px] lg:h-full;
+  }
+}

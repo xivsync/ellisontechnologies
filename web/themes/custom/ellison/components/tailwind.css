@@ -20,6 +20,7 @@
 @import './02-molecules/model-listing/model-listing.css';
 @import './02-molecules/on-page-navigation/on-page-navigation.css';
 @import './02-molecules/quote/quote.css';
+@import './02-molecules/scroll-top/scroll-top.css';
 @import './02-molecules/spec/spec.css';
 @import './02-molecules/slide/slide.css';
 @import './02-molecules/text/text.css';
