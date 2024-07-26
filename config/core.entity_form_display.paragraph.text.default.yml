@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_align_text
+    - field.field.paragraph.text.field_animate
     - field.field.paragraph.text.field_background_color
     - field.field.paragraph.text.field_content
     - paragraphs.paragraphs_type.text
@@ -17,6 +18,12 @@ content:
   field_align_text:
     type: options_select
     weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_animate:
+    type: options_select
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

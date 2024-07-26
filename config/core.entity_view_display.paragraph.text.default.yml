@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_align_text
+    - field.field.paragraph.text.field_animate
     - field.field.paragraph.text.field_background_color
     - field.field.paragraph.text.field_content
     - paragraphs.paragraphs_type.text
@@ -22,6 +23,13 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_animate:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_background_color:
     type: list_key
     label: hidden
@@ -36,4 +44,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
