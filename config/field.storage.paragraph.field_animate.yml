@@ -13,10 +13,19 @@ settings:
   allowed_values:
     -
       value: animate__slideInLeft
-      label: animate__slideInLeft
+      label: slideInLeft
     -
-      value: animate__slideinright
-      label: animate__slideInRight
+      value: slideinright
+      label: slideInRight
+    -
+      value: bounceinleft
+      label: bounceInLeft
+    -
+      value: slideinup
+      label: slideInUp
+    -
+      value: pulse
+      label: pulse
   allowed_values_function: ''
 module: options
 locked: false
