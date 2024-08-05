@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.text.field_align_text
     - field.field.paragraph.text.field_animate
+    - field.field.paragraph.text.field_animate_activation
     - field.field.paragraph.text.field_background_color
     - field.field.paragraph.text.field_content
     - paragraphs.paragraphs_type.text
@@ -24,6 +25,12 @@ content:
   field_animate:
     type: options_select
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_animate_activation:
+    type: options_select
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

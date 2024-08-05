@@ -1,0 +1,24 @@
+uuid: fc41be6d-fccf-4931-b282-a1d62b1890de
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_animate_activation
+field_name: field_animate_activation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: animate__active
+      label: Active
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
