@@ -22,8 +22,8 @@
     background_class,
     background_class | render | striptags | trim ? 'has-bg-color' : 'no-bg-color',
     align_class,
-    animate_class | render | striptags | trim ? 'animate__animated' : null,
     animate_class, 
+    animate_activation_class,
   ]
 %}
 
@@ -34,4 +34,33 @@
       {{ body }}
     </div>
   </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.animate__active');
+
+    const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.classList.contains('slideinright')) {
+                entry.target.classList.add('animate__animated', 'animate__slideInLeft', 'in-viewport');
+            }  else if (entry.isIntersecting && entry.target.classList.contains('bounceinleft')) {
+                entry.target.classList.add('animate__animated', 'animate__bounceInLeft', 'in-viewport');
+            } else if (entry.isIntersecting && entry.target.classList.contains('slideinup')) {
+                entry.target.classList.add('animate__animated', 'animate__slideInUp', 'in-viewport');
+            } else if (entry.isIntersecting && entry.target.classList.contains('pulse')) {
+                entry.target.classList.add('animate__animated', 'animate__pulse', 'in-viewport');
+            } 
+        });
+    }, observerOptions);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+</script>
 </div>
