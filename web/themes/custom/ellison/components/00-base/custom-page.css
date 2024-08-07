@@ -73,10 +73,14 @@
 
 }
 
-.status--status {
+.status__list {
+  @apply flex justify-center;
+}
+
+body.title-thank-you-for-registering--ellison-technologies .main {
   @apply bg-[#46b6e3] !important;
 }
 
-.status__list {
-  @apply flex justify-center;
+body.title-thank-you-for-registering--ellison-technologies .breadcrumb__item::after {
+  color:white;
 }
