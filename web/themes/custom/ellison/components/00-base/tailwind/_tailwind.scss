@@ -8794,6 +8794,11 @@ body.toolbar-horizontal.toolbar-fixed {
   }
 }
 
+.status--status {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(70 182 227 / var(--tw-bg-opacity)) !important;
+}
+
 .status__list {
   display: flex;
   justify-content: center;

@@ -73,6 +73,10 @@
 
 }
 
+.status--status {
+  @apply bg-[#46b6e3] !important;
+}
+
 .status__list {
   @apply flex justify-center;
 }
