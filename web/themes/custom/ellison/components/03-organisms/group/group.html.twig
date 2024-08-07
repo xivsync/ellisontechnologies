@@ -44,7 +44,7 @@
     background_tilt | clean_class,
     remove_margins | clean_class,
     visible_items ? 'slider-on' : 'slider-off',
-    items_per_row_class
+    items_per_row_class,
   ]
 %}
 
@@ -68,6 +68,8 @@
     base_class ~ '__group',
     vertical_align_items | clean_class,
     add_container_class,
+    animate_class,
+    animate_activation_class,
   ]
 %}
 
@@ -77,6 +79,8 @@
   set header_wrapping_classes = [
     'group__header',
     add_container_class,
+    animate_class,
+    animate_activation_class,
   ]
 %}
 
@@ -84,6 +88,8 @@
   set body_wrapping_classes = [
     'group__body',
     add_container_class,
+    animate_class,
+    animate_activation_class,
   ]
 %}
 
@@ -91,6 +97,8 @@
   set footer_wrapping_classes = [
     'group__footer',
     add_container_class,
+    animate_class,
+    animate_activation_class,
   ]
 %}
 
@@ -131,4 +139,33 @@
       </div>
     {% endif %}
   </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.group_animate_active');
+
+    const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.classList.contains('slideinleft')) {
+                entry.target.classList.add('animate__animated', 'animate__slideInLeft', 'in-viewport');
+            }  else if (entry.isIntersecting && entry.target.classList.contains('bounceinleft')) {
+                entry.target.classList.add('animate__animated', 'animate__bounceInLeft', 'in-viewport');
+            } else if (entry.isIntersecting && entry.target.classList.contains('slideinup')) {
+                entry.target.classList.add('animate__animated', 'animate__slideInUp', 'in-viewport');
+            } else if (entry.isIntersecting && entry.target.classList.contains('pulse')) {
+                entry.target.classList.add('animate__animated', 'animate__pulse', 'in-viewport');
+            } 
+        });
+    }, observerOptions);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+</script>
 </div>
