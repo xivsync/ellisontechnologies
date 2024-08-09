@@ -74,7 +74,14 @@
 }
 
 .status--status {
-  @apply bg-[#46b6e3] !important;
+  @apply bg-[#46b6e3] text-white !important;
+}
+
+.status--status a {
+  @apply text-white !important;
+}
+.status--status a:hover {
+  @apply text-white underline !important;
 }
 
 .status__list {

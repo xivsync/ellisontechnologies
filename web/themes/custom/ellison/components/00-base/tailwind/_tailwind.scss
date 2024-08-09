@@ -8797,6 +8797,19 @@ body.toolbar-horizontal.toolbar-fixed {
 .status--status {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(70 182 227 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.status--status a {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.status--status a:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  text-decoration-line: underline !important;
 }
 
 .status__list {
