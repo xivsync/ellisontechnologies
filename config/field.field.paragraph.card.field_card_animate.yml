@@ -1,0 +1,21 @@
+uuid: a2d97e72-4069-4b38-805c-235f45195802
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_animate
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_card_animate
+field_name: field_card_animate
+entity_type: paragraph
+bundle: card
+label: 'Card Animate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

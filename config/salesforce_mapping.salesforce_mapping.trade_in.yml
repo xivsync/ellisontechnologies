@@ -1,7 +1,7 @@
 langcode: en
 id: trade_in
 label: "\tTrade In"
-weight: 1
+weight: 0
 type: salesforce_mapping
 key: ''
 always_upsert: false

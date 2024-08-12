@@ -1,7 +1,7 @@
 langcode: en
 id: order_parts
 label: "\tOrder Parts"
-weight: -3
+weight: 0
 type: salesforce_mapping
 key: ''
 always_upsert: false

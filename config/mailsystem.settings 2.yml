@@ -1,0 +1,17 @@
+theme: current
+defaults:
+  sender: sendgrid_integration
+  formatter: mime_mail
+modules:
+  smtp:
+    none:
+      sender: sendgrid_integration
+      formatter: sendgrid_integration
+  webform:
+    none:
+      sender: sendgrid_integration
+      formatter: sendgrid_integration
+  sendgrid_integration:
+    none:
+      sender: sendgrid_integration
+      formatter: sendgrid_integration

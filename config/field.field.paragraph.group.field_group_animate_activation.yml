@@ -1,0 +1,21 @@
+uuid: 73d42844-3beb-423e-b502-d792086ac1d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group_animate_activation
+    - paragraphs.paragraphs_type.group
+  module:
+    - options
+id: paragraph.group.field_group_animate_activation
+field_name: field_group_animate_activation
+entity_type: paragraph
+bundle: group
+label: 'Animate Activation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

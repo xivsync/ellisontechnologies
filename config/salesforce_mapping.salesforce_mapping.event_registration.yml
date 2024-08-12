@@ -1,6 +1,6 @@
 langcode: en
-id: simple_contact_form
-label: 'Simple Contact form'
+id: event_registration
+label: 'Tornos Event Registration'
 weight: 0
 type: salesforce_mapping
 key: ''
@@ -14,6 +14,8 @@ push_frequency: 0
 push_limit: 0
 push_retries: 3
 pull_where_clause: ''
+pull_record_type_filter:
+  Master: 0
 sync_triggers:
   push_create: true
   push_update: false
@@ -23,41 +25,41 @@ sync_triggers:
   pull_delete: false
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
-drupal_bundle: contact_mini
+drupal_bundle: event_registration
 field_mappings:
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: street
-    direction: drupal_sf
-    salesforce_field: Street
-    id: 0
-    description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: city
-    direction: drupal_sf
-    salesforce_field: City
-    id: 1
-    description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: company
     direction: drupal_sf
     salesforce_field: Company
-    id: 2
+    id: 0
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: firstname
     direction: drupal_sf
     salesforce_field: FirstName
-    id: 3
+    id: 1
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: lastname
     direction: drupal_sf
     salesforce_field: LastName
+    id: 2
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: title
+    direction: drupal_sf
+    salesforce_field: Title
+    id: 3
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: email
+    direction: drupal_sf
+    salesforce_field: Email
     id: 4
     description: ''
   -
@@ -69,23 +71,23 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: state
+    drupal_field_value: street
     direction: drupal_sf
-    salesforce_field: State
+    salesforce_field: Street
     id: 6
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: title
+    drupal_field_value: city
     direction: drupal_sf
-    salesforce_field: Title
+    salesforce_field: City
     id: 7
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: email
+    drupal_field_value: state
     direction: drupal_sf
-    salesforce_field: Email
+    salesforce_field: State
     id: 8
     description: ''
   -
@@ -97,16 +99,16 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: webform_campaign_id__c
+    drupal_field_value: how_did_you_hear__c
     direction: drupal_sf
-    salesforce_field: utm_campaign__c
+    salesforce_field: How_did_you_hear__c
     id: 10
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: webform_name__c
+    drupal_field_value: industry
     direction: drupal_sf
-    salesforce_field: Webform_Name__c
+    salesforce_field: Industry__c
     id: 11
     description: ''
   -
@@ -118,16 +120,44 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: description
+    drupal_field_value: webformsid__c
     direction: drupal_sf
-    salesforce_field: Notes__c
+    salesforce_field: WebformSID__c
     id: 13
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: opt_in
+    direction: drupal_sf
+    salesforce_field: Webform_Email_Sign_Up__c
+    id: 14
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_name__c
+    direction: drupal_sf
+    salesforce_field: Webform_Name__c
+    id: 15
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: webform_campaign_id__c
+    direction: drupal_sf
+    salesforce_field: Webform_Campaign_ID__c
+    id: 16
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leadsource
+    direction: drupal_sf
+    salesforce_field: LeadSource
+    id: 17
     description: ''
 status: true
 dependencies:
   config:
-    - webform.webform.contact_mini
+    - webform.webform.event_registration
   module:
     - salesforce_push
     - salesforce_webform
-uuid: c9ffd09f-ac9e-49b7-8014-d8c48565a006
+uuid: eddc62a7-2680-4ea8-ad23-840413bc373b

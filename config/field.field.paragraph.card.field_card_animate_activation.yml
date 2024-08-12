@@ -1,0 +1,21 @@
+uuid: ef36750e-93dc-4a37-bea7-3474d8281cde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_animate_activation
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_card_animate_activation
+field_name: field_card_animate_activation
+entity_type: paragraph
+bundle: card
+label: 'Card Animate Activation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

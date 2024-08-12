@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.card.field_align_text
     - field.field.paragraph.card.field_background_color
+    - field.field.paragraph.card.field_card_animate
+    - field.field.paragraph.card.field_card_animate_activation
     - field.field.paragraph.card.field_card_style
     - field.field.paragraph.card.field_content
     - field.field.paragraph.card.field_cta_button
@@ -28,6 +30,8 @@ third_party_settings:
         - field_card_style
         - field_background_color
         - field_align_text
+        - field_card_animate
+        - field_card_animate_activation
         - field_cta_button_style
       label: 'Card Options (click to open)'
       region: content
@@ -108,6 +112,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_card_animate:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_card_animate_activation:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_card_style:
     type: options_select
     weight: 11
@@ -132,7 +148,7 @@ content:
     third_party_settings: {  }
   field_cta_button_style:
     type: options_select
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

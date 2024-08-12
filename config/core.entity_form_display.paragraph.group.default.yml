@@ -13,6 +13,8 @@ dependencies:
     - field.field.paragraph.group.field_footer
     - field.field.paragraph.group.field_full_width_background
     - field.field.paragraph.group.field_group
+    - field.field.paragraph.group.field_group_animate
+    - field.field.paragraph.group.field_group_animate_activation
     - field.field.paragraph.group.field_header
     - field.field.paragraph.group.field_items_per_row
     - field.field.paragraph.group.field_remove_margins
@@ -169,6 +171,18 @@ content:
         add_above: add_above
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_group_animate:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_group_animate_activation:
+    type: options_select
+    weight: 36
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_header:
     type: text_textarea

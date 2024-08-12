@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.card.field_align_text
     - field.field.paragraph.card.field_background_color
+    - field.field.paragraph.card.field_card_animate
+    - field.field.paragraph.card.field_card_animate_activation
     - field.field.paragraph.card.field_card_style
     - field.field.paragraph.card.field_content
     - field.field.paragraph.card.field_cta_button
@@ -38,6 +40,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_card_animate:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_card_animate_activation:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_card_style:
     type: list_key

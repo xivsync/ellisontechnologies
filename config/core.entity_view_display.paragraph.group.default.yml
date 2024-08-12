@@ -13,6 +13,8 @@ dependencies:
     - field.field.paragraph.group.field_footer
     - field.field.paragraph.group.field_full_width_background
     - field.field.paragraph.group.field_group
+    - field.field.paragraph.group.field_group_animate
+    - field.field.paragraph.group.field_group_animate_activation
     - field.field.paragraph.group.field_header
     - field.field.paragraph.group.field_items_per_row
     - field.field.paragraph.group.field_remove_margins
@@ -117,6 +119,20 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_group_animate:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_group_animate_activation:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_header:
     type: text_default

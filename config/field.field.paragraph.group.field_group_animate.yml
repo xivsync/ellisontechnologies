@@ -1,0 +1,21 @@
+uuid: d68b9b4d-8b3e-418d-81b9-8ecd2ed20152
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group_animate
+    - paragraphs.paragraphs_type.group
+  module:
+    - options
+id: paragraph.group.field_group_animate
+field_name: field_group_animate
+entity_type: paragraph
+bundle: group
+label: Animate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
