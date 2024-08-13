@@ -42,6 +42,7 @@ dependencies:
     - pate
     - path
     - quick_node_clone
+    - redirect
     - salesforce
     - salesforce_mapping
     - shortcut
@@ -81,6 +82,7 @@ permissions:
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
+  - 'administer redirects'
   - 'administer salesforce'
   - 'administer salesforce mapped objects'
   - 'administer salesforce mapping'

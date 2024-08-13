@@ -1,7 +1,7 @@
 langcode: en
 id: contact_us
 label: 'Machine Sales Inquiries a.k.a. Contact Us'
-weight: 0
+weight: -5
 type: salesforce_mapping
 key: ''
 always_upsert: false

@@ -1,7 +1,7 @@
 langcode: en
 id: training_request
 label: 'Training Request'
-weight: 0
+weight: 2
 type: salesforce_mapping
 key: ''
 always_upsert: false

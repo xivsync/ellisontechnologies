@@ -13,7 +13,6 @@ index: default_index
 limit: 25
 searched_fields:
   body: body
-  body_1: body_1
   description: description
   description_1: description_1
   description_2: description_2
@@ -21,11 +20,16 @@ searched_fields:
   field_content: field_content
   field_footer: field_footer
   field_header: field_header
+  field_product: field_product
   field_series: field_series
   field_tags: field_tags
   field_teaser: field_teaser
   field_teaser_1: field_teaser_1
-  rendered_item: rendered_item
+  field_teaser_2: field_teaser_2
+  name: name
+  name_1: name_1
+  name_2: name_2
+  rendered_item_1: rendered_item_1
   title: title
 style: search_results
 view_mode_configuration: {  }
