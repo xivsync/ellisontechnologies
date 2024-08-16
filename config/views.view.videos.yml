@@ -9,8 +9,10 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - media
+    - media_video_micromodal
     - taxonomy
     - user
+    - views_natural_sort
 _core:
   default_config_hash: diywn6VdMoQOlDA-xslKdKrDko3SsTKfaK3WBG45UAg
 id: videos
@@ -144,9 +146,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: micromodal_field_formatter
           settings:
-            link_to_entity: false
+            string_classes: ''
+            link_text: ''
+            caption_swap: '0'
           group_column: value
           group_columns: {  }
           group_rows: true
