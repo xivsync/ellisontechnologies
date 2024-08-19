@@ -1,0 +1,3 @@
+.micromodal-header {
+  @apply flex flex-row gap-2 items-baseline;
+}

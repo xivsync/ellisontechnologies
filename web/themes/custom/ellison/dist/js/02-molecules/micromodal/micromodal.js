@@ -1,0 +1,1 @@
+Drupal.behaviors.micromodal={attach:function(c){once("enableMicromodal","#block-views-block-videos-block-1",c).forEach((function(){var c=1<document.URL.split("#").length?document.URL.split("#")[1]:null,o=document.querySelector(".".concat(c));o&&o.click()}))}};

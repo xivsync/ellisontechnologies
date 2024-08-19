@@ -94,6 +94,8 @@ module.exports = {
     'text-gray-700',
     'text-gray-600',
     'text-gray-500',
+    'h-4',
+    'w-4',
     {
       pattern: /prose/,
     },
