@@ -41,12 +41,12 @@ Drupal.behaviors.micromodal = {
           copyText.setSelectionRange(0, 99999); // For mobile devices
           
 
-          let url = `${window.location.origin}${window.location.pathname}#${copyText.value}`
+          let url = `${window.location.origin}${window.location.pathname}${window.location.search}#${copyText.value}`
 
           // Copy the text inside the text field
           navigator.clipboard.writeText(url);
 
-          console.log("Copied the text: " + url);
+          window.confirm("Copied the text: " + url);
 
           event.preventDefault();
 
