@@ -15,6 +15,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_natural_sort
 id: series
 label: 'List of models for a series'
 module: views
@@ -562,10 +563,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-          order: ASC
+          order: NASC
           expose:
-            label: ''
-            field_identifier: ''
+            label: Title
+            field_identifier: title
           exposed: false
       arguments:
         field_product_target_id:
@@ -1170,7 +1171,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: foo
             make_link: false
             path: ''
             absolute: false
