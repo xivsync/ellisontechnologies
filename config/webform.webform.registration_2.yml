@@ -3,11 +3,7 @@ langcode: en
 status: open
 dependencies:
   module:
-    - honeypot
     - webform_pardot
-third_party_settings:
-  honeypot:
-    time_restriction: true
 weight: 0
 open: null
 close: null
