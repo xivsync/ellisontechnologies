@@ -5963,6 +5963,28 @@ div[role=alert] {
   }
 }
 
+/* handles captcha math problem */
+
+.form-item--captcha-response {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  .form-item__label {
+    flex-basis:100%;
+  }
+  .field-prefix {
+    flex-basis:15%;
+  }
+  input#edit-captcha-response {
+    flex-basis:15%;
+  }
+}
+
+.captcha.captcha-type-challenge--math legend {
+  display:none;
+}
+
 /* handles collection of horizontal teasers */
 
 .collection.display-as-rows {

@@ -107,6 +107,10 @@ elements: |-
     '#type': hidden
     '#title': source_page_url
     '#default_value': '[current-page:url]'
+  captcha:
+    '#type': captcha
+    '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
+    '#captcha_admin_mode': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -308,17 +312,13 @@ handlers:
         - completed
       to_mail: '[webform_submission:values:email:raw]'
       to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       subject: _default
       body: '<table bgcolor="#d5d5d5" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center"><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" style="background:#d5d5d5;" align="left" width="35">&nbsp;</td><td class="" style="background:#d5d5d5;font-family:Verdana, Geneva, sans-serif;font-size:11px;line-height:20px;text-align:center;" align="left" height="30" width="500">&nbsp;</td><td class="" style="background:#d5d5d5;" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td class="" height="80"><p><a href="http://www.ellisontechnologies.com/"><img src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs28/37432/220105/EllisonTechnologiesHeader.jpg" alt="Ellison Technologies" height="100" width="570"></a></p></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500"><p><br><span style="color:#002147;font-size:24px;line-height:24px;"><strong>Thank you for signing up for our newsletter and event emails!</strong></span></p><p>We''ll keep you up-to-date on company events, news, and manufacturing industry trends.<br><br>Read the previous edition of our newsletter: <a style="color:#3DB7E4;text-decoration:underline;" href="https://go.ellisontechnologies.com/webmail/37432/872372404/add3a28fef551ee8e6cd402613b06d8b097bcaad2bdc6b8df602706bc1c7a04e"><strong>here</strong></a><br><br>Don''t forget to add <a style="color:#3DB7E4;text-decoration:underline;" href=""><strong>info@ellisontechnologies.com</strong></a> to your safe sender list to ensure that our emails get delivered to your inbox.&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;</p></td><td class="" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500" bgcolor="#3DB7E4"><p><br>&nbsp;</p></td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#002147" valign="top" width="570">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" bgcolor="#002147" valign="top" width="35">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#002147" valign="top" width="220"><p><a style="border:none;color:#ffffff;" href="http://www.ellisontechnologies.com/services"><img alt="" height="64" src="https://go.ellisontechnologies.com/l/37432/2021-06-08/5sqzkq/37432/1623175008KUTzQ9Ln/Ellison_OneSource.png" width="220"></a></p></td><td class="" style="color:#ffffff;font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="right" bgcolor="#002147" valign="top" width="280"><p><span style="font-size:14px;text-transform:uppercase;"><strong>Need parts OR service?</strong></span><br>We are your OneSource<br>for all of your support needs.<br><a style="border:none;color:#3DB7E4;font-size:11px;" href="http://www.ellisontechnologies.com/services"><strong>www.ellisontechnologies.com/services</strong></a></p></td><td class="" bgcolor="#002147" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#002147" valign="top" width="500">&nbsp;</td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#1074b9" valign="top" width="500">&nbsp;</td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="center" bgcolor="#1074b9" valign="top" width="500"><p><span style="color:#ffffff;font-size:12px;text-transform:uppercase;"><strong>Stay Connected</strong></span><br><a href="https://www.facebook.com/EllisonTechnologies?ref=nf" target="_blank"><img alt="Ellison Facebook" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs1x/37432/220095/Facebook.png" width="20"></a> &nbsp;<a href="https://twitter.com/EllisonTech" target="_blank"><img alt="Ellison Twitter" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs72/37432/220113/Twitter.png" width="20"></a> &nbsp;<a href="https://www.instagram.com/ellisontech/" target="_blank"><img alt="Ellison Instagram" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs74/37432/220111/Instagram.png" width="20"></a> &nbsp;<a href="http://www.linkedin.com/company/ellison-technologies" target="_blank"><img alt="Ellison Linked In" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs1z/37432/220097/Linkedin.png" width="20"></a>&nbsp;</p></td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#1074b9" valign="top" width="500">&nbsp;</td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:12px;text-transform:uppercase;" align="center" bgcolor="#d5d5d5" height="50" valign="middle"><p><a style="color:#000000;" href="%%unsubscribe%%">Unsubscribe</a></p></td></tr></tbody></table></td></tr></tbody></table>'
       excluded_elements: {  }
@@ -329,9 +329,13 @@ handlers:
       html: true
       attachments: false
       twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       theme_name: ''
       parameters: {  }
-      debug: false
   email_to_internal_subscription_team:
     id: email
     handler_id: email_to_internal_subscription_team
@@ -345,17 +349,13 @@ handlers:
         - completed
       to_mail: rsvp@ellisontechnologies.com
       to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       subject: _default
       body: _default
       excluded_elements: {  }
@@ -366,9 +366,13 @@ handlers:
       html: true
       attachments: false
       twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       theme_name: ''
       parameters: {  }
-      debug: false
   submit_data_to_pardot:
     id: pardot_submission
     handler_id: submit_data_to_pardot
