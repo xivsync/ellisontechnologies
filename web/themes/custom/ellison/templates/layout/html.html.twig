@@ -44,30 +44,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1027716373"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-1027716373');
-    </script>
-    <script>
-      window.addEventListener('load',function(){
-          if (window.location.pathname=="/node/6/done" || window.location.pathname=="/node/45/webform/confirmation" ) {
-          gtag('event', 'conversion', {'send_to': 'AW-AW-1027716373/8FK_CITv45YDEJXqhuoD'});
-          }
-      });
-    </script>
-    <script>
-      window.addEventListener('load', function() {
-        if (window.location.pathname == "/thank-you") {
-          gtag('event', 'conversion', {'send_to': 'AW-1027716373/1zXPCIqWsJYDEJXqhuoD'});
-        }
-      })
-
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PV6FVDC');</script>
+    <!-- End Google Tag Manager -->
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {#
@@ -80,6 +63,12 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-PV6FVDC
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
 </html>
