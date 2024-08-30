@@ -98,15 +98,15 @@ mappings:
       value: field_media_oembed_video
     settings:
       language: null
-    unique:
-      value: 1
+    unique: {  }
   -
     target: name
     map:
       value: name
     settings:
       language: null
-    unique: {  }
+    unique:
+      value: 1
   -
     target: field_tag
     map:
