@@ -5,23 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_media_oembed_video
     - media.type.remote_video
-    - taxonomy.vocabulary.products
-  content:
-    - 'taxonomy_term:products:06e39523-0592-4d8f-a39f-57cd0ace4f4f'
-    - 'taxonomy_term:products:108e3cd7-d97f-475a-9e76-111fffe13611'
-    - 'taxonomy_term:products:184f0450-515a-45cd-98c2-040080da8cf6'
-    - 'taxonomy_term:products:1aff28ca-f567-4771-9e6c-ba0e8b3f12b1'
-    - 'taxonomy_term:products:3132626e-0a56-4ae4-82eb-cf60f7a785eb'
-    - 'taxonomy_term:products:353b2d1f-1587-4cbc-bf48-ec232fc722af'
-    - 'taxonomy_term:products:3a917d3f-5a13-4ed7-8008-b4674eeb598f'
-    - 'taxonomy_term:products:6d1821bd-509f-444e-b5c8-62bb3dd7bec8'
-    - 'taxonomy_term:products:9231fe5a-914d-4c87-9663-757e892a6cdf'
-    - 'taxonomy_term:products:92a04e10-25b1-45db-b1cd-ad8ed811234e'
-    - 'taxonomy_term:products:9b800681-ca43-4edb-b426-b601416d581d'
-    - 'taxonomy_term:products:9f3d3a3f-eb19-46ab-bc79-e8c9bc29408a'
-    - 'taxonomy_term:products:b9c90e2f-7bec-4b4e-8701-1ac1a7022f27'
-    - 'taxonomy_term:products:dab918f9-2a39-49b6-b73d-30c78ef04d37'
-    - 'taxonomy_term:products:f02db1f8-511f-41ff-8ac3-c84f3df7926a'
+    - taxonomy.vocabulary.tags
   module:
     - media
     - media_video_micromodal
@@ -327,33 +311,36 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_media_oembed_video_value:
-          id: field_media_oembed_video_value
-          table: media__field_media_oembed_video
-          field: field_media_oembed_video_value
+        field_tag_target_id:
+          id: field_tag_target_id
+          table: media__field_tag
+          field: field_tag_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: string
-          operator: not
-          value: yout
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: field_tag_target_id_op
+            label: Category
             description: ''
             use_operator: false
-            operator: ''
+            operator: field_tag_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: field_tag_target_id
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -366,68 +353,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_tag_target_id:
-          id: field_tag_target_id
-          table: media__field_tag
-          field: field_tag_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            280: 280
-            289: 289
-            293: 293
-            288: 288
-            294: 294
-            292: 292
-            296: 296
-            278: 278
-            279: 279
-            281: 281
-            287: 287
-            283: 283
-            277: 277
-            282: 282
-            291: 291
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_tag_target_id_op
-            label: 'SELECT A PRODUCT'
-            description: ''
-            use_operator: false
-            operator: field_tag_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: product
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: 'Tag (field_tag)'
-            description: null
-            identifier: field_tag_target_id
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          reduce_duplicates: true
-          vid: products
+          reduce_duplicates: false
+          vid: tags
           type: select
           hierarchy: false
           limit: true

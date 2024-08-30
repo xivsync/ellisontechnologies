@@ -5965,7 +5965,8 @@ div[role=alert] {
 
 /* handles captcha math problem */
 
-.form-item--captcha-response {
+.form-item--captcha-response,
+.form-item--captcha-response{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
