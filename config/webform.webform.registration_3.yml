@@ -9,7 +9,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: false
+archive: true
 id: registration_3
 title: 'Registration 3'
 description: '<p>Add a registration form to your event.</p>'

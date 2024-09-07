@@ -15,7 +15,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: false
+archive: true
 id: contact_mini
 title: 'Simple Contact Form'
 description: '<p>Simple email contact webform. . <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'

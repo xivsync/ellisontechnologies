@@ -10,7 +10,7 @@ open: null
 close: null
 uid: 1713
 template: false
-archive: false
+archive: true
 id: training_request
 title: 'Training Request'
 description: ''

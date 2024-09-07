@@ -15,7 +15,7 @@ open: null
 close: null
 uid: null
 template: false
-archive: false
+archive: true
 id: contact
 title: 'Contact Us'
 description: '<p>Basic email contact webform for Machine Sales Inquiries (aka Contact US). <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
@@ -321,8 +321,8 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: null
-  limit_user_interval: null
+  limit_user: 1
+  limit_user_interval: 30
   limit_user_message: ''
   limit_user_unique: false
   entity_limit_total: null
