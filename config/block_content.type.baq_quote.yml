@@ -1,0 +1,8 @@
+uuid: 556fd4bf-9a7e-45b2-b88e-f8ffb504ec3a
+langcode: en
+status: true
+dependencies: {  }
+id: baq_quote
+label: 'BAQ Quote'
+revision: 0
+description: ''
