@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_group
     - paragraphs.paragraphs_type.banner_image
+    - paragraphs.paragraphs_type.build_a_quote_form
     - paragraphs.paragraphs_type.button_group
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.cta_button
@@ -43,6 +44,7 @@ settings:
       button_group: button_group
       webform: webform
       model_listing: model_listing
+      build_a_quote_form: build_a_quote_form
       specifications_list: specifications_list
       video: video
       slider: slider
@@ -51,6 +53,9 @@ settings:
     target_bundles_drag_drop:
       banner_image:
         weight: 3
+        enabled: true
+      build_a_quote_form:
+        weight: 21
         enabled: true
       button_group:
         weight: 14
