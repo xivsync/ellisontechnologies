@@ -5165,6 +5165,44 @@ form.webform-submission-build-a-quote-form {
   }
 }
 
+form#build-a-quote div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  form#build-a-quote div {
+    margin-left: 3rem;
+  }
+}
+
+form#build-a-quote div {
+  input.form-item__textfield {
+    margin: 0.5rem;
+  }
+  input.form-item__textfield {
+    flex-basis: 100%;
+  }
+  @media (min-width: 992px) {
+    input.form-item__textfield {
+      flex-basis: 25%;
+    }
+  }
+  button.button {
+    margin: 0px;
+  }
+  @media (min-width: 992px) {
+    button.button {
+      margin-left: 1rem;
+    }
+  }
+  button.button {
+    line-height: 1.3;
+    height: 44px;
+    align-self: center;
+  }
+}
+
 /* handles select your location form */
 
 form.webform-submission-select-your-location-form {
