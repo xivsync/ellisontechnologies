@@ -15,7 +15,7 @@ open: null
 close: null
 uid: null
 template: false
-archive: true
+archive: false
 id: contact
 title: 'Contact Us'
 description: '<p>Basic email contact webform for Machine Sales Inquiries (aka Contact US). <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
@@ -196,8 +196,6 @@ elements: |-
     '#default_value': '[current-page:url:absolute]'
   captcha:
     '#type': captcha
-    '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
-    '#captcha_admin_mode': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

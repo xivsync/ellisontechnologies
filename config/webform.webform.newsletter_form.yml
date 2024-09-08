@@ -14,7 +14,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: true
+archive: false
 id: newsletter_form
 title: 'Newsletter form'
 description: '<p>Newsletter signup webform. Located in footer.</p>'
@@ -109,8 +109,6 @@ elements: |-
     '#default_value': '[current-page:url]'
   captcha:
     '#type': captcha
-    '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
-    '#captcha_admin_mode': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -341,7 +339,7 @@ handlers:
     handler_id: email_to_internal_subscription_team
     label: 'Email to internal subscription team'
     notes: 'Email send when visitor subscribes to newsletter.'
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings:
@@ -378,7 +376,7 @@ handlers:
     handler_id: submit_data_to_pardot
     label: 'Submit data to Pardot'
     notes: 'copied from old site'
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings:

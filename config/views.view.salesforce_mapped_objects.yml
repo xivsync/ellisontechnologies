@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.admin
   module:
+    - better_exposed_filters
     - dynamic_entity_reference
     - salesforce_mapping
     - smart_date
@@ -223,6 +224,59 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        view_salesforce_mapped_object:
+          id: view_salesforce_mapped_object
+          table: salesforce_mapped_object_revision
+          field: view_salesforce_mapped_object
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: salesforce_mapped_object
+          plugin_id: entity_link
+          label: Salesalesforce
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: false
+          absolute: false
         salesforce_mapping:
           id: salesforce_mapping
           table: salesforce_mapped_object
@@ -279,6 +333,138 @@ display:
           settings:
             link: true
           group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        last_sync_status:
+          id: last_sync_status
+          table: salesforce_mapped_object
+          field: last_sync_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: salesforce_mapped_object
+          entity_field: last_sync_status
+          plugin_id: field
+          label: 'Sync status'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        last_sync_action:
+          id: last_sync_action
+          table: salesforce_mapped_object_revision
+          field: last_sync_action
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: salesforce_mapped_object
+          entity_field: last_sync_action
+          plugin_id: field
+          label: 'Sync action'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -419,7 +605,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 50
+          items_per_page: 100
           total_pages: null
           id: 0
           tags:
@@ -437,7 +623,7 @@ display:
             offset_label: Offset
           quantity: 9
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Apply
           reset_button: false
@@ -446,6 +632,26 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              changed:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  is_secondary: false
       access:
         type: perm
         options:
@@ -457,8 +663,8 @@ display:
       sorts: {  }
       arguments: {  }
       filters:
-        changed:
-          id: changed
+        changed_1:
+          id: changed_1
           table: salesforce_mapped_object
           field: changed
           relationship: none
@@ -471,22 +677,22 @@ display:
           value:
             min: ''
             max: ''
-            value: ''
+            value: 01/01/2024
             type: date
-            granularity: day
+            granularity: second
           group: 1
           exposed: true
           expose:
-            operator_id: changed_op
+            operator_id: changed_1_op
             label: Changed
             description: ''
             use_operator: false
-            operator: changed_op
+            operator: changed_1_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: changed
+            identifier: changed_1
             required: false
-            remember: true
+            remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
@@ -508,6 +714,56 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        id:
+          id: id
+          table: salesforce_mapped_object
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: salesforce_mapped_object
+          entity_field: id
+          plugin_id: numeric
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: '7777'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: table
         options:
