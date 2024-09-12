@@ -1,4 +1,4 @@
-# Ellison Technologies
+# Ellison Technologies Drupal 10
 
 This is a theme built with Storybook, Tailwind, Components, and Twig hosted by Pantheon.
 
