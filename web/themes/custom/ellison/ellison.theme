@@ -6,6 +6,7 @@ use Drupal\taxonomy\Entity\Term;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
+Use \Drupal\Core\Routing;
 
 /**
  * @file
@@ -52,10 +53,11 @@ function ellison_preprocess_page_title(&$variables)
 function ellison_preprocess_region(&$variables)
 {
 
+  $session = \Drupal::request()->getSession(); 
+
   if ($variables['region'] === 'footer') {
 
     // Add region and region ID
-    $session = \Drupal::request()->getSession(); 
     $session_region = $session->get('region');
     $session_region_id = $session->get('region_id');
     $variables['session_region'] = $session_region ? $session_region : 'Select Location';
@@ -118,6 +120,27 @@ function ellison_preprocess_region(&$variables)
   }
 
   if ($variables['region'] === 'header') {
+    
+    // debugging parameter values 
+    $session_gclid = $session->get('gclid') ? $session->get('gclid') : null;
+    if ($session_gclid !== null) {
+      $variables['#attached']['drupalSettings']['ellison']['session_gclid'] = $session_gclid;
+    }
+    // debugging session values
+    $parameter_gclid = \Drupal::request()->query->get('gclid') ? \Drupal::request()->query->get('gclid') : null;
+    if ($parameter_gclid !== null){
+      $variables['#attached']['drupalSettings']['ellison']['parameter_gclid'] = $parameter_gclid;
+    }
+    // handle setting gclid drupalSetting value
+    if ($session_gclid !== null) {
+      $session->set('gclid', $session_gclid);
+      $variables['#attached']['drupalSettings']['ellison']['gclid'] = $session_gclid;
+    }
+
+    if ($parameter_gclid !== null) {
+      $session->set('gclid', $parameter_gclid);
+      $variables['#attached']['drupalSettings']['ellison']['gclid'] = $parameter_gclid;
+    }
 
     // Get the node object.
     $node = \Drupal::routeMatch()->getParameter('node');
