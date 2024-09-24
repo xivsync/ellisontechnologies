@@ -9,7 +9,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: true
+archive: false
 id: registration
 title: Registration
 description: '<p>Add a registration form to your event.</p>'
@@ -376,7 +376,7 @@ handlers:
       attachments: false
       twig: false
       debug: false
-      reply_to: webcontact@ellisontechnologies.com
+      reply_to: rsvp@ellisontechnologies.com
       return_path: ''
       sender_mail: ''
       sender_name: ''
@@ -428,6 +428,6 @@ handlers:
     conditions: {  }
     weight: 0
     settings:
-      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-05-14/5y2fwg'
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-05-28/5y3mdn'
       pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region"
 variants: {  }

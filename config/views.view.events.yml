@@ -448,10 +448,10 @@ display:
           plugin_id: bundle
           value:
             event: event
-        field_dates_and_times_value:
-          id: field_dates_and_times_value
+        field_dates_and_times_end_value:
+          id: field_dates_and_times_end_value
           table: node__field_dates_and_times
-          field: field_dates_and_times_value
+          field: field_dates_and_times_end_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -460,8 +460,8 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 hours'
-            type: offset
+            value: '+1 day'
+            type: date
             granularity: hour
           group: 1
           exposed: false
