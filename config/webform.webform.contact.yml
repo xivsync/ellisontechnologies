@@ -194,6 +194,9 @@ elements: |-
     '#type': hidden
     '#title': source_page_url
     '#default_value': '[current-page:url:absolute]'
+  gclid:
+    '#type': hidden
+    '#title': gclid
   captcha:
     '#type': captcha
   actions:

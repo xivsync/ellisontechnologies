@@ -120,7 +120,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
     $description = array_key_exists('description', $values) ? urlencode($values['description']) : '';
     $opt_in = array_key_exists('opt_in', $values) ? urlencode($values['opt_in']) : '';
     $region__c = array_key_exists('region__c', $values) ? urlencode($values['region__c']) : '';
-    $leadsource_not_used = array_key_exists('leadsource_not_used', $values) ? urlencode($values['leadsource_not_used']) : '';
+    $leadsource = array_key_exists('leadsource', $values) ? urlencode($values['leadsource']) : '';
     $webform_email_sign_up__c = array_key_exists('webform_email_sign_up__c', $values) ? urlencode($values['webform_email_sign_up__c']) : '';
     $builder_interest__c = array_key_exists('builder_interest__c', $values) ? urlencode($values['builder_interest__c']) : '';
     $webform_name__c = array_key_exists('webform_name__c', $values) ? urlencode($values['webform_name__c']) : '';
@@ -177,6 +177,7 @@ class CallTrackingMetricsHandler extends WebformHandlerBase {
           &custom_edit-submitted-how-did-you-hear-c={$how_did_you_hear__c}
           &custom_edit-submitted-webform-best-time-c={$webform_best_time__c}
           &custom_edit-submitted-industry={$industry}
+          &custom_edit-leadsource={$leadsource}
           &custom_select_location={$select_location}
           &custom_edit-submitted-description={$description}
           &custom_edit-submitted-opt_in={$opt_in}
