@@ -19,12 +19,12 @@ Drupal.behaviors.handleWebform = {
           const dtstart = Number(inputs['dtstart'].value);
           const dtend = Number(inputs['dtend'].value);
           const dtstamp = Date.now(); // ignore input value
-          const dtstampDate = new Date(dtstart*1000);
+          const dtstampDate = new Date(dtstamp*1000);
           const dtstartDate = new Date(dtstart*1000);
-          const dtendDate = new Date(dtstart*1000);
-          inputs['dtstamp'].value = dtstampDate.toISOString(); //.replace(/[^0-9]/g, '');
-          inputs['dtstart'].value = dtstartDate.toISOString(); //.replace(/[^0-9]/g, '');
-          inputs['dtend'].value = dtstartDate.toISOString(); //.replace(/[^0-9]/g, '');
+          const dtendDate = new Date(dtend*1000);
+          inputs['dtstamp'].value = dtstampDate.toISOString().replace(/[^0-9]/g, '');
+          inputs['dtstart'].value = dtstartDate.toISOString().replace(/[^0-9]/g, '');
+          inputs['dtend'].value = dtendDate.toISOString().replace(/[^0-9]/g, '');
         }
         // Handles converting timestamp to ISO 8601 for dates used by ics file attached on the event form
         if (Object.hasOwn(inputs,'dates_and_times')) {

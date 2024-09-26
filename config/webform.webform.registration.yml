@@ -175,6 +175,8 @@ elements: |-
   event_ics_file:
     '#type': webform_attachment_twig
     '#title': 'event ics file'
+    '#filename': event.ics
+    '#link_title': 'Add to calendar'
     '#template': |2-
        BEGIN:VCALENDAR
        PRODID:-//xyz Corp//NONSGML PDA Calendar Version 1.0//EN
