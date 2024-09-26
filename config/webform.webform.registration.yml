@@ -143,7 +143,18 @@ elements: |-
     '#default_value': '[webform_submission:node:field_complete_location]'
   dates_and_times:
     '#type': hidden
-    '#title': 'Dates and Times'
+    '#title': 'Start date as epoch time converted to 24-08-23 by JS'
+    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
+  dtstamp:
+    '#type': hidden
+    '#title': 'Now date converted to ISO 8601 by JS'
+  dtstart:
+    '#type': hidden
+    '#title': 'Start date as epoch time converted to ISO 8601 by JS'
+    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
+  dtend:
+    '#type': hidden
+    '#title': 'Start date as epoch time converted to ISO 8601 by JS'
     '#default_value': '[webform_submission:node:field_dates_and_times:value]'
   referring_page:
     '#type': hidden
@@ -169,17 +180,15 @@ elements: |-
        PRODID:-//xyz Corp//NONSGML PDA Calendar Version 1.0//EN
        VERSION:2.0
        BEGIN:VEVENT
-       DTSTAMP:19960704T120000Z
-       UID:uid1@example.com
-       ORGANIZER:mailto:jsmith@example.com
-       DTSTART:19960918T143000Z
-       DTEND:19960920T220000Z
+       DTSTAMP:{{ data.dtstamp }}Z
+       UID:{{ data.email }}
+       ORGANIZER:mailto:{{ data.internal_email }}
+       DTSTART:{{ data.dtstart }}Z
+       DTEND:{{ data.dtend }}Z
        STATUS:CONFIRMED
        CATEGORIES:CONFERENCE
-       SUMMARY:Networld+Interop Conference
-       DESCRIPTION:Networld+Interop Conference
-         and Exhibit\nAtlanta World Congress Center\n
-        Atlanta\, Georgia
+       SUMMARY:Title
+       DESCRIPTION:Foo\nBar
        END:VEVENT
        END:VCALENDAR
 css: ''
