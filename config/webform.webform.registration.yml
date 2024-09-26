@@ -161,6 +161,27 @@ elements: |-
     '#type': captcha
     '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
     '#captcha_admin_mode': true
+  event_ics_file:
+    '#type': webform_attachment_twig
+    '#title': 'event ics file'
+    '#template': |2-
+       BEGIN:VCALENDAR
+       PRODID:-//xyz Corp//NONSGML PDA Calendar Version 1.0//EN
+       VERSION:2.0
+       BEGIN:VEVENT
+       DTSTAMP:19960704T120000Z
+       UID:uid1@example.com
+       ORGANIZER:mailto:jsmith@example.com
+       DTSTART:19960918T143000Z
+       DTEND:19960920T220000Z
+       STATUS:CONFIRMED
+       CATEGORIES:CONFERENCE
+       SUMMARY:Networld+Interop Conference
+       DESCRIPTION:Networld+Interop Conference
+         and Exhibit\nAtlanta World Congress Center\n
+        Atlanta\, Georgia
+       END:VEVENT
+       END:VCALENDAR
 css: ''
 javascript: ''
 settings:
@@ -408,9 +429,9 @@ handlers:
       ignore_access: 0
       exclude_empty: 0
       exclude_empty_checkbox: 0
-      exclude_attachments: false
+      exclude_attachments: 0
       html: true
-      attachments: false
+      attachments: true
       twig: false
       debug: false
       reply_to: '[site:mail]'
