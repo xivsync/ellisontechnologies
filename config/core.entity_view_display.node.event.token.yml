@@ -68,8 +68,6 @@ content:
         suffix: h
     third_party_settings:
       date_augmenter:
-        status:
-          addtocal: '1'
         weights:
           order:
             addtocal:
@@ -85,6 +83,9 @@ content:
             target: ''
             past_events: '1'
             retain_spacing: 0
+            icons: 0
+        status:
+          addtocal: 0
         augmenter_settings:
           fields__field_dates_and_times__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
     weight: 0
