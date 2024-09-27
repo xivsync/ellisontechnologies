@@ -22,9 +22,12 @@ Drupal.behaviors.handleWebform = {
           const dtstampDate = new Date(dtstamp*1000);
           const dtstartDate = new Date(dtstart*1000);
           const dtendDate = new Date(dtend*1000);
-          inputs['dtstamp'].value = dtstampDate.toISOString().replace(/[^0-9]/g, '');
-          inputs['dtstart'].value = dtstartDate.toISOString().replace(/[^0-9]/g, '');
-          inputs['dtend'].value = dtendDate.toISOString().replace(/[^0-9]/g, '');
+          const stamp = dtstampDate.toISOString();
+          const start = dtstartDate.toISOString();
+          const end = dtendDate.toISOString();
+          inputs['dtstamp'].value = stamp.replace(/[^\w]/g, '');
+          inputs['dtstart'].value = start.replace(/[^\w]/g, '');
+          inputs['dtend'].value = end.replace(/[^\w]/g, '');
         }
         // Handles converting timestamp to ISO 8601 for dates used by ics file attached on the event form
         if (Object.hasOwn(inputs,'dates_and_times')) {

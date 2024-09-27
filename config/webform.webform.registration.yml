@@ -177,22 +177,24 @@ elements: |-
     '#title': 'event ics file'
     '#filename': event.ics
     '#link_title': 'Add to calendar'
-    '#template': |2-
-       BEGIN:VCALENDAR
-       PRODID:-//xyz Corp//NONSGML PDA Calendar Version 1.0//EN
-       VERSION:2.0
-       BEGIN:VEVENT
-       DTSTAMP:{{ data.dtstamp }}Z
-       UID:{{ data.email }}
-       ORGANIZER:mailto:{{ data.internal_email }}
-       DTSTART:{{ data.dtstart }}Z
-       DTEND:{{ data.dtend }}Z
-       STATUS:CONFIRMED
-       CATEGORIES:CONFERENCE
-       SUMMARY:Title
-       DESCRIPTION:Foo\nBar
-       END:VEVENT
-       END:VCALENDAR
+    '#template': |-
+      BEGIN:VCALENDAR
+      VERSION:2.0
+      PRODID:-//ZContent.net//Zap Calendar 1.0//EN
+      CALSCALE:GREGORIAN
+      METHOD:PUBLISH
+      BEGIN:VEVENT
+      SUMMARY:Abraham Lincoln
+      UID:{{data.email}}
+      STATUS:CONFIRMED
+      TRANSP:TRANSPARENT
+      DTSTART:{{data.dtstart}}
+      DTEND:{{data.dtend}}
+      DTSTAMP:{{data.dtstamp}}
+      LOCATION:{{data.location}}
+      URL:{{uri}}
+      END:VEVENT
+      END:VCALENDAR
 css: ''
 javascript: ''
 settings:
