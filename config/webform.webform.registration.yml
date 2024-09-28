@@ -178,6 +178,7 @@ elements: |-
     '#title': 'event ics file'
     '#filename': event.ics
     '#link_title': 'Add to calendar'
+    '#download': true
     '#template': |-
       BEGIN:VCALENDAR
       VERSION:2.0
@@ -185,15 +186,15 @@ elements: |-
       CALSCALE:GREGORIAN
       METHOD:PUBLISH
       BEGIN:VEVENT
-      SUMMARY:Abraham Lincoln
+      SUMMARY:{{data.webform_name__c}}
       UID:{{data.email}}
       STATUS:CONFIRMED
       TRANSP:TRANSPARENT
       DTSTART:{{data.dtstart}}
       DTEND:{{data.dtend}}
       DTSTAMP:{{data.dtstamp}}
-      LOCATION:{{data.location}}
-      URL:{{uri}}
+      LOCATION:{{data.complete_location|striptags|trim}}
+      URL:https://www.ellisontechnologies.com{{ uri }}
       END:VEVENT
       END:VCALENDAR
 css: ''
