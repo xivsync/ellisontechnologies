@@ -148,14 +148,15 @@ elements: |-
   dtstamp:
     '#type': hidden
     '#title': 'Now date converted to ISO 8601 by JS'
+    '#default_value': '[webform_submission:node:created]'
   dtstart:
     '#type': hidden
     '#title': 'Start date as epoch time converted to ISO 8601 by JS'
     '#default_value': '[webform_submission:node:field_dates_and_times:value]'
   dtend:
     '#type': hidden
-    '#title': 'Start date as epoch time converted to ISO 8601 by JS'
-    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
+    '#title': 'End date as epoch time converted to ISO 8601 by JS'
+    '#default_value': '[webform_submission:node:field_dates_and_times:end_value]'
   referring_page:
     '#type': hidden
     '#title': 'Referring Page'

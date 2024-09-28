@@ -14,24 +14,31 @@ Drupal.behaviors.handleWebform = {
           const session_sf_region_id = drupalSettings.ellison.session_sf_region_id;
           inputs['region__c'].value = session_sf_region_id;
         }
-        // Handles converting timestamp to Salesforce date for Showdate1
-        if (Object.hasOwn(inputs,'dtstamp')||Object.hasOwn(inputs,'dtstart')||Object.hasOwn(inputs,'dtend')) {
-          const dtstart = Number(inputs['dtstart'].value);
-          const dtend = Number(inputs['dtend'].value);
-          const dtstamp = Date.now(); // ignore input value
-          const dtstampDate = new Date(dtstamp*1000);
-          const dtstartDate = new Date(dtstart*1000);
-          const dtendDate = new Date(dtend*1000);
-          const stamp = dtstampDate.toISOString();
-          const start = dtstartDate.toISOString();
-          const end = dtendDate.toISOString();
-          inputs['dtstamp'].value = stamp.replace(/[^\w]/g, '');
-          inputs['dtstart'].value = start.replace(/[^\w]/g, '');
-          inputs['dtend'].value = end.replace(/[^\w]/g, '');
-        }
-        // Handles converting timestamp to ISO 8601 for dates used by ics file attached on the event form
-        if (Object.hasOwn(inputs,'dates_and_times')) {
 
+        function convertIcsDate(value) {
+          const numberValue = Number(value)*1000;
+          const date = new Date(numberValue);
+          const dateIso = date.toISOString();
+          const dateIsoStripped = dateIso.replace(/[-:.]/g, '');
+          return dateIsoStripped.slice(0,-4) + 'Z';
+        }
+
+        // Handles converting timestamp to ISO 8601 for dates used by ics file attached on the event form
+        if (Object.hasOwn(inputs,'dtstamp')||Object.hasOwn(inputs,'dtstart')||Object.hasOwn(inputs,'dtend')) {
+          inputs['dtstamp'].value = convertIcsDate(inputs['dtstart'].value);
+          inputs['dtstart'].value = convertIcsDate(inputs['dtstart'].value);
+          inputs['dtend'].value = convertIcsDate(inputs['dtend'].value);
+        }
+
+        // Handles converting timestamp to Salesforce date for Showdate1
+        if (Object.hasOwn(inputs,'dates_and_times')) {
+          const timestamp = Number(inputs['dates_and_times'].value);
+          const date = new Date(timestamp * 1000); // JavaScript timestamps are in seconds
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is zero-indexed
+          const day = String(date.getDate()).padStart(2, '0');
+          const formattedDate = `${year}-${month}-${day}`;
+          inputs['dates_and_times'].value = formattedDate;
         }
 
       }
