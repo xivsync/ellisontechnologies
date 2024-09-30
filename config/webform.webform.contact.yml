@@ -70,7 +70,7 @@ elements: |-
     '#placeholder': 'State *'
     '#required': true
   city:
-    '#type': city
+    '#type': textfield
     '#title': 'City *'
     '#title_display': invisible
     '#placeholder': 'City *'
