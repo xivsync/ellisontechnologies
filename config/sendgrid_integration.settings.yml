@@ -1,14 +1,14 @@
 _core:
   default_config_hash: g4qz7cPnloXFwtnLYfIKI2VS0gf_UFOz_I2uQiiulC8
-apikey: ellisonmarch12024
+apikey: ellisonoct32024
 test_defaults:
-  to: tim.bednar+sgmarch334@gmail.com
+  to: tim.bednar+oct3@gmail.com
   subject: 'Test Email from SendGrid Module'
   body:
     value: '<p><strong>Test Message for SendGrid.</strong></p>'
     format: basic_html
-  from_name: ''
-  to_name: ''
+  from_name: TimTesting
+  to_name: 'Tim Bednar'
   reply_to: ''
 trackopens: 1
 trackclicks: 1

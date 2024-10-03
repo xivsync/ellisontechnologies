@@ -14,9 +14,9 @@ open: null
 close: null
 uid: 1
 template: false
-archive: true
+archive: false
 id: newsletter_form
-title: 'Newsletter form'
+title: 'Newsletter Sign Up'
 description: '<p>Newsletter signup webform. Located in footer.</p>'
 categories: {  }
 elements: |-

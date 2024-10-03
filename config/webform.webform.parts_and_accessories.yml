@@ -15,7 +15,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: true
+archive: false
 id: parts_and_accessories
 title: 'Order Parts'
 description: '<p>Parts order form for Parts and Accessories.</p>'
