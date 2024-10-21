@@ -1,6 +1,6 @@
 langcode: en
 id: registration_2
-label: 'Registration 2'
+label: 'JOTP 11.14.2024'
 weight: 0
 type: salesforce_mapping
 key: ''
@@ -25,7 +25,7 @@ sync_triggers:
   pull_delete: false
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
-drupal_bundle: registration_2
+drupal_bundle: registration_11_14_2024
 field_mappings:
   -
     drupal_field_type: WebformElements
@@ -142,6 +142,7 @@ field_mappings:
 status: true
 dependencies:
   config:
+    - webform.webform.registration_11_14_2024
     - webform.webform.registration_2
   module:
     - salesforce_push

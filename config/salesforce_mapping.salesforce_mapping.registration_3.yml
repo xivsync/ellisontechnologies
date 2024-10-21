@@ -1,6 +1,6 @@
 langcode: en
 id: registration_3
-label: 'Registration 3'
+label: 'Registration (SAMPLE)'
 weight: 0
 type: salesforce_mapping
 key: ''

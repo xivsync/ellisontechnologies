@@ -1,6 +1,6 @@
 langcode: en
 id: registration
-label: Registration
+label: 'JOTP '
 weight: 0
 type: salesforce_mapping
 key: ''

@@ -199,6 +199,25 @@ elements: |-
     '#title': gclid
   captcha:
     '#type': captcha
+  processed_text:
+    '#type': processed_text
+    '#text': |-
+      <script>
+              (window.__ctm_loaded || []).push(function() {
+                  __ctm.form.capture('app.calltrackingmetrics.com', // the capture host
+                      'FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29', // this FormReactor
+                      document.getElementById('webform-submission-contact-node-45-add-form'),  // ID of the web form you want to attach your FormReactor
+                      "8664851591", // the tracking number used for associating visitor data and caller ID consumers will see
+                      {
+                  name: ['edit-firstname', 'edit-lastname'],
+                  country_code: "1", // the expected country code e.g. +1, +44, +55, +61, etc... the plus is ignored
+                  phone: "edit-phone", // ID of the lead phone number field
+                  email: "edit-email", // optional, ID of the lead email field
+                  fields: ['edit-company', 'edit-firstname', 'edit-lastname', 'edit-title', 'edit-email', 'edit-street', 'edit-city', 'edit-state', 'edit-postalcode', 'edit-leads-interest-c', 'edit-how-did-you-hear-c', 'edit-webform-best-time-c', 'edit-industry', 'edit-description'] // list of additional field IDs in the form you want to capture
+                      });
+              });
+      </script>
+    '#format': source
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -392,7 +411,7 @@ handlers:
     handler_id: push_form_data_to_call_tracking_metrics
     label: 'Push form data to Call Tracking Metrics'
     notes: ''
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings: {  }
