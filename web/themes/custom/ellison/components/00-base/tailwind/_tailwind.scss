@@ -6028,6 +6028,14 @@ div[role=alert] {
   display:none;
 }
 
+.form-item--captcha-response, .form-item--captcha-response {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* handles collection of horizontal teasers */
 
 .collection.display-as-rows {

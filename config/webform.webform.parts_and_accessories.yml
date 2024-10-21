@@ -141,10 +141,6 @@ elements: |-
     '#type': hidden
     '#title': form_name
     '#default_value': '[current-page:title]'
-  captcha:
-    '#type': captcha
-    '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
-    '#captcha_admin_mode': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

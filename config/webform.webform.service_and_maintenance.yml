@@ -127,8 +127,6 @@ elements: |-
   webformsid__c:
     '#type': hidden
     '#title': webformsid__c
-  captcha:
-    '#type': captcha
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

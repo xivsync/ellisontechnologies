@@ -519,3 +519,11 @@ div[role=alert] {
 .captcha.captcha-type-challenge--math legend {
   display:none;
 }
+
+.form-item--captcha-response, .form-item--captcha-response {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

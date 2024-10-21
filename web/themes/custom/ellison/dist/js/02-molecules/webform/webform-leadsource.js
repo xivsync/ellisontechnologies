@@ -1,0 +1,1 @@
+Drupal.behaviors.top={attach:function(l){once("handleLeadsource","input[name=leadsource]",l).forEach((function(l){var e=drupalSettings.ellison.gclid||null;console.log("gclidDrupalSetting",e),e&&(l.value="Google Ads")}))}};

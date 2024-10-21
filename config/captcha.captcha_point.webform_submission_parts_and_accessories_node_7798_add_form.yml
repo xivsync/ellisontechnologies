@@ -1,0 +1,7 @@
+uuid: cb68f4f3-57cf-4524-b4ff-e5af4e841a76
+langcode: en
+status: true
+dependencies: {  }
+formId: webform_submission_parts_and_accessories_node_7798_add_form
+captchaType: image_captcha/Image
+label: webform-submission-parts-and-accessories-node-7798-add-form

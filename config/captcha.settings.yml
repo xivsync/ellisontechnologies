@@ -11,5 +11,5 @@ whitelist_ips: ''
 wrong_captcha_response_message: 'The answer you entered was incorrect.'
 default_validation: 1
 persistence: 0
-enable_stats: true
-log_wrong_responses: true
+enable_stats: false
+log_wrong_responses: false
