@@ -5,7 +5,7 @@ Drupal.behaviors.micromodal = {
     // any given element one time at most, regardless of how many times
     // the behaviour itself is called (it is not sufficient in general
     // to assume an element will only ever appear in a single context).
-    once('enableMicromodal', '#block-views-block-videos-block-1', context).forEach(
+    once('enableMicromodal', '.collection--videos', context).forEach(
       
       function (element) {
 
