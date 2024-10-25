@@ -1,4 +1,4 @@
-Drupal.behaviors.top = {
+Drupal.behaviors.leadsource = {
   attach: function (context, settings) {
     // Use context to filter the DOM to only the elements of interest,
     // and use once() to guarantee that our callback function processes
