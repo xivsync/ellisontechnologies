@@ -38,6 +38,14 @@ third_party_settings:
         source: field_tag
         weight: 0
         label: Explode
+      ef2110cb-696d-4f47-94aa-f67929b37924:
+        separator: ','
+        limit: null
+        uuid: ef2110cb-696d-4f47-94aa-f67929b37924
+        plugin: explode
+        source: field_video_categories
+        weight: 0
+        label: Explode
 label: 'Remote Video'
 id: remote_video
 description: ''
