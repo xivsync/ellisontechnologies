@@ -29,5 +29,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: tags
+    auto_create_bundle: products
 field_type: entity_reference

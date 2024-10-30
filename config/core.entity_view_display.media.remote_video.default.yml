@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.remote_video.feeds_item
     - field.field.media.remote_video.field_media_oembed_video
     - field.field.media.remote_video.field_tag
+    - field.field.media.remote_video.field_video_categories
     - media.type.remote_video
   module:
     - media
@@ -27,10 +28,19 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_video_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   created: true
   feeds_item: true
   field_tag: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

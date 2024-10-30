@@ -1,0 +1,8 @@
+uuid: 13e33c7f-37a4-4d3b-8cfe-b212fd72347f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Video Category'
+vid: video_category
+description: 'Combine list of product, video category and region terms for videos'
+weight: 0

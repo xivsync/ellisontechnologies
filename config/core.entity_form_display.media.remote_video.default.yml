@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.remote_video.feeds_item
     - field.field.media.remote_video.field_media_oembed_video
     - field.field.media.remote_video.field_tag
+    - field.field.media.remote_video.field_video_categories
     - media.type.remote_video
   module:
     - media
@@ -36,6 +37,16 @@ content:
     weight: 26
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_video_categories:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

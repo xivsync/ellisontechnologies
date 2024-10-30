@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.media.remote_video.field_media_oembed_video
     - field.field.media.remote_video.field_tag
+    - field.field.media.remote_video.field_video_categories
     - media.type.remote_video
   module:
     - feeds_log
@@ -91,6 +92,11 @@ custom_sources:
     label: name
     machine_name: name
     type: csv
+  field_video_categories:
+    value: field_video_categories
+    label: field_video_categories
+    machine_name: field_video_categories
+    type: csv
 mappings:
   -
     target: field_media_oembed_video
@@ -117,3 +123,13 @@ mappings:
       feeds_item: guid
       autocreate: 1
       autocreate_bundle: tags
+  -
+    target: field_video_categories
+    map:
+      target_id: field_video_categories
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 1
+      autocreate_bundle: video_category

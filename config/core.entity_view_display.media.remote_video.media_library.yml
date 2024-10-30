@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.remote_video.feeds_item
     - field.field.media.remote_video.field_media_oembed_video
     - field.field.media.remote_video.field_tag
+    - field.field.media.remote_video.field_video_categories
     - image.style.medium
     - media.type.remote_video
   module:
@@ -34,5 +35,7 @@ hidden:
   feeds_item: true
   field_media_oembed_video: true
   field_tag: true
+  field_video_categories: true
   name: true
+  search_api_excerpt: true
   uid: true

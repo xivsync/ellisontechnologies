@@ -1,0 +1,29 @@
+uuid: 380fceaf-e2ca-4fa2-8eea-84487122e9c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_categories
+    - media.type.remote_video
+    - taxonomy.vocabulary.video_category
+id: media.remote_video.field_video_categories
+field_name: field_video_categories
+entity_type: media
+bundle: remote_video
+label: 'Video Categories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      video_category: video_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
