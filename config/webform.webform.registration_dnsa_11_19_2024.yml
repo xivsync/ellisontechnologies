@@ -17,9 +17,10 @@ categories: {  }
 elements: |-
   company:
     '#type': textfield
-    '#title': 'Company Name'
+    '#title': 'Company Name *'
     '#title_display': invisible
-    '#placeholder': Company
+    '#placeholder': 'Company *'
+    '#required': true
   firstname:
     '#type': textfield
     '#title': 'First Name *'
@@ -53,21 +54,19 @@ elements: |-
     '#required': true
   street:
     '#type': textfield
-    '#title': 'Address *'
+    '#title': Address
     '#title_display': invisible
-    '#placeholder': 'Address *'
-    '#required': true
+    '#placeholder': Address
+  city:
+    '#type': textfield
+    '#title': City
+    '#title_display': invisible
+    '#placeholder': City
   state:
     '#type': textfield
     '#title': 'State *'
     '#title_display': invisible
     '#placeholder': 'State *'
-    '#required': true
-  city:
-    '#type': textfield
-    '#title': City
-    '#title_display': invisible
-    '#placeholder': 'City *'
     '#required': true
   postalcode:
     '#type': textfield
