@@ -93,7 +93,8 @@
         "drupal/config_direct_save": "^3.0",
         "drupal/recaptcha": "^3.4",
         "drupal/recaptcha_v3": "^2.0",
-        "drupal/captcha": "^2.0"
+        "drupal/captcha": "^2.0",
+        "drupal/views_bulk_edit": "^2.9"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
