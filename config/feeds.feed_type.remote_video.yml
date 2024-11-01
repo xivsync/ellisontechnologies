@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.media.remote_video.field_media_oembed_video
-    - field.field.media.remote_video.field_tag
     - field.field.media.remote_video.field_video_categories
     - media.type.remote_video
   module:
@@ -30,14 +29,6 @@ third_party_settings:
     source: true
   feeds_tamper:
     tampers:
-      575fdc50-fc27-4f16-a1e2-6e38252e5f99:
-        separator: ','
-        limit: null
-        uuid: 575fdc50-fc27-4f16-a1e2-6e38252e5f99
-        plugin: explode
-        source: field_tag
-        weight: -9
-        label: Explode
       ef2110cb-696d-4f47-94aa-f67929b37924:
         separator: ','
         limit: null
@@ -46,14 +37,6 @@ third_party_settings:
         source: field_video_categories
         weight: -9
         label: Explode
-      da82ae3f-2e8a-438a-be0d-e8fa35f4e6e6:
-        default_value: Other
-        only_if_empty: true
-        uuid: da82ae3f-2e8a-438a-be0d-e8fa35f4e6e6
-        plugin: default_value
-        source: field_tag
-        weight: -10
-        label: 'Set value or default value'
       e353accd-6124-4529-b78c-cd8f913cd9a2:
         default_value: Other
         only_if_empty: true
@@ -137,16 +120,6 @@ mappings:
       language: null
     unique:
       value: 1
-  -
-    target: field_tag
-    map:
-      target_id: field_tag
-    settings:
-      language: ''
-      reference_by: name
-      feeds_item: guid
-      autocreate: 1
-      autocreate_bundle: tags
   -
     target: field_video_categories
     map:

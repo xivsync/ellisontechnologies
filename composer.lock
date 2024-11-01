@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d626ef3a2c141629b738851e98f1f271",
+    "content-hash": "7cd487e38ebe99fe81df0771f14f0e2b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1775,17 +1775,17 @@
         },
         {
             "name": "drupal/bulk_edit_terms",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bulk_edit_terms.git",
-                "reference": "8.x-1.6"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bulk_edit_terms-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "18589a4d9b60b56f7636dd5037c1848cfe6a058f"
+                "url": "https://ftp.drupal.org/files/projects/bulk_edit_terms-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "2fc930b08658e2493e4e473e4c8a47d1bd0db496"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10"
@@ -1793,8 +1793,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1702309951",
+                    "version": "8.x-1.7",
+                    "datestamp": "1709314409",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

@@ -75,7 +75,7 @@
         "drupal/media_video_micromodal": "^1.1",
         "drupal/mailsystem": "^4.4",
         "drupal/config_suite": "^2.0",
-        "drupal/bulk_edit_terms": "^1.5",
+        "drupal/bulk_edit_terms": "^1.7",
         "drupal/pate": "^1.2",
         "simshaun/recurr": "^5.0",
         "drupal/view_unpublished": "^1.1",
@@ -138,7 +138,10 @@
         "patches": {
             "drupal/smtp": {
               "Error sending email invalid address - 3323386": "https://www.drupal.org/files/issues/2023-03-16/error-sending-email-16.patch"
-            }
+            },
+            "drupal": {
+                "Allow multiple vocabularies in the taxonomy filter - 2784233": "https://www.drupal.org/files/issues/2024-07-05/2784233-270.patch"
+              }
           }
     },
     "autoload": {
