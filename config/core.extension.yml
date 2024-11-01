@@ -133,6 +133,7 @@ module:
   update: 0
   user: 0
   view_unpublished: 0
+  views_bulk_edit: 0
   views_natural_sort: 0
   views_ui: 0
   webform: 0
