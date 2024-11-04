@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.remote_video.feeds_item
+    - field.field.media.remote_video.field_alternate_title
     - field.field.media.remote_video.field_media_oembed_video
     - field.field.media.remote_video.field_tag
     - field.field.media.remote_video.field_video_categories
@@ -20,6 +21,7 @@ content: {  }
 hidden:
   created: true
   feeds_item: true
+  field_alternate_title: true
   field_media_oembed_video: true
   field_tag: true
   field_video_categories: true

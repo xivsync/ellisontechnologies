@@ -1,0 +1,19 @@
+uuid: b00ec9fd-3113-456f-8fc5-e638a0dde359
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_alternate_title
+    - media.type.remote_video
+id: media.remote_video.field_alternate_title
+field_name: field_alternate_title
+entity_type: media
+bundle: remote_video
+label: 'Alternate title'
+description: 'Add alternate title to overwrite the title from the oembed API.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
