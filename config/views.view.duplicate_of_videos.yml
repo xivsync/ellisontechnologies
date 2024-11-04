@@ -13,7 +13,6 @@ dependencies:
     - media_video_micromodal
     - taxonomy
     - user
-    - views_natural_sort
 _core:
   default_config_hash: diywn6VdMoQOlDA-xslKdKrDko3SsTKfaK3WBG45UAg
 id: duplicate_of_videos
@@ -213,15 +212,13 @@ display:
           content: 'No media available.'
           tokenize: false
       sorts:
-        name:
-          id: name
-          table: media_field_data
-          field: name
+        field_weight_value:
+          id: field_weight_value
+          table: media__field_weight
+          field: field_weight_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: media
-          entity_field: name
           plugin_id: standard
           order: ASC
           expose:
