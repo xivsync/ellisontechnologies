@@ -1,3 +1,7 @@
 .micromodal-header {
   @apply flex flex-row gap-2 items-baseline;
 }
+
+.views-field-field-alternate-title {
+  @apply hidden;
+}
