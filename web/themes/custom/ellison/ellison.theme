@@ -57,62 +57,24 @@ function ellison_preprocess_region(&$variables)
 
   if ($variables['region'] === 'footer') {
 
-    // Add region and region ID
-    $session_region = $session->get('region');
-    $session_region_id = $session->get('region_id');
-    $variables['session_region'] = $session_region ? $session_region : 'Select Location';
+    // set default values
+    $twig_region = 'Select Location';
 
+    // update session region data from cookie if exists
+    if (isset($_COOKIE['ellison_region'])) {
+      $ellison_region = $_COOKIE['ellison_region'];
+      $region_values = json_decode(urldecode($ellison_region));
+      $region_name = $region_values->region;
+      // update twig values
+      $twig_region = 'Your loction is ' . $region_name;
+      // set drupal setting values based on cookie values
+      $variables['#attached']['drupalSettings']['ellison']['session_region'] = $region_name;
+      $variables['#attached']['drupalSettings']['ellison']['session_region_id'] = $region_values->region_id;
+      $variables['#attached']['drupalSettings']['ellison']['session_sf_region_id'] = $region_values->sf_region_id;
 
-    // default region is southern california in drupalSettings
-    $variables['#attached']['drupalSettings']['ellison']['session_region'] = $session_region ? $session_region : 'default';
-    $variables['#attached']['drupalSettings']['ellison']['session_region_id'] = $session_region_id ? $session_region_id : '0';
-
-    switch ($session_region_id) {
-      case '106':
-        // Minnesota
-        $session_sf_region_id = '308';
-        break;
-      case '107':
-        // Northwest
-        $session_sf_region_id = '210';
-        break;
-      case '108':
-        // Wisconsin
-        $session_sf_region_id = '307';
-        break;
-      case '110':
-        // 'TriStates - Iowa/NE'
-        $session_sf_region_id = '320';
-        break;
-      case '116':
-        // Ohio
-        $session_sf_region_id = '355';
-        break;
-      case '109':
-        // Northern - California
-        $session_sf_region_id = '219';
-        break;
-      case '111':
-        // 'Southern - California'
-        $session_sf_region_id = '218';
-        break;
-      case '115':
-        // 'Southeast - Nashville'
-        $session_sf_region_id = '450';
-        break;
-      case '112':
-        // 'Illinois'
-        $session_sf_region_id = '304';
-        break;
-      case '114':
-        // Indiana
-        $session_sf_region_id = '340';
-        break;
-      default:
-        // 'Southern - California'
-        $session_sf_region_id = '218';
     }
-    $variables['#attached']['drupalSettings']['ellison']['session_sf_region_id'] = $session_sf_region_id ? $session_sf_region_id : '0';
+    // set region name from cookie and send to twig
+    $variables['session_region'] = $twig_region;
 
     // @todo see if this needs to be done to all regions
     $variables['#cache']['contexts'][] = 'session';

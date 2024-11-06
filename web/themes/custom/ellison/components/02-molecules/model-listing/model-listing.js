@@ -49,8 +49,6 @@ Drupal.behaviors.modelListing = {
           brand_regions: uniqueRegionsList,
           user_region: userRegion,
         }
-
-        //drupalSettings.ellisonUser = ellisonUser;
         
       }
       

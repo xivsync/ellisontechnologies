@@ -9,7 +9,6 @@ Drupal.behaviors.leadsource = {
       
       function (element) {
         let gclidDrupalSetting = drupalSettings.ellison.gclid || null;
-        console.log('gclidDrupalSetting',gclidDrupalSetting);
         if (gclidDrupalSetting) {
           element.value = 'Google Ads';
         }

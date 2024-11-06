@@ -44,16 +44,64 @@ class RegionHandler extends WebformHandlerBase {
     if (!empty($values['region'])) {
       // get term id
       $region_id = $values['region'];
-      // get term name
+      // set Salesforce region id
+      switch ($region_id) {
+        case '106':
+          // Minnesota
+          $sf_region_id = '308';
+          break;
+        case '107':
+          // Northwest
+          $sf_region_id = '210';
+          break;
+        case '108':
+          // Wisconsin
+          $sf_region_id = '307';
+          break;
+        case '110':
+          // 'TriStates - Iowa/NE'
+          $sf_region_id = '320';
+          break;
+        case '116':
+          // Ohio
+          $sf_region_id = '355';
+          break;
+        case '109':
+          // Northern - California
+          $sf_region_id = '219';
+          break;
+        case '111':
+          // 'Southern - California'
+          $sf_region_id = '218';
+          break;
+        case '115':
+          // 'Southeast - Nashville'
+          $sf_region_id = '450';
+          break;
+        case '112':
+          // 'Illinois'
+          $sf_region_id = '304';
+          break;
+        case '114':
+          // Indiana
+          $sf_region_id = '340';
+          break;
+        default:
+          // 'Southern - California'
+          $sf_region_id = '218';
+      }
+      // set region name from region terms
       $region = \Drupal\taxonomy\Entity\Term::load($region_id)->get('name')->value;
-      // get sssion
-      $session = \Drupal::request()->getSession();
-      // add region value to session
-      $session->set('region', $region);
-      $session->set('region_id', $region_id);
-      // get region value from session and send to logger
-      $session_region = $session->get('region');
-      \Drupal::logger('ellison_webform')->info('The region "' . $session_region . ' (#' . $region_id . ')" added to session successfully.');
+      // set cookie with region json object
+      $region_values = [
+        'region_id' => $region_id,
+        'region' => $region,
+        'sf_region_id' => $sf_region_id
+      ];
+      $cookie_value = json_encode($region_values, true);
+      $host = $_SERVER['HOST'];
+      setcookie('ellison_region', $cookie_value, time() + 15768000, '/', $host, true); // Expires in 6 months
+      \Drupal::logger('ellison_webform')->info('The region "' . $value. ' (Salesforce #' . $sf_region_id . ')" saved to ellison_region cookie successfully.');
     
     }
 
