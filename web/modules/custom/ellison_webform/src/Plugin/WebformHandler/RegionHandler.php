@@ -101,7 +101,7 @@ class RegionHandler extends WebformHandlerBase {
       $cookie_value = json_encode($region_values, true);
       $host = $_SERVER['HOST'];
       setcookie('ellison_region', $cookie_value, time() + 15768000, '/', $host, true); // Expires in 6 months
-      \Drupal::logger('ellison_webform')->info('The region "' . $value. ' (Salesforce #' . $sf_region_id . ')" saved to ellison_region cookie successfully.');
+      \Drupal::logger('ellison_webform')->info('The region "' . $cookie_value. ' (Salesforce #' . $sf_region_id . ')" saved to ellison_region cookie successfully.');
     
     }
 
