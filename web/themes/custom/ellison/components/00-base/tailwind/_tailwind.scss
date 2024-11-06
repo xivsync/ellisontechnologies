@@ -6316,6 +6316,9 @@ div[role=alert] {
     flex-direction: column;
   }
   .views-fields {
+    justify-content: space-between;
+  }
+  .views-fields {
     gap: 0.5rem;
   }
   @media (min-width: 992px) {
