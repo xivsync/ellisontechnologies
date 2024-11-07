@@ -1,1 +1,1 @@
-Drupal.behaviors.siteFooter={attach:function(o){once("location",".footer__local",o).forEach((function(o){""!=function(o){for(var e,n="ellison_region=",t=decodeURIComponent(document.cookie).split(";"),r=0;r<t.length;r++){for(e=t[r];" "==e.charAt(0);)e=e.substring(1);if(0==e.indexOf(n))return e.substring(n.length,e.length)}return""}()||o.getElementsByTagName("a")[0].click()}))}};
+Drupal.behaviors.siteFooter={attach:function(o){once("location",".footer__local",o).forEach((function(o){Cookies.get("ellison_region")||o.getElementsByTagName("a")[0].click()}))}};

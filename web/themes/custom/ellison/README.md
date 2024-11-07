@@ -357,10 +357,9 @@ The workflow for promoting a library item and then re-using it is as follows:
 ## Users selected location also called regions
 
 - the first time a visitor comes to the site, they should get a modal form to select a location.
-- the location information (region term name, region term ID, and Salesforce region ID) are saved both to a cookie `ellison_region` and to `drupalSettings.ellison`
-- `drupalSettings.ellison.region_id` is used on the Location page filter the locations based on users selection
-- `drupalSettings.ellison.region_id` is used on the Contact us page filter the locations on the right sidebar based on users selection
-- `drupalSettings.ellison.region_sf_id` is used to populate the `region__c` form input whenever it is used
+- the location information (region term name, region term ID, and Salesforce region ID) are saved a cookie `ellison_region`
+- the cookie values are used by scripts block.js and site-footer.js
+- the cookie values are also used by any webform with a `region__c` input to add the Salesforce region ID
 
 **Salesforce region IDs**
 
@@ -417,7 +416,7 @@ In both cases above, CTM sets several values in Salesforce which are required.
 
 ### Pardot
 
-Assigning regions are handled by the **Pardot form handler**. The Drupal Locations webform handler sets both `ellison_region` cookie and `drupalSettings.ellison` values. The follow numbers are sent to Salesforce so that Region is properly assigned.
+Assigning regions are handled by the **Pardot form handler**. The Drupal Locations webform handler sets a `ellison_region` cookie. The follow numbers are sent to Salesforce so that Region is properly assigned.
 
 308|(308) Minnesota
 210|(210) Northwest - Oregon

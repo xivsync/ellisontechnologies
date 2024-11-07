@@ -9,10 +9,9 @@ Drupal.behaviors.handleWebform = {
     once('handleWebform', '.webform-submission-form', context).forEach(
       function (element) {
         const inputs = element.elements;
-        if (Object.hasOwn(drupalSettings, "ellison") && Object.hasOwn(inputs,'region__c') ) {
-          // Handles setting region correctly in Saleforce
-          const session_sf_region_id = drupalSettings.ellison.session_sf_region_id;
-          inputs['region__c'].value = session_sf_region_id;
+        if (Cookies.get('ellison_region') && Object.hasOwn(inputs,'region__c') ) {
+          let ellison_region = JSON.parse(Cookies.get("ellison_region"));
+          inputs['region__c'].value = ellison_region.sf_region_id || '';
         }
 
         function convertIcsDate(value) {

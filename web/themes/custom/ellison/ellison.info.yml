@@ -6,6 +6,7 @@ core_version_requirement: ^9 || ^10
 dependencies:
   - 'drupal:components (^3.0)'
   - 'drupal:emulsify_twig (^4.0)'
+  - js_cookie:js_cookie
 libraries:
   - ellison/global
 ckeditor5-stylesheets:
