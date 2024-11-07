@@ -54,33 +54,7 @@ function ellison_preprocess_region(&$variables)
 {
 
   $session = \Drupal::request()->getSession(); 
-
-  if ($variables['region'] === 'footer') {
-
-    // set default values
-    $twig_region = 'Select Location';
-
-    // update session region data from cookie if exists
-    if (isset($_COOKIE['ellison_region'])) {
-      $ellison_region = $_COOKIE['ellison_region'];
-      $region_values = json_decode(urldecode($ellison_region));
-      $region_name = $region_values->region;
-      // update twig values
-      $twig_region = 'Your loction is ' . $region_name;
-      // set drupal setting values based on cookie values
-      $variables['#attached']['drupalSettings']['ellison']['session_region'] = $region_name;
-      $variables['#attached']['drupalSettings']['ellison']['session_region_id'] = $region_values->region_id;
-      $variables['#attached']['drupalSettings']['ellison']['session_sf_region_id'] = $region_values->sf_region_id;
-
-    }
-    // set region name from cookie and send to twig
-    $variables['session_region'] = $twig_region;
-
-    // @todo see if this needs to be done to all regions
-    $variables['#cache']['contexts'][] = 'session';
-
-  }
-
+  
   if ($variables['region'] === 'header') {
     
     // debugging parameter values 

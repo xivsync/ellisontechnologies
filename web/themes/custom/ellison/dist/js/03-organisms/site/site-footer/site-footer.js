@@ -1,1 +1,1 @@
-Drupal.behaviors.siteFooter={attach:function(o){once("location",".footer__local",o).forEach((function(o){Cookies.get("ellison_region")||o.getElementsByTagName("a")[0].click()}))}};
+Drupal.behaviors.siteFooter={attach:function(e){once("location",".footer__local",e).forEach((function(e){if(Cookies.get("ellison_region")){var o=JSON.parse(Cookies.get("ellison_region")).region||"";document.getElementById("user-location").innerText=o}else e.getElementsByTagName("a")[0].click()}))}};
