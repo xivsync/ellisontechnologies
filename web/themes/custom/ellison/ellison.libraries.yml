@@ -6,6 +6,10 @@ global:
   js:
     https://367150.tctm.xyz/t.js: {}
     https://367150.tctm.co/formreactor.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/js-cookie
 
 
 # IE 11 support for SVG disabled.
@@ -21,6 +25,10 @@ block:
   js:
     # dist/js/02-molecules/block/block.js: {}
     components/02-molecules/block/block.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/js-cookie
 dropdown:
   js:
     dist/js/02-molecules/dropdown/dropdown.js: {}
@@ -55,12 +63,21 @@ onpage-navigation:
     - core/once
 site-footer:
   js:
-    dist/js/03-organisms/site/site-footer/site-footer.js: {}
+    #dist/js/03-organisms/site/site-footer/site-footer.js: {}
+    components/03-organisms/site/site-footer/site-footer.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/js-cookie
 site-header:
   js:
     components/03-organisms/site/site-header/site-header.js: {}
     components/02-molecules/scroll-top/scroll-top.js: {}
     components/02-molecules/webform/webform-leadsource.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/js-cookie
 slider:
   js:
     https://cdn.jsdelivr.net/npm/@glidejs/glide: {}
@@ -91,3 +108,4 @@ webform:
   dependencies:
     - core/drupal
     - core/once
+    - core/js-cookie

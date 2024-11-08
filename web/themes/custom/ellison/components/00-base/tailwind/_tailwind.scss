@@ -4507,6 +4507,10 @@ body.unpublished .breadcrumb__items::before {
   gap: 0.5rem;
 }
 
+.views-field-field-alternate-title {
+  display: none;
+}
+
 .quote {
   margin: 0px;
   display: flex;
@@ -6310,6 +6314,9 @@ div[role=alert] {
   }
   .views-fields {
     flex-direction: column;
+  }
+  .views-fields {
+    justify-content: space-between;
   }
   .views-fields {
     gap: 0.5rem;

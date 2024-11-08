@@ -23,7 +23,7 @@ Drupal.behaviors.micromodal = {
       
     );
 
-    once('copyVideoLink', '.micromodal-form', context).forEach(
+    once('copyVideoLink', '.collection--videos .collection_item--video', context).forEach(
       
       function (element) {
 
@@ -31,28 +31,32 @@ Drupal.behaviors.micromodal = {
 
         function copyToClipboard(event) {
 
-          console.log('event',event);
-  
           // Get the text field
           var copyText = event.target[1];
 
           // Select the text field
           copyText.select();
           copyText.setSelectionRange(0, 99999); // For mobile devices
-          
-
           let url = `${window.location.origin}${window.location.pathname}${window.location.search}#${copyText.value}`
 
           // Copy the text inside the text field
           navigator.clipboard.writeText(url);
-
           window.confirm("Copied the text: " + url);
-
           event.preventDefault();
 
         }
+
+        // #block-views-block-videos-block-1 > div.form-container > div > div.collection.collection--videos.display-as-cols > div:nth-child(5) > div.views-field.views-field-field-alternate-title > div
+        const alterateNameEl = element.querySelector('.views-field-field-alternate-title > div');
+        if (alterateNameEl) {
+          const alterateName = alterateNameEl.innerText;
+          let cleanName = alterateName.replace(/[^a-zA-Z0-9 ]/g, '');
+          if (cleanName !==''){
+            element.querySelector('.myButton').innerText = cleanName;
+          }
+        }
         
-        const form = element;
+        const form = element.querySelector('.micromodal-form');
         form.addEventListener("submit", copyToClipboard);
 
       }

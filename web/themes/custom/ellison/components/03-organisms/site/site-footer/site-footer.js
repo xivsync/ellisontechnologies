@@ -9,10 +9,13 @@ Drupal.behaviors.siteFooter = {
       
       function (element) {
 
-        // get session region from drupal settings
-        const region = drupalSettings.ellison.session_region;
-        // open select location webform if no session_region is set
-        if (region==='default') {
+        // check for region cookie and open modal or add user location to footer
+        if (Cookies.get('ellison_region')) {
+          const ellison_region = JSON.parse(Cookies.get("ellison_region"));
+          const region = ellison_region.region || '';
+          const locationEl = document.getElementById("user-location");
+          locationEl.innerText = region;
+        } else {
           element.getElementsByTagName('a')[0].click();
         }
         

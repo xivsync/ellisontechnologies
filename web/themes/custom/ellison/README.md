@@ -10,7 +10,7 @@ This is a theme built with Storybook, Tailwind, Components, and Twig hosted by P
 
 Ellison Technologies uses Pantheon, it should be noted that Code move from Dev to Live. But Databases and Files move down from Live to Dev. It is recommended to keep Dev and Test up to date with Live to make updating configurations easier.
 
-### How to develop using SFTP mode
+### How to develop using SFTP mode (strongly not recommended)
 
 If local development is not ideal, then use SFTP to develop directly on Pantheon Dev environment. This option takes the least time to get set up.
 
@@ -20,7 +20,7 @@ https://docs.pantheon.io/guides/sftp
 
 This assumes you've already setup local development using DDEV (see below).
 
-Please note that the `master` branch always goes from Dev to Test to Live. Database changes always go from Live to Test and Dev. You can not push database changes from a lower environment to Live.
+Please note that the `master` branch always goes from Dev to Test to Live. Database changes should go from Live to Test and Dev. You **should not** push database changes from a lower environment to Live.
 
 - open root folder
 - `colima start --dns 1.1.1.1 --cpu 4 --memory 8`
@@ -28,19 +28,26 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - `ddev drush user:login` will get you a onetime link to login as `admin` locally
 - `git fetch origin` then `git pull` the `master` branch (at this time ellisontechnolgies does not use Multidev environments)
 - update Test and Dev with Live databases
-- download the most recent backup of the Live environment and `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
-- `ddev cex` will export all the Live configs which should overwrite all your local configs
+- download the most recent **database backup of the Live environment** and `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
+- `ddev cex` will export all the **Live configs** which should overwrite all your local configs.
+- It is critical to observe the changed configs as the client may have updated some configs (i.e. webforms) in the Live database. It is critical to pay attention to NOT regressing configs, or you may undo Live changes (i.e. revert changes or delete a webform).
 - make changes
 - in the theme folder run `npm run tailwind`
 - in the theme folder run `npm run ckeditor` (rarely needed)
-- commit changes to `master` which includes the built files
+- run a `ddev drush cex -y` to export any configuration changes and review and commit ONLY the needed configs
+- commit changes to `master` which includes the config files and all of the built files
 - when ready `git push`
-- Test on Dev environment
-- When ready merge to Test using Pantheon tools 
+- after code changes are on Dev download the Live database
+- in Drupal admin go to **Configurations > Development > Synchronize** and click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms.
+- review on Dev environment
+- When ready merge to Test using Pantheon tools by ALWAYS copying down the Live database and files
+- after code is on Test in Drupal admin go to **Configurations > Development > Synchronize** and click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms
 - Now have the client UAT on Test
 - When ready merge to Production using Pantheon tools
+- it is recommended at this point to create a backup of the Live site incase the configuration import does not work as expected
+- after code is on Live in Drupal admin go to **Configurations > Development > Synchronize** and click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms
 
-### How to start developing locally using DDEV (Mac)
+### How to start developing locally using DDEV (Mac only instructions)
 
 Get access to `ellisontechnologies` site from Trinet Solutions. And make sure that **Development Mode is set to Git not SFTP**.
 
@@ -81,25 +88,13 @@ https://ddev.readthedocs.io/en/latest/users/providers/pantheon/#pantheon-quickst
 - `ddev import-db --file=ellisontechnologies_dev_2024-02-23T17-54-32_UTC_database.sql.gz`
 - unzip folder and replace all files in `web/sites/default/files`
 - `ddev drush cr`
-- `ddev restart`
-- `ddev launch` to start site in browsery
+- `ddev start`
 
-  Unless you have tons of CPU/Memory, it is recommanded to turn off Docker Desktop.
-  More on colima [here](https://ddev.readthedocs.io/en/latest/users/docker_installation/#macos-installation-colima)
-
-@todo implement configs
-
-- `ddev updb -y`
-- `ddev drush cr`
-- `ddev drush cim -y`
-- `ddev drush cr`
+Unless you have tons of CPU/Memory, it is recommanded to turn off Docker Desktop. More on colima [here](https://ddev.readthedocs.io/en/latest/users/docker_installation/#macos-installation-colima)
 
 ### Configs
 
-Right now configs are manually sync'd using the Configuration > Development > Configuration Sync > Import/Export. Do this for all required configurations. If you start development from a current database, then Configuration > Development > Configuration Sync will notify you of what changed.
-
-- Make a configuration change, then Configuration > Development > Configuration Sync > Export > Single Item
-- Then in Dev, Test, Live Configuration > Development > Configuration Sync > Import > Single Item
+Any time you fetch origin to local in Drupal admin go to **Configurations > Development > Synchronize** and click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms.
 
 ### To import database
 
@@ -359,15 +354,31 @@ The workflow for promoting a library item and then re-using it is as follows:
 * Now you can go to the next model (or basic page) and add a re-usable library component by searching for the title (see above title)
 * Save page
 
-## Regions
+## Users selected location also called regions
 
-May 20, 2024 regions are only used to populate the `region__c` field found on most webforms.
+- the first time a visitor comes to the site, they should get a modal form to select a location.
+- the location information (region term name, region term ID, and Salesforce region ID) are saved a cookie `ellison_region`
+- the cookie values are used by scripts block.js and site-footer.js
+- the cookie values are also used by any webform with a `region__c` input to add the Salesforce region ID
+
+**Salesforce region IDs**
+
+308|(308) Minnesota
+210|(210) Northwest - Oregon
+307|(307) Wisconsin
+320|(320) TriStates - Iowa/NE
+355|(355) Ohio - Cincinnati
+219|(219) Northern California
+218|(218) Southern California
+450|(450) Southeast - Nashville
+304|(304) Illinois
+340|(340) Indiana
 
 ## Search
 
 Ellison Technologies uses the Search API and Search API Pages to handle search. The core Search module is turned off. The search box in the navigation is a simple form. It does not use a block. The search indexing runs each time the Cron is run. So content is not indexed immediately.
 
-**May 20, 2024** phrases like `"blue house"` look for any match for `blue` and `house`. Phrase indexing is NOT turned on which would only find items that contain the word “blue” immediately followed by the word “house”.  **Why?** Database isze increases by 5x and indexing time by 2x is acceptable for your site.
+Phrases like `"blue house"` look for any match for `blue` and `house`. Phrase indexing is NOW turned on so it will items that contain the word “blue” immediately followed by the word “house”.
 
 ## Email set up
 
@@ -396,13 +407,16 @@ https://test-ellisontechnologies.pantheonsite.io/admin/config/services/sendgrid
 
 ## Webforms
 
-All forms 
+- Build a Quote is not a Drupal webform and uses a script to integrate with Call Tracking Metrics
+- Contact us uses a script to integrate with Call Tracking Metrics
+
+In both cases above, CTM sets several values in Salesforce which are required.
 
 ### Salesforce Mapping
 
 ### Pardot
 
-Assigning regions are handled by the **Pardot form handler**. The Drupal Locations webform handler sets both `session` values and `drupalSettings` values. The follow numbers are sent to Salesforce so that Region is properly assigned.
+Assigning regions are handled by the **Pardot form handler**. The Drupal Locations webform handler sets a `ellison_region` cookie. The follow numbers are sent to Salesforce so that Region is properly assigned.
 
 308|(308) Minnesota
 210|(210) Northwest - Oregon
@@ -415,12 +429,13 @@ Assigning regions are handled by the **Pardot form handler**. The Drupal Locatio
 304|(304) Illinois
 340|(340) Indiana
 
-@todo how campaigns get assigned
+Campaigns for events are set by Pardot.
 
-@todo why is processing Pardot slow
+Newsletter campaign is set by the Drupal webform values for opt-in.
 
 ## Connected App
 
+See the details in the configuration files.
 
 ## SalesForce Module
 
@@ -439,14 +454,12 @@ https://live-ellisontechnologies.pantheonsite.io/admin/content/salesforce
 
 ## Call Tracking Metrics
 
-To send data to Call Tracking Metcis add the CTM Handler to your web form. This handler will send the following fields:
+The custom webform handler is not being used.
 
-If you need to send other field names, this will require a small code change to add the fields to the CTM handler.
+All integration with CTM is handled by a script added to the page which listens to the form submission.
 
 ## Author
 
 Tim Bednar is the initial developer for ellisontechnologies site, theme, and custom modules.
 
 Emulsify is a product of [Four Kitchens &mdash; We make BIG websites](https://fourkitchens.com).
-
-Foobar
