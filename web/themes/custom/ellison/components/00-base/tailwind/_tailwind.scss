@@ -5631,7 +5631,7 @@ form.webform-submission-contact-add-form {
   }
   .form-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 
@@ -9382,3 +9382,4 @@ body.title-thank-you-for-registering--ellison-technologies .breadcrumb__item::af
     background-color: rgb(55 65 81 / var(--tw-bg-opacity)) !important;
   }
 }
+

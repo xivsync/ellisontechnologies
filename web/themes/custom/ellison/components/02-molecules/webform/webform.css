@@ -290,7 +290,7 @@ form.webform-submission-contact-add-form {
 
   .form-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
 }
