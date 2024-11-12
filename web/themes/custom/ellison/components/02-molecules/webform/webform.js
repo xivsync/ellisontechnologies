@@ -103,7 +103,7 @@ Drupal.behaviors.handleWebform = {
           let empOutput = webformElements['edit-emp'];
 
           // get estimated machine price (emp)
-          let emp = empInput.value;
+          let emp = parseInt(empInput.value);
 
           // copy emp to output
           empOutput.value = USDollar.format(emp);
@@ -129,7 +129,7 @@ Drupal.behaviors.handleWebform = {
           firstInput.value = USDollar.format(first);
 
           // calculate tax savings based on assumed tax bracket
-          bracket = bracketInput.value/100;
+          bracket = parseInt(bracketInput.value)/100;
           let savings = first * bracket;
           savingsInput.value = USDollar.format(savings);
 
