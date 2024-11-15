@@ -23,6 +23,7 @@ dependencies:
     - metatag
     - paragraphs
     - path
+    - scheduler
     - smart_date
     - text
 third_party_settings:
@@ -222,6 +223,11 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 10
@@ -254,6 +260,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 54
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   url_redirects:
     weight: 11
     region: content
@@ -263,3 +275,4 @@ hidden:
   field_code_snippet: true
   field_tags: true
   field_webform: true
+  publish_on: true
