@@ -3,13 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.video_thumbnail
+    - field.storage.media.field_media_oembed_video
     - media.type.remote_video
     - taxonomy.vocabulary.tags
   content:
     - 'taxonomy_term:tags:50008f8d-63be-4c82-b995-f8fa657e7b8f'
   module:
-    - image
     - media
     - media_video_micromodal
     - taxonomy
@@ -32,15 +31,13 @@ display:
     display_options:
       title: Videos
       fields:
-        thumbnail__target_id:
-          id: thumbnail__target_id
-          table: media_field_data
-          field: thumbnail__target_id
+        field_media_oembed_video:
+          id: field_media_oembed_video
+          table: media__field_media_oembed_video
+          field: field_media_oembed_video
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: media
-          entity_field: thumbnail
           plugin_id: field
           label: ''
           exclude: false
@@ -83,14 +80,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
+          click_sort_column: value
+          type: oembed
           settings:
-            image_link: ''
-            image_style: video_thumbnail
-            image_loading:
-              attribute: lazy
-          group_column: ''
+            link_to_entity: 0
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -402,7 +396,8 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_oembed_video'
   block_1:
     id: block_1
     display_title: Block
@@ -418,4 +413,5 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_oembed_video'
