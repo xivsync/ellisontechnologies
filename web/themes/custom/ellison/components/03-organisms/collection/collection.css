@@ -145,7 +145,7 @@
   @apply flex flex-col lg:flex-row flex-nowrap lg:flex-wrap gap-8 lg:gap-4;
 
   .views-fields {
-    @apply flex flex-col gap-2 basis-full lg:basis-[32%] justify-between;
+    @apply flex flex-col gap-2 basis-full lg:basis-[32%];
 
     .video__inner {
       @apply flex flex-col gap-2;
