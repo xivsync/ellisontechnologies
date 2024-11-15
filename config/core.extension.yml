@@ -107,6 +107,7 @@ module:
   salesforce_push: 0
   salesforce_soap: 0
   salesforce_webform: 0
+  scheduler: 0
   search_api: 0
   search_api_db: 0
   search_api_db_defaults: 0

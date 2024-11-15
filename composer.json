@@ -95,7 +95,8 @@
         "drupal/recaptcha_v3": "^2.0",
         "drupal/captcha": "^2.0",
         "drupal/views_bulk_edit": "^2.9",
-        "drupal/js_cookie": "^1.0"
+        "drupal/js_cookie": "^1.0",
+        "drupal/scheduler": "^2.1"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
