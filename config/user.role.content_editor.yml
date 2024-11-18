@@ -45,6 +45,7 @@ dependencies:
     - redirect
     - salesforce
     - salesforce_mapping
+    - scheduler
     - shortcut
     - sitewide_alert
     - system
@@ -205,6 +206,7 @@ permissions:
   - 'revert page revisions'
   - 'revert spec revisions'
   - 'revert webform revisions'
+  - 'schedule publishing of nodes'
   - 'update any media'
   - 'update media'
   - 'use images bulk upload form'
@@ -235,6 +237,7 @@ permissions:
   - 'view own webform submission'
   - 'view page revisions'
   - 'view salesforce mapping'
+  - 'view scheduled content'
   - 'view spec revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
