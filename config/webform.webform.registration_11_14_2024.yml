@@ -9,7 +9,7 @@ open: null
 close: null
 uid: 1713
 template: false
-archive: false
+archive: true
 id: registration_11_14_2024
 title: 'Registration - JOTP 11.14.2024'
 description: '<p>Add a registration form to your event.</p>'

@@ -9,7 +9,7 @@ open: null
 close: null
 uid: 1713
 template: false
-archive: false
+archive: true
 id: registration_dnsa_11_19_2024
 title: 'Registration - DNSA 11.19.2024'
 description: '<p>DNSA Open House</p>'
