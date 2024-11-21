@@ -8,9 +8,11 @@ Drupal.behaviors.leadsource = {
     once('handleLeadsource', 'input[name=leadsource]', context).forEach(
       
       function (element) {
-        let gclidDrupalSetting = drupalSettings.ellison.gclid || null;
-        if (gclidDrupalSetting) {
-          element.value = 'Google Ads';
+        if (drupalSettings.hasOwnProperty('ellison')) {
+          let gclidDrupalSetting = drupalSettings.ellison.gclid || null;
+          if (gclidDrupalSetting) {
+            element.value = 'Google Ads';
+          }
         }
       }
       
