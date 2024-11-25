@@ -15,7 +15,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: true
+archive: false
 id: service_and_maintenance
 title: 'Request Service'
 description: '<p>Basic email contact webform for Machine Sales Inquiries</p>'

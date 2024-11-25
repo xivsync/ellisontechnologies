@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 formId: webform_submission_service_and_maintenance_node_7830_add_form
-captchaType: recaptcha/reCAPTCHA
+captchaType: image_captcha/Image
 label: webform-submission-service-and-maintenance-node-7830-add-form

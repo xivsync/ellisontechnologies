@@ -9,7 +9,7 @@ open: null
 close: null
 uid: 1
 template: false
-archive: true
+archive: false
 id: registration
 title: Registration
 description: '<p>Add a registration form to your event.</p>'
@@ -169,10 +169,6 @@ elements: |-
     '#type': hidden
     '#title': 'Internal email'
     '#default_value': '[webform_submission:node:field_internal_email:value]'
-  captcha:
-    '#type': captcha
-    '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
-    '#captcha_admin_mode': true
   event_ics_file:
     '#type': webform_attachment_twig
     '#title': 'event ics file'

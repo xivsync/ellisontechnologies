@@ -9,7 +9,7 @@ administration_mode: false
 administration_mode_on_admin_routes: false
 whitelist_ips: ''
 wrong_captcha_response_message: 'The answer you entered was incorrect.'
-default_validation: 1
+default_validation: 0
 persistence: 0
 enable_stats: false
 log_wrong_responses: false

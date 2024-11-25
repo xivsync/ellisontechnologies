@@ -1,6 +1,6 @@
 uuid: 93cf2ce7-03e7-45e4-9e20-a21d4d79afe0
 langcode: en
-status: open
+status: closed
 dependencies:
   module:
     - webform_pardot
@@ -9,7 +9,7 @@ open: null
 close: null
 uid: 1713
 template: false
-archive: true
+archive: false
 id: registration_11_14_2024
 title: 'Registration - JOTP 11.14.2024'
 description: '<p>Add a registration form to your event.</p>'
@@ -208,7 +208,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
