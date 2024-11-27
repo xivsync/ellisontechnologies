@@ -29,6 +29,7 @@ dependencies:
     - taxonomy.vocabulary.technologies
   module:
     - block_content
+    - cacheflush
     - contextual
     - dropzonejs
     - file
@@ -96,6 +97,7 @@ permissions:
   - 'administer webform submission'
   - 'administer xmlsitemap'
   - 'authorize salesforce'
+  - 'cacheflush clear cache'
   - 'clone article content'
   - 'clone event content'
   - 'clone location content'
