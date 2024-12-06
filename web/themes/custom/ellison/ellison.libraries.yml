@@ -31,7 +31,8 @@ block:
     - core/js-cookie
 dropdown:
   js:
-    dist/js/02-molecules/dropdown/dropdown.js: {}
+    #dist/js/02-molecules/dropdown/dropdown.js: {}
+    components/02-molecules/dropdown/dropdown.js: {}
   dependencies:
     - core/drupal
     - core/once
