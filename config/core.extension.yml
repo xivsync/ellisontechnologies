@@ -19,6 +19,7 @@ module:
   block_field: 0
   breakpoint: 0
   bulk_edit_terms: 0
+  cache_control_override: 0
   cacheflush: 0
   cacheflush_entity: 0
   captcha: 0
