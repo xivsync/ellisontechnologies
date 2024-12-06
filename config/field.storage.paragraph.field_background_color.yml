@@ -35,6 +35,9 @@ settings:
     -
       value: text__border--red
       label: 'Border Red'
+    -
+      value: bg-color--gradient-blue
+      label: 'Gradient Blue'
   allowed_values_function: ''
 module: options
 locked: false
