@@ -27,6 +27,7 @@ dependencies:
     - taxonomy.vocabulary.spec_type
     - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.technologies
+    - taxonomy.vocabulary.video_category
   module:
     - block_content
     - cacheflush
@@ -124,6 +125,7 @@ permissions:
   - 'create terms in spec_type'
   - 'create terms in tags'
   - 'create terms in technologies'
+  - 'create terms in video_category'
   - 'create url aliases'
   - 'create video media'
   - 'create webform content'
@@ -157,6 +159,14 @@ permissions:
   - 'delete own video media'
   - 'delete own webform content'
   - 'delete sitewide alert entities'
+  - 'delete terms in brands'
+  - 'delete terms in products'
+  - 'delete terms in regions'
+  - 'delete terms in series'
+  - 'delete terms in spec_type'
+  - 'delete terms in tags'
+  - 'delete terms in technologies'
+  - 'delete terms in video_category'
   - 'delete webform submissions own node'
   - 'dropzone upload files'
   - 'edit any article content'
@@ -196,6 +206,7 @@ permissions:
   - 'edit terms in spec_type'
   - 'edit terms in tags'
   - 'edit terms in technologies'
+  - 'edit terms in video_category'
   - 'edit webform submissions any node'
   - 'edit webform submissions own node'
   - 'manage page templates'
