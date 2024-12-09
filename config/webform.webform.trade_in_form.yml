@@ -136,6 +136,7 @@ elements: |-
     '#default_value': etec-trade-in
   captcha:
     '#type': captcha
+    '#captcha_type': image_captcha/Image
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
