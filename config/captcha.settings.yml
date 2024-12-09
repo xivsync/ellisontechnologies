@@ -4,7 +4,7 @@ enable_globally: 0
 enable_globally_on_admin_routes: false
 default_challenge: recaptcha/reCAPTCHA
 description: ''
-title: CAPTCHA
+title: 'Please fill out the following challenge.'
 administration_mode: false
 administration_mode_on_admin_routes: false
 whitelist_ips: ''

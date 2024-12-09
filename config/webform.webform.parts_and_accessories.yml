@@ -141,6 +141,10 @@ elements: |-
     '#type': hidden
     '#title': form_name
     '#default_value': '[current-page:title]'
+  captcha:
+    '#type': captcha
+    '#captcha_type': image_captcha/Image
+    '#captcha_title': 'Please fill in captcha.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

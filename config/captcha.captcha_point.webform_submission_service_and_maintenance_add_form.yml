@@ -1,6 +1,6 @@
 uuid: 02f7454d-1e0d-4ecb-8cec-118ec5e37584
 langcode: en
-status: true
+status: false
 dependencies: {  }
 formId: webform_submission_service_and_maintenance_add_form
 captchaType: image_captcha/Image
