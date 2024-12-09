@@ -193,6 +193,9 @@ elements: |-
       URL:https://www.ellisontechnologies.com{{ uri }}
       END:VEVENT
       END:VCALENDAR
+  captcha:
+    '#type': captcha
+    '#captcha_type': image_captcha/Image
 css: ''
 javascript: ''
 settings:

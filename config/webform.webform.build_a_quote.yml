@@ -12,7 +12,7 @@ uid: 1
 template: false
 archive: true
 id: build_a_quote
-title: 'Build A Quote'
+title: 'Build A Quote Inactive'
 description: '<p>Collect contact information and sends email with link to the build a quote page. <strong>Integrated with Salesforce via Mapping and Call Tracking Metrics via Handler.&nbsp;</strong></p>'
 categories: {  }
 elements: |-
@@ -54,7 +54,7 @@ elements: |-
     '#required': true
   captcha:
     '#type': captcha
-    '#captcha_type': captcha/Math
+    '#captcha_type': image_captcha/Image
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
