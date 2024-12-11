@@ -2645,6 +2645,8 @@ div.webform {
   }
   h1.heading {
     font-size: 2.5rem;
+    max-width: 1368px;
+    margin: 0 auto;
   }
 }
 
@@ -6750,6 +6752,22 @@ div[role=alert] {
   margin:0;
   height:90px;
   width:100%;
+}
+
+/* gradient blue background*/
+
+.bg-color--gradient-blue {
+  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
+  &.diagonal-forward-slash-on::before,
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
+  }
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,41,75,1) 50%, rgba(1, 94, 176, 1) 100%);
+  }
 }
 
 /*

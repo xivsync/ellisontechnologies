@@ -3,6 +3,8 @@
   h1.heading {
     @apply text-center font-bold uppercase text-dark-blue;
     font-size: 2.5rem;
+    max-width: 1368px;
+    margin: 0 auto;
   }
 
 }
