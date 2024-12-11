@@ -98,7 +98,8 @@
         "drupal/js_cookie": "^1.0",
         "drupal/scheduler": "^2.1",
         "drupal/cacheflush": "^2.0",
-        "drupal/cache_control_override": "^2.0"
+        "drupal/cache_control_override": "^2.0",
+        "drupal/webform_submissions_delete": "^1.1"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

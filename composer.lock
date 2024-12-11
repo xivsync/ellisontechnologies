@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e89b83d9970263347bb8d7d1393bb7fd",
+    "content-hash": "415d546e8a5ce702cde40a79247efb91",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6940,6 +6940,57 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/webform_pardot.git",
                 "issues": "https://www.drupal.org/project/issues/webform_pardot"
+            }
+        },
+        {
+            "name": "drupal/webform_submissions_delete",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform_submissions_delete.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform_submissions_delete-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "1a94d9c6e3bacf66820af9e0826bd80ea27b651f"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/webform": "^6.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1687354502",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "George Anderson (geoanders)",
+                    "homepage": "https://www.drupal.org/u/geoanders",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "gkrishna.drupal",
+                    "homepage": "https://www.drupal.org/user/3617307"
+                }
+            ],
+            "description": "Bulk delete of Webform submissions by date range.",
+            "homepage": "https://drupal.org/project/webform_submissions_delete",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform_submissions_delete",
+                "issues": "https://www.drupal.org/project/issues/webform_submissions_delete"
             }
         },
         {
