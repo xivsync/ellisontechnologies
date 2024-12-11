@@ -93,7 +93,11 @@
   {{ title_suffix }}
 
   <div {{ add_attributes(content__attributes) }}>
-    {{ content }}
+
+  <div {{ add_attributes(content__attributes) }}>
+    {{ content | without('field_jumbo_image') }}
+  </div>
+
   </div>
 
 </article>

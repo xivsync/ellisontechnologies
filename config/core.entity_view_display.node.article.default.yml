@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_components
     - field.field.node.article.field_image
+    - field.field.node.article.field_jumbo_image
     - field.field.node.article.field_metatags
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser_image_media
@@ -29,6 +30,15 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_jumbo_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     weight: 0
     region: content
   field_metatags:
@@ -36,7 +46,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   body: true

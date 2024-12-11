@@ -1,0 +1,29 @@
+uuid: 867d4fec-842b-47e3-a15f-76fcc293dc8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_jumbo_image
+    - media.type.image
+    - node.type.article
+id: node.article.field_jumbo_image
+field_name: field_jumbo_image
+entity_type: node
+bundle: article
+label: 'Jumbo Image'
+description: 'The jumbo image should be 2560px wide and 172px tall.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference
