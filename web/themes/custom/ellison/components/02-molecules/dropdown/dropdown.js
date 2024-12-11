@@ -39,37 +39,28 @@ Drupal.behaviors.dropdown = {
       function (element) {
 
         console.log(element);
-        var list, i, switching, b, shouldSwitch;
-        list = element;
 
-        switching = true;
-        /* Make a loop that will continue until
-        no switching has been done: */
-        while (switching) {
-          // start by saying: no switching is done:
-          switching = false;
-          b = list.getElementsByTagName("LI");
-          // Loop through all list-items:
-          for (i = 0; i < (b.length - 1); i++) {
-            // start by saying there should be no switching:
-            shouldSwitch = false;
-            /* check if the next item should
-            switch place with the current item: */
-            if (b[i].innerText.toLowerCase() > b[i + 1].innerText.toLowerCase()) {
-              /* if next item is alphabetically
-              lower than current item, mark as a switch
-              and break the loop: */
-              shouldSwitch = true;
-              break;
-            }
-          }
-          if (shouldSwitch) {
-            /* If a switch has been marked, make the switch
-            and mark the switch as done: */
-            b[i].parentNode.insertBefore(b[i + 1], b[i]);
-            switching = true;
+        function sortAlphaNumeric(a, b) {
+          // Extract numeric parts
+          const aNum = parseInt(a.innerText.match(/\d+/)[0]);
+          const bNum = parseInt(b.innerText.match(/\d+/)[0]);
+        
+          // Compare alphabetically first
+          if (a.innerText.toLowerCase() < b.innerText.toLowerCase()) {
+            return -1;
+          } else if (a.innerText.toLowerCase() > b.innerText.toLowerCase()) {
+            return 1;
+          } else {
+            // If alphabetically equal, compare numerically
+            return aNum - bNum;
           }
         }
+
+        const listItems = Array.from(element.getElementsByTagName("LI"));
+        listItems.sort(sortAlphaNumeric);
+      
+        // Re-append sorted items to the list
+        listItems.forEach(item => element.appendChild(item));
         
       }
       
