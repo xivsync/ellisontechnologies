@@ -209,7 +209,7 @@
   width:100%;
 }
 
-/* gradient blue */
+/* gradient blue background*/
 .bg-color--gradient-blue {
   background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
   &.diagonal-forward-slash-on::before,
@@ -221,7 +221,7 @@
 
   &.diagonal-forward-slash-on::after,
   &.diagonal-forward-slash-on:hover::after {
-    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,41,75,1) 50%, rgba(1, 94, 176, 1) 100%);
   }
 }
 
