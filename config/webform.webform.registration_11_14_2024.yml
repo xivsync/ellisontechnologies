@@ -1,0 +1,468 @@
+uuid: 93cf2ce7-03e7-45e4-9e20-a21d4d79afe0
+langcode: en
+status: closed
+dependencies:
+  module:
+    - webform_pardot
+weight: 0
+open: null
+close: null
+uid: 1713
+template: false
+archive: false
+id: registration_11_14_2024
+title: 'Registration - JOTP 11.14.2024'
+description: '<p>Add a registration form to your event.</p>'
+categories: {  }
+elements: |-
+  company:
+    '#type': textfield
+    '#title': 'Company Name *'
+    '#title_display': invisible
+    '#placeholder': 'Company *'
+    '#required': true
+  firstname:
+    '#type': textfield
+    '#title': 'First Name *'
+    '#title_display': invisible
+    '#placeholder': 'First Name *'
+    '#required': true
+  lastname:
+    '#type': textfield
+    '#title': 'Last Name *'
+    '#title_display': invisible
+    '#placeholder': 'Last Name *'
+    '#required': true
+  title:
+    '#type': textfield
+    '#title': 'Title/Position *'
+    '#title_display': invisible
+    '#placeholder': 'Title/Position *'
+    '#required': true
+  email:
+    '#type': email
+    '#title': 'Email Address *'
+    '#title_display': invisible
+    '#placeholder': 'Email Address *'
+    '#required': true
+    '#default_value': '[current-user:mail]'
+  phone:
+    '#type': tel
+    '#title': 'Phone Number *'
+    '#title_display': invisible
+    '#placeholder': 'Phone Number *'
+    '#required': true
+  street:
+    '#type': textfield
+    '#title': Address
+    '#title_display': invisible
+    '#placeholder': Address
+  city:
+    '#type': textfield
+    '#title': City
+    '#title_display': invisible
+    '#placeholder': 'City *'
+  state:
+    '#type': textfield
+    '#title': 'State *'
+    '#title_display': invisible
+    '#placeholder': 'State *'
+    '#required': true
+  postalcode:
+    '#type': textfield
+    '#title': 'Zip Code *'
+    '#title_display': invisible
+    '#placeholder': 'Zip Code *'
+    '#required': true
+  how_did_you_hear__c:
+    '#type': select
+    '#title': 'How did you hear about our event?'
+    '#options': how_did_you_hear_about_us
+  industry:
+    '#type': select
+    '#title': Industry
+    '#options':
+      Aerospace: Aerospace
+      Aerospace_Commerical: 'Aerospace - Commercial'
+      Aerospace_Defense: 'Aerospace - Defense'
+      Agriculture: Agriculture
+      Automotive: Automotive
+      Construction: Construction
+      Cutting_Tools: 'Cutting Tools'
+      'Die_&_Mold': 'Die & Mold'
+      Education: Education
+      Electronics: Electronics
+      Engines/Transportation: Engines/Transportation
+      'Fab_&_Sheet_Metal': 'Fab & Sheet Metal'
+      'Firearms_&_Ammunition': 'Firearms & Ammunition'
+      Food/Packaging: Food/Packaging
+      'Industrial_&_Commercial_Machinery': 'Industrial & Commercial Machinery'
+      Medical: Medical
+      Mining: Mining
+      'Oil_&_Gas': 'Oil & Gas'
+      Power_Transmission: 'Power Transmission'
+      Recreation: Recreation
+      Semiconductor: Semiconductor
+      Valve: Valve
+  opt_in:
+    '#type': checkbox
+    '#title': 'I would like to receive occasional emails.'
+    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
+    '#title_display': inline
+  region__c:
+    '#type': hidden
+    '#title': region__c
+  webformsid__c:
+    '#type': hidden
+    '#title': 'SID Key'
+    '#default_value': '[webform_submission:node:field_webformsid__c:value]'
+  leadsource:
+    '#type': hidden
+    '#title': 'Lead Source'
+    '#default_value': '[webform_submission:node:field_leadsource]'
+  webform_campaign_id__c:
+    '#type': hidden
+    '#title': 'Sales Force Campaign ID'
+    '#default_value': '[webform_submission:node:field_webform_campaign_id__c:value]'
+  webform_email_sign_up__c:
+    '#type': hidden
+    '#title': 'Sales Force Signup Checkbox'
+    '#default_value': 701Uy000004BSYPIA4
+  webform_name__c:
+    '#type': hidden
+    '#title': 'Webform Name'
+    '#default_value': '[webform_submission:node:title]'
+  location:
+    '#type': hidden
+    '#title': Location
+    '#default_value': '[webform_submission:node:field_location]'
+  complete_location:
+    '#type': hidden
+    '#title': Location
+    '#default_value': '[webform_submission:node:field_complete_location]'
+  dates_and_times:
+    '#type': hidden
+    '#title': 'Start date as epoch time converted to 24-08-23 by JS'
+    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
+  dtstamp:
+    '#type': hidden
+    '#title': 'Now date converted to ISO 8601 by JS'
+    '#default_value': '[webform_submission:node:created]'
+  dtstart:
+    '#type': hidden
+    '#title': 'Start date as epoch time converted to ISO 8601 by JS'
+    '#default_value': '[webform_submission:node:field_dates_and_times:value]'
+  dtend:
+    '#type': hidden
+    '#title': 'End date as epoch time converted to ISO 8601 by JS'
+    '#default_value': '[webform_submission:node:field_dates_and_times:end_value]'
+  referring_page:
+    '#type': hidden
+    '#title': 'Referring Page'
+    '#default_value': '[current-page:title]'
+  referring_url:
+    '#type': hidden
+    '#title': 'Referring URL'
+    '#default_value': '[current-page:url]'
+  internal_email:
+    '#type': hidden
+    '#title': 'Internal email'
+    '#default_value': '[webform_submission:node:field_internal_email:value]'
+  captcha:
+    '#type': captcha
+    '#captcha_description': 'Please solve the simple math problem. This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
+    '#captcha_admin_mode': true
+  event_ics_file:
+    '#type': webform_attachment_twig
+    '#title': 'event ics file'
+    '#filename': event.ics
+    '#link_title': 'Add to calendar'
+    '#download': true
+    '#template': |-
+      BEGIN:VCALENDAR
+      VERSION:2.0
+      PRODID:-//ZContent.net//Zap Calendar 1.0//EN
+      CALSCALE:GREGORIAN
+      METHOD:PUBLISH
+      BEGIN:VEVENT
+      SUMMARY:{{data.webform_name__c}}
+      UID:{{data.email}}
+      STATUS:CONFIRMED
+      TRANSP:TRANSPARENT
+      DTSTART:{{data.dtstart}}
+      DTEND:{{data.dtend}}
+      DTSTAMP:{{data.dtstamp}}
+      LOCATION:{{data.complete_location|striptags|trim}}
+      URL:https://www.ellisontechnologies.com{{ uri }}
+      END:VEVENT
+      END:VCALENDAR
+css: ''
+javascript: ''
+settings:
+  ajax: true
+  ajax_scroll_top: form
+  ajax_progress_type: throbber
+  ajax_effect: fade
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: true
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url_message
+  confirmation_url: /events/confirmation
+  confirmation_title: 'Thank you for your RSVP!'
+  confirmation_message: '<p class="event__confirmation">You are signed up for <a href="[webform_submission:node:url]">[webform_submission:node:title]</a> on <strong>[webform_submission:node:field_dates_and_times]</strong>.</p>'
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: true
+  confirmation_exclude_token: true
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  internal_email:
+    id: email
+    handler_id: internal_email
+    label: 'Internal Email'
+    notes: 'Sending event information to specified internal email address. Default is rsvp@eillisontechnologies.com'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[site:mail]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[site:mail]'
+      from_options: {  }
+      from_name: 'Ellison Technologies'
+      subject: '[webform_submission:values:referring_page:raw]'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: 0
+      exclude_empty_checkbox: 0
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: rsvp@ellisontechnologies.com
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  email:
+    id: email
+    handler_id: email
+    label: 'Users Confirmation Email'
+    notes: 'Users event registration confirmation email'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[site:mail]'
+      from_options: {  }
+      from_name: '[site:name]'
+      subject: '[webform_submission:values:referring_page:raw]'
+      body: '<table bgcolor="#d5d5d5" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center"><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" style="background:#d5d5d5;" align="left" width="35">&nbsp;</td><td class="" style="background:#d5d5d5;font-family:Verdana, Geneva, sans-serif;font-size:11px;line-height:20px;text-align:center;" align="left" height="30" width="500"><p>&nbsp;.</p></td><td class="" style="background:#d5d5d5;" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td class="" height="80"><p><a href="http://www.ellisontechnologies.com/"><img src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs28/37432/220105/EllisonTechnologiesHeader.jpg" alt="Ellison Technologies" height="100" width="570"></a></p></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" valign="top" width="35">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500"><p><br><span style="color:#002147;font-size:24px;line-height:24px;"><strong>Thank You for your RSVP!</strong></span></p><p>Mark your calendar! To save this event, please download the attached file and import into your calendar.<br><br><a href="[current-page:url]"><strong>[current-page:title]</strong></a><br><strong>Event Date &amp; Time:</strong><br>[webform_submission:node:field_dates_and_times]<br><strong>Location:</strong>[webform_submission:node:field_complete_location]<br><br><strong>We look forward to seeing you soon!</strong><br>For questions or if your plans change and you are not able to attend, please notify us as soon as possible: <a style="color:#3DB7E4;text-decoration:underline;" href="mailto:[webform_submission:node:field_internal_email:value]"><strong>[webform_submission:node:field_internal_email:value]</strong></a>&nbsp;<br><br>&nbsp;</p></td><td class="" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" valign="top" width="500" bgcolor="#3DB7E4"><p><br>&nbsp;</p></td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#002147" valign="top" width="570">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" align="left" bgcolor="#002147" valign="top" width="35">&nbsp;</td><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#002147" valign="top" width="220"><p><a style="border:none;color:#ffffff;" href="http://www.ellisontechnologies.com/services"><img alt="" height="64" src="https://go.ellisontechnologies.com/l/37432/2021-06-08/5sqzkq/37432/1623175008KUTzQ9Ln/Ellison_OneSource.png" width="220"></a></p></td><td class="" style="color:#ffffff;font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="right" bgcolor="#002147" valign="top" width="280"><p><span style="font-size:14px;text-transform:uppercase;"><strong>Need parts OR service?</strong></span><br>We are your OneSource<br>for all of your support needs.<br><a style="border:none;color:#3DB7E4;font-size:11px;" href="http://www.ellisontechnologies.com/services"><strong>www.ellisontechnologies.com/services</strong></a></p></td><td class="" bgcolor="#002147" width="35">&nbsp;</td></tr></tbody></table></td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#002147" valign="top" width="500">&nbsp;</td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#1074b9" valign="top" width="500">&nbsp;</td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="center" bgcolor="#1074b9" valign="top" width="500"><p><span style="color:#ffffff;font-size:12px;text-transform:uppercase;"><strong>Stay Connected</strong></span><br><a href="https://www.facebook.com/EllisonTechnologies?ref=nf" target="_blank"><img alt="Ellison Facebook" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs1x/37432/220095/Facebook.png" width="20"></a> &nbsp;<a href="https://twitter.com/EllisonTech" target="_blank"><img alt="Ellison Twitter" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs72/37432/220113/Twitter.png" width="20"></a> &nbsp;<a href="https://www.instagram.com/ellisontech/" target="_blank"><img alt="Ellison Instagram" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs74/37432/220111/Instagram.png" width="20"></a> &nbsp;<a href="http://www.linkedin.com/company/ellison-technologies" target="_blank"><img alt="Ellison Linked In" border="0" height="20" src="http://go.ellisontechnologies.com/l/37432/2019-04-25/5mhs1z/37432/220097/Linkedin.png" width="20"></a>&nbsp;</p></td></tr><tr><td class="" style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, sans-serif;font-size:12px;line-height:20px;" align="left" bgcolor="#1074b9" valign="top" width="500">&nbsp;</td></tr><tr><td align="center"><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="570"><tbody><tr><td class="" style="color:rgb(0, 0, 0);font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:12px;text-transform:uppercase;" align="center" height="50" valign="middle" bgcolor="#d5d5d5">&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>'
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: 0
+      exclude_empty_checkbox: 0
+      exclude_attachments: 0
+      html: true
+      attachments: true
+      twig: false
+      debug: false
+      reply_to: '[site:mail]'
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: 'Event form registration copied from old site'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-10-07/5yjrjb'
+      pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region"
+variants: {  }
