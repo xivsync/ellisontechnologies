@@ -99,7 +99,8 @@
         "drupal/scheduler": "^2.1",
         "drupal/cacheflush": "^2.0",
         "drupal/cache_control_override": "^2.0",
-        "drupal/webform_submissions_delete": "^1.1"
+        "drupal/webform_submissions_delete": "^1.1",
+        "drupal/redirect_metrics": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
