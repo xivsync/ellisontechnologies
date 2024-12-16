@@ -56,7 +56,8 @@
 */
 .text__bg-color {
 
-  &--dark-blue {
+  &--dark-blue,
+  &--gradient-blue {
     @apply bg-dark-blue;
 
     /* handles padding for contain wide background colors */

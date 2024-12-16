@@ -4825,11 +4825,13 @@ div#group__explore-series {
 */
 
 .text__bg-color {
-  &--dark-blue {
+  &--dark-blue,
+  &--gradient-blue {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
   }
-  &--dark-blue {
+  &--dark-blue,
+  &--gradient-blue {
     /* handles padding for contain wide background colors */
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
