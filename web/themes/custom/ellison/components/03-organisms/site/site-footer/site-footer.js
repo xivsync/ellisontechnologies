@@ -9,6 +9,21 @@ Drupal.behaviors.siteFooter = {
       
       function (element) {
 
+        function waitForElement(selector, callback) {
+          const observer = new MutationObserver((mutations, observer) => {
+              const element = document.querySelector(selector);
+              if (element) {
+                  observer.disconnect();
+                  callback(element);
+              }
+          });
+      
+          observer.observe(document.body, {
+              childList: true,
+              subtree: true,
+          });
+        }
+
         // check for region cookie and open modal or add user location to footer
         if (Cookies.get('ellison_region')) {
           const ellison_region = JSON.parse(Cookies.get("ellison_region"));
@@ -17,6 +32,23 @@ Drupal.behaviors.siteFooter = {
           locationEl.innerText = region;
         } else {
           element.getElementsByTagName('a')[0].click();
+
+          waitForElement('.webform-submission-select-your-location-form', (element) => {
+
+            const formEl = element;
+            const radioButtonEls = formEl.querySelectorAll('input[type="radio"]');
+            const submitEl = formEl.querySelector('input[type="submit"]');
+            const closeEl = document.querySelector('.ui-dialog-titlebar-close');
+
+            radioButtonEls.forEach(radioButtonEl => {
+              radioButtonEl.addEventListener('click', (event) => {
+                submitEl.click();
+                closeEl.click();
+              });
+            });
+
+          });
+
         }
         
       }
