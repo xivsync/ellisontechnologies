@@ -542,6 +542,21 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
+        weight_1:
+          id: weight_1
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_series
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         field_series_target_id:
           id: field_series_target_id
           table: node__field_series
