@@ -39,6 +39,15 @@ Drupal.behaviors.siteFooter = {
             const radioButtonEls = formEl.querySelectorAll('input[type="radio"]');
             const submitEl = formEl.querySelector('input[type="submit"]');
             const closeEl = document.querySelector('.ui-dialog-titlebar-close');
+            const titlePaneEl = document.querySelector('.ui-dialog-titlebar');
+            const buttonPaneEl = document.querySelector('.ui-dialog-buttonpane');
+            const contentPaneEl = document.querySelector('.ui-dialog-content');
+            
+
+            titlePaneEl.hidden = true;
+            buttonPaneEl.hidden = true;
+            contentPaneEl.style.paddingTop = '2rem';
+            contentPaneEl.style.paddingBottom = '2rem';
 
             radioButtonEls.forEach(radioButtonEl => {
               radioButtonEl.addEventListener('click', (event) => {
