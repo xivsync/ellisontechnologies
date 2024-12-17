@@ -52,7 +52,10 @@ Drupal.behaviors.siteFooter = {
             radioButtonEls.forEach(radioButtonEl => {
               radioButtonEl.addEventListener('click', (event) => {
                 submitEl.click();
-                closeEl.click();
+                //closeEl.click();
+                setTimeout(function() {
+                  window.location.reload(); // Or window.location.reload(true) for force reload
+                }, 2000); // 2000 milliseconds = 2 seconds
               });
             });
 

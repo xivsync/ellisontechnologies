@@ -139,7 +139,7 @@ settings:
   confirmation_type: inline
   confirmation_url: '[current-page:url]'
   confirmation_title: 'Location is set successfully.'
-  confirmation_message: '<p>Thank you for your selection. You can safely close this dialog.</p>'
+  confirmation_message: '<p>Thank you for your selection. Please wait this page is being reloaded.</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
