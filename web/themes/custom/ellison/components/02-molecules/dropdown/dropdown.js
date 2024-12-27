@@ -9,7 +9,7 @@ Drupal.behaviors.dropdown = {
       
       function (element) {
 
-        function toggleDropdown(e,uuid) {
+        function toggleDropdown(event,uuid) {
 
           const componentEl = document.getElementById(`dropdown-${uuid}`);
           const state = componentEl.dataset.dropdownState;
@@ -25,7 +25,7 @@ Drupal.behaviors.dropdown = {
         const uuid = element.dataset.dropdownUniqueId;
         const toggleButtonEl = document.getElementById(`toggle-${uuid}`);
         toggleButtonEl.addEventListener('click', (event) => {
-          toggleDropdown(e, uuid); 
+          toggleDropdown(event, uuid); 
         });
 
       }
