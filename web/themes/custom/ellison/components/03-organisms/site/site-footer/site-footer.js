@@ -9,6 +9,8 @@ Drupal.behaviors.siteFooter = {
       
       function (element) {
 
+        const locationLinkEl = element.getElementsByTagName('a')[0];
+
         function waitForElement(selector, callback) {
           const observer = new MutationObserver((mutations, observer) => {
               const element = document.querySelector(selector);
@@ -24,26 +26,18 @@ Drupal.behaviors.siteFooter = {
           });
         }
 
-        // check for region cookie and open modal or add user location to footer
-        if (Cookies.get('ellison_region')) {
-          const ellison_region = JSON.parse(Cookies.get("ellison_region"));
-          const region = ellison_region.region || '';
-          const locationEl = document.getElementById("user-location");
-          locationEl.innerText = region;
-        } else {
-          element.getElementsByTagName('a')[0].click();
+        function handleForm(footerLocalEl) {
+          
+          waitForElement('.webform-submission-select-your-location-form', (footerLocalEl) => {
 
-          waitForElement('.webform-submission-select-your-location-form', (element) => {
-
-            const formEl = element;
+            const formEl = footerLocalEl;
             const radioButtonEls = formEl.querySelectorAll('input[type="radio"]');
             const submitEl = formEl.querySelector('input[type="submit"]');
-            const closeEl = document.querySelector('.ui-dialog-titlebar-close');
             const titlePaneEl = document.querySelector('.ui-dialog-titlebar');
             const buttonPaneEl = document.querySelector('.ui-dialog-buttonpane');
             const contentPaneEl = document.querySelector('.ui-dialog-content');
             
-
+            // handle modal restyling
             titlePaneEl.hidden = true;
             buttonPaneEl.hidden = true;
             contentPaneEl.style.paddingTop = '2rem';
@@ -52,7 +46,6 @@ Drupal.behaviors.siteFooter = {
             radioButtonEls.forEach(radioButtonEl => {
               radioButtonEl.addEventListener('click', (event) => {
                 submitEl.click();
-                //closeEl.click();
                 setTimeout(function() {
                   window.location.reload(); // Or window.location.reload(true) for force reload
                 }, 2000); // 2000 milliseconds = 2 seconds
@@ -60,8 +53,23 @@ Drupal.behaviors.siteFooter = {
             });
 
           });
-
+          
         }
+
+        // check for region cookie and open modal or add user location to footer
+        if (Cookies.get('ellison_region')) {
+          const ellison_region = JSON.parse(Cookies.get("ellison_region"));
+          const region = ellison_region.region || '';
+          const locationEl = document.getElementById("user-location");
+          locationEl.innerText = region;
+        } else {
+          locationLinkEl.click();
+          handleForm(element);
+        }
+
+        locationLinkEl.addEventListener("click", function() {
+          handleForm(element);
+        });
         
       }
       
