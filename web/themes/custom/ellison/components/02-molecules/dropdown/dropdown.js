@@ -9,17 +9,13 @@ Drupal.behaviors.dropdown = {
       
       function (element) {
 
-        function toggleDropdown(e) {
+        function toggleDropdown(e,uuid) {
 
-          const toggleButtonEl = e.target;
-          const uuid = toggleButtonEl.dataset.dropdownUniqueId;
-          
           const componentEl = document.getElementById(`dropdown-${uuid}`);
           const state = componentEl.dataset.dropdownState;
 
           // toggle based on state
           toggleButtonEl.setAttribute('aria-expanded', state==='expanded' ? false : true);
-
           componentEl.dataset.dropdownState = (state==='expanded' ? 'collapsed' : 'expanded');
           componentEl.classList.remove(state==='expanded' ? 'state-is-expanded' : 'state-is-collapsed');
           componentEl.classList.add(state==='expanded' ? 'state-is-collapsed' : 'state-is-expanded');
@@ -28,8 +24,10 @@ Drupal.behaviors.dropdown = {
 
         const uuid = element.dataset.dropdownUniqueId;
         const toggleButtonEl = document.getElementById(`toggle-${uuid}`);
-        toggleButtonEl.addEventListener('click', toggleDropdown);
-        
+        toggleButtonEl.addEventListener('click', (event) => {
+          toggleDropdown(e, uuid); 
+        });
+
       }
       
     );
@@ -38,28 +36,29 @@ Drupal.behaviors.dropdown = {
       
       function (element) {
 
-        console.log(element);
-
         function sortAlphaNumeric(a, b) {
           // Extract numeric parts
           const aNum = parseInt(a.innerText.match(/\d+/)[0]);
           const bNum = parseInt(b.innerText.match(/\d+/)[0]);
         
-          // Compare alphabetically first
-          if (a.innerText.toLowerCase() < b.innerText.toLowerCase()) {
+          // Compare numerically first
+          if (aNum < bNum) {
             return -1;
-          } else if (a.innerText.toLowerCase() > b.innerText.toLowerCase()) {
+          } else if (aNum > bNum) {
             return 1;
           } else {
-            // If alphabetically equal, compare numerically
-            return aNum - bNum;
+            // If numerically equal, compare alphabetically
+            if (a.innerText.toLowerCase() < b.innerText.toLowerCase()) {
+              return -1;
+            } else {
+              return 1;
+            }
           }
+        
         }
 
         const listItems = Array.from(element.getElementsByTagName("LI"));
         listItems.sort(sortAlphaNumeric);
-      
-        // Re-append sorted items to the list
         listItems.forEach(item => element.appendChild(item));
         
       }
