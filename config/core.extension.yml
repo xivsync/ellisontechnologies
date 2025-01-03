@@ -58,6 +58,7 @@ module:
   google_analytics: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   image_captcha: 0
   image_field_to_media: 0

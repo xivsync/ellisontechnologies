@@ -4,6 +4,11 @@ status: open
 dependencies:
   module:
     - ellison_webform
+    - honeypot
+third_party_settings:
+  honeypot:
+    honeypot: true
+    time_restriction: true
 weight: 0
 open: null
 close: null
