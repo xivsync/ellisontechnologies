@@ -415,9 +415,7 @@
       @apply lg:relative;
 
       img.image {
-        @apply lg:h-[740px] lg:absolute lg:z-40 lg:left-0;
-        aspect-ratio: 800/600;
-    
+        @apply lg:h-[640px] lg:absolute lg:z-40 lg:left-[-300px] lg:w-auto lg:max-w-fit;    
       }
 
     }

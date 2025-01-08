@@ -6993,7 +6993,7 @@ div[role=alert] {
       }
       @media (min-width: 992px) {
         img.image {
-          left: 0px;
+          left: -300px;
         }
       }
       @media (min-width: 992px) {
@@ -7003,11 +7003,19 @@ div[role=alert] {
       }
       @media (min-width: 992px) {
         img.image {
-          height: 740px;
+          height: 640px;
         }
       }
-      img.image {
-        aspect-ratio: 800/600;
+      @media (min-width: 992px) {
+        img.image {
+          width: auto;
+        }
+      }
+      @media (min-width: 992px) {
+        img.image {
+          max-width: -moz-fit-content;
+          max-width: fit-content;
+        }
       }
     }
   }
