@@ -7003,13 +7003,11 @@ div[role=alert] {
       }
       @media (min-width: 992px) {
         img.image {
-          height: 640px;
+          height: 740px;
         }
       }
-      @media (min-width: 992px) {
-        img.image {
-          width: auto;
-        }
+      img.image {
+        aspect-ratio: 800/600;
       }
     }
   }

@@ -415,7 +415,8 @@
       @apply lg:relative;
 
       img.image {
-        @apply lg:h-[640px] lg:w-auto lg:absolute lg:z-40 lg:left-0;
+        @apply lg:h-[740px] lg:absolute lg:z-40 lg:left-0;
+        aspect-ratio: 800/600;
     
       }
 
