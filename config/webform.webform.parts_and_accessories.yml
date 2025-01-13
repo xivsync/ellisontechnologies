@@ -40,6 +40,7 @@ elements: |-
       north: 'North TX /  North LA'
       south: 'South TX / South LA'
       none: 'Not sure'
+    '#required': true
   firstname:
     '#type': textfield
     '#title': 'First Name *'
@@ -148,7 +149,6 @@ elements: |-
     '#default_value': '[current-page:title]'
   captcha:
     '#type': captcha
-    '#captcha_type': image_captcha/Image
     '#captcha_title': 'Please fill in captcha.'
   actions:
     '#type': webform_actions

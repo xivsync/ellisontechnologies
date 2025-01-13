@@ -4,11 +4,6 @@ status: open
 dependencies:
   module:
     - ellison_webform
-    - honeypot
-third_party_settings:
-  honeypot:
-    honeypot: true
-    time_restriction: true
 weight: 0
 open: null
 close: null
@@ -144,7 +139,7 @@ settings:
   confirmation_type: inline
   confirmation_url: '[current-page:url]'
   confirmation_title: 'Location is set successfully.'
-  confirmation_message: '<p>Thank you for your selection. Please wait this page is being reloaded.</p>'
+  confirmation_message: '<p>Thank you for your selection.&nbsp;</p>'
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''

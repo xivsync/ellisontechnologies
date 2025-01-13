@@ -92,7 +92,6 @@ elements: |-
     '#default_value': Website
   captcha:
     '#type': captcha
-    '#captcha_type': image_captcha/Image
 css: ''
 javascript: ''
 settings:

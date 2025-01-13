@@ -204,7 +204,6 @@ elements: |-
     '#title': gclid
   captcha:
     '#type': captcha
-    '#captcha_type': image_captcha/Image
   processed_text:
     '#type': processed_text
     '#text': |-

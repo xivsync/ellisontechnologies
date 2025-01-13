@@ -134,7 +134,6 @@ elements: |-
     '#title': webformsid__c
   captcha:
     '#type': captcha
-    '#captcha_type': image_captcha/Image
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
