@@ -114,7 +114,6 @@ elements: |-
     '#default_value': '[current-page:url]'
   captcha:
     '#type': captcha
-    '#captcha_type': image_captcha/Image
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
