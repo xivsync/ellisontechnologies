@@ -4826,12 +4826,14 @@ div#group__explore-series {
 
 .text__bg-color {
   &--dark-blue,
-  &--gradient-blue {
+  &--gradient-blue,
+  &--transparent {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
   }
   &--dark-blue,
-  &--gradient-blue {
+  &--gradient-blue,
+  &--transparent {
     /* handles padding for contain wide background colors */
     &.diagonal-off.full-width-off.tilt-back-slash-off {
       padding: 0px;
@@ -6756,19 +6758,31 @@ div[role=alert] {
   width:100%;
 }
 
+/* transparent background */
+
+.text__bg-color--transparent {
+  background-color: rgba(255, 255, 255, 0);
+}
+
 /* gradient blue background*/
 
 .bg-color--gradient-blue {
-  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
   &.diagonal-forward-slash-on::before,
   &.diagonal-forward-slash-on:hover::before,
   &.tilt-back-slash-on::before,
   &.tilt-back-slash-on:hover::before {
     background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
+    -webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    transform: translateY(1px);
+  }
+  &.group__inner {
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
   }
   &.diagonal-forward-slash-on::after,
   &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,41,75,1) 50%, rgba(1, 94, 176, 1) 100%);
+    transform: translateY(-1px);
   }
 }
 
@@ -9412,3 +9426,4 @@ body.title-thank-you-for-registering--ellison-technologies .breadcrumb__item::af
     background-color: rgb(55 65 81 / var(--tw-bg-opacity)) !important;
   }
 }
+
