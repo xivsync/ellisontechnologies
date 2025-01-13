@@ -117,7 +117,7 @@ Drupal.behaviors.handleWebform = {
           balanceInput.value = USDollar.format(balance);
 
           // calculate bonus depreciation
-          let bonusDepreciation = balance * 0.6;
+          let bonusDepreciation = balance * 0.4;
           bonusInput.value = USDollar.format(bonusDepreciation);
 
           // calculate standard depreciation
@@ -130,7 +130,7 @@ Drupal.behaviors.handleWebform = {
 
           // calculate tax savings based on assumed tax bracket
           bracket = parseInt(bracketInput.value)/100;
-          let savings = first * bracket;
+          let savings = Math.round(first * bracket);
           savingsInput.value = USDollar.format(savings);
 
           // calculate payments

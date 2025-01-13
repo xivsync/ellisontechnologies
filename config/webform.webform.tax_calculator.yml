@@ -25,7 +25,7 @@ elements: |-
     '#type': textfield
     '#title': 'The simple spreadsheet below will demonstrate your potential Tax Savings:'
     '#disabled': true
-    '#default_value': '2024'
+    '#default_value': '2025'
   emp:
     '#type': textfield
     '#title': 'Estimated Machine Price (EMP)'
@@ -41,7 +41,7 @@ elements: |-
     '#description': '<p>EMP - Section 179 Deduction</p>'
   80_bonus_depreciation:
     '#type': textfield
-    '#title': '60% Bonus Depreciation'
+    '#title': '40% Bonus Depreciation'
     '#disabled': true
   standard_depreciation:
     '#type': textfield
