@@ -38,6 +38,9 @@ settings:
     -
       value: bg-color--gradient-blue
       label: 'Gradient Blue'
+    -
+      value: text__bg-color--transparent
+      label: Transparent
   allowed_values_function: ''
 module: options
 locked: false
@@ -46,4 +49,3 @@ translatable: true
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
-
