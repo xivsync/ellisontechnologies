@@ -7017,7 +7017,7 @@ div[role=alert] {
       }
       @media (min-width: 992px) {
         img.image {
-          height: 640px;
+          height: 500px;
         }
       }
       @media (min-width: 992px) {
@@ -7029,6 +7029,11 @@ div[role=alert] {
         img.image {
           max-width: -moz-fit-content;
           max-width: fit-content;
+        }
+      }
+      @media (min-width: 1400px) {
+        img.image {
+          height: 640px;
         }
       }
     }
