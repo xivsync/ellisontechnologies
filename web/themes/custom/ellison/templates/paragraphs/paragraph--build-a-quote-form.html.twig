@@ -1,32 +1,66 @@
 <form id="build-a-quote" action="https://go.pardot.com/l/37432/2018-04-06/5gh3kp" method="post">
-  <div>
-      <input class="form-item__textfield" id="firstName" name="firstName" placeholder="First name" required tabindex="1"  type="text">
-      <input class="form-item__textfield" id="lastName" name="lastName" placeholder="Last name" required tabindex="1"  type="text">
-      <input class="form-item__textfield" id="company" name="company" placeholder="Company" required tabindex="1"  type="text">
-      <input class="form-item__textfield" id="email" name="email" placeholder="Email" required tabindex="1"  type="email">
-      <input class="form-item__textfield" id="Phone" name="Phone" pattern="[0-9]+" placeholder="Phone" required tabindex="1"  type="number">
-      <input class="form-item__textfield" id="zipCode" name="zipCode" pattern="[0-9]+" placeholder="Zip Code" required tabindex="1"  type="text">
-      <button class="button" name="submit" type="submit">Submit</button>
-  </div>
+    <div>
+        <input class="form-item__textfield" id="firstName" name="firstName" placeholder="First name" required
+            tabindex="1" type="text">
+        <input class="form-item__textfield" id="lastName" name="lastName" placeholder="Last name" required tabindex="1"
+            type="text">
+        <input class="form-item__textfield" id="company" name="company" placeholder="Company" required tabindex="1"
+            type="text">
+        <input class="form-item__textfield" id="email" name="email" placeholder="Email" required tabindex="1"
+            type="email">
+        <input class="form-item__textfield" id="Phone" name="Phone" pattern="[0-9]+" placeholder="Phone" required
+            tabindex="1" type="number">
+        <input class="form-item__textfield" id="zipCode" name="zipCode" pattern="[0-9]+" placeholder="Zip Code" required
+            tabindex="1" type="text">
+        <button class="button" name="submit" type="submit">Submit</button>
+    </div>
 </form>
+<script src="https://367150.tctm.xyz/t.js"></script>
+<script src="https://367150.tctm.co/formreactor.js"></script>
 <script>
-(window.__ctm_loaded || []).push(function () {
-  __ctm.form.capture('app.calltrackingmetrics.com', // the capture host
-    'FRT472ABB2C5B9B141ADAB06C7A709212DB5B0EF60229D38F02D4C00D8145FDA58D', // this FormReactor
-    document.getElementById('build-a-quote'),  // ID of the web form you want to attach your FormReactor
-    "8667860219", // the tracking number used for associating visitor data and caller ID consumers will see
-    {
-      country_code: "1", // the expected country code e.g. +1, +44, +55, +61, etc... the plus is ignored
-      name: ['firstName', 'lastName'], // set to the ID of the lead name field, or pass in a list of IDs if there are multiple name fields
-      phone: "Phone", // ID of the lead phone number field
-      email: "email", // optional, ID of the lead email field
-      fields: [
-        'firstName',
-        'lastName',
-        'company',
-        'email',
-        'zipCode'
-      ]
-    });
-});
+    document.getElementById('build-a-quote').addEventListener('submit', function (event) {
+        event.preventDefault();
+        try {
+            // Check if CTM API and capture method are available
+            if (typeof __ctm !== 'undefined' && typeof __ctm.form.capture === 'function') {
+                const formElement = document.getElementById('build-a-quote');
+
+                // Ensure the form element exists
+                if (!formElement) {
+                    console.error("Form element with ID 'build-a-quote' not found.");
+                } else {
+                    // Initialize the form capture
+                    __ctm.form.capture(
+                       'app.calltrackingmetrics.com', // Endpoint
+                        'FRT472ABB2C5B9B141ADAB06C7A709212DB5B0EF60229D38F02D4C00D8145FDA58D', // API Key
+                        formElement, // Actual form DOM element
+                        "8667860219", // Tracking number
+                        {
+                            country_code: "1", // Country code
+                            name: ['firstName', 'lastName'], // Name fields
+                            phone: 'Phone', // Phone field
+                            email: 'email', // Email field
+                            fields: ['firstName', 'lastName', 'company', 'email', 'zipCode'] // Fields to capture
+                        },
+                        function (response) {
+                            console.log("Capture response:", response);
+                            if (response.success) {
+                                console.log("Form captured successfully.");
+                                // Submit the form programmatically after capture
+                                formElement.submit(); // Correctly use the form element's native submit method
+                            } else {
+                                console.error("Capture failed:", response.message);
+                            }
+                      }
+                    );
+                    console.log("Form capture initialized successfully.");
+                }
+            } else {
+                console.error("CTM API or 'form.capture' method is not available.");
+            }
+        } catch (error) {
+            console.error("An error occurred during form capture:", error);
+        }
+    })
+
 </script>
