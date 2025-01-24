@@ -41,6 +41,9 @@ settings:
     -
       value: text__bg-color--transparent
       label: Transparent
+    -
+      value: bg-color--gradient-blue-no-slash
+      label: 'Gradient Blue (No Slash)'
   allowed_values_function: ''
 module: options
 locked: false
