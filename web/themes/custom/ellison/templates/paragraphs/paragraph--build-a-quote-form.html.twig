@@ -1,4 +1,4 @@
-<form id="build-a-quote" action="https://go.pardot.com/l/37432/2018-04-06/5gh3kp " method="post">
+<form id="build-a-quote" action="https://go.pardot.com/l/37432/2018-04-06/5gh3kp" method="post">
     <div>
         <input class="form-item__textfield" id="firstName" name="firstName" placeholder="First name" required
             tabindex="1" type="text">
@@ -17,6 +17,7 @@
 </form>
 <script>
 document.getElementById('build-a-quote').addEventListener('submit', function (event) {
+    event.preventDefault();
     try {
         jQuery.ajax({
             url: 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB5B0EF60229D38F02D4C00D8145FDA58D?key=VLhTUhvwsNBljzFmnVX5bui0GD-PaYcjHGPESzPwHQpCqWeY',
@@ -28,11 +29,11 @@ document.getElementById('build-a-quote').addEventListener('submit', function (ev
                 "custom_fields[email]": jQuery("#email").val(),        // Capture email
                 "custom_fields[zipCode]": jQuery("#zipCode").val(),    // Capture zipCode
                 "phone_number": jQuery("#Phone").val(),               // Capture phone
-                "country_code": "1"
+                "country_code": "1",
+                "caller_name" : jQuery("#firstName").val() + " " + jQuery("#lastName").val()
             },
             success: function (response) {
                 console.log("Form successfully submitted:", response);
-                jQuery('#build-a-quote')
             },
             error: function (xhr, status, error) {
                 console.error("Error submitting form:", xhr.responseText);
