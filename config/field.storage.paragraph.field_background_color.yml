@@ -44,6 +44,12 @@ settings:
     -
       value: bg-color--gradient-blue-no-slash
       label: 'Gradient Blue (No Slash)'
+    -
+      value: bg-color--gradient-blue-lighter
+      label: 'Gradient Blue (Lighter)'
+    -
+      value: bg-color--gradient-blue-lighter-no-slash
+      label: 'Gradient Blue (Lighter and No Slash)'
   allowed_values_function: ''
 module: options
 locked: false

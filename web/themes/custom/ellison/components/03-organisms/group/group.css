@@ -220,6 +220,32 @@
   background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(1,40,75,1) 50%, rgba(1, 94, 176, 1) 100%);
 }
 
+/* Different gradient blue backgrounds */
+.bg-color--gradient-blue-lighter-no-slash {
+  background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
+}
+
+.bg-color--gradient-blue-lighter {
+  &.diagonal-forward-slash-on::before,
+  &.diagonal-forward-slash-on:hover::before,
+  &.tilt-back-slash-on::before,
+  &.tilt-back-slash-on:hover::before {
+    background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    transform: translateY(1px);
+  }
+  &.group__inner {
+    background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
+  }
+ 
+ 
+  &.diagonal-forward-slash-on::after,
+  &.diagonal-forward-slash-on:hover::after {
+    background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
+    transform: translateY(-1px);
+  }
+}
+
  /* gradient blue with slash*/
  .bg-color--gradient-blue {
   &.diagonal-forward-slash-on::before,
