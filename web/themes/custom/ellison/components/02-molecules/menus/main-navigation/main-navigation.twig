@@ -19,21 +19,39 @@
           {% for submenu_item in menu_item.submenu %}
             {% set subactive = (submenu_item.active) ? 'is-active' : '' %} 
             {# expandable menu naming convention url = /machining-center then menu = 'machining-center' #}
-            {% set get_menu = submenu_item.url | replace({'/': ''}) %}
+            {% set get_menu = submenu_item.url | split('/') | last %}
             {# display expandable menu if exists #}
             {% set expandable_items = simplify_menu(get_menu) %}
-            <li class="sub-menu__item item {{ subactive }} {{ expandable_items.menu_tree ? 'has-expandable-menu'}}" data-get-menu="{{ get_menu }}">
+            <li class="sub-menu__item item {{ subactive }}{{ expandable_items.menu_tree ? ' has-expandable-menu'}}" data-get-menu="{{ get_menu }}" data-foo="bar">
               <a href="{{ submenu_item.url }}" class="item-link {{ subactive }}"><span>{{ submenu_item.text }}</span></a>
+              
               {% if expandable_items.menu_tree %}
                 <ul class="expandable-menu">
                   {% for expandable_item in expandable_items.menu_tree %}
-                    {% set expandableactive = (expandable_item.active) ? 'is-active' : '' %} 
-                    <li class="expandable-menu__item item {{ expandableactive }}">
+                    {% set expandableactive = (expandable_item.active) ? 'is-active' : '' %}
+                    {# expandable menu naming convention url = /machining-center then menu = 'machining-center' #}
+                    {% set get_submenu = expandable_item.url | split('/') | last %}
+                    {# display expandable menu if exists #}
+                    {% set expandable_subitems = simplify_menu(get_submenu) %}
+                    <li class="expandable-menu__item item {{ expandableactive }}{{ expandable_subitems.menu_tree ? ' has-expandable-menu'}}" data-getsubmenu="{{ get_submenu }}">
                       <a href="{{ expandable_item.url }}" class="item-link {{ expandableactive }}"><span>{{ expandable_item.text }}</span></a>
+                      
+                      {% if expandable_subitems.menu_tree %}
+                        <ul class="expandable-menu">
+                          {% for expandable_subitem in expandable_subitems.menu_tree %}
+                            {% set expandablesubactive = (expandable_subitem.active) ? 'is-active' : '' %}
+                            <li class="expandable-menu__item item {{ expandablesubactive }}">
+                              <a href="{{ expandable_subitem.url }}"  class="item-link {{ expandablesubactive }}"><span>{{ expandable_subitem.text }}</span></a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+
                     </li>
                   {% endfor %}
                 </ul>
               {% endif %}
+
             </li>
           {% endfor %}
         </ul>
