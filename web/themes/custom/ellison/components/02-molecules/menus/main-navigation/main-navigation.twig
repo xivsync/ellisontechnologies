@@ -33,11 +33,11 @@
                     {% set get_submenu = expandable_item.url | split('/') | last %}
                     {# display expandable menu if exists #}
                     {% set expandable_subitems = simplify_menu(get_submenu) %}
-                    <li class="expandable-menu__item item {{ expandableactive }}{{ expandable_subitems.menu_tree ? ' has-expandable-menu'}}" data-getsubmenu="{{ get_submenu }}">
+                    <li class="expandable-menu__item item {{ expandableactive }}{{ expandable_subitems.menu_tree ? ' has-expandable-submenu'}}" data-getsubmenu="{{ get_submenu }}">
                       <a href="{{ expandable_item.url }}" class="item-link {{ expandableactive }}"><span>{{ expandable_item.text }}</span></a>
                       
                       {% if expandable_subitems.menu_tree %}
-                        <ul class="expandable-menu">
+                        <ul class="expandable-submenu">
                           {% for expandable_subitem in expandable_subitems.menu_tree %}
                             {% set expandablesubactive = (expandable_subitem.active) ? 'is-active' : '' %}
                             <li class="expandable-menu__item item {{ expandablesubactive }}">

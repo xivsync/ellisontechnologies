@@ -88,7 +88,8 @@
       @apply px-4 bg-dark-blue w-full;
     }
 
-    li.has-expandable-menu > a::after {
+    li.has-expandable-menu > a::after,
+    li.has-expandable-submenu > a::after  {
       content: "";
       display: inline-flex;
       width: 20px;
@@ -102,13 +103,15 @@
       background-size: 14px;
     }
 
-    li.has-expandable-menu:hover .expandable-menu {
+    li.has-expandable-menu:hover .expandable-menu,
+    li.has-expandable-submenu:hover .expandable-submenu {
       @apply block;
     }
 
   }
 
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     @apply hidden absolute left-[100%] -ml-4 p-4 pl-4 top-[-1rem] bg-dark-blue;
   }
 

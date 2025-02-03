@@ -3997,7 +3997,8 @@ body.unpublished .breadcrumb__items::before {
       padding-left: 1rem;
       padding-right: 1rem;
     }
-    li.has-expandable-menu > a::after {
+    li.has-expandable-menu > a::after,
+    li.has-expandable-submenu > a::after  {
       content: "";
       display: inline-flex;
       width: 20px;
@@ -4010,41 +4011,56 @@ body.unpublished .breadcrumb__items::before {
       background-position: center;
       background-size: 14px;
     }
-    li.has-expandable-menu:hover .expandable-menu {
+    li.has-expandable-menu:hover .expandable-menu,
+    li.has-expandable-submenu:hover .expandable-submenu {
       display: block;
     }
     .sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu,
-.sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu > div {
+.sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu > div,.sitewide-alert-block div
+    li.has-expandable-submenu:hover .expandable-submenu,
+.sitewide-alert-block div
+    li.has-expandable-submenu:hover .expandable-submenu > div {
       height: 100%;
     }
     .sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu,
-.sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu > div {
+.sitewide-alert-block divli.has-expandable-menu:hover .expandable-menu > div,.sitewide-alert-block div
+    li.has-expandable-submenu:hover .expandable-submenu,
+.sitewide-alert-block div
+    li.has-expandable-submenu:hover .expandable-submenu > div {
       height: 100%;
     }
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     position: absolute;
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     left: 100%;
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     top: -1rem;
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     margin-left: -1rem;
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     display: none;
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 67 / var(--tw-bg-opacity));
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     padding: 1rem;
   }
-  ul.expandable-menu {
+  ul.expandable-menu,
+  ul.expandable-submenu {
     padding-left: 1rem;
   }
 }
