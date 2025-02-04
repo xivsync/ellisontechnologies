@@ -32,15 +32,17 @@
         var fixedTop = 70;
 
         if ($('#'+hashname).length > 0 ) {
-          fixedTop += $('header.header').height();
-          if ($('.sitewide-alert').length > 0) {
-            fixedTop += $('.sitewide-alert').height();
-          }
-          if ( $('#toolbar-bar').length > 0 ) {
-            if ($('.toolbar-tray-horizontal').hasClass('is-active')) {
-              fixedTop += $('.toolbar-tray-horizontal').height();
+          if ($( window ).width() > 991) {
+            fixedTop += $('header.header').height();
+            if ($('.sitewide-alert').length > 0) {
+              fixedTop += $('.sitewide-alert').height();
             }
-            fixedTop = fixedTop + $('#toolbar-bar').height();
+            if ($('#toolbar-bar').length > 0) {
+              if ($('.toolbar-tray-horizontal').hasClass('is-active')) {
+                fixedTop += $('.toolbar-tray-horizontal').height();
+              }
+              fixedTop = fixedTop + $('#toolbar-bar').height();
+            }
           }
           targetScrollTo = $('#'+hashname).offset().top - fixedTop;
           $("html, body").animate({
