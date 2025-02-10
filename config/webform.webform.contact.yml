@@ -155,6 +155,7 @@ elements: |-
   region__c:
     '#type': hidden
     '#title': region__c
+    '#title_display': ''
   webformsid__c:
     '#type': hidden
     '#title': webformsid__c
@@ -223,6 +224,10 @@ elements: |-
               });
       </script>
     '#format': source
+  webform_region_c:
+    '#type': hidden
+    '#title': Region
+    '#title_display': invisible
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

@@ -75,6 +75,7 @@ elements: |-
   region__c:
     '#type': hidden
     '#title': region__c
+    '#title_display': ''
   webformsid__c:
     '#type': hidden
     '#title': webformsid__c

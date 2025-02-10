@@ -139,6 +139,13 @@ field_mappings:
     salesforce_field: LeadSource
     id: 15
     description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: region__c
+    direction: drupal_sf
+    salesforce_field: Region__c
+    id: 16
+    description: ''
 status: true
 dependencies:
   config:

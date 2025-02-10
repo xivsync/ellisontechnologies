@@ -113,6 +113,7 @@ elements: |-
   region__c:
     '#type': hidden
     '#title': region__c
+    '#title_display': ''
   webform_name__c:
     '#type': hidden
     '#title': webform_name__c
@@ -265,8 +266,8 @@ settings:
   entity_limit_total_interval: null
   entity_limit_user: null
   entity_limit_user_interval: null
-  purge: none
-  purge_days: null
+  purge: all
+  purge_days: 1
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
