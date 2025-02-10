@@ -47,6 +47,7 @@ module:
   emulsify_twig: 0
   entity_reference_revisions: 0
   entity_usage: 0
+  facets: 0
   feeds: 0
   feeds_log: 0
   feeds_tamper: 0
