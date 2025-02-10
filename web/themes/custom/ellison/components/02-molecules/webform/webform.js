@@ -13,6 +13,10 @@ Drupal.behaviors.handleWebform = {
           let ellison_region = JSON.parse(Cookies.get("ellison_region"));
           inputs['region__c'].value = ellison_region.sf_region_id || '';
         }
+        if (Cookies.get('ellison_region') && Object.hasOwn(inputs,'webform_region_c') ) {
+          let ellison_region = JSON.parse(Cookies.get("ellison_region"));
+          inputs['webform_region_c'].value = ellison_region.sf_region_id || '';
+        }
 
         function convertIcsDate(value) {
           const numberValue = Number(value)*1000;

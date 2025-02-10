@@ -23,4 +23,33 @@
         });
       }
     };
+    //scroll-hash
+    $(document).ready(function(){
+      $('.scroll-hash a').click(function() {
+        var targetHash = $(this).attr('href');
+        var hashname = targetHash.split('#')[1];
+        var targetScrollTo = 0;
+        var fixedTop = 70;
+
+        if ($('#'+hashname).length > 0 ) {
+          if ($( window ).width() > 991) {
+            fixedTop += $('header.header').height();
+            if ($('.sitewide-alert').length > 0) {
+              fixedTop += $('.sitewide-alert').height();
+            }
+            if ($('#toolbar-bar').length > 0) {
+              if ($('.toolbar-tray-horizontal').hasClass('is-active')) {
+                fixedTop += $('.toolbar-tray-horizontal').height();
+              }
+              fixedTop = fixedTop + $('#toolbar-bar').height();
+            }
+          }
+          targetScrollTo = $('#'+hashname).offset().top - fixedTop;
+          $("html, body").animate({
+            scrollTop: targetScrollTo
+          }, 1000);
+        }
+        return false;
+      });
+    });
   })(jQuery, Drupal);
