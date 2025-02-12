@@ -81,35 +81,35 @@ field_mappings:
     drupal_field_value: webform_name__c
     direction: drupal_sf
     salesforce_field: Webform_Name__c
-    id: 8
+    id: 7
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: webform_campaign_id__c
     direction: drupal_sf
     salesforce_field: Webform_Campaign_ID__c
-    id: 9
+    id: 8
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: leadsource
     direction: drupal_sf
     salesforce_field: LeadSource
-    id: 10
+    id: 9
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: webformsid__c
     direction: drupal_sf
     salesforce_field: WebformSID__c
-    id: 11
+    id: 10
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: webform_region_c
     direction: drupal_sf
     salesforce_field: Region__c
-    id: 12
+    id: 11
     description: ''
 status: true
 dependencies:
