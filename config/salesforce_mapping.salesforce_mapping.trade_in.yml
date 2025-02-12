@@ -14,7 +14,8 @@ push_frequency: 0
 push_limit: 0
 push_retries: 3
 pull_where_clause: ''
-pull_record_type_filter: {  }
+pull_record_type_filter:
+  Master: 0
 sync_triggers:
   push_create: true
   push_update: false
@@ -24,93 +25,86 @@ sync_triggers:
   pull_delete: false
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
-drupal_bundle: service_and_maintenance
+drupal_bundle: trade_in_form
 field_mappings:
-  -
+  0:
     drupal_field_type: WebformElements
     drupal_field_value: firstname
     direction: drupal_sf
     salesforce_field: FirstName
     id: 0
     description: ''
-  -
+  1:
     drupal_field_type: WebformElements
     drupal_field_value: lastname
     direction: drupal_sf
     salesforce_field: LastName
     id: 1
     description: ''
-  -
+  2:
     drupal_field_type: WebformElements
     drupal_field_value: email
     direction: drupal_sf
     salesforce_field: Email
     id: 2
     description: ''
-  -
+  3:
     drupal_field_type: WebformElements
     drupal_field_value: phone
     direction: drupal_sf
     salesforce_field: Phone
     id: 3
     description: ''
-  -
+  4:
     drupal_field_type: WebformElements
     drupal_field_value: company
     direction: drupal_sf
     salesforce_field: Company
     id: 4
     description: ''
-  -
+  5:
     drupal_field_type: WebformElements
-    drupal_field_value: postalcode
+    drupal_field_value: notes__c
     direction: drupal_sf
-    salesforce_field: PostalCode
+    salesforce_field: Notes__c
     id: 5
     description: ''
-  -
+  6:
     drupal_field_type: WebformElements
     drupal_field_value: region__c
     direction: drupal_sf
     salesforce_field: Region__c
     id: 6
     description: ''
-  -
-    drupal_field_type: WebformElements
-    drupal_field_value: opt_in
-    direction: drupal_sf
-    salesforce_field: Webform_Email_Sign_Up__c
-    id: 7
-    description: ''
-  -
+  8:
     drupal_field_type: WebformElements
     drupal_field_value: webform_name__c
     direction: drupal_sf
     salesforce_field: Webform_Name__c
     id: 8
     description: ''
-  -
+  9:
     drupal_field_type: WebformElements
     drupal_field_value: webform_campaign_id__c
     direction: drupal_sf
     salesforce_field: Webform_Campaign_ID__c
     id: 9
     description: ''
-  -
+  10:
     drupal_field_type: WebformElements
     drupal_field_value: leadsource
     direction: drupal_sf
     salesforce_field: LeadSource
     id: 10
     description: ''
-  -
+  11:
     drupal_field_type: WebformElements
     drupal_field_value: webformsid__c
     direction: drupal_sf
     salesforce_field: WebformSID__c
     id: 11
     description: ''
-  -
+  12:
     drupal_field_type: WebformElements
     drupal_field_value: region__c
     direction: drupal_sf
@@ -120,7 +114,7 @@ field_mappings:
 status: true
 dependencies:
   config:
-    - webform.webform.service_and_maintenance
+    - webform.webform.trade_in_form
   module:
     - salesforce_push
     - salesforce_webform
