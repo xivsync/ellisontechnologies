@@ -141,6 +141,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  turnstile: 0
   twig_field_value: 0
   twig_tweak: 0
   typed_data: 0

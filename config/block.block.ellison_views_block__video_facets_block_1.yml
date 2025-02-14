@@ -1,0 +1,29 @@
+uuid: 8135defb-6b96-499e-b0f6-86e2af8f468f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.video_facets
+  module:
+    - system
+    - views
+  theme:
+    - ellison
+id: ellison_views_block__video_facets_block_1
+theme: ellison
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:video_facets-block_1'
+settings:
+  id: 'views_block:video_facets-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /videos
