@@ -48,6 +48,10 @@ module:
   entity_reference_revisions: 0
   entity_usage: 0
   facets: 0
+  facets_exposed_filters: 0
+  facets_rest: 0
+  facets_searchbox_widget: 0
+  facets_summary: 0
   feeds: 0
   feeds_log: 0
   feeds_tamper: 0
@@ -103,6 +107,7 @@ module:
   redirect_metrics: 0
   replicate: 0
   responsive_image: 0
+  rest: 0
   salesforce: 0
   salesforce_address: 0
   salesforce_jwt: 0
@@ -121,6 +126,7 @@ module:
   search_api_page: 0
   sendgrid_integration: 0
   sendgrid_integration_reports: 0
+  serialization: 0
   shortcut: 0
   simplify_menu: 0
   sitewide_alert: 0
