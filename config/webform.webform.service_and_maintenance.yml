@@ -135,6 +135,9 @@ elements: |-
     '#title': webformsid__c
   captcha:
     '#type': captcha
+  webform_region_c:
+    '#type': hidden
+    '#title': Region
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

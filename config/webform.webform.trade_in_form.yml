@@ -142,6 +142,9 @@ elements: |-
     '#default_value': etec-trade-in
   captcha:
     '#type': captcha
+  webform_region_c:
+    '#type': hidden
+    '#title': Region
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

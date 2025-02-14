@@ -14,7 +14,8 @@ push_frequency: 0
 push_limit: 0
 push_retries: 3
 pull_where_clause: ''
-pull_record_type_filter: {  }
+pull_record_type_filter:
+  Master: 0
 sync_triggers:
   push_create: true
   push_update: false
@@ -24,7 +25,7 @@ sync_triggers:
   pull_delete: false
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
-drupal_bundle: service_and_maintenance
+drupal_bundle: trade_in_form
 field_mappings:
   -
     drupal_field_type: WebformElements
@@ -63,9 +64,9 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: postalcode
+    drupal_field_value: notes__c
     direction: drupal_sf
-    salesforce_field: PostalCode
+    salesforce_field: Notes__c
     id: 5
     description: ''
   -
@@ -77,50 +78,43 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: opt_in
-    direction: drupal_sf
-    salesforce_field: Webform_Email_Sign_Up__c
-    id: 7
-    description: ''
-  -
-    drupal_field_type: WebformElements
     drupal_field_value: webform_name__c
     direction: drupal_sf
     salesforce_field: Webform_Name__c
-    id: 8
+    id: 7
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: webform_campaign_id__c
     direction: drupal_sf
     salesforce_field: Webform_Campaign_ID__c
-    id: 9
+    id: 8
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: leadsource
     direction: drupal_sf
     salesforce_field: LeadSource
-    id: 10
+    id: 9
     description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: webformsid__c
     direction: drupal_sf
     salesforce_field: WebformSID__c
-    id: 11
+    id: 10
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: region__c
+    drupal_field_value: webform_region_c
     direction: drupal_sf
     salesforce_field: Region__c
-    id: 12
+    id: 11
     description: ''
 status: true
 dependencies:
   config:
-    - webform.webform.service_and_maintenance
+    - webform.webform.trade_in_form
   module:
     - salesforce_push
     - salesforce_webform
