@@ -1,20 +1,21 @@
-uuid: 2beaa5a4-6bc0-4d2e-99ca-514d4696307f
+uuid: f6d746b2-154c-42c6-aadb-d5aa9b4dda21
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.media.field_alternate_title
     - field.storage.media.field_media_oembed_video
-    - search_api.index.videos
+    - search_api.index.remote_videos
   module:
     - facets_exposed_filters
+    - media
     - search_api
-    - text
-id: video_facets
-label: 'Video Facets'
+id: indexed_remote_videos
+label: 'Indexed Remote Videos'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_videos
+base_table: search_api_index_remote_videos
 base_field: search_api_id
 display:
   default:
@@ -23,12 +24,12 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Video Categories Facets'
+      title: ''
       fields:
-        description:
-          id: description
-          table: search_api_index_videos
-          field: description
+        field_media_oembed_video:
+          id: field_media_oembed_video
+          table: search_api_index_remote_videos
+          field: field_media_oembed_video
           relationship: none
           group_type: group
           admin_label: ''
@@ -68,7 +69,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -77,8 +78,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: oembed
+          settings:
+            link_to_entity: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -96,14 +98,13 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        name:
-          id: name
-          table: search_api_datasource_videos_entity_media
+        name_1:
+          id: name_1
+          table: search_api_index_remote_videos
           field: name
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: media
           plugin_id: search_api_field
           label: ''
           exclude: false
@@ -167,10 +168,10 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        video_categories_name:
-          id: video_categories_name
-          table: search_api_index_videos
-          field: video_categories_name
+        name_1_1:
+          id: name_1_1
+          table: search_api_index_remote_videos
+          field: name_1
           relationship: none
           group_type: group
           admin_label: ''
@@ -212,7 +213,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'No category applied'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -237,14 +238,13 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        field_media_oembed_video:
-          id: field_media_oembed_video
-          table: search_api_datasource_videos_entity_media
-          field: field_media_oembed_video
+        field_alternate_title_1:
+          id: field_alternate_title_1
+          table: search_api_index_remote_videos
+          field: field_alternate_title
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: media
           plugin_id: search_api_field
           label: ''
           exclude: false
@@ -316,8 +316,8 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: ››
+            previous: ‹‹
             first: '« First'
             last: 'Last »'
           expose:
@@ -349,10 +349,10 @@ display:
       sorts: {  }
       arguments: {  }
       filters:
-        facets_video_categories_name:
-          id: facets_video_categories_name
-          table: search_api_index_videos
-          field: facets_video_categories_name
+        facets_name_1:
+          id: facets_name_1
+          table: search_api_index_remote_videos
+          field: facets_name_1
           relationship: none
           group_type: group
           admin_label: ''
@@ -363,18 +363,19 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Video Categories » Taxonomy term » Name'
+            label: Categories
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: video_categories_name
+            identifier: category
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
@@ -397,6 +398,10 @@ display:
             min_count: 1
             show_numbers: false
             processor_configs: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
       row:
@@ -420,15 +425,41 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.media.field_alternate_title'
         - 'config:field.storage.media.field_media_oembed_video'
-        - 'config:search_api.index.videos'
-        - 'search_api_list:videos'
+        - 'config:search_api.index.remote_videos'
+        - 'search_api_list:remote_videos'
   block_1:
     id: block_1
     display_title: Block
     display_plugin: block
-    position: 1
+    position: 2
     display_options:
+      title: 'Remote Video'
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 12
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        title: false
+        pager: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -438,6 +469,7 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.media.field_alternate_title'
         - 'config:field.storage.media.field_media_oembed_video'
-        - 'config:search_api.index.videos'
-        - 'search_api_list:videos'
+        - 'config:search_api.index.remote_videos'
+        - 'search_api_list:remote_videos'
