@@ -29,9 +29,6 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-
-element_attributes
-
 <div class="views-fields collection__item collection_item--video">
   {% for field in fields -%}
       <div{{ field.element_attributes }}>{{ field.content }}</div>
