@@ -2,6 +2,7 @@
   @apply flex flex-row gap-2 items-baseline;
 }
 
-.views-field-field-alternate-title {
+.views-field-field-alternate-title,
+.views-field-field-alternate-title-1 {
   @apply hidden;
 }

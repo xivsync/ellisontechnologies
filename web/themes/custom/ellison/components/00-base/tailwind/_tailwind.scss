@@ -4525,7 +4525,8 @@ body.unpublished .breadcrumb__items::before {
   gap: 0.5rem;
 }
 
-.views-field-field-alternate-title {
+.views-field-field-alternate-title,
+.views-field-field-alternate-title-1 {
   display: none;
 }
 
@@ -6365,14 +6366,19 @@ div[role=alert] {
       aspect-ratio: 16/9;
     }
     .views-field-name,
+    .views-field-name-1,
     a.myButton {
       font-size: 1.125rem !important;
       line-height: 1.75rem !important;
     }
     .views-field-name,
+    .views-field-name-1,
     a.myButton {
       font-weight: 700 !important;
     }
+  }
+  .views-field-field-media-oembed-video span.field-contant  {
+    display:block;
   }
 }
 

@@ -157,12 +157,22 @@
     }
 
     .views-field-name,
+    .views-field-name-1,
     a.myButton {
       @apply font-bold text-lg !important;
     }
+
+
+
+  }
+
+  .views-field-field-media-oembed-video span.field-contant  {
+    display:block;
   }
 
 }
+
+
 
 /* handles collection of cards in columns */
 .collection.collection--cards.display-as-cols {
