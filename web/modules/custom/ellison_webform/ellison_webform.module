@@ -8,7 +8,7 @@
  * Implements hook_form_alter().
  */
 function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  echo $form_id. '  -webform-submission-contact-node-45-add-form';
+  //echo $form_id. '  -webform-submission-contact-node-45-add-form';
   if (strpos($form_id, 'webform_submission_contact') !== FALSE ||
     strpos($form_id, 'webform_submission_service_and_maintenance') !== FALSE ||
     strpos($form_id, 'webform_submission_parts_and_accessories') !== FALSE
