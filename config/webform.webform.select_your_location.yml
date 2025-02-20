@@ -21,13 +21,12 @@ elements: |-
     '#required': true
     '#required_error': 'A location selection is required.'
     '#target_type': taxonomy_term
-    '#selection_handler': 'default:taxonomy_term'
+    '#selection_handler': views
     '#selection_settings':
-      target_bundles:
-        regions: regions
-      sort:
-        field: name
-        direction: ASC
+      view:
+        view_name: taxonomy_entity_reference
+        display_name: entity_reference_1
+        arguments: {  }
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

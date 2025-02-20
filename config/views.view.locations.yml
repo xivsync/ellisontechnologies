@@ -6,11 +6,24 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - node.type.location
     - taxonomy.vocabulary.regions
+  content:
+    - 'taxonomy_term:regions:018c7c0a-6c04-48c8-89a8-254c124964f5'
+    - 'taxonomy_term:regions:311d25f3-9a22-4d16-ab16-702bde1315eb'
+    - 'taxonomy_term:regions:433d0f4b-3efb-49d7-8417-3bf9c5be4db7'
+    - 'taxonomy_term:regions:4f830ccf-109f-44a2-8ec8-1a9af868b68b'
+    - 'taxonomy_term:regions:58833b38-23a7-4262-859b-d6e516beac78'
+    - 'taxonomy_term:regions:75628cc8-d56e-4a71-9567-f11863618e31'
+    - 'taxonomy_term:regions:8a603ca6-b2e6-409c-9769-328813c399a7'
+    - 'taxonomy_term:regions:b30c7af1-5f1d-4043-b85d-441dcf8e60a2'
+    - 'taxonomy_term:regions:c175bf62-4fc3-4d4a-8d38-55f6c46e0c66'
+    - 'taxonomy_term:regions:e0498812-25e8-4a68-a650-6981073da1ff'
+    - 'taxonomy_term:regions:e4cb7264-c0e0-4de7-8a4b-22f2794d5dc2'
   module:
     - better_exposed_filters
     - node
     - taxonomy
     - user
+    - views_natural_sort
 id: locations
 label: 'Locations Teasers'
 module: views
@@ -165,7 +178,18 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            109: 109
+            111: 111
+            110: 110
+            112: 112
+            114: 114
+            106: 106
+            116: 116
+            107: 107
+            113: 113
+            115: 115
+            108: 108
           group: 1
           exposed: true
           expose:
@@ -185,7 +209,7 @@ display:
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
-            reduce: false
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -201,7 +225,7 @@ display:
           reduce_duplicates: false
           vid: regions
           type: select
-          hierarchy: false
+          hierarchy: true
           limit: true
           error_message: true
       style:

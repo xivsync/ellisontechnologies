@@ -140,6 +140,29 @@ elements: |-
       Recreation: Recreation
       Semiconductor: Semiconductor
       Valve: Valve
+  location:
+    '#type': select
+    '#title': Location
+    '#options':
+      'North Carolina': 'North Carolina'
+      Virginia: Virginia
+      Maryland: Maryland
+      'South Carolina': 'South Carolina'
+      Delaware: Delaware
+      Tennessee: Tennessee
+      Georgia: Georgia
+      Alabama: Alabama
+      Mississippi: Mississippi
+      Washington: Washington
+      Oregon: Oregon
+      'Iowa and Nebraska': 'Iowa and Nebraska'
+      Missouri: Missouri
+      'North Texas and North Louisiana': 'North Texas and North Louisiana'
+      'South Texas and South Louisiana': 'South Texas and South Louisiana'
+      'Southern Ohio and Kentucky': 'Southern Ohio and Kentucky'
+      'Northern Ohio and Kentucky': 'Northern Ohio and Kentucky'
+      'Not Listed': 'Not Listed'
+    '#empty_option': 'Select Location'
   description:
     '#type': textarea
     '#title': 'Please let us know how we can help you today *'

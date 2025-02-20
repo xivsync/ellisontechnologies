@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * Provides functionality for handling webform hook.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+ // echo $form_id;
+  if (str_contains($form_id, 'webform_submission_contact_node') ||
+    str_contains($form_id, 'webform_submission_service_and_maintenance_node_') ||
+    str_contains($form_id, 'webform_submission_parts_and_accessories_node_')
+  ) {
+    if (!empty($_COOKIE['ellison_region'])) {
+      $region = json_decode($_COOKIE['ellison_region'], TRUE);
+      if (isset($form['elements']['location']) || isset($form['elements']['select_location'])) {
+        if (!empty($region['region_id'])) {
+
+          $parent_id = $region['region_id'];
+          $child_terms = \Drupal::entityTypeManager()
+            ->getStorage('taxonomy_term')
+            ->loadTree('regions', $parent_id, NULL, FALSE);
+          $child_region = [];
+          foreach ($child_terms as $term) {
+            $child_region[$term->name] = $term->name;
+          }
+          if (isset($form['elements']['location'])) {
+            $form['elements']['location']['#options'] = $child_region;
+          }
+          elseif (isset($form['elements']['select_location'])) {
+            //dump($form['elements']['select_location']);
+            $form['elements']['select_location']['#options'] = $child_region;
+          }
+        }
+      }
+    }
+  }
+}
