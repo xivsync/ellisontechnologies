@@ -8,17 +8,19 @@
  * Implements hook_form_alter().
  */
 function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
- // echo $form_id;
+ // echo $form_id; webform-submission-contact-node-45-add-form
   if (str_contains($form_id, 'webform_submission_contact_node') ||
     str_contains($form_id, 'webform_submission_service_and_maintenance_node_') ||
     str_contains($form_id, 'webform_submission_parts_and_accessories_node_')
   ) {
     if (!empty($_COOKIE['ellison_region'])) {
+      echo $form_id;
+      dump($_COOKIE['ellison_region']);
       $region = json_decode($_COOKIE['ellison_region'], TRUE);
       if (isset($form['elements']['location']) || isset($form['elements']['select_location'])) {
         if (!empty($region['region_id'])) {
 
-          $parent_id = $region['region_id'];
+          echo $parent_id = $region['region_id'];
           $child_terms = \Drupal::entityTypeManager()
             ->getStorage('taxonomy_term')
             ->loadTree('regions', $parent_id, NULL, FALSE);
