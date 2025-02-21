@@ -147,9 +147,6 @@
             "include": ["web/modules/contrib/dropzonejs/composer.libraries.json"]
         },
         "patches": {
-            "drupal/smtp": {
-              "Error sending email invalid address - 3323386": "https://www.drupal.org/files/issues/2023-03-16/error-sending-email-16.patch"
-            },
             "drupal": {
                 "Allow multiple vocabularies in the taxonomy filter - 2784233": "https://www.drupal.org/files/issues/2024-07-05/2784233-270.patch"
               }
