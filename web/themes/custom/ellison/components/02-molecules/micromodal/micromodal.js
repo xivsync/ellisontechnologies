@@ -45,9 +45,8 @@ Drupal.behaviors.micromodal = {
           event.preventDefault();
 
         }
-
-        // #block-views-block-videos-block-1 > div.form-container > div > div.collection.collection--videos.display-as-cols > div:nth-child(5) > div.views-field.views-field-field-alternate-title > div
-        const alterateNameEl = element.querySelector('.views-field-field-alternate-title > div');
+        
+        const alterateNameEl = element.querySelector('.views-field-field-alternate-title-1 > span');
         if (alterateNameEl) {
           const alterateName = alterateNameEl.innerText;
           let cleanName = alterateName.replace(/[^a-zA-Z0-9 ]/g, '');
