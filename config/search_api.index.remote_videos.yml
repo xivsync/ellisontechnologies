@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_alternate_title
+    - field.storage.media.field_media_oembed_video
     - field.storage.media.field_video_categories
     - field.storage.taxonomy_term.field_teaser
-    - field.storage.media.field_media_oembed_video
     - search_api.server.default_server
   module:
-    - media
     - taxonomy
+    - media
     - search_api
 id: remote_videos
 name: 'Remote videos'
@@ -90,7 +90,6 @@ processor_settings:
     ignorable: "['¿¡!?,.:;]"
     ignorable_classes:
       - Pc
-      - Pd
       - Pe
       - Pf
       - Pi
@@ -103,9 +102,6 @@ processor_settings:
     all_fields: false
     fields:
       - field_media_oembed_video
-      - field_teaser
-      - name
-      - name_1
   language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:

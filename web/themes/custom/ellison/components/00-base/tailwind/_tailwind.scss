@@ -9357,7 +9357,8 @@ body.title-thank-you-for-registering--ellison-technologies .breadcrumb__item::af
 
 /* handles exposed form on videos page */
 
-.view--videos {
+.view--videos,
+.view--indexed-remote-videos {
   .views-exposed-form {
     width: 100%;
   }
