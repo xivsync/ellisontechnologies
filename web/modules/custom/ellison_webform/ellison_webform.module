@@ -13,7 +13,10 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
     strpos($form_id, 'webform_submission_service_and_maintenance') !== FALSE ||
     strpos($form_id, 'webform_submission_parts_and_accessories') !== FALSE
   ) {
-    //dump($_COOKIE);
+    dump($_COOKIE);
+    $session = \Drupal::request()->getSession();
+    $ellison_region = $session->get('ellison_region');
+    dump($ellison_region);
     if (!empty($_COOKIE['ellison_region'])) {
       //echo $form_id;
       //dump($_COOKIE['ellison_region']);
