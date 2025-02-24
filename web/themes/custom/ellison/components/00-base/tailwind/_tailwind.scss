@@ -9398,7 +9398,7 @@ body.title-thank-you-for-registering--ellison-technologies .breadcrumb__item::af
     flex-direction: column;
   }
   .views-exposed-form {
-    align-items: flex-start;
+    align-items: flex-end;
   }
   .views-exposed-form {
     justify-content: center;
@@ -9422,11 +9422,6 @@ body.title-thank-you-for-registering--ellison-technologies .breadcrumb__item::af
   @media (min-width: 992px) {
     .views-exposed-form {
       flex-direction: row;
-    }
-  }
-  @media (min-width: 992px) {
-    .views-exposed-form {
-      align-items: center;
     }
   }
   .views-exposed-form {
