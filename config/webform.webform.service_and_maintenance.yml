@@ -46,6 +46,7 @@ elements: |-
       north: 'North TX /  North LA'
       south: 'South TX / South LA'
       none: 'Not sure'
+    '#required': true
   firstname:
     '#type': textfield
     '#title': 'First Name'

@@ -163,6 +163,7 @@ elements: |-
       'Northern Ohio and Kentucky': 'Northern Ohio and Kentucky'
       'Not Listed': 'Not Listed'
     '#empty_option': 'Select Location'
+    '#required': true
   description:
     '#type': textarea
     '#title': 'Please let us know how we can help you today *'

@@ -124,6 +124,13 @@ field_mappings:
     salesforce_field: Title
     id: 13
     description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: select_location
+    direction: drupal_sf
+    salesforce_field: Location__c
+    id: 14
+    description: ''
 status: true
 dependencies:
   config:
