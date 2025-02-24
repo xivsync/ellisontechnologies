@@ -3,7 +3,7 @@
 .view--indexed-remote-videos {
 
   .views-exposed-form {
-    @apply container flex flex-col lg:flex-row items-start lg:items-center justify-center my-16 bg-gray-200 p-8 gap-8;
+    @apply container flex flex-col lg:flex-row items-end justify-center my-16 bg-gray-200 p-8 gap-8;
 
     #edit-actions {
       @apply lg:self-end;
