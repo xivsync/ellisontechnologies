@@ -413,7 +413,12 @@ display:
             query_operator: or
             min_count: 1
             show_numbers: false
-            processor_configs: {  }
+            processor_configs:
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
       filter_groups:
         operator: AND
         groups:
