@@ -26,7 +26,6 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
     if (!empty($region)) {
       if (isset($form['elements']['location']) || isset($form['elements']['select_location'])) {
         if (!empty($region['region_id'])) {
-
           $parent_id = $region['region_id'];
           $child_terms = \Drupal::entityTypeManager()
             ->getStorage('taxonomy_term')
