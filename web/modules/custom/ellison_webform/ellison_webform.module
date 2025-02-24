@@ -37,6 +37,9 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
           }
           if (isset($form['elements']['location'])) {
             $form['elements']['location']['#options'] = $child_region;
+            if (empty($child_region)) {
+              $form['elements']['location']['#access'] = FALSE;
+            }
           }
           elseif (isset($form['elements']['select_location'])) {
             $form['elements']['select_location']['#options'] = $child_region;
