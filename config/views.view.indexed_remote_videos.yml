@@ -335,7 +335,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: 'Update Results'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -413,12 +413,7 @@ display:
             query_operator: or
             min_count: 1
             show_numbers: false
-            processor_configs:
-              display_value_widget_order:
-                weights:
-                  sort: 40
-                settings:
-                  sort: ASC
+            processor_configs: {  }
       filter_groups:
         operator: AND
         groups:

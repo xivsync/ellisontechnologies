@@ -1,0 +1,8 @@
+uuid: 1f7aeac9-326e-477b-8aa8-574647b6cbf8
+langcode: en
+status: true
+dependencies: {  }
+id: swiss-style-turning-machines
+label: 'Swiss Style Turning Machines'
+description: ''
+locked: false
