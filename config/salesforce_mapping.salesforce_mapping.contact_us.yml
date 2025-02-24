@@ -166,6 +166,13 @@ field_mappings:
     salesforce_field: Region__c
     id: 19
     description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: location
+    direction: drupal_sf
+    salesforce_field: Location__c
+    id: 20
+    description: ''
 status: true
 dependencies:
   config:
