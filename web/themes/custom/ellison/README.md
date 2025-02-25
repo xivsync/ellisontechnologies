@@ -40,8 +40,11 @@ Please note that the `master` branch always goes from Dev to Test to Live. Datab
 - after code changes are on Dev download the Live database
 - in Drupal admin go to **Configurations > Development > Synchronize** and click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms.
 - review on Dev environment
-- When ready merge to Test using Pantheon tools by ALWAYS copying down the Live database and files
-- after code is on Test in Drupal admin go to **Configurations > Development > Synchronize** and click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms
+- When ready merge to Test using Pantheon tools by **ALWAYS copying down the Live database and files**.
+- after code is on Test in Drupal admin go to **Configurations > Development > Synchronize**.
+- It is critical to check all the configurations to import. If the client has made changes to menus or webforms -- this configurations MUST be updated before pushing to Live. If this is not done, there is a risk of regressing changes the client has made since the last release.
+- Click the "Import all" to update the Live database you just copied down with any configuration changes in order to test changes and regressions like webforms  or menus. If something has been overwritten, download a backup database locally. Export configurations `ddev drush cex -y` and push the needed configs for the fix.
+- **If any updates have been made to the Search Indexes**, you should update the index manually.
 - Now have the client UAT on Test
 - When ready merge to Production using Pantheon tools
 - it is recommended at this point to create a backup of the Live site incase the configuration import does not work as expected

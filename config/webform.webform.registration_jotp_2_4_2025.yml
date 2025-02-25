@@ -1,6 +1,6 @@
 uuid: 8dafb1da-3335-479e-b3d2-85a688b914c4
 langcode: en
-status: open
+status: closed
 dependencies:
   module:
     - webform_pardot
