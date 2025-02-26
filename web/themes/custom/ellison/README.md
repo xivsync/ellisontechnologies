@@ -107,6 +107,8 @@ https://ddev.readthedocs.io/en/latest/users/usage/database-management/
 
 `ddev import-db --src=ellisontechnologies_dev_2023-08-22T16-12-11_UTC_database.sql`
 
+If you import the live database, when you Configuration Sync. You should expect basically NO needed configs to import.
+
 ### To get files
 
 Backup the Live site using Pantheon's dashboard and then download and you can replace all the folders and files in `/web/sites/default/files/`. This will give you all the production images in your local environment. This is more reliable than running `ddev pull pantheon`.

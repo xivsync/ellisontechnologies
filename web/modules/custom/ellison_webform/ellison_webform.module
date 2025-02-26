@@ -8,10 +8,10 @@
  * Implements hook_form_alter().
  */
 function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
   if (strpos($form_id, 'webform_submission_contact') !== FALSE ||
     strpos($form_id, 'webform_submission_service_and_maintenance') !== FALSE ||
-    strpos($form_id, 'webform_submission_parts_and_accessories') !== FALSE
+    strpos($form_id, 'webform_submission_parts_and_accessories') !== FALSE ||
+    strpos($form_id, 'webform_submission_training_request') !== FALSE
   ) {
     $session = \Drupal::request()->getSession();
     $ellison_region = $session->get('ellison_region');
@@ -43,6 +43,15 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
           elseif (isset($form['elements']['select_location']) && !empty($child_region)) {
             $form['elements']['select_location']['#options'] = $child_region;
           }
+        }
+      }
+      if (isset($form['elements']['region__c'])) {
+        // Set the form element 'region__c' to the value of $region.
+        if(is_array($region) && isset($region['sf_region_id']) && !empty($region['sf_region_id'])){
+            $form['elements']['region__c']['#default_value'] = $region['sf_region_id'];
+        }else{
+            // default is salesforce southern california region id
+            $form['elements']['region__c']['#default_value'] = '218';
         }
       }
     }

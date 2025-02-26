@@ -9,14 +9,6 @@ Drupal.behaviors.handleWebform = {
     once('handleWebform', '.webform-submission-form', context).forEach(
       function (element) {
         const inputs = element.elements;
-        if (Cookies.get('ellison_region') && Object.hasOwn(inputs,'region__c') ) {
-          let ellison_region = JSON.parse(Cookies.get("ellison_region"));
-          inputs['region__c'].value = ellison_region.sf_region_id || '';
-        }
-        if (Cookies.get('ellison_region') && Object.hasOwn(inputs,'webform_region_c') ) {
-          let ellison_region = JSON.parse(Cookies.get("ellison_region"));
-          inputs['webform_region_c'].value = ellison_region.sf_region_id || '';
-        }
 
         function convertIcsDate(value) {
           const numberValue = Number(value)*1000;
