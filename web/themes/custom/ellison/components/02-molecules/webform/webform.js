@@ -190,6 +190,7 @@ Drupal.behaviors.handleWebform = {
           locationRID = 355; //(Ohio - Cincinnati);
           break;
         case "Northern Ohio and Kentucky":
+        case "Northern Ohio":
           // (Ohio - Cleveland)
           locationRID = 350;
           break;
