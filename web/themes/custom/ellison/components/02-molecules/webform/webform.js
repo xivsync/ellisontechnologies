@@ -174,3 +174,67 @@ Drupal.behaviors.handleWebform = {
 
   }
 };
+// Change region value by location
+(function ($, Drupal) {
+  jQuery("body").on('change', 'select[name="location"], select[name="select_location"]', function(event) {
+    let locationRID = '';
+    let regionId = '';
+    if (Cookies.get('ellison_region')) {
+      let ellison_region = JSON.parse(Cookies.get("ellison_region"));
+      //region = ellison_region.region || '';
+      regionId = ellison_region.sf_region_id || '';
+      let location = $(this).val();
+      switch(location) {
+        case "Southern Ohio and Kentucky":
+          // code block
+          locationRID = 355; //(Ohio - Cincinnati);
+          break;
+        case "Northern Ohio and Kentucky":
+          // (Ohio - Cleveland)
+          locationRID = 350;
+          break;
+        case "Southern California":
+          // (Southern California)
+          locationRID = 218;
+          break;
+        case "Washington":
+        case "N. Idaho":
+        case "Alaska":
+          // (Northwest – Washington)
+          locationRID = 205;
+          break;
+        case "Oregon":
+          // (Northwest - Oregon)
+          locationRID = 210;
+          break;
+        case "South Texas and South Louisiana":
+          // (Texas – South)
+          locationRID = 252;
+          break;
+        case "North Texas and North Louisiana":
+          // (Texas – South) 253 (Texas – North)
+          locationRID = 253;
+          break;
+        case "Iowa and Nebraska":
+          // 320 (TriStates – Iowa/NE)
+          locationRID = 320;
+          break;
+        case "Missouri & Southern Illinois":
+          //325 (TriStates – MO)
+          locationRID = 325;
+          break;
+        default:
+        // code block
+          break;
+      }
+      if (locationRID !== "") {
+        $('input[name="region__c"]').val(locationRID);
+        $('input[name="webform_region_c"]').val(locationRID);
+      }
+      else {
+        $('input[name="region__c"]').val(regionId);
+        $('input[name="webform_region_c"]').val(regionId);
+      }
+    }
+  });
+})(jQuery, Drupal);

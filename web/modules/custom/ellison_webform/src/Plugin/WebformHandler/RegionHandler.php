@@ -74,6 +74,7 @@ class RegionHandler extends WebformHandlerBase {
           // 'Southern - California'
           $sf_region_id = '218';
           break;
+        case '113':
         case '115':
           // 'Southeast - Nashville'
           $sf_region_id = '450';
@@ -83,8 +84,13 @@ class RegionHandler extends WebformHandlerBase {
           $sf_region_id = '304';
           break;
         case '114':
+        case '565':
           // Indiana
           $sf_region_id = '340';
+          break;
+        case '565':
+          // South Atlantic
+          $sf_region_id = '400';
           break;
         default:
           // 'Southern - California'
