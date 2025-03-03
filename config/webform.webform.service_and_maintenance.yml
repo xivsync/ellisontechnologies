@@ -139,6 +139,9 @@ elements: |-
   webform_region_c:
     '#type': hidden
     '#title': Region
+  source_page_url:
+    '#type': hidden
+    '#title': source_page_url
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
