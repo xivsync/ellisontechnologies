@@ -45,12 +45,18 @@
   ]
 %}
 
+{% if content.field_webform|render|striptags|trim is contains("?") %}
+  {% set start_params =  '&' %}
+{% else %}
+  {% set start_params =  '?' %}
+{% endif %}
+
 {% include "@molecules/cta/cta.twig" with {
   classes: classes,
   background_class: content.field_background_color | render | striptags | trim,
   align_class: content.field_align_text | render | striptags | trim,
   body: content.field_content,
-  webform_url: content.field_webform  | render | striptags | trim,
+  webform_url: content.field_webform|render|striptags|trim ~ start_params ~ 'source_url=' ~ encoded_url,
   webform_text: content.field_webform_cta_text | render | striptags | trim,
   cta_button: content.field_cta_button,
   cta_button_style: content.field_cta_button_style | render | striptags | trim,
