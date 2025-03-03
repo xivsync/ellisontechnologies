@@ -363,8 +363,8 @@ The workflow for promoting a library item and then re-using it is as follows:
 
 - the first time a visitor comes to the site, they should get a modal form to select a location.
 - the location information (region term name, region term ID, and Salesforce region ID) are saved a cookie `ellison_region`
-- the cookie values are used by scripts block.js and site-footer.js
-- the cookie values are also used by any webform with a `region__c` input to add the Salesforce region ID
+- the cookie values are also used by any webform with a `region__c` or `webform_region_c` input to add the Salesforce region ID
+- @todo find out which "region" value is the populating Salesforce
 
 **Salesforce region IDs**
 
@@ -423,6 +423,8 @@ In both cases above, CTM sets several values in Salesforce which are required.
 
 Assigning regions are handled by the **Pardot form handler**. The Drupal Locations webform handler sets a `ellison_region` cookie. The follow numbers are sent to Salesforce so that Region is properly assigned.
 
+@todo determine which form value is used to populate region in Salesforce `webform_region_c` or `region__c`
+
 308|(308) Minnesota
 210|(210) Northwest - Oregon
 307|(307) Wisconsin
@@ -459,7 +461,7 @@ https://live-ellisontechnologies.pantheonsite.io/admin/content/salesforce
 
 ## Call Tracking Metrics
 
-The custom webform handler is not being used.
+The custom webform handler is NOT being used.
 
 All integration with CTM is handled by a script added to the page which listens to the form submission.
 

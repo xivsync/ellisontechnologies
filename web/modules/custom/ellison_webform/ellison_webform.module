@@ -54,6 +54,15 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
             $form['elements']['region__c']['#default_value'] = '218';
         }
       }
+      if (isset($form['elements']['webform_region_c'])) {
+        // Set the form element 'region__c' to the value of $region.
+        if(is_array($region) && isset($region['sf_region_id']) && !empty($region['sf_region_id'])){
+            $form['elements']['webform_region_c']['#default_value'] = $region['sf_region_id'];
+        }else{
+            // default is salesforce southern california region id
+            $form['elements']['webform_region_c']['#default_value'] = '218';
+        }
+      }
     }
   }
 }
