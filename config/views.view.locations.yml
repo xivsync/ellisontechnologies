@@ -8,14 +8,14 @@ dependencies:
     - taxonomy.vocabulary.regions
   content:
     - 'taxonomy_term:regions:018c7c0a-6c04-48c8-89a8-254c124964f5'
+    - 'taxonomy_term:regions:2b44191a-d2a8-4bed-9b2b-a2a6d9b96ed7'
+    - 'taxonomy_term:regions:311aac90-784c-42e2-8db3-b41271a2c944'
     - 'taxonomy_term:regions:311d25f3-9a22-4d16-ab16-702bde1315eb'
+    - 'taxonomy_term:regions:399c2bcc-37a8-4848-b576-52ca9cbe1f78'
     - 'taxonomy_term:regions:433d0f4b-3efb-49d7-8417-3bf9c5be4db7'
-    - 'taxonomy_term:regions:52c79492-5ba0-4a20-9120-24a7190fac62'
     - 'taxonomy_term:regions:58833b38-23a7-4262-859b-d6e516beac78'
     - 'taxonomy_term:regions:8a603ca6-b2e6-409c-9769-328813c399a7'
-    - 'taxonomy_term:regions:a6f56776-5a59-4378-8ee2-4e2b37a567e2'
-    - 'taxonomy_term:regions:acef60b9-c919-4664-8310-ac8b2f4125b9'
-    - 'taxonomy_term:regions:c32bbf9d-61f2-4f6b-844b-04dc81f482db'
+    - 'taxonomy_term:regions:94416e48-6cc0-437a-93a4-0bc64a92edad'
     - 'taxonomy_term:regions:e0498812-25e8-4a68-a650-6981073da1ff'
     - 'taxonomy_term:regions:e4cb7264-c0e0-4de7-8a4b-22f2794d5dc2'
   module:
@@ -186,7 +186,7 @@ display:
             107: 107
             565: 565
             113: 113
-            573: 573
+            571: 571
             110: 110
             108: 108
             106: 106
