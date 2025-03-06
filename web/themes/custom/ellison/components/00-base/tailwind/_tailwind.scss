@@ -5327,10 +5327,10 @@ form.webform-submission-select-your-location-form {
       * the order of the nth-child() selectors is important
       */
     .form-item:nth-child(1) label {
-      background-image: url('/themes/custom/ellison/images/regions/indiana.png');
+      background-image: url('/themes/custom/ellison/images/regions/pacific-northwest.jpeg');
     }
     .form-item:nth-child(2) label {
-      background-image: url('/themes/custom/ellison/images/regions/ohio-kentucky.jpeg');
+      background-image: url('/themes/custom/ellison/images/regions/wisconsin.jpeg');
     }
     .form-item:nth-child(3) label {
       background-image: url('/themes/custom/ellison/images/regions/california-nevada.png');
@@ -5339,25 +5339,25 @@ form.webform-submission-select-your-location-form {
       background-image: url('/themes/custom/ellison/images/regions/illinois.png');
     }
     .form-item:nth-child(5) label {
-      background-image: url('/themes/custom/ellison/images/regions/pacific-northwest.jpeg');
+      background-image: url('/themes/custom/ellison/images/regions/north-central.jpeg');
     }
     .form-item:nth-child(6) label {
-      background-image: url('/themes/custom/ellison/images/regions/southatlantic.png');
+      background-image: url('/themes/custom/ellison/images/regions/indiana.png');
     }
     .form-item:nth-child(7) label {
-      background-image: url('/themes/custom/ellison/images/regions/south-central.jpeg');
-    }
-    .form-item:nth-child(8) label {
-      background-image: url('/themes/custom/ellison/images/regions/southwest.png');
-    }
-    .form-item:nth-child(9) label {
       background-image: url('/themes/custom/ellison/images/regions/central.jpeg');
     }
+    .form-item:nth-child(8) label {
+      background-image: url('/themes/custom/ellison/images/regions/ohio-kentucky.jpeg');
+    }
+    .form-item:nth-child(9) label {
+      background-image: url('/themes/custom/ellison/images/regions/southwest.png');
+    }
     .form-item:nth-child(10) label {
-      background-image: url('/themes/custom/ellison/images/regions/wisconsin.jpeg');
+      background-image: url('/themes/custom/ellison/images/regions/south-central.jpeg');
     }
     .form-item:nth-child(11) label {
-      background-image: url('/themes/custom/ellison/images/regions/north-central.jpeg');
+      background-image: url('/themes/custom/ellison/images/regions/southatlantic.png');
     }
     /*
     .form-item:nth-child(3) label {
