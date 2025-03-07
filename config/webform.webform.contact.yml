@@ -156,11 +156,9 @@ elements: |-
       Washington: Washington
       Oregon: Oregon
       'Iowa and Nebraska': 'Iowa and Nebraska'
-      Missouri: Missouri
       'North Texas and North Louisiana': 'North Texas and North Louisiana'
       'South Texas and South Louisiana': 'South Texas and South Louisiana'
       'Southern Ohio and Kentucky': 'Southern Ohio and Kentucky'
-      'Northern Ohio and Kentucky': 'Northern Ohio and Kentucky'
       'Not Listed': 'Not Listed'
     '#empty_option': 'Select Location'
     '#required': true
