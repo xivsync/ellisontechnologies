@@ -224,6 +224,10 @@ Drupal.behaviors.handleWebform = {
           //325 (TriStates – MO)
           locationRID = 325;
           break;
+        case "Northern California & Nevada":
+          //219 (Northern California)
+          locationRID = 219;
+          break;
         default:
         // code block
           break;
