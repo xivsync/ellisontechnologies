@@ -173,6 +173,20 @@ field_mappings:
     salesforce_field: Location__c
     id: 20
     description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: source_page_url
+    direction: drupal_sf
+    salesforce_field: CTM_Landing_URL__c
+    id: 21
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leadsource
+    direction: drupal_sf
+    salesforce_field: CTM_Source__c
+    id: 22
+    description: ''
 status: true
 dependencies:
   config:
