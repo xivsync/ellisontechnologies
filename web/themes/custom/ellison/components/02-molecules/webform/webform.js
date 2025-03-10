@@ -35,7 +35,6 @@ Drupal.behaviors.handleWebform = {
           const formattedDate = `${year}-${month}-${day}`;
           inputs['dates_and_times'].value = formattedDate;
         }
-
       }
     );
 
@@ -224,6 +223,10 @@ Drupal.behaviors.handleWebform = {
           //325 (TriStates – MO)
           locationRID = 325;
           break;
+        case "Northern California & Nevada":
+          //219 (Northern California)
+          locationRID = 219;
+          break;
         default:
         // code block
           break;
@@ -237,5 +240,10 @@ Drupal.behaviors.handleWebform = {
         $('input[name="webform_region_c"]').val(regionId);
       }
     }
+  });
+
+  $("body").on('keypress', '.webform-submission-form', function(event) {
+    let current_page_url = window.location.href;
+    $('input[name="source_page_url"]').val(current_page_url);
   });
 })(jQuery, Drupal);

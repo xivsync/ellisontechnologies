@@ -87,6 +87,7 @@ module:
   menu_ui: 0
   metatag: 0
   metatag_import_export_csv: 0
+  metatag_verification: 0
   mimemail: 0
   mimemail_example: 0
   mysql: 0

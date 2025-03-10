@@ -84,13 +84,17 @@ class RegionHandler extends WebformHandlerBase {
           $sf_region_id = '304';
           break;
         case '114':
-        case '565':
+        case '564':
           // Indiana
           $sf_region_id = '340';
           break;
         case '565':
           // South Atlantic
           $sf_region_id = '400';
+          break;
+        case '566':
+          // 219 (Northern California)
+          $sf_region_id = '219';
           break;
         default:
           // 'Southern - California'
@@ -108,7 +112,7 @@ class RegionHandler extends WebformHandlerBase {
       $host = $_SERVER['HTTP_HOST'];
       $session = \Drupal::request()->getSession();
       $session->set('ellison_region', $cookie_value);
-      setcookie('ellison_region', $cookie_value, time() + 15768000, '/', $host, TRUE); // Expires in 6 months
+      setcookie('ellison_region', $cookie_value, time() + 15768000, '/', $host, true); // Expires in 6 months
       \Drupal::logger('ellison_webform')->info('The region "' . $cookie_value. ' (Salesforce #' . $sf_region_id . ')" saved to ellison_region cookie successfully.');
     
     }
