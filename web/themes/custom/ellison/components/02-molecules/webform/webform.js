@@ -255,7 +255,7 @@ Drupal.behaviors.handleWebform = {
       if (utm_source == 'social-media' ) {
         utm_source = 'Google Ads';
       }
-      $('input[name="leadsource_not_used"]').val(utm_source);
+      $('input[name="leadsource"]').val(utm_source);
     }
     $('input[name="source_page_url"]').val(current_page_url);
   });
