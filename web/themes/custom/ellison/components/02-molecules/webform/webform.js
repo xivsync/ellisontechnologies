@@ -243,7 +243,20 @@ Drupal.behaviors.handleWebform = {
   });
 
   $("body").on('keypress', '.webform-submission-form', function(event) {
+    $.urlParam = function (name) {
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+        .exec(window.location.search);
+      return (results !== null) ? results[1] || 0 : false;
+    }
+
     let current_page_url = window.location.href;
+    if ($.urlParam('utm_source')) {
+      let utm_source = $.urlParam('utm_source');
+      if (utm_source == 'social-media' ) {
+        utm_source = 'Google Ads';
+      }
+      $('input[name="leadsource_not_used"]').val(utm_source);
+    }
     $('input[name="source_page_url"]').val(current_page_url);
   });
 })(jQuery, Drupal);

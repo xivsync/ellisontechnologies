@@ -64,8 +64,5 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
         }
       }
     }
-
   }
-
-
 }
