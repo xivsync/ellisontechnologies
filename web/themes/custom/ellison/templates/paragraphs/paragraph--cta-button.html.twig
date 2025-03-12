@@ -45,7 +45,7 @@
   ]
 %}
 
-{% if content.field_webform|render|striptags|trim is contains("?") %}
+{% if "?" in content.field_webform|render|striptags|trim %}
   {% set start_params =  '&' %}
 {% else %}
   {% set start_params =  '?' %}
