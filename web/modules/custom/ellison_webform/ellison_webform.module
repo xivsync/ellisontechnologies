@@ -63,6 +63,16 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
             $form['elements']['webform_region_c']['#default_value'] = '218';
         }
       }
+      if (isset($form['elements']['source_page_url'])) {
+        $request_stack = \Drupal::service('request_stack');
+        $request = $request_stack->getCurrentRequest();
+        if ($request && $request->query->has('source_url')) {
+          $form['elements']['source_page_url']['#default_value'] = $request->query->get('source_url');
+        } else {
+          $form['elements']['source_page_url']['#default_value'] = $request->getUri();
+        }
+
+      }
     }
   }
 }

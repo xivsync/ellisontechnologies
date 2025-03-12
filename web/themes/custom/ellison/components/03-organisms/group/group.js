@@ -13,7 +13,9 @@ Drupal.behaviors.onPageNavigation = {
         if (enabled) {
 
           // add contact us button first
-          element.innerHTML = `<a href="/form/contact" class="webform-dialog webform-dialog-normal button">Contact Us</a>`;
+          const currentUrl = window.location.href; // Get the current URL
+          const encodedUrl = encodeURIComponent(currentUrl); // URL encode it
+          element.innerHTML = `<a href="/form/contact?source_url=${encodedUrl}" class="webform-dialog webform-dialog-normal button">Contact Us</a>`;
 
           const groupEls = document.getElementsByClassName('group');
           for (groupEl of groupEls) {
