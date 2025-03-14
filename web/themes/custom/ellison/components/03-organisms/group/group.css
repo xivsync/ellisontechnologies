@@ -44,7 +44,17 @@
     &--count-5 .group__item {
       @apply basis-1/5;
     }
-
+  }
+  @media (min-width: 992px) {
+    &.items-per-row--3 .group__items--count-2,
+    &.items-per-row--3 .group__items--count-1 {
+       display: flex;
+       justify-content: center;
+       flex-direction: row !important;
+    }
+    &.items-per-row--3 .group__items .group__item {
+      flex-basis: 33%;
+    }
   }
 
   /* overwrite flex basis if stack has width */
@@ -137,6 +147,7 @@
     }
 
   }
+
 
 }
 

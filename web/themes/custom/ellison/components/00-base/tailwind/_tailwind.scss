@@ -5248,6 +5248,13 @@ form.webform-submission-select-your-location-form {
     display: none;
   }
   .form-item--radio {
+    @media (min-width: 768px) {
+      .form-item:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+  .form-item--radio {
     display: flex;
   }
   .form-item--radio {
@@ -6614,6 +6621,18 @@ div[role=alert] {
     }
     &--count-5 .group__item {
       flex-basis: 20%;
+    }
+  }
+  @media (min-width: 992px) {
+    &.items-per-row--3 .group__items--count-2,
+    &.items-per-row--3 .group__items--count-1 {
+      display: flex;
+      justify-content: center;
+      flex-direction: row !important;
+    }
+
+    &.items-per-row--3 .group__items .group__item {
+      flex-basis: 33%;
     }
   }
   /* overwrite flex basis if stack has width */
