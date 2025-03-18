@@ -1,0 +1,370 @@
+uuid: 0afe2d98-1e22-40cf-8bbc-5bf583b988fe
+langcode: en
+status: open
+dependencies:
+  module:
+    - ellison_webform
+    - honeypot
+    - webform_pardot
+  enforced:
+    module:
+      - webform
+third_party_settings:
+  honeypot:
+    honeypot: true
+    time_restriction: true
+_core:
+  default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
+weight: 0
+open: null
+close: null
+uid: 1713
+template: false
+archive: false
+id: request_service
+title: 'Spindle Rebuild'
+description: '<p>Email form for spindle rebuilds department</p>'
+categories: {  }
+elements: |-
+  select_location:
+    '#type': select
+    '#title': 'Select Location'
+    '#options':
+      north: 'North TX /  North LA'
+      south: 'South TX / South LA'
+      none: 'Not sure'
+    '#required': true
+  firstname:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+  lastname:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+  company:
+    '#type': textfield
+    '#title': Company
+    '#required': true
+  phone:
+    '#type': tel
+    '#title': Phone
+    '#required': true
+  email:
+    '#title': 'Your Email'
+    '#type': email
+    '#required': true
+    '#default_value': '[current-user:mail]'
+  street:
+    '#type': textfield
+    '#title': Address
+  city:
+    '#type': textfield
+    '#title': City
+  state:
+    '#type': textfield
+    '#title': State
+    '#required': true
+  postalcode:
+    '#type': textfield
+    '#title': 'Zip Code'
+    '#required': true
+  service_builder:
+    '#type': textfield
+    '#title': 'Machine Builder'
+  service_machine_model:
+    '#type': textfield
+    '#title': 'Machine Model'
+  service_serial_number:
+    '#type': textfield
+    '#title': 'Machine Serial Number'
+  type_of_spindle:
+    '#type': textfield
+    '#title': 'Type of Spindle'
+  please_let_us_know_how_we_can_help_you:
+    '#type': textarea
+    '#title': 'Please let us know how we can help you'
+    '#title_display': inline
+  request_a_rebuild_quote:
+    '#type': checkbox
+    '#title': 'I would like to request a rebuild quote.'
+    '#title_display': inline
+  opt_in:
+    '#type': checkbox
+    '#title': 'I would like to receive occasional emails.'
+    '#description': '<p><strong>Privacy is important to us:</strong> We will not share your email address with anyone.</p>'
+    '#title_display': inline
+  region__c:
+    '#type': hidden
+    '#title': region__c
+    '#title_display': ''
+  webform_name__c:
+    '#type': hidden
+    '#title': webform_name__c
+    '#default_value': '[current-page:title]'
+  webform_campaign_id__c:
+    '#type': hidden
+    '#title': webform_campaign_id__c
+    '#default_value': 70160000000Bure
+  leadsource:
+    '#type': hidden
+    '#title': leadsource
+    '#default_value': Website
+  webform_email_sign_up__c:
+    '#type': hidden
+    '#title': webform_email_sign_up__c
+    '#default_value': 70160000000BureAAC
+  webformsid__c:
+    '#type': hidden
+    '#title': webformsid__c
+  captcha:
+    '#type': captcha
+  webform_region_c:
+    '#type': hidden
+    '#title': Region
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Send message'
+css: ''
+javascript: ''
+settings:
+  ajax: true
+  ajax_scroll_top: form
+  ajax_progress_type: throbber
+  ajax_effect: fade
+  ajax_speed: 1000
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ellison
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_url: /thank-you-service
+  confirmation_title: ''
+  confirmation_message: '<p>Thank you for your request to schedule service. One of our team members will contact you regarding your service needs.</p>'
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: all
+  purge_days: 1
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  push_form_data_to_call_tracking_metrics:
+    id: call_tracking_metrics_handler
+    handler_id: push_form_data_to_call_tracking_metrics
+    label: 'Push form data to Call Tracking Metrics'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
+  email:
+    id: email
+    handler_id: email
+    label: 'Internal Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: rebuilds@ellisontechnologies.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: true
+      exclude_empty_checkbox: 0
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  submit_data_to_pardot:
+    id: pardot_submission
+    handler_id: submit_data_to_pardot
+    label: 'Submit data to Pardot'
+    notes: 'Contact us pardot webform handler'
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-04-17/5xz4lm'
+      pardot_fields_mapping: ''
+variants: {  }
