@@ -263,7 +263,7 @@ display:
     display_plugin: block
     position: 2
     display_options:
-      exposed_block: false
+      exposed_block: true
       display_extenders: {  }
     cache_metadata:
       max-age: -1
