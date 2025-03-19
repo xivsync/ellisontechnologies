@@ -181,7 +181,8 @@
   &.tilt-back-slash-on {
     
     .group__inner {
-      @apply py-24;
+      @apply pt-0;
+      @apply pb-24;
       
       /*
       > div:first-child {

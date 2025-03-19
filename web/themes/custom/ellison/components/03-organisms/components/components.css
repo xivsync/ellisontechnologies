@@ -9,7 +9,8 @@
   margin-bottom: calc( (93px  + 2rem) * -1);
 }
 .group.diagonal-forward-slash-on.remove-my {
-  margin-top: calc( (93px  + 2rem) * -1);
+  /*margin-top: calc( (93px  - 2rem) * -1);*/
+  margin-top: -2rem;
   margin-bottom: calc( (93px  + 2rem) * -1);
 }
 

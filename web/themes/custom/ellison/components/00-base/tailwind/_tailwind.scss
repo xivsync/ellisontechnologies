@@ -6451,7 +6451,8 @@ div[role=alert] {
 }
 
 .group.diagonal-forward-slash-on.remove-my {
-  margin-top: calc( (93px  + 2rem) * -1);
+  /*margin-top: calc( (93px  - 2rem) * -1);*/
+  margin-top: -2rem;
   margin-bottom: calc( (93px  + 2rem) * -1);
 }
 
@@ -6774,7 +6775,9 @@ div[role=alert] {
   &.diagonal-forward-slash-on,
   &.tilt-back-slash-on {
     .group__inner {
-      padding-top: 6rem;
+      padding-top: 0px;
+    }
+    .group__inner {
       padding-bottom: 6rem;
     }
     .group__inner {
