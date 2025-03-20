@@ -74,7 +74,6 @@
 {% set has_image = content.field_map | render ? true : false %}
 {% set address = content.field_address | render | striptags | trim %}
 {% set encoded_query = 'Ellison Technologies Inc ' ~ address|url_encode %}
-
 {% embed "@molecules/card/card.twig" with {
   has_image: has_image,
   card__extra_classes: ['extra-class'],

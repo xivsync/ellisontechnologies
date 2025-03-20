@@ -18,7 +18,7 @@
 
       .card__content {
         @apply basis-2/3 grow;
-
+        max-width: 100% !important;
         h2.heading a {
           @apply text-blue hover:opacity-80 no-underline font-extrabold text-2xl;
         }
@@ -68,7 +68,25 @@
       }
 
       p.address {
-        @apply m-0 p-0 text-lg font-bold flex flex-row gap-1;
+        @apply m-0 p-0 text-lg font-bold flex flex-row gap-0;
+        span {
+          padding-left: 5px;
+        }
+        span:first-child {
+          padding-left: 0;
+        }
+        span.country {
+          display: none;
+        }        
+        flex-wrap: wrap;
+      }
+      @media (max-width: 492px) {
+        p.address {
+          margin-left: -5px;
+        }
+        p.address span:first-child {
+          padding-left: 5px;
+        }
       }
 
       .field {
