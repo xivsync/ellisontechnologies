@@ -181,7 +181,7 @@
   &.tilt-back-slash-on {
     
     .group__inner {
-      @apply pt-0;
+      @apply pt-24;
       @apply pb-24;
       
       /*
