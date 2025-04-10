@@ -797,7 +797,7 @@ display:
           id: field_brand_target_id
           table: node__field_brand
           field: field_brand_target_id
-          relationship: none
+          relationship: field_model
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
@@ -845,7 +845,7 @@ display:
           id: field_series_target_id
           table: node__field_series
           field: field_series_target_id
-          relationship: none
+          relationship: field_model
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
@@ -1050,6 +1050,15 @@ display:
           admin_label: author
           plugin_id: standard
           required: true
+        field_model:
+          id: field_model
+          table: node__field_model
+          field: field_model
+          relationship: none
+          group_type: group
+          admin_label: 'field_model: Content'
+          plugin_id: standard
+          required: false
       show_admin_links: false
       display_extenders: {  }
     cache_metadata:

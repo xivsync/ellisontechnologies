@@ -101,7 +101,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: 'Specification Type'
           exclude: false
           alter:
             alter_text: false
@@ -559,7 +559,7 @@ display:
               empty_column: false
               responsive: ''
             field_specification_type:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
