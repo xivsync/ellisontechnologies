@@ -31,7 +31,7 @@ Drupal.behaviors.dropdown = {
       }
       
     );
-
+    /*
     once('sortDropdown', '.series-list .dropdown__menu--list', context).forEach(
       
       function (element) {
@@ -63,7 +63,7 @@ Drupal.behaviors.dropdown = {
         
       }
       
-    );
+    );*/
 
   }
 };
