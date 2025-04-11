@@ -257,6 +257,13 @@ Drupal.behaviors.handleWebform = {
       }
       $('input[name="leadsource"]').val(utm_source);
     }
+    
+    if (drupalSettings.hasOwnProperty('ellison')) {
+      let gclidDrupalSetting = drupalSettings.ellison.gclid || null;
+      if (gclidDrupalSetting) {
+        $('input[name="leadsource"]').val('Google Ads');
+      }
+    }
     $('input[name="source_page_url"]').val(current_page_url);
   });
 })(jQuery, Drupal);
