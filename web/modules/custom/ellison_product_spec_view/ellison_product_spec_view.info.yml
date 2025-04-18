@@ -1,0 +1,7 @@
+name: 'Ellison Product Spec View'
+type: module
+description: 'Injects a Views block into the node edit form for articles.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - views

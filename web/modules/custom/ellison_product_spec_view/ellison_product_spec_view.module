@@ -1,0 +1,47 @@
+<?php
+
+use Drupal\views\Views;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Render\RendererInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for node edit form of 'model' content type.
+ */
+function ellison_product_spec_view_form_node_model_edit_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $node = $form_state->getFormObject()->getEntity();
+
+  if ($node && !$node->isNew()) {
+    $nid = $node->id();
+    \Drupal::logger('ellison_product_spec_view')->info('Injecting specs view for model node @nid', ['@nid' => $nid]);
+
+    $view = Views::getView('list_of_specs_for_model');
+    if ($view && $view->access('block_2')) {
+      $view->setDisplay('block_2');
+      $view->setArguments([$nid]);
+      $view->preExecute();
+      $view->execute();
+      $rendered_view = $view->render();
+
+      // Use the renderer service to render the view properly
+      $renderer = \Drupal::service('renderer');
+      $rendered_html = $renderer->renderRoot($rendered_view);
+
+      $form['ellison_specs_view_block'] = [
+        '#type' => 'details',
+        '#title' => t('Product Specifications'),
+        '#open' => TRUE,
+        'content' => [
+          '#markup' => Markup::create($rendered_html),
+        ],
+        '#weight' => 100,
+      ];
+    }
+    else {
+      \Drupal::logger('ellison_product_spec_view')->warning('Specs view or block_1 not accessible.');
+    }
+  }
+  else {
+    \Drupal::logger('ellison_product_spec_view')->notice('Node is new or missing.');
+  }
+}
