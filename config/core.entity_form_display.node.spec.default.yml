@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.spec.field_spec_name
     - field.field.node.spec.field_spec_value
     - field.field.node.spec.field_specification_type
+    - field.field.node.spec.field_weight
     - node.type.spec
   module:
     - path
+    - weight
 id: node.spec.default
 targetEntityType: node
 bundle: spec
@@ -58,6 +60,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_weight:
+    type: weight_selector
+    weight: 126
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -103,5 +111,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   feeds_item: true
+  publish_on: true
+  unpublish_on: true

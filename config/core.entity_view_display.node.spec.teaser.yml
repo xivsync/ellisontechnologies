@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.spec.field_spec_name
     - field.field.node.spec.field_spec_value
     - field.field.node.spec.field_specification_type
+    - field.field.node.spec.field_weight
     - node.type.spec
   module:
     - user
@@ -28,4 +29,5 @@ hidden:
   field_spec_name: true
   field_spec_value: true
   field_specification_type: true
+  field_weight: true
   search_api_excerpt: true

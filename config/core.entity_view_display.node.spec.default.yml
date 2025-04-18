@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.spec.field_spec_name
     - field.field.node.spec.field_spec_value
     - field.field.node.spec.field_specification_type
+    - field.field.node.spec.field_weight
     - node.type.spec
   module:
     - user
@@ -47,6 +48,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 106
     region: content
   links:
     settings: {  }
