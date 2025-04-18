@@ -187,6 +187,13 @@ field_mappings:
     salesforce_field: CTM_Source__c
     id: 22
     description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leadsource
+    direction: drupal_sf
+    salesforce_field: LeadSource
+    id: 23
+    description: ''
 status: true
 dependencies:
   config:
