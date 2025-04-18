@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.model.field_region
     - field.field.node.model.field_series
     - field.field.node.model.field_technologies
+    - field.field.node.model.field_weight
     - node.type.model
   module:
     - user
@@ -42,4 +43,5 @@ hidden:
   field_region: true
   field_series: true
   field_technologies: true
+  field_weight: true
   search_api_excerpt: true

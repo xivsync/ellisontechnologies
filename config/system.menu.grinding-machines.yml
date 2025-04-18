@@ -1,8 +1,0 @@
-uuid: 41b4c0e1-85f8-48d9-890b-07505e40e3e1
-langcode: en
-status: true
-dependencies: {  }
-id: grinding-machines
-label: 'Grinding Machines'
-description: ''
-locked: false

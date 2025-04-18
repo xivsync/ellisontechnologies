@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.model.field_region
     - field.field.node.model.field_series
     - field.field.node.model.field_technologies
+    - field.field.node.model.field_weight
     - node.type.model
   module:
     - field_group
@@ -23,6 +24,7 @@ dependencies:
     - paragraphs
     - path
     - text
+    - weight
 third_party_settings:
   field_group:
     group_configurations:
@@ -180,6 +182,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_weight:
+    type: weight_selector
+    weight: 126
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 8
@@ -233,3 +241,5 @@ content:
 hidden:
   feeds_item: true
   field_technologies: true
+  publish_on: true
+  unpublish_on: true

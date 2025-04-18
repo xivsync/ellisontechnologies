@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.model.field_region
     - field.field.node.model.field_series
     - field.field.node.model.field_technologies
+    - field.field.node.model.field_weight
     - image.style.card_640x640
     - node.type.model
   module:
@@ -122,6 +123,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 106
     region: content
 hidden:
   feeds_item: true
