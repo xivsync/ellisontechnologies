@@ -4592,6 +4592,28 @@ body.unpublished .breadcrumb__items::before {
   }
 }
 
+div.bg-color--dark-blue {
+  .quote {
+    &__body {
+      svg {
+        --tw-text-opacity: 1 !important;
+        color: rgb(70 182 227 / var(--tw-text-opacity)) !important;
+      }
+    }
+  }
+}
+
+div.bg-color--light-blue {
+  .quote {
+    &__body {
+      svg {
+        --tw-text-opacity: 1 !important;
+        color: rgb(30 41 67 / var(--tw-text-opacity)) !important;
+      }
+    }
+  }
+}
+
 #topScroll {
   position: fixed;
   right: 5vw;

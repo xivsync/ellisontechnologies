@@ -19,8 +19,25 @@
 
   &__citation cite div {
     @apply text-lg ml-[40px];
-
-
   }
+}
 
+div.bg-color--dark-blue {
+  .quote {
+    &__body {
+      svg {
+        @apply text-light-blue !important;
+      }
+    }
+  }
+}
+
+div.bg-color--light-blue {
+  .quote {
+    &__body {
+      svg {
+        @apply text-dark-blue !important;
+      }
+    }
+  }
 }
