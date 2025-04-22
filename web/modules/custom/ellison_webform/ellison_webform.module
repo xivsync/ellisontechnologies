@@ -3,6 +3,9 @@
  * @file
  * Provides functionality for handling webform hook.
  */
+use Drupal\webform\WebformSubmissionInterface;
+use Drupal\Core\Form\FormStateInterface;
+
 
 /**
  * Implements hook_form_alter().
@@ -74,5 +77,115 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 
       }
     }
+  }  
+
+}
+
+
+
+
+/**
+ * Implements hook_webform_submission_insert().
+ */
+function ellison_webform_webform_submission_insert(WebformSubmissionInterface $submission) {
+  // Only target the "Contact Us" form (machine name 'contact').
+  if ($submission->getWebform()->id() !== 'contact') {
+    return;
+  }
+
+  // Log start of CTM transmission.
+  \Drupal::logger('ctm_integration')->info(
+    'CTM Integration: starting transmission for submission @sid',
+    ['@sid' => $submission->id()]
+  );
+
+  // Grab GCLID from the query string if present.
+  $request = \Drupal::request();
+  $gclid   = $request->query->get('gclid', '');
+
+  // Build the payload.
+  $payload = [
+    'country_code' => '1',
+    'phone_number'      =>  str_replace("+", "", $submission->getElementData('phone')),
+    'paid_attribution'  => [
+      'gclid'       => $gclid,
+      'campaign_id' => '123123',
+      'adgroup_id'  => '456456',
+      'creative_id' => '787878',
+      'form_id'     => '909090',
+    ],
+    'custom_fields'     => [
+      'edit-submitted-company'            => $submission->getElementData('company'),
+      'edit-submitted-firstname'          => $submission->getElementData('firstname'),
+      'edit-submitted-lastname'           => $submission->getElementData('lastname'),
+      'edit-submitted-title'              => $submission->getElementData('title'),
+      'edit-submitted-email'              => $submission->getElementData('email'),
+      'edit-submitted-street'             => $submission->getElementData('street'),
+      'edit-submitted-city'               => $submission->getElementData('city'),
+      'edit-submitted-state'              => $submission->getElementData('state'),
+      'edit-submitted-postalcode'         => $submission->getElementData('postalcode'),
+      'edit-submitted-leads-interest-c'   => $submission->getElementData('leads_interest__c'),
+      'edit-submitted-how-did-you-hear-c' => $submission->getElementData('how_did_you_hear__c'),
+      'edit-submitted-webform-best-time-c'=> $submission->getElementData('webform_best_time__c'),
+      'edit-submitted-industry'           => $submission->getElementData('industry'),
+      'select_location'                   => $submission->getElementData('location'),
+      'edit-submitted-description'        => $submission->getElementData('description'),
+      'edit_submitted_leadsource'         => $submission->getElementData('leadsource'),
+    ],
+  ];
+
+  // Log the payload for debugging.
+  \Drupal::logger('ctm_integration')->debug(
+    'CTM Integration payload for submission @sid: @payload',
+    [
+      '@sid' => $submission->id(),
+      '@payload' => print_r($payload, TRUE),
+    ]
+  );
+
+  // Prepare the HTTP client and endpoint.
+  $client    = \Drupal::httpClient();
+  $frt_token = 'FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29';
+  $api_key   = '6y0SQYZx6CgmOi9WOvjFX8FkMd7GEF3bWOi79GgXz8WZU_Qg';
+  $url       = "https://api.calltrackingmetrics.com/api/v1/formreactor/{$frt_token}?key={$api_key}";
+
+  try {
+    $response = $client->post($url, [
+      'form_params'     => $payload,
+      'timeout'         => 5,
+      'connect_timeout' => 2,
+    ]);
+
+    $status = $response->getStatusCode();
+    $body   = (string) $response->getBody();
+
+    if ($status === 200) {
+      \Drupal::logger('ctm_integration')->info(
+        'CTM Integration: successfully sent submission @sid. Response: @body',
+        [
+          '@sid' => $submission->id(),
+          '@body' => $body,
+        ]
+      );
+    }
+    else {
+      \Drupal::logger('ctm_integration')->warning(
+        'CTM Integration: HTTP @code for submission @sid. Response: @body',
+        [
+          '@code' => $status,
+          '@sid'  => $submission->id(),
+          '@body' => $body,
+        ]
+      );
+    }
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('ctm_integration')->error(
+      'CTM Integration exception for submission @sid: @message',
+      [
+        '@sid'     => $submission->id(),
+        '@message' => $e->getMessage(),
+      ]
+    );
   }
 }
