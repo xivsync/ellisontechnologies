@@ -44,7 +44,7 @@
               fixedTop = fixedTop + $('#toolbar-bar').height();
             }
           }
-          targetScrollTo = $('#'+hashname).offset().top - fixedTop;
+          targetScrollTo = $('#'+hashname).offset().top - 500;
           $("html, body").animate({
             scrollTop: targetScrollTo
           }, 1000);
