@@ -267,3 +267,37 @@ Drupal.behaviors.handleWebform = {
     $('input[name="source_page_url"]').val(current_page_url);
   });
 })(jQuery, Drupal);
+
+
+(function (Drupal, once) {
+  Drupal.behaviors.ctmFormCaptureModal = {
+    attach: function (context, settings) {
+      // `once('ctm', selector, context)` returns an array of the matched elements.
+      once('ctm', '.webform-submission-form', context).forEach(function (form) {
+        __ctm.form.capture(
+          'app.calltrackingmetrics.com',
+          'FRT472ABB2C5B9B141ADAB06C7A709212DB922839F0589BD3C86E24F9356DEDDA29',
+          form,
+          '8664851591',
+          {
+            name: [
+              '.form-item--firstname input',
+              '.form-item--lastname input'
+            ],
+            country_code: '1',
+            phone: '.form-item--phone input',
+            email: '.form-item--email input',
+            fields: [
+              '.form-item--company input',
+              '.form-item--title input',
+              '.form-item--street input',
+              '.form-item--city input',
+              '.form-item--state input',
+              '.form-item--postalcode input'
+            ]
+          }
+        );
+      });
+    }
+  };
+})(Drupal, once);
