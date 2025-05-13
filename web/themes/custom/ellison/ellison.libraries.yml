@@ -6,6 +6,7 @@ global:
   js:
     https://367150.tctm.xyz/t.js: {}
     https://367150.tctm.co/formreactor.js: {}
+    components/00-base/general.js: {}
   dependencies:
     - core/drupal
     - core/once

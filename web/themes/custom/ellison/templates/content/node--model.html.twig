@@ -118,6 +118,11 @@
   {% endif %}
   {{ title_suffix }}
 
+  <div class="back-button-wrapper" style="display: none;">
+  <button class="back-button" onclick="window.history.back();">← Back</button>
+</div>
+ 
+
   <div {{ add_attributes(content__attributes) }}>
     <div class="page__header">
       <div class="page__header--image">
