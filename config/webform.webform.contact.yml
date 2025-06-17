@@ -234,6 +234,18 @@ elements: |-
     '#type': hidden
     '#title': Region
     '#title_display': invisible
+  utm_source:
+    '#type': hidden
+    '#title': utm_source
+  utm_medium:
+    '#type': hidden
+    '#title': utm_medium
+  utm_campaign:
+    '#type': hidden
+    '#title': utm_campaign
+  referrer:
+    '#type': hidden
+    '#title': referrer
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
