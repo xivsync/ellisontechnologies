@@ -30,13 +30,23 @@
     }
   });
 
-  // When the form loads, populate the hidden fields
-  window.addEventListener('load', function() {
+ // Helper to populate fields in a given context (document or modal)
+  function populateFields(context) {
     fields.forEach(function(field) {
-      var el = document.querySelector('[name="' + field + '"]');
+      var el = (context || document).querySelector('[name="' + field + '"]');
       if (el && localStorage.getItem(field)) {
         el.value = localStorage.getItem(field);
       }
     });
+  }
+
+  // On normal page load
+  window.addEventListener('load', function() {
+    populateFields(document);
+  });
+
+  // On Drupal dialog load (for modals)
+  document.addEventListener('dialogContent', function(e) {
+    populateFields(e.target);
   });
 })();
