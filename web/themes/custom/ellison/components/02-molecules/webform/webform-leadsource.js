@@ -11,7 +11,7 @@ Drupal.behaviors.leadsource = {
         if (drupalSettings.hasOwnProperty('ellison')) {
           let gclidDrupalSetting = drupalSettings.ellison.gclid || null;
           if (gclidDrupalSetting) {
-            element.value = 'Google Ads';
+          //  element.value = 'Google Ads';
           }
         }
       }
