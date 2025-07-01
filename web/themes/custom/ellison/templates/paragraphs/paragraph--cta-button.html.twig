@@ -53,6 +53,7 @@
 
 {% include "@molecules/cta/cta.twig" with {
   classes: classes,
+  content: content, 
   background_class: content.field_background_color | render | striptags | trim,
   align_class: content.field_align_text | render | striptags | trim,
   body: content.field_content,

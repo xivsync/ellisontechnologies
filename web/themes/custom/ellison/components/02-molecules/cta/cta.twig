@@ -14,23 +14,24 @@
         {{ body }}
       </div>
     {% endif %}
+
     
-    {% if webform_url %}
+    {% if webform_text %}
       <div class="cta-button__webform  {{ 'text__align--' ~ cta_align | clean_class }} prose">
         {# @todo use link component #}
         <a aria-role="button" href="{{ webform_url }}" class="webform-dialog webform-dialog-normal {{ cta_link_style_class }}">
-          {{ webform_text }}
+           {{ webform_text }}
         </a>
       </div>
     {% endif %}
 
-    {% if cta_button and not webform_url %}
-      <div class="cta-button__button {{ 'text__align--' ~ cta_align | clean_class }} prose">
-        {# @todo use link component #}
+    {% if cta_button and not webform_text %}
+        <div class="cta-button__button {{ 'text__align--' ~ cta_align | clean_class }} prose">
         <a aria-role="button" href="{{ content.field_cta_button.0['#url'] }}" class="{{ cta_link_style_class }}">
           {{ content.field_cta_button.0['#title'] }}
         </a>
-      </div>
+        </div>
+
     {% endif %}
 
   {# end wrapping inner div #}
