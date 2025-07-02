@@ -17,12 +17,14 @@ dependencies:
     - field.field.paragraph.group.field_group_animate_activation
     - field.field.paragraph.group.field_header
     - field.field.paragraph.group.field_items_per_row
+    - field.field.paragraph.group.field_overlay_bg_image
     - field.field.paragraph.group.field_remove_margins
     - field.field.paragraph.group.field_unique_id
     - field.field.paragraph.group.field_vertical_align_items
     - paragraphs.paragraphs_type.group
   module:
     - entity_reference_revisions
+    - image
     - options
     - text
 id: paragraph.group.default
@@ -147,6 +149,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 14
+    region: content
+  field_overlay_bg_image:
+    type: image_url
+    label: inline
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 18
     region: content
   field_remove_margins:
     type: list_key

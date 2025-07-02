@@ -489,3 +489,12 @@
   }
   
 }
+
+/* Add to your group component CSS */
+.group__background-image-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* Adjust as needed */
+  mix-blend-mode: multiply; /* Optional for blending effect */
+}

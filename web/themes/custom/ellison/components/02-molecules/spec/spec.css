@@ -3,7 +3,8 @@
 }
 
 .spec__item {
-  @apply flex flex-row justify-between px-8 py-2;
+  @apply flex flex-col items-start px-4 py-1; /* Mobile-first: vertical, less padding */
+  @apply sm:flex-row sm:justify-between sm:px-8 sm:py-2; /* Desktop: horizontal, more padding */
 
   &--name {
     @apply font-bold;

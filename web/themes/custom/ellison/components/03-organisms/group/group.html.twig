@@ -110,7 +110,12 @@
 
 <div{{ attributes.addClass(classes).setAttribute('id', group_id).setAttribute('data-id-label',group_label).setAttribute('data-visible-items',visible_items ? visible_items : '1').setAttribute('data-items-per-row',items_per_row ? items_per_row : '1') }}>
   {{ title_suffix }}
-  <div{{ inner_attributes.addClass(inner_classes) }}>
+
+  <div{{ inner_attributes.addClass(inner_classes) }} {% if background_image_overlay %}
+    style="background-image: url('{{ background_image_overlay|render|trim }}'); background-size: cover; background-position: center; background-repeat: no-repeat;background-blend-mode: multiply;"
+ {% else %}
+ style="position:relative; z-index:1;"  
+  {% endif %}>
     {% if title | render %}
       <div{{ wrapping_attributes.addClass(header_wrapping_classes) }}>
         <div class="prose max-w-none">
