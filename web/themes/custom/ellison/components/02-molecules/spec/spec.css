@@ -3,12 +3,14 @@
 }
 
 .spec__item {
-  @apply flex flex-col items-start px-4 py-1; /* Mobile-first: vertical, less padding */
-  @apply sm:flex-row sm:justify-between sm:px-8 sm:py-2; /* Desktop: horizontal, more padding */
+  @apply flex flex-col items-start gap-y-1 px-4 py-2; /* Mobile first: stacked */
+  @apply sm:flex-row sm:justify-between sm:items-center sm:px-8 sm:py-2;
 
   &--name {
-    @apply font-bold;
+    @apply font-bold sm:w-1/2;
   }
 
+  &--value {
+    @apply sm:w-1/2 text-left;
+  }
 }
-

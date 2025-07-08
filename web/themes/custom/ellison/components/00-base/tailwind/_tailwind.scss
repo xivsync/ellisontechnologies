@@ -3154,7 +3154,6 @@ div.webform {
       gap: 0.5rem;
     }
     &.has-icon {
-      /* default collapsed rotate-0 then animates to rotate-180 when expanded */
       svg {
         height: 1.5rem;
       }
@@ -3180,7 +3179,6 @@ div.webform {
       }
     }
   }
-  /* default behavior is to open on top of content below */
   &__menu {
     position: absolute;
   }
@@ -3295,7 +3293,6 @@ div.webform {
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
-  /* apply border to toggle button */
   .dropdown__toggle {
     border-width: 2px;
   }
@@ -3307,7 +3304,6 @@ div.webform {
     --tw-bg-opacity: 1;
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   }
-  /* apply border to dropdown ul */
   .dropdown__menu--list {
     margin: 0px !important;
   }
@@ -3364,7 +3360,7 @@ div.webform {
   }
 }
 
-/* @todo -- remove? -- handles specifications list items */
+/* clean specifications section — spec__item layout now in spec.css */
 
 .specifications {
   .dropdown.accordion-button-dropdown button.dropdown__toggle {
@@ -3374,40 +3370,9 @@ div.webform {
     --tw-border-opacity: 1;
     border-color: rgb(156 163 175 / var(--tw-border-opacity));
   }
-  .dropdown__menu--item {
-    display: flex;
-  }
-  .dropdown__menu--item {
-    flex-direction: row;
-  }
-  .dropdown__menu--item {
-    align-items: flex-start;
-  }
-  .dropdown__menu--item {
-    justify-content: space-between;
-  }
-  .dropdown__menu--item {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .dropdown__menu--item {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .dropdown__menu--item {
-    p {
-      margin: 0px;
-    }
-    p {
-      flex-basis: 50%;
-    }
-    p {
-      padding: 0px;
-    }
-  }
 }
 
-/*handles adding the last bottom border */
+/* handles adding the last bottom border */
 
 .specifications-list .field-specifications-type .field__item:last-child {
   .dropdown.accordion-button-dropdown:last-child button.dropdown__toggle {
@@ -3419,7 +3384,7 @@ div.webform {
   }
 }
 
-/*handles light blue background*/
+/* handles light blue background */
 
 .group.bg-color--light-blue,
 .group.bg-color--cyan {
@@ -3462,7 +3427,6 @@ div.webform {
   .dropdown__menu {
     display: none;
   }
-  /* default rotate-0 chevron down */
   .dropdown__toggle.has-icon svg {
     --tw-rotate: 0deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4657,14 +4621,44 @@ div.bg-color--light-blue {
 
 .spec__item {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  /* Mobile first: stacked */
+}
+
+@media (min-width: 576px) {
+  .spec__item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.spec__item {
   &--name {
     font-weight: 700;
+  }
+  @media (min-width: 576px) {
+    &--name {
+      width: 50%;
+    }
+  }
+  &--value {
+    text-align: left;
+  }
+  @media (min-width: 576px) {
+    &--value {
+      width: 50%;
+    }
   }
 }
 
@@ -7183,6 +7177,19 @@ div[role=alert] {
   h2 {
     text-align: center;
   }
+}
+
+/* Add to your group component CSS */
+
+.group__background-image-overlay img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  /* Adjust as needed */
+  mix-blend-mode: multiply;
+  /* Optional for blending effect */
 }
 
 .footer {

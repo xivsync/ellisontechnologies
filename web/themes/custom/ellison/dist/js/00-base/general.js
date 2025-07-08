@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){if(document.referrer&&document.referrer!==window.location.href){var e=document.querySelector(".back-button-wrapper");e&&(e.style.display="block")}}));

@@ -1,1 +1,1 @@
-Drupal.behaviors.leadsource={attach:function(e){once("handleLeadsource","input[name=leadsource]",e).forEach((function(e){drupalSettings.hasOwnProperty("ellison")&&drupalSettings.ellison.gclid&&(e.value="Google Ads")}))}};
+Drupal.behaviors.leadsource={attach:function(e){once("handleLeadsource","input[name=leadsource]",e).forEach((function(){drupalSettings.hasOwnProperty("ellison")&&drupalSettings.ellison.gclid}))}};
