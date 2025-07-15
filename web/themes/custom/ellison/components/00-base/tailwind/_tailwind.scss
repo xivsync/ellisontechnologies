@@ -6889,6 +6889,9 @@ div[role=alert] {
     background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
     transform: translateY(-1px);
   }
+  li::marker {
+    color: white;
+  }
 }
 
 /* gradient blue with slash*/
@@ -7313,10 +7316,7 @@ div[role=alert] {
         display: flex;
       }
       ul.menu {
-        list-style-position: inside;
-      }
-      ul.menu {
-        list-style-type: disc;
+        list-style-type: none;
       }
       ul.menu {
         flex-direction: column;

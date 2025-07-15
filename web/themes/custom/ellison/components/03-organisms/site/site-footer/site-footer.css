@@ -17,7 +17,7 @@
       }
 
       ul.menu {
-        @apply flex flex-col gap-1 list-disc list-inside text-white ml-2 mr-4;
+        @apply flex flex-col gap-1 list-none text-white ml-2 mr-4;
 
         li.menu__item::before {
           content: "·";

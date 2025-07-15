@@ -256,6 +256,11 @@
     background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
     transform: translateY(-1px);
   }
+
+  li::marker {
+  color: white;
+  }
+
 }
 
  /* gradient blue with slash*/
