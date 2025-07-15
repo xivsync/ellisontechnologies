@@ -28,7 +28,7 @@
 }
 
 .ck-editor__editable_inline :where(ul):not(:where([class~="not-prose"] *)) {
-  list-style-type: disc;
+  list-style-type: none;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   padding-left: 1.625em;
