@@ -23,6 +23,7 @@ document.getElementById('build-a-quote').addEventListener('submit', function (ev
       'custom_fields[UTM Source]': localStorage.getItem('utm_source') || '',
       'custom_fields[UTM Medium]': localStorage.getItem('utm_medium') || '',
       'custom_fields[UTM Campaign]': localStorage.getItem('utm_campaign') || '',
+      'custom_fields[gclid]': localStorage.getItem('gclid') || '',
       'custom_fields[source_page_url]': localStorage.getItem('source_page_url') || window.location.href,
       'custom_fields[referrer]': localStorage.getItem('referrer') || document.referrer
     };
