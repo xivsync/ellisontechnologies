@@ -12,7 +12,7 @@
     'utm_medium',
     'utm_campaign',
     'source_page_url',
-    'gclid'
+    'gclid',
     'referrer'
   ];
 
