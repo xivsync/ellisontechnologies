@@ -20,9 +20,9 @@ document.getElementById('build-a-quote').addEventListener('submit', function (ev
   try {
     // Get tracking values from localStorage
     const utmData = {
-      'custom_fields[UTM Source]': localStorage.getItem('utm_source') || '',
-      'custom_fields[UTM Medium]': localStorage.getItem('utm_medium') || '',
-      'custom_fields[UTM Campaign]': localStorage.getItem('utm_campaign') || '',
+      'custom_fields[utm_source]': localStorage.getItem('utm_source') || '',
+      'custom_fields[utm_medium]': localStorage.getItem('utm_medium') || '',
+      'custom_fields[utm_campaign]': localStorage.getItem('utm_campaign') || '',
       'custom_fields[gclid]': localStorage.getItem('gclid') || '',
       'custom_fields[source_page_url]': localStorage.getItem('source_page_url') || window.location.href,
       'custom_fields[referrer]': localStorage.getItem('referrer') || document.referrer
