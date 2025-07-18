@@ -17,30 +17,41 @@
 </form>
 <script>
 document.getElementById('build-a-quote').addEventListener('submit', function (event) {
-    try {
-        jQuery.ajax({
-            url: 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB5B0EF60229D38F02D4C00D8145FDA58D?key=VLhTUhvwsNBljzFmnVX5bui0GD-PaYcjHGPESzPwHQpCqWeY',
-            type: 'POST',
-            data: {
-                "custom_fields[firstName]": jQuery("#firstName").val(), // Capture firstName
-                "custom_fields[lastName]": jQuery("#lastName").val(),  // Capture lastName
-                "custom_fields[company]": jQuery("#company").val(),    // Capture company
-                "custom_fields[email]": jQuery("#email").val(),        // Capture email
-                "custom_fields[zipCode]": jQuery("#zipCode").val(),    // Capture zipCode
-                "phone_number": jQuery("#Phone").val(),               // Capture phone
-                "country_code": "1",
-                "caller_name" : jQuery("#firstName").val() + " " + jQuery("#lastName").val()
-            },
-            success: function (response) {
-                console.log("Form successfully submitted:", response);
-            },
-            error: function (xhr, status, error) {
-                console.error("Error submitting form:", xhr.responseText);
-            }
-        });
-    } catch (error) {
-        console.error("An error occurred during form capture:", error);
-    }
-})
+  try {
+    // Get tracking values from localStorage
+    const utmData = {
+      'custom_fields[UTM Source]': localStorage.getItem('utm_source') || '',
+      'custom_fields[UTM Medium]': localStorage.getItem('utm_medium') || '',
+      'custom_fields[UTM Campaign]': localStorage.getItem('utm_campaign') || '',
+      'custom_fields[source_page_url]': localStorage.getItem('source_page_url') || window.location.href,
+      'custom_fields[referrer]': localStorage.getItem('referrer') || document.referrer
+    };
 
+    // Merge tracking data with form data
+    const data = Object.assign({}, {
+      'custom_fields[firstName]': jQuery('#firstName').val(),
+      'custom_fields[lastName]': jQuery('#lastName').val(),
+      'custom_fields[company]': jQuery('#company').val(),
+      'custom_fields[email]': jQuery('#email').val(),
+      'custom_fields[zipCode]': jQuery('#zipCode').val(),
+      'phone_number': jQuery('#Phone').val(),
+      'country_code': '1',
+      'caller_name': jQuery('#firstName').val() + ' ' + jQuery('#lastName').val()
+    }, utmData);
+
+    jQuery.ajax({
+      url: 'https://api.calltrackingmetrics.com/api/v1/formreactor/FRT472ABB2C5B9B141ADAB06C7A709212DB5B0EF60229D38F02D4C00D8145FDA58D?key=VLhTUhvwsNBljzFmnVX5bui0GD-PaYcjHGPESzPwHQpCqWeY',
+      type: 'POST',
+      data: data,
+      success: function (response) {
+        console.log('Form successfully submitted:', response);
+      },
+      error: function (xhr, status, error) {
+        console.error('Error submitting form:', xhr.responseText);
+      }
+    });
+  } catch (error) {
+    console.error('An error occurred during form capture:', error);
+  }
+});
 </script>
