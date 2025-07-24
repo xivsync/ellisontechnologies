@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e49abbf4c90e422a57e50568c89cd29",
+    "content-hash": "ce9be6e0162f4a9b77fdded3454c019b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7420,6 +7420,65 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/webform_pardot.git",
                 "issues": "https://www.drupal.org/project/issues/webform_pardot"
+            }
+        },
+        {
+            "name": "drupal/webform_protected_downloads",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform_protected_downloads.git",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform_protected_downloads-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "d59c88b39940e9975b3b7acf1a902700e63ae6b2"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10 || ^11",
+                "drupal/token": "^1.0",
+                "drupal/webform": "^6.2",
+                "php": ">=7.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1726147782",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "James Williams (james.williams)",
+                    "homepage": "https://www.drupal.org/u/592268",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ryan Hartman (devkinetic)",
+                    "homepage": "https://www.drupal.org/u/114708",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "berliner",
+                    "homepage": "https://www.drupal.org/u/202211",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Provides a Webform handler for offering access to file downloads upon completion.",
+            "homepage": "https://drupal.org/project/webform_protected_downloads",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform_protected_downloads",
+                "issues": "https://www.drupal.org/project/issues/webform_protected_downloads"
             }
         },
         {
@@ -18438,6 +18497,7 @@
         "drupal/views_natural_sort": 15,
         "drupal/webform": 10,
         "drupal/webform_pardot": 10,
+        "drupal/webform_protected_downloads": 15,
         "pantheon-upstreams/upstream-configuration": 20
     },
     "prefer-stable": true,

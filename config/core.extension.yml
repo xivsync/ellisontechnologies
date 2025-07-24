@@ -159,6 +159,7 @@ module:
   webform_attachment: 0
   webform_node: 0
   webform_pardot: 0
+  webform_protected_downloads: 0
   webform_scheduled_email: 0
   webform_submissions_delete: 0
   webform_ui: 0
