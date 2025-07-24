@@ -177,7 +177,7 @@ field_mappings:
     drupal_field_type: WebformElements
     drupal_field_value: source_page_url
     direction: drupal_sf
-    salesforce_field: CTM_Landing_URL__c
+    salesforce_field: Source_Page_URL__c
     id: 21
     description: ''
   -
@@ -193,6 +193,48 @@ field_mappings:
     direction: drupal_sf
     salesforce_field: LeadSource
     id: 23
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: form_name
+    direction: drupal_sf
+    salesforce_field: Webform_Name__c
+    id: 24
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_campaign
+    direction: drupal_sf
+    salesforce_field: utm_campaign__c
+    id: 25
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_medium
+    direction: drupal_sf
+    salesforce_field: utm_medium__c
+    id: 26
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_source
+    direction: drupal_sf
+    salesforce_field: utm_source__c
+    id: 27
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: referrer
+    direction: drupal_sf
+    salesforce_field: Source_Page_URL__c
+    id: 28
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: gclid
+    direction: drupal_sf
+    salesforce_field: GCLID__c
+    id: 29
     description: ''
 status: true
 dependencies:

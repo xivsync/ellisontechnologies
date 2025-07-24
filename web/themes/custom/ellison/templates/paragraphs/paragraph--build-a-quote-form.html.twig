@@ -1,20 +1,5 @@
-<form id="build-a-quote" action="https://go.pardot.com/l/37432/2018-04-06/5gh3kp" method="post">
-    <div>
-        <input class="form-item__textfield" id="firstName" name="firstName" placeholder="First name" required
-            tabindex="1" type="text">
-        <input class="form-item__textfield" id="lastName" name="lastName" placeholder="Last name" required tabindex="1"
-            type="text">
-        <input class="form-item__textfield" id="company" name="company" placeholder="Company" required tabindex="1"
-            type="text">
-        <input class="form-item__textfield" id="email" name="email" placeholder="Email" required tabindex="1"
-            type="email">
-        <input class="form-item__textfield" id="Phone" name="Phone" pattern="[0-9]+" placeholder="Phone" required
-            tabindex="1" type="number">
-        <input class="form-item__textfield" id="zipCode" name="zipCode" pattern="[0-9]+" placeholder="Zip Code" required
-            tabindex="1" type="text">
-        <button class="button" name="submit" type="submit">Submit</button>
-    </div>
-</form>
+  {{ baq_webform_render }}
+
 <script>
 document.getElementById('build-a-quote').addEventListener('submit', function (event) {
   try {

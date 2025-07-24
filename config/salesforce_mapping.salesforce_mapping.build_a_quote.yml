@@ -1,0 +1,134 @@
+langcode: en
+id: build_a_quote
+label: 'Build A Quote'
+weight: 0
+type: salesforce_mapping
+key: ''
+always_upsert: false
+async: false
+push_standalone: false
+pull_standalone: false
+pull_trigger_date: LastModifiedDate
+pull_frequency: 0
+push_frequency: 0
+push_limit: 0
+push_retries: 3
+pull_where_clause: ''
+pull_record_type_filter: {  }
+sync_triggers:
+  push_create: true
+  push_update: false
+  push_delete: false
+  pull_create: false
+  pull_update: false
+  pull_delete: false
+salesforce_object_type: Lead
+drupal_entity_type: webform_submission
+drupal_bundle: baq_form
+field_mappings:
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: company
+    direction: drupal_sf
+    salesforce_field: Company
+    id: 0
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: firstname
+    direction: drupal_sf
+    salesforce_field: FirstName
+    id: 1
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: lastname
+    direction: drupal_sf
+    salesforce_field: LastName
+    id: 2
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: email
+    direction: drupal_sf
+    salesforce_field: Email
+    id: 3
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: phone
+    direction: drupal_sf
+    salesforce_field: ''
+    id: 4
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: postalcode
+    direction: drupal_sf
+    salesforce_field: PostalCode
+    id: 5
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: form_name
+    direction: drupal_sf
+    salesforce_field: Webform_Name__c
+    id: 6
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: source_page_url
+    direction: drupal_sf
+    salesforce_field: Source_Page_URL__c
+    id: 7
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leadsource
+    direction: drupal_sf
+    salesforce_field: LeadSource
+    id: 8
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: leadsource
+    direction: drupal_sf
+    salesforce_field: CTM_Source__c
+    id: 9
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_campaign
+    direction: drupal_sf
+    salesforce_field: utm_campaign__c
+    id: 10
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_medium
+    direction: drupal_sf
+    salesforce_field: utm_medium__c
+    id: 11
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_source
+    direction: drupal_sf
+    salesforce_field: utm_source__c
+    id: 12
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: gclid
+    direction: drupal_sf
+    salesforce_field: GCLID__c
+    id: 13
+    description: ''
+status: true
+dependencies:
+  config:
+    - webform.webform.baq_form
+  module:
+    - salesforce_push
+    - salesforce_webform
+uuid: f535c99f-68fa-47be-b658-fc4c7d861080
