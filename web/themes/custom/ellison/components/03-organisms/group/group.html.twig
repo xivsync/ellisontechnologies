@@ -112,7 +112,9 @@
   {{ title_suffix }}
 
   <div{{ inner_attributes.addClass(inner_classes) }} {% if background_image_overlay %}
-    style="background-image: url('{{ background_image_overlay|render|trim }}'); background-size: cover; background-position: center; background-repeat: no-repeat;background-blend-mode: multiply;"
+    {% if background_image_overlay %}
+    style="background-image: url('{{ background_image_overlay|render|trim }}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-blend-mode: multiply;"
+  {% endif %}
  {% else %}
  style="position:relative; z-index:1;"  
   {% endif %}>

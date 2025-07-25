@@ -5,6 +5,7 @@ dependencies:
   module:
     - honeypot
     - webform_pardot
+    - webform_protected_downloads
   enforced:
     module:
       - webform
@@ -388,4 +389,23 @@ handlers:
     settings:
       pardot_url: 'https://go.ellisontechnologies.com/l/37432/2023-11-13/5xlhf5'
       pardot_fields_mapping: ''
+  webform_protected_download:
+    id: webform_protected_downloads
+    handler_id: webform_protected_download
+    label: 'Webform Protected Download'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      verify_access: basic
+      expiration_one_time: false
+      expiration_time: 0
+      expiration_page: page_reload
+      expiration_page_custom: ''
+      expiration_error_message: 'This link has expired.'
+      protected_file:
+        - '3002'
+      protected_file_allowed_extensions: 'gif jpg jpeg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 mp4 ogg wav bz2 dmg gz jar rar sit svg tar zip'
+      debug: false
 variants: {  }
