@@ -250,7 +250,11 @@
     background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
   }
  
- 
+ .bg-color--gradient-blue-lighter ul, .bg-color--gradient-blue-lighter li{
+  --tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
   &.diagonal-forward-slash-on::after,
   &.diagonal-forward-slash-on:hover::after {
     background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);

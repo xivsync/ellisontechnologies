@@ -6881,6 +6881,12 @@ div[role=alert] {
             clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
     transform: translateY(1px);
   }
+
+.bg-color--gradient-blue-lighter ul, .bg-color--gradient-blue-lighter li{
+  --tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+  
   &.group__inner {
     background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
   }
