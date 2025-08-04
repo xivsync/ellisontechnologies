@@ -391,7 +391,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: '[site:mail]'
+      to_mail: rsvp@ellisontechnologies.com
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -406,9 +406,9 @@ handlers:
       ignore_access: 0
       exclude_empty: 0
       exclude_empty_checkbox: 0
-      exclude_attachments: false
+      exclude_attachments: 0
       html: true
-      attachments: false
+      attachments: 0
       twig: false
       debug: false
       reply_to: rsvp@ellisontechnologies.com
@@ -448,7 +448,7 @@ handlers:
       attachments: true
       twig: false
       debug: false
-      reply_to: '[site:mail]'
+      reply_to: rsvp@ellisontechnologies.com
       return_path: ''
       sender_mail: ''
       sender_name: ''

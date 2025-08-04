@@ -1,6 +1,6 @@
 uuid: 8dafb1da-3335-479e-b3d2-85a688b914c4
 langcode: en
-status: closed
+status: open
 dependencies:
   module:
     - webform_pardot
@@ -11,7 +11,7 @@ uid: 1713
 template: false
 archive: false
 id: registration_jotp_2_4_2025
-title: 'Registration - JOTP 2.4.2025'
+title: 'Registration - JOTP 9.23.2025'
 description: '<p>Add a registration form to your event.</p>'
 categories: {  }
 elements: |-
@@ -384,14 +384,14 @@ handlers:
     id: email
     handler_id: internal_email
     label: 'Internal Email'
-    notes: 'Sending event information to specified internal email address. Default is rsvp@eillisontechnologies.com'
+    notes: 'Sending event information to specified internal email address. Default is rsvp@ellisontechnologies.com'
     status: true
     conditions: {  }
     weight: 0
     settings:
       states:
         - completed
-      to_mail: '[site:mail]'
+      to_mail: rsvp@ellisontechnologies.com
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -406,9 +406,9 @@ handlers:
       ignore_access: 0
       exclude_empty: 0
       exclude_empty_checkbox: 0
-      exclude_attachments: false
+      exclude_attachments: 0
       html: true
-      attachments: false
+      attachments: 0
       twig: false
       debug: false
       reply_to: rsvp@ellisontechnologies.com
@@ -463,6 +463,6 @@ handlers:
     conditions: {  }
     weight: 0
     settings:
-      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2024-12-20/5yxdxf'
+      pardot_url: 'https://go.ellisontechnologies.com/l/37432/2025-07-30/5zm74x'
       pardot_fields_mapping: "company|company\r\nfirstname|first_name\r\nlastname|last_name\r\ntitle|position\r\nemail|email\r\nphone|business_phone\r\nstreet|street\r\ncity|city\r\nstate|state\r\npostalcode|zip\r\nhow_did_you_hear__c |How_did_you_hear\r\nIndustry|Industry\r\nopt_in|Opt-in\r\nregion__c|SF_Region"
 variants: {  }

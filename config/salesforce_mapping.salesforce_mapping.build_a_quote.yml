@@ -58,7 +58,7 @@ field_mappings:
     drupal_field_type: WebformElements
     drupal_field_value: phone
     direction: drupal_sf
-    salesforce_field: ''
+    salesforce_field: Phone
     id: 4
     description: ''
   -

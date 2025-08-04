@@ -1,6 +1,6 @@
 langcode: en
-id: registration
-label: 'Registration Mapping'
+id: registration_events_2
+label: 'Registration events #2'
 weight: 0
 type: salesforce_mapping
 key: ''
@@ -14,8 +14,7 @@ push_frequency: 0
 push_limit: 0
 push_retries: 3
 pull_where_clause: ''
-pull_record_type_filter:
-  Master: 0
+pull_record_type_filter: {  }
 sync_triggers:
   push_create: true
   push_update: false
@@ -25,7 +24,7 @@ sync_triggers:
   pull_delete: false
 salesforce_object_type: Lead
 drupal_entity_type: webform_submission
-drupal_bundle: registration_jotp_9_18_2025
+drupal_bundle: registration_jotp_2_4_2025
 field_mappings:
   -
     drupal_field_type: WebformElements
@@ -110,7 +109,7 @@ field_mappings:
     direction: drupal_sf
     salesforce_field: Industry__c
     id: 11
-    description: 'Second Industry listed.'
+    description: ''
   -
     drupal_field_type: WebformElements
     drupal_field_value: region__c
@@ -146,11 +145,25 @@ field_mappings:
     salesforce_field: Location__c
     id: 16
     description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: referring_url
+    direction: drupal_sf
+    salesforce_field: Source_Page_URL__c
+    id: 17
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: ''
+    direction: drupal_sf
+    salesforce_field: ''
+    id: 18
+    description: ''
 status: true
 dependencies:
   config:
-    - webform.webform.registration_jotp_9_18_2025
+    - webform.webform.registration_jotp_2_4_2025
   module:
     - salesforce_push
     - salesforce_webform
-uuid: a01aacc4-3945-41ad-9a22-6d620ec4a224
+uuid: bb574516-cb9e-4db1-8ac1-956aae37114e
