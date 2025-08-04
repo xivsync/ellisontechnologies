@@ -1,0 +1,11 @@
+salesforce_mapping_duplicate.duplicate:
+  path: '/admin/config/salesforce/mapping/{salesforce_mapping}/duplicate'
+  defaults:
+    _controller: '\Drupal\salesforce_mapping_duplicate\Controller\MappingDuplicateController::duplicate'
+    _title: 'Duplicate Salesforce Mapping'
+  requirements:
+    _permission: 'administer salesforce'
+  options:
+    parameters:
+      salesforce_mapping:
+        type: entity:salesforce_mapping

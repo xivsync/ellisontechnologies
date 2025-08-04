@@ -1,0 +1,7 @@
+name: 'Salesforce Mapping Duplicate'
+type: module
+description: 'Adds a Duplicate operation to Salesforce Mappings.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - salesforce_mapping

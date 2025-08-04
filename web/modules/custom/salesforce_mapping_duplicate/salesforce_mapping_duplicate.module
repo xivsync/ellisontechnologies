@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url; // Add this to the top of your file
+
+/**
+ * Implements hook_entity_operation_alter().
+ */
+function salesforce_mapping_duplicate_entity_operation_alter(array &$operations, EntityInterface $entity) {
+  if ($entity->getEntityTypeId() === 'salesforce_mapping') {
+    $operations['duplicate'] = [
+      'title' => t('Duplicate'),
+      'weight' => 25,
+      'url' => Url::fromRoute('salesforce_mapping_duplicate.duplicate', [
+  'salesforce_mapping' => $entity->id(),
+]),
+    ];
+  }
+}
