@@ -5,14 +5,15 @@
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
     return '';
-  } 
- 
+  }
+
   // Extract region from ellison_region cookie
   let region = '';
   try {
     const cookieValue = getCookie('ellison_region');
     if (cookieValue) {
-      const parsed = JSON.parse(cookieValue);
+      const decoded = decodeURIComponent(cookieValue);
+      const parsed = JSON.parse(decoded);
       region = parsed.region || '';
     }
   } catch (e) {
