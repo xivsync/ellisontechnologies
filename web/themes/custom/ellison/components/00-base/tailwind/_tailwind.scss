@@ -6871,6 +6871,16 @@ div[role=alert] {
   background: linear-gradient(to right, rgba(1, 59, 109, 1) 0%, rgba(1, 85, 158, 1) 100%);
 }
 
+.bg-color--gradient-blue-lighter,
+.bg-color--gradient-blue-lighter * {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.bg-color--gradient-blue-lighter li::marker {
+  color: white !important;
+}
+
 .bg-color--gradient-blue-lighter {
   &.diagonal-forward-slash-on::before,
   &.diagonal-forward-slash-on:hover::before,
