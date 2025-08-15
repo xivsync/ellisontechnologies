@@ -7,14 +7,16 @@
     return '';
   }
 
-  // Extract region from ellison_region cookie
-  let region = '';
+  // Grab values from URL-encoded ellison_region cookie
+  let cookieRegion = '';
+  let cookieSfRegionId = '';
   try {
-    const cookieValue = getCookie('ellison_region');
-    if (cookieValue) {
-      const decoded = decodeURIComponent(cookieValue);
+    const raw = getCookie('ellison_region');
+    if (raw) {
+      const decoded = decodeURIComponent(raw);
       const parsed = JSON.parse(decoded);
-      region = parsed.region || '';
+      cookieRegion = parsed.region || '';
+      cookieSfRegionId = parsed.sf_region_id || '';
     }
   } catch (e) {
     console.warn('Could not parse ellison_region cookie:', e);
@@ -65,38 +67,44 @@
     }
   });
 
-  // Populate form fields with stored values
+  // Populate form fields with stored values + cookie mappings
   function populateFields(context) {
+    const root = context || document;
+
+    // UTM/referrer fields
     fields.forEach(function (field) {
-      const el = (context || document).querySelector('[name="' + field + '"]');
+      const el = root.querySelector('[name="' + field + '"]');
       const stored = localStorage.getItem(field);
-      if (el && stored) {
-        el.value = stored;
-      }
+      if (el && stored) el.value = stored;
     });
 
+    // Lead source
     const utmSource = localStorage.getItem('utm_source');
-    const leadsourceEl = (context || document).querySelector('input[name="leadsource"]');
-    if (leadsourceEl && utmSource) {
-      leadsourceEl.value = utmSource;
-    }
+    const leadsourceEl = root.querySelector('input[name="leadsource"]');
+    if (leadsourceEl && utmSource) leadsourceEl.value = utmSource;
 
     const gclid = localStorage.getItem('gclid');
-    if (leadsourceEl && gclid) {
-      leadsourceEl.value = 'Google Ads';
-    }
+    if (leadsourceEl && gclid) leadsourceEl.value = 'Google Ads';
 
-    // ✅ Fill region__c from cookie value
-    const regionEl = (context || document).querySelector('input[name="region__c"]');
-    if (regionEl && region) {
-      regionEl.value = region;
-    }
+    // ✅ Map cookie -> fields
+    // region__c should get sf_region_id
+    const regionIdEl = root.querySelector('input[name="region__c"]');
+    if (regionIdEl && cookieSfRegionId) regionIdEl.value = cookieSfRegionId;
+
+    // location field should get region (human-readable)
+    // Try a few common name variants just in case
+    const locationEl =
+      root.querySelector('input[name="location"]') ||
+      root.querySelector('input[name="Location"]') ||
+      root.querySelector('input[name="location__c"]');
+    if (locationEl && cookieRegion) locationEl.value = cookieRegion;
   }
 
   window.addEventListener('load', function () {
     populateFields(document);
   });
 
+  // For Drupal dialogs/modals
   document.addEventListener('dialogContent', function (e) {
     populateFields(e.target);
   });
