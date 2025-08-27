@@ -6873,8 +6873,8 @@ div[role=alert] {
 
 .bg-color--gradient-blue-lighter,
 .bg-color--gradient-blue-lighter * {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .bg-color--gradient-blue-lighter input{
   color: black;
