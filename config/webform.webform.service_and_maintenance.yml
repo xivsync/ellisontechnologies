@@ -43,9 +43,23 @@ elements: |-
     '#type': select
     '#title': 'Select Location'
     '#options':
-      north: 'North TX /  North LA'
-      south: 'South TX / South LA'
-      none: 'Not sure'
+      'North Carolina': 'North Carolina'
+      Virginia: Virginia
+      Maryland: Maryland
+      'South Carolina': 'South Carolina'
+      Delaware: Delaware
+      Tennessee: Tennessee
+      Georgia: Georgia
+      Alabama: Alabama
+      Mississippi: Mississippi
+      Washington: Washington
+      Oregon: Oregon
+      'Iowa and Nebraska': 'Iowa and Nebraska'
+      'North Texas and North Louisiana': 'North Texas and North Louisiana'
+      'South Texas and South Louisiana': 'South Texas and South Louisiana'
+      'Southern Ohio and Kentucky': 'Southern Ohio and Kentucky'
+      'Not Listed': 'Not Listed'
+    '#empty_option': 'Select Location'
     '#required': true
   firstname:
     '#type': textfield
