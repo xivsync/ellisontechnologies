@@ -41,16 +41,31 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
             $child_region[$term->name] = $term->name;
           }
           if (isset($form['elements']['location'])) {
-            $form['elements']['location']['#options'] = $child_region;
-            if (empty($child_region)) {
-              $form['elements']['location']['#access'] = FALSE;
+            // For webform_entity_select, we need to set the selection settings to filter by parent
+            if ($form['elements']['location']['#type'] == 'webform_entity_select') {
+              $form['elements']['location']['#selection_settings']['view']['arguments'] = [$parent_id];
+            } elseif (!empty($child_region)) {
+              $form['elements']['location']['#options'] = $child_region;
+              if (empty($child_region)) {
+                $form['elements']['location']['#access'] = FALSE;
+              }
             }
           }
-          elseif (isset($form['elements']['select_location']) && !empty($child_region)) {
-            $form['elements']['select_location']['#options'] = $child_region;
+          elseif (isset($form['elements']['select_location'])) {
+            // For webform_entity_select, we need to set the selection settings to filter by parent
+            if ($form['elements']['select_location']['#type'] == 'webform_entity_select') {
+              $form['elements']['select_location']['#selection_settings']['view']['arguments'] = [$parent_id];
+            } elseif (!empty($child_region)) {
+              $form['elements']['select_location']['#options'] = $child_region;
+            }
           }
-          elseif (isset($form['elements']['location_dropdown']) && !empty($child_region)) {
-            $form['elements']['location_dropdown']['#options'] = $child_region;
+          elseif (isset($form['elements']['location_dropdown'])) {
+            // For webform_entity_select, we need to set the selection settings to filter by parent
+            if ($form['elements']['location_dropdown']['#type'] == 'webform_entity_select') {
+              $form['elements']['location_dropdown']['#selection_settings']['view']['arguments'] = [$parent_id];
+            } elseif (!empty($child_region)) {
+              $form['elements']['location_dropdown']['#options'] = $child_region;
+            }
           }
         }
       }

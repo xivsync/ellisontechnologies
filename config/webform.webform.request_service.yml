@@ -27,25 +27,15 @@ description: '<p>Email form for spindle rebuilds department</p>'
 categories: {  }
 elements: |-
   select_location:
-    '#type': select
+    '#type': webform_entity_select
     '#title': 'Select Location'
-    '#options':
-      'North Carolina': 'North Carolina'
-      Virginia: Virginia
-      Maryland: Maryland
-      'South Carolina': 'South Carolina'
-      Delaware: Delaware
-      Tennessee: Tennessee
-      Georgia: Georgia
-      Alabama: Alabama
-      Mississippi: Mississippi
-      Washington: Washington
-      Oregon: Oregon
-      'Iowa and Nebraska': 'Iowa and Nebraska'
-      'North Texas and North Louisiana': 'North Texas and North Louisiana'
-      'South Texas and South Louisiana': 'South Texas and South Louisiana'
-      'Southern Ohio and Kentucky': 'Southern Ohio and Kentucky'
-      'Not Listed': 'Not Listed'
+    '#target_type': taxonomy_term
+    '#selection_handler': views
+    '#selection_settings':
+      view:
+        view_name: taxonomy_entity_reference
+        display_name: entity_reference_2
+        arguments: {  }
     '#empty_option': 'Select Location'
     '#required': true
   firstname:
