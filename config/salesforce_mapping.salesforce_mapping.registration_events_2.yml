@@ -154,10 +154,45 @@ field_mappings:
     description: ''
   -
     drupal_field_type: WebformElements
-    drupal_field_value: ''
+    drupal_field_value: location_dropdown
     direction: drupal_sf
-    salesforce_field: ''
+    salesforce_field: Location__c
     id: 18
+    description: 'User selected location from dropdown'
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_source
+    direction: drupal_sf
+    salesforce_field: utm_source__c
+    id: 19
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_medium
+    direction: drupal_sf
+    salesforce_field: utm_medium__c
+    id: 20
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: utm_campaign
+    direction: drupal_sf
+    salesforce_field: utm_campaign__c
+    id: 21
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: gclid
+    direction: drupal_sf
+    salesforce_field: GCLID__c
+    id: 22
+    description: ''
+  -
+    drupal_field_type: WebformElements
+    drupal_field_value: referrer
+    direction: drupal_sf
+    salesforce_field: Source_Page_URL__c
+    id: 23
     description: ''
 status: true
 dependencies:

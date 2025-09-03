@@ -14,7 +14,8 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
   if (strpos($form_id, 'webform_submission_contact') !== FALSE ||
     strpos($form_id, 'webform_submission_service_and_maintenance') !== FALSE ||
     strpos($form_id, 'webform_submission_parts_and_accessories') !== FALSE ||
-    strpos($form_id, 'webform_submission_training_request') !== FALSE
+    strpos($form_id, 'webform_submission_training_request') !== FALSE ||
+    strpos($form_id, 'webform_submission_registration_jotp') !== FALSE
   ) {
     $session = \Drupal::request()->getSession();
     $ellison_region = $session->get('ellison_region');
@@ -27,7 +28,7 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
       $region = json_decode($ellison_region, TRUE);
     }
     if (!empty($region)) {
-      if (isset($form['elements']['location']) || isset($form['elements']['select_location'])) {
+              if (isset($form['elements']['location']) || isset($form['elements']['select_location']) || isset($form['elements']['location_dropdown'])) {
         if (!empty($region['region_id'])) {
           $parent_id = $region['region_id'];
           $child_terms = \Drupal::entityTypeManager()
@@ -45,6 +46,9 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
           }
           elseif (isset($form['elements']['select_location']) && !empty($child_region)) {
             $form['elements']['select_location']['#options'] = $child_region;
+          }
+          elseif (isset($form['elements']['location_dropdown']) && !empty($child_region)) {
+            $form['elements']['location_dropdown']['#options'] = $child_region;
           }
         }
       }
@@ -88,8 +92,10 @@ function ellison_webform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
  * Implements hook_webform_submission_insert().
  */
 function ellison_webform_webform_submission_insert(WebformSubmissionInterface $submission) {
-  // Only target the "Contact Us" form (machine name 'contact').
-  if ($submission->getWebform()->id() !== 'contact') {
+  // Target the "Contact Us" form and JOTP registration forms.
+  $webform_id = $submission->getWebform()->id();
+  if ($webform_id !== 'contact' && 
+      strpos($webform_id, 'registration_jotp') === FALSE) {
     return;
   }
 
@@ -128,7 +134,7 @@ function ellison_webform_webform_submission_insert(WebformSubmissionInterface $s
       'edit-submitted-how-did-you-hear-c' => $submission->getElementData('how_did_you_hear__c'),
       'edit-submitted-webform-best-time-c'=> $submission->getElementData('webform_best_time__c'),
       'edit-submitted-industry'           => $submission->getElementData('industry'),
-      'select_location'                   => $submission->getElementData('location'),
+      'select_location'                   => $submission->getElementData('location') ?: $submission->getElementData('location_dropdown'),
       'edit-submitted-description'        => $submission->getElementData('description'),
       'edit_submitted_leadsource'         => $submission->getElementData('leadsource'),
     ],
