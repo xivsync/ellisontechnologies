@@ -83,12 +83,61 @@
       if (el && stored) el.value = stored;
     });
 
-    // leadsource + gclid override
+    // leadsource + gclid override with enhanced mapping
     const leadsourceEl = root.querySelector('input[name="leadsource"]');
     const utmSource = localStorage.getItem('utm_source');
-    if (leadsourceEl && utmSource) leadsourceEl.value = utmSource;
+    const utmMedium = localStorage.getItem('utm_medium');
     const gclid = localStorage.getItem('gclid');
-    if (leadsourceEl && gclid) leadsourceEl.value = 'Google Ads';
+    const referrer = localStorage.getItem('referrer') || document.referrer;
+    
+    if (leadsourceEl) {
+      let leadSource = 'Website'; // default
+      
+      // Check for Google Ads first (highest priority)
+      if (gclid) {
+        leadSource = 'Google Ads';
+      }
+      // Check UTM source mapping
+      else if (utmSource) {
+        const utmSourceLower = utmSource.toLowerCase();
+        if (utmSourceLower.includes('google')) {
+          if (utmMedium && utmMedium.toLowerCase().includes('cpc')) {
+            leadSource = 'Google Ads';
+          } else {
+            leadSource = 'Google Organic';
+          }
+        } else if (utmSourceLower.includes('bing')) {
+          leadSource = 'Bing Organic';
+        } else if (utmSourceLower.includes('facebook')) {
+          leadSource = 'Facebook';
+        } else if (utmSourceLower.includes('instagram')) {
+          leadSource = 'Instagram';
+        } else if (utmSourceLower.includes('linkedin')) {
+          leadSource = 'LinkedIn';
+        } else if (utmSourceLower.includes('email') || utmMedium && utmMedium.toLowerCase().includes('email')) {
+          leadSource = 'Email Campaign';
+        } else {
+          leadSource = utmSource;
+        }
+      }
+      // Check referrer for organic sources
+      else if (referrer) {
+        const referrerLower = referrer.toLowerCase();
+        if (referrerLower.includes('google.com')) {
+          leadSource = 'Google Organic';
+        } else if (referrerLower.includes('bing.com')) {
+          leadSource = 'Bing Organic';
+        } else if (referrerLower.includes('facebook.com')) {
+          leadSource = 'Facebook';
+        } else if (referrerLower.includes('instagram.com')) {
+          leadSource = 'Instagram';
+        } else if (referrerLower.includes('linkedin.com')) {
+          leadSource = 'LinkedIn';
+        }
+      }
+      
+      leadsourceEl.value = leadSource;
+    }
 
     // location (human-readable region name from cookie)
     const locationEl =

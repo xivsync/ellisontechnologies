@@ -175,7 +175,7 @@ Drupal.behaviors.handleWebform = {
 };
 // Change region value by location
 (function ($, Drupal) {
-  jQuery("body").on('change', 'select[name="location"], select[name="select_location"]', function(event) {
+      jQuery("body").on('change', 'select[name="location"], select[name="select_location"], select[name="location_dropdown"]', function(event) {
     let locationRID = '';
     let regionId = '';
     if (Cookies.get('ellison_region')) {

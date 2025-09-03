@@ -78,6 +78,28 @@ elements: |-
     '#type': select
     '#title': 'How did you hear about our event?'
     '#options': how_did_you_hear_about_us
+  location_dropdown:
+    '#type': select
+    '#title': Location
+    '#options':
+      'North Carolina': 'North Carolina'
+      Virginia: Virginia
+      Maryland: Maryland
+      'South Carolina': 'South Carolina'
+      Delaware: Delaware
+      Tennessee: Tennessee
+      Georgia: Georgia
+      Alabama: Alabama
+      Mississippi: Mississippi
+      Washington: Washington
+      Oregon: Oregon
+      'Iowa and Nebraska': 'Iowa and Nebraska'
+      'North Texas and North Louisiana': 'North Texas and North Louisiana'
+      'South Texas and South Louisiana': 'South Texas and South Louisiana'
+      'Southern Ohio and Kentucky': 'Southern Ohio and Kentucky'
+      'Not Listed': 'Not Listed'
+    '#empty_option': 'Select Location'
+    '#required': true
   industry:
     '#type': select
     '#title': Industry
@@ -164,6 +186,21 @@ elements: |-
     '#type': hidden
     '#title': 'Referring URL'
     '#default_value': '[current-page:url]'
+  utm_source:
+    '#type': hidden
+    '#title': utm_source
+  utm_medium:
+    '#type': hidden
+    '#title': utm_medium
+  utm_campaign:
+    '#type': hidden
+    '#title': utm_campaign
+  gclid:
+    '#type': hidden
+    '#title': gclid
+  referrer:
+    '#type': hidden
+    '#title': referrer
   internal_email:
     '#type': hidden
     '#title': 'Internal email'
